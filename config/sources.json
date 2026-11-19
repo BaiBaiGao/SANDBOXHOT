@@ -2,6 +2,28 @@
   "$comment": "信源配置。group=aihot 的 18 个 RSS 与 AIHOT 开源仓库 industry/sources.json 一致；其余为学术/应用/平台/游戏补充源。focused=true 表示查询本身已限定主题，关键词预筛会放宽。把 enabled 改为 false 即可停用。",
   "sources": [
     {
+      "id": "wechat-jiqizhixin",
+      "name": "机器之心",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/51e92aad2728acdd1fda7314be32b16639353001.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "wechat-qbitai",
+      "name": "量子位",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
       "id": "rss-openai-news",
       "name": "OpenAI News",
       "kind": "rss",

@@ -1,5 +1,11 @@
 # SANDBOXHOT
 
+## 线上更新
+
+[打开 SANDBOXHOT](https://baibaigao.github.io/SANDBOXHOT/)。GitHub Actions 每四小时采集一次，可在 Actions 页手动运行 **Update and deploy SANDBOXHOT**。云端使用纯规则精选并直接发布合格条目，无需同济密钥。下文的 Windows 脚本用于可选的本地运行。
+
+机器之心和量子位使用 Wechat2RSS 的公开订阅。公众号条目沿用相关性筛选，仅展示标题、短摘要和原文链接。
+
 **AI 智能体 × 沙盘推演 / 仿真资讯合集。** 收集用 AI 智能体做沙盘推演、仿真、模拟的学术论文、实际应用、商业、游戏和平台资讯，比通用 AI 新闻站更看重**学术论文**和**实际应用**。
 
 - 网站地址（开启 GitHub Pages 后）：`https://baibaigao.github.io/SANDBOXHOT/`
