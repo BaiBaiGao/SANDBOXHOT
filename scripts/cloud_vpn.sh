@@ -4,10 +4,13 @@
 #   scripts/cloud_vpn.sh up     连接，并确认 agi.tongji.edu.cn 解析到校内地址、/v1/models 可用
 #   scripts/cloud_vpn.sh down   断开
 # 需要的环境变量（来自 GitHub Secrets，日志里会被自动打码）：
-#   TONGJI_VPN_USER  TONGJI_VPN_PASS  [TONGJI_VPN_HOST，默认 vpn.tongji.cn]  [TONGJI_VPN_METHOD，默认空]  TONGJI_API_KEY
+#   TONGJI_VPN_USER  TONGJI_VPN_PASS  [TONGJI_VPN_HOST，默认 vpn.tongji.cn]  [TONGJI_VPN_METHOD，默认空]  [TONGJI_VPN_IP，默认 202.120.189.34]  TONGJI_API_KEY
 set -uo pipefail
 ACTION="${1:-up}"
 HOST="${TONGJI_VPN_HOST:-vpn.tongji.cn}"
+# 在国外解析 vpn.tongji.cn 会得到 202.120.189.175（没有登录页，返回 404）；
+# 笔记本上的 MotionPro 连的是 202.120.189.34，这里固定连这个地址，证书和 Host 仍用域名。
+VPN_IP="${TONGJI_VPN_IP:-202.120.189.34}"
 PIDFILE=/tmp/sandboxhot-openconnect.pid
 API_HOST=agi.tongji.edu.cn
 FALLBACK_DNS="202.120.190.208"   # 笔记本连 MotionPro 时看到的校内 DNS
@@ -33,13 +36,14 @@ up() {
     log "缺少 TONGJI_VPN_USER / TONGJI_VPN_PASS，请在仓库 Settings → Secrets and variables → Actions 里添加"; return 2
   fi
   log "openconnect 版本：$(openconnect --version 2>&1 | head -1)"
-  log "连接 $HOST ……"
+  log "连接 $HOST（固定连接 $VPN_IP；GitHub 这里的系统解析结果是 $(getent ahostsv4 "$HOST" | awk 'NR==1{print $1}')）……"
   # --background：认证成功、隧道建立后才转入后台，所以返回码就代表成败
   # Array 登录表单（auth_id=form）有三个字段：method（认证方式，提示为 authgroup:）、uname、pwd。
   # method 来自可选的 TONGJI_VPN_METHOD（MotionPro 日志 “login successfully, method name:” 后面的值），默认空。
   # 每次运行只尝试一次登录，避免连续失败把账号锁住。
   if ! printf '%s\n' "$TONGJI_VPN_PASS" | sudo openconnect --protocol=array --user="$TONGJI_VPN_USER" \
       --form-entry="form:method=${TONGJI_VPN_METHOD:-}" --form-entry="form:uname=$TONGJI_VPN_USER" \
+      --resolve="$HOST:$VPN_IP" \
       --passwd-on-stdin --non-inter --background --pid-file="$PIDFILE" --interface=tun0 \
       --timestamp "$HOST" > /tmp/openconnect.log 2>&1; then
     log "openconnect 连接失败，日志如下："; cat /tmp/openconnect.log; return 3

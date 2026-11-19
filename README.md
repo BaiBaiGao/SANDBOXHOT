@@ -111,6 +111,7 @@ GitHub 上这个文件里**没有 Key**（`SBH_KEY` 留空，第一次运行时�
 | `TONGJI_VPN_USER` | 统一身份认证账号 |
 | `TONGJI_VPN_PASS` | 统一身份认证密码 |
 | `TONGJI_VPN_HOST`（可选） | VPN 地址，默认 `vpn.tongji.cn`；和笔记本 `.env` 里的 `TONGJI_VPN_HOST` 一致即可 |
+| `TONGJI_VPN_IP`（可选） | VPN 服务器的 IP，默认 `202.120.189.34`。在国外解析 `vpn.tongji.cn` 会得到另一台没有登录页的服务器，所以固定用笔记本 MotionPro 日志里 `set_host_ip` 显示的地址 |
 | `TONGJI_VPN_METHOD`（可选） | VPN 登录的认证方式名。在笔记本 PowerShell 里运行 `Select-String -Path "$env:LOCALAPPDATA\MotionPro\Log\*.log" -Pattern "method name" \| Select-Object -Last 3`，取 `method name:` 后面的值；为空就不用添加 |
 
 GitHub Secrets 是加密保存的，不会出现在仓库里，也会在运行日志里自动打码。没添加时这个任务会自动跳过。

@@ -24,6 +24,7 @@ jobs:
       TONGJI_VPN_PASS: ${{ secrets.TONGJI_VPN_PASS }}
       TONGJI_VPN_HOST: ${{ secrets.TONGJI_VPN_HOST }}
       TONGJI_VPN_METHOD: ${{ secrets.TONGJI_VPN_METHOD }}
+      TONGJI_VPN_IP: ${{ secrets.TONGJI_VPN_IP }}
       PYTHONUTF8: '1'
     steps:
       - name: 检查密钥是否已添加
