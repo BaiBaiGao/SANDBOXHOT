@@ -1,58 +1,62 @@
 {
  "last_fetch": {
-  "rss-openai-news": "2026-11-19T16:45:46Z",
-  "rss-google-deepmind": "2026-11-19T16:45:46Z",
-  "rss-google-research": "2026-11-19T16:45:46Z",
-  "rss-hugging-face": "2026-11-19T16:45:46Z",
-  "rss-microsoft-research": "2026-11-19T16:45:46Z",
-  "rss-nvidia-blog": "2026-11-19T16:45:46Z",
-  "rss-aws-ml": "2026-11-19T16:45:46Z",
-  "rss-github-ai": "2026-11-19T16:45:46Z",
-  "rss-mistral": "2026-11-19T16:45:46Z",
-  "rss-bair": "2026-11-19T16:45:46Z",
-  "rss-the-verge-ai": "2026-11-19T16:45:46Z",
-  "rss-techcrunch-ai": "2026-11-19T16:45:46Z",
-  "rss-ars-technica-ai": "2026-11-19T16:45:46Z",
-  "rss-mit-tech-review-ai": "2026-11-19T16:45:46Z",
-  "rss-the-decoder": "2026-11-19T16:45:46Z",
-  "rss-simon-willison": "2026-11-19T16:45:46Z",
-  "rss-latent-space": "2026-11-19T16:45:46Z",
-  "arxiv-llm-social-sim": "2026-11-19T16:45:46Z",
-  "arxiv-wargame": "2026-11-19T16:45:46Z",
-  "arxiv-human-behavior-sim": "2026-11-19T16:45:46Z",
-  "arxiv-sandbox-env": "2026-11-19T16:45:46Z",
-  "openalex-llm-abm": "2026-11-19T16:45:46Z",
+  "rss-openai-news": "2026-11-19T17:00:18Z",
+  "rss-google-deepmind": "2026-11-19T17:00:18Z",
+  "rss-google-research": "2026-11-19T17:00:18Z",
+  "rss-hugging-face": "2026-11-19T17:00:18Z",
+  "rss-microsoft-research": "2026-11-19T17:00:18Z",
+  "rss-nvidia-blog": "2026-11-19T17:00:18Z",
+  "rss-aws-ml": "2026-11-19T17:00:18Z",
+  "rss-github-ai": "2026-11-19T17:00:18Z",
+  "rss-mistral": "2026-11-19T17:00:18Z",
+  "rss-bair": "2026-11-19T17:00:18Z",
+  "rss-the-verge-ai": "2026-11-19T17:00:18Z",
+  "rss-techcrunch-ai": "2026-11-19T17:00:18Z",
+  "rss-ars-technica-ai": "2026-11-19T17:00:18Z",
+  "rss-mit-tech-review-ai": "2026-11-19T17:00:18Z",
+  "rss-the-decoder": "2026-11-19T17:00:18Z",
+  "rss-simon-willison": "2026-11-19T17:00:18Z",
+  "rss-latent-space": "2026-11-19T17:00:18Z",
+  "arxiv-llm-social-sim": "2026-11-19T17:00:18Z",
+  "arxiv-wargame": "2026-11-19T17:00:18Z",
+  "arxiv-human-behavior-sim": "2026-11-19T17:00:18Z",
+  "arxiv-sandbox-env": "2026-11-19T17:00:18Z",
+  "openalex-llm-abm": "2026-11-19T17:00:18Z",
   "openalex-generative-agents": "2026-11-19T16:45:46Z",
   "openalex-wargame-llm": "2026-11-19T16:45:46Z",
-  "hn-agent-simulation": "2026-11-19T16:45:46Z",
-  "hn-llm-wargame": "2026-11-19T16:45:46Z",
-  "hn-synthetic-users": "2026-11-19T16:45:46Z",
-  "github-llm-agent-sim": "2026-11-19T16:45:46Z",
-  "github-multi-agent-sandbox": "2026-11-19T16:45:46Z",
-  "rss-gamedeveloper": "2026-11-19T16:45:46Z",
-  "wechat-jiqizhixin": "2026-11-19T16:45:46Z",
-  "wechat-qbitai": "2026-11-19T16:45:46Z",
-  "rss-import-ai": "2026-11-19T15:22:48Z",
-  "arxiv-econ-finance": "2026-11-19T16:45:46Z",
-  "arxiv-epidemic-health": "2026-11-19T16:45:46Z",
-  "arxiv-urban-mobility": "2026-11-19T16:45:46Z",
-  "arxiv-negotiation-games": "2026-11-19T16:45:46Z",
-  "arxiv-npc-narrative": "2026-11-19T16:45:46Z"
+  "hn-agent-simulation": "2026-11-19T17:00:18Z",
+  "hn-llm-wargame": "2026-11-19T17:00:18Z",
+  "hn-synthetic-users": "2026-11-19T17:00:18Z",
+  "github-llm-agent-sim": "2026-11-19T17:00:18Z",
+  "github-multi-agent-sandbox": "2026-11-19T17:00:18Z",
+  "rss-gamedeveloper": "2026-11-19T17:00:18Z",
+  "wechat-jiqizhixin": "2026-11-19T17:00:18Z",
+  "wechat-qbitai": "2026-11-19T17:00:18Z",
+  "rss-import-ai": "2026-11-19T17:00:18Z",
+  "arxiv-econ-finance": "2026-11-19T17:00:18Z",
+  "arxiv-epidemic-health": "2026-11-19T17:00:18Z",
+  "arxiv-urban-mobility": "2026-11-19T17:00:18Z",
+  "arxiv-negotiation-games": "2026-11-19T17:00:18Z",
+  "arxiv-npc-narrative": "2026-11-19T17:00:18Z"
  },
  "errors": {
-  "rss-import-ai": {
-   "at": "2026-11-19T16:45:46Z",
-   "error": "HTTP 403 https://importai.substack.com/feed: \u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000��X\t�����+<O�T�v��6\u0018\u001f]=�\u0006|�\u0003|ol8\u0004\b\u0010�(\u000est�_���x\u001b��a\u001d��/S))���?ĕ�=�%�N|��Ǫ�<\u0010X�5\u0018�wj�� 0>}LP��O�4N(@�؇AB��ǧW�G\u001f&�@$a\u001d����\\\u0013p�\u0010���\ba��_{ϵ\u0004��S��O�6�b�<ﶣz��\u000b�c}7�\u000b�\u000fA�4�=�Tz�\f\u000b~\u0015\n�\u000f�k\u0011�p\u0012��\n0\n\f�"
+  "openalex-generative-agents": {
+   "at": "2026-11-19T17:00:18Z",
+   "error": "HTTP 429 https://api.openalex.org/works?search=generative+agents+social+simulation&filter=from_publication_date%3A2026-10-20%2Chas_abstract%3Atrue&sort=publication_date%3Adesc&per-page=40: {\"error\":\"Rate limit exceeded\",\"message\":\"Anonymous search is temporarily rate-limited while the search cluster"
+  },
+  "openalex-wargame-llm": {
+   "at": "2026-11-19T17:00:18Z",
+   "error": "HTTP 429 https://api.openalex.org/works?search=wargaming+artificial+intelligence+large+language+model&filter=from_publication_date%3A2026-10-20%2Chas_abstract%3Atrue&sort=publication_date%3Adesc&per-page=30: {\"error\":\"Rate limit exceeded\",\"message\":\"Anonymous search is temporarily rate-limited while"
   }
  },
  "last_run": {
-  "at": "2026-11-19T16:47:41Z",
+  "at": "2026-11-19T17:09:54Z",
   "llm": false,
   "spent_run": 0.0
  },
  "backfill": {
   "arxiv-llm-social-sim": {
-   "next": 260,
+   "next": 460,
    "done": false
   },
   "arxiv-wargame": {
@@ -60,11 +64,11 @@
    "done": true
   },
   "arxiv-human-behavior-sim": {
-   "next": 260,
+   "next": 460,
    "done": false
   },
   "arxiv-sandbox-env": {
-   "next": 260,
+   "next": 360,
    "done": false
   },
   "arxiv-econ-finance": {
@@ -76,8 +80,8 @@
    "done": true
   },
   "arxiv-urban-mobility": {
-   "next": 260,
-   "done": false
+   "next": 460,
+   "done": true
   },
   "arxiv-negotiation-games": {
    "next": 260,
