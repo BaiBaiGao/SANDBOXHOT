@@ -91,6 +91,7 @@ class Base(unittest.TestCase):
             mock.patch.object(build, "SITE_DATA_DIR", t / "site" / "data"),
             mock.patch.object(build, "SITE_DIR", t / "site"),
             mock.patch("sandboxhot.enrich.EMBED_CACHE", t / "embeddings.json"),
+            mock.patch("sandboxhot.budget.SHARED_LEDGERS", (t / "cloud-usage.json",)),  # 和仓库里的真实云端账本隔离
         ]
         for p in self.patches:
             p.start()
