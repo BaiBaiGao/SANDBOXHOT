@@ -52,7 +52,7 @@
    "cluster": "0073f7aaf98ffa6d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "00798a23152e25ac": {
    "id": "00798a23152e25ac",
@@ -98,7 +98,7 @@
    "cluster": "00798a23152e25ac",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 86.48
+   "hot": 86.35
   },
   "0599676be458de0d": {
    "id": "0599676be458de0d",
@@ -149,7 +149,7 @@
    "cluster": "0599676be458de0d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 61.3
+   "hot": 61.21
   },
   "0e00fb4fe408e09e": {
    "id": "0e00fb4fe408e09e",
@@ -242,7 +242,7 @@
    "cluster": "100a98aa134f9c4d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 76.63
+   "hot": 76.51
   },
   "15465b7ec602f14b": {
    "id": "15465b7ec602f14b",
@@ -297,7 +297,7 @@
    "cluster": "15465b7ec602f14b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 67.87
+   "hot": 67.77
   },
   "17869a9bbc5be3db": {
    "id": "17869a9bbc5be3db",
@@ -342,7 +342,7 @@
    "cluster": "17869a9bbc5be3db",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 82.1
+   "hot": 81.97
   },
   "18d072700de3a72e": {
    "id": "18d072700de3a72e",
@@ -563,7 +563,7 @@
    "cluster": "284b22c378db421a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "2a7c337d3195182a": {
    "id": "2a7c337d3195182a",
@@ -614,7 +614,7 @@
    "cluster": "2a7c337d3195182a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "2dc502abacec7db3": {
    "id": "2dc502abacec7db3",
@@ -668,7 +668,7 @@
    "cluster": "2dc502abacec7db3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "2f1317b569fc63f5": {
    "id": "2f1317b569fc63f5",
@@ -718,7 +718,7 @@
    "cluster": "2f1317b569fc63f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.68
+   "hot": 65.58
   },
   "39439dc770fefd98": {
    "id": "39439dc770fefd98",
@@ -772,7 +772,7 @@
    "cluster": "39439dc770fefd98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 66.77
+   "hot": 66.67
   },
   "3eefc5d18a4ade26": {
    "id": "3eefc5d18a4ade26",
@@ -821,7 +821,7 @@
    "cluster": "3eefc5d18a4ade26",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "40084841e2ef8f33": {
    "id": "40084841e2ef8f33",
@@ -869,7 +869,7 @@
    "cluster": "40084841e2ef8f33",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "408457c46f4c7f25": {
    "id": "408457c46f4c7f25",
@@ -917,7 +917,7 @@
    "cluster": "408457c46f4c7f25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "4337712da9d8511a": {
    "id": "4337712da9d8511a",
@@ -951,7 +951,7 @@
    "cluster": "4337712da9d8511a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 63.51
+   "hot": 63.41
   },
   "442531c9eef4b7e1": {
    "id": "442531c9eef4b7e1",
@@ -1002,7 +1002,7 @@
    "cluster": "442531c9eef4b7e1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "466c6ef01463dc55": {
    "id": "466c6ef01463dc55",
@@ -1048,7 +1048,7 @@
    "cluster": "466c6ef01463dc55",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 83.19
+   "hot": 83.07
   },
   "5069f1280bd3ad48": {
    "id": "5069f1280bd3ad48",
@@ -1134,7 +1134,7 @@
    "cluster": "53b605b3df0308b7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "578df0921b0057cc": {
    "id": "578df0921b0057cc",
@@ -1179,7 +1179,7 @@
    "cluster": "578df0921b0057cc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 71.15
+   "hot": 71.04
   },
   "5aca4c38bba36ada": {
    "id": "5aca4c38bba36ada",
@@ -1227,7 +1227,7 @@
    "cluster": "5aca4c38bba36ada",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "5b498f7753f9a6d0": {
    "id": "5b498f7753f9a6d0",
@@ -1275,7 +1275,7 @@
    "cluster": "5b498f7753f9a6d0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "5b87ca4e67aa0ad6": {
    "id": "5b87ca4e67aa0ad6",
@@ -1332,7 +1332,7 @@
    "cluster": "5b87ca4e67aa0ad6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "6a0cbaf510c974ff": {
    "id": "6a0cbaf510c974ff",
@@ -1389,7 +1389,7 @@
    "cluster": "6a0cbaf510c974ff",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "6a4cf305f5f066a3": {
    "id": "6a4cf305f5f066a3",
@@ -1440,7 +1440,7 @@
    "cluster": "6a4cf305f5f066a3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "6c90c29ccd0d5820": {
    "id": "6c90c29ccd0d5820",
@@ -1475,6 +1475,43 @@
    "llm": false,
    "domain": "academic",
    "score": 20,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
+  "6d489165ab473ae2": {
+   "id": "6d489165ab473ae2",
+   "url": "https://doi.org/10.1007/s44163-026-02242-8",
+   "title": "Internet of things and generative adversarial network-based virtual simulation of marine resources and game scene construction",
+   "text": "The advancement of intelligent marine systems requires realistic and data-driven virtual environments for effective analysis and game-based simulation. This research proposes an integrated method for marine resource simulation and game scene construction based on the Internet of Things (IoT) and deep learning (DL). The Marine IoT Dataset with Environmental and Image consists of 6745 records integrating oceanographic parameters with corresponding marine scene image identifiers, including temperature, salinity, turbidity, current velocity, and biological observations. These multi-source data undergo preprocessing steps such as median filtering to remove noise and normalization to ensure consistency and completeness. Feature extraction is performed using Convolutional Neural Networks (CNNs) to capture spatial patterns and semantic representations of marine scenes. The proposed method employs a Satin Bowerbird Optimizer-driven Conditional Generative Adversarial Network (SBO-ConGAN) to generate high-resolution virtual marine environments, including seabed structures, water textures, and marine species distributions, while preserving environmental semantics. The generator produces realistic scenes conditioned on environmental parameters, and the discriminator enhances visual fidelity by distinguishing synthetic outputs from real data. The generated outputs are integrated into a real-time rendering engine for interactive game scene construction, incorporating dynamic environmental effects and adaptive marine object behaviors. Experimental results, obtained through Python implementation, demonstrate that the proposed SBO-ConGAN achieves an Inception Score (IS) of 9.57 and a Fréchet Inception Distance (FID) of 17.4, indicating higher realism and consistency. Overall, this proposed method provides a scalable, cost-effective solution for intelligent marine visualization and immersive game development, supporting applications in marine research, education, and interactive simulation systems. IoT-enabled marine data integration for realistic virtual environment simulation. CNN-based feature extraction captures semantic patterns in marine scenes. SBO-ConGAN generates high-fidelity marine environments for interactive games. It supports scalable, immersive marine visualization and research applications.",
+   "source_id": "openalex-generative-agents",
+   "source_name": "OpenAlex · 期刊/会议（生成式智能体/社会模拟）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-11-17T00:00:00Z",
+   "authors": [
+    "Li Chang",
+    "Zhaohui Liu"
+   ],
+   "extra": {
+    "venue": "Discover Artificial Intelligence",
+    "pdf": "https://link.springer.com/content/pdf/10.1007/s44163-026-02242-8.pdf",
+    "doi": "https://doi.org/10.1007/s44163-026-02242-8",
+    "cited_by": 0,
+    "type": "article"
+   },
+   "kw_score": 25,
+   "kw_terms": [
+    "simulation"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-19T15:23:19Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "academic",
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": ""
@@ -1525,7 +1562,7 @@
    "cluster": "6f304b36be9257fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "728d442c7c11e86e": {
    "id": "728d442c7c11e86e",
@@ -1617,7 +1654,7 @@
    "cluster": "72af26774086d271",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "777cd1e779dc04f4": {
    "id": "777cd1e779dc04f4",
@@ -1671,7 +1708,58 @@
    "cluster": "777cd1e779dc04f4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
+  },
+  "79ee4a2408bc74b2": {
+   "id": "79ee4a2408bc74b2",
+   "url": "https://doi.org/10.17605/osf.io/pgdjf",
+   "title": "Automated Feedback Architectures and Objective Assessment in Generative AI-Based Virtual Patients for Undergraduate Medical Education: A Scoping Review",
+   "text": "This scoping review aims to map and characterize automated feedback architectures and objective performance assessment instruments integrated into Generative Artificial Intelligence (GenAI) and Large Language Model (LLM)-based Virtual Patients in undergraduate medical education. Conducted in accordance with the Joanna Briggs Institute (JBI) methodological framework and reported following the PRISMA-ScR guidelines, this review addresses the research question: \"How are automated feedback architectures structured and what objective performance assessment instruments are used in simulations with generative AI-powered virtual patients in medical education?\" (structured around the PCC framework: Population – Undergraduate Medical Students; Concept – Automated feedback systems and objective assessment instruments in GenAI/LLM virtual patients; Context – Undergraduate medical education, including clinical communication training and OSCE preparation). Searches will be performed across PubMed, BVS, Embase, Scopus, and ScienceDirect, with independent dual-reviewer screening via Rayyan and data extraction in Microsoft Excel. Expected outcomes include categorizing feedback agents (virtual patients, virtual assessors, faculty dashboards), timing (real-time vs. post-hoc debriefing), assessment metrics (OSCE checklists, diagnostic accuracy, NLP-based communication indices), human gold-standard validation methods (e.g., Kappa, ICC), technological modalities, pedagogical effectiveness, and ethical/technical challenges. Ultimately, this study seeks to move beyond descriptive usability analyses to support deliberate practice cycles and guide the safe, evidence-based integration of AI-driven assessments in medical training.",
+   "source_id": "openalex-llm-abm",
+   "source_name": "OpenAlex · 期刊/会议（LLM 智能体仿真）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-11-18T00:00:00Z",
+   "authors": [
+    "Samya Hamad Mehanna",
+    "Eduardo Morais de Castro",
+    "Gustavo de Almeida Aliski",
+    "Julia Gabrielle Pereira Vieira",
+    "Mariana Bohn Ghellere"
+   ],
+   "extra": {
+    "venue": "Open Science Framework",
+    "pdf": "https://doi.org/10.17605/osf.io/pgdjf",
+    "doi": "https://doi.org/10.17605/osf.io/pgdjf",
+    "cited_by": 0,
+    "type": "study-registration"
+   },
+   "kw_score": 60,
+   "kw_terms": [
+    "simulation",
+    "llm",
+    "large language model",
+    "language model",
+    "agents",
+    "generative ai",
+    "artificial intelligence",
+    "ai"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-19T15:23:19Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 60,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "79ee4a2408bc74b2",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 66.0
   },
   "7e1e75eafc2eabaf": {
    "id": "7e1e75eafc2eabaf",
@@ -1725,7 +1813,7 @@
    "cluster": "7e1e75eafc2eabaf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "80469b978b756760": {
    "id": "80469b978b756760",
@@ -1778,7 +1866,7 @@
    "cluster": "80469b978b756760",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "8610b5b796c6e117": {
    "id": "8610b5b796c6e117",
@@ -1826,7 +1914,7 @@
    "cluster": "8610b5b796c6e117",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.68
+   "hot": 65.58
   },
   "89c0ce6b226bbbe6": {
    "id": "89c0ce6b226bbbe6",
@@ -1912,7 +2000,7 @@
    "cluster": "8e9ee572fc8daf29",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 68.96
+   "hot": 68.86
   },
   "918d48df64a86515": {
    "id": "918d48df64a86515",
@@ -2000,7 +2088,7 @@
    "cluster": "948c36101407e81c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "97f684f7c5000779": {
    "id": "97f684f7c5000779",
@@ -2051,7 +2139,45 @@
    "cluster": "97f684f7c5000779",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 66.77
+   "hot": 66.67
+  },
+  "98fb20f80efbdd1e": {
+   "id": "98fb20f80efbdd1e",
+   "url": "https://doi.org/10.21203/rs.3.rs-11761243/v1",
+   "title": "The Economics of AI and Robotics: A Scenario Analysis of Automation, Employment, Poverty, Taxation and Income Distribution in a Hypothetical Three-Sector Economy",
+   "text": "Abstract This study examines how the deepening of artificial intelligence (AI) and robotics, defined as the progressive replacement of human workers by machines, affects output, employment, poverty and income distribution. Drawing on the economics of prediction and general-purpose technologies, the task-based theory of automation, growth theory, the literature on factor shares and Keynesian demand constraints, we construct a hypothetical economy, Solvania, with 30 million inhabitants, GDP per capita of US$25,000, 6% unemployment, a 5.3% poverty rate and three sectors: agriculture (30% of output and employment), automobile manufacturing (20%) and services (50%). A macro-sectoral model linked to a 150,000-household microsimulation, implemented in Python, traces a gradual scenario, in which automation reaches 25% of jobs within five years and 50% by year 20, and a rapid scenario, in which it reaches 80% in agriculture and manufacturing and 60% in services within ten years. Both paths raise GDP strongly, to US$1.57 trillion by year 20 (gradual) and US$1.39 trillion by year 10 (rapid), but the gains are distributed very unequally. In the rapid scenario unemployment reaches 47.2%, the labour share falls from 60% to 19.9%, the Gini coefficient rises from 0.369 to 0.621 and poverty more than triples to 17.3%, while median income rises by only 8%. A policy package combining an automation levy that finances a universal dividend, universal income support, accelerated reinstatement and work sharing reduces poverty to 0.7%, lowers the Gini to 0.408 and raises GDP by a further 16%. The results are robust to alternative assumptions and support redistributive and labour market institutions established before the fastest phase of automation. JEL classification: D31, E24, H23, I32, J23, J31, O33",
+   "source_id": "openalex-generative-agents",
+   "source_name": "OpenAlex · 期刊/会议（生成式智能体/社会模拟）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-11-18T00:00:00Z",
+   "authors": [
+    "Muhmmad Muqeem Islam Muqeem"
+   ],
+   "extra": {
+    "venue": "Research Square",
+    "pdf": "https://www.researchsquare.com/article/rs-11761243/latest.pdf",
+    "doi": "https://doi.org/10.21203/rs.3.rs-11761243/v1",
+    "cited_by": 0,
+    "type": "preprint"
+   },
+   "kw_score": 43,
+   "kw_terms": [
+    "simulation",
+    "artificial intelligence",
+    "ai"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-19T15:23:19Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "academic",
+   "score": 43,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "9ae934d441da1a71": {
    "id": "9ae934d441da1a71",
@@ -2131,7 +2257,7 @@
    "cluster": "a367b923ea0b6f28",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "a3b9dc32372c08c3": {
    "id": "a3b9dc32372c08c3",
@@ -2178,7 +2304,7 @@
    "cluster": "a3b9dc32372c08c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "a5e42b2b6ba30ccc": {
    "id": "a5e42b2b6ba30ccc",
@@ -2227,7 +2353,7 @@
    "cluster": "a5e42b2b6ba30ccc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "aa8e964eeccef16d": {
    "id": "aa8e964eeccef16d",
@@ -2273,7 +2399,7 @@
    "cluster": "aa8e964eeccef16d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "ac2fe67a1e81f207": {
    "id": "ac2fe67a1e81f207",
@@ -2358,7 +2484,7 @@
    "cluster": "b21421633eabfb0f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 76.63
+   "hot": 76.51
   },
   "bbc9b4d66e7e40f5": {
    "id": "bbc9b4d66e7e40f5",
@@ -2412,7 +2538,7 @@
    "cluster": "bbc9b4d66e7e40f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "bcb060bec19cc59f": {
    "id": "bcb060bec19cc59f",
@@ -2499,7 +2625,7 @@
    "cluster": "bd48b9b8ec948700",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 68.96
+   "hot": 68.86
   },
   "bf94d38e9fce2a2e": {
    "id": "bf94d38e9fce2a2e",
@@ -2549,7 +2675,7 @@
    "cluster": "bf94d38e9fce2a2e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "c17bea1790859202": {
    "id": "c17bea1790859202",
@@ -2596,7 +2722,54 @@
    "cluster": "c17bea1790859202",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
+  },
+  "c2e5f6a5bcc1a417": {
+   "id": "c2e5f6a5bcc1a417",
+   "url": "https://doi.org/10.5281/zenodo.24342894",
+   "title": "TRACE-Bench: simulation code, data and Jupyter notebook for \"AI Agents for Metadata Discovery and Verification in E-Commerce\"",
+   "text": "Abstract TRACE-Bench is a reproducible benchmark for studying how errors in e-commerce metadata affect supplier screening, product catalogue management and digital service selection. It evaluates TRACE, a multi-agent framework that matches records by identifier, weighs conflicting values according to source reliability and records the evidence behind each recommendation. When the evidence is uncertain, TRACE can request a second check or refer the case for human review. Across 1,000 Monte Carlo replications on synthetic data, each method evaluated 450,000 cases. The rate of incorrect recommendations was 4.4% for TRACE, 7.6% for simulated manual review, 20.1% for a simulated single agent based on a large language model and 32.4% for conventional automated search. TRACE approved 1.5% of ineligible cases and referred 18.6% of all cases for human review. Description The Python package generates synthetic records with known attribute values and eligibility status. Researchers can vary how often sources contain outdated information, records for entities with similar names, or instructions embedded in retrieved content. Five variants of TRACE each omit one component, allowing researchers to measure its contribution to decision accuracy and human review workload. The archive includes the source code, experiment settings, replication-level CSV results, summary tables with 95% confidence intervals, paired statistical tests and a worked supplier-screening example. It also includes Figures 1–8 from the companion manuscript and the scripts used to generate them. The Jupyter notebook supports a short demonstration, reproduction of the full experiment and inspection of the archived results. The code is released under the MIT License. The archived results, figures and saved notebook outputs are licensed under CC BY 4.0. Keywords Artificial intelligence agents, metadata verification, e-commerce, data provenance, entity resolution, decision support, human oversight, Monte Carlo simulation.",
+   "source_id": "openalex-llm-abm",
+   "source_name": "OpenAlex · 期刊/会议（LLM 智能体仿真）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-11-18T00:00:00Z",
+   "authors": [
+    "Dmytro Prokopovych-Tkachenko"
+   ],
+   "extra": {
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+    "pdf": "https://doi.org/10.5281/zenodo.24342894",
+    "doi": "https://doi.org/10.5281/zenodo.24342894",
+    "cited_by": 0,
+    "type": "software"
+   },
+   "kw_score": 80,
+   "kw_terms": [
+    "simulation",
+    "simulated",
+    "simulate",
+    "large language model",
+    "language model",
+    "ai agent",
+    "ai agents",
+    "agents"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-19T15:23:19Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "c2e5f6a5bcc1a417",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 88.0
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -2680,7 +2853,7 @@
    "cluster": "c67f0fe45b407c7d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.68
+   "hot": 65.58
   },
   "cae0a3a8a8fe0eb8": {
    "id": "cae0a3a8a8fe0eb8",
@@ -2732,7 +2905,7 @@
    "cluster": "cae0a3a8a8fe0eb8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "cf67bba555e2fd98": {
    "id": "cf67bba555e2fd98",
@@ -2777,7 +2950,7 @@
    "cluster": "cf67bba555e2fd98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 64.58
+   "hot": 64.49
   },
   "d4547f073da0afdd": {
    "id": "d4547f073da0afdd",
@@ -2818,7 +2991,7 @@
    "cluster": "d4547f073da0afdd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 59.71
+   "hot": 59.62
   },
   "d9719a9cb09db35c": {
    "id": "d9719a9cb09db35c",
@@ -2870,7 +3043,7 @@
    "cluster": "d9719a9cb09db35c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "e167be03b0151aa8": {
    "id": "e167be03b0151aa8",
@@ -2966,7 +3139,7 @@
    "cluster": "e1cfad483eda4fd3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.68
+   "hot": 65.58
   },
   "e6d65daa2397dd51": {
    "id": "e6d65daa2397dd51",
@@ -3014,7 +3187,7 @@
    "cluster": "e6d65daa2397dd51",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 68.96
+   "hot": 68.86
   },
   "e7f6a543c6212296": {
    "id": "e7f6a543c6212296",
@@ -3058,7 +3231,7 @@
    "cluster": "e7f6a543c6212296",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 59.71
+   "hot": 59.62
   },
   "e9b4f62a38c35c8e": {
    "id": "e9b4f62a38c35c8e",
@@ -3112,7 +3285,7 @@
    "cluster": "e9b4f62a38c35c8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "eaee7cf4ca117e77": {
    "id": "eaee7cf4ca117e77",
@@ -3164,7 +3337,7 @@
    "cluster": "eaee7cf4ca117e77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 68.96
+   "hot": 68.86
   },
   "ed0de99ab7e62301": {
    "id": "ed0de99ab7e62301",
@@ -3254,7 +3427,7 @@
    "cluster": "efab9dcb2dc8e85d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -3305,7 +3478,47 @@
    "cluster": "f23f3f241ac47b98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
+  },
+  "f25062fdac882b89": {
+   "id": "f25062fdac882b89",
+   "url": "https://doi.org/10.31181/sa44202699",
+   "title": "Shapley-Anchored Pricing with a Purchase-Rate Discount: A Six-Asset Data-Market Benchmark",
+   "text": "Data-asset attribution and posted-price revenue are related but distinct decisions. We specify a conditional cooperative-allocation architecture and report a six-asset pricing benchmark built from the red Wine Quality dataset. A fixed table of 64 cross-validated ridge-regression utilities supplies valuation anchors; simulated myopic buyers then purchase missing assets according to noisy marginal utilities. Across ten paired streams of 2,000 arrivals, the reported TrPS policy has a fixed-grid hindsight revenue difference of 354.9 ± 11.4 price units, versus 415.3 ± 12.4 for UCB1 and 363.2 ± 12.0 for static Shapley pricing. Removing its purchase-rate discount increases that difference to 369.1 ± 15.1; this tests a demand heuristic, not coalition stability. Variance-targeted sampling has no detectable revenue advantage in the reported summary. Truncated anchors have an efficiency excess of approximately 0.113, whose mechanism requires the original normalization and stopping records. Core projection, adaptive utility retraining and strategic seller behavior are not evaluated. The results describe one simulator and a restricted hindsight comparator; original code and seed-level records remain necessary to verify sampling, pricing and inference.",
+   "source_id": "openalex-generative-agents",
+   "source_name": "OpenAlex · 期刊/会议（生成式智能体/社会模拟）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-11-17T00:00:00Z",
+   "authors": [
+    "Janardan Behera",
+    "Azadeh Shemshad",
+    "Bardia Khalilian"
+   ],
+   "extra": {
+    "venue": "Systemic Analytics",
+    "pdf": "https://www.sa-journal.org/index.php/systemic/article/download/99/162",
+    "doi": "https://doi.org/10.31181/sa44202699",
+    "cited_by": 0,
+    "type": "article"
+   },
+   "kw_score": 45,
+   "kw_terms": [
+    "simulator",
+    "simulated",
+    "simulate"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-19T15:23:19Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "academic",
+   "score": 45,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "f94538d40439027e": {
    "id": "f94538d40439027e",
@@ -3397,7 +3610,7 @@
    "cluster": "faa339fbf23552de",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   },
   "fc97273e83d39f85": {
    "id": "fc97273e83d39f85",
@@ -3488,7 +3701,7 @@
    "cluster": "fd0b4e5ac8bc7e59",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.57
+   "hot": 87.44
   }
  }
 }
