@@ -1,5 +1,5 @@
 {
-  "$comment": "信源配置。group=aihot 的 18 个 RSS 与 AIHOT 开源仓库 industry/sources.json 一致；其余为学术/应用/平台/游戏补充源。focused=true 表示查询本身已限定主题，关键词预筛会放宽。把 enabled 改为 false 即可停用。",
+  "$comment": "信源配置。group=aihot 的 18 个 RSS 与 AIHOT 开源仓库 industry/sources.json 一致；其余为学术/应用/平台/游戏补充源。focused=true 表示查询本身已限定主题，关键词预筛会放宽。把 enabled 改为 false 即可停用。 arXiv 源带 backfill：每次抓取额外往前翻 pages_per_fetch 页（每页 page_size 条），直到 since 日期或 max_pages，用来积累 2023 年以来的文献库。",
   "sources": [
     {
       "id": "wechat-jiqizhixin",
@@ -231,7 +231,13 @@
       "query": "(abs:\"social simulation\" OR abs:\"agent-based model\" OR abs:\"agent-based modeling\" OR abs:\"agent-based simulation\" OR abs:\"multi-agent simulation\" OR abs:\"generative agents\" OR abs:\"simulated society\" OR abs:\"society simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
       "max_results": 60,
       "interval_hours": 6,
-      "enabled": true
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
     },
     {
       "id": "arxiv-wargame",
@@ -241,9 +247,15 @@
       "group": "academic",
       "focused": true,
       "query": "(abs:wargame OR abs:wargaming OR abs:\"war game\" OR abs:\"tabletop exercise\" OR abs:\"crisis simulation\" OR abs:\"policy simulation\" OR abs:\"scenario simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:agent OR abs:agents)",
-      "max_results": 40,
+      "max_results": 60,
       "interval_hours": 6,
-      "enabled": true
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
     },
     {
       "id": "arxiv-human-behavior-sim",
@@ -253,9 +265,15 @@
       "group": "academic",
       "focused": true,
       "query": "(abs:\"simulate human\" OR abs:\"human behavior simulation\" OR abs:\"user simulation\" OR abs:\"synthetic respondents\" OR abs:\"silicon sampling\" OR abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"persona simulation\") AND (abs:LLM OR abs:\"large language model\")",
-      "max_results": 40,
+      "max_results": 60,
       "interval_hours": 6,
-      "enabled": true
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
     },
     {
       "id": "arxiv-sandbox-env",
@@ -265,9 +283,105 @@
       "group": "academic",
       "focused": true,
       "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
-      "max_results": 40,
+      "max_results": 60,
       "interval_hours": 6,
-      "enabled": true
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "arxiv-econ-finance",
+      "name": "arXiv · 经济/市场/金融智能体仿真",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"agent-based economic\" OR abs:\"financial market\" OR abs:\"trading agents\" OR abs:\"macroeconomic\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "arxiv-epidemic-health",
+      "name": "arXiv · 流行病/公共卫生仿真",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:epidemic OR abs:pandemic OR abs:\"public health\" OR abs:\"disease spread\") AND (abs:\"agent-based\" OR abs:\"generative agents\" OR abs:simulation) AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "arxiv-urban-mobility",
+      "name": "arXiv · 城市/交通/出行仿真",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:urban OR abs:traffic OR abs:mobility OR abs:\"travel behavior\") AND (abs:\"agent-based\" OR abs:\"generative agents\" OR abs:simulation) AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "arxiv-negotiation-games",
+      "name": "arXiv · 谈判/外交/博弈多智能体",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:negotiation OR abs:diplomacy OR abs:\"game theory\" OR abs:\"social dilemma\") AND abs:\"multi-agent\" AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "arxiv-npc-narrative",
+      "name": "arXiv · AI NPC/互动叙事",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:NPC OR abs:\"non-player character\" OR abs:\"interactive narrative\" OR abs:\"game agents\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
     },
     {
       "id": "openalex-llm-abm",

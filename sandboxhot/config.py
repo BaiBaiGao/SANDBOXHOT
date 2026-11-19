@@ -62,8 +62,25 @@ def keywords() -> dict:
     return read_json(CONFIG_DIR / "keywords.json", {})
 
 
-def prompt(name: str) -> str:
-    return (PROMPTS_DIR / f"{name}.md").read_text(encoding="utf-8")
+def topics() -> list[dict]:
+    return read_json(CONFIG_DIR / "topics.json", {"topics": []})["topics"]
+
+
+def topic_list_text() -> str:
+    return "\n".join(f"  - {t['slug']}：{t['name']}（{t['definition']}）" for t in topics())
+
+
+def prompt(name: str, **values: str) -> str:
+    """读取提示词，填入共用的 {{style}}（白话写作规则）和 {{topics}}（主题列表），以及调用方给的变量。
+    同一份提示词每次填出来的文字完全相同，便于命中服务端缓存。"""
+    text = (PROMPTS_DIR / f"{name}.md").read_text(encoding="utf-8")
+    if "{{style}}" in text:
+        text = text.replace("{{style}}", (PROMPTS_DIR / "style.md").read_text(encoding="utf-8").strip())
+    if "{{topics}}" in text:
+        text = text.replace("{{topics}}", topic_list_text())
+    for k, v in values.items():
+        text = text.replace("{{" + k + "}}", v)
+    return text
 
 
 def api_key() -> str | None:

@@ -17,7 +17,9 @@ def _items_between(store, start: datetime, end: datetime) -> list[dict]:
         if it.get("status") != "selected" or not it.get("is_lead", True):
             continue
         t = parse_iso(it.get("added"))
-        if t and start <= t < end:
+        pub = parse_iso(it.get("published")) or t
+        # 回填进来的旧论文不进日报/周报：发布时间要在窗口开始前 10 天以内
+        if t and start <= t < end and not it.get("backfill") and pub and pub >= start - timedelta(days=10):
             out.append(it)
     weight = {"academic": 8, "application": 8}
     out.sort(key=lambda it: it.get("score", 0) + weight.get(it.get("domain"), 0), reverse=True)
@@ -49,13 +51,16 @@ def _make(store, cfg, llm: LLM, kind: str, key: str, start, end, label: str, log
     md, ai, model = None, False, None
     if llm.available:
         material = [{"domain": DOMAIN_ZH.get(it.get("domain"), ""), "score": it.get("score"), "title": it.get("title_zh") or it["title"],
-                     "summary": it.get("summary_zh") or it.get("text", "")[:240], "source": it["source_name"], "url": it["url"]}
+                     "summary": it.get("summary_zh") or it.get("text", "")[:240], "why": (it.get("read") or {}).get("why", ""),
+                     "resources": [r["url"] for r in (it.get("read") or {}).get("resources", [])][:3],
+                     "source": it["source_name"], "url": it["url"]}
                     for it in items]
         system = prompt("digest").replace("{{period}}", "日报" if kind == "daily" else "周报").replace(
-            "{{length}}", "600" if kind == "daily" else "1200")
+            "{{length}}", "900" if kind == "daily" else "1800")
         user = f"{label}，共 {len(items)} 条：\n" + json.dumps(material, ensure_ascii=False)
         try:
-            md, model = llm.chat("digest", system, user, max_tokens=1600 if kind == "daily" else 2800,
+            md, model = llm.chat("digest" if kind == "daily" else "weekly", system, user,
+                                 max_tokens=2400 if kind == "daily" else 4500, timeout=300,
                                  purpose=f"digest-{kind}", stop_ratio=cfg["budget"]["digest_stop_ratio"], temperature=0.4)
             md = md.strip().removeprefix("```markdown").removeprefix("```").removesuffix("```").strip()
             ai = bool(md)

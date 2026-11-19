@@ -42,7 +42,7 @@ class LLM:
         return [m.get("id") for m in data.get("data", [])]
 
     def chat(self, role: str, system: str, user: str, *, max_tokens: int, purpose: str,
-             stop_ratio: float = 1.0, temperature: float = 0.2) -> tuple[str, str]:
+             stop_ratio: float = 1.0, temperature: float = 0.2, timeout: float | None = None) -> tuple[str, str]:
         """依次尝试 settings.models[role] 中的模型。返回 (文本, 实际模型)。"""
         if not self.available:
             raise LLMUnavailable(self.disabled_reason)
@@ -67,7 +67,7 @@ class LLM:
                 try:
                     resp = net.post_json(f"{self.base}/chat/completions", payload,
                                          headers={"Authorization": f"Bearer {self.key}"},
-                                         timeout=self.timeout, retries=0)
+                                         timeout=timeout or self.timeout, retries=0)
                 except net.HttpError as exc:
                     if exc.status in (401,):
                         self.disable("API Key 无效、停用或缺少 Bearer（401）")
@@ -104,6 +104,28 @@ class LLM:
                     return text, model
                 time.sleep(3 * (attempt + 1))
         raise LLMUnavailable(f"所有 {role} 模型都失败：{last_err}")
+
+    def embed(self, texts: list[str], *, purpose: str = "embed", dimensions: int = 256) -> list[list[float]]:
+        """POST /v1/embeddings（Qwen3-Embedding，0.5 积分/百万 tokens）。"""
+        if not self.available:
+            raise LLMUnavailable(self.disabled_reason)
+        model = self.cfg["models"]["embed"][0]
+        est_prompt = sum(estimate_tokens(t) for t in texts)
+        est = self.budget.check(model, est_prompt, 0)
+        payload = {"model": model, "input": texts, "dimensions": dimensions}
+        try:
+            resp = net.post_json(f"{self.base}/embeddings", payload, headers={"Authorization": f"Bearer {self.key}"},
+                                 timeout=self.timeout, retries=1)
+        except net.HttpError as exc:
+            if exc.status in (401, 403, 429):
+                self.disable(f"embeddings 返回 {exc.status}")
+            raise LLMUnavailable(f"embeddings 失败：{exc}")
+        except OSError as exc:
+            raise LLMUnavailable(f"embeddings 失败：{exc}")
+        usage = resp.get("usage") or {}
+        self.budget.record(model, purpose, usage, fallback_est=est)
+        rows = sorted(resp.get("data") or [], key=lambda r: r.get("index", 0))
+        return [r.get("embedding") or [] for r in rows]
 
 
 def parse_json_block(text: str):

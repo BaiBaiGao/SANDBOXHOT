@@ -1,0 +1,229 @@
+{
+  "$comment": "主题：模型精选时为每条内容标 0–3 个主题；模型未标时按 aliases 关键词匹配（小写包含）。主题页、主题研判和横纵专题都按这里分组。",
+  "topics": [
+    {
+      "slug": "social-sim",
+      "name": "社会与舆论仿真",
+      "definition": "用大模型智能体模拟社会网络、舆论传播、群体极化、谣言扩散与文化演化。",
+      "aliases": [
+        "social simulation",
+        "opinion dynamics",
+        "polarization",
+        "misinformation",
+        "social network",
+        "echo chamber",
+        "舆论",
+        "社会模拟",
+        "社会仿真"
+      ]
+    },
+    {
+      "slug": "generative-agents",
+      "name": "生成式智能体与 AI 小镇",
+      "definition": "有记忆、规划和反思能力的生成式智能体，以及它们组成的虚拟社区与长期演化。",
+      "aliases": [
+        "generative agents",
+        "generative agent",
+        "smallville",
+        "agent society",
+        "artificial society",
+        "ai town",
+        "虚拟小镇",
+        "智能体社会"
+      ]
+    },
+    {
+      "slug": "wargame",
+      "name": "兵棋推演与危机模拟",
+      "definition": "军事兵棋、地缘政治与危机升级推演，桌面演练与红蓝对抗中的 AI 智能体。",
+      "aliases": [
+        "wargame",
+        "wargaming",
+        "war game",
+        "crisis",
+        "escalation",
+        "military",
+        "geopolit",
+        "tabletop",
+        "兵棋",
+        "推演",
+        "沙盘"
+      ]
+    },
+    {
+      "slug": "policy",
+      "name": "政策推演与治理",
+      "definition": "用仿真评估政策效果、制度设计与公共治理方案。",
+      "aliases": [
+        "policy simulation",
+        "public policy",
+        "governance",
+        "regulation",
+        "policy",
+        "政策",
+        "治理"
+      ]
+    },
+    {
+      "slug": "economy",
+      "name": "经济、市场与金融仿真",
+      "definition": "市场、拍卖、交易、宏观经济与企业竞争的智能体仿真。",
+      "aliases": [
+        "market simulation",
+        "economic",
+        "economy",
+        "trading",
+        "auction",
+        "finance",
+        "financial",
+        "pricing",
+        "经济",
+        "市场",
+        "金融"
+      ]
+    },
+    {
+      "slug": "human-behavior",
+      "name": "人类行为与合成样本",
+      "definition": "用大模型模拟个体决策、问卷受访者、用户行为与人格，检验能否替代真人样本。",
+      "aliases": [
+        "silicon sampling",
+        "synthetic respondents",
+        "survey",
+        "persona",
+        "user simulation",
+        "simulated users",
+        "human behavior",
+        "psycholog",
+        "问卷",
+        "人格",
+        "用户模拟"
+      ]
+    },
+    {
+      "slug": "urban",
+      "name": "城市、交通与出行",
+      "definition": "城市规划、交通流、出行选择与人口流动的智能体仿真与数字孪生。",
+      "aliases": [
+        "urban",
+        "traffic",
+        "mobility",
+        "transportation",
+        "travel",
+        "city",
+        "digital twin",
+        "城市",
+        "交通",
+        "出行",
+        "数字孪生"
+      ]
+    },
+    {
+      "slug": "health",
+      "name": "公共卫生与流行病",
+      "definition": "流行病传播、公共卫生干预、医疗系统与健康行为的仿真。",
+      "aliases": [
+        "epidemic",
+        "pandemic",
+        "public health",
+        "disease",
+        "covid",
+        "vaccin",
+        "hospital",
+        "health",
+        "疫情",
+        "公共卫生",
+        "医疗"
+      ]
+    },
+    {
+      "slug": "org",
+      "name": "组织、谈判与协作",
+      "definition": "企业、团队、谈判、外交与多方博弈中的智能体协作与冲突。",
+      "aliases": [
+        "organization",
+        "organisation",
+        "team",
+        "negotiation",
+        "diplomacy",
+        "game theory",
+        "social dilemma",
+        "cooperation",
+        "company",
+        "谈判",
+        "博弈",
+        "协作",
+        "组织"
+      ]
+    },
+    {
+      "slug": "world-env",
+      "name": "世界模型与沙盒环境",
+      "definition": "供智能体活动、训练和评测的开放世界、模拟器、具身环境与世界模型。",
+      "aliases": [
+        "sandbox",
+        "world model",
+        "world simulator",
+        "simulator",
+        "environment",
+        "minecraft",
+        "embodied",
+        "open-ended",
+        "沙盒",
+        "世界模型",
+        "模拟器"
+      ]
+    },
+    {
+      "slug": "eval",
+      "name": "评测基准与可信度",
+      "definition": "仿真结果的可信度、校准、验证方法与评测基准。",
+      "aliases": [
+        "benchmark",
+        "evaluation",
+        "validation",
+        "believab",
+        "fidelity",
+        "calibrat",
+        "reliability",
+        "validity",
+        "评测",
+        "基准",
+        "可信",
+        "校准"
+      ]
+    },
+    {
+      "slug": "game",
+      "name": "游戏与 AI NPC",
+      "definition": "游戏中的 AI 智能体、非玩家角色、互动叙事与模拟类游戏。",
+      "aliases": [
+        "npc",
+        "non-player",
+        "game",
+        "gaming",
+        "player",
+        "interactive narrative",
+        "游戏",
+        "玩家"
+      ]
+    },
+    {
+      "slug": "framework",
+      "name": "开源框架与平台",
+      "definition": "可复用的智能体仿真框架、平台、工具链与基础设施。",
+      "aliases": [
+        "framework",
+        "platform",
+        "toolkit",
+        "library",
+        "open-source",
+        "open source",
+        "sdk",
+        "框架",
+        "平台",
+        "开源"
+      ]
+    }
+  ]
+}

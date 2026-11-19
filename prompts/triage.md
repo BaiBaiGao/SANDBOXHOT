@@ -33,10 +33,14 @@ relevant=true 需要同时满足：
 ## 写作
 - title_zh：自洽的中文标题，18–40 字，读者不看原文也能知道“谁/做了什么/关键结果”。保留模型、框架、机构等专有名词原文。
 - summary_zh：60–140 字，最多 3 句，直接陈述事实，不用“本文介绍了”等套话。每个数字、名称都必须来自材料，不得编造；材料不足时写短一些。
+- topics：从下面的主题列表里选 0–3 个最贴切的 slug，没有合适的就给空数组。
+{{topics}}
 - tags：2–4 个中文短标签，例如“社会仿真”“兵棋推演”“生成式智能体”“数字孪生”“经济模拟”“用户模拟”“AI NPC”“开源框架”“评测基准”。
 - relevant=false 时 title_zh、summary_zh 可以给空字符串，tags 给空数组，以节省篇幅。
 
+{{style}}
+
 ## 输出
 只输出一个 JSON 对象，不要 Markdown 代码块、不要解释：
-{"items":[{"i":<输入序号>,"relevant":true|false,"domain":"academic|application|business|game|platform","score":<0-100>,"title_zh":"...","summary_zh":"...","tags":["..."]}]}
+{"items":[{"i":<输入序号>,"relevant":true|false,"domain":"academic|application|business|game|platform","score":<0-100>,"title_zh":"...","summary_zh":"...","topics":["slug"],"tags":["..."]}]}
 每条输入必须有且只有一条输出，i 与输入一致。

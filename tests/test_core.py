@@ -33,19 +33,43 @@ class FakeLLM(BaseHTTPRequestHandler):
         body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         FakeLLM.calls.append(body)
         assert self.headers["Authorization"] == "Bearer sk-test"
+        if self.path.endswith("/embeddings"):
+            vecs = []
+            for t in body["input"]:
+                v = [0.0] * 8
+                v[0] = 1.0
+                v[1 + (len(t) % 7)] = 0.3
+                vecs.append(v)
+            return self._send({"data": [{"index": i, "embedding": v} for i, v in enumerate(vecs)],
+                               "usage": {"prompt_tokens": 50 * len(vecs)}})
         system = body["messages"][0]["content"]
         user = body["messages"][1]["content"]
-        if "逐条评估" in user:
+        if "逐条评估" in user or "独立评估" in user:
             mats = json.loads(user.split("\n", 1)[1])
             out = {"items": [{"i": m["i"], "relevant": "GPU" not in m["title"], "domain": "academic" if m["kind"] == "paper" else "application",
-                              "score": 80, "title_zh": "中文标题" + str(m["i"]), "summary_zh": "摘要", "tags": ["社会仿真"]} for m in mats]}
+                              "score": 80, "title_zh": "中文标题" + str(m["i"]), "summary_zh": "摘要", "topics": ["wargame", "bogus"],
+                              "tags": ["社会仿真"]} for m in mats]}
             text = json.dumps(out, ensure_ascii=False)
+        elif "中文精读" in system:
+            links = json.loads(user)["links"]
+            text = json.dumps({"title_zh": "精读标题", "summary_zh": "精读摘要", "abstract_zh": "中文全文梳理", "why": "值得看",
+                               "topics": ["wargame"], "validation": "real_data",
+                               "resources": [{"type": "code", "name": "repo", "url": u} for u in links] +
+                                            [{"type": "code", "name": "fake", "url": "https://evil.example/fake"}]}, ensure_ascii=False)
         elif "速读卡" in system:
             text = '```json\n{"question":"q","setup":"s","method":"m","findings":"f","validation":"未说明","limits":"l","reuse":"r"}\n```'
+        elif "主题研究员" in system:
+            text = "### 这段时间发生了什么\n研判内容"
+        elif "横纵分析法" in system:
+            text = "## 专题标题\n" + "正文" * 300
+        elif "事件综述" in system:
+            text = "综述"
         else:
             text = "## 测试日报\n导语\n### 学术前沿\n- 条目 [来源](https://example.com)"
-        resp = {"choices": [{"message": {"content": text}, "finish_reason": "stop"}],
-                "usage": {"prompt_tokens": 1000, "completion_tokens": 200, "prompt_tokens_details": {"cached_tokens": 400}}}
+        self._send({"choices": [{"message": {"content": text}, "finish_reason": "stop"}],
+                    "usage": {"prompt_tokens": 1000, "completion_tokens": 200, "prompt_tokens_details": {"cached_tokens": 400}}})
+
+    def _send(self, resp):
         data = json.dumps(resp).encode()
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
@@ -66,6 +90,7 @@ class Base(unittest.TestCase):
             mock.patch.object(store_mod, "ENRICH", t / "enrichments.json"),
             mock.patch.object(build, "SITE_DATA_DIR", t / "site" / "data"),
             mock.patch.object(build, "SITE_DIR", t / "site"),
+            mock.patch("sandboxhot.enrich.EMBED_CACHE", t / "embeddings.json"),
         ]
         for p in self.patches:
             p.start()
@@ -160,7 +185,7 @@ class TestPipeline(Base):
             st = store_mod.Store()
             sel = [i for i in st.items.values() if i["status"] == "selected"]
             self.assertEqual(len(sel), 2)  # GPU 新闻被本地预筛挡掉，不会发给模型
-            self.assertTrue(all(i["llm"] and i["title_zh"].startswith("中文标题") for i in sel))
+            self.assertTrue(all(i["llm"] and i["title_zh"] == "精读标题" for i in sel))  # 精读覆盖精选的标题
             paper = next(i for i in sel if i["kind"] == "paper")
             self.assertEqual(paper["domain"], "academic")
             self.assertEqual(paper["brief"]["question"], "q")
@@ -203,6 +228,79 @@ class TestPipeline(Base):
         site = json.loads((t / "site" / "data" / "items.json").read_text())["items"]
         self.assertEqual(len(site), 2)
         self.assertTrue(all(i["ai"] and i["title_zh"] for i in site))
+
+    def test_enrich_full_features(self):
+        """精读、双评、资源防编造、embedding 相关推荐、主题研判、横纵专题、导出与云端合并、站点新文件。"""
+        base = self._server()
+        t = Path(self.tmp.name)
+        raw = collect.parse_feed((FIX / "feed.xml").read_text(), SRC) + collect.parse_arxiv((FIX / "arxiv.xml").read_text(), ARX)
+        for k in range(10):  # 再造 10 篇兵棋论文，凑够主题研判和专题报告的门槛
+            it = dict(raw[-1]); it["url"] = f"https://arxiv.org/abs/2611.0{k:04d}"; it["id"] = collect.item_id(it["url"])
+            it["title"] = f"LLM wargame simulation study {k}"
+            raw.append(it)
+        for it in raw:
+            it["published"] = iso(now_utc() - timedelta(days=2))
+            it["text"] = (it["text"] + " Code: https://github.com/org/wargame-sim. ") * 4
+        cfg = settings()
+        cfg["research"]["report_min_items"] = 5
+        with mock.patch.object(collect, "collect", return_value=raw), mock.patch.object(Budget.__init__, "__defaults__", (self.ledger,)), \
+                mock.patch("sandboxhot.pipeline.settings", return_value=cfg), mock.patch("sandboxhot.research.topics", wraps=__import__("sandboxhot.config", fromlist=["topics"]).topics):
+            pipeline.update(use_llm=False, log=lambda *a: None)
+            env = {"TONGJI_API_KEY": "sk-test", "TONGJI_BASE_URL": base, "NO_PROXY": "127.0.0.1,localhost", "no_proxy": "127.0.0.1,localhost"}
+            with mock.patch.dict(os.environ, env), mock.patch.object(LLM, "list_models", return_value=["x"]):
+                FakeLLM.calls = []
+                self.assertEqual(pipeline.enrich_only(log=lambda *a: None), 0)
+            enr = json.loads((t / "enrichments.json").read_text())
+            pipeline.update(use_llm=False, fetch=False, log=lambda *a: None)  # 云端合并
+        paths = [c.get("messages", [{}])[0].get("content", "")[:12] if "messages" in c else "embed" for c in FakeLLM.calls]
+        self.assertIn("embed", paths)
+        self.assertGreater(len(enr["reads"]), 5)
+        read = next(iter(enr["reads"].values()))
+        self.assertEqual(read["topics"], ["wargame"])
+        self.assertTrue(all(r["url"] != "https://evil.example/fake" for r in read["resources"]))  # 材料里没有的链接被丢弃
+        self.assertIn("https://github.com/org/wargame-sim", [r["url"] for r in read["resources"]])
+        self.assertIn("wargame", enr["topic_analyses"])
+        self.assertEqual(len(enr["research"]), 1)
+        self.assertTrue(enr["related"])
+        tri = next(iter(enr["triage"].values()))
+        self.assertEqual(tri["topics"], ["wargame"])  # 非法主题 bogus 被过滤
+        site = t / "site"
+        items = json.loads((site / "data" / "items.json").read_text())["items"]
+        self.assertTrue(all(i.get("read") and i["why"] == "值得看" for i in items))
+        shard = json.loads((site / "data" / "details" / f"{items[0]['id'][0]}.json").read_text())
+        self.assertEqual(shard[items[0]["id"]]["abstract_zh"], "中文全文梳理")
+        topics_json = json.loads((site / "data" / "topics.json").read_text())["topics"]
+        self.assertTrue(next(x for x in topics_json if x["slug"] == "wargame")["analysis"])
+        self.assertEqual(len(json.loads((site / "data" / "research.json").read_text())["reports"]), 1)
+        self.assertTrue(json.loads((site / "data" / "resources.json").read_text())["resources"])
+        self.assertTrue((site / "llms.txt").exists() and (site / "api" / "latest.json").exists())
+        # 云端保存的 items.json 不含精读大字段（只在 enrichments.json 里）
+        self.assertNotIn("abstract_zh", (t / "items.json").read_text())
+
+    def test_pacing(self):
+        b = Budget(self.cfg, path=self.ledger)
+        self.assertTrue(b.allow("backfill"))
+        b.data["entries"].append({"at": iso(now_utc()), "model": "x", "purpose": "t", "prompt": 0, "cached": 0,
+                                  "completion": 0, "credits": b.daily_target})  # 今天已花到目标
+        self.assertTrue(b.allow("essential"))
+        self.assertTrue(b.allow("normal"))
+        self.assertFalse(b.allow("backfill"))
+        b.data["entries"][0]["credits"] = b.daily_target * 1.3
+        self.assertFalse(b.allow("normal"))
+        with mock.patch.object(Budget, "time_left", return_value=-1):
+            with self.assertRaises(BudgetExceeded):
+                b.check("DeepSeek-V4.1-Flash", 10, 10)
+
+    def test_arxiv_backfill(self):
+        src = dict(ARX, query="all:x", max_results=60, backfill={"since": "2023-01-01", "page_size": 100, "pages_per_fetch": 2, "max_pages": 6})
+        state = {}
+        page = (FIX / "arxiv.xml").read_text()
+        with mock.patch.object(collect.net, "get_text", side_effect=[page, page.replace("<entry>", "<x>").replace("</entry>", "</x>")]), \
+                mock.patch.object(collect.time, "sleep"):
+            out = collect.fetch_arxiv_backfill(src, state, log=lambda *a: None)
+        self.assertEqual(len(out), 1)
+        self.assertTrue(out[0]["backfill"])
+        self.assertTrue(state["backfill"]["ax"]["done"])  # 第二页为空：回填结束
 
     def test_enrich_offline_exits(self):
         with mock.patch.dict(os.environ, {"TONGJI_API_KEY": "sk-test", "TONGJI_BASE_URL": "http://127.0.0.1:9/v1", "NO_PROXY": "127.0.0.1"}), \
