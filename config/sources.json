@@ -1,5 +1,5 @@
 {
-  "$comment": "信源配置。group=aihot 的 18 个 RSS 与 AIHOT 开源仓库 industry/sources.json 一致；其余为学术/应用/平台/游戏补充源。focused=true 表示查询本身已限定主题，关键词预筛会放宽。把 enabled 改为 false 即可停用。 arXiv 源带 backfill：每次抓取额外往前翻 pages_per_fetch 页（每页 page_size 条），直到 since 日期或 max_pages，用来积累 2023 年以来的文献库。",
+  "$comment": "信源配置。group=aihot 的 18 个 RSS 与 AIHOT 开源仓库 industry/sources.json 一致；其余为学术/应用/平台/游戏补充源。focused=true 表示查询本身已限定主题，关键词预筛会放宽。把 enabled 改为 false 即可停用。 arXiv 源带 backfill：每次抓取额外往前翻 pages_per_fetch 页（每页 page_size 条），直到 since 日期或 max_pages，用来积累 2023 年以来的文献库。 gnews-* 是 Google 新闻的检索 RSS（免费、无需密钥），用来补充商业和实际应用板块的新闻。",
   "sources": [
     {
       "id": "wechat-jiqizhixin",
@@ -489,6 +489,105 @@
       "url": "https://www.gamedeveloper.com/rss.xml",
       "interval_hours": 4,
       "enabled": true
+    },
+    {
+      "id": "gnews-biz-synthetic-users",
+      "name": "Google 新闻 · 合成用户/合成样本公司",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%22synthetic+users%22+OR+%22synthetic+personas%22+OR+%22synthetic+respondents%22+AI+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-biz-sim-startups",
+      "name": "Google 新闻 · AI 仿真创业与融资",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22AI+simulation%22+OR+%22agent-based+simulation%22+OR+%22multi-agent+simulation%22%29+%28startup+OR+funding+OR+raises+OR+launches%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-biz-digital-twin-agents",
+      "name": "Google 新闻 · AI 智能体数字孪生产品",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%22digital+twin%22+%28%22AI+agents%22+OR+%22generative+AI%22+OR+LLM%29+%28company+OR+platform+OR+launch%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-app-wargaming",
+      "name": "Google 新闻 · 兵棋推演与军事 AI 仿真",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28wargaming+OR+wargame+OR+%22war+game%22%29+%28%22AI%22+OR+%22large+language+model%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-app-policy-sim",
+      "name": "Google 新闻 · 政策/城市/应急推演",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22AI+agents%22+OR+%22generative+agents%22+OR+LLM%29+%28simulation+OR+%22digital+twin%22%29+%28city+OR+government+OR+policy+OR+emergency+OR+evacuation%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-app-health-sim",
+      "name": "Google 新闻 · 公共卫生与社会模拟应用",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22synthetic+population%22+OR+%22agent-based+model%22+OR+%22social+simulation%22%29+AI+%28health+OR+pandemic+OR+election+OR+survey%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-agent-sim",
+      "name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B%29+%28%E4%BB%BF%E7%9C%9F+OR+%E6%B2%99%E7%9B%98%E6%8E%A8%E6%BC%94+OR+%E6%83%85%E6%99%AF%E6%8E%A8%E6%BC%94+OR+%E6%A8%A1%E6%8B%9F%E6%BC%94%E7%BB%83%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-wargame",
+      "name": "Google 新闻 · 中文：兵棋推演与人工智能",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E5%85%B5%E6%A3%8B%E6%8E%A8%E6%BC%94+%28%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E6%99%BA%E8%83%BD%E4%BD%93%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-digital-twin",
+      "name": "Google 新闻 · 中文：数字孪生与大模型",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F+%28%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E6%99%BA%E8%83%BD%E4%BD%93%29+%28%E5%9F%8E%E5%B8%82+OR+%E5%B9%B3%E5%8F%B0+OR+%E5%8F%91%E5%B8%83+OR+%E5%BA%94%E7%94%A8%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
     }
   ]
 }

@@ -17,10 +17,13 @@ relevant=true 需要同时满足：
 
 ## 领域（domain，只选一个）
 - academic：论文、预印本、技术报告、学术综述、数据集、基准。来源是 arXiv/期刊/会议的一律 academic。
-- application：真实场景中的落地或试点：政府、军队、城市、医疗、公共卫生、金融、供应链、教育、企业决策中的推演/仿真实践，以及有具体方法的实践案例和复盘。
-- business：公司、融资、收购、商业产品发布、市场与行业动向。
+- application：真实场景中的落地、试点或实战演练：政府、军队、城市、交通、医疗与公共卫生、应急管理、金融、供应链、教育、企业决策中的推演和仿真实践；咨询机构、智库为具体问题做的 AI 情景推演；有具体方法的实践案例、复盘和行业报告。
+- business：公司与市场动态：融资、收购、合作、采购合同、新产品或新功能发布；做合成用户、合成样本、AI 市场调研、数字孪生、仿真平台的商业服务；相关的市场规模与行业分析。
 - game：游戏中的 AI 智能体、AI NPC、AI 驱动的模拟/沙盒游戏、游戏化推演。
 - platform：开源框架、平台、工具、SDK、模拟器与基础设施。
+
+## 落地标记（applied）
+applied=true 表示这条内容针对某个真实的地区、机构、事件或业务做了实际应用、试点或基于真实数据的案例推演（论文也可以是 true，例如“用某市真实出行数据推演地铁停运时的人群反应”）。只在通用方法、合成基准或纯理论上验证的，applied=false。
 
 ## 打分（score，0–100 整数）
 综合判断“对 SANDBOXHOT 读者今天的价值”：
@@ -42,5 +45,5 @@ relevant=true 需要同时满足：
 
 ## 输出
 只输出一个 JSON 对象，不要 Markdown 代码块、不要解释：
-{"items":[{"i":<输入序号>,"relevant":true|false,"domain":"academic|application|business|game|platform","score":<0-100>,"title_zh":"...","summary_zh":"...","topics":["slug"],"tags":["..."]}]}
+{"items":[{"i":<输入序号>,"relevant":true|false,"domain":"academic|application|business|game|platform","score":<0-100>,"title_zh":"...","summary_zh":"...","topics":["slug"],"applied":true|false,"tags":["..."]}]}
 每条输入必须有且只有一条输出，i 与输入一致。

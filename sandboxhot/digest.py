@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 from .budget import BudgetExceeded
 from .config import iso, local_tz, now_utc, parse_iso, prompt
-from .llm import LLM, LLMUnavailable
+from .llm import LLM, LLMUnavailable, tidy
 
 DOMAIN_ZH = {"academic": "学术前沿", "application": "落地应用", "business": "商业", "game": "游戏", "platform": "平台工具"}
 
@@ -62,7 +62,7 @@ def _make(store, cfg, llm: LLM, kind: str, key: str, start, end, label: str, log
             md, model = llm.chat("digest" if kind == "daily" else "weekly", system, user,
                                  max_tokens=2400 if kind == "daily" else 4500, timeout=300,
                                  purpose=f"digest-{kind}", stop_ratio=cfg["budget"]["digest_stop_ratio"], temperature=0.4)
-            md = md.strip().removeprefix("```markdown").removeprefix("```").removesuffix("```").strip()
+            md = tidy(md.strip().removeprefix("```markdown").removeprefix("```").removesuffix("```").strip())
             ai = bool(md)
         except (BudgetExceeded, LLMUnavailable) as exc:
             log(f"  ! {label}改用规则版：{exc}")

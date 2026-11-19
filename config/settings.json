@@ -144,8 +144,8 @@
     "rule_select_threshold": 55,
     "select_threshold": {
       "academic": 45,
-      "application": 45,
-      "business": 60,
+      "application": 40,
+      "business": 50,
       "game": 55,
       "platform": 55
     },

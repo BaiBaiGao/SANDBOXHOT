@@ -13,7 +13,7 @@ RUNTIME = STATE_DIR / "runtime.json"
 ENRICH = DATA_DIR / "enrichments.json"
 
 TRIAGE_FIELDS = ("llm", "model", "triaged", "domain", "score", "relevant", "title_zh", "summary_zh", "tags", "status",
-                 "topics", "score1", "score2", "model2", "read_fail", "brief_fail")
+                 "topics", "score1", "score2", "model2", "read_fail", "brief_fail", "applied")
 # 只存在 enrichments.json 里、载入时才合并的大字段：云端保存 items.json 时去掉，避免重复存储
 OVERLAY_ONLY = ("read", "brief", "related", "story")
 
@@ -42,6 +42,8 @@ class Store:
                         it[k] = read[k]
                 if read.get("topics"):
                     it["topics"] = read["topics"]
+                if "applied" in read:
+                    it["applied"] = read["applied"]
         for iid, brief in (e.get("briefs") or {}).items():
             if iid in self.items:
                 self.items[iid]["brief"] = brief

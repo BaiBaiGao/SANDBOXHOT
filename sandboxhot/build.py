@@ -39,6 +39,8 @@ def public_item(it: dict, defs: list[dict]) -> dict:
         out["read"] = 1
     if it.get("backfill"):
         out["backfill"] = 1
+    if it.get("applied") and out["domain"] != "application":
+        out["applied"] = 1  # 有真实场景应用的论文等，同时出现在“实际应用”板块
     return out
 
 
@@ -89,6 +91,8 @@ def build(store, cfg: dict, sources: list[dict], log=print) -> dict:
     per_source: dict[str, int] = {}
     for it in items:
         counts[it["domain"]] = counts.get(it["domain"], 0) + 1
+        if it.get("applied"):
+            counts["application"] = counts.get("application", 0) + 1
         per_source[it["source_id"]] = per_source.get(it["source_id"], 0) + 1
     errors = store.runtime.get("errors", {})
     src_meta = [{

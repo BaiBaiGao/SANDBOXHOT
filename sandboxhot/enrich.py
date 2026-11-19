@@ -12,7 +12,7 @@ from datetime import timedelta
 from . import cluster
 from .budget import BudgetExceeded
 from .config import STATE_DIR, iso, now_utc, parse_iso, prompt, read_json, topics, write_json
-from .llm import LLM, LLMUnavailable, parse_json_block
+from .llm import LLM, LLMUnavailable, parse_json_block, tidy
 from .relevance import DOMAINS, guess_domain
 
 FIELDS_TRIAGE = ("domain", "score", "title_zh", "summary_zh", "tags")
@@ -69,10 +69,11 @@ def apply_triage(it: dict, res: dict, cfg: dict, model: str) -> None:
     it.update({
         "llm": True, "model": model, "triaged": iso(now_utc()), "domain": domain, "score": score,
         "relevant": relevant,
-        "title_zh": str(res.get("title_zh") or "")[:120],
-        "summary_zh": str(res.get("summary_zh") or "")[:400],
+        "title_zh": tidy(str(res.get("title_zh") or ""))[:120],
+        "summary_zh": tidy(str(res.get("summary_zh") or ""))[:400],
         "tags": [str(t)[:12] for t in (res.get("tags") or [])][:4],
         "topics": valid_topics(res.get("topics")),
+        "applied": bool(res.get("applied")),
     })
     it["status"] = "selected" if relevant and score >= th.get(domain, 55) else "filtered"
 
@@ -224,17 +225,19 @@ def run_reads(store, cfg: dict, llm: LLM, log=print, phase: str = "new") -> int:
             if isinstance(r, dict) and r.get("url") in allowed and r.get("type") in RESOURCE_TYPES:
                 res.append({"type": r["type"], "name": str(r.get("name") or r["url"])[:80], "url": r["url"]})
         read = {
-            "title_zh": str(data.get("title_zh") or it.get("title_zh") or "")[:120],
-            "summary_zh": str(data.get("summary_zh") or it.get("summary_zh") or "")[:400],
-            "abstract_zh": str(data.get("abstract_zh") or "")[:1600],
-            "why": str(data.get("why") or "")[:240],
+            "title_zh": tidy(str(data.get("title_zh") or it.get("title_zh") or ""))[:120],
+            "summary_zh": tidy(str(data.get("summary_zh") or it.get("summary_zh") or ""))[:400],
+            "abstract_zh": tidy(str(data.get("abstract_zh") or ""))[:1600],
+            "why": tidy(str(data.get("why") or ""))[:240],
             "topics": valid_topics(data.get("topics")) or it.get("topics", []),
             "resources": res[:8],
             "validation": data.get("validation") if data.get("validation") in VALIDATION else "unclear",
+            "applied": bool(data.get("applied", it.get("applied", False))),
             "model": model, "at": iso(now_utc()),
         }
         it["read"] = read
         it["title_zh"], it["summary_zh"], it["topics"] = read["title_zh"], read["summary_zh"], read["topics"]
+        it["applied"] = read["applied"]
         return True
 
     tier = "normal" if phase == "new" else "backfill"
@@ -262,7 +265,7 @@ def run_briefs(store, cfg: dict, llm: LLM, log=print, phase: str = "new") -> int
         if not isinstance(data, dict):
             return False
         keys = ("question", "setup", "method", "findings", "validation", "limits", "reuse")
-        it["brief"] = {k: str(data.get(k, "未说明"))[:360] for k in keys}
+        it["brief"] = {k: tidy(str(data.get(k, "未说明")))[:360] for k in keys}
         return True
 
     tier = "normal" if phase == "new" else "backfill"
@@ -312,6 +315,33 @@ def run_second(store, cfg: dict, llm: LLM, log=print) -> dict:
             it["status"] = "selected" if relevant and final >= th.get(it.get("domain"), 55) else "filtered"
             stats["sent"] += 1
             stats["changed"] += int(before != it["status"])
+    return stats
+
+
+def run_applied(store, cfg: dict, llm: LLM, log=print) -> dict:
+    """给还没有 applied 标记的已入选条目补标（便宜模型、批量），让“实际应用”板块收录真实场景的案例。"""
+    p = cfg["pipeline"]
+    stats = {"sent": 0, "applied": 0}
+    cands = [it for it in store.items.values() if it.get("status") == "selected" and it.get("llm") and "applied" not in it]
+    cands.sort(key=lambda it: it.get("score", 0), reverse=True)
+    cands = cands[: p["max_triage_items_per_run"]]
+    if not cands or not llm.available or not llm.budget.allow("normal"):
+        return stats
+    system = prompt("applied")
+    for start in range(0, len(cands), p["triage_batch_size"]):
+        batch = cands[start:start + p["triage_batch_size"]]
+        user = "请逐条判断：\n" + json.dumps([_material(i, it, 800) for i, it in enumerate(batch)], ensure_ascii=False)
+        try:
+            text, _ = llm.chat("triage", system, user, max_tokens=30 * len(batch) + 60, purpose="applied")
+        except (BudgetExceeded, LLMUnavailable) as exc:
+            log(f"  ! 补标落地案例停止：{exc}")
+            break
+        results = {r.get("i"): r for r in (parse_json_block(text) or {}).get("items", []) if isinstance(r, dict)}
+        for i, it in enumerate(batch):
+            if i in results:
+                it["applied"] = bool(results[i].get("applied"))
+                stats["sent"] += 1
+                stats["applied"] += int(it["applied"])
     return stats
 
 
@@ -394,7 +424,7 @@ def run_stories(store, cfg: dict, llm: LLM, log=print) -> int:
             log(f"  ! 事件综述停止：{exc}")
             break
         if text.strip():
-            store.stories[lead] = {"text": text.strip()[:800], "members": key_members, "model": model, "at": iso(now_utc())}
+            store.stories[lead] = {"text": tidy(text.strip())[:800], "members": key_members, "model": model, "at": iso(now_utc())}
             done += 1
     return done
 
