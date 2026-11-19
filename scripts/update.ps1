@@ -1,8 +1,9 @@
 ﻿# 笔记本定时任务：用同济 API 给云端（GitHub Actions）采集的条目补模型精选、速读卡和日报。
 # 只提交 data\enrichments.json，不碰云端写的文件，所以不会和 Actions 冲突。
-# 需要校园网或学校 VPN；连不上时直接结束，不消耗积分。
-# 用法：powershell -ExecutionPolicy Bypass -File scripts\update.ps1 [-NoPush]
-param([switch]$NoPush)
+# 需要校园网或学校 VPN：不在校内时会自动用 MotionPro 连上同济 VPN，做完后断开（见 scripts\vpn.ps1）。
+# 连不上时直接结束，不消耗积分。
+# 用法：powershell -ExecutionPolicy Bypass -File scripts\update.ps1 [-NoPush] [-NoVpn]
+param([switch]$NoPush, [switch]$NoVpn)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
@@ -20,18 +21,29 @@ function Invoke-Git { git @args; if ($LASTEXITCODE -ne 0) { throw "git $($args -
 Invoke-Git checkout --quiet -- docs data
 Invoke-Git pull --ff-only --quiet
 
-# 2) 只做模型加工
-$ErrorActionPreference = 'Continue'   # Windows PowerShell 5.1 会把 stderr 当错误，这里放宽
-& $py run.py enrich 2>&1 | ForEach-Object { "$_" } | Tee-Object -FilePath $log
-$code = $LASTEXITCODE
-$ErrorActionPreference = 'Stop'
+# 2) 不在校内时自动连同济 VPN（-NoVpn 关闭）；连不上就跳过本次
+. (Join-Path $PSScriptRoot 'vpn.ps1')
+if (-not $NoVpn) {
+    if (-not (Connect-TongjiVpn)) { Write-Host '本次没连上同济 VPN，跳过模型加工，下次再试。'; exit 0 }
+}
+
+# 3) 只做模型加工；无论成功失败都断开脚本自己连的 VPN，再提交推送
+$code = 1
+try {
+    $ErrorActionPreference = 'Continue'   # Windows PowerShell 5.1 会把 stderr 当错误，这里放宽
+    & $py run.py enrich 2>&1 | ForEach-Object { "$_" } | Tee-Object -FilePath $log
+    $code = $LASTEXITCODE
+} finally {
+    $ErrorActionPreference = 'Stop'
+    if (-not $NoVpn) { Disconnect-TongjiVpn }
+}
 if ($code -ne 0) { Write-Host "本次没有调用模型（见 $log）。"; exit 0 }
 
-# 3) 提交前检查：发现 API Key 立即中止
+# 4) 提交前检查：发现 API Key 立即中止
 & $py run.py guard
 if ($LASTEXITCODE -ne 0) { throw '发现疑似 API Key，已中止提交。' }
 
-# 4) 只提交 enrichments.json；推送被拒（Actions 刚推送过）就重新拉取再推
+# 5) 只提交 enrichments.json；推送被拒（Actions 刚推送过）就重新拉取再推
 Invoke-Git add data/enrichments.json
 git diff --cached --quiet
 if ($LASTEXITCODE -ne 0) {
@@ -48,7 +60,7 @@ if ($LASTEXITCODE -ne 0) {
 # 本地预览用的 docs\ 与 data\ 改动不保留，保证电脑上只有最新版本
 git checkout --quiet -- docs data 2>$null
 
-# 5) 每 7 天把本地仓库瘦身成“只有最新版本”（GitHub 上保留完整历史；.env 与 state\ 不受影响）
+# 6) 每 7 天把本地仓库瘦身成“只有最新版本”（GitHub 上保留完整历史；.env 与 state\ 不受影响）
 $stamp = Join-Path $state 'last_slim.txt'
 $last = if (Test-Path $stamp) { [datetime](Get-Content $stamp) } else { [datetime]::MinValue }
 $pending = git status --porcelain --untracked-files=no
