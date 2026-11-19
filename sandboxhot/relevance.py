@@ -70,3 +70,20 @@ def passes_prefilter(item: dict, cfg: dict) -> bool:
     p = cfg["pipeline"]
     th = p["keyword_threshold_focused"] if item.get("focused") else p["keyword_threshold"]
     return item.get("kw_score", 0) >= th
+
+
+def item_topics(it: dict, topic_defs: list[dict]) -> list[str]:
+    """模型标注的主题优先；没有时按 topics.json 的 aliases 关键词匹配（零额度），最多 3 个。"""
+    slugs = {t["slug"] for t in topic_defs}
+    got = [t for t in (it.get("topics") or []) if t in slugs]
+    if got:
+        return got[:3]
+    text = _norm(f"{it.get('title', '')} {it.get('title_zh', '')} {it.get('text', '')[:1500]}")
+    scored = []
+    for t in topic_defs:
+        n = sum(1 for a in t.get("aliases", []) if a.lower() in text)
+        if n:
+            scored.append((n, t["slug"]))
+    scored.sort(reverse=True)
+    strong = [slug for n, slug in scored if n >= 2]  # 命中 2 个以上别名才算可靠
+    return strong[:3] or [slug for _, slug in scored[:1]]

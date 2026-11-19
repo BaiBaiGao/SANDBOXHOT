@@ -1,6 +1,7 @@
 """额度账本：按滚动 7 天统计已消耗积分，所有调用前先检查。账本只存在本地 state/ 目录。"""
 from __future__ import annotations
 
+import time
 from datetime import timedelta
 
 from .config import STATE_DIR, iso, now_utc, parse_iso, read_json, write_json
@@ -35,6 +36,7 @@ class Budget:
         self.path = path
         self.data = read_json(path, {"entries": []})
         self.run_spent = 0.0
+        self.started = time.monotonic()
         self._prune()
 
     def _prune(self):
@@ -55,10 +57,35 @@ class Budget:
     def ratio(self) -> float:
         return self.spent_7d() / self.weekly_cap if self.weekly_cap else 1.0
 
+    @property
+    def daily_target(self) -> float:
+        return self.weekly_cap / 7
+
+    def time_left(self) -> float:
+        """本次运行剩余的秒数（run_time_limit_minutes 控制，避免超过计划任务的时限）。"""
+        limit = float(self.b.get("run_time_limit_minutes", 40)) * 60
+        return limit - (time.monotonic() - self.started)
+
+    def pace(self) -> float:
+        """近 24 小时花费 / 每日目标。<1 说明花得比计划慢，可以做低优先级任务。"""
+        return self.spent_since(1) / self.daily_target if self.daily_target else 9.9
+
+    def allow(self, tier: str) -> bool:
+        """匀速花费：essential（新条目精选）总是可以；normal（精读、速读卡、日报、研判）在
+        近 24 小时未超过 每日目标 × overspend_ratio 时可以；backfill（历史回填）只在低于目标时进行。"""
+        if self.time_left() <= 60:
+            return False
+        if tier == "essential":
+            return True
+        limit = self.b.get("overspend_ratio", 1.2) if tier == "normal" else self.b.get("backfill_ratio", 0.95)
+        return self.pace() < limit
+
     def remaining_run(self) -> float:
         return min(self.b["per_run_cap"] - self.run_spent, self.weekly_cap - self.spent_7d())
 
     def check(self, model: str, est_prompt: int, max_out: int, stop_ratio: float = 1.0) -> float:
+        if self.time_left() <= 0:
+            raise BudgetExceeded("本次运行的时间预算已用完，剩余任务留到下次")
         est = credits_for(self.prices, model, est_prompt, 0, max_out)
         if self.spent_7d() + est > self.weekly_cap * stop_ratio:
             raise BudgetExceeded(f"滚动 7 天已用 {self.spent_7d():.2f}/{self.weekly_cap:.0f} 积分（阈值 {stop_ratio:.0%}）")
@@ -100,6 +127,7 @@ class Budget:
             tok_in += e["prompt"]; tok_cached += e["cached"]; tok_out += e["completion"]
         lines = [
             f"滚动 7 天：{self.spent_7d():.3f} 积分 / 流水线上限 {self.weekly_cap:.0f}（平台周额度 {self.b['weekly_quota']}）",
+            f"每日目标 {self.daily_target:.1f} 积分；近 24 小时进度 {self.pace():.0%}",
             f"近 24 小时：{self.spent_since(1):.3f} 积分；调用 {calls} 次；输入 {tok_in} tokens（缓存命中 {tok_cached}），输出 {tok_out} tokens",
         ]
         for m, (n, c) in sorted(by_model.items(), key=lambda x: -x[1][1]):

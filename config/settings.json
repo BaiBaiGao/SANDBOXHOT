@@ -10,9 +10,54 @@
     "timeout_seconds": 120
   },
   "models": {
-    "triage": ["DeepSeek-V4.1-Flash", "MiMo-V2.6-Flash", "Qwen3.8-Flash-Next"],
-    "brief": ["DeepSeek-V4.1-Flash", "MiMo-V2.6-Flash"],
-    "digest": ["GLM-5.3", "MiMo-V2.6-Pro", "DeepSeek-V4.1-Flash"]
+    "$comment": "每个用途按顺序回退。triage/second 用便宜模型批量处理；read/brief/story/digest 用中文写作更好的 GLM-5.3；weekly/topic/research 用 512K 上下文的 Kimi-K3.1-Pro 做长文研判。",
+    "triage": [
+      "DeepSeek-V4.1-Flash",
+      "MiMo-V2.6-Flash",
+      "Qwen3.8-Flash-Next"
+    ],
+    "second": [
+      "Qwen3.8-27B",
+      "GLM-5.3-Flash",
+      "MiMo-V2.6-Flash"
+    ],
+    "read": [
+      "GLM-5.3",
+      "MiMo-V2.6-Pro",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "brief": [
+      "GLM-5.3",
+      "MiMo-V2.6-Pro",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "story": [
+      "GLM-5.3",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "digest": [
+      "GLM-5.3",
+      "MiMo-V2.6-Pro",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "weekly": [
+      "Kimi-K3.1-Pro",
+      "GLM-5.3",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "topic": [
+      "Kimi-K3.1-Pro",
+      "GLM-5.3",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "research": [
+      "Kimi-K3.1-Pro",
+      "GLM-5.3",
+      "DeepSeek-V4.1-Flash"
+    ],
+    "embed": [
+      "Qwen3-Embedding"
+    ]
   },
   "reasoning": {
     "DeepSeek-V4.1-Flash": "none",
@@ -26,23 +71,67 @@
     "MiniMax-M3.1-Flash": "low"
   },
   "prices": {
-    "DeepSeek-V4.1-Flash": {"input": 20, "cached": 0.4, "output": 80},
-    "Kimi-K3.1-Pro": {"input": 260, "cached": 26, "output": 1360},
-    "MiniMax-M3.1-Flash": {"input": 20, "cached": 2, "output": 80},
-    "GLM-5.3": {"input": 160, "cached": 40, "output": 560},
-    "MiMo-V2.6-Pro": {"input": 60, "cached": 0.5, "output": 120},
-    "GLM-5.3-Flash": {"input": 16, "cached": 4.6, "output": 56},
-    "Qwen3.8-Flash-Next": {"input": 16, "cached": 1.6, "output": 54},
-    "MiMo-V2.6-Flash": {"input": 20, "cached": 0.4, "output": 40},
-    "Qwen3.8-27B": {"input": 60, "cached": 6, "output": 240}
+    "DeepSeek-V4.1-Flash": {
+      "input": 20,
+      "cached": 0.4,
+      "output": 80
+    },
+    "Kimi-K3.1-Pro": {
+      "input": 260,
+      "cached": 26,
+      "output": 1360
+    },
+    "MiniMax-M3.1-Flash": {
+      "input": 20,
+      "cached": 2,
+      "output": 80
+    },
+    "GLM-5.3": {
+      "input": 160,
+      "cached": 40,
+      "output": 560
+    },
+    "MiMo-V2.6-Pro": {
+      "input": 60,
+      "cached": 0.5,
+      "output": 120
+    },
+    "GLM-5.3-Flash": {
+      "input": 16,
+      "cached": 4.6,
+      "output": 56
+    },
+    "Qwen3.8-Flash-Next": {
+      "input": 16,
+      "cached": 1.6,
+      "output": 54
+    },
+    "MiMo-V2.6-Flash": {
+      "input": 20,
+      "cached": 0.4,
+      "output": 40
+    },
+    "Qwen3.8-27B": {
+      "input": 60,
+      "cached": 6,
+      "output": 240
+    },
+    "Qwen3-Embedding": {
+      "input": 0.5,
+      "cached": 0.5,
+      "output": 0
+    }
   },
   "budget": {
-    "$comment": "平台每周 1000 积分、所有模型共用、不累积。流水线只用其中一部分，留出余量给你自己手动调用。按滚动 7 天统计，不假设具体重置时刻。",
+    "$comment": "平台每周 1000 积分、所有模型共用、不累积。流水线最多用 500（滚动 7 天），另一半留给你自己。匀速花费：每天目标 = 500/7；近 24 小时超过目标 × overspend_ratio 时只做新条目精选；回填等低优先级任务只在低于目标时进行。",
     "weekly_quota": 1000,
     "pipeline_weekly_cap": 500,
-    "per_run_cap": 25,
-    "brief_stop_ratio": 0.6,
-    "digest_stop_ratio": 0.9
+    "per_run_cap": 45,
+    "overspend_ratio": 1.2,
+    "backfill_ratio": 0.95,
+    "run_time_limit_minutes": 40,
+    "brief_stop_ratio": 0.9,
+    "digest_stop_ratio": 0.98
   },
   "pipeline": {
     "keyword_threshold": 30,
@@ -53,25 +142,60 @@
     "max_triage_attempts": 3,
     "fallback_after_hours": 36,
     "rule_select_threshold": 55,
-    "select_threshold": {"academic": 45, "application": 45, "business": 60, "game": 55, "platform": 55},
-    "brief_min_score": 68,
-    "brief_domains": ["academic", "application"],
-    "max_briefs_per_run": 12,
+    "select_threshold": {
+      "academic": 45,
+      "application": 45,
+      "business": 60,
+      "game": 55,
+      "platform": 55
+    },
+    "brief_min_score": 55,
+    "brief_domains": [
+      "academic",
+      "application"
+    ],
+    "max_briefs_per_run": 15,
     "upgrade_fallback_per_run": 40,
-    "max_item_age_days": 21,
-    "first_run_backfill_per_source": 15
+    "max_item_age_days": 45,
+    "first_run_backfill_per_source": 15,
+    "max_reads_per_run": 20,
+    "read_text_chars": 4000,
+    "new_item_days": 3,
+    "second_score_range": [
+      40,
+      65
+    ],
+    "max_second_per_run": 48,
+    "second_disagree": 20,
+    "max_stories_per_run": 5,
+    "embed_batch": 32,
+    "embed_dimensions": 256,
+    "related_min_sim": 0.55,
+    "related_top": 5,
+    "dupe_sim": 0.9
   },
   "retention": {
     "selected_days": 365,
     "filtered_days": 30,
     "seen_days": 60,
     "site_items_days": 180,
-    "site_items_max": 2000,
+    "site_items_max": 3000,
     "daily_digests_keep": 90,
     "weekly_digests_keep": 52
   },
   "digest": {
     "daily_items": 24,
     "weekly_items": 40
+  },
+  "research": {
+    "$comment": "主题研判每个主题每 7 天一次；横纵专题每周最多 2 篇，同一主题 28 天内不重复。",
+    "topic_every_days": 7,
+    "topic_window_days": 30,
+    "topic_min_items": 3,
+    "topics_per_run": 3,
+    "reports_per_week": 2,
+    "report_repeat_days": 28,
+    "report_min_items": 8,
+    "report_max_items": 90
   }
 }

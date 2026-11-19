@@ -25,7 +25,8 @@ def jaccard(a: set, b: set) -> float:
     return len(a & b) / len(a | b)
 
 
-def assign(items: list[dict], window_days: int = 10, threshold: float = 0.5) -> None:
+def assign(items: list[dict], window_days: int = 10, threshold: float = 0.5, extra_pairs: list | None = None) -> None:
+    """extra_pairs：笔记本用 embedding 找到的跨来源同事件配对（enrichments.json 的 dupes）。"""
     now = now_utc()
     recent = [it for it in items if (parse_iso(it.get("added")) or now) > now - timedelta(days=window_days)]
     parent = {it["id"]: it["id"] for it in items}
@@ -43,6 +44,9 @@ def assign(items: list[dict], window_days: int = 10, threshold: float = 0.5) -> 
                 continue
             if jaccard(toks[a["id"]], toks[b["id"]]) >= threshold:
                 parent[find(a["id"])] = find(b["id"])
+    for a, b in extra_pairs or []:
+        if a in parent and b in parent:
+            parent[find(a)] = find(b)
     groups: dict[str, list[dict]] = {}
     for it in items:
         groups.setdefault(find(it["id"]), []).append(it)
@@ -59,7 +63,7 @@ def hot_score(it: dict, half_life_hours: float = 72) -> float:
     now = now_utc()
     t = parse_iso(it.get("added")) or now
     pub = parse_iso(it.get("published")) or t
-    ref = max(t, pub) if pub <= now else t
+    ref = pub if pub <= now else t  # 按发布时间衰减：回填的旧论文不会冒充热点
     age_h = max(0.0, (now - ref).total_seconds() / 3600)
     boost = 1 + 0.35 * (it.get("cluster_size", 1) - 1)
     weight = {"academic": 1.1, "application": 1.1}.get(it.get("domain"), 1.0)

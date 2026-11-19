@@ -206,6 +206,43 @@ def fetch_arxiv(source: dict) -> list[dict]:
     return items
 
 
+def fetch_arxiv_backfill(source: dict, state: dict, log=print) -> list[dict]:
+    """历史回填：每次在上次的位置继续往前翻 pages_per_fetch 页，直到早于 since 或达到 max_pages。
+    进度记在 state['backfill'][source_id]；回填条目打上 backfill=True，不受 max_item_age_days 限制。"""
+    bf = source.get("backfill") or {}
+    prog = state.setdefault("backfill", {}).setdefault(source["id"], {"next": source.get("max_results", 50), "done": False})
+    if prog.get("done"):
+        return []
+    since = parse_date(bf.get("since", "2023-01-01"))
+    size = int(bf.get("page_size", 100))
+    out: list[dict] = []
+    for _ in range(int(bf.get("pages_per_fetch", 2))):
+        start = int(prog["next"])
+        if start >= size * int(bf.get("max_pages", 6)) + source.get("max_results", 50):
+            prog["done"] = True
+            break
+        params = {"search_query": source["query"], "start": start, "max_results": size,
+                  "sortBy": "submittedDate", "sortOrder": "descending"}
+        page = parse_arxiv(net.get_text(ARXIV_API + "?" + urllib.parse.urlencode(params), timeout=60), source)
+        time.sleep(3.1)
+        prog["next"] = start + size
+        if not page:
+            prog["done"] = True
+            break
+        for it in page:
+            pub = parse_date(it["published"])
+            if since and pub and pub < since:
+                prog["done"] = True
+                continue
+            it["backfill"] = True
+            out.append(it)
+        if prog["done"]:
+            break
+    if out:
+        log(f"    回填 {source['name']}：+{len(out)} 条（下次从第 {prog['next']} 条继续{'，已完成' if prog['done'] else ''}）")
+    return out
+
+
 def _openalex_abstract(inv: dict | None) -> str:
     if not inv:
         return ""
@@ -317,6 +354,11 @@ def collect(sources: list[dict], state: dict, *, force: bool = False, log=print)
                 continue
         try:
             items = fn(s)
+            if s.get("backfill") and s["kind"] == "arxiv":
+                try:
+                    items += fetch_arxiv_backfill(s, state, log)
+                except Exception as exc:  # noqa: BLE001 —— 回填失败不影响正常抓取
+                    log(f"    回填失败 {s['name']}：{str(exc)[:120]}")
             last[s["id"]] = iso(now)
             errors.pop(s["id"], None)
             log(f"  · {s['name']}: {len(items)} 条")
