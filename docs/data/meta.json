@@ -4,12 +4,12 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-19T17:09:54Z",
+ "generated": "2026-11-19T17:18:16Z",
  "counts": {
-  "academic": 1244,
+  "academic": 1322,
   "game": 1
  },
- "total": 1245,
+ "total": 1323,
  "reads": 0,
  "research": 0,
  "ai_items": 52,
@@ -240,7 +240,7 @@
    "items": 0,
    "home": "https://importai.substack.com/feed",
    "query": "",
-   "ok": true
+   "ok": false
   },
   {
    "id": "rss-latent-space",
@@ -297,7 +297,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 162,
+   "items": 240,
    "home": "",
    "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
    "ok": true
@@ -384,7 +384,7 @@
    "items": 10,
    "home": "",
    "query": "generative agents social simulation",
-   "ok": false
+   "ok": true
   },
   {
    "id": "openalex-wargame-llm",
@@ -472,7 +472,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-19T17:09:54Z",
+  "at": "2026-11-19T17:18:16Z",
   "llm": false,
   "spent_run": 0.0
  }
