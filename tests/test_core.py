@@ -153,7 +153,7 @@ class TestBudget(Base):
     def test_caps(self):
         b = Budget(self.cfg, path=self.ledger)
         b.data["entries"].append({"at": iso(now_utc()), "model": "x", "purpose": "t", "prompt": 0, "cached": 0,
-                                  "completion": 0, "credits": 499.99})
+                                  "completion": 0, "credits": b.weekly_cap - 0.01})
         with self.assertRaises(BudgetExceeded):
             b.check("DeepSeek-V4.1-Flash", 10000, 2000)
         b.data["entries"][0]["at"] = iso(now_utc() - timedelta(days=8))  # 滚出 7 天窗口

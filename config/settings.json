@@ -123,13 +123,13 @@
     }
   },
   "budget": {
-    "$comment": "平台每周 1000 积分、所有模型共用、不累积。流水线最多用 500（滚动 7 天），另一半留给你自己。匀速花费：每天目标 = 500/7；近 24 小时超过目标 × overspend_ratio 时只做新条目精选；回填等低优先级任务只在低于目标时进行。",
+    "$comment": "平台每周 1000 积分、所有模型共用、不累积。流水线最多用 800（滚动 7 天），剩下 200 留给你自己。匀速花费：每天目标 = 800/7；近 24 小时超过目标 × overspend_ratio 时只做新条目精选；回填等低优先级任务只在低于目标时进行。",
     "weekly_quota": 1000,
-    "pipeline_weekly_cap": 500,
-    "per_run_cap": 45,
+    "pipeline_weekly_cap": 800,
+    "per_run_cap": 70,
     "overspend_ratio": 1.2,
     "backfill_ratio": 0.95,
-    "run_time_limit_minutes": 40,
+    "run_time_limit_minutes": 45,
     "brief_stop_ratio": 0.9,
     "digest_stop_ratio": 0.98
   },
@@ -154,11 +154,11 @@
       "academic",
       "application"
     ],
-    "max_briefs_per_run": 15,
+    "max_briefs_per_run": 25,
     "upgrade_fallback_per_run": 40,
     "max_item_age_days": 45,
     "first_run_backfill_per_source": 15,
-    "max_reads_per_run": 20,
+    "max_reads_per_run": 30,
     "read_text_chars": 4000,
     "new_item_days": 3,
     "second_score_range": [
@@ -188,12 +188,12 @@
     "weekly_items": 40
   },
   "research": {
-    "$comment": "主题研判每个主题每 7 天一次；横纵专题每周最多 2 篇，同一主题 28 天内不重复。",
+    "$comment": "主题研判每个主题每 7 天一次；横纵专题每周最多 3 篇，同一主题 28 天内不重复。",
     "topic_every_days": 7,
     "topic_window_days": 30,
     "topic_min_items": 3,
-    "topics_per_run": 3,
-    "reports_per_week": 2,
+    "topics_per_run": 4,
+    "reports_per_week": 3,
     "report_repeat_days": 28,
     "report_min_items": 8,
     "report_max_items": 90
