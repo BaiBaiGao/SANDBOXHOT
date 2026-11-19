@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Demo</title>
+<item><title>Generative agents simulate a city council debate with LLMs</title><link>https://example.com/a?utm_source=x</link>
+<pubDate>Wed, 18 Nov 2026 08:00:00 GMT</pubDate><description>&lt;p&gt;Researchers built a multi-agent simulation where large language model agents role-play residents.&lt;/p&gt;</description></item>
+<item><title>New GPU launches with more memory</title><link>https://example.com/b</link><pubDate>Wed, 18 Nov 2026 09:00:00 GMT</pubDate><description>Faster chips.</description></item>
+</channel></rss>
