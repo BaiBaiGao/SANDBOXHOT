@@ -8,9 +8,10 @@
 - topics：从主题列表里选 0–3 个 slug。
 {{topics}}
 - resources：只从“材料中出现的链接”里挑出代码、数据集、基准、模型、演示或项目主页，标明类型；没有就给空数组，绝不编造链接。
+- applied：是否针对某个真实的地区、机构、事件或业务做了实际应用、试点或基于真实数据的案例推演（true/false）。
 - validation：仿真结果的验证强度，只能选一个：real_data（与真实世界数据对比或校准）、human_experiment（与真人实验/问卷对照）、benchmark（只在基准或指标上评测）、none（没有验证）、unclear（材料看不出）。
 
 {{style}}
 
 只输出一个 JSON 对象，不要 Markdown 代码块：
-{"title_zh":"...","summary_zh":"...","abstract_zh":"...","why":"...","topics":["slug"],"resources":[{"type":"code|data|benchmark|model|demo|project","name":"...","url":"..."}],"validation":"real_data|human_experiment|benchmark|none|unclear"}
+{"title_zh":"...","summary_zh":"...","abstract_zh":"...","why":"...","topics":["slug"],"resources":[{"type":"code|data|benchmark|model|demo|project","name":"...","url":"..."}],"validation":"real_data|human_experiment|benchmark|none|unclear","applied":true|false}

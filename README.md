@@ -21,9 +21,9 @@
 
 ## 关于作者
 
-**Bianco**，同济大学土木工程学院 × 米兰理工大学能源学院双学位博士生。我一直对用 LLM 做多智能体仿真感兴趣，尤其是在假想的极端情况下：不同个体面对不同的基础设施条件和外界干扰会怎样反应，通过推演计算提前看到由人引发的极端情况，辅助管理者决策。
+**Bianco**，同济大学土木工程学院 × 米兰理工大学能源系双学位博士生。我一直对用 LLM 做多智能体仿真感兴趣，尤其是在假想的极端情况下：不同个体面对不同的基础设施条件和外界干扰会怎样反应，通过推演计算提前看到由人引发的极端情况，辅助管理者决策。
 
-欢迎做 sandbox simulation based on LLM agents 的同仁交流：xiaobaihao6666 [at] tongji.edu.cn · hao.bai [at] polimi.it
+欢迎做 sandbox simulation based on LLM agents 的同仁交流：baihaointongji [at] gmail.com
 
 网站参考了数字生命卡兹克的 [AIHOT](https://github.com/KKKKhazix/AIHOT) 和 [khazix-skills](https://github.com/KKKKhazix/khazix-skills) 等仓库，主要借助 Codex 和 Claude 搭建。
 
@@ -56,6 +56,10 @@ HN / GitHub / 游戏      ┘   发布网站  ◀──合并──────�
 学术和应用的侧重：入选门槛 45 分（商业 60 分），有速读卡，首页排在最前、篇幅最大，arXiv 检索式最多。
 
 **信源**：`group: "aihot"` 的 18 个 RSS 和 AIHOT 开源仓库 `industry/sources.json` 一致；另外加了 arXiv、OpenAlex、Hacker News、GitHub、Game Developer 和两个公众号。全部配置在 [`config/sources.json`](config/sources.json)，主题在 [`config/topics.json`](config/topics.json)。
+
+**商业和实际应用的扩充**：新增 9 个 Google 新闻检索源（中英文，免费），覆盖合成用户与合成样本公司、AI 仿真创业与融资、数字孪生产品、兵棋推演、政策/城市/应急推演和公共卫生模拟。论文如果用真实地区、机构或事件的数据做了案例推演，会被标成“真实场景应用”，同时出现在实际应用板块。应用和商业的入选门槛分别降到 40 和 50 分。
+
+**写作风格**：所有模型生成的中文（标题、摘要、精读、速读卡、日报、研判、专题）都遵守 [`prompts/style.md`](prompts/style.md) 的“活人感”规则，改编自数字生命卡兹克的 [human-writing](https://github.com/KKKKhazix/human-writing)（MIT 协议）：只写材料里有的东西，不写翻案腔和套话，不用破折号和黑话。
 
 ## 额度策略（同济平台 Free 套餐：每周 1000 积分，所有模型共用）
 

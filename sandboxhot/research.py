@@ -7,7 +7,7 @@ from datetime import timedelta
 
 from .budget import BudgetExceeded
 from .config import iso, now_utc, parse_iso, prompt, topics
-from .llm import LLM, LLMUnavailable
+from .llm import LLM, LLMUnavailable, tidy
 from .relevance import item_topics
 
 
@@ -78,7 +78,7 @@ def run_topic_analyses(store, cfg: dict, llm: LLM, log=print) -> int:
             log(f"  ! 主题研判停止：{exc}")
             break
         if md.strip():
-            store.topic_analyses[t["slug"]] = {"markdown": md.strip(), "created": iso(now), "model": model,
+            store.topic_analyses[t["slug"]] = {"markdown": tidy(md.strip()), "created": iso(now), "model": model,
                                                "item_ids": [it["id"] for it in items], "window_days": r["topic_window_days"]}
             done += 1
             log(f"  · 主题研判：{t['name']}（{len(items)} 条）")
@@ -126,7 +126,7 @@ def run_reports(store, cfg: dict, llm: LLM, log=print) -> int:
         key = f"{t['slug']}-{now.strftime('%Y%m%d')}"
         store.research = [x for x in store.research if x["key"] != key]
         store.research.append({"key": key, "topic": t["slug"], "topic_name": t["name"], "title": _md_title(md, t["name"]),
-                               "markdown": md.strip(), "created": iso(now), "model": model,
+                               "markdown": tidy(md.strip()), "created": iso(now), "model": model,
                                "item_ids": [it["id"] for it in items],
                                "span": [items[0]["published"][:10], items[-1]["published"][:10]]})
         done += 1

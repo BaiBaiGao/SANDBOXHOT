@@ -3,8 +3,8 @@
   "use strict";
   var DOMAINS = {
     academic: { name: "学术论文", blurb: "预印本、期刊与会议论文：LLM 社会仿真、生成式智能体、兵棋推演、人类行为模拟、沙盒环境与评测基准。" },
-    application: { name: "实际应用", blurb: "政府、军事、城市、公共卫生、金融、供应链、教育与企业决策中的 AI 推演和仿真实践。" },
-    business: { name: "商业", blurb: "做 AI 仿真与合成用户的公司、融资、收购和商业产品。" },
+    application: { name: "实际应用", blurb: "政府、军事、城市交通、公共卫生、应急管理、金融、供应链与企业决策中的 AI 推演和仿真实践，也包括用真实数据做案例推演的论文。" },
+    business: { name: "商业", blurb: "合成用户与合成样本、AI 市场调研、数字孪生与仿真平台相关的公司、融资、合作、合同和新产品。" },
     game: { name: "游戏", blurb: "AI NPC、智能体驱动的模拟/沙盒游戏与游戏化推演。" },
     platform: { name: "平台工具", blurb: "开源框架、模拟器、平台与基础设施。" }
   };
@@ -110,7 +110,7 @@
     var links = ['<a href="' + esc(safeUrl(it.url)) + '" target="_blank" rel="noopener">原文</a>'];
     if (x.pdf) links.push('<a href="' + esc(safeUrl(x.pdf)) + '" target="_blank" rel="noopener">PDF</a>');
     if (x.discussion) links.push('<a href="' + esc(safeUrl(x.discussion)) + '" target="_blank" rel="noopener">讨论</a>');
-    var marks = (it.read ? '<span class="mark">精读</span>' : "") + (it.brief ? '<span class="mark">速读卡</span>' : "") + (it.res ? '<span class="mark">资源 ' + it.res + "</span>" : "");
+    var marks = (it.applied ? '<span class="mark">真实场景应用</span>' : "") + (it.read ? '<span class="mark">精读</span>' : "") + (it.brief ? '<span class="mark">速读卡</span>' : "") + (it.res ? '<span class="mark">资源 ' + it.res + "</span>" : "");
     return '<article class="card">' +
       '<div class="row"><span class="meta"><span class="pill d-' + esc(it.domain) + '">' + d.name + "</span>" + validBadge(it.validation) + "</span>" +
       '<span class="meta">' + (it.ai ? "" : '<span class="flag" title="模型暂未处理，按关键词规则入选">规则</span>') +
@@ -124,6 +124,8 @@
       "</article>";
   }
   function leads() { return state.items.filter(function (it) { return it.lead; }); }
+  // “实际应用”板块同时收录标了真实场景应用（applied）的论文等
+  function inDomain(it, dom) { return it.domain === dom || (dom === "application" && it.applied); }
   function sectionHead(cls, title, link, linkText) {
     return '<div class="sec-head"><div class="sec-title ' + cls + '"><span class="bar"></span><h2>' + title + "</h2></div>" +
       (link ? '<a href="' + link + '">' + (linkText || "查看全部 →") + "</a>" : "") + "</div>";
@@ -164,7 +166,7 @@
       }).join("") + "</div>";
     }
     function top(dom, n) {
-      return all.filter(function (it) { return it.domain === dom; }).sort(function (a, b) { return rank(b) - rank(a); }).slice(0, n);
+      return all.filter(function (it) { return inDomain(it, dom); }).sort(function (a, b) { return rank(b) - rank(a); }).slice(0, n);
     }
     [["academic", 6], ["application", 6]].forEach(function (p) {
       var list = top(p[0], p[1]);
@@ -235,7 +237,7 @@
   function domainPage(dom) {
     var d = DOMAINS[dom];
     if (!d) return notFound();
-    var l = listing(leads().filter(function (it) { return it.domain === dom; }), "d:" + dom, function () { domainPage(dom); });
+    var l = listing(leads().filter(function (it) { return inDomain(it, dom); }), "d:" + dom, function () { domainPage(dom); });
     app.innerHTML = '<h1 class="d-' + dom + '">' + d.name + "</h1>" + '<p class="lede">' + d.blurb + "</p>" + l.html;
     l.bind();
   }
@@ -394,7 +396,7 @@
   }
 
   // 作者邮箱分段存放、运行时拼接：页面上正常显示和点击，网页源码里不出现完整地址，减少爬虫收集
-  var CONTACTS = [["xiaobaihao6666", ["tongji", "edu", "cn"], "同济大学"], ["hao.bai", ["polimi", "it"], "米兰理工大学"]];
+  var CONTACTS = [["baihaointongji", ["gmail", "com"], "邮箱"]];
   function mailLinks() {
     return CONTACTS.map(function (c) {
       var addr = c[0] + String.fromCharCode(64) + c[1].join(".");
@@ -405,7 +407,7 @@
     return '<section class="author panel">' +
       '<p class="eyebrow">关于作者</p>' +
       '<div class="author-head"><span class="avatar" aria-hidden="true">B</span><div><h2>Bianco</h2>' +
-      '<p class="muted">同济大学土木工程学院 × 米兰理工大学能源学院 双学位博士生</p></div></div>' +
+      '<p class="muted">同济大学土木工程学院 × 米兰理工大学能源系 双学位博士生</p></div></div>' +
       "<p>我一直对用大语言模型做多智能体仿真很感兴趣，尤其是在假想的极端情况下：不同的个体，面对不同的基础设施条件和外界干扰，会怎样反应。" +
       "把这些反应放进推演里算一算，就有机会提前看到一些由人引发的极端情况，给管理者的决策提供参考。</p>" +
       "<p>SANDBOXHOT 是我为这个方向做的资讯站，希望它对你也有用。也欢迎同样在做 sandbox simulation based on LLM agents 的同仁来信交流。</p>" +

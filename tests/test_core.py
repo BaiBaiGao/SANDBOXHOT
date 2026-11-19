@@ -44,7 +44,10 @@ class FakeLLM(BaseHTTPRequestHandler):
                                "usage": {"prompt_tokens": 50 * len(vecs)}})
         system = body["messages"][0]["content"]
         user = body["messages"][1]["content"]
-        if "逐条评估" in user or "独立评估" in user:
+        if "逐条判断" in user:
+            mats = json.loads(user.split("\n", 1)[1])
+            text = json.dumps({"items": [{"i": m["i"], "applied": True} for m in mats]})
+        elif "逐条评估" in user or "独立评估" in user:
             mats = json.loads(user.split("\n", 1)[1])
             out = {"items": [{"i": m["i"], "relevant": "GPU" not in m["title"], "domain": "academic" if m["kind"] == "paper" else "application",
                               "score": 80, "title_zh": "中文标题" + str(m["i"]), "summary_zh": "摘要", "topics": ["wargame", "bogus"],
@@ -285,6 +288,7 @@ class TestPipeline(Base):
         self.assertTrue(next(x for x in topics_json if x["slug"] == "wargame")["analysis"])
         self.assertEqual(len(json.loads((site / "data" / "research.json").read_text())["reports"]), 1)
         self.assertTrue(json.loads((site / "data" / "resources.json").read_text())["resources"])
+        self.assertTrue(all("applied" in v for v in enr["triage"].values()))
         self.assertTrue((site / "llms.txt").exists() and (site / "api" / "latest.json").exists())
         # 云端保存的 items.json 不含精读大字段（只在 enrichments.json 里）
         self.assertNotIn("abstract_zh", (t / "items.json").read_text())

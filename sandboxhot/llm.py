@@ -128,6 +128,16 @@ class LLM:
         return [r.get("embedding") or [] for r in rows]
 
 
+def tidy(text: str) -> str:
+    """写作规则的机械兜底：去掉破折号（—、——），保留数字范围里的连接号 –。"""
+    if not text:
+        return text
+    text = re.sub(r"\s*—+\s*", "，", text)
+    text = re.sub(r"，{2,}", "，", text)
+    text = re.sub(r"，([。！？；）」”])", r"\1", text)
+    return text
+
+
 def parse_json_block(text: str):
     """从模型输出中取出第一个 JSON 对象（容忍 ```json 包裹和前后多余文字）。"""
     text = text.strip()
@@ -146,4 +156,4 @@ def parse_json_block(text: str):
     return None
 
 
-__all__ = ["LLM", "LLMUnavailable", "BudgetExceeded", "parse_json_block"]
+__all__ = ["LLM", "LLMUnavailable", "BudgetExceeded", "parse_json_block", "tidy"]
