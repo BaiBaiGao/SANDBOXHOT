@@ -1,0 +1,45 @@
+{
+ "last_fetch": {
+  "rss-openai-news": "2026-11-19T14:42:47Z",
+  "rss-google-deepmind": "2026-11-19T14:42:47Z",
+  "rss-google-research": "2026-11-19T14:42:47Z",
+  "rss-hugging-face": "2026-11-19T14:42:47Z",
+  "rss-microsoft-research": "2026-11-19T14:42:47Z",
+  "rss-nvidia-blog": "2026-11-19T14:42:47Z",
+  "rss-aws-ml": "2026-11-19T14:42:47Z",
+  "rss-github-ai": "2026-11-19T14:42:47Z",
+  "rss-mistral": "2026-11-19T14:42:47Z",
+  "rss-bair": "2026-11-19T14:42:47Z",
+  "rss-the-verge-ai": "2026-11-19T14:42:47Z",
+  "rss-techcrunch-ai": "2026-11-19T14:42:47Z",
+  "rss-ars-technica-ai": "2026-11-19T14:42:47Z",
+  "rss-mit-tech-review-ai": "2026-11-19T14:42:47Z",
+  "rss-the-decoder": "2026-11-19T14:42:47Z",
+  "rss-simon-willison": "2026-11-19T14:42:47Z",
+  "rss-latent-space": "2026-11-19T14:42:47Z",
+  "arxiv-llm-social-sim": "2026-11-19T14:42:47Z",
+  "arxiv-wargame": "2026-11-19T14:42:47Z",
+  "arxiv-human-behavior-sim": "2026-11-19T14:42:47Z",
+  "arxiv-sandbox-env": "2026-11-19T14:42:47Z",
+  "openalex-llm-abm": "2026-11-19T14:42:47Z",
+  "openalex-generative-agents": "2026-11-19T14:42:47Z",
+  "openalex-wargame-llm": "2026-11-19T14:42:47Z",
+  "hn-agent-simulation": "2026-11-19T14:42:47Z",
+  "hn-llm-wargame": "2026-11-19T14:42:47Z",
+  "hn-synthetic-users": "2026-11-19T14:42:47Z",
+  "github-llm-agent-sim": "2026-11-19T14:42:47Z",
+  "github-multi-agent-sandbox": "2026-11-19T14:42:47Z",
+  "rss-gamedeveloper": "2026-11-19T14:42:47Z"
+ },
+ "errors": {
+  "rss-import-ai": {
+   "at": "2026-11-19T14:42:47Z",
+   "error": "HTTP 403 https://importai.substack.com/feed: \u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000��8���������NUm�)|_]=\u000f�\u000bۀm�){c�!@���9������U�]=�3��6��:Ry)�Le��\u001f\u0013�S��)e'���c�R\u001e\b��\u001a\f�{�F@\u0010\u0018�>&(��e\u001a'\u0014�|�� �i���+��\u000f\u0013@X$a\u001d^Rt}�q8H\bN])BX����s-�y�T\t\u0019Q�\r�\u0018&�{eV��~�⥾g�\u001c�C� �{υ�>O\r\u000b~%\n�\u000f�k\u0011�p\u0012��\n"
+  }
+ },
+ "last_run": {
+  "at": "2026-11-19T14:43:27Z",
+  "llm": false,
+  "spent_run": 0.0
+ }
+}

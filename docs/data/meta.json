@@ -4,9 +4,13 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-19T14:13:13Z",
- "counts": {},
- "total": 0,
+ "generated": "2026-11-19T14:43:27Z",
+ "counts": {
+  "academic": 53,
+  "platform": 1,
+  "game": 1
+ },
+ "total": 55,
  "sources": [
   {
    "id": "rss-openai-news",
@@ -210,7 +214,7 @@
    "items": 0,
    "home": "https://importai.substack.com/feed",
    "query": "",
-   "ok": true
+   "ok": false
   },
   {
    "id": "rss-latent-space",
@@ -231,7 +235,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 13,
    "home": "",
    "query": "(abs:\"social simulation\" OR abs:\"agent-based model\" OR abs:\"agent-based modeling\" OR abs:\"agent-based simulation\" OR abs:\"multi-agent simulation\" OR abs:\"generative agents\" OR abs:\"simulated society\" OR abs:\"society simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -243,7 +247,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 2,
    "home": "",
    "query": "(abs:wargame OR abs:wargaming OR abs:\"war game\" OR abs:\"tabletop exercise\" OR abs:\"crisis simulation\" OR abs:\"policy simulation\" OR abs:\"scenario simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:agent OR abs:agents)",
    "ok": true
@@ -255,7 +259,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 15,
    "home": "",
    "query": "(abs:\"simulate human\" OR abs:\"human behavior simulation\" OR abs:\"user simulation\" OR abs:\"synthetic respondents\" OR abs:\"silicon sampling\" OR abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"persona simulation\") AND (abs:LLM OR abs:\"large language model\")",
    "ok": true
@@ -267,7 +271,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 10,
    "home": "",
    "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
    "ok": true
@@ -279,7 +283,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 8,
    "home": "",
    "query": "large language model agent-based simulation",
    "ok": true
@@ -291,7 +295,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 3,
    "home": "",
    "query": "generative agents social simulation",
    "ok": true
@@ -303,7 +307,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 0,
+   "items": 2,
    "home": "",
    "query": "wargaming artificial intelligence large language model",
    "ok": true
@@ -351,7 +355,7 @@
    "group": "platform",
    "tier": "T2",
    "enabled": true,
-   "items": 0,
+   "items": 2,
    "home": "",
    "query": "llm agent simulation",
    "ok": true
@@ -381,5 +385,9 @@
    "ok": true
   }
  ],
- "last_run": {}
+ "last_run": {
+  "at": "2026-11-19T14:43:27Z",
+  "llm": false,
+  "spent_run": 0.0
+ }
 }
