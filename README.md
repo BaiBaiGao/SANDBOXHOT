@@ -91,15 +91,27 @@ HN / GitHub / 游戏      ┘   发布网站  ◀──合并──────�
 
 GitHub 上这个文件里**没有 Key**（`SBH_KEY` 留空，第一次运行时会提示你输入）。你本地那份带 Key 的副本请命名为 `SANDBOXHOT-update.local.cmd`，`*.local.cmd` 已被 `.gitignore` 忽略，不会上传，也不会被提交前的密钥检查拦下。
 
-### 自动连接同济 VPN（准备中）
+### 自动连接同济 VPN（MotionPro）
 
-计划让更新程序在每次运行时自动打开 MotionPro、连上同济 VPN，调用完模型后再断开。MotionPro 在 Windows 上没有命令行接口，需要先在你的电脑上检测它的窗口结构：
+不在校园网时，`update.ps1` 会先用 MotionPro 的命令行模式连上同济 VPN，调用完同济 API 后再断开，最后推送到 GitHub。
+
+- **判断是否在校内**：`agi.tongji.edu.cn` 解析到 10.67.x.x 就算在校内，这时不连 VPN，也不会替你断开。
+- **连接方式**：`MotionPro.exe -connect <地址> 443 <账号> <密码> 0 0 0 1`，参考 [tongji-motionpro-vpn](https://github.com/ranranxuejie/tongji-motionpro-vpn) 的实测。最多等 3 分钟，看到 “Array Networks SSL VPN” 接口拿到地址就算连上。
+- **断开**：只断开脚本自己连的 VPN；出错或中途中断也会断开，下次运行会补断。
+- **不需要短信验证码**的账号才能用（命令行模式不支持二次验证）。
+- 加 `-NoVpn` 参数可以关闭这个功能。
+
+第一次用之前，在仓库目录运行一次下面的命令，保存 VPN 账号。密码用 Windows DPAPI 加密后存进本机 `.env`，只有你这个 Windows 账户在这台电脑上能解开，不会上传：
 
 ```bash
-powershell -ExecutionPolicy Bypass -File scripts\vpn_probe.ps1
+powershell -ExecutionPolicy Bypass -File scripts\set_vpn.ps1
 ```
 
-这个脚本只读取信息，不会连接、点击或修改任何东西。按提示操作三步，然后把 `state\vpn_probe.txt` 的内容发给 Claude。
+它会问是否立即测试一次“连接 → 断开”。之后可以随时查看状态：
+
+```bash
+powershell -ExecutionPolicy Bypass -File scripts\vpn.ps1 status
+```
 
 ## 在笔记本上安装（Windows）
 

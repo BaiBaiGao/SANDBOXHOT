@@ -32,6 +32,14 @@ if not exist ".env" (
   )
 )
 
+rem 1b) Tongji VPN account for automatic MotionPro connection (only once, stored encrypted in .env)
+findstr /b /c:"TONGJI_VPN_USER=" ".env" >nul 2>&1
+if errorlevel 1 (
+  echo.
+  echo Save your Tongji VPN account once so updates can connect the VPN automatically.
+  powershell -NoProfile -ExecutionPolicy Bypass -File "scripts\set_vpn.ps1"
+)
+
 rem 2) Scheduled task every 4 hours (only once)
 schtasks /query /tn SANDBOXHOT >nul 2>&1
 if errorlevel 1 (
