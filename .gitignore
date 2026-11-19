@@ -16,3 +16,7 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 带密钥的本地更新程序（只在你的电脑上，不上传）
+*.local.cmd
+*.local.ps1
