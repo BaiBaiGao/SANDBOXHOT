@@ -7,6 +7,9 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 $env:PYTHONUTF8 = '1'
+# Python 输出 UTF-8；让 PowerShell 按 UTF-8 解码管道输出，避免窗口和日志里的中文乱码
+try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch { }
+$OutputEncoding = [System.Text.Encoding]::UTF8
 $state = Join-Path $root 'state'
 New-Item -ItemType Directory -Force $state | Out-Null
 $log = Join-Path $state 'last_update.log'
