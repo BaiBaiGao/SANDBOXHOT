@@ -52,7 +52,7 @@
    "cluster": "0073f7aaf98ffa6d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "00798a23152e25ac": {
    "id": "00798a23152e25ac",
@@ -98,7 +98,7 @@
    "cluster": "00798a23152e25ac",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 86.87
+   "hot": 86.85
   },
   "0599676be458de0d": {
    "id": "0599676be458de0d",
@@ -149,7 +149,7 @@
    "cluster": "0599676be458de0d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 61.58
+   "hot": 61.56
   },
   "0e00fb4fe408e09e": {
    "id": "0e00fb4fe408e09e",
@@ -242,7 +242,7 @@
    "cluster": "100a98aa134f9c4d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 76.98
+   "hot": 76.95
   },
   "15465b7ec602f14b": {
    "id": "15465b7ec602f14b",
@@ -297,7 +297,7 @@
    "cluster": "15465b7ec602f14b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 68.18
+   "hot": 68.16
   },
   "17869a9bbc5be3db": {
    "id": "17869a9bbc5be3db",
@@ -342,7 +342,7 @@
    "cluster": "17869a9bbc5be3db",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 82.47
+   "hot": 82.45
   },
   "18d072700de3a72e": {
    "id": "18d072700de3a72e",
@@ -563,7 +563,7 @@
    "cluster": "284b22c378db421a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "2a7c337d3195182a": {
    "id": "2a7c337d3195182a",
@@ -614,7 +614,7 @@
    "cluster": "2a7c337d3195182a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "2dc502abacec7db3": {
    "id": "2dc502abacec7db3",
@@ -668,7 +668,7 @@
    "cluster": "2dc502abacec7db3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "2f1317b569fc63f5": {
    "id": "2f1317b569fc63f5",
@@ -718,7 +718,7 @@
    "cluster": "2f1317b569fc63f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.98
+   "hot": 65.96
   },
   "39439dc770fefd98": {
    "id": "39439dc770fefd98",
@@ -772,7 +772,7 @@
    "cluster": "39439dc770fefd98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 67.08
+   "hot": 67.06
   },
   "3eefc5d18a4ade26": {
    "id": "3eefc5d18a4ade26",
@@ -821,7 +821,7 @@
    "cluster": "3eefc5d18a4ade26",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "40084841e2ef8f33": {
    "id": "40084841e2ef8f33",
@@ -869,7 +869,7 @@
    "cluster": "40084841e2ef8f33",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "408457c46f4c7f25": {
    "id": "408457c46f4c7f25",
@@ -917,7 +917,7 @@
    "cluster": "408457c46f4c7f25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "4337712da9d8511a": {
    "id": "4337712da9d8511a",
@@ -951,7 +951,7 @@
    "cluster": "4337712da9d8511a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 63.8
+   "hot": 63.78
   },
   "442531c9eef4b7e1": {
    "id": "442531c9eef4b7e1",
@@ -1002,7 +1002,7 @@
    "cluster": "442531c9eef4b7e1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "466c6ef01463dc55": {
    "id": "466c6ef01463dc55",
@@ -1048,7 +1048,7 @@
    "cluster": "466c6ef01463dc55",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 83.57
+   "hot": 83.55
   },
   "5069f1280bd3ad48": {
    "id": "5069f1280bd3ad48",
@@ -1134,7 +1134,7 @@
    "cluster": "53b605b3df0308b7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "578df0921b0057cc": {
    "id": "578df0921b0057cc",
@@ -1179,7 +1179,7 @@
    "cluster": "578df0921b0057cc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 71.48
+   "hot": 71.46
   },
   "5aca4c38bba36ada": {
    "id": "5aca4c38bba36ada",
@@ -1227,7 +1227,7 @@
    "cluster": "5aca4c38bba36ada",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "5b498f7753f9a6d0": {
    "id": "5b498f7753f9a6d0",
@@ -1275,7 +1275,7 @@
    "cluster": "5b498f7753f9a6d0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "5b87ca4e67aa0ad6": {
    "id": "5b87ca4e67aa0ad6",
@@ -1332,7 +1332,7 @@
    "cluster": "5b87ca4e67aa0ad6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "6a0cbaf510c974ff": {
    "id": "6a0cbaf510c974ff",
@@ -1389,7 +1389,7 @@
    "cluster": "6a0cbaf510c974ff",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "6a4cf305f5f066a3": {
    "id": "6a4cf305f5f066a3",
@@ -1440,7 +1440,7 @@
    "cluster": "6a4cf305f5f066a3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "6c90c29ccd0d5820": {
    "id": "6c90c29ccd0d5820",
@@ -1525,7 +1525,7 @@
    "cluster": "6f304b36be9257fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "728d442c7c11e86e": {
    "id": "728d442c7c11e86e",
@@ -1617,7 +1617,7 @@
    "cluster": "72af26774086d271",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "777cd1e779dc04f4": {
    "id": "777cd1e779dc04f4",
@@ -1671,7 +1671,7 @@
    "cluster": "777cd1e779dc04f4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "7e1e75eafc2eabaf": {
    "id": "7e1e75eafc2eabaf",
@@ -1725,7 +1725,7 @@
    "cluster": "7e1e75eafc2eabaf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "80469b978b756760": {
    "id": "80469b978b756760",
@@ -1778,7 +1778,7 @@
    "cluster": "80469b978b756760",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "8610b5b796c6e117": {
    "id": "8610b5b796c6e117",
@@ -1826,7 +1826,7 @@
    "cluster": "8610b5b796c6e117",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.98
+   "hot": 65.96
   },
   "89c0ce6b226bbbe6": {
    "id": "89c0ce6b226bbbe6",
@@ -1912,7 +1912,7 @@
    "cluster": "8e9ee572fc8daf29",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 69.28
+   "hot": 69.26
   },
   "918d48df64a86515": {
    "id": "918d48df64a86515",
@@ -2000,7 +2000,7 @@
    "cluster": "948c36101407e81c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "97f684f7c5000779": {
    "id": "97f684f7c5000779",
@@ -2051,7 +2051,7 @@
    "cluster": "97f684f7c5000779",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 67.08
+   "hot": 67.06
   },
   "9ae934d441da1a71": {
    "id": "9ae934d441da1a71",
@@ -2131,7 +2131,7 @@
    "cluster": "a367b923ea0b6f28",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "a3b9dc32372c08c3": {
    "id": "a3b9dc32372c08c3",
@@ -2178,7 +2178,7 @@
    "cluster": "a3b9dc32372c08c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "a5e42b2b6ba30ccc": {
    "id": "a5e42b2b6ba30ccc",
@@ -2227,7 +2227,7 @@
    "cluster": "a5e42b2b6ba30ccc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "aa8e964eeccef16d": {
    "id": "aa8e964eeccef16d",
@@ -2273,7 +2273,7 @@
    "cluster": "aa8e964eeccef16d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "ac2fe67a1e81f207": {
    "id": "ac2fe67a1e81f207",
@@ -2358,7 +2358,7 @@
    "cluster": "b21421633eabfb0f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 76.98
+   "hot": 76.95
   },
   "bbc9b4d66e7e40f5": {
    "id": "bbc9b4d66e7e40f5",
@@ -2412,7 +2412,7 @@
    "cluster": "bbc9b4d66e7e40f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "bcb060bec19cc59f": {
    "id": "bcb060bec19cc59f",
@@ -2499,7 +2499,7 @@
    "cluster": "bd48b9b8ec948700",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 69.28
+   "hot": 69.26
   },
   "bf94d38e9fce2a2e": {
    "id": "bf94d38e9fce2a2e",
@@ -2549,7 +2549,7 @@
    "cluster": "bf94d38e9fce2a2e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "c17bea1790859202": {
    "id": "c17bea1790859202",
@@ -2596,7 +2596,7 @@
    "cluster": "c17bea1790859202",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -2680,7 +2680,7 @@
    "cluster": "c67f0fe45b407c7d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.98
+   "hot": 65.96
   },
   "cae0a3a8a8fe0eb8": {
    "id": "cae0a3a8a8fe0eb8",
@@ -2732,7 +2732,7 @@
    "cluster": "cae0a3a8a8fe0eb8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "cf67bba555e2fd98": {
    "id": "cf67bba555e2fd98",
@@ -2777,7 +2777,7 @@
    "cluster": "cf67bba555e2fd98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 64.88
+   "hot": 64.86
   },
   "d4547f073da0afdd": {
    "id": "d4547f073da0afdd",
@@ -2818,7 +2818,7 @@
    "cluster": "d4547f073da0afdd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 59.98
+   "hot": 59.96
   },
   "d9719a9cb09db35c": {
    "id": "d9719a9cb09db35c",
@@ -2870,7 +2870,7 @@
    "cluster": "d9719a9cb09db35c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "e167be03b0151aa8": {
    "id": "e167be03b0151aa8",
@@ -2966,7 +2966,7 @@
    "cluster": "e1cfad483eda4fd3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 65.98
+   "hot": 65.96
   },
   "e6d65daa2397dd51": {
    "id": "e6d65daa2397dd51",
@@ -3014,7 +3014,7 @@
    "cluster": "e6d65daa2397dd51",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 69.28
+   "hot": 69.26
   },
   "e7f6a543c6212296": {
    "id": "e7f6a543c6212296",
@@ -3058,7 +3058,7 @@
    "cluster": "e7f6a543c6212296",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 59.98
+   "hot": 59.96
   },
   "e9b4f62a38c35c8e": {
    "id": "e9b4f62a38c35c8e",
@@ -3112,7 +3112,7 @@
    "cluster": "e9b4f62a38c35c8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "eaee7cf4ca117e77": {
    "id": "eaee7cf4ca117e77",
@@ -3164,7 +3164,7 @@
    "cluster": "eaee7cf4ca117e77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 69.28
+   "hot": 69.26
   },
   "ed0de99ab7e62301": {
    "id": "ed0de99ab7e62301",
@@ -3254,7 +3254,7 @@
    "cluster": "efab9dcb2dc8e85d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -3305,7 +3305,7 @@
    "cluster": "f23f3f241ac47b98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "f94538d40439027e": {
    "id": "f94538d40439027e",
@@ -3397,7 +3397,7 @@
    "cluster": "faa339fbf23552de",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   },
   "fc97273e83d39f85": {
    "id": "fc97273e83d39f85",
@@ -3488,7 +3488,7 @@
    "cluster": "fd0b4e5ac8bc7e59",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 87.97
+   "hot": 87.95
   }
  }
 }
