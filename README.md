@@ -62,6 +62,16 @@ HN / GitHub / 游戏   ┘   → ④ 速读卡（只做高分论文/应用）
 
 查看本地账本：`py run.py budget`。实际扣费以平台的[消费明细](https://agi.tongji.edu.cn/system/model-usage)为准，平台只保留 7 天明细。
 
+## 一键更新程序（双击运行）
+
+仓库根目录的 `SANDBOXHOT-update.cmd` 是一个双击就能运行的更新程序：
+
+- **第一次双击**：把 API Key 存进本地 `.env`，注册每 4 小时自动运行一次的 Windows 计划任务，然后立即更新一次。
+- **之后每次双击**：立即更新一次，最后显示本周额度用量和日志位置。
+- 需要连着校园网或学校 VPN。连不上时会直接结束，不消耗积分。
+
+GitHub 上这个文件里**没有 Key**（`SBH_KEY` 留空，第一次运行时会提示你输入）。你本地那份带 Key 的副本请命名为 `SANDBOXHOT-update.local.cmd`，`*.local.cmd` 已被 `.gitignore` 忽略，不会上传，也不会被提交前的密钥检查拦下。
+
 ## 在笔记本上安装（Windows）
 
 需要 Git 和 Python 3.10 以上（只用标准库，**不需要 pip 安装任何包**）。
