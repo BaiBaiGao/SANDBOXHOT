@@ -97,6 +97,7 @@ def main() -> int:
     up.add_argument("--no-llm", action="store_true", help="不调用模型")
     up.add_argument("--force", action="store_true", help="忽略抓取间隔，所有信源立即抓取")
     up.add_argument("--no-fetch", action="store_true", help="不抓取，只处理已有候选")
+    up.add_argument("--require-content", action="store_true", help="采集全部失败或无内容时退出")
     sub.add_parser("build")
     sub.add_parser("budget")
     sub.add_parser("check")
@@ -105,7 +106,8 @@ def main() -> int:
     sv.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()
     if args.cmd == "update":
-        pipeline.update(use_llm=not args.no_llm, force_fetch=args.force, fetch=not args.no_fetch)
+        pipeline.update(use_llm=not args.no_llm, force_fetch=args.force, fetch=not args.no_fetch,
+                        require_content=args.require_content)
         return 0
     if args.cmd == "build":
         pipeline.rebuild()

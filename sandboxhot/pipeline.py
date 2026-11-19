@@ -46,7 +46,7 @@ def ingest(store: Store, raw: list[dict], cfg: dict, kw: dict, first_run_ids: se
     return stats
 
 
-def update(*, use_llm: bool = True, force_fetch: bool = False, fetch: bool = True, log=print) -> dict:
+def update(*, use_llm: bool = True, force_fetch: bool = False, fetch: bool = True, require_content: bool = False, log=print) -> dict:
     cfg, kw, srcs = settings(), keywords(), sources()
     store = Store()
     budget = Budget(cfg)
@@ -61,6 +61,9 @@ def update(*, use_llm: bool = True, force_fetch: bool = False, fetch: bool = Tru
         known_sources = set(store.runtime.get("last_fetch", {}))
         first_run_ids = {s["id"] for s in srcs if s["id"] not in known_sources}
         raw = collect.collect(srcs, store.runtime, force=force_fetch, log=log)
+        if require_content and not raw and all(s["id"] in store.runtime.get("errors", {})
+                                               for s in srcs if s.get("enabled", True)):
+            raise RuntimeError("所有启用的信源均采集失败")
         log("2) 本地关键词预筛（不消耗积分）")
         stats["ingest"] = ingest(store, raw, cfg, kw, first_run_ids, log)
         log(f"  新条目 {stats['ingest']['new']}，进入候选 {stats['ingest']['kept']}，"
@@ -86,7 +89,9 @@ def update(*, use_llm: bool = True, force_fetch: bool = False, fetch: bool = Tru
     log("6) 生成站点")
     removed = store.prune(cfg)
     store.runtime["last_run"] = {"at": iso(now_utc()), "llm": llm.available, "spent_run": round(budget.run_spent, 4)}
-    build(store, cfg, srcs, log)
+    meta = build(store, cfg, srcs, log)
+    if require_content and not meta["total"]:
+        raise RuntimeError("没有可发布的真实条目")
     store.save()
     budget.save()
     log(f"完成：本次消耗约 {budget.run_spent:.4f} 积分；滚动 7 天 {budget.spent_7d():.2f} 积分；清理过期 {removed} 条")
