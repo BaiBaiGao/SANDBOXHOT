@@ -99,6 +99,30 @@ HN / GitHub / 游戏      ┘   发布网站  ◀──合并──────�
 
 GitHub 上这个文件里**没有 Key**（`SBH_KEY` 留空，第一次运行时会提示你输入）。你本地那份带 Key 的副本请命名为 `SANDBOXHOT-update.local.cmd`，`*.local.cmd` 已被 `.gitignore` 忽略，不会上传，也不会被提交前的密钥检查拦下。
 
+### 云端连同济 VPN（GitHub Actions，不需要开电脑）
+
+`.github/workflows/enrich.yml` 每 4 小时在 GitHub 的服务器上用开源的 `openconnect --protocol=array`（同济 VPN 用的 Array Networks 协议）连上同济 VPN，运行和笔记本完全相同的 `python run.py enrich`，然后断开 VPN，只提交 `data/enrichments.json` 和额度账本 `data/cloud-usage.json`，再触发网站发布。
+
+需要在仓库 **Settings → Secrets and variables → Actions → New repository secret** 里添加：
+
+| 名称 | 内容 |
+|---|---|
+| `TONGJI_API_KEY` | 同济 API Key |
+| `TONGJI_VPN_USER` | 统一身份认证账号 |
+| `TONGJI_VPN_PASS` | 统一身份认证密码 |
+| `TONGJI_VPN_HOST`（可选） | VPN 地址，默认 `vpn.tongji.cn`；和笔记本 `.env` 里的 `TONGJI_VPN_HOST` 一致即可 |
+
+GitHub Secrets 是加密保存的，不会出现在仓库里，也会在运行日志里自动打码。没添加时这个任务会自动跳过。
+
+- **额度**：云端的用量记在 `data/cloud-usage.json`，笔记本运行时也会把它算进滚动 7 天用量，两边合计不超过上限。
+- **确认云端能用之后，建议停用笔记本的计划任务**，避免两边同时提交 `enrichments.json`：
+
+```bash
+powershell -Command "Unregister-ScheduledTask -TaskName SANDBOXHOT -Confirm:$false"
+```
+
+- **风险**：GitHub 的服务器在国外，学校可能拦截境外登录或自动化登录；学校开启短信验证后也会失效。失败时网站照常按规则更新，笔记本方案随时可以恢复。
+
 ### 自动连接同济 VPN（MotionPro）
 
 不在校园网时，`update.ps1` 会先用 MotionPro 的命令行模式连上同济 VPN，调用完同济 API 后再断开，最后推送到 GitHub。

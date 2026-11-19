@@ -2,11 +2,14 @@
 from __future__ import annotations
 
 import time
+from pathlib import Path
 from datetime import timedelta
 
-from .config import STATE_DIR, iso, now_utc, parse_iso, read_json, write_json
+from .config import DATA_DIR, STATE_DIR, iso, now_utc, parse_iso, read_json, write_json
 
 LEDGER = STATE_DIR / "usage.json"
+# 云端（GitHub Actions 连 VPN）运行时的账本提交在仓库里；笔记本也把它算进滚动 7 天用量，两边合计不超上限
+SHARED_LEDGERS = (DATA_DIR / "cloud-usage.json",)
 
 
 class BudgetExceeded(Exception):
@@ -35,9 +38,24 @@ class Budget:
         self.prices = cfg["prices"]
         self.path = path
         self.data = read_json(path, {"entries": []})
+        self.others = []
+        own = {self._key(e) for e in self.data["entries"]}
+        for extra in SHARED_LEDGERS:
+            if Path(extra).resolve() == Path(path).resolve():
+                continue
+            for e in read_json(extra, {"entries": []}).get("entries", []):
+                if self._key(e) not in own:  # 云端把共享账本复制成自己的账本时不会重复计算
+                    self.others.append(e)
         self.run_spent = 0.0
         self.started = time.monotonic()
         self._prune()
+
+    @staticmethod
+    def _key(e: dict) -> tuple:
+        return (e.get("at"), e.get("model"), e.get("purpose"), e.get("prompt"), e.get("completion"))
+
+    def _entries(self) -> list:
+        return self.data["entries"] + self.others
 
     def _prune(self):
         cutoff = now_utc() - timedelta(days=35)
@@ -45,7 +63,7 @@ class Budget:
 
     def spent_since(self, days: float) -> float:
         cutoff = now_utc() - timedelta(days=days)
-        return sum(e["credits"] for e in self.data["entries"] if (parse_iso(e["at"]) or cutoff) > cutoff)
+        return sum(e["credits"] for e in self._entries() if (parse_iso(e["at"]) or cutoff) > cutoff)
 
     def spent_7d(self) -> float:
         return self.spent_since(7)
@@ -116,7 +134,7 @@ class Budget:
         cutoff = now_utc() - timedelta(days=7)
         calls = 0
         tok_in = tok_cached = tok_out = 0
-        for e in self.data["entries"]:
+        for e in self._entries():
             if (parse_iso(e["at"]) or cutoff) <= cutoff:
                 continue
             calls += 1

@@ -1,0 +1,97 @@
+name: Enrich via Tongji VPN
+# 在 GitHub 的服务器上连同济 VPN，用同济 API 做模型加工（和笔记本上的 py run.py enrich 完全相同），
+# 只提交 data/enrichments.json 和额度账本 data/cloud-usage.json，然后触发网站发布。
+# 需要在仓库 Settings → Secrets and variables → Actions 里添加：
+#   TONGJI_API_KEY、TONGJI_VPN_USER、TONGJI_VPN_PASS，可选 TONGJI_VPN_HOST（默认 vpn.tongji.cn）
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 1-21/4 * * *'   # UTC；在发布任务（每 4 小时的 53 分）之前半小时
+concurrency:
+  group: sandboxhot-production   # 和发布任务排队执行，不会同时推送
+  cancel-in-progress: false
+permissions: {}
+jobs:
+  enrich:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      actions: write
+    env:
+      TONGJI_API_KEY: ${{ secrets.TONGJI_API_KEY }}
+      TONGJI_VPN_USER: ${{ secrets.TONGJI_VPN_USER }}
+      TONGJI_VPN_PASS: ${{ secrets.TONGJI_VPN_PASS }}
+      TONGJI_VPN_HOST: ${{ secrets.TONGJI_VPN_HOST }}
+      PYTHONUTF8: '1'
+    steps:
+      - name: 检查密钥是否已添加
+        id: secrets
+        run: |
+          if [ -n "$TONGJI_API_KEY" ] && [ -n "$TONGJI_VPN_USER" ] && [ -n "$TONGJI_VPN_PASS" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::还没有添加 TONGJI_API_KEY / TONGJI_VPN_USER / TONGJI_VPN_PASS，本次跳过"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          ref: main
+          fetch-depth: 30
+      - uses: actions/setup-python@v5
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          python-version: '3.12'
+      - name: 恢复额度账本与向量缓存
+        if: steps.secrets.outputs.ok == 'true'
+        run: |
+          mkdir -p state
+          if [ -f data/cloud-usage.json ]; then cp data/cloud-usage.json state/usage.json; fi
+      - uses: actions/cache/restore@v4
+        if: steps.secrets.outputs.ok == 'true'
+        with:
+          path: state/embeddings.json
+          key: sandboxhot-embeddings-${{ github.run_id }}
+          restore-keys: sandboxhot-embeddings-
+      - name: 安装 openconnect
+        if: steps.secrets.outputs.ok == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openconnect dnsutils > /dev/null
+      - name: 连接同济 VPN
+        id: vpn
+        if: steps.secrets.outputs.ok == 'true'
+        run: scripts/cloud_vpn.sh up
+      - name: 模型加工
+        if: steps.secrets.outputs.ok == 'true' && steps.vpn.outcome == 'success'
+        run: python run.py enrich
+      - name: 断开同济 VPN
+        if: always() && steps.secrets.outputs.ok == 'true'
+        run: scripts/cloud_vpn.sh down
+      - uses: actions/cache/save@v4
+        if: always() && steps.secrets.outputs.ok == 'true' && hashFiles('state/embeddings.json') != ''
+        with:
+          path: state/embeddings.json
+          key: sandboxhot-embeddings-${{ github.run_id }}
+      - name: 提交加工结果
+        id: commit
+        if: always() && steps.secrets.outputs.ok == 'true' && steps.vpn.outcome == 'success'
+        run: |
+          if [ -f state/usage.json ]; then cp state/usage.json data/cloud-usage.json; fi
+          python run.py guard
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/enrichments.json data/cloud-usage.json
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -q -m "enrich(cloud): model picks $(date -u +'%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do
+            git push -q origin HEAD:main && break
+            git fetch -q origin main && git rebase -q origin/main
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: 触发网站发布
+        if: always() && steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml --ref main

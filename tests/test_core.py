@@ -159,6 +159,17 @@ class TestBudget(Base):
         b.data["entries"][0]["at"] = iso(now_utc() - timedelta(days=8))  # 滚出 7 天窗口
         b.check("DeepSeek-V4.1-Flash", 10000, 2000)
 
+    def test_shared_cloud_ledger(self):
+        """笔记本把云端账本算进滚动 7 天用量；云端把共享账本复制成自己的账本时不重复计算。"""
+        import sandboxhot.budget as bm
+        shared = Path(self.tmp.name) / "cloud-usage.json"
+        e = {"at": iso(now_utc()), "model": "x", "purpose": "t", "prompt": 1, "cached": 0, "completion": 1, "credits": 10.0}
+        shared.write_text(json.dumps({"entries": [e]}))
+        with mock.patch.object(bm, "SHARED_LEDGERS", (shared,)):
+            self.assertAlmostEqual(Budget(self.cfg, path=self.ledger).spent_7d(), 10.0)  # 笔记本：自己 0 + 云端 10
+            self.ledger.write_text(json.dumps({"entries": [e]}))
+            self.assertAlmostEqual(Budget(self.cfg, path=self.ledger).spent_7d(), 10.0)  # 云端：同一条不重复
+
     def test_parse_json(self):
         self.assertEqual(parse_json_block('好的：\n```json\n{"a": 1}\n```'), {"a": 1})
         self.assertIsNone(parse_json_block("no json"))
