@@ -1,0 +1,19 @@
+# SANDBOXHOT
+
+> 收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。
+
+本站是纯静态网站，所有数据都是公开的 JSON 文件，Agent 可以直接读取（相对于网站根目录）：
+
+- api/latest.json：最新 120 条精选（中文标题、摘要、领域、分数、主题、链接）和最新一期日报
+- data/items.json：全部在展条目（列表字段）
+- data/details/<id 首字符>.json：条目详情（中文精读、速读卡、资源、相关推荐）
+- data/digests.json：日报与周报（Markdown）
+- data/topics.json：主题与每周主题研判
+- data/research.json：横纵专题研究报告
+- data/resources.json：代码、数据集、基准等资源库
+- feed.xml：RSS
+
+领域：academic 学术论文、application 实际应用、business 商业、game 游戏、platform 平台工具。
+分数 0–100 是编辑评估的阅读价值，不代表真伪；引用前请打开原文核对。
+
+更新于 2026-11-19T16:47:41Z，共 803 条。

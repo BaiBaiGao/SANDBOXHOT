@@ -4,12 +4,14 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-19T15:49:01Z",
+ "generated": "2026-11-19T16:47:41Z",
  "counts": {
-  "academic": 52,
+  "academic": 802,
   "game": 1
  },
- "total": 53,
+ "total": 803,
+ "reads": 0,
+ "research": 0,
  "ai_items": 52,
  "sources": [
   {
@@ -259,7 +261,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 10,
+   "items": 154,
    "home": "",
    "query": "(abs:\"social simulation\" OR abs:\"agent-based model\" OR abs:\"agent-based modeling\" OR abs:\"agent-based simulation\" OR abs:\"multi-agent simulation\" OR abs:\"generative agents\" OR abs:\"simulated society\" OR abs:\"society simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -271,7 +273,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 1,
+   "items": 25,
    "home": "",
    "query": "(abs:wargame OR abs:wargaming OR abs:\"war game\" OR abs:\"tabletop exercise\" OR abs:\"crisis simulation\" OR abs:\"policy simulation\" OR abs:\"scenario simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:agent OR abs:agents)",
    "ok": true
@@ -283,7 +285,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 11,
+   "items": 192,
    "home": "",
    "query": "(abs:\"simulate human\" OR abs:\"human behavior simulation\" OR abs:\"user simulation\" OR abs:\"synthetic respondents\" OR abs:\"silicon sampling\" OR abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"persona simulation\") AND (abs:LLM OR abs:\"large language model\")",
    "ok": true
@@ -295,9 +297,69 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 6,
+   "items": 162,
    "home": "",
    "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
+   "ok": true
+  },
+  {
+   "id": "arxiv-econ-finance",
+   "name": "arXiv · 经济/市场/金融智能体仿真",
+   "kind": "arxiv",
+   "group": "academic",
+   "tier": "T1",
+   "enabled": true,
+   "items": 41,
+   "home": "",
+   "query": "(abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"agent-based economic\" OR abs:\"financial market\" OR abs:\"trading agents\" OR abs:\"macroeconomic\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+   "ok": true
+  },
+  {
+   "id": "arxiv-epidemic-health",
+   "name": "arXiv · 流行病/公共卫生仿真",
+   "kind": "arxiv",
+   "group": "academic",
+   "tier": "T1",
+   "enabled": true,
+   "items": 0,
+   "home": "",
+   "query": "(abs:epidemic OR abs:pandemic OR abs:\"public health\" OR abs:\"disease spread\") AND (abs:\"agent-based\" OR abs:\"generative agents\" OR abs:simulation) AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+   "ok": true
+  },
+  {
+   "id": "arxiv-urban-mobility",
+   "name": "arXiv · 城市/交通/出行仿真",
+   "kind": "arxiv",
+   "group": "academic",
+   "tier": "T1",
+   "enabled": true,
+   "items": 158,
+   "home": "",
+   "query": "(abs:urban OR abs:traffic OR abs:mobility OR abs:\"travel behavior\") AND (abs:\"agent-based\" OR abs:\"generative agents\" OR abs:simulation) AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+   "ok": true
+  },
+  {
+   "id": "arxiv-negotiation-games",
+   "name": "arXiv · 谈判/外交/博弈多智能体",
+   "kind": "arxiv",
+   "group": "academic",
+   "tier": "T1",
+   "enabled": true,
+   "items": 24,
+   "home": "",
+   "query": "(abs:negotiation OR abs:diplomacy OR abs:\"game theory\" OR abs:\"social dilemma\") AND abs:\"multi-agent\" AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
+   "ok": true
+  },
+  {
+   "id": "arxiv-npc-narrative",
+   "name": "arXiv · AI NPC/互动叙事",
+   "kind": "arxiv",
+   "group": "academic",
+   "tier": "T1",
+   "enabled": true,
+   "items": 16,
+   "home": "",
+   "query": "(abs:NPC OR abs:\"non-player character\" OR abs:\"interactive narrative\" OR abs:\"game agents\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
   },
   {
@@ -307,7 +369,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 14,
+   "items": 17,
    "home": "",
    "query": "large language model agent-based simulation",
    "ok": true
@@ -319,10 +381,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 7,
+   "items": 10,
    "home": "",
    "query": "generative agents social simulation",
-   "ok": false
+   "ok": true
   },
   {
    "id": "openalex-wargame-llm",
@@ -410,7 +472,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-19T15:49:01Z",
+  "at": "2026-11-19T16:47:41Z",
   "llm": false,
   "spent_run": 0.0
  }
