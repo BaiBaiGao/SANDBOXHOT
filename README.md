@@ -19,6 +19,14 @@
 - 思路参考 [AIHOT](https://github.com/KKKKhazix/AIHOT)：采集、预筛、打分、中文标题摘要、事件聚簇、热度排序、日报周报。
 - 和 AIHOT 的区别：**没有服务器、数据库、后台和登录**。所有访客看到同一个静态网站。你的笔记本定时跑一个纯 Python 脚本，生成网页后推送到 GitHub，由 GitHub Pages 免费托管。
 
+## 关于作者
+
+**Bianco**，同济大学土木工程学院 × 米兰理工大学能源学院双学位博士生。我一直对用 LLM 做多智能体仿真感兴趣，尤其是在假想的极端情况下：不同个体面对不同的基础设施条件和外界干扰会怎样反应，通过推演计算提前看到由人引发的极端情况，辅助管理者决策。
+
+欢迎做 sandbox simulation based on LLM agents 的同仁交流：xiaobaihao6666 [at] tongji.edu.cn · hao.bai [at] polimi.it
+
+网站参考了数字生命卡兹克的 [AIHOT](https://github.com/KKKKhazix/AIHOT) 和 [khazix-skills](https://github.com/KKKKhazix/khazix-skills) 等仓库，主要借助 Codex 和 Claude 搭建。
+
 ## 它怎么工作
 
 ```
