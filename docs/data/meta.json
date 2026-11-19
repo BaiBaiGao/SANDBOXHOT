@@ -4,13 +4,15 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-19T19:32:57Z",
+ "generated": "2026-11-19T20:51:29Z",
  "counts": {
   "academic": 1281,
-  "platform": 1,
-  "game": 1
+  "application": 10,
+  "platform": 2,
+  "business": 8,
+  "game": 2
  },
- "total": 1283,
+ "total": 1303,
  "reads": 78,
  "research": 3,
  "ai_items": 332,
@@ -470,10 +472,118 @@
    "home": "https://www.gamedeveloper.com/rss.xml",
    "query": "",
    "ok": true
+  },
+  {
+   "id": "gnews-biz-synthetic-users",
+   "name": "Google 新闻 · 合成用户/合成样本公司",
+   "kind": "rss",
+   "group": "business",
+   "tier": "T2",
+   "enabled": true,
+   "items": 2,
+   "home": "https://news.google.com/rss/search?q=%22synthetic+users%22+OR+%22synthetic+personas%22+OR+%22synthetic+respondents%22+AI+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-biz-sim-startups",
+   "name": "Google 新闻 · AI 仿真创业与融资",
+   "kind": "rss",
+   "group": "business",
+   "tier": "T2",
+   "enabled": true,
+   "items": 0,
+   "home": "https://news.google.com/rss/search?q=%28%22AI+simulation%22+OR+%22agent-based+simulation%22+OR+%22multi-agent+simulation%22%29+%28startup+OR+funding+OR+raises+OR+launches%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-biz-digital-twin-agents",
+   "name": "Google 新闻 · AI 智能体数字孪生产品",
+   "kind": "rss",
+   "group": "business",
+   "tier": "T2",
+   "enabled": true,
+   "items": 7,
+   "home": "https://news.google.com/rss/search?q=%22digital+twin%22+%28%22AI+agents%22+OR+%22generative+AI%22+OR+LLM%29+%28company+OR+platform+OR+launch%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-app-wargaming",
+   "name": "Google 新闻 · 兵棋推演与军事 AI 仿真",
+   "kind": "rss",
+   "group": "application",
+   "tier": "T2",
+   "enabled": true,
+   "items": 2,
+   "home": "https://news.google.com/rss/search?q=%28wargaming+OR+wargame+OR+%22war+game%22%29+%28%22AI%22+OR+%22large+language+model%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-app-policy-sim",
+   "name": "Google 新闻 · 政策/城市/应急推演",
+   "kind": "rss",
+   "group": "application",
+   "tier": "T2",
+   "enabled": true,
+   "items": 4,
+   "home": "https://news.google.com/rss/search?q=%28%22AI+agents%22+OR+%22generative+agents%22+OR+LLM%29+%28simulation+OR+%22digital+twin%22%29+%28city+OR+government+OR+policy+OR+emergency+OR+evacuation%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-app-health-sim",
+   "name": "Google 新闻 · 公共卫生与社会模拟应用",
+   "kind": "rss",
+   "group": "application",
+   "tier": "T2",
+   "enabled": true,
+   "items": 0,
+   "home": "https://news.google.com/rss/search?q=%28%22synthetic+population%22+OR+%22agent-based+model%22+OR+%22social+simulation%22%29+AI+%28health+OR+pandemic+OR+election+OR+survey%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-zh-agent-sim",
+   "name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "kind": "rss",
+   "group": "application",
+   "tier": "T2",
+   "enabled": true,
+   "items": 3,
+   "home": "https://news.google.com/rss/search?q=%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B%29+%28%E4%BB%BF%E7%9C%9F+OR+%E6%B2%99%E7%9B%98%E6%8E%A8%E6%BC%94+OR+%E6%83%85%E6%99%AF%E6%8E%A8%E6%BC%94+OR+%E6%A8%A1%E6%8B%9F%E6%BC%94%E7%BB%83%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-zh-wargame",
+   "name": "Google 新闻 · 中文：兵棋推演与人工智能",
+   "kind": "rss",
+   "group": "application",
+   "tier": "T2",
+   "enabled": true,
+   "items": 2,
+   "home": "https://news.google.com/rss/search?q=%E5%85%B5%E6%A3%8B%E6%8E%A8%E6%BC%94+%28%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E6%99%BA%E8%83%BD%E4%BD%93%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+   "query": "",
+   "ok": true
+  },
+  {
+   "id": "gnews-zh-digital-twin",
+   "name": "Google 新闻 · 中文：数字孪生与大模型",
+   "kind": "rss",
+   "group": "business",
+   "tier": "T2",
+   "enabled": true,
+   "items": 0,
+   "home": "https://news.google.com/rss/search?q=%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F+%28%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E6%99%BA%E8%83%BD%E4%BD%93%29+%28%E5%9F%8E%E5%B8%82+OR+%E5%B9%B3%E5%8F%B0+OR+%E5%8F%91%E5%B8%83+OR+%E5%BA%94%E7%94%A8%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+   "query": "",
+   "ok": true
   }
  ],
  "last_run": {
-  "at": "2026-11-19T19:32:57Z",
+  "at": "2026-11-19T20:51:29Z",
   "llm": false,
   "spent_run": 0.0
  }
