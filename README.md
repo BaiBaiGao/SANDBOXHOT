@@ -91,6 +91,16 @@ HN / GitHub / 游戏      ┘   发布网站  ◀──合并──────�
 
 GitHub 上这个文件里**没有 Key**（`SBH_KEY` 留空，第一次运行时会提示你输入）。你本地那份带 Key 的副本请命名为 `SANDBOXHOT-update.local.cmd`，`*.local.cmd` 已被 `.gitignore` 忽略，不会上传，也不会被提交前的密钥检查拦下。
 
+### 自动连接同济 VPN（准备中）
+
+计划让更新程序在每次运行时自动打开 MotionPro、连上同济 VPN，调用完模型后再断开。MotionPro 在 Windows 上没有命令行接口，需要先在你的电脑上检测它的窗口结构：
+
+```bash
+powershell -ExecutionPolicy Bypass -File scripts\vpn_probe.ps1
+```
+
+这个脚本只读取信息，不会连接、点击或修改任何东西。按提示操作三步，然后把 `state\vpn_probe.txt` 的内容发给 Claude。
+
 ## 在笔记本上安装（Windows）
 
 需要 Git 和 Python 3.10 以上（只用标准库，**不需要 pip 安装任何包**）。
