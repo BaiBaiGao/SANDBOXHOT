@@ -63,6 +63,7 @@ class Base(unittest.TestCase):
             mock.patch.object(store_mod, "SEEN", t / "seen.json"),
             mock.patch.object(store_mod, "DIGESTS", t / "digests.json"),
             mock.patch.object(store_mod, "RUNTIME", t / "runtime.json"),
+            mock.patch.object(store_mod, "ENRICH", t / "enrichments.json"),
             mock.patch.object(build, "SITE_DATA_DIR", t / "site" / "data"),
             mock.patch.object(build, "SITE_DIR", t / "site"),
         ]
@@ -177,6 +178,37 @@ class TestPipeline(Base):
         site = json.loads((Path(self.tmp.name) / "site" / "data" / "items.json").read_text())
         self.assertEqual(len(site["items"]), 2)
         self.assertNotIn("sk-test", (Path(self.tmp.name) / "site" / "data" / "items.json").read_text())
+
+    def test_cloud_rules_then_laptop_enrich(self):
+        """云端纯规则采集 → 笔记本 enrich 只写 enrichments.json → 云端下次构建合并模型结果。"""
+        base = self._server()
+        raw = collect.parse_feed((FIX / "feed.xml").read_text(), SRC) + collect.parse_arxiv((FIX / "arxiv.xml").read_text(), ARX)
+        for it in raw:
+            it["published"] = iso(now_utc() - timedelta(hours=2))
+            it["text"] = (it["text"] + " ") * 6
+        t = Path(self.tmp.name)
+        with mock.patch.object(collect, "collect", return_value=raw), mock.patch.object(Budget.__init__, "__defaults__", (self.ledger,)):
+            pipeline.update(use_llm=False, log=lambda *a: None)  # 云端
+            items_before = (t / "items.json").read_text()
+            self.assertTrue(all(not i["llm"] for i in store_mod.Store().items.values()))
+            env = {"TONGJI_API_KEY": "sk-test", "TONGJI_BASE_URL": base, "NO_PROXY": "127.0.0.1,localhost", "no_proxy": "127.0.0.1,localhost"}
+            with mock.patch.dict(os.environ, env), \
+                    mock.patch.object(LLM, "list_models", return_value=["DeepSeek-V4.1-Flash"]):
+                self.assertEqual(pipeline.enrich_only(log=lambda *a: None), 0)  # 笔记本
+            self.assertEqual((t / "items.json").read_text(), items_before)  # 笔记本不改云端文件
+            enr = json.loads((t / "enrichments.json").read_text())
+            self.assertEqual(len(enr["triage"]), 2)
+            self.assertNotIn("sk-test", (t / "enrichments.json").read_text())
+            pipeline.update(use_llm=False, fetch=False, log=lambda *a: None)  # 云端再次构建
+        site = json.loads((t / "site" / "data" / "items.json").read_text())["items"]
+        self.assertEqual(len(site), 2)
+        self.assertTrue(all(i["ai"] and i["title_zh"] for i in site))
+
+    def test_enrich_offline_exits(self):
+        with mock.patch.dict(os.environ, {"TONGJI_API_KEY": "sk-test", "TONGJI_BASE_URL": "http://127.0.0.1:9/v1", "NO_PROXY": "127.0.0.1"}), \
+                mock.patch.object(Budget.__init__, "__defaults__", (self.ledger,)):
+            self.assertEqual(pipeline.enrich_only(log=lambda *a: None), 1)
+        self.assertFalse((Path(self.tmp.name) / "enrichments.json").exists())
 
     def test_offline_rule_mode(self):
         raw = collect.parse_feed((FIX / "feed.xml").read_text(), SRC)

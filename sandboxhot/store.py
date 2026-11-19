@@ -9,6 +9,10 @@ ITEMS = DATA_DIR / "items.json"
 SEEN = DATA_DIR / "seen.json"
 DIGESTS = DATA_DIR / "digests.json"
 RUNTIME = STATE_DIR / "runtime.json"
+# 笔记本（校园网/VPN 内）用同济 API 生成的结果单独存放：云端 Actions 只读不写，笔记本只写这一个文件，互不冲突
+ENRICH = DATA_DIR / "enrichments.json"
+
+TRIAGE_FIELDS = ("llm", "model", "triaged", "domain", "score", "relevant", "title_zh", "summary_zh", "tags", "status")
 
 
 class Store:
@@ -17,6 +21,43 @@ class Store:
         self.seen: dict[str, str] = read_json(SEEN, {"seen": {}})["seen"]
         self.digests: dict = read_json(DIGESTS, {"daily": [], "weekly": []})
         self.runtime: dict = read_json(RUNTIME, {})
+        self.enrich: dict = read_json(ENRICH, {})
+        self._overlay()
+
+    def _overlay(self) -> None:
+        """把 enrichments.json 中的模型结果合并到条目和日报上（模型结果优先于规则结果）。"""
+        e = self.enrich
+        for iid, fields in (e.get("triage") or {}).items():
+            if iid in self.items:
+                self.items[iid].update({k: fields[k] for k in TRIAGE_FIELDS if k in fields})
+        for iid, brief in (e.get("briefs") or {}).items():
+            if iid in self.items:
+                self.items[iid]["brief"] = brief
+        for iid, n in (e.get("attempts") or {}).items():
+            if iid in self.items and not self.items[iid].get("llm"):
+                self.items[iid]["attempts"] = max(n, self.items[iid].get("attempts", 0))
+        for kind in ("daily", "weekly"):
+            lst = self.digests.setdefault(kind, [])
+            for d in (e.get("digests") or {}).get(kind, []):
+                lst[:] = [x for x in lst if x["key"] != d["key"]]
+                lst.append(d)
+
+    def save_enrichments(self, cfg: dict) -> dict:
+        """只导出模型产生的结果，写入 data/enrichments.json。"""
+        r = cfg["retention"]
+        out = {"triage": {}, "briefs": {}, "attempts": {}, "digests": {"daily": [], "weekly": []}}
+        for iid, it in sorted(self.items.items()):
+            if it.get("llm"):
+                out["triage"][iid] = {k: it[k] for k in TRIAGE_FIELDS if k in it}
+                if it.get("brief"):
+                    out["briefs"][iid] = it["brief"]
+            elif it.get("attempts"):
+                out["attempts"][iid] = it["attempts"]
+        for kind, keep in (("daily", r["daily_digests_keep"]), ("weekly", r["weekly_digests_keep"])):
+            ai = [d for d in self.digests.get(kind, []) if d.get("ai")]
+            out["digests"][kind] = sorted(ai, key=lambda d: d["key"], reverse=True)[:keep]
+        write_json(ENRICH, out)
+        return out
 
     def known(self, item_id: str) -> bool:
         return item_id in self.items or item_id in self.seen

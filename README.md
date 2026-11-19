@@ -2,7 +2,14 @@
 
 ## 线上更新
 
-[打开 SANDBOXHOT](https://baibaigao.github.io/SANDBOXHOT/)。GitHub Actions 每四小时采集一次，可在 Actions 页手动运行 **Update and deploy SANDBOXHOT**。云端使用纯规则精选并直接发布合格条目，无需同济密钥。下文的 Windows 脚本用于可选的本地运行。
+[打开 SANDBOXHOT](https://baibaigao.github.io/SANDBOXHOT/)。更新分两部分：
+
+| 谁 | 做什么 | 用不用同济 Key |
+|---|---|---|
+| GitHub Actions（云端，每 4 小时） | 采集信源、本地关键词规则精选、合并模型结果、发布网站 | 不用。云端连不上只对校园网/VPN 开放的同济平台，Key 也不能放进公开仓库 |
+| 你的笔记本（连校园网或 VPN，每 4 小时） | `scripts\update.ps1` → `py run.py enrich`：用同济 API 给云端采集的条目做模型精选、中文标题摘要、速读卡和日报，只把结果写进 `data/enrichments.json` 并推送 | 用。Key 只存在笔记本的 `.env` 里 |
+
+笔记本一推送，Actions 就会自动重新构建网站，标着“规则”的条目随之变成模型精选。笔记本关机或在校外时，网站照常用规则更新，等下次连上再补。两边写的是不同的文件，不会产生 git 冲突。
 
 机器之心和量子位使用 Wechat2RSS 的公开订阅。公众号条目沿用相关性筛选，仅展示标题、短摘要和原文链接。
 
@@ -81,7 +88,7 @@ powershell -ExecutionPolicy Bypass -File scripts\set_key.ps1
 py run.py check
 ```
 
-**4. 第一次运行**
+**4. 第一次补精选**（会给云端已有的条目全部过一遍模型，每次最多 160 条）
 
 ```bash
 powershell -ExecutionPolicy Bypass -File scripts\update.ps1
@@ -99,7 +106,7 @@ py run.py serve
 powershell -ExecutionPolicy Bypass -File scripts\install_task.ps1
 ```
 
-**7. 开启网站。** 在 GitHub 仓库页面依次打开 Settings → Pages，Source 选 “Deploy from a branch”，分支选 `main`，目录选 `/docs`，然后保存。
+网站已经由 GitHub Actions 部署到 Pages，不需要再设置。
 
 ### “电脑端只保留最新的版本”是怎么做到的
 
@@ -112,7 +119,8 @@ powershell -ExecutionPolicy Bypass -File scripts\install_task.ps1
 
 | 命令 | 作用 |
 |---|---|
-| `py run.py update` | 采集、精选、生成网站（`update.ps1` 会调用它） |
+| `py run.py enrich` | 笔记本模式：只用同济 API 补模型精选，写 `data/enrichments.json`（`update.ps1` 会调用它） |
+| `py run.py update` | 完整流程：采集、精选、生成网站（云端 Actions 用 `--no-llm` 运行它） |
 | `py run.py update --no-llm` | 完全不调用模型，零额度 |
 | `py run.py update --force` | 忽略抓取间隔，所有信源立即抓取 |
 | `py run.py budget` | 查看滚动 7 天用量，按模型和用途分开列出 |

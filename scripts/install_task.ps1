@@ -1,4 +1,4 @@
-﻿# 注册 Windows 计划任务：每 4 小时自动运行一次 update.ps1（仅在你登录时运行，无需保存密码）。
+﻿# 注册 Windows 计划任务：每 4 小时自动运行一次 update.ps1（用同济 API 补模型精选）（仅在你登录时运行，无需保存密码）。
 # 用法：powershell -ExecutionPolicy Bypass -File scripts\install_task.ps1 [-Hours 4]
 # 删除：Unregister-ScheduledTask -TaskName SANDBOXHOT -Confirm:$false
 param([int]$Hours = 4)

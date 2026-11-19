@@ -251,7 +251,7 @@
       state.meta = res[1];
       state.digests = { daily: res[2].daily || [], weekly: res[2].weekly || [] };
       var g = dt(state.meta.generated);
-      document.getElementById("foot-meta").textContent = "更新于 " + (g ? g.toLocaleString("zh-CN", { hour12: false }) : "—") + " · 收录 " + state.items.length + " 条";
+      document.getElementById("foot-meta").textContent = "更新于 " + (g ? g.toLocaleString("zh-CN", { hour12: false }) : "—") + " · 收录 " + state.items.length + " 条（模型精选 " + (state.meta.ai_items || 0) + " 条）";
       window.addEventListener("hashchange", route);
       route();
     })
