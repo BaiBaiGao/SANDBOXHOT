@@ -4,7 +4,7 @@
 #   scripts/cloud_vpn.sh up     连接，并确认 agi.tongji.edu.cn 解析到校内地址、/v1/models 可用
 #   scripts/cloud_vpn.sh down   断开
 # 需要的环境变量（来自 GitHub Secrets，日志里会被自动打码）：
-#   TONGJI_VPN_USER  TONGJI_VPN_PASS  [TONGJI_VPN_HOST，默认 vpn.tongji.cn]  TONGJI_API_KEY
+#   TONGJI_VPN_USER  TONGJI_VPN_PASS  [TONGJI_VPN_HOST，默认 vpn.tongji.cn]  [TONGJI_VPN_METHOD，默认空]  TONGJI_API_KEY
 set -uo pipefail
 ACTION="${1:-up}"
 HOST="${TONGJI_VPN_HOST:-vpn.tongji.cn}"
@@ -35,7 +35,11 @@ up() {
   log "openconnect 版本：$(openconnect --version 2>&1 | head -1)"
   log "连接 $HOST ……"
   # --background：认证成功、隧道建立后才转入后台，所以返回码就代表成败
+  # Array 登录表单（auth_id=form）有三个字段：method（认证方式，提示为 authgroup:）、uname、pwd。
+  # method 来自可选的 TONGJI_VPN_METHOD（MotionPro 日志 “login successfully, method name:” 后面的值），默认空。
+  # 每次运行只尝试一次登录，避免连续失败把账号锁住。
   if ! printf '%s\n' "$TONGJI_VPN_PASS" | sudo openconnect --protocol=array --user="$TONGJI_VPN_USER" \
+      --form-entry="form:method=${TONGJI_VPN_METHOD:-}" --form-entry="form:uname=$TONGJI_VPN_USER" \
       --passwd-on-stdin --non-inter --background --pid-file="$PIDFILE" --interface=tun0 \
       --timestamp "$HOST" > /tmp/openconnect.log 2>&1; then
     log "openconnect 连接失败，日志如下："; cat /tmp/openconnect.log; return 3

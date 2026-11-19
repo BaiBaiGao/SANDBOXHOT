@@ -2,7 +2,7 @@ name: Enrich via Tongji VPN
 # 在 GitHub 的服务器上连同济 VPN，用同济 API 做模型加工（和笔记本上的 py run.py enrich 完全相同），
 # 只提交 data/enrichments.json 和额度账本 data/cloud-usage.json，然后触发网站发布。
 # 需要在仓库 Settings → Secrets and variables → Actions 里添加：
-#   TONGJI_API_KEY、TONGJI_VPN_USER、TONGJI_VPN_PASS，可选 TONGJI_VPN_HOST（默认 vpn.tongji.cn）
+#   TONGJI_API_KEY、TONGJI_VPN_USER、TONGJI_VPN_PASS，可选 TONGJI_VPN_HOST（默认 vpn.tongji.cn）、TONGJI_VPN_METHOD
 on:
   workflow_dispatch:
   schedule:
@@ -23,6 +23,7 @@ jobs:
       TONGJI_VPN_USER: ${{ secrets.TONGJI_VPN_USER }}
       TONGJI_VPN_PASS: ${{ secrets.TONGJI_VPN_PASS }}
       TONGJI_VPN_HOST: ${{ secrets.TONGJI_VPN_HOST }}
+      TONGJI_VPN_METHOD: ${{ secrets.TONGJI_VPN_METHOD }}
       PYTHONUTF8: '1'
     steps:
       - name: 检查密钥是否已添加
