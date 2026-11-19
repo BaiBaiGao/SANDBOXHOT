@@ -69,9 +69,11 @@ up() {
 }
 
 down() {
-  if [ -f "$PIDFILE" ]; then
-    sudo kill -INT "$(cat "$PIDFILE")" 2>/dev/null || true
-    for _ in $(seq 1 10); do sudo kill -0 "$(cat "$PIDFILE")" 2>/dev/null || break; sleep 1; done
+  local pid
+  pid=$(sudo cat "$PIDFILE" 2>/dev/null || true)
+  if [ -n "$pid" ]; then
+    sudo kill -INT "$pid" 2>/dev/null || true
+    for _ in $(seq 1 10); do sudo kill -0 "$pid" 2>/dev/null || break; sleep 1; done
   fi
   sudo pkill -INT openconnect 2>/dev/null || true
   sudo sed -i "/ $API_HOST\$/d" /etc/hosts 2>/dev/null || true
