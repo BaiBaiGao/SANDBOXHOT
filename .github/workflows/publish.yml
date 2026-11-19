@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '17 */4 * * *'
+    - cron: '53 2-22/4 * * *'
 concurrency:
   group: sandboxhot-production
   cancel-in-progress: false
