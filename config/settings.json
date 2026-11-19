@@ -1,0 +1,77 @@
+{
+  "$comment": "运行参数。单价来自《同济大学人工智能平台 API 调用与学生额度指南》（2026-11-19 页面快照，单位：积分/百万 tokens），平台调价后在这里改。",
+  "site": {
+    "name": "SANDBOXHOT",
+    "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
+    "timezone_offset_hours": 8
+  },
+  "api": {
+    "base_url": "https://agi.tongji.edu.cn/v1",
+    "timeout_seconds": 120
+  },
+  "models": {
+    "triage": ["DeepSeek-V4.1-Flash", "MiMo-V2.6-Flash", "Qwen3.8-Flash-Next"],
+    "brief": ["DeepSeek-V4.1-Flash", "MiMo-V2.6-Flash"],
+    "digest": ["GLM-5.3", "MiMo-V2.6-Pro", "DeepSeek-V4.1-Flash"]
+  },
+  "reasoning": {
+    "DeepSeek-V4.1-Flash": "none",
+    "MiMo-V2.6-Flash": "none",
+    "MiMo-V2.6-Pro": "none",
+    "Qwen3.8-Flash-Next": "none",
+    "Qwen3.8-27B": "none",
+    "GLM-5.3": "low",
+    "GLM-5.3-Flash": "low",
+    "Kimi-K3.1-Pro": "low",
+    "MiniMax-M3.1-Flash": "low"
+  },
+  "prices": {
+    "DeepSeek-V4.1-Flash": {"input": 20, "cached": 0.4, "output": 80},
+    "Kimi-K3.1-Pro": {"input": 260, "cached": 26, "output": 1360},
+    "MiniMax-M3.1-Flash": {"input": 20, "cached": 2, "output": 80},
+    "GLM-5.3": {"input": 160, "cached": 40, "output": 560},
+    "MiMo-V2.6-Pro": {"input": 60, "cached": 0.5, "output": 120},
+    "GLM-5.3-Flash": {"input": 16, "cached": 4.6, "output": 56},
+    "Qwen3.8-Flash-Next": {"input": 16, "cached": 1.6, "output": 54},
+    "MiMo-V2.6-Flash": {"input": 20, "cached": 0.4, "output": 40},
+    "Qwen3.8-27B": {"input": 60, "cached": 6, "output": 240}
+  },
+  "budget": {
+    "$comment": "平台每周 1000 积分、所有模型共用、不累积。流水线只用其中一部分，留出余量给你自己手动调用。按滚动 7 天统计，不假设具体重置时刻。",
+    "weekly_quota": 1000,
+    "pipeline_weekly_cap": 500,
+    "per_run_cap": 25,
+    "brief_stop_ratio": 0.6,
+    "digest_stop_ratio": 0.9
+  },
+  "pipeline": {
+    "keyword_threshold": 30,
+    "keyword_threshold_focused": 12,
+    "max_triage_items_per_run": 160,
+    "triage_batch_size": 8,
+    "triage_text_chars": 1200,
+    "max_triage_attempts": 3,
+    "fallback_after_hours": 36,
+    "rule_select_threshold": 55,
+    "select_threshold": {"academic": 45, "application": 45, "business": 60, "game": 55, "platform": 55},
+    "brief_min_score": 68,
+    "brief_domains": ["academic", "application"],
+    "max_briefs_per_run": 12,
+    "upgrade_fallback_per_run": 40,
+    "max_item_age_days": 21,
+    "first_run_backfill_per_source": 15
+  },
+  "retention": {
+    "selected_days": 365,
+    "filtered_days": 30,
+    "seen_days": 60,
+    "site_items_days": 180,
+    "site_items_max": 2000,
+    "daily_digests_keep": 90,
+    "weekly_digests_keep": 52
+  },
+  "digest": {
+    "daily_items": 24,
+    "weekly_items": 40
+  }
+}

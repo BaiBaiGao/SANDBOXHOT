@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+<entry><id>http://arxiv.org/abs/2611.01234v2</id><published>2026-11-17T10:00:00Z</published>
+<title>LLM-Driven Wargaming:
+ A Social Simulation of Crisis Escalation</title>
+<summary>We present an agent-based simulation with 1,000 large language model agents to study crisis escalation in wargame scenarios, validated against historical data.</summary>
+<author><name>A. Researcher</name></author><author><name>B. Scholar</name></author>
+<link href="http://arxiv.org/abs/2611.01234v2" rel="alternate" type="text/html"/>
+<link title="pdf" href="http://arxiv.org/pdf/2611.01234v2" rel="related" type="application/pdf"/>
+<arxiv:comment>12 pages</arxiv:comment>
+<category term="cs.MA"/><category term="cs.AI"/></entry>
+</feed>

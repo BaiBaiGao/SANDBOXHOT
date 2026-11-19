@@ -1,0 +1,204 @@
+import json
+import os
+import sys
+import tempfile
+import threading
+import unittest
+from datetime import timedelta
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from unittest import mock
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from sandboxhot import build, collect, enrich, pipeline, relevance, store as store_mod  # noqa: E402
+from sandboxhot.budget import Budget, BudgetExceeded, credits_for  # noqa: E402
+from sandboxhot.config import iso, keywords, now_utc, settings  # noqa: E402
+from sandboxhot.digest import run_digests  # noqa: E402
+from sandboxhot.llm import LLM, parse_json_block  # noqa: E402
+
+FIX = Path(__file__).parent / "fixtures"
+SRC = {"id": "t", "name": "Test", "kind": "rss", "tier": "T2", "group": "aihot", "focused": False}
+ARX = {"id": "ax", "name": "arXiv", "kind": "arxiv", "tier": "T1", "group": "academic", "focused": True}
+
+
+class FakeLLM(BaseHTTPRequestHandler):
+    calls = []
+
+    def log_message(self, *a):
+        pass
+
+    def do_POST(self):
+        body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+        FakeLLM.calls.append(body)
+        assert self.headers["Authorization"] == "Bearer sk-test"
+        system = body["messages"][0]["content"]
+        user = body["messages"][1]["content"]
+        if "逐条评估" in user:
+            mats = json.loads(user.split("\n", 1)[1])
+            out = {"items": [{"i": m["i"], "relevant": "GPU" not in m["title"], "domain": "academic" if m["kind"] == "paper" else "application",
+                              "score": 80, "title_zh": "中文标题" + str(m["i"]), "summary_zh": "摘要", "tags": ["社会仿真"]} for m in mats]}
+            text = json.dumps(out, ensure_ascii=False)
+        elif "速读卡" in system:
+            text = '```json\n{"question":"q","setup":"s","method":"m","findings":"f","validation":"未说明","limits":"l","reuse":"r"}\n```'
+        else:
+            text = "## 测试日报\n导语\n### 学术前沿\n- 条目 [来源](https://example.com)"
+        resp = {"choices": [{"message": {"content": text}, "finish_reason": "stop"}],
+                "usage": {"prompt_tokens": 1000, "completion_tokens": 200, "prompt_tokens_details": {"cached_tokens": 400}}}
+        data = json.dumps(resp).encode()
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+
+class Base(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        t = Path(self.tmp.name)
+        self.patches = [
+            mock.patch.object(store_mod, "ITEMS", t / "items.json"),
+            mock.patch.object(store_mod, "SEEN", t / "seen.json"),
+            mock.patch.object(store_mod, "DIGESTS", t / "digests.json"),
+            mock.patch.object(store_mod, "RUNTIME", t / "runtime.json"),
+            mock.patch.object(build, "SITE_DATA_DIR", t / "site" / "data"),
+            mock.patch.object(build, "SITE_DIR", t / "site"),
+        ]
+        for p in self.patches:
+            p.start()
+        (t / "site").mkdir()
+        self.cfg = settings()
+        self.ledger = t / "usage.json"
+
+    def tearDown(self):
+        for p in self.patches:
+            p.stop()
+        self.tmp.cleanup()
+
+
+class TestCollect(unittest.TestCase):
+    def test_rss_and_canonical(self):
+        items = collect.parse_feed((FIX / "feed.xml").read_text(), SRC)
+        self.assertEqual(len(items), 2)
+        self.assertEqual(items[0]["url"], "https://example.com/a")
+        self.assertNotIn("<p>", items[0]["text"])
+
+    def test_arxiv(self):
+        items = collect.parse_arxiv((FIX / "arxiv.xml").read_text(), ARX)
+        self.assertEqual(items[0]["url"], "https://arxiv.org/abs/2611.01234")
+        self.assertEqual(items[0]["kind"], "paper")
+        self.assertEqual(items[0]["extra"]["pdf"], "https://arxiv.org/pdf/2611.01234")
+        self.assertEqual(items[0]["authors"], ["A. Researcher", "B. Scholar"])
+        self.assertEqual(collect.item_id("http://arxiv.org/pdf/2611.01234v1"), items[0]["id"])
+
+    def test_openalex_abstract(self):
+        self.assertEqual(collect._openalex_abstract({"world": [1], "hello": [0]}), "hello world")
+
+
+class TestRelevance(unittest.TestCase):
+    def test_prefilter(self):
+        kw, cfg = keywords(), settings()
+        a, b = collect.parse_feed((FIX / "feed.xml").read_text(), SRC)
+        for it in (a, b):
+            it.update(relevance.keyword_score(it, kw))
+        self.assertTrue(relevance.passes_prefilter(a, cfg))
+        self.assertFalse(relevance.passes_prefilter(b, cfg))
+
+    def test_code_sandbox_is_penalized(self):
+        kw = keywords()
+        it = {"title": "Secure code sandbox for AI agents", "text": "sandboxed execution with firecracker", "focused": False}
+        self.assertLess(relevance.keyword_score(it, kw)["kw_score"], settings()["pipeline"]["keyword_threshold"])
+
+    def test_domain_guess(self):
+        kw = keywords()
+        self.assertEqual(relevance.guess_domain({"kind": "paper", "title": "x"}, kw), "academic")
+        self.assertEqual(relevance.guess_domain({"kind": "news", "title": "AI NPC game simulation", "text": ""}, kw), "game")
+
+
+class TestBudget(Base):
+    def test_cost_formula(self):
+        p = self.cfg["prices"]
+        # 指南示例：DeepSeek-V4.1-Flash 输入 1000 + 输出 1000，无缓存 ≈ 0.1 积分
+        self.assertAlmostEqual(credits_for(p, "DeepSeek-V4.1-Flash", 1000, 0, 1000), 0.1)
+        self.assertAlmostEqual(credits_for(p, "Kimi-K3.1-Pro", 1000, 0, 1000), 1.62)
+
+    def test_caps(self):
+        b = Budget(self.cfg, path=self.ledger)
+        b.data["entries"].append({"at": iso(now_utc()), "model": "x", "purpose": "t", "prompt": 0, "cached": 0,
+                                  "completion": 0, "credits": 499.99})
+        with self.assertRaises(BudgetExceeded):
+            b.check("DeepSeek-V4.1-Flash", 10000, 2000)
+        b.data["entries"][0]["at"] = iso(now_utc() - timedelta(days=8))  # 滚出 7 天窗口
+        b.check("DeepSeek-V4.1-Flash", 10000, 2000)
+
+    def test_parse_json(self):
+        self.assertEqual(parse_json_block('好的：\n```json\n{"a": 1}\n```'), {"a": 1})
+        self.assertIsNone(parse_json_block("no json"))
+
+
+class TestPipeline(Base):
+    def _server(self):
+        srv = ThreadingHTTPServer(("127.0.0.1", 0), FakeLLM)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        self.addCleanup(srv.shutdown)
+        return f"http://127.0.0.1:{srv.server_address[1]}/v1"
+
+    def test_end_to_end_with_fake_llm(self):
+        base = self._server()
+        env = {"TONGJI_API_KEY": "sk-test", "TONGJI_BASE_URL": base, "NO_PROXY": "127.0.0.1,localhost", "no_proxy": "127.0.0.1,localhost"}
+        raw = collect.parse_feed((FIX / "feed.xml").read_text(), SRC) + collect.parse_arxiv((FIX / "arxiv.xml").read_text(), ARX)
+        for it in raw:
+            it["published"] = iso(now_utc() - timedelta(hours=30))
+            it["text"] = (it["text"] + " ") * 6
+        with mock.patch.dict(os.environ, env), mock.patch.object(collect, "collect", return_value=raw), \
+                mock.patch("sandboxhot.budget.LEDGER", self.ledger), mock.patch.object(Budget.__init__, "__defaults__", (self.ledger,)):
+            FakeLLM.calls = []
+            pipeline.update(log=lambda *a: None)
+            st = store_mod.Store()
+            sel = [i for i in st.items.values() if i["status"] == "selected"]
+            self.assertEqual(len(sel), 2)  # GPU 新闻被本地预筛挡掉，不会发给模型
+            self.assertTrue(all(i["llm"] and i["title_zh"].startswith("中文标题") for i in sel))
+            paper = next(i for i in sel if i["kind"] == "paper")
+            self.assertEqual(paper["domain"], "academic")
+            self.assertEqual(paper["brief"]["question"], "q")
+            triage_calls = [c for c in FakeLLM.calls if "逐条评估" in c["messages"][1]["content"]]
+            self.assertEqual(len(triage_calls), 1)  # 两条合并在一个批次里
+            self.assertEqual(triage_calls[0]["reasoning_effort"], "none")
+            self.assertTrue(all(c["messages"][0]["content"] == triage_calls[0]["messages"][0]["content"] for c in triage_calls))
+            ledger = json.loads(self.ledger.read_text())
+            self.assertGreater(len(ledger["entries"]), 0)
+            self.assertEqual(ledger["entries"][0]["cached"], 400)
+            # 第二次运行：没有新内容就不会再次调用模型
+            n = len(FakeLLM.calls)
+            pipeline.update(log=lambda *a: None)
+            self.assertEqual(len(FakeLLM.calls), n)
+        site = json.loads((Path(self.tmp.name) / "site" / "data" / "items.json").read_text())
+        self.assertEqual(len(site["items"]), 2)
+        self.assertNotIn("sk-test", (Path(self.tmp.name) / "site" / "data" / "items.json").read_text())
+
+    def test_offline_rule_mode(self):
+        raw = collect.parse_feed((FIX / "feed.xml").read_text(), SRC)
+        raw[0]["published"] = iso(now_utc())
+        with mock.patch.object(collect, "collect", return_value=raw), mock.patch.object(Budget.__init__, "__defaults__", (self.ledger,)):
+            pipeline.update(use_llm=False, log=lambda *a: None)
+        st = store_mod.Store()
+        it = next(iter(st.items.values()))
+        self.assertFalse(it["llm"])
+        self.assertIn(it["status"], ("selected", "filtered"))
+
+    def test_digest_rule_version(self):
+        st = store_mod.Store()
+        tz_yesterday = now_utc() - timedelta(days=1)
+        for k in range(4):
+            st.items[f"i{k}"] = {"id": f"i{k}", "url": f"https://e.com/{k}", "title": f"T{k}", "status": "selected", "score": 70,
+                                 "domain": "academic", "source_name": "S", "source_id": "s", "added": iso(tz_yesterday.replace(hour=4)),
+                                 "published": iso(tz_yesterday)}
+        llm = LLM(self.cfg, Budget(self.cfg, path=self.ledger), enabled=False, log=lambda *a: None)
+        run_digests(st, self.cfg, llm, log=lambda *a: None)
+        self.assertTrue(any(not d["ai"] for d in st.digests["daily"]))
+
+
+if __name__ == "__main__":
+    unittest.main()

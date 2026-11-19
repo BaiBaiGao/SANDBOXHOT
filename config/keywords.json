@@ -1,0 +1,30 @@
+{
+  "$comment": "本地关键词预筛（零额度）。一条内容必须命中“仿真类”词，并且（非 focused 信源时）命中“AI 类”词，才会进入大模型。权重越高越相关。全部小写匹配。",
+  "simulation_strong": {
+    "沙盘": 30, "沙盘推演": 40, "推演": 25, "兵棋": 40, "仿真": 25, "数字孪生": 25, "社会模拟": 35, "智能体社会": 35, "多智能体模拟": 40, "多智能体仿真": 40, "世界模拟器": 30, "虚拟社会": 30,
+    "agent-based model": 40, "agent-based modeling": 40, "agent-based modelling": 40, "agent-based simulation": 40, "abm": 15,
+    "multi-agent simulation": 40, "multiagent simulation": 40, "social simulation": 40, "society simulation": 40, "simulated society": 40, "agent society": 30, "artificial society": 30,
+    "generative agents": 40, "generative agent": 35, "smallville": 30,
+    "wargame": 40, "wargaming": 40, "war game": 35, "war-game": 35, "tabletop exercise": 35, "crisis simulation": 35, "red teaming exercise": 15,
+    "policy simulation": 35, "economic simulation": 35, "market simulation": 35, "simulated market": 30, "epidemic simulation": 30, "traffic simulation": 25, "urban simulation": 30, "city simulation": 30,
+    "digital twin": 25, "world simulator": 30, "world model": 15, "simulation environment": 20, "simulated environment": 20, "open-ended environment": 20,
+    "silicon sampling": 40, "synthetic respondents": 35, "synthetic users": 30, "simulated users": 30, "user simulation": 30, "user simulator": 30, "persona simulation": 35, "simulate human": 30, "human behavior simulation": 35, "humanlike agents": 20,
+    "sandbox": 18, "simulation": 15, "simulator": 15, "simulated": 10, "simulate": 10, "scenario planning": 20, "role-play": 10, "role-playing": 10
+  },
+  "ai": {
+    "llm": 20, "llms": 20, "large language model": 25, "language model": 15, "language agent": 25, "language agents": 25, "ai agent": 25, "ai agents": 25, "agentic": 15, "agents": 8, "agent": 6,
+    "gpt": 10, "claude": 10, "gemini": 10, "deepseek": 10, "qwen": 10, "llama": 8, "foundation model": 15, "generative ai": 15, "artificial intelligence": 10, " ai ": 8,
+    "大模型": 25, "语言模型": 20, "智能体": 20, "人工智能": 15, "生成式": 10
+  },
+  "negative": {
+    "$comment": "降权词：典型的误伤场景（纯代码沙箱、显卡、普通游戏评测等）。",
+    "code sandbox": -15, "sandboxed execution": -15, "browser sandbox": -20, "sandbox escape": -20, "security sandbox": -15, "e2b": -10, "firecracker": -10,
+    "physics engine": -5, "flight simulator": -10, "racing sim": -15, "gpu": -3, "benchmark leaderboard": -5
+  },
+  "domain_hints": {
+    "game": ["game", "games", "gaming", "npc", "npcs", "player", "minecraft", "roblox", "unity", "unreal", "steam", "游戏", "玩家", "非玩家角色"],
+    "business": ["raises", "raised", "funding", "series a", "series b", "seed round", "acquire", "acquires", "acquisition", "startup", "revenue", "valuation", "customers", "enterprise", "pricing", "融资", "收购", "估值", "营收", "商业化", "初创"],
+    "platform": ["open-source", "open source", "framework", "library", "sdk", "github", "toolkit", "platform", "release", "launches", "api", "开源", "框架", "平台", "工具"],
+    "application": ["policy", "government", "military", "defense", "defence", "urban", "city", "traffic", "epidemic", "pandemic", "public health", "hospital", "supply chain", "logistics", "finance", "trading", "election", "survey", "classroom", "education", "emergency", "disaster", "climate", "deployed", "pilot", "政府", "政策", "军事", "城市", "交通", "疫情", "医院", "供应链", "金融", "教育", "应急", "选举", "调查"]
+  }
+}
