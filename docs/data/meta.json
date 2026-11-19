@@ -4,15 +4,15 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-19T20:51:29Z",
+ "generated": "2026-11-19T22:30:29Z",
  "counts": {
   "academic": 1281,
-  "application": 10,
+  "application": 11,
   "platform": 2,
-  "business": 8,
+  "business": 9,
   "game": 2
  },
- "total": 1303,
+ "total": 1305,
  "reads": 78,
  "research": 3,
  "ai_items": 332,
@@ -528,7 +528,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 4,
+   "items": 6,
    "home": "https://news.google.com/rss/search?q=%28%22AI+agents%22+OR+%22generative+agents%22+OR+LLM%29+%28simulation+OR+%22digital+twin%22%29+%28city+OR+government+OR+policy+OR+emergency+OR+evacuation%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -583,7 +583,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-19T20:51:29Z",
+  "at": "2026-11-19T22:30:29Z",
   "llm": false,
   "spent_run": 0.0
  }
