@@ -179,6 +179,8 @@
         (list.length ? list.map(function (it) { return card(it, { compact: true }); }).join("") : '<div class="empty">暂无内容</div>') + "</div></div>";
     });
     h += "</div>";
+    h += '<a class="author-strip" href="#/about"><span class="avatar" aria-hidden="true">B</span><span><b>作者 Bianco</b>' +
+      '<span class="muted">同济大学 × 米兰理工大学双学位博士生，研究用 LLM 多智能体推演极端情况下的人群行为。欢迎交流 →</span></span></a>';
     app.innerHTML = h;
     loadResearch().then(function (reps) {
       var el = document.getElementById("home-research");
@@ -391,8 +393,30 @@
       }).join("") + "</tbody></table></div>";
   }
 
+  // 作者邮箱分段存放、运行时拼接：页面上正常显示和点击，网页源码里不出现完整地址，减少爬虫收集
+  var CONTACTS = [["xiaobaihao6666", ["tongji", "edu", "cn"], "同济大学"], ["hao.bai", ["polimi", "it"], "米兰理工大学"]];
+  function mailLinks() {
+    return CONTACTS.map(function (c) {
+      var addr = c[0] + String.fromCharCode(64) + c[1].join(".");
+      return '<a class="mail" href="mailto:' + esc(addr) + '"><span class="muted">' + esc(c[2]) + "</span> " + esc(addr) + "</a>";
+    }).join("");
+  }
+  function authorCard() {
+    return '<section class="author panel">' +
+      '<p class="eyebrow">关于作者</p>' +
+      '<div class="author-head"><span class="avatar" aria-hidden="true">B</span><div><h2>Bianco</h2>' +
+      '<p class="muted">同济大学土木工程学院 × 米兰理工大学能源学院 双学位博士生</p></div></div>' +
+      "<p>我一直对用大语言模型做多智能体仿真很感兴趣，尤其是在假想的极端情况下：不同的个体，面对不同的基础设施条件和外界干扰，会怎样反应。" +
+      "把这些反应放进推演里算一算，就有机会提前看到一些由人引发的极端情况，给管理者的决策提供参考。</p>" +
+      "<p>SANDBOXHOT 是我为这个方向做的资讯站，希望它对你也有用。也欢迎同样在做 sandbox simulation based on LLM agents 的同仁来信交流。</p>" +
+      '<div class="mails">' + mailLinks() + "</div>" +
+      '<p class="muted small">网站参考了数字生命卡兹克的 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank" rel="noopener">AIHOT</a> 和 ' +
+      '<a href="https://github.com/KKKKhazix/khazix-skills" target="_blank" rel="noopener">khazix-skills</a> 等仓库，主要借助 Codex 和 Claude 搭建。</p>' +
+      "</section>";
+  }
+
   function aboutPage() {
-    app.innerHTML = '<div class="prose"><h1>关于 SANDBOXHOT</h1>' +
+    app.innerHTML = '<div class="prose">' + authorCard() + '<h1>关于 SANDBOXHOT</h1>' +
       "<p>SANDBOXHOT 收集“利用 AI 智能体做沙盘推演、仿真、模拟”的资讯，覆盖学术论文、实际应用、商业、游戏与平台工具，并且更重视前两者。</p>" +
       "<h2>它怎么工作</h2><ul>" +
       "<li><b>采集</b>：AIHOT 同款 RSS 信源，加上 arXiv（含 2023 年以来的历史回填）、OpenAlex 定向检索，以及 Hacker News、GitHub 和公众号。</li>" +
