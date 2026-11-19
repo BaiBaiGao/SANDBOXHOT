@@ -1,5 +1,6 @@
-﻿# SANDBOXHOT：MotionPro / 同济 VPN 只读检测脚本
-# 只读取信息：不连接 VPN、不点击任何按钮、不修改任何设置，也不读取密码。
+﻿# SANDBOXHOT：MotionPro / 同济 VPN 只读检测脚本（第二版）
+# 只读取信息：不点击、不连接 VPN、不修改设置、不读取任何文件内容和密码。
+# 唯一的动作：会再启动一次 MotionPro.exe，把缩在托盘里的主窗口调出来，方便读取窗口控件。
 # 结果写到 state\vpn_probe.txt，请把这个文件的全部内容发给 Claude。
 # 用法（在 SANDBOXHOT 文件夹里）：powershell -ExecutionPolicy Bypass -File scripts\vpn_probe.ps1
 $ErrorActionPreference = 'Continue'
@@ -10,15 +11,12 @@ New-Item -ItemType Directory -Force $stateDir | Out-Null
 $out = Join-Path $stateDir 'vpn_probe.txt'
 $lines = New-Object System.Collections.Generic.List[string]
 function Say([string]$s) { $lines.Add($s); Write-Host $s }
+function Save { $lines | Set-Content -Path $out -Encoding UTF8 }
 
-function Test-Tcp([string]$hostName, [int]$port) {
-    $c = New-Object System.Net.Sockets.TcpClient
-    try {
-        $ar = $c.BeginConnect($hostName, $port, $null, $null)
-        if ($ar.AsyncWaitHandle.WaitOne(4000) -and $c.Connected) { return 'OK' }
-        return 'TIMEOUT'
-    } catch { return "FAIL: $($_.Exception.Message)" } finally { $c.Close() }
-}
+$installDir = 'C:\Program Files\Array Networks\MotionPro VPN Client'
+$mpExe = Join-Path $installDir 'MotionPro.exe'
+$procPattern = '^(MotionPro|MotionProHttpd|vpnd|VPNService|VPNInstallManager)$'
+
 function Test-Dns([string]$hostName) {
     try { return ([System.Net.Dns]::GetHostAddresses($hostName) | ForEach-Object { $_.IPAddressToString }) -join ', ' }
     catch { return "FAIL: $($_.Exception.Message)" }
@@ -27,22 +25,47 @@ function Test-Dns([string]$hostName) {
 function Probe-Network([string]$label) {
     Say ""
     Say "===== 网络状态（$label） ====="
-    foreach ($h in @('agi.tongji.edu.cn', 'github.com', 'api.github.com')) {
-        Say ("{0,-20} DNS={1}  TCP443={2}" -f $h, (Test-Dns $h), (Test-Tcp $h 443))
-    }
-    Say "-- 网络适配器 --"
-    try {
-        Get-NetAdapter -IncludeHidden -ErrorAction Stop | Sort-Object Status |
-            ForEach-Object { Say ("{0,-30} | {1,-45} | {2}" -f $_.Name, $_.InterfaceDescription, $_.Status) }
-    } catch {
-        Get-WmiObject Win32_NetworkAdapter | Where-Object { $_.NetConnectionID } |
-            ForEach-Object { Say ("{0,-30} | {1,-45} | status={2}" -f $_.NetConnectionID, $_.Name, $_.NetConnectionStatus) }
-    }
+    Say ("agi.tongji.edu.cn DNS = {0}" -f (Test-Dns 'agi.tongji.edu.cn'))
     Say "-- 默认路由 --"
     try {
         Get-NetRoute -DestinationPrefix '0.0.0.0/0' -ErrorAction Stop |
             ForEach-Object { Say ("via {0,-16} ifIndex={1,-4} alias={2} metric={3}" -f $_.NextHop, $_.ifIndex, $_.InterfaceAlias, $_.RouteMetric) }
     } catch { Say "（无法读取路由）" }
+    Say "-- 名称含 Array 的 IP 接口 --"
+    try {
+        Get-NetIPInterface -ErrorAction Stop | Where-Object { $_.InterfaceAlias -match 'Array|本地连接$|以太网 2' } |
+            ForEach-Object { Say ("ifIndex={0,-4} alias={1} family={2} state={3}" -f $_.ifIndex, $_.InterfaceAlias, $_.AddressFamily, $_.ConnectionState) }
+        Get-NetIPConfiguration -All -ErrorAction Stop | Where-Object { $_.InterfaceAlias -match 'Array' -or $_.InterfaceDescription -match 'Array' } |
+            ForEach-Object { Say ("配置 alias={0} desc={1} ipv4={2} gw={3} dns={4}" -f $_.InterfaceAlias, $_.InterfaceDescription,
+                (($_.IPv4Address | ForEach-Object { $_.IPAddress }) -join ','), (($_.IPv4DefaultGateway | ForEach-Object { $_.NextHop }) -join ','),
+                (($_.DNSServer | Where-Object { $_.AddressFamily -eq 2 } | ForEach-Object { $_.ServerAddresses }) -join ',')) }
+    } catch { Say "（无法读取 IP 接口：$($_.Exception.Message)）" }
+}
+
+function Probe-Ports([string]$label) {
+    Say ""
+    Say "===== 本地监听端口（$label） ====="
+    $procs = Get-Process | Where-Object { $_.ProcessName -match $procPattern }
+    foreach ($p in $procs) {
+        $conns = Get-NetTCPConnection -State Listen -OwningProcess $p.Id -ErrorAction SilentlyContinue
+        if (-not $conns) { Say ("{0} (PID {1})：没有 TCP 监听端口" -f $p.ProcessName, $p.Id); continue }
+        foreach ($c in $conns) {
+            Say ("{0} (PID {1}) 监听 {2}:{3}" -f $p.ProcessName, $p.Id, $c.LocalAddress, $c.LocalPort)
+            if ($p.ProcessName -eq 'MotionProHttpd' -and $c.LocalAddress -in @('127.0.0.1', '0.0.0.0', '::', '::1')) {
+                foreach ($scheme in @('http', 'https')) {
+                    try {
+                        $r = Invoke-WebRequest -UseBasicParsing -Method Get -Uri ("{0}://127.0.0.1:{1}/" -f $scheme, $c.LocalPort) -TimeoutSec 4
+                        $body = ($r.Content -replace '\s+', ' ')
+                        if ($body.Length -gt 300) { $body = $body.Substring(0, 300) }
+                        Say ("   GET {0}://127.0.0.1:{1}/ -> {2}  {3}" -f $scheme, $c.LocalPort, $r.StatusCode, $body)
+                    } catch {
+                        $code = try { [int]$_.Exception.Response.StatusCode } catch { '' }
+                        Say ("   GET {0}://127.0.0.1:{1}/ -> 失败 {2} {3}" -f $scheme, $c.LocalPort, $code, $_.Exception.Message)
+                    }
+                }
+            }
+        }
+    }
 }
 
 function Probe-Windows([string]$label) {
@@ -51,24 +74,28 @@ function Probe-Windows([string]$label) {
     try {
         Add-Type -AssemblyName UIAutomationClient
         Add-Type -AssemblyName UIAutomationTypes
-    } catch { Say "无法加载 UI Automation：$($_.Exception.Message)"; return }
-    $procs = Get-Process | Where-Object { $_.ProcessName -match 'motion|array|vpn' }
-    if (-not $procs) { Say "没有找到 MotionPro 进程。请先打开 MotionPro 的主窗口（不要最小化到托盘）。"; return }
-    $ids = @($procs | ForEach-Object { $_.Id })
+    } catch { Say "无法加载 UI Automation：$($_.Exception.Message)"; return $false }
+    $ids = @(Get-Process -Name MotionPro -ErrorAction SilentlyContinue | ForEach-Object { $_.Id })
+    foreach ($p in Get-Process -Name MotionPro -ErrorAction SilentlyContinue) {
+        Say ("MotionPro PID {0} 主窗口句柄={1} 标题='{2}'" -f $p.Id, $p.MainWindowHandle, $p.MainWindowTitle)
+    }
+    if (-not $ids) { Say "MotionPro 没有在运行。"; return $false }
     $rootEl = [System.Windows.Automation.AutomationElement]::RootElement
     $tops = $rootEl.FindAll([System.Windows.Automation.TreeScope]::Children, [System.Windows.Automation.Condition]::TrueCondition)
-    $walker = [System.Windows.Automation.TreeWalker]::ControlViewWalker
+    $walker = [System.Windows.Automation.TreeWalker]::RawViewWalker
     $script:count = 0
     function Dump($el, [int]$depth) {
-        if ($depth -gt 12 -or $script:count -gt 600) { return }
+        if ($depth -gt 14 -or $script:count -gt 800) { return }
         $script:count++
         try {
             $cur = $el.Current
-            $pats = ($el.GetSupportedPatterns() | ForEach-Object { $_.ProgrammaticName -replace 'Identifiers.Pattern', '' -replace 'PatternIdentifiers', '' }) -join ','
+            $pats = ($el.GetSupportedPatterns() | ForEach-Object { $_.ProgrammaticName -replace 'PatternIdentifiers\.Pattern', '' }) -join ','
             $r = $cur.BoundingRectangle
-            Say ("{0}{1} | name='{2}' | id='{3}' | class='{4}' | patterns=[{5}] | rect={6},{7},{8}x{9} | enabled={10}" -f (' ' * ($depth * 2)),
-                ($cur.ControlType.ProgrammaticName -replace 'ControlType\.', ''), $cur.Name, $cur.AutomationId, $cur.ClassName, $pats,
-                [int]$r.X, [int]$r.Y, [int]$r.Width, [int]$r.Height, $cur.IsEnabled)
+            $name = $cur.Name
+            if ($name.Length -gt 80) { $name = $name.Substring(0, 80) + '…' }
+            Say ("{0}{1} | name='{2}' | id='{3}' | class='{4}' | patterns=[{5}] | rect={6},{7},{8}x{9} | enabled={10} | offscreen={11}" -f (' ' * ($depth * 2)),
+                ($cur.ControlType.ProgrammaticName -replace 'ControlType\.', ''), $name, $cur.AutomationId, $cur.ClassName, $pats,
+                [int]$r.X, [int]$r.Y, [int]$r.Width, [int]$r.Height, $cur.IsEnabled, $cur.IsOffscreen)
         } catch { Say ("{0}(读取失败)" -f (' ' * ($depth * 2))) }
         $child = $walker.GetFirstChild($el)
         while ($child -ne $null) {
@@ -80,61 +107,87 @@ function Probe-Windows([string]$label) {
     foreach ($w in $tops) {
         if ($ids -contains $w.Current.ProcessId) {
             $found = $true
-            Say ("--- 窗口：'{0}'  进程={1}" -f $w.Current.Name, (Get-Process -Id $w.Current.ProcessId).ProcessName)
+            Say ("--- 顶层窗口：'{0}' class='{1}'" -f $w.Current.Name, $w.Current.ClassName)
             Dump $w 0
         }
     }
-    if (-not $found) { Say "MotionPro 正在运行，但没有可见窗口。请从托盘图标打开它的主窗口后重新运行。" }
+    if (-not $found) { Say "没有读到 MotionPro 的可见窗口。" }
+    return $found
 }
 
-Say "SANDBOXHOT VPN 检测  $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
-Say "Windows: $([Environment]::OSVersion.VersionString)  PowerShell: $($PSVersionTable.PSVersion)"
-
-Say ""
-Say "===== 安装信息 ====="
-$keys = @('HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
-          'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-          'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*')
-$apps = Get-ItemProperty $keys -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -match 'motion|array' }
-foreach ($a in $apps) { Say ("{0} | 版本 {1} | 位置 {2} | 卸载 {3}" -f $a.DisplayName, $a.DisplayVersion, $a.InstallLocation, $a.UninstallString) }
-$dirs = @($apps | ForEach-Object { $_.InstallLocation } | Where-Object { $_ })
-$dirs += @("$env:ProgramFiles", "${env:ProgramFiles(x86)}", "$env:LOCALAPPDATA", "$env:APPDATA") |
-    ForEach-Object { Get-ChildItem $_ -Directory -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'motion|array' } | ForEach-Object { $_.FullName } }
-$dirs = $dirs | Sort-Object -Unique
-foreach ($d in $dirs) {
-    Say "-- 目录 $d"
-    Get-ChildItem $d -Recurse -Include *.exe, *.cmd, *.bat -ErrorAction SilentlyContinue | Select-Object -First 40 |
-        ForEach-Object { Say ("   {0}  ({1})" -f $_.FullName, $_.VersionInfo.FileVersion) }
+function Show-MotionPro {
+    if (Test-Path $mpExe) {
+        Say "（再次启动 MotionPro.exe，把主窗口调到前台）"
+        Start-Process -FilePath $mpExe -WorkingDirectory $installDir
+        Start-Sleep -Seconds 6
+    }
 }
-$lnk = Get-ChildItem "$env:ProgramData\Microsoft\Windows\Start Menu", "$env:APPDATA\Microsoft\Windows\Start Menu", "$env:USERPROFILE\Desktop", "$env:PUBLIC\Desktop" -Recurse -Filter *.lnk -ErrorAction SilentlyContinue |
-    Where-Object { $_.Name -match 'motion|array' }
-$sh = New-Object -ComObject WScript.Shell
-foreach ($l in $lnk) { $t = $sh.CreateShortcut($l.FullName); Say ("快捷方式 {0} -> {1} {2}" -f $l.FullName, $t.TargetPath, $t.Arguments) }
+
+Say "SANDBOXHOT VPN 检测（第二版）  $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 
 Say ""
-Say "===== 进程与服务 ====="
-Get-Process | Where-Object { $_.ProcessName -match 'motion|array|vpn' } | ForEach-Object {
-    $p = $_; $path = try { $p.Path } catch { '' }; Say ("进程 {0} (PID {1}) {2}" -f $p.ProcessName, $p.Id, $path) }
-Get-Service | Where-Object { $_.Name -match 'motion|array|vpn' -or $_.DisplayName -match 'motion|array' } |
-    ForEach-Object { Say ("服务 {0} | {1} | {2} | {3}" -f $_.Name, $_.DisplayName, $_.Status, $_.StartType) }
+Say "===== 安装目录里的非程序文件（只列文件名） ====="
+Get-ChildItem $installDir -Recurse -File -ErrorAction SilentlyContinue |
+    Where-Object { $_.Extension -notin @('.exe', '.dll', '.sys', '.cat', '.inf', '.png', '.ico', '.jpg', '.gif', '.bmp', '.svg', '.ttf', '.woff', '.woff2') } |
+    Select-Object -First 120 | ForEach-Object { Say ("  {0}  {1:N0} 字节" -f $_.FullName.Replace($installDir, '.'), $_.Length) }
+Say "-- dll 数量：$((Get-ChildItem $installDir -Recurse -Filter *.dll -ErrorAction SilentlyContinue | Measure-Object).Count)，其中名字含 Qt/Chrome/Electron/CEF/WebView 的："
+Get-ChildItem $installDir -Recurse -Filter *.dll -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'qt|chrome|electron|cef|webview|libcef|ffmpeg|icu' } |
+    Select-Object -First 20 | ForEach-Object { Say ("  {0}" -f $_.FullName.Replace($installDir, '.')) }
+foreach ($d in @("$env:LOCALAPPDATA\MotionPro", "$env:APPDATA\MotionPro", "$env:APPDATA\Array Networks", "$env:LOCALAPPDATA\Array Networks")) {
+    if (Test-Path $d) {
+        Say "-- 用户数据目录 $d（只列文件名）"
+        Get-ChildItem $d -Recurse -File -ErrorAction SilentlyContinue | Select-Object -First 60 |
+            ForEach-Object { Say ("  {0}  {1:N0} 字节  {2}" -f $_.FullName.Replace($d, '.'), $_.Length, $_.LastWriteTime.ToString('yyyy-MM-dd HH:mm')) }
+    }
+}
+
+Say ""
+Say "===== 程序里的命令行线索（可读字符串） ====="
+$kw = 'usage|--[a-z]|/[a-z]+ |connect|disconnect|logout|logon|profile|127\.0\.0\.1|localhost:|cmdline|command'
+foreach ($name in @('vpnd.exe', 'MotionPro.exe', 'MotionProHttpd.exe')) {
+    $f = Join-Path $installDir $name
+    if (-not (Test-Path $f)) { continue }
+    $size = (Get-Item $f).Length
+    Say "-- $name（$([math]::Round($size / 1MB, 1)) MB）"
+    if ($size -gt 60MB) { Say "   文件太大，跳过"; continue }
+    $bytes = [System.IO.File]::ReadAllBytes($f)
+    $found = New-Object System.Collections.Generic.List[string]
+    foreach ($text in @([System.Text.Encoding]::ASCII.GetString($bytes), [System.Text.Encoding]::Unicode.GetString($bytes))) {
+        foreach ($m in [regex]::Matches($text, '[\x20-\x7e]{6,160}')) {
+            $v = $m.Value
+            if ($v -match $kw -and -not $found.Contains($v)) { $found.Add($v) }
+            if ($found.Count -ge 40) { break }
+        }
+        if ($found.Count -ge 40) { break }
+    }
+    foreach ($v in $found) { Say "   $v" }
+}
 
 Write-Host ""
-Write-Host "第 1 步：请打开 MotionPro 主窗口，保持【未连接】VPN，然后按回车……" -ForegroundColor Yellow
+Write-Host "第 1 步：请确认 VPN 处于【未连接】状态，然后按回车。脚本会自动把 MotionPro 主窗口调出来……" -ForegroundColor Yellow
 [void](Read-Host)
+Show-MotionPro
 Probe-Network '未连接'
-Probe-Windows '未连接'
+Probe-Ports '未连接'
+if (-not (Probe-Windows '未连接')) {
+    Write-Host "没读到主窗口。请从右下角托盘图标手动打开 MotionPro 主窗口，然后按回车重试……" -ForegroundColor Yellow
+    [void](Read-Host)
+    [void](Probe-Windows '未连接-重试')
+}
+Save
 
 Write-Host ""
-Write-Host "第 2 步：请在 MotionPro 里手动连上“同济大学VPN系统”，等连接成功、主窗口仍然打开时按回车……" -ForegroundColor Yellow
+Write-Host "第 2 步：请在 MotionPro 里手动双击“同济大学VPN系统”连上 VPN，连接成功后【保持主窗口打开】，按回车……" -ForegroundColor Yellow
 [void](Read-Host)
 Probe-Network '已连接'
-Probe-Windows '已连接'
+Probe-Ports '已连接'
+if (-not (Probe-Windows '已连接')) { Show-MotionPro; [void](Probe-Windows '已连接-重试') }
+Save
 
 Write-Host ""
 Write-Host "第 3 步：请在 MotionPro 里手动【断开】VPN，然后按回车……" -ForegroundColor Yellow
 [void](Read-Host)
 Probe-Network '断开后'
-
-$lines | Set-Content -Path $out -Encoding UTF8
+Save
 Write-Host ""
 Write-Host "完成。结果已保存到 $out ，请把这个文件的全部内容发给 Claude。" -ForegroundColor Green
