@@ -3,6 +3,7 @@
 
   python run.py update            采集 + 精选 + 生成站点（日常就跑这个）
   python run.py update --no-llm   完全不调用模型（零额度，纯规则）
+  python run.py enrich            笔记本模式：只用同济 API 给云端条目补模型精选（不采集）
   python run.py build             只用已有数据重新生成站点
   python run.py budget            查看本地额度账本
   python run.py check             检查密钥与授权模型列表（GET /v1/models，不消耗积分）
@@ -98,6 +99,7 @@ def main() -> int:
     up.add_argument("--force", action="store_true", help="忽略抓取间隔，所有信源立即抓取")
     up.add_argument("--no-fetch", action="store_true", help="不抓取，只处理已有候选")
     up.add_argument("--require-content", action="store_true", help="采集全部失败或无内容时退出")
+    sub.add_parser("enrich")
     sub.add_parser("build")
     sub.add_parser("budget")
     sub.add_parser("check")
@@ -109,6 +111,8 @@ def main() -> int:
         pipeline.update(use_llm=not args.no_llm, force_fetch=args.force, fetch=not args.no_fetch,
                         require_content=args.require_content)
         return 0
+    if args.cmd == "enrich":
+        return pipeline.enrich_only()
     if args.cmd == "build":
         pipeline.rebuild()
         return 0

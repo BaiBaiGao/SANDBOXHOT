@@ -98,6 +98,37 @@ def update(*, use_llm: bool = True, force_fetch: bool = False, fetch: bool = Tru
     return stats
 
 
+def enrich_only(log=print) -> int:
+    """笔记本模式：不采集、不改网站文件，只用同济 API 给云端已采集的条目补模型精选、速读卡和日报，
+    结果写入 data/enrichments.json。云端 GitHub Actions 下次构建时自动合并。"""
+    cfg = settings()
+    store = Store()
+    budget = Budget(cfg)
+    llm = LLM(cfg, budget, log=log)
+    log(f"[SANDBOXHOT enrich] {iso(now_utc())}  额度：滚动 7 天已用 {budget.spent_7d():.2f} / {budget.weekly_cap:.0f} 积分")
+    if not llm.available:
+        log(f"  模型不可用：{llm.disabled_reason}")
+        return 1
+    try:
+        llm.list_models()  # 免费的连通性探测：校外没连 VPN 时立即结束，不浪费时间
+    except Exception as exc:  # noqa: BLE001
+        log(f"  连不上同济平台（校外请先连学校 VPN）：{str(exc)[:160]}")
+        return 1
+    log("1) 模型精选（含复核规则淘汰的候选）")
+    log(f"  {enrich.run_triage(store, cfg, llm, log, include_rule_filtered=True)}")
+    log("2) 高价值论文/应用速读卡")
+    log(f"  新增 {enrich.run_briefs(store, cfg, llm, log)} 张")
+    log("3) 日报 / 周报")
+    from . import cluster
+    cluster.assign([it for it in store.items.values() if it.get("status") == "selected"])
+    run_digests(store, cfg, llm, log)
+    out = store.save_enrichments(cfg)
+    budget.save()
+    log(f"完成：模型精选 {len(out['triage'])} 条，速读卡 {len(out['briefs'])} 张，"
+        f"AI 日报 {len(out['digests']['daily'])} 份；本次约 {budget.run_spent:.4f} 积分，滚动 7 天 {budget.spent_7d():.2f} 积分")
+    return 0
+
+
 def rebuild(log=print) -> None:
     cfg, srcs = settings(), sources()
     store = Store()

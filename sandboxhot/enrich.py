@@ -24,13 +24,21 @@ def _priority(it: dict) -> float:
     return p
 
 
-def triage_queue(store, cfg: dict) -> list[dict]:
+def triage_queue(store, cfg: dict, include_rule_filtered: bool = False) -> list[dict]:
+    """待处理条目优先；其次是规则入选、尚未经过模型的条目（升级）。
+    include_rule_filtered=True（笔记本补精选模式）时，规则淘汰的候选也交给模型复核，
+    因为规则门槛偏严，学术条目常被误挡。"""
+    p = cfg["pipeline"]
     pending = [it for it in store.items.values() if it.get("status") == "pending"]
     pending.sort(key=_priority, reverse=True)
-    upgrades = [it for it in store.items.values() if it.get("status") == "selected" and not it.get("llm")]
+    ok = lambda it: not it.get("llm") and it.get("attempts", 0) < p["max_triage_attempts"]
+    upgrades = [it for it in store.items.values() if it.get("status") == "selected" and ok(it)]
     upgrades.sort(key=_priority, reverse=True)
-    cap = cfg["pipeline"]["max_triage_items_per_run"]
-    return (pending + upgrades[: cfg["pipeline"]["upgrade_fallback_per_run"]])[:cap]
+    if include_rule_filtered:
+        rest = [it for it in store.items.values() if it.get("status") == "filtered" and ok(it)]
+        rest.sort(key=_priority, reverse=True)
+        return (pending + upgrades + rest)[: p["max_triage_items_per_run"]]
+    return (pending + upgrades[: p["upgrade_fallback_per_run"]])[: p["max_triage_items_per_run"]]
 
 
 def _material(i: int, it: dict, chars: int) -> dict:
@@ -62,12 +70,12 @@ def apply_triage(it: dict, res: dict, cfg: dict, model: str) -> None:
     it["status"] = "selected" if relevant and score >= th.get(domain, 55) else "filtered"
 
 
-def run_triage(store, cfg: dict, llm: LLM, log=print) -> dict:
+def run_triage(store, cfg: dict, llm: LLM, log=print, include_rule_filtered: bool = False) -> dict:
     stats = {"sent": 0, "selected": 0, "filtered": 0, "failed": 0}
     if not llm.available:
         return stats
     p = cfg["pipeline"]
-    queue = triage_queue(store, cfg)
+    queue = triage_queue(store, cfg, include_rule_filtered)
     if not queue:
         return stats
     system = prompt("triage")  # 固定前缀：每批完全相同，便于命中服务端缓存

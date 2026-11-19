@@ -63,6 +63,7 @@ def build(store, cfg: dict, sources: list[dict], log=print) -> dict:
     } for s in sources]
     meta = {
         "site": cfg["site"], "generated": iso(now), "counts": counts, "total": len(items),
+        "ai_items": sum(1 for it in items if it["ai"]),
         "sources": src_meta, "last_run": store.runtime.get("last_run", {}),
     }
     write_json(SITE_DATA_DIR / "meta.json", meta)
