@@ -66,7 +66,8 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "00d9f407e28f62f8": {
    "llm": true,
@@ -112,7 +113,8 @@
    ],
    "score1": 63,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "01c601ab578c8adc": {
    "llm": true,
@@ -159,7 +161,56 @@
    ],
    "score1": 58,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "02810f49d1f1f23a": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 65,
+   "relevant": true,
+   "title_zh": "多智能体模拟美国校园枪击案：枪械检测系统把疏散率从 16.6% 提到 66.6%",
+   "summary_zh": "作者用多智能体模型模拟教学楼内枪击事件，在 100 名学生、三种楼层布局下共跑 48 次仿真。加入枪械检测系统后六分钟内疏散率从 16.6% 升至 66.6%，平均伤亡率从 24.0% 降到 12.2%。",
+   "tags": [
+    "多智能体仿真",
+    "应急疏散",
+    "公共安全"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "policy"
+   ],
+   "score1": 58,
+   "score2": 72,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "030b5e5da1112309": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 64,
+   "relevant": true,
+   "title_zh": "首个 LLM 全面理性度基准：哪些地方像人、哪些地方偏离理想人类理性",
+   "summary_zh": "作者提出一个覆盖多领域、多模型的 LLM 理性度基准，同时考察思维层面的理论理性和行动层面的实践理性，并附带易用工具包和大量实验结果。分析指出 LLM 在哪些方面与理想化人类理性一致、哪些方面偏离，作者把它定位为用 LLM 模拟人类时的可信度检查工具。",
+   "tags": [
+    "评测基准",
+    "理性度",
+    "人类模拟"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 62,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "045163ecd1444c47": {
    "llm": true,
@@ -179,7 +230,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "04a560ef92b97705": {
    "llm": true,
@@ -200,7 +252,29 @@
     "urban",
     "generative-agents",
     "human-behavior"
-   ]
+   ],
+   "applied": false
+  },
+  "04cd269e3d8c939f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "用视觉计数、组合优化与大模型反馈，从噪声检测器数据重建俄亥俄州Strongsville交通仿真",
+   "summary_zh": "作者搭建三步流水线：计算机视觉从噪声摄像头画面统计车流，组合优化生成车辆路径，大模型根据自然语言反馈迭代修正仿真。在俄亥俄州Strongsville路网上，该流水线复现了当地交通模式。",
+   "tags": [
+    "交通仿真",
+    "大模型反馈",
+    "需求建模"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "applied": true
   },
   "04ec9875fe98aa04": {
    "llm": true,
@@ -223,7 +297,8 @@
    ],
    "score1": 55,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "04fce0395d5d8b0c": {
    "llm": true,
@@ -247,7 +322,31 @@
    ],
    "score1": 64,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
+  "0541b4d3134738d8": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 62,
+   "relevant": true,
+   "title_zh": "VRAgent-R1 用多模态大模型智能体模拟用户，强化学习提升视频推荐",
+   "summary_zh": "作者提出 VRAgent-R1，把视频推荐拆成物品感知智能体和用户模拟智能体两个角色，前者用多模态大模型理解视频内容，后者模拟用户偏好，再用强化学习训练。论文称这种用户模拟方式优于冻结大模型的提示式模拟。",
+   "tags": [
+    "用户模拟",
+    "推荐系统",
+    "多模态智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior"
+   ],
+   "score1": 58,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "054c6254bdfd70d9": {
    "llm": true,
@@ -267,7 +366,8 @@
    "topics": [
     "social-sim",
     "health"
-   ]
+   ],
+   "applied": false
   },
   "056049c248a6ef9d": {
    "llm": true,
@@ -426,6 +526,32 @@
    ],
    "applied": true
   },
+  "07efc02df0e1f6a7": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "闭环用户模拟加 LLM 裁判评测车载语音助手，策略引导多发现 2.96 倍失败类型",
+   "summary_zh": "作者提出车载对话助手多轮能力自动评测框架：把系统当黑盒，用策略引导的用户模拟器、对抗策略管理器和两级 LLM 裁判做闭环仿真。在工业级车载助手和六个 LLM 后端上测试，与十二名标注员对比一致性较高，策略引导每段对话发现的失败类型是未引导时的 2.96 倍。",
+   "tags": [
+    "用户模拟",
+    "闭环仿真",
+    "LLM 裁判",
+    "车载助手"
+   ],
+   "status": "filtered",
+   "topics": [
+    "human-behavior",
+    "eval",
+    "urban"
+   ],
+   "score1": 63,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
   "087c6e0424f7ca3b": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -444,7 +570,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "0920620ba4b7b06d": {
    "llm": true,
@@ -510,7 +637,8 @@
    "topics": [
     "human-behavior",
     "urban"
-   ]
+   ],
+   "applied": false
   },
   "0aed7317361045aa": {
    "llm": true,
@@ -557,7 +685,22 @@
    ],
    "score1": 63,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "0bbb668930c58322": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "0c0e78dcd3988c1a": {
    "llm": true,
@@ -581,7 +724,8 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "0e00fb4fe408e09e": {
    "llm": true,
@@ -625,7 +769,8 @@
    ],
    "score1": 58,
    "score2": 68,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "0e49a6658f6e7e5f": {
    "llm": true,
@@ -647,7 +792,73 @@
     "economy",
     "org",
     "policy"
-   ]
+   ],
+   "applied": false
+  },
+  "0e7a6e6b6f0e960f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 68,
+   "relevant": true,
+   "title_zh": "NVIDIA提出CAT-K闭环微调，7M参数交通仿真策略登顶Waymo Sim Agent榜",
+   "summary_zh": "针对token化多智能体交通策略在闭环执行时的协变量偏移，作者提出Closest Among Top-K rollout微调，只用已有轨迹数据，不需强化学习或对抗模仿。7M参数模型因此超过同族102M模型，提交时位列Waymo Sim Agent Challenge榜首，代码已开源。",
+   "tags": [
+    "交通仿真",
+    "闭环微调",
+    "开源代码"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "applied": false
+  },
+  "0e9de469b0948ab1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "用用户模拟器和 i×MCTS 搜索对话路径，对齐社交对话中的用户参与度",
+   "summary_zh": "作者构建用户模拟器与目标对话模型交互，用 i×MCTS 在交互树中搜索，以对话意图相关的用户反应作为奖励信号，收集高质量与低质量体验对，再用 DPO 对齐模型。",
+   "tags": [
+    "用户模拟",
+    "对话系统",
+    "偏好对齐"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "applied": false
+  },
+  "0fc6fd9e1ddf0bb2": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 65,
+   "relevant": true,
+   "title_zh": "HIPPO-Video 用大模型模拟观看历史，构建个性化视频高光数据集",
+   "summary_zh": "作者用基于大模型的用户模拟器生成反映不同偏好的观看历史，建成 HIPPO-Video 数据集，含 2,040 组观看历史与显著性分数对，覆盖 170 个类别的 20,400 个视频，并据此训练 HiPHer 预测分段显著性。",
+   "tags": [
+    "用户模拟",
+    "合成数据",
+    "视频理解"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior"
+   ],
+   "score1": 55,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "100a98aa134f9c4d": {
    "llm": true,
@@ -707,6 +918,27 @@
    ],
    "applied": false
   },
+  "1185b77e483bd667": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "ChatBench 把 MMLU 改造成人机对话评测，发现单模型准确率无法预测人机协作表现",
+   "summary_zh": "作者做用户研究，把 396 道 MMLU 题转成用户与模型的对话，发布含 144K 条答案、7,336 段人机对话的 ChatBench。结果显示 AI 单独作答的准确率无法预测人机协作准确率，在数学、物理、道德推理上差异明显；用部分数据微调用户模拟器后，对留出题目的估计相关性提高 20 多个点。",
+   "tags": [
+    "评测基准",
+    "用户模拟",
+    "人机协作"
+   ],
+   "status": "selected",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "applied": false
+  },
   "12180247f6a5d271": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -727,7 +959,8 @@
     "social-sim",
     "generative-agents",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "1244abc79f2a8731": {
    "llm": true,
@@ -774,7 +1007,8 @@
    ],
    "score1": 57,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "12f64111a08d91c8": {
    "llm": true,
@@ -794,6 +1028,27 @@
    "status": "selected",
    "topics": [
     "social-sim",
+    "eval"
+   ],
+   "applied": false
+  },
+  "1413a4ddc72a2582": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "LLM 用户模拟器里行为活跃度会污染偏好边界，PQA 用页面级质量锚点修正",
+   "summary_zh": "作者发现给 LLM 用户模拟器注入的偏好属性和活跃度属性并不独立：活跃度被放大后会扭曲偏好边界，模拟器为维持浏览时长去点不匹配的内容，满意度分数随页数虚高，评测结果偏向属性分布而非推荐系统表现。提出的 PQA 给每个用户一个个性化质量锚点，在继续浏览前判断页面是否达标，让活跃度只在符合偏好的页面内调节浏览深度。",
+   "tags": [
+    "用户模拟",
+    "推荐评测",
+    "可信度"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
     "eval"
    ],
    "applied": false
@@ -820,6 +1075,20 @@
     "eval"
    ],
    "applied": true
+  },
+  "14e443452fa764a0": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "15465b7ec602f14b": {
    "llm": true,
@@ -852,7 +1121,8 @@
    "topics": [
     "eval",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "1728a397ee3eeb8c": {
    "llm": true,
@@ -873,7 +1143,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "172d55e3d2976acf": {
    "llm": true,
@@ -917,7 +1188,8 @@
    "topics": [
     "framework",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "17869a9bbc5be3db": {
    "llm": true,
@@ -981,7 +1253,8 @@
    "topics": [
     "social-sim",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "18d072700de3a72e": {
    "llm": true,
@@ -1002,6 +1275,28 @@
    "score1": 48,
    "score2": 20,
    "model2": "Qwen3.8-27B"
+  },
+  "1935913e72aeda5e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "TrendSim：用大模型多智能体模拟社交媒体热搜话题与投毒攻击",
+   "summary_zh": "作者提出 TrendSim，一个基于大模型多智能体的社交媒体热搜仿真系统，包含时间感知的交互机制、集中式消息传播和类人用户智能体，并用原型化攻击者复现投毒攻击。基于该系统做了四组关于热搜投毒攻击的仿真实验。",
+   "tags": [
+    "社会仿真",
+    "多智能体",
+    "舆论传播",
+    "arXiv"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "generative-agents"
+   ],
+   "applied": false
   },
   "198e8d7bd17511c1": {
    "llm": true,
@@ -1069,6 +1364,41 @@
    ],
    "applied": false
   },
+  "1a75b40f74a9497f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "1ac2d5bc00227f6a": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "LLM 模拟问卷受访者的能力有限：观点固定、难以随人口特征调整",
+   "summary_zh": "作者用直接提问和思维链让 LLM 回答跨领域问卷，并提出 CLAIMSIM 从参数知识中引出多样化观点作为上下文。结果显示两种方法都难以准确模拟用户：LLM 在不同人口特征下保持固定观点，面对冲突观点时也无法推理特征间的细微差异。",
+   "tags": [
+    "用户模拟",
+    "合成样本",
+    "问卷仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "1b48dfef86d7e95d": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -1118,7 +1448,8 @@
    ],
    "score1": 64,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "1c9556dec7157d23": {
    "llm": true,
@@ -1209,6 +1540,20 @@
    ],
    "applied": false
   },
+  "1ee7cb824a100fc1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "1f2084c00375fe51": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -1248,7 +1593,46 @@
    "topics": [
     "urban",
     "framework"
-   ]
+   ],
+   "applied": false
+  },
+  "1feede9f9ca390f4": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "200c4c54565eb157": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "让大模型模拟人类作答时，二分类与连续评分会带来系统性负面偏差",
+   "summary_zh": "作者在价值陈述判断和文本情感分析两项任务上，让多个开源与商用大模型模拟人类回答，分别用二分类和连续两种作答格式。二分类格式下模型更倾向给出负面判断，控制实验显示这一模式在两个任务上都成立。",
+   "tags": [
+    "合成样本",
+    "评测基准",
+    "模型偏差"
+   ],
+   "status": "filtered",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2033c825a48f99e3": {
    "llm": true,
@@ -1271,7 +1655,29 @@
    ],
    "score1": 58,
    "score2": 60,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "20b956c3b7e07c7b": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "用大模型智能体模拟电动车出租车司机充电行为，结合心理与环境因素",
+   "summary_zh": "作者用大模型角色扮演模拟出租车司机的充电决策，考虑时间敏感、价格敏感和里程焦虑等因素，并把统计先验注入推理过程。论文称该框架在多个城市场景下能复现真实充电行为，并揭示司机群体的行为异质性。",
+   "tags": [
+    "出行仿真",
+    "用户模拟",
+    "充电行为"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "20b964991af19726": {
    "llm": true,
@@ -1327,7 +1733,8 @@
    "topics": [
     "social-sim",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "21adaa110cbe789e": {
    "llm": true,
@@ -1390,6 +1797,30 @@
    "brief_fail": 1,
    "applied": true
   },
+  "2212cae2d81c48d1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "用 GPT-4 和 Gemini-2.5-pro 模拟认知走查：任务完成率高于真人，漏掉的失败点更多",
+   "summary_zh": "作者让两个模型代替真人做界面认知走查，与真人参与者对比。模型能导航界面并给出合理理由，但任务完成率更高、路径更优，识别出的潜在失败点更少；追加提示后，模型能预测出真人标记的失败点。",
+   "tags": [
+    "用户模拟",
+    "可用性测试",
+    "认知走查"
+   ],
+   "status": "filtered",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 63,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "228357f33e93d541": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -1411,7 +1842,8 @@
    ],
    "score1": 58,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "22be3d867a1d8fee": {
    "llm": true,
@@ -1435,6 +1867,28 @@
    ],
    "applied": true
   },
+  "22c6b77548d7db03": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 78,
+   "relevant": true,
+   "title_zh": "CityReal 用数万 LLM 智能体做城市仿真，靠文本适配器对齐真实人口统计",
+   "summary_zh": "作者指出以往城市级 LLM 智能体多靠 few-shot 提示，复现的是模型自身的行为先验而非目标人群。CityReal 把智能体建模为意图驱动的决策者，追求连贯的出行与活动计划，并随经验积累习惯；行为模块上学习文本适配器对齐观测到的人口统计。实验称在微观和宏观层面都更贴近真实人类行为，可扩展到数万智能体，用于分析人群密度、地点热度、出行流和不同城市场景下的福祉。",
+   "tags": [
+    "城市仿真",
+    "出行行为",
+    "LLM 智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "generative-agents",
+    "human-behavior"
+   ],
+   "applied": false
+  },
   "2325a0242ab510fd": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -1446,6 +1900,30 @@
    "summary_zh": "",
    "tags": [],
    "status": "filtered"
+  },
+  "23cc31f80e887750": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 62,
+   "relevant": true,
+   "title_zh": "DiscoverLLM 训练模型帮用户发现自己尚未成形的意图，用意图具体化程度当奖励",
+   "summary_zh": "作者认为用户说不清需求，往往是因为意图还没形成，需要先看到选项才能确定。DiscoverLLM 用一个分层意图的用户模拟器建模认知状态，意图随模型呈现选项逐步具体化，具体化程度作为奖励信号训练模型：意图模糊时发散探索，意图清晰时收敛实现。在创意写作、技术写作和 SVG 绘图三个交互基准上任务表现提升超过 10%。",
+   "tags": [
+    "用户模拟",
+    "意图发现",
+    "强化学习"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "23f1910100eb6518": {
    "llm": true,
@@ -1467,6 +1945,31 @@
     "economy",
     "eval"
    ],
+   "applied": false
+  },
+  "2406366e4b2e93b7": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 62,
+   "relevant": true,
+   "title_zh": "SWE-Together：从 11260 段真实会话重建多轮编程智能体评测基准",
+   "summary_zh": "作者从 11260 段真实用户与编程智能体的会话中筛出 109 个仓库级任务，构建多轮交互基准，并用保留原用户意图的反应式大模型用户模拟器回放交互。评测同时看最终代码正确率和所需纠正反馈轮数，前沿模型越强则成功率越高、干预越少。",
+   "tags": [
+    "用户模拟",
+    "编程智能体",
+    "评测基准",
+    "arXiv"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 55,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "24984d8d5d0f0081": {
@@ -1505,6 +2008,31 @@
    ],
    "applied": false
   },
+  "24e3e4598b53961d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 60,
+   "relevant": true,
+   "title_zh": "ITCMA-S：让无身份生成式智能体在沙盒中自发形成派系与层级",
+   "summary_zh": "作者提出生成式智能体架构 ITCMA-S，含个体基础框架和支撑多智能体社交的 LTRHA 框架，能识别并过滤不利于社交的行为。在自建沙盒中，多个无身份智能体通过持续行动与对话建立联系，自发围绕选出的领导者形成有内部层级的派系并组织集体活动。",
+   "tags": [
+    "生成式智能体",
+    "社会涌现",
+    "多智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "generative-agents",
+    "social-sim",
+    "framework"
+   ],
+   "score1": 60,
+   "score2": 82,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "2531152230f18378": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -1516,6 +2044,20 @@
    "summary_zh": "",
    "tags": [],
    "status": "filtered"
+  },
+  "25ab19f85b3082ea": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "25d2c71b2f2eb956": {
    "llm": true,
@@ -1538,7 +2080,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "25e24a63821a39cb": {
    "llm": true,
@@ -1601,7 +2144,8 @@
    "topics": [
     "human-behavior",
     "economy"
-   ]
+   ],
+   "applied": false
   },
   "268d1198708eddae": {
    "llm": true,
@@ -1644,7 +2188,50 @@
     "framework",
     "social-sim",
     "eval"
-   ]
+   ],
+   "applied": false
+  },
+  "26ec496f58ca58e3": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "LLMTraveler：带记忆的大模型智能体能否复现逐日路径选择行为",
+   "summary_zh": "作者构建以LLM为核心、带记忆系统的出行智能体LLMTraveler，在单OD对的逐日拥堵博弈中考察其路径切换行为，再与人类决策对比。研究检验大模型能否替代传统选择模型模拟出行者的动态适应。",
+   "tags": [
+    "出行行为",
+    "生成式智能体",
+    "交通仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "urban"
+   ],
+   "applied": false
+  },
+  "271df2f2321e4552": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:38Z",
+   "domain": "academic",
+   "score": 50,
+   "relevant": true,
+   "title_zh": "InqEduAgent 用生成式智能体模拟学习伙伴，高斯过程匹配提升探究式学习配对",
+   "summary_zh": "作者提出 InqEduAgent，用大模型生成式智能体模拟探究式学习中的学习伙伴，并用高斯过程增强的匹配机制建模学习者的认知与评价特征，据此选择适配伙伴。实验称其在多种学习场景和模型配置下表现更好。",
+   "tags": [
+    "生成式智能体",
+    "教育仿真",
+    "用户建模"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "applied": false
   },
   "277505ef833dfd66": {
    "llm": true,
@@ -1664,7 +2251,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "28387b513cb58ee0": {
    "llm": true,
@@ -1686,7 +2274,8 @@
     "health",
     "social-sim",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "284b22c378db421a": {
    "llm": true,
@@ -1779,7 +2368,32 @@
     "generative-agents",
     "eval",
     "framework"
-   ]
+   ],
+   "applied": false
+  },
+  "2ac601a470215e11": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 68,
+   "relevant": true,
+   "title_zh": "SceneDiffuser用摊销扩散统一驾驶仿真的场景初始化与闭环推演",
+   "summary_zh": "SceneDiffuser把场景初始布局生成和智能体闭环行为推演放进同一个扩散框架，提出摊销式扩散把去噪成本分摊到未来仿真步，每步推理步数减少16倍，并用广义硬约束和语言约束提升可控性。",
+   "tags": [
+    "驾驶仿真",
+    "扩散模型",
+    "闭环推演"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "urban"
+   ],
+   "score1": 64,
+   "score2": 72,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2ac92516af93b3e1": {
    "llm": true,
@@ -1804,7 +2418,8 @@
    ],
    "score1": 64,
    "score2": 88,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2ad3f59f9bf9c34f": {
    "llm": true,
@@ -1848,7 +2463,8 @@
    ],
    "score1": 60,
    "score2": 82,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2b0468e987b762b4": {
    "llm": true,
@@ -1871,7 +2487,29 @@
    ],
    "score1": 58,
    "score2": 80,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "2bcb841d9f7f9983": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "AURA：用原子化 LLM 评判标准诊断交互式规划智能体的用户满意度",
+   "summary_zh": "作者认为现有基准只看任务完成率，与用户满意度不一致，提出 AURA 框架，把交互式任务规划智能体的行为拆成若干阶段，用一组原子化 LLM 评判标准逐项打分。分析显示不同智能体擅长的行为阶段不同，满意度同时受结果和中间过程影响。",
+   "tags": [
+    "智能体评测",
+    "用户模拟",
+    "交互式规划"
+   ],
+   "status": "selected",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "2c54dc17f620acec": {
    "llm": true,
@@ -1896,6 +2534,44 @@
    "score1": 63,
    "score2": 80,
    "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "2d4d334bb9387f39": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "基于卡利市调查数据的智能体模型推演城市出行方式选择",
+   "summary_zh": "作者用哥伦比亚卡利的调查数据拟合多项选择模型，构建含社会文化因素的智能体仿真，评估免费公交、提高班次和加强安保等政策。结果显示出行方式转变幅度有限，组合政策更有效。",
+   "tags": [
+    "交通仿真",
+    "智能体建模",
+    "政策推演"
+   ],
+   "status": "filtered",
+   "topics": [
+    "urban",
+    "policy"
+   ],
+   "score1": 55,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
+  "2da23171e4b71211": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "2dc502abacec7db3": {
@@ -1977,7 +2653,32 @@
    "status": "selected",
    "topics": [
     "social-sim"
-   ]
+   ],
+   "applied": false
+  },
+  "2f9e818caa6b3df3": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:58Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "CTG++：用大模型把自然语言指令转成损失函数，引导场景级扩散交通仿真",
+   "summary_zh": "作者提出场景级条件扩散模型CTG++，骨干为时空Transformer，再用大模型把用户查询转成损失函数，引导扩散模型生成符合指令的交通场景。评估显示该方法能生成真实且符合查询的仿真。",
+   "tags": [
+    "交通仿真",
+    "扩散模型",
+    "语言引导"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env",
+    "urban"
+   ],
+   "score1": 55,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2fea6aee67da14e8": {
    "llm": true,
@@ -2082,7 +2783,8 @@
    "status": "selected",
    "topics": [
     "economy"
-   ]
+   ],
+   "applied": false
   },
   "3314461fbb1f6834": {
    "llm": true,
@@ -2102,7 +2804,30 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
+  },
+  "33619379929b6855": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "Vending-Bench：让 LLM 智能体经营自动售货机，测试超长程决策一致性",
+   "summary_zh": "作者构建自动售货机经营模拟环境，要求智能体管理库存、下单、定价和日常费用，单次运行超过 2000 万 token。Claude 3.5 Sonnet 和 o3-mini 多数运行能盈利，但所有模型都有运行崩坏，且失败与上下文窗口写满的时点无明显相关。",
+   "tags": [
+    "评测基准",
+    "长程任务",
+    "智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "eval",
+    "economy"
+   ],
+   "applied": false
   },
   "337e3a4a5a7bc05f": {
    "llm": true,
@@ -2198,6 +2923,20 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "343abaeab5bbf5a1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "34717c69a0fd1582": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -2216,7 +2955,8 @@
    "topics": [
     "world-env",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "34fef4aca9be81e9": {
    "llm": true,
@@ -2236,7 +2976,8 @@
    "topics": [
     "org",
     "world-env"
-   ]
+   ],
+   "applied": false
   },
   "3506bb1bd75fa315": {
    "llm": true,
@@ -2259,7 +3000,8 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "3506d68ad82297ef": {
    "llm": true,
@@ -2303,7 +3045,32 @@
     "economy",
     "human-behavior",
     "generative-agents"
-   ]
+   ],
+   "applied": false
+  },
+  "353fc5b059acb038": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "KnowU-Bench 在 Android 模拟环境里评测个性化手机智能体，用户画像对智能体隐藏",
+   "summary_zh": "KnowU-Bench 是可复现的 Android 模拟环境上的在线基准，含 42 个通用 GUI 任务、86 个个性化任务和 64 个主动任务。它不把用户偏好当静态上下文给智能体，只暴露行为日志，迫使智能体真正推断偏好；并用基于结构化画像的 LLM 用户模拟器支持多轮偏好询问和主动征求同意。",
+   "tags": [
+    "评测基准",
+    "用户模拟",
+    "移动智能体"
+   ],
+   "status": "filtered",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 60,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "3693489937970375": {
    "llm": true,
@@ -2326,6 +3093,20 @@
     "framework",
     "generative-agents"
    ],
+   "applied": false
+  },
+  "36ced8dcfaf05b74": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "36f7e4fc4185954f": {
@@ -2371,7 +3152,53 @@
    ],
    "score1": 55,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "3778a88ed217de5b": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "R1Sim：按运动 token 熵引导采样、用 GRPO 训练的 token 化交通仿真模型",
+   "summary_zh": "作者把 LLM 的下一 token 预测范式用于交通仿真，提出 R1Sim，用运动 token 的熵模式引导自适应采样，聚焦高不确定性但高潜力的 token，再用 GRPO 和安全感知奖励优化运动行为。目标是生成多样且高保真的驾驶轨迹，用于自动驾驶评测。",
+   "tags": [
+    "交通仿真",
+    "强化学习",
+    "自动驾驶评测"
+   ],
+   "status": "filtered",
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "37a6a0b61e4792ae": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "ConfMAD：让多智能体辩论中的大模型显式表达置信度",
+   "summary_zh": "作者提出 ConfMAD 框架，把置信度表达加入多智能体辩论流程，让各智能体明确说出自己对答案的把握程度，避免固执坚持错误或过早收敛。实验显示该方法有效，并分析了置信度如何影响辩论动态。",
+   "tags": [
+    "多智能体辩论",
+    "置信度",
+    "协作博弈"
+   ],
+   "status": "selected",
+   "topics": [
+    "org",
+    "eval"
+   ],
+   "applied": false
   },
   "37ceeabda38f73d0": {
    "llm": true,
@@ -2501,6 +3328,41 @@
    "score2": 20,
    "model2": "Qwen3.8-27B"
   },
+  "395d64eb9bafa831": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 44,
+   "relevant": true,
+   "title_zh": "SP-LLM：用大模型调度预测型数字孪生车联网资源",
+   "summary_zh": "论文把车联网数字孪生改造成能预测任务到达、车辆移动和信道质量的预测型数字孪生，再由大模型作为认知调度器做前瞻性任务卸载与资源分配，并支持用自然语言下达优先级指令。结果来自仿真实验。",
+   "tags": [
+    "数字孪生",
+    "车联网",
+    "资源调度"
+   ],
+   "status": "filtered",
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "applied": false
+  },
+  "3a1ac69527073fa9": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 32,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "3af364d246254040": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -2519,7 +3381,33 @@
    "topics": [
     "eval",
     "social-sim"
-   ]
+   ],
+   "applied": false
+  },
+  "3b65bff9cdc4e755": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "Battery-Sim-Agent 让 LLM 智能体与电池仿真器闭环，反推电池参数优于贝叶斯优化",
+   "summary_zh": "作者把电池数字孪生的逆参数估计从黑箱优化改写成推理任务，让 LLM 智能体读取仿真器的多模态反馈、提出物理假设并更新参数。在覆盖多种化学体系与工况的基准上，其参数识别精度超过贝叶斯优化等基线，并在真实电池数据集上做了验证。",
+   "tags": [
+    "数字孪生",
+    "LLM智能体",
+    "参数反演",
+    "物理仿真"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "3b6b88345db3d5b9": {
    "llm": true,
@@ -2561,7 +3449,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": true
   },
   "3c963032cb39ba26": {
    "llm": true,
@@ -2627,7 +3516,8 @@
    ],
    "score1": 57,
    "score2": 80,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "3dcbc9122540a129": {
    "llm": true,
@@ -2648,7 +3538,8 @@
    "topics": [
     "social-sim",
     "generative-agents"
-   ]
+   ],
+   "applied": false
   },
   "3e955f2e5d3f38ca": {
    "llm": true,
@@ -2672,7 +3563,8 @@
    ],
    "score1": 58,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "3ea96babd2b5f1c8": {
    "llm": true,
@@ -2696,6 +3588,49 @@
    "score1": 58,
    "score2": 70,
    "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "3ebf84039b161b9e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 50,
+   "relevant": true,
+   "title_zh": "机器学习加博弈论重建国际石油贸易网络并做冲击推演",
+   "summary_zh": "作者结合机器学习优化、博弈论和效用理论，学习各经济体的石油贸易决策模型，重建了国际石油贸易网络的度、聚类系数和接近中心性。政策仿真显示出口型经济体受外部冲击影响更大，贸易摩擦成本升降的影响不对称。",
+   "tags": [
+    "经济模拟",
+    "博弈论",
+    "贸易网络"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy"
+   ],
+   "applied": false
+  },
+  "3ee94ff2bdbdaf02": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "用户反馈可把模型政治立场拉开：合成党派反馈微调后，配对模型在12–41%未见过问卷题上分歧",
+   "summary_zh": "作者提出“离心对齐螺旋”：用户按政治身份选模型、反馈训练让模型分化、分化再影响选择。用偏向民主党或共和党偏好的合成反馈微调模型，每个模型家族五次独立运行中，配对模型在12–41%的未见问卷题上出现大幅党派差距，且方向均符合预期。",
+   "tags": [
+    "政治极化",
+    "合成反馈",
+    "模型分化",
+    "社会仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "human-behavior",
+    "eval"
+   ],
    "applied": false
   },
   "3eefc5d18a4ade26": {
@@ -2740,6 +3675,27 @@
    "topics": [
     "human-behavior",
     "eval"
+   ],
+   "applied": false
+  },
+  "3f4cccd70fdb1d61": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 54,
+   "relevant": true,
+   "title_zh": "RAI：面向具身多智能体系统的开源框架，已接入 ROS 2 与数字孪生",
+   "summary_zh": "作者发布 RAI 框架，提供智能体与机器人栈、大模型和仿真的集成工具，开箱支持 ROS 2。机制在 ROSBot XL 实机与其数字孪生上测试，并部署到机械臂和拖拉机控制器两个仿真中，验证了控制、具身与感知能力。",
+   "tags": [
+    "具身智能",
+    "开源框架",
+    "数字孪生"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "framework"
    ],
    "applied": false
   },
@@ -2798,6 +3754,30 @@
    "tags": [],
    "status": "filtered"
   },
+  "4051d969919b8423": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:06Z",
+   "domain": "academic",
+   "score": 65,
+   "relevant": true,
+   "title_zh": "AgentMob 免训练 LLM 智能体做个体出行预测，模糊样本上 Acc@1 从 30.65% 提到 48.62%",
+   "summary_zh": "作者把下一位置预测表述为证据受控的决策过程：规律性强的样本走快速路径，信号弱或冲突时迭代调用近期轨迹、历史行为、停留-移动概率和地理证据等工具。在三个出行数据集上，GPT-5.4 在 BW 上 Acc@1 达 71.42%，YJMob100K 33.14%，Shanghai ISP 33.50%；BW 非快速路径样本上，LLM 控制器把 Acc@1 从同工具统计基线的 30.65% 提到 48.62%。",
+   "tags": [
+    "出行预测",
+    "城市仿真",
+    "LLM 智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "score1": 55,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "408457c46f4c7f25": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -2820,6 +3800,30 @@
    ],
    "applied": true
   },
+  "40f378fd3bda92a7": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 62,
+   "relevant": true,
+   "title_zh": "Narriva 用历史隐私决策生成文本人格，模拟用户隐私选择准确率最高87%",
+   "summary_zh": "作者用大规模问卷中的既往隐私决策而非人口统计刻板印象来生成可读的文本人格，并按隐私理论组织摘要。在五个数据集上评测，基于过往隐私行为的人格对个体隐私偏好的预测准确率最高达87%。",
+   "tags": [
+    "用户模拟",
+    "合成样本",
+    "隐私决策",
+    "人格生成"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior"
+   ],
+   "score1": 63,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "40f6ce6383f0b438": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -2839,7 +3843,46 @@
    "topics": [
     "human-behavior",
     "social-sim"
-   ]
+   ],
+   "applied": false
+  },
+  "414fe4562d904ad6": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "415f503701d8925f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "BIRD-INTERACT：用函数驱动的用户模拟器把 Text-to-SQL 评测改成多轮交互",
+   "summary_zh": "作者指出多轮 Text-to-SQL 基准把对话历史当静态上下文、只评只读操作，提出 BIRD-INTERACT：每个数据库配分层知识库、元数据文件和函数驱动的用户模拟器，模型可主动追问、查知识、从错误恢复。含固定协议 c-Interact 与开放式 a-Interact 两种设置，任务覆盖完整 CRUD。",
+   "tags": [
+    "用户模拟",
+    "评测基准",
+    "多轮交互"
+   ],
+   "status": "filtered",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 55,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "416cced5efc91196": {
    "llm": true,
@@ -2888,7 +3931,8 @@
    ],
    "score1": 55,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "41eb86fc12b0f0e8": {
    "llm": true,
@@ -2934,7 +3978,8 @@
    ],
    "score1": 62,
    "score2": 90,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4337712da9d8511a": {
    "llm": true,
@@ -2955,6 +4000,53 @@
    "score1": 42,
    "score2": 25,
    "model2": "Qwen3.8-27B"
+  },
+  "4364fb4ec04108a0": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "UrbanVideo-Bench：用真实城市第一视角视频评测视频大模型的具身能力",
+   "summary_zh": "作者用无人机在真实城市和模拟环境中采集 1.5k 段第一视角运动视频，生成 5.2k 道选择题，评测 17 个视频大模型的回忆、感知、推理与导航能力。结果显示城市具身认知仍有明显不足，并验证了微调带来的仿真到现实迁移潜力。",
+   "tags": [
+    "评测基准",
+    "具身智能",
+    "城市空间"
+   ],
+   "status": "filtered",
+   "topics": [
+    "urban",
+    "world-env",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "436a3b350c536cc1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "直接对比人类与 LLM 问卷回答：方向性效应可复现，效应量随模型而异",
+   "summary_zh": "作者把一项准确性感知问卷实验的每个人类观测转成结构化提示，让现成 LLM 输出 0–10 结果变量，再对人和合成数据做相同统计分析。LLM 复现了若干方向性效应，但效应大小与调节模式因模型而异，不能稳定匹配人类量级。",
+   "tags": [
+    "合成样本",
+    "行为替代",
+    "问卷实验",
+    "评测基准"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "442531c9eef4b7e1": {
    "llm": true,
@@ -2978,7 +4070,8 @@
    ],
    "score1": 63,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "44ab748df6e8a24d": {
    "llm": true,
@@ -2992,6 +4085,28 @@
    "tags": [],
    "status": "filtered",
    "topics": []
+  },
+  "45b3ce91455f3edf": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "让 LLM 扮演残障人士写社交媒体帖，与真人帖对比发现过度正面的理想化倾向",
+   "summary_zh": "作者用 LLM 模拟残障人士视角生成社交媒体帖子，再与真实残障者所写内容在情绪基调、情感倾向和主题词上对比。结果显示模型倾向于理想化残障经历，产出过度正面的刻板印象，抹去了真实处境中的困难。",
+   "tags": [
+    "人格模拟",
+    "偏见",
+    "合成样本",
+    "社会仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "social-sim"
+   ],
+   "applied": false
   },
   "45ec7679b69222da": {
    "llm": true,
@@ -3059,7 +4174,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "470728d15e4847e8": {
    "llm": true,
@@ -3080,7 +4196,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "4751ecf297a616b0": {
    "llm": true,
@@ -3197,6 +4314,42 @@
    ],
    "applied": false
   },
+  "49ed99001b9bec92": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "多轮强化学习训练工具调用智能体，迭代奖励校准让 Qwen3-30B 在 Tau-Bench 提升 11.5 个百分点",
+   "summary_zh": "作者把 MT-GRPO 与 GTPO 结合，用 LLM 用户模拟器在 Tau-Bench 航空任务上训练工具调用智能体。逐轮密集奖励设计不当会让性能下降最多 14 个百分点，改用迭代奖励校准后 Qwen3-30B-A3B 从 58.0% 升到 69.5%，4B 模型超过 GPT-4.1 和 GPT-4o。",
+   "tags": [
+    "用户模拟",
+    "强化学习",
+    "智能体训练",
+    "评测基准"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
+  "4a0c0d9f5dc6eccc": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "4a74f3a1283d0947": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -3216,7 +4369,42 @@
    "topics": [
     "social-sim",
     "generative-agents"
-   ]
+   ],
+   "applied": false
+  },
+  "4ab398a10cee74cb": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "4aeb53e4a0d79498": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "Pandora：可用自然语言动作控制的通用世界模型",
+   "summary_zh": "Pandora 把预训练 7B 大模型与预训练视频模型结合，用自回归加扩散的方式生成视频来模拟世界状态，并支持用自由文本动作实时控制。作者展示了室内外、自然与城市、人与机器人等多领域的生成结果，只需轻量微调。",
+   "tags": [
+    "世界模型",
+    "视频生成",
+    "动作控制"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env"
+   ],
+   "applied": false
   },
   "4b946d69f7e1b002": {
    "llm": true,
@@ -3254,6 +4442,30 @@
    "status": "filtered",
    "topics": []
   },
+  "4be2ddb84408c0d9": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "ECom-Bench：用真实电商对话画像驱动动态用户模拟，GPT-4o 通过率仅 10–20%",
+   "summary_zh": "作者发布首个多模态电商客服智能体评测基准，用户模拟基于真实电商交互中收集的画像信息，任务取自真实对话。GPT-4o 在 pass^3 指标上只拿到 10–20%，代码与数据已开源。",
+   "tags": [
+    "用户模拟",
+    "评测基准",
+    "电商客服"
+   ],
+   "status": "selected",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "4c57c27fd1150e59": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -3276,7 +4488,32 @@
    ],
    "score1": 64,
    "score2": 60,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
+  "4c619e81ccd04b8c": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 58,
+   "relevant": true,
+   "title_zh": "综述：基于大模型的对话用户模拟，按用户粒度与模拟目标建立分类体系",
+   "summary_zh": "这篇综述梳理 LLM 驱动的对话用户模拟研究，提出覆盖用户粒度与模拟目标的分类法，系统分析核心技术与评估方法，并整理开放挑战。",
+   "tags": [
+    "用户模拟",
+    "综述",
+    "对话系统"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4cce3bf17b7a0262": {
    "llm": true,
@@ -3321,7 +4558,34 @@
    ],
    "score1": 62,
    "score2": 68,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "4e3343caef269cad": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 64,
+   "relevant": true,
+   "title_zh": "EDU-MATRIX：2400 个智能体的中学社会中心式生成认知数字孪生",
+   "summary_zh": "作者提出 EDU-MATRIX，把仿真对象从“人”转向带规则引力的社会空间：环境上下文注入引擎按时空坐标向智能体注入校规，模块化逻辑演化协议让知识以胶囊形式被合成，对话一致性达 94.1%，安全约束由智能体在社会图中的位置内生决定。系统作为一所中学的数字孪生部署，含 2400 个智能体。",
+   "tags": [
+    "数字孪生",
+    "教育仿真",
+    "多智能体",
+    "社会涌现"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "org",
+    "world-env"
+   ],
+   "score1": 64,
+   "score2": 88,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "4e37fb881d7ea17d": {
    "llm": true,
@@ -3391,7 +4655,8 @@
    ],
    "score1": 62,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4f0a1c29c09b7899": {
    "llm": true,
@@ -3415,7 +4680,8 @@
    ],
    "score1": 64,
    "score2": 88,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4f3f0ec482f63826": {
    "llm": true,
@@ -3437,7 +4703,8 @@
    ],
    "score1": 63,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4f8aad32d7168b8a": {
    "llm": true,
@@ -3457,7 +4724,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "5069f1280bd3ad48": {
    "llm": true,
@@ -3501,6 +4769,49 @@
    ],
    "applied": false
   },
+  "50d66ae117f14137": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "贝叶斯框架拆解大模型观点动态中的真实互动与三类偏差",
+   "summary_zh": "作者用贝叶斯框架把大模型观点演化中的话题偏差、赞同偏差和锚定偏差与真实互动效应分开量化，在气候变化、社会公正、音乐偏好等 12 个问题上做多轮对话。观点轨迹很快收敛到共同吸引子，偏差影响因模型而异；用强立场言论微调会移动该吸引子。",
+   "tags": [
+    "观点动力学",
+    "社会仿真",
+    "偏差校准"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
+  "5104910e7432bbd9": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 48,
+   "relevant": true,
+   "title_zh": "DuCA 分离轮级与会话级奖励，工业销售智能体转化率相对提升 6.82%",
+   "summary_zh": "作者提出 Dual-Horizon Credit Assignment，用 Horizon-Independent Advantage Normalization 分别归一化轮级和会话级优势再融合，避免长周期商业奖励压过语言约束。在高保真用户模拟器上，转化率相对提升 6.82%，句间重复减少 82.28%。",
+   "tags": [
+    "用户模拟",
+    "强化学习",
+    "销售智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "applied": false
+  },
   "5161e9f679ba8559": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -3527,6 +4838,54 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "517ae3531f8bcfa7": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:04Z",
+   "domain": "academic",
+   "score": 50,
+   "relevant": true,
+   "title_zh": "RAG-LLM 驱动的共享电动出行仿真平台与路线推荐",
+   "summary_zh": "论文给出一个云端大模型驱动的共享电动出行平台，接入手机应用做个性化路线推荐，优化模块按出行时间和成本在不同交通场景下评估。RAG 框架在系统运营者查询上平均执行准确率 0.81，用户查询上 0.98。",
+   "tags": [
+    "出行仿真",
+    "RAG",
+    "路线推荐"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban"
+   ],
+   "applied": false
+  },
+  "5233774ab3006322": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "52ee6fbbe1d17951": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "52f869aa0f015365": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -3546,6 +4905,28 @@
    "topics": [
     "generative-agents",
     "eval"
+   ],
+   "applied": false
+  },
+  "53800a352ff7d1c6": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 48,
+   "relevant": true,
+   "title_zh": "综述：LLM 驱动 VR 数字人的人格建模方法，零样本、少样本与微调",
+   "summary_zh": "这篇综述梳理了让 VR 数字人具备人格特质的方法，包括零样本、少样本和微调，并指出算力开销、延迟以及多模态交互缺乏标准化评测框架等问题。应用场景列举了教育、治疗和游戏。",
+   "tags": [
+    "数字人",
+    "VR",
+    "人格模拟",
+    "综述"
+   ],
+   "status": "selected",
+   "topics": [
+    "generative-agents",
+    "world-env"
    ],
    "applied": false
   },
@@ -3593,7 +4974,8 @@
    ],
    "score1": 58,
    "score2": 60,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "542b9d15b34b2992": {
    "llm": true,
@@ -3638,7 +5020,32 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
+  "545487d0c7006e32": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 58,
+   "relevant": true,
+   "title_zh": "用多智能体 LLM 模拟医疗器械监管：监管方、厂商与竞争者的合规博弈",
+   "summary_zh": "作者把监管机构、医疗器械厂商和竞争者建模成 LLM 智能体，放在以监管流理论驱动的模拟环境里，观察监管规则变化如何影响合规决策、市场适应和创新策略。研究给出的是定性结论和策略建议，没有报告智能体数量或与真实监管数据的对照。",
+   "tags": [
+    "政策推演",
+    "多智能体",
+    "监管仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "policy",
+    "org"
+   ],
+   "score1": 58,
+   "score2": 80,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "54859e4f2ef84f52": {
    "llm": true,
@@ -3702,7 +5109,8 @@
    "topics": [
     "health",
     "human-behavior"
-   ]
+   ],
+   "applied": true
   },
   "551842910b5fbf4b": {
    "llm": true,
@@ -3828,6 +5236,28 @@
    ],
    "applied": false
   },
+  "5841c527683b9974": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "VibeSearchBench：200 个双语任务评测长程主动搜索，最佳 F1 仅 30.30",
+   "summary_zh": "作者提出 VibeSearch 范式，指用户与智能体通过多轮对话逐步澄清模糊意图的搜索，并构建含 200 个中英双语任务、覆盖 20 个领域的基准。每个任务配用户画像和无固定模式的知识图谱，用渐进披露的用户模拟器评测，七个前沿模型最佳 F1 为 30.30。",
+   "tags": [
+    "用户模拟",
+    "搜索智能体",
+    "评测基准",
+    "arXiv"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "58b649a84f87fa06": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -3846,7 +5276,50 @@
    "topics": [
     "eval",
     "generative-agents"
-   ]
+   ],
+   "applied": false
+  },
+  "58bb9554c21f5d2a": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "为 Battlespace 兵棋域智能体编码结构化数据，组合 MCTS 与 DQN",
+   "summary_zh": "项目目标是让智能体在国防部用于兵棋演练的 Battlespace 序列决策域中选择动作，方法组合蒙特卡洛树搜索与 DQN。论文聚焦把 Python 类中的复杂结构化数据编码后输入神经网络，这是训练智能体的前置步骤。",
+   "tags": [
+    "兵棋推演",
+    "强化学习",
+    "状态编码"
+   ],
+   "status": "filtered",
+   "topics": [
+    "wargame"
+   ],
+   "applied": false
+  },
+  "58cd8b3a85bd11a4": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 45,
+   "relevant": true,
+   "title_zh": "CityCraft 用扩散 Transformer 生成 2D 城市布局，再由 LLM 做土地利用规划",
+   "summary_zh": "CityCraft 分三步生成 3D 城市场景：先用扩散 Transformer 生成多样可控的 2D 城市布局，再由 LLM 根据用户提示和语言规则做土地利用规划，最后渲染成场景。作者称现有方法生成的场景多样性有限、风格单一且缺乏规划能力。",
+   "tags": [
+    "城市生成",
+    "世界模型",
+    "扩散模型",
+    "LLM 规划"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "applied": false
   },
   "5916e267bfd34558": {
    "llm": true,
@@ -3870,7 +5343,8 @@
    ],
    "score1": 63,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "5a913b506f75dfba": {
    "llm": true,
@@ -4001,6 +5475,52 @@
    ],
    "applied": false
   },
+  "5b5da1ff92691bef": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "DriveGen 用 LLM 与视觉语言模型生成多样化交通场景，并自动构造 corner case",
+   "summary_zh": "DriveGen 分两阶段：初始化阶段用 LLM 加检索生成地图和车辆资产，rollout 阶段由视觉语言模型给出路点目标、扩散规划器输出轨迹。作者还做了 DriveGen-CS，把驾驶算法的失败案例转成提示，自动生成 corner case。",
+   "tags": [
+    "交通仿真",
+    "自动驾驶",
+    "场景生成",
+    "扩散规划"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "5b5e1757f4e66807": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "护理管理者职业访谈系统：用 LLM 动态生成槽位，并以用户模拟器验证",
+   "summary_zh": "作者为护理管理者的职业面谈做预访谈槽填充对话系统，用 LLM 按对话流动态生成新槽位，并引入溯因推理让槽位更合适。实验用用户模拟器验证，结果显示加入溯因后信息收集能力和对话自然度都有提升。",
+   "tags": [
+    "用户模拟",
+    "对话系统",
+    "槽填充"
+   ],
+   "status": "filtered",
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "applied": false
+  },
   "5b87ca4e67aa0ad6": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -4023,7 +5543,8 @@
    ],
    "score1": 58,
    "score2": 55,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "5c34f0d165508dbe": {
    "llm": true,
@@ -4044,7 +5565,8 @@
    "topics": [
     "urban",
     "world-env"
-   ]
+   ],
+   "applied": false
   },
   "5c473ff77b6114ca": {
    "llm": true,
@@ -4065,7 +5587,33 @@
    "topics": [
     "human-behavior",
     "economy"
-   ]
+   ],
+   "applied": false
+  },
+  "5c674a806a042351": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:52Z",
+   "domain": "academic",
+   "score": 64,
+   "relevant": true,
+   "title_zh": "语义相似度评分纠正硅采样模式坍缩，提升 LLM 模拟问卷的分布保真度",
+   "summary_zh": "作者认为硅采样的低方差模式坍缩源于 LLM 不擅长直接生成数值，改为先让模型输出文本回答，再用文本嵌入映射到数值量表。在政治态度问卷上，该方法提高了合成回答分布的保真度，且需要校准的参数很少。",
+   "tags": [
+    "硅采样",
+    "合成样本",
+    "问卷模拟",
+    "评测方法"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 64,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "5c9655c70349b71b": {
    "llm": true,
@@ -4134,7 +5682,8 @@
    ],
    "score1": 58,
    "score2": 80,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "5ea45868345c2dad": {
    "llm": true,
@@ -4157,6 +5706,20 @@
     "social-sim",
     "eval"
    ],
+   "applied": false
+  },
+  "5eac797df516853e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "5ed1556735d62267": {
@@ -4182,6 +5745,31 @@
    ],
    "applied": false
   },
+  "5f1635be7ca5efe7": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 58,
+   "relevant": true,
+   "title_zh": "LLM 能否替代真人评估推荐系统的惊喜度？电商与电影两个真实用户数据集上的元评测",
+   "summary_zh": "作者在电商和电影两个来自真实用户研究的数据集上做元评测，比较 LLM 与传统代理指标对惊喜度的判断。结果显示最简单的零样本 LLM 已与常规指标持平或更好，多 LLM 方法和引入辅助数据能进一步提升与真人判断的一致性。",
+   "tags": [
+    "用户模拟",
+    "推荐系统",
+    "评测基准",
+    "合成样本"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 55,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "5f8c126f4f362660": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -4200,7 +5788,8 @@
    "topics": [
     "human-behavior",
     "urban"
-   ]
+   ],
+   "applied": false
   },
   "5fa1845b1b3c5f1d": {
    "llm": true,
@@ -4259,7 +5848,8 @@
    "topics": [
     "health",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "6213453917b29ea3": {
    "llm": true,
@@ -4295,6 +5885,20 @@
    ],
    "applied": true
   },
+  "6303ffc5ee4f789b": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "631d1463bde3d99d": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -4329,7 +5933,8 @@
     "org",
     "social-sim",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "6444f774fc995eff": {
    "llm": true,
@@ -4349,7 +5954,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "64ba320ff86d757a": {
    "llm": true,
@@ -4384,6 +5990,41 @@
    "tags": [],
    "status": "filtered",
    "topics": []
+  },
+  "64e5b78f516eadc9": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 32,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "65562c263781d123": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "用 9 个高风险人格模拟多轮对话，评估 Replika 的安全响应",
+   "summary_zh": "作者搭建端到端框架，构建抑郁、焦虑、PTSD、进食障碍和 incel 身份的 9 个经心理测量验证的人格，在 25 个高风险场景中与 Replika 产生 1674 组对话。结果显示 Replika 情绪表达集中在好奇与关怀，范围狭窄。",
+   "tags": [
+    "用户模拟",
+    "人格建模",
+    "安全评测"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": true
   },
   "65a043869d229904": {
    "llm": true,
@@ -4428,7 +6069,30 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
+  },
+  "660fbef37e63a043": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "17 个 LLM 按 ODD 规范复现 PPHPC 捕食者模型，GPT-4.1 实现统计上可验证",
+   "summary_zh": "作者用 PPHPC 捕食者-猎物模型作为完整规范，测试 17 个当代 LLM 把 ODD 描述翻译成可执行 Python 代码的能力，并与已验证的 NetLogo 基线做统计比较。结论是行为忠实的实现可以做到但不保证，仅能运行不足以用于科研；GPT-4.1 稳定产出统计有效且高效的实现，Claude 3.7 Sonnet 表现好但不够稳定。",
+   "tags": [
+    "基于智能体建模",
+    "模型复现",
+    "代码生成",
+    "评测基准"
+   ],
+   "status": "selected",
+   "topics": [
+    "eval",
+    "framework"
+   ],
+   "applied": false
   },
   "67a8c4f27cf53904": {
    "llm": true,
@@ -4475,7 +6139,8 @@
    ],
    "score1": 55,
    "score2": 60,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "68629790b6213956": {
    "llm": true,
@@ -4541,7 +6206,33 @@
    ],
    "score1": 63,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "69c6bd5ab39923dd": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 58,
+   "relevant": true,
+   "title_zh": "NDT Factory 用多智能体 LLM 从语义模型合成可执行网络数字孪生",
+   "summary_zh": "作者提出 NDT Factory，一个多智能体系统，按需从语义模型生成可执行的网络数字孪生。在呼叫准入控制案例中，生成的孪生编译与测试通过率均为 100%，对 300 个网络服务意图的仿真决策与参考实现一致率 99.3%，准入率 90%，所有拒绝均归因正确。",
+   "tags": [
+    "数字孪生",
+    "多智能体",
+    "网络仿真",
+    "LLM"
+   ],
+   "status": "selected",
+   "topics": [
+    "framework",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 80,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "69ee66c28889ff21": {
    "llm": true,
@@ -4639,7 +6330,67 @@
    "topics": [
     "social-sim",
     "eval"
-   ]
+   ],
+   "applied": false
+  },
+  "6ab72298cc9c3e06": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "DTM 平台用 LLM 智能体给交通数据定价，并在仿真市场中验证",
+   "summary_zh": "DTM 把交通仿真、数据交易和 AI 智能体接在一起，用 LLM 的常识判断交通状态和数据价值，通过多轮交互与仿真确定数据价格。平台让联网车辆和信号灯控制器参与采集、定价、交易与决策，并模拟交易市场中个体的异质性和非理性行为来验证定价方法。",
+   "tags": [
+    "数据交易",
+    "交通仿真",
+    "多智能体",
+    "定价"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy",
+    "urban"
+   ],
+   "applied": false
+  },
+  "6bb49056078557b6": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:13Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "LLM 给无家可归问题开政策药方，与四城专家判断存在分歧",
+   "summary_zh": "作者构建了覆盖四个城市、以能力方法为框架的政策决策场景基准，评估 LLM 在缓解无家可归问题上的政策建议是否与领域专家一致。他们还把 LLM 推荐的政策接入其中一个地点的基于智能体模型，比较其社会影响与专家推荐政策的差异。结果显示不同 LLM 的建议与当地专家存在差异，作者认为需配合护栏、情境校准和本地专业知识。",
+   "tags": [
+    "政策推演",
+    "基于智能体建模",
+    "专家对齐",
+    "社会政策"
+   ],
+   "status": "selected",
+   "topics": [
+    "policy",
+    "eval",
+    "human-behavior"
+   ],
+   "applied": true
+  },
+  "6c26609dc83ebc36": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "6c2bbfd6cb813a5f": {
    "llm": true,
@@ -4683,7 +6434,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "6c90c29ccd0d5820": {
    "llm": true,
@@ -4722,6 +6474,28 @@
    ],
    "status": "filtered"
   },
+  "6d8a2b95881427f1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "双智能体框架让 LLM 出行智能体对齐真实旅客的学习与调整行为",
+   "summary_zh": "作者构建一组带记忆系统和可学习人格的 LLM 出行者智能体，另设一个 LLM 校准智能体，用在线数据流训练这些人格，使模拟行为贴近真人。在日复一日路径选择实验的真实数据集上，该方法的模拟表现明显优于对照。",
+   "tags": [
+    "出行行为",
+    "LLM智能体",
+    "行为校准",
+    "交通仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "urban"
+   ],
+   "applied": true
+  },
   "6e01ae41cb52ef94": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -4740,7 +6514,30 @@
    "topics": [
     "economy",
     "human-behavior"
-   ]
+   ],
+   "applied": false
+  },
+  "6e8c6a95712b4a3c": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 45,
+   "relevant": true,
+   "title_zh": "SAATT Nav 用 LLM 做轮椅导航决策并逐点解释推理",
+   "summary_zh": "作者提出面向轮椅的社会化自主导航框架 SAATT Nav，由 LLM 担任局部控制器决策者，识别用户意图并预测行人意图，在每个路径点用文字说明决策理由。在三个社会性程度不同的仿真环境中，与全局规划器和同类社会导航模型对比了安全、社会合规、效率、舒适等八项指标。",
+   "tags": [
+    "具身智能",
+    "社会导航",
+    "LLM决策",
+    "仿真评测"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "6eeaceb0ac81243d": {
    "llm": true,
@@ -4760,7 +6557,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "6f304b36be9257fd": {
    "llm": true,
@@ -4784,6 +6582,28 @@
     "eval"
    ],
    "applied": true
+  },
+  "6f7646e5a06709ab": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 76,
+   "relevant": true,
+   "title_zh": "三个主流大模型复现人类出行时间价值，聚合值与出行目的敏感性接近真人",
+   "summary_zh": "研究用全因子实验设计测了三个大模型的出行时间价值（VOT），发现部分模型的聚合 VOT 与人类接近，且都对出行目的、收入和方案的时间成本权衡比例表现出类人敏感性。模型内部行为稳健，但模型之间在敏感性的方向和幅度上存在差异。",
+   "tags": [
+    "出行行为",
+    "合成样本",
+    "大模型校准"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "urban",
+    "eval"
+   ],
+   "applied": false
   },
   "6fae7a1f202935b0": {
    "llm": true,
@@ -4894,7 +6714,8 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "71051c6638ae6d4f": {
    "llm": true,
@@ -4917,7 +6738,8 @@
    ],
    "score1": 62,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "7112c6f5b5b1c52d": {
    "llm": true,
@@ -5018,7 +6840,8 @@
    "score1": 58,
    "score2": 65,
    "model2": "Qwen3.8-27B",
-   "brief_fail": 2
+   "brief_fail": 2,
+   "applied": false
   },
   "73162cc682fb44bb": {
    "llm": true,
@@ -5066,6 +6889,27 @@
    ],
    "applied": false
   },
+  "73b3e51c3d0af155": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "KnowSim 用带知识状态图的用户模拟器评测 LLM 信息校准，与 705 场真人会话排序一致率 73–74%",
+   "summary_zh": "KnowSim 让用户模拟器维护由信息单元及先修关系构成的知识状态图，按学习理论规则演化，并据此计算知识增益、传递校准和认知过载三项指标。在覆盖两个领域的 705 场人机会话上验证，排序与人类判断的符号一致率为 73–74%，优于三个基线模拟器。",
+   "tags": [
+    "用户模拟",
+    "评测基准",
+    "知识状态"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "73ca8ad1c0bc4af4": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -5084,7 +6928,8 @@
    "topics": [
     "economy",
     "policy"
-   ]
+   ],
+   "applied": false
   },
   "752ce991dc5562e0": {
    "llm": true,
@@ -5151,7 +6996,8 @@
    "topics": [
     "urban",
     "generative-agents"
-   ]
+   ],
+   "applied": false
   },
   "76397b03e82351cf": {
    "llm": true,
@@ -5193,7 +7039,8 @@
    ],
    "score1": 55,
    "score2": 55,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "76aa00899a7d8b47": {
    "llm": true,
@@ -5217,7 +7064,8 @@
    ],
    "score1": 63,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "76d9ca73ef00c4d5": {
    "llm": true,
@@ -5237,7 +7085,33 @@
    "topics": [
     "human-behavior",
     "generative-agents"
-   ]
+   ],
+   "applied": false
+  },
+  "771fa7dbc7ff0f96": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 61,
+   "relevant": true,
+   "title_zh": "综述 LLM 在国家安全中的应用：美国空军已用于兵棋推演与摘要",
+   "summary_zh": "文章梳理大模型在国家安全领域的应用与风险，包括幻觉、数据隐私和对抗攻击，并讨论把 LLM 与决策论、贝叶斯推理结合以支撑决策。文中列举美国国防部及美国空军用 LLM 做兵棋推演和自动摘要的现有实践。",
+   "tags": [
+    "兵棋推演",
+    "国家安全",
+    "决策支持",
+    "综述"
+   ],
+   "status": "selected",
+   "topics": [
+    "wargame",
+    "policy"
+   ],
+   "score1": 62,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "777cd1e779dc04f4": {
    "llm": true,
@@ -5283,6 +7157,29 @@
     "eval"
    ],
    "applied": true
+  },
+  "799d45c57b9a0c45": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:59Z",
+   "domain": "academic",
+   "score": 55,
+   "relevant": true,
+   "title_zh": "对话式智能体接口让住户用自然语言调用住宅能耗数字孪生做决策",
+   "summary_zh": "作者把基于 GridLAB-D 的住宅数字孪生通过 REST 微服务暴露出来，再叠一层两级 LLM 智能体，把用户自然语言请求转成符合 schema 的仿真输入。系统用意图路由、领域知识库、输出确定性后处理和工具执行策略来提高可靠性，面向住户改造、区域规划和需求响应等决策场景。",
+   "tags": [
+    "数字孪生",
+    "能耗仿真",
+    "LLM智能体",
+    "决策支持"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "urban",
+    "framework"
+   ],
+   "applied": false
   },
   "79a1ae92a4bebdf4": {
    "llm": true,
@@ -5364,7 +7261,8 @@
    ],
    "score1": 58,
    "score2": 45,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "79fbe3d280f684c6": {
    "llm": true,
@@ -5387,7 +7285,8 @@
    ],
    "score1": 58,
    "score2": 80,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "7a491dc4a63cb340": {
    "llm": true,
@@ -5408,6 +7307,27 @@
     "social-sim",
     "policy"
    ]
+  },
+  "7a7e4851013385f3": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "多智能体运动生成模型的后训练偏好对齐，用预训练示范替代人工偏好标注",
+   "summary_zh": "论文指出用 token 预测目标预训练的多智能体运动生成模型会产出偏离人类偏好的行为，而偏好标注成本高。作者提出利用预训练示范可扩展地生成偏好数据，并批评把模型自身生成样本一律视为负例的对抗式假设。",
+   "tags": [
+    "运动生成",
+    "偏好对齐",
+    "具身智能"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "applied": false
   },
   "7b1aa4bb0a973e60": {
    "llm": true,
@@ -5449,7 +7369,31 @@
    "topics": [
     "social-sim",
     "generative-agents"
-   ]
+   ],
+   "applied": false
+  },
+  "7ba8cf3b2661a235": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 58,
+   "relevant": true,
+   "title_zh": "把大模型当作“数字智能资本”建模：内生折旧与结构性杰文斯悖论",
+   "summary_zh": "论文把大模型视为一类资产，推导出三个结论：对手创新会内生贬低既有资本价值（红皇后效应）；推理价格下降促使下游采用更耗算力的智能体架构，算力总需求呈超弹性；用户反馈数据飞轮可导致赢家通吃的市场分化。文中包含一个校准的智能体仿真模型。",
+   "tags": [
+    "经济模拟",
+    "智能体仿真",
+    "AI产业"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy"
+   ],
+   "score1": 58,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "7c93479369907ca1": {
    "llm": true,
@@ -5470,7 +7414,8 @@
    "topics": [
     "economy",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "7cb86142dd783611": {
    "llm": true,
@@ -5514,7 +7459,8 @@
    ],
    "score1": 57,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "7d4c4c361809b7ce": {
    "llm": true,
@@ -5539,6 +7485,27 @@
    ],
    "applied": false
   },
+  "7d798b71213f75ec": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 50,
+   "relevant": true,
+   "title_zh": "观点文章：用随时间演化的画像用户模拟，评估个性化检索智能体的长期适应能力",
+   "summary_zh": "作者认为个性化智能体评测仍依赖固定基准和一次性指标，提出从静态快照转向跨会话的交互式评估，包含三部分：带时间演化偏好模型的画像用户模拟、借鉴参考访谈的结构化偏好引出协议、适应度感知的评测机制。在 PersonalWAB 电商搜索数据上做了案例研究。",
+   "tags": [
+    "用户模拟",
+    "评测基准",
+    "个性化检索"
+   ],
+   "status": "selected",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "applied": false
+  },
   "7e1e75eafc2eabaf": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -5559,7 +7526,8 @@
     "generative-agents",
     "game",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "7e2ea2be49fa9dc1": {
    "llm": true,
@@ -5582,7 +7550,8 @@
    ],
    "score1": 58,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "7e4320adea834c32": {
    "llm": true,
@@ -5603,7 +7572,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "7f0552d7100ebdfb": {
    "llm": true,
@@ -5627,6 +7597,20 @@
     "eval"
    ],
    "applied": true
+  },
+  "7f2d3ead9a4c28f4": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "7f79d15ff76689eb": {
    "llm": true,
@@ -5762,7 +7746,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "81df3f2058116856": {
    "llm": true,
@@ -5808,7 +7793,8 @@
    ],
    "score1": 65,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "8273230d7c7b38fd": {
    "llm": true,
@@ -5831,7 +7817,8 @@
    ],
    "score1": 63,
    "score2": 72,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "829aa8d0fdaf0a08": {
    "llm": true,
@@ -5926,7 +7913,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "8493d1c006f44666": {
    "llm": true,
@@ -5950,7 +7938,8 @@
    ],
    "score1": 58,
    "score2": 72,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "84c2a306221ac2b7": {
    "llm": true,
@@ -5971,7 +7960,32 @@
    "topics": [
     "social-sim",
     "human-behavior"
-   ]
+   ],
+   "applied": false
+  },
+  "85e81319d1d813bc": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 62,
+   "relevant": true,
+   "title_zh": "用三个 LLM 智能体组成虚拟社会，验证并扩展 Homans 社会交换理论",
+   "summary_zh": "作者搭建由三个 LLM 智能体组成的虚拟社会，让它们进行社会交换博弈，发现 Homans 社会交换理论在智能体社会中得到验证，智能体行为与人类行为一致。随后作者主动改动社会设定，对原理论做出更细的扩展。",
+   "tags": [
+    "社会仿真",
+    "生成式智能体",
+    "社会交换理论"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "generative-agents"
+   ],
+   "score1": 62,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "8610b5b796c6e117": {
    "llm": true,
@@ -5995,6 +8009,27 @@
     "framework"
    ],
    "read_fail": 1,
+   "applied": false
+  },
+  "865095d9af647288": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 48,
+   "relevant": true,
+   "title_zh": "arXiv 文章讨论把 AI 扩展到数字兵棋以支撑决策",
+   "summary_zh": "文章主张加大投入发展面向兵棋的 AI，与人类判断配合以提升全域态势感知和决策速度，并指出深度强化学习在长时程复杂任务上已有进展，但要把 AI 扩展到兵棋的大状态空间仍需进一步研究。全文为方向性论述，未给出具体系统或实验。",
+   "tags": [
+    "兵棋推演",
+    "强化学习",
+    "决策支持",
+    "arXiv"
+   ],
+   "status": "selected",
+   "topics": [
+    "wargame"
+   ],
    "applied": false
   },
   "870b7f93c75fcdbe": {
@@ -6039,7 +8074,8 @@
    "status": "selected",
    "topics": [
     "economy"
-   ]
+   ],
+   "applied": false
   },
   "88d4bd38c0b9feb3": {
    "llm": true,
@@ -6062,7 +8098,8 @@
    ],
    "score1": 58,
    "score2": 60,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "895c89e22c0020a6": {
    "llm": true,
@@ -6086,7 +8123,8 @@
    ],
    "score1": 63,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "8989e4a2b381cbaa": {
    "llm": true,
@@ -6163,7 +8201,8 @@
    "topics": [
     "org",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "8a55cf75efd61d69": {
    "llm": true,
@@ -6296,7 +8335,8 @@
    "topics": [
     "world-env",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "8b6efe1486dbf5db": {
    "llm": true,
@@ -6316,7 +8356,8 @@
    "topics": [
     "social-sim",
     "human-behavior"
-   ]
+   ],
+   "applied": true
   },
   "8b755619140a9bec": {
    "llm": true,
@@ -6337,7 +8378,8 @@
    "topics": [
     "economy",
     "human-behavior"
-   ]
+   ],
+   "applied": true
   },
   "8c83491f07e6f80a": {
    "llm": true,
@@ -6392,7 +8434,8 @@
     "org",
     "policy",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "8cc85d80917536c0": {
    "llm": true,
@@ -6413,7 +8456,8 @@
    "topics": [
     "framework",
     "world-env"
-   ]
+   ],
+   "applied": false
   },
   "8cdd775240c4c9bb": {
    "llm": true,
@@ -6457,6 +8501,27 @@
     "world-env",
     "economy",
     "eval"
+   ],
+   "applied": false
+  },
+  "8da726bfe355e68b": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:45Z",
+   "domain": "academic",
+   "score": 54,
+   "relevant": true,
+   "title_zh": "LLM 能否从内容审核者变成网络骂战调解者：Reddit 数据集加用户模拟评估",
+   "summary_zh": "作者把 LLM 调解拆成判断（评估对话公平性与情绪动态）和引导（生成共情、降温的消息）两个子任务，构建大规模 Reddit 数据集，用原则打分、用户模拟和人工对比的多阶段流程评估。结果显示 API 模型在推理和干预一致性上都优于开源模型。",
+   "tags": [
+    "用户模拟",
+    "冲突调解",
+    "社会仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -6537,7 +8602,22 @@
     "social-sim",
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
+  },
+  "902144a7871cce60": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "904c27710da5f98b": {
    "llm": true,
@@ -6560,6 +8640,51 @@
     "eval"
    ],
    "applied": true
+  },
+  "90d95cad3128e268": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 55,
+   "relevant": true,
+   "title_zh": "LLM4TR 综述：把大模型在交通系统中的角色分为信息处理、知识编码、组件生成与决策辅助四类",
+   "summary_zh": "综述提出 LLM4TR 框架，将大模型在交通系统中的角色归为信息处理器、知识编码器、组件生成器和决策促进者四个维度，覆盖交通预测、自动驾驶、安全分析与城市出行优化，并给出路线图。",
+   "tags": [
+    "交通仿真",
+    "综述",
+    "大模型应用"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban"
+   ],
+   "applied": false
+  },
+  "9118441302b6edff": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 62,
+   "relevant": true,
+   "title_zh": "REALTALK 发布 21 天真实聊天语料，测试大模型能否扮演特定用户并记住长期对话",
+   "summary_zh": "作者收集 21 天真实通讯应用对话，构建 REALTALK 语料，与 LLM 生成的合成对话对比，发现真实对话的情绪表达更多样、人设更不稳定。基于此设两个基准任务：依据历史对话扮演某位用户继续聊天，以及回答需要长期记忆的问题。结果显示模型仅凭对话历史很难模拟用户。",
+   "tags": [
+    "用户模拟",
+    "长期对话",
+    "评测基准",
+    "真实语料"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "918d48df64a86515": {
    "llm": true,
@@ -6602,6 +8727,44 @@
     "urban",
     "social-sim"
    ],
+   "applied": false
+  },
+  "9242f948c69905bb": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 15,
+   "relevant": false,
+   "title_zh": "用 StarCraft II 训练的指挥控制智能体易受对手噪声攻击，性能明显下降",
+   "summary_zh": "作者在自定义 StarCraft II 地图上用 A3C 和 PPO 训练指挥控制（C2）智能体，再让对手注入噪声，实测该智能体对扰动高度敏感，性能随之下降。论文据此提出战场等关键场景需要更鲁棒的训练算法。",
+   "tags": [
+    "兵棋推演",
+    "强化学习",
+    "对抗鲁棒性"
+   ],
+   "status": "filtered",
+   "topics": [
+    "wargame",
+    "eval"
+   ],
+   "score1": 62,
+   "score2": 15,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "9246af62e5898356": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "9254c7323e0e1635": {
@@ -6662,6 +8825,20 @@
    ],
    "applied": false
   },
+  "93b0a797751fa9b8": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "93bd39d6037d71ca": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -6704,7 +8881,22 @@
    "topics": [
     "human-behavior",
     "framework"
-   ]
+   ],
+   "applied": false
+  },
+  "94b68aae463969ef": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "94c28484ff2a5ce2": {
    "llm": true,
@@ -6728,6 +8920,27 @@
    ],
    "applied": false
   },
+  "957d049d5c36354e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 68,
+   "relevant": true,
+   "title_zh": "LAMP 框架把语言引入多智能体强化学习，经济决策累计收益提升 63.5%",
+   "summary_zh": "作者提出 LAMP，按“思考、发言、决策”三步把语言接入多智能体强化学习：先解读数值观测，再交换策略消息并更新信念，最后融合成决策策略。经济仿真中累计收益比纯 MARL 高 63.5%，比纯 LLM 基线高 34.0%。",
+   "tags": [
+    "多智能体",
+    "强化学习",
+    "经济模拟"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy",
+    "framework"
+   ],
+   "applied": false
+  },
   "95e33ecfe0ac0232": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -6748,6 +8961,29 @@
     "game"
    ],
    "applied": false
+  },
+  "960c320a15656b5d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 80,
+   "relevant": true,
+   "title_zh": "用深圳多年志愿活动日志检验 LLM 城市危机仿真，发现纯 LLM 模拟器复现不出爆发式时间节奏",
+   "summary_zh": "作者用覆盖新冠时期的深圳城市级线下志愿活动日志，确认人类参与呈爆发式、重尾且自激的时间模式，疫情进一步放大。标准纯 LLM 模拟器按近乎规律的时钟行动，几乎没有自激通道，复现不了这种节奏；作者据此构建了改进的模拟器。",
+   "tags": [
+    "社会仿真",
+    "危机响应",
+    "时间真实性",
+    "真实数据校准"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "urban",
+    "eval"
+   ],
+   "applied": true
   },
   "9610ee649bf9c047": {
    "llm": true,
@@ -6797,6 +9033,48 @@
    "model2": "Qwen3.8-27B",
    "applied": true
   },
+  "96774bbe3664238d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "RULEARN 基准与 IDEA 框架：让 LLM 智能体在交互环境中学会规则",
+   "summary_zh": "作者提出 RULEARN 基准，让智能体在模拟环境中主动交互、收集观察并归纳规则；配套的 IDEA 框架把溯因、演绎、归纳串起来，先由有限观察生成假设，再验证和修正。在五个代表性 LLM 上均优于基线，与人类参与者的对比显示两者规则学习行为存在明显差异。",
+   "tags": [
+    "评测基准",
+    "规则学习",
+    "智能体环境"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "applied": false
+  },
+  "96ba4d7793826827": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "用数据溯源与用户模拟让智能体与用户共同构建 AI 解释",
+   "summary_zh": "作者提出一个交互式智能体，与用户一起构建既对用户有用、又扎根于数据溯源的解释，并给出原型。评估框架用用户模拟加 LLM 裁判做规模化测试。",
+   "tags": [
+    "用户模拟",
+    "可解释性",
+    "LLM 裁判"
+   ],
+   "status": "filtered",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "972da3992f246e57": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -6841,7 +9119,8 @@
    ],
    "score1": 62,
    "score2": 72,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "97de1564c7de959b": {
    "llm": true,
@@ -6884,7 +9163,8 @@
    "topics": [
     "world-env",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "9831cb442b949e3f": {
    "llm": true,
@@ -6957,6 +9237,28 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "98dab2d53d2b23fb": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 74,
+   "relevant": true,
+   "title_zh": "四国六模型合成社会数据对比真人调查：小样本真人数据仍比 LLM 合成数据可靠",
+   "summary_zh": "研究比较了英国、阿根廷、美国、中国四国社会价值观在六个开源与闭源大模型上的统计表现，并与真实人类调查数据对照。结论是即便真人样本小且有偏，其洞察仍比 LLM 合成数据更可靠，作者据此质疑用 AI 生成文本替代社会调查。",
+   "tags": [
+    "合成样本",
+    "社会调查",
+    "模型偏差"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval",
+    "social-sim"
+   ],
+   "applied": false
+  },
   "98deb96c6c2a1194": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -6997,7 +9299,8 @@
    "topics": [
     "economy",
     "policy"
-   ]
+   ],
+   "applied": false
   },
   "9906f4c37fed576b": {
    "llm": true,
@@ -7019,6 +9322,44 @@
     "economy",
     "eval"
    ],
+   "applied": false
+  },
+  "9947314626cf5e94": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 68,
+   "relevant": true,
+   "title_zh": "博士论文用分层强化学习构建作战仿真智能体，局部观测抽象优于全局观测",
+   "summary_zh": "论文提出局部化观测抽象（分段线性空间衰减）、多模型集成、强化学习与脚本智能体混合的框架，以及分层强化学习架构，把复杂作战仿真问题拆成可管理的子问题。结果显示局部观测抽象比传统全局观测计算效率更高、效果更好。",
+   "tags": [
+    "兵棋推演",
+    "强化学习",
+    "作战仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "wargame",
+    "framework"
+   ],
+   "score1": 60,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "994bc76bf185de5e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:19Z",
+   "domain": "academic",
+   "score": 18,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "997371afec02c161": {
@@ -7085,6 +9426,28 @@
    ],
    "applied": false
   },
+  "9abe06979694aaa2": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 78,
+   "relevant": true,
+   "title_zh": "同一份问卷换 252 种配置，LLM 合成的“硅样本”结果差异巨大",
+   "summary_zh": "作者用两种社会心理量表生成 252 种硅样本配置，考察模型选择、采样参数、提示格式等分析选择对结果的影响。配置在参与者排序、作答分布和量表间相关三项指标上差异明显，在一项上表现好的配置常在另一项上表现差。复现 Argyle 等 2023 年研究时，66 种配置下人与硅样本关联结构的相关系数从 r=.23 到 r=.84。",
+   "tags": [
+    "合成样本",
+    "用户模拟",
+    "评测基准",
+    "可复现性"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "9acdb3d2c8f0a103": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7107,7 +9470,8 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "9ae934d441da1a71": {
    "llm": true,
@@ -7139,7 +9503,8 @@
    "topics": [
     "urban",
     "world-env"
-   ]
+   ],
+   "applied": true
   },
   "9b9ac735c0520de6": {
    "llm": true,
@@ -7159,7 +9524,8 @@
    "topics": [
     "economy",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "9b9cdf7e34998dbd": {
    "llm": true,
@@ -7243,6 +9609,27 @@
    ],
    "applied": false
   },
+  "9c4e7d91600a5cfc": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "五个大模型合成问卷对比 420 名硅谷开发者真人调查：结果可信但抓不住反直觉发现",
+   "summary_zh": "作者用 ChatGPT Thinking 5 Pro、Claude Sonnet 4.5 Pro、Gemini Advanced 2.5 Pro、Incredible 1.0 和 DeepSeek 3.2 生成合成问卷，与 420 名硅谷开发者的真人调查对比。各模型结果彼此趋同，都未能复现真人调查中的反直觉发现，真实数据反而成了离群值。",
+   "tags": [
+    "合成样本",
+    "用户模拟",
+    "问卷复现"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": true
+  },
   "9ce638c0c31e56b5": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7311,6 +9698,29 @@
    ],
    "applied": false
   },
+  "9d55a9f268496eee": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "UserVille 用可配置 LLM 用户模拟器训练协作型智能体，在 SWE-Bench 等任务上平均高 16.7 分",
+   "summary_zh": "作者提出 Productivity、Proactivity、Personalization 三个协作维度，搭建 UserVille 交互环境，内含可配置的 LLM 用户模拟器和以用户为中心的反馈，并用多目标强化学习训练。在 SWE-Bench 与 BrowseComp-Plus 上平均超过 GPT-5 等基线 16.7 分，后续用户研究支持这一结果。",
+   "tags": [
+    "用户模拟",
+    "多智能体",
+    "强化学习",
+    "协作智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "org",
+    "eval"
+   ],
+   "applied": false
+  },
   "9d912912d6b0d364": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7357,6 +9767,27 @@
    ],
    "applied": false
   },
+  "9e2e30ccd5aec0a6": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "用 LLM 模拟人类干预来引导多智能体强化学习，规则控制器效果更强",
+   "summary_zh": "作者把 MARL 与 LLM 中介的干预结合，比较自然语言控制器和规则控制器对智能体学习轨迹的塑造。用 7B/8B 小模型模拟人类式干预的自然语言控制器，效果弱于规则控制器。两类干预都优于无干预基线，且早期介入收益更大。",
+   "tags": [
+    "多智能体",
+    "强化学习",
+    "训练引导"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "framework"
+   ],
+   "applied": false
+  },
   "9e84420ba73fa519": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7378,6 +9809,27 @@
     "framework"
    ],
    "applied": true
+  },
+  "9fa39fae29a6d2f5": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:14Z",
+   "domain": "academic",
+   "score": 42,
+   "relevant": true,
+   "title_zh": "从历史通话记录构建对话 AI 助手：知识抽取、RAG 接入与基于记录的用户模拟器评测",
+   "summary_zh": "作者提出一套端到端流程，先用简化版 PIPA 框架筛选高质量通话记录，再用 LLM 抽取结构化知识作为 RAG 唯一依据，并通过模块化提示词控制助手行为。评测使用基于通话记录的用户模拟器做定量测量。",
+   "tags": [
+    "用户模拟",
+    "RAG",
+    "对话助手"
+   ],
+   "status": "filtered",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "9fd0b71e5ef7184b": {
    "llm": true,
@@ -7401,6 +9853,27 @@
    ],
    "applied": false
   },
+  "9ff36f330ad0ff8d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 45,
+   "relevant": true,
+   "title_zh": "LLM 加 RAG 的多智能体框架构想：面向智能交通与城市出行服务",
+   "summary_zh": "这篇论文综述了出行数据、智能交通系统与网联车的现状，提出一个用 LLM 和检索增强生成构建多智能体系统的概念框架，面向通勤者、运营方和决策者提供对话式出行服务。文中只给出框架设想与机会挑战讨论，没有实验或真实城市部署结果。",
+   "tags": [
+    "智能交通",
+    "多智能体",
+    "RAG"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "applied": false
+  },
   "a03bc65bf1651083": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7421,7 +9894,8 @@
     "urban",
     "org",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "a053175f62d723a9": {
    "llm": true,
@@ -7488,6 +9962,26 @@
    "topics": [
     "social-sim",
     "eval"
+   ],
+   "applied": false
+  },
+  "a25772d06d49613c": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:42Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "iNews 数据集：291 名英国参与者标注 2899 条 Facebook 新闻的情绪反应",
+   "summary_zh": "作者收集 291 名英国参与者对 2899 条 Facebook 新闻帖的多维标注，含效价、唤醒度、支配感、离散情绪、相关性和转发意愿，平均每条 5.18 人。标注者的人口学、人格、媒体信任等信息解释了 15.2% 的标注方差，加入后准确率提升 7%。",
+   "tags": [
+    "合成样本",
+    "情绪建模",
+    "数据集"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior"
    ],
    "applied": false
   },
@@ -7621,6 +10115,20 @@
    "tags": [],
    "status": "filtered"
   },
+  "a36ac7bb3ba9f53a": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "a38783bd4d4b64e0": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7666,7 +10174,30 @@
    ],
    "score1": 52,
    "score2": 55,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
+  "a41b08fb5ee5b141": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "MegaAgent 不依赖预设 SOP，在国家政策仿真中扩展到 590 个智能体",
+   "summary_zh": "MegaAgent 按任务复杂度自动生成智能体，支持动态任务分解、并行执行与系统监控，无需人工编写标准作业流程。评测中它在 800 秒内完成五子棋开发，并在一次国家政策仿真里扩展到 590 个智能体生成多领域政策，代码已开源。",
+   "tags": [
+    "多智能体",
+    "政策推演",
+    "开源框架"
+   ],
+   "status": "selected",
+   "topics": [
+    "framework",
+    "policy",
+    "org"
+   ],
+   "applied": false
   },
   "a42c4529295669b4": {
    "llm": true,
@@ -7687,7 +10218,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "a4ecdc49ce458f14": {
    "llm": true,
@@ -7731,7 +10263,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "a52edc0dfce0b9dd": {
    "llm": true,
@@ -7796,7 +10329,8 @@
    "topics": [
     "social-sim",
     "generative-agents"
-   ]
+   ],
+   "applied": false
   },
   "a6ecd6ad3dd5646e": {
    "llm": true,
@@ -7817,6 +10351,29 @@
    "topics": [
     "social-sim",
     "framework"
+   ],
+   "applied": false
+  },
+  "a72c37c231708763": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 82,
+   "relevant": true,
+   "title_zh": "CitySim：数万 LLM 智能体模拟城市日常，预测人群密度与地点热度",
+   "summary_zh": "CitySim 让智能体用递归的价值驱动方法生成日常日程，在必须做的事、个人习惯和情境因素之间权衡，并赋予信念、长期目标和空间记忆以支持长期模拟。作者模拟了数万个智能体，在人群密度估计、地点热度预测和福祉评估等真实场景下考察集体行为，微观与宏观层面都比此前工作更贴近真人。",
+   "tags": [
+    "城市仿真",
+    "生成式智能体",
+    "人群密度",
+    "大规模仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "generative-agents",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -7889,6 +10446,31 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "a82d9fee99c6a0c2": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 64,
+   "relevant": true,
+   "title_zh": "CSALES 对话销售任务与 CSUSER：用大模型模拟带细粒度画像的购物用户",
+   "summary_zh": "作者提出 Conversational Sales 任务，把偏好挖掘、推荐和说服放进同一对话框架，并给出 CSUSER 评测协议，用基于真实行为数据、带细粒度用户画像的大模型用户模拟器做个性化交互评测。配套的 CSI 智能体在推荐成功率和说服效果上均有提升。",
+   "tags": [
+    "用户模拟",
+    "对话推荐",
+    "评测协议",
+    "arXiv"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "economy"
+   ],
+   "score1": 58,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "a8f1b664902247e4": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -7909,7 +10491,8 @@
     "social-sim",
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "a903703a9ede1b0e": {
    "llm": true,
@@ -8011,7 +10594,8 @@
    ],
    "score1": 52,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "aae474bd8a2d4565": {
    "llm": true,
@@ -8083,7 +10667,8 @@
    ],
    "score1": 63,
    "score2": 72,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "ac0eaf2cb17d1ff8": {
    "llm": true,
@@ -8187,7 +10772,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "ae8822a42f91d324": {
    "llm": true,
@@ -8258,6 +10844,65 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "afa2cc5c72af1d76": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 68,
+   "relevant": true,
+   "title_zh": "DIVERT：用分支快照和多样化用户模拟高效评测 LLM 客服智能体",
+   "summary_zh": "DIVERT 在对话关键决策点保存智能体与环境的完整状态，从快照分叉出多样化用户回复，复用共享前缀，减少重复计算，并定向探索少见的用户行为路径。作者称这样同时提高了评测效率和覆盖度。",
+   "tags": [
+    "用户模拟",
+    "智能体评测",
+    "对话评测"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 63,
+   "score2": 72,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "afa69b1c58215500": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "afc07989703cc5b2": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "五个大模型作答 44 题学习策略问卷，Gemini 2 Flash 表现最好",
+   "summary_zh": "作者让 GPT-4o、Claude 3.7 Sonnet、Gemini 2 Flash、LLaMA 3.1-8B 和 Mistral Large 回答 44 题的 MSLQ 学习动机与策略问卷，比较题目分布、自我调节学习维度的心理网络和潜因子结构效度。Gemini 2 Flash 表现最有希望，显示出可观的抽样变异。",
+   "tags": [
+    "合成样本",
+    "问卷模拟",
+    "心理测量"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "afcf6cc459b4a0cb": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -8277,6 +10922,20 @@
     "human-behavior",
     "generative-agents"
    ],
+   "applied": false
+  },
+  "b012ceea72acf0fc": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "b019af99666c5b59": {
@@ -8483,7 +11142,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "b2c485b53a59b6fb": {
    "llm": true,
@@ -8528,6 +11188,31 @@
     "eval"
    ],
    "applied": true
+  },
+  "b4efa2faee656a47": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 63,
+   "relevant": true,
+   "title_zh": "Sentipolis 给社会仿真智能体加上持续情绪状态，高容量模型可信度提升、小模型反而下降",
+   "summary_zh": "Sentipolis 用连续的 PAD 情绪表示、双速情绪动态和情绪-记忆耦合，让智能体保持情绪状态。跨多个基座模型和评估者的数千次交互显示，情绪连续性提升沟通与可信度，但收益依赖模型容量，小模型可信度可能下降，情绪感知还会轻微降低对社会规范的遵守。",
+   "tags": [
+    "社会仿真",
+    "情绪建模",
+    "生成式智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "generative-agents",
+    "social-sim",
+    "eval"
+   ],
+   "score1": 63,
+   "score2": 88,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "b56883435d2a519d": {
    "llm": true,
@@ -8621,7 +11306,32 @@
    ],
    "score1": 60,
    "score2": 78,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "b60572db55616b6c": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "LLM-Mirror：给模型喂受访者个人信息，复现个体问卷作答",
+   "summary_zh": "作者提出 LLM-Mirror，把受访者特定信息注入 LLM 生成用户画像，再用 PLS-SEM 比较模型作答与真实个体问卷。结果显示 LLM 生成的回答在结构方程分析与人类回答一致，且在提供受访者信息后能复现个体层面的决策模式。研究用于问卷预测试。",
+   "tags": [
+    "合成样本",
+    "问卷预测试",
+    "用户画像"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 64,
+   "score2": 68,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "b6469672b92c7679": {
    "llm": true,
@@ -8691,7 +11401,8 @@
     "human-behavior",
     "framework",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "b73647dc4bc61749": {
    "llm": true,
@@ -8769,7 +11480,8 @@
    "topics": [
     "social-sim",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "b98fd10f807d82f2": {
    "llm": true,
@@ -8840,7 +11552,8 @@
    ],
    "score1": 64,
    "score2": 88,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "bcb060bec19cc59f": {
    "llm": true,
@@ -8886,6 +11599,20 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "bd19589f19b1a0b9": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:26Z",
+   "domain": "academic",
+   "score": 18,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "bd48b9b8ec948700": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -8907,7 +11634,8 @@
    ],
    "score1": 52,
    "score2": 55,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "bdd0167d50d92395": {
    "llm": true,
@@ -8930,7 +11658,8 @@
    ],
    "score1": 58,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "bde8d07ca49bc0d5": {
    "llm": true,
@@ -8989,6 +11718,20 @@
    "summary_zh": "",
    "tags": [],
    "status": "filtered"
+  },
+  "c01de57256cdda45": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "c072e6560a4655bd": {
    "llm": true,
@@ -9097,7 +11840,8 @@
     "social-sim",
     "eval",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "c1b9fbd2cde58eb2": {
    "llm": true,
@@ -9160,7 +11904,8 @@
    "topics": [
     "eval",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "c327ff1c60ab9a79": {
    "llm": true,
@@ -9184,7 +11929,8 @@
    ],
    "score1": 63,
    "score2": 76,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "c355c1e5aaec6967": {
    "llm": true,
@@ -9297,7 +12043,32 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": true
+  },
+  "c42f31a2d9300300": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 64,
+   "relevant": true,
+   "title_zh": "BotVerse 用 Bluesky 实时内容流驱动社交智能体，演示协同虚假信息场景",
+   "summary_zh": "BotVerse 是事件驱动的 LLM 社交仿真框架，把智能体隔离在受控环境中，同时接入 Bluesky 生态的实时内容流，提供异步编排 API 和模拟人类时间模式与认知记忆的引擎。作者用一次协同虚假信息场景做演示，定位为红队测试与计算社会科学的安全实验平台。",
+   "tags": [
+    "社会仿真",
+    "虚假信息",
+    "开源框架"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "framework"
+   ],
+   "score1": 64,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "c4634a95257b9252": {
    "llm": true,
@@ -9319,7 +12090,32 @@
     "human-behavior",
     "health",
     "eval"
-   ]
+   ],
+   "applied": true
+  },
+  "c5855b353200b765": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "StabilityBench：把单轮基准改造成多轮对话，注入人口代理与谄媚诱导测模型稳定性",
+   "summary_zh": "StabilityBench 把现有单轮基准查询转成多轮交互历史，注入基于人口代理或谄媚诱导的用户模拟，同时保留原任务意图。作者在数学推理、健康问答与安全等四个基准上测了九个模型，其中三个基准出现明显性能下降。",
+   "tags": [
+    "评测基准",
+    "用户模拟",
+    "模型稳定性"
+   ],
+   "status": "filtered",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 58,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "c60558e98558e0e7": {
    "llm": true,
@@ -9368,6 +12164,51 @@
    ],
    "applied": false
   },
+  "c77f3861f45a1958": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "RWML：用仿真与真实状态差距奖励训练 LLM 智能体的世界模型",
+   "summary_zh": "作者提出 RWML，一种自监督方法，让 LLM 智能体在文本状态上学习以动作为条件的世界模型，训练信号来自模型预测的下一状态与环境中实际观测到的下一状态在预训练嵌入空间中的一致性。在 ALFWorld 和 τ² Bench 上相对基座模型有明显提升，且不使用专家数据、任务成功奖励或强 LLM 标注。",
+   "tags": [
+    "世界模型",
+    "智能体训练",
+    "自监督"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "applied": false
+  },
+  "c7d3d1a351e2625f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 58,
+   "relevant": true,
+   "title_zh": "用 LLM 智能体做竞争市场实验：难以收敛到竞争均衡",
+   "summary_zh": "作者在受控实验设定下让 LLM 扮演市场交易者，观察其能否收敛到竞争均衡。结果显示当前 LLM 无法复现人类交易者的动态决策过程，也未能达到市场均衡；作者认为 LLM 可用于可扩展、可复现的市场仿真，但需增强动态学习能力。",
+   "tags": [
+    "市场仿真",
+    "经济实验",
+    "LLM 智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy",
+    "human-behavior"
+   ],
+   "score1": 58,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "c82e0e361a143dc1": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -9380,6 +12221,30 @@
    "tags": [],
    "status": "filtered",
    "topics": []
+  },
+  "ca170e0602365a3a": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "DiscoBench：211 条样本测搜索智能体能否主动追问澄清模糊需求",
+   "summary_zh": "DiscoBench 覆盖 11 个真实领域、463 个歧义实例和四类歧义，用用户模拟器做多轮交互，从任务效用、歧义识别、交互策略和成本效率四个角度评测搜索智能体。实验显示代表性模型在歧义识别和追问上表现不足。",
+   "tags": [
+    "评测基准",
+    "用户模拟",
+    "搜索智能体"
+   ],
+   "status": "filtered",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 60,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "ca337debda67995d": {
    "llm": true,
@@ -9471,6 +12336,31 @@
    ],
    "applied": false
   },
+  "ccfb59174fae2243": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 69,
+   "relevant": true,
+   "title_zh": "LLM 驱动的用户数字孪生：为电动车充电站设计动态激励策略",
+   "summary_zh": "论文用 LLM 多智能体框架构建带多维画像的用户数字孪生，模拟并预测用户充放电决策，再配合网络约束下的分布式优化设计动态激励机制。仿真结果显示负荷峰谷调节和充放电策略有改善，但材料未说明用户规模或是否用真实充电数据校准。",
+   "tags": [
+    "数字孪生",
+    "用户模拟",
+    "车网互动"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "economy",
+    "urban"
+   ],
+   "score1": 60,
+   "score2": 78,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "cd177b8645612a0e": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -9490,7 +12380,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "cd3069afe2dbf23e": {
    "llm": true,
@@ -9552,6 +12443,27 @@
    ],
    "status": "filtered",
    "topics": [
+    "world-env"
+   ],
+   "applied": false
+  },
+  "ce303194fab00810": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "用 Logical English、Prolog 与 NetLogo 多智能体仿真表达英国交通规则",
+   "summary_zh": "作者针对英国《公路法典》中路口相关规则，搭建由 Logical English 自然语言接口、Prolog 内部表示和 NetLogo 多智能体仿真环境三部分组成的模块化系统，用于自动驾驶车辆与人类驾驶员的规则推理与可视化。系统属于规则建模与仿真验证，未涉及大模型智能体。",
+   "tags": [
+    "交通规则",
+    "多智能体仿真",
+    "自动驾驶"
+   ],
+   "status": "filtered",
+   "topics": [
+    "urban",
     "world-env"
    ],
    "applied": false
@@ -9663,7 +12575,44 @@
    ],
    "score1": 58,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "d12309962197bda6": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 72,
+   "relevant": true,
+   "title_zh": "用大模型融合跨域数据构建人类出行基础模型，合成轨迹复现真实移动规律",
+   "summary_zh": "作者提出一个融合地理、出行、社会人口与交通多模态数据的人类移动基础模型，用 LLM 对轨迹做语义增强，生成隐私保护的合成出行数据。在洛杉矶和埃及的案例中，合成数据复现了实证数据中的移动模式，并用于大规模交通仿真。",
+   "tags": [
+    "出行仿真",
+    "基础模型",
+    "合成数据",
+    "交通"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "applied": true
+  },
+  "d168fbbc704f8380": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:33Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
   },
   "d1b73129d4f16e67": {
    "llm": true,
@@ -9756,7 +12705,29 @@
    ],
    "score1": 58,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "d338a18be53bc8f7": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 42,
+   "relevant": true,
+   "title_zh": "用 ChatGPT 替代外部公司主持安全域桌面演练",
+   "summary_zh": "文章讨论用 LLM 承担企业安全事件桌面演练的主持工作，替代传统外部网络安全公司，理由是迭代更快、模拟内容可灵活调整、对反馈有无限耐心。全文以观点和设想为主，没有给出具体演练设计、案例或效果数据。",
+   "tags": [
+    "桌面演练",
+    "网络安全",
+    "危机模拟"
+   ],
+   "status": "filtered",
+   "topics": [
+    "wargame",
+    "org"
+   ],
+   "applied": false
   },
   "d353ca4744a0ba36": {
    "llm": true,
@@ -9803,7 +12774,8 @@
    ],
    "score1": 64,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d37cb47ed0ce0c4f": {
    "llm": true,
@@ -9849,7 +12821,8 @@
    ],
    "score1": 62,
    "score2": 75,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d4547f073da0afdd": {
    "llm": true,
@@ -9873,7 +12846,8 @@
    ],
    "score1": 52,
    "score2": 60,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d49a28d2bcc3bca0": {
    "llm": true,
@@ -9939,6 +12913,27 @@
     "org"
    ]
   },
+  "d509fd896ab437cf": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "PersonaForge：按真实用户统计校准多轮用户模拟，训练后智能体综合分提高 4.1%",
+   "summary_zh": "作者分析 1.6 万条真实会话，发现 75.9% 的交互是多轮。PersonaForge 用四维人格空间、按真实用户统计校准的行为控制和基于真实种子查询的反向构造生成多轮对话，产出 6.3K 训练集和 138 题基准。Qwen3.5-27B 训练后综合分提高 4.1%，任务完成提高 6.0%。",
+   "tags": [
+    "用户模拟",
+    "合成数据",
+    "评测基准"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "d58a3b42ac6b4793": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -9982,6 +12977,30 @@
    ],
    "applied": false
   },
+  "d5d709061a1d21d6": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "Drift-Bench：用多轮追问诊断输入缺陷下 LLM 智能体的协作失效",
+   "summary_zh": "Drift-Bench 针对隐式意图、缺参数、错误预设和歧义表达等输入缺陷，在状态型与服务型执行环境中用带人格设定的用户模拟器和 Rise 协议做多轮澄清评测。实验显示这些缺陷下性能大幅下降，澄清效果随用户人格和缺陷类型变化。",
+   "tags": [
+    "评测基准",
+    "用户模拟",
+    "智能体安全"
+   ],
+   "status": "filtered",
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 59,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "d63f03e2dcb1fcf4": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -10023,7 +13042,8 @@
     "social-sim",
     "generative-agents",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "d6ca2118dda38265": {
    "llm": true,
@@ -10086,7 +13106,8 @@
    "topics": [
     "social-sim",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "d81f4e506b745d9f": {
    "llm": true,
@@ -10128,6 +13149,30 @@
     "org",
     "framework"
    ],
+   "applied": false
+  },
+  "d881198094715ea2": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 69,
+   "relevant": true,
+   "title_zh": "SDPO：按对话片段做偏好优化，社交智能体在 SOTOPIA 上超过 GPT-4o",
+   "summary_zh": "针对多轮社交对话中 DPO 只优化单轮、会话级方法又过于粗糙的问题，作者提出片段级直接偏好优化 SDPO，动态选取关键片段训练。在 SOTOPIA 基准上，SDPO 调优的智能体优于现有 DPO 方法和 GPT-4o。",
+   "tags": [
+    "社会智能体",
+    "偏好优化",
+    "评测基准"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "score1": 63,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "d8b359520e80b073": {
@@ -10293,7 +13338,8 @@
    ],
    "score1": 64,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "db5807f04cd66534": {
    "llm": true,
@@ -10478,6 +13524,28 @@
    ],
    "applied": false
   },
+  "de46c983eb469b51": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 76,
+   "relevant": true,
+   "title_zh": "五个大模型在七种拍卖实验中保留人类竞价的机制级排序",
+   "summary_zh": "作者用七个实验室拍卖设置对比五个 LLM 与已发表实验的人类基准。人类在二价拍卖中出价偏高，多数偏离理论的模型则偏低，但 GPT-4o、Claude 3.5 Haiku、Gemini 2.0 Flash 未经微调仍稳定复现了拍卖形式按偏离理论程度的排序。",
+   "tags": [
+    "拍卖实验",
+    "经济模拟",
+    "行为验证"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy",
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "de920578df4d8c73": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -10517,6 +13585,20 @@
     "human-behavior",
     "eval"
    ],
+   "applied": false
+  },
+  "dea34105d9b7762d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "dea49990fc98e792": {
@@ -10584,6 +13666,26 @@
    ],
    "applied": false
   },
+  "e0ae39bac689cfee": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "八名 UX 设计师试用 LLM 驱动的交互式虚拟人物 Alice，认可效率但担心过度乐观",
+   "summary_zh": "作者提出交互式虚拟人物（IVP）：多模态、LLM 驱动、可通过语音访谈的对话式用户模拟。八名专业 UX 设计师在用户研究、构思和原型评估三项活动中使用名为 Alice 的 IVP，认为它能加快信息收集、提供类用户反馈，同时指出偏见、过度乐观和真实性不足的问题。",
+   "tags": [
+    "用户模拟",
+    "虚拟人物",
+    "设计研究"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior"
+   ],
+   "applied": false
+  },
   "e0e3aa51aaf32fb6": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -10631,6 +13733,27 @@
    "tags": [],
    "status": "filtered"
   },
+  "e1cc72e8f9ed637e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 55,
+   "relevant": true,
+   "title_zh": "LLM 多智能体自动为数字孪生仿真模型设定参数，代码已开源",
+   "summary_zh": "作者设计了一套多智能体框架，让分工为观察、推理、决策、总结的 LLM 智能体与数字孪生仿真交互，自主搜索能满足用户目标的可行参数组合。论文用案例研究演示效果，代码和可视化 demo 放在 GitHub 上。",
+   "tags": [
+    "数字孪生",
+    "多智能体",
+    "开源代码"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "framework"
+   ],
+   "applied": false
+  },
   "e1cfad483eda4fd3": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -10642,6 +13765,28 @@
    "summary_zh": "",
    "tags": [],
    "status": "filtered"
+  },
+  "e32658318982011d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 74,
+   "relevant": true,
+   "title_zh": "LLM 多智能体模拟规划师与数千居民，生成参与式城市土地利用方案",
+   "summary_zh": "作者构建 LLM 多智能体框架模拟一名规划师和数千名不同背景的居民，规划师先出土地利用初稿，各社区居民按自身画像反馈，并用鱼缸讨论机制控制讨论规模。目标是低成本地复现参与式城市规划流程。",
+   "tags": [
+    "城市规划",
+    "多智能体",
+    "公众参与"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "policy",
+    "generative-agents"
+   ],
+   "applied": false
   },
   "e330d7ac8c0ab8d0": {
    "llm": true,
@@ -10732,7 +13877,52 @@
     "org",
     "framework",
     "human-behavior"
-   ]
+   ],
+   "applied": false
+  },
+  "e5269cf64ba58a63": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 40,
+   "relevant": true,
+   "title_zh": "CrowdMoGen 用 LLM 做人群分组规划，零样本文本生成集体运动序列",
+   "summary_zh": "作者提出零样本集体运动生成框架 CrowdMoGen，用预训练 LLM 把个体组织成不同群体，再结合 SMPL 关节先验生成与事件对齐的动作序列。面向的是人群动画生成，不涉及行为决策或社会推演。",
+   "tags": [
+    "人群仿真",
+    "动作生成",
+    "LLM 规划"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env"
+   ],
+   "applied": false
+  },
+  "e56295ff5d682b0d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "微调 LLM 智能体模拟高温气冷堆协作场景，实时估计操作员工作负荷",
+   "summary_zh": "作者用高温气冷堆的真实运行数据微调 LLM，在多智能体协作场景中模拟人的行为与认知负荷，实现人因可靠性分析数据的自动采集。结果显示 WELLA 方法的工作负荷预测精度高于现有商用 LLM 方法。",
+   "tags": [
+    "人因可靠性",
+    "工作负荷",
+    "合成数据"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "e62663c24c5cbe47": {
    "llm": true,
@@ -10876,7 +14066,8 @@
    ],
    "score1": 58,
    "score2": 80,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "e981a8277e1cf193": {
    "llm": true,
@@ -10900,7 +14091,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "e9b4f62a38c35c8e": {
    "llm": true,
@@ -10919,6 +14111,28 @@
    ],
    "status": "selected",
    "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
+  "e9e0a40ded7de718": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 50,
+   "relevant": true,
+   "title_zh": "AmongAgents：用文字版《Among Us》测试 LLM 的社交推理与欺骗识别",
+   "summary_zh": "作者搭建了文字版 Among Us 环境 AmongAgents，让 LLM 智能体扮演船员和内鬼，并设置不同人格原型组合的对局。实验显示当前先进 LLM 能理解游戏规则并依据上下文做决策，作者把它定位为研究模拟人类行为和评估不完全信息博弈的试验台。",
+   "tags": [
+    "社交推理",
+    "AI NPC",
+    "评测基准"
+   ],
+   "status": "selected",
+   "topics": [
+    "game",
     "human-behavior",
     "eval"
    ],
@@ -10943,7 +14157,8 @@
    "topics": [
     "eval",
     "human-behavior"
-   ]
+   ],
+   "applied": false
   },
   "ea45479b566e851a": {
    "llm": true,
@@ -10979,6 +14194,64 @@
    "summary_zh": "",
    "tags": [],
    "status": "filtered"
+  },
+  "eafa3ae19e2190fd": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "LLM 分层推理加扩散模型，按自然语言描述可控生成交通场景",
+   "summary_zh": "作者提出扩散模型与 LLM 结合的交通仿真框架，高层模块拆解交通要素层级，低层模块通过自反思细化生成，并用 Frenet 坐标系下的代价函数给 LLM 提供几何量。在 Waymo Open Motion Dataset 上能按更复杂的描述生成更多样场景。",
+   "tags": [
+    "交通仿真",
+    "自动驾驶",
+    "场景生成"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 61,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "eb25ef6e0349a383": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:35Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "eb34495e943ec4b3": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:59Z",
+   "domain": "academic",
+   "score": 45,
+   "relevant": true,
+   "title_zh": "分层强化学习红队智能体用多轮对话攻击 LLM，刷新攻击成功率",
+   "summary_zh": "作者把红队测试建模为马尔可夫决策过程，用分层强化学习训练生成式智能体发起多轮对话攻击，以 token 级伤害奖励引导，能发现模板和单轮攻击绕不过的漏洞。这里的智能体模拟的是攻击者，不是社会或决策仿真。",
+   "tags": [
+    "红队测试",
+    "多轮对话",
+    "强化学习"
+   ],
+   "status": "selected",
+   "topics": [
+    "eval"
+   ],
+   "applied": false
   },
   "ebeab6ce4fd0b974": {
    "llm": true,
@@ -11066,6 +14339,20 @@
     "framework",
     "eval"
    ],
+   "applied": false
+  },
+  "ed3add70ca8e747d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
    "applied": false
   },
   "ed60a97cf8c262a7": {
@@ -11177,6 +14464,30 @@
    ],
    "applied": false
   },
+  "ef9bfa728299d2f3": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:49Z",
+   "domain": "academic",
+   "score": 57,
+   "relevant": true,
+   "title_zh": "LLM 智能体加数字孪生：化工流程装置故障处理可自主恢复运行",
+   "summary_zh": "论文提出把 LLM 智能体接入数字孪生环境，智能体持续解读系统状态并下发控制动作，数字孪生既提供装置工程知识用于提示，也作为验证纠正动作的仿真平台。在流程装置的混合模块上测试，智能体可自主控制，并在几次重新提示后生成缓解管道堵塞的有效动作。",
+   "tags": [
+    "数字孪生",
+    "故障处理",
+    "工业智能体"
+   ],
+   "status": "selected",
+   "topics": [
+    "world-env",
+    "framework"
+   ],
+   "score1": 57,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "efab9dcb2dc8e85d": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -11239,7 +14550,8 @@
    "topics": [
     "world-env",
     "framework"
-   ]
+   ],
+   "applied": false
   },
   "f04285849dcf3cb2": {
    "llm": true,
@@ -11260,6 +14572,26 @@
    "topics": [
     "human-behavior",
     "eval"
+   ],
+   "applied": false
+  },
+  "f04a76ae9ccbeb74": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:22Z",
+   "domain": "academic",
+   "score": 45,
+   "relevant": true,
+   "title_zh": "ProUtt：合成偏好数据训练小模型主动预测用户下一句话",
+   "summary_zh": "ProUtt 把对话历史转成意图树，显式建模导致用户下一句话的意图推理路径，并合成偏好与非偏好推理过程，用于训练紧凑的任务专用模型做主动下一句预测。作者称现有用户模拟方法主要模仿说话风格，不推进对话。",
+   "tags": [
+    "用户模拟",
+    "偏好数据",
+    "对话预测"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior"
    ],
    "applied": false
   },
@@ -11353,6 +14685,65 @@
    ],
    "applied": false
   },
+  "f1b8417f4323a03e": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 18,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "f1be77ffa321b464": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 80,
+   "relevant": true,
+   "title_zh": "用审议式民调诊断 LLM 硅采样：五个前沿模型全部未通过",
+   "summary_zh": "作者提出 Deliberative Polling Diagnostic Framework，比较人类与 LLM 人格在相同信息干预后的信念变化，而不只看静态观点。用 America in One Room 的 526 个人格、72 个问题测试五个前沿模型，全部失败：GPT-5.1 的人格在收到平衡信息后对对立党派更敌视，人类则相反，这一反转在对外群体问题上占 80%、政策问题上占 26%。",
+   "tags": [
+    "硅采样",
+    "审议式民调",
+    "评测基准",
+    "观点动态"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "social-sim",
+    "eval"
+   ],
+   "applied": true
+  },
+  "f1eddffb50a7da01": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:12:25Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "股票市场仿真检验 LLM 交易者的策略切换是否符合行为金融理论",
+   "summary_zh": "作者把损失厌恶、羊群效应、财富分化和价格错配四项行为金融驱动因素写成提示词设定的长期人格，让 LLM 智能体在为期一年的仿真中每日处理价量数据、每 10 个交易日重新评估交易风格。研究提出四项对齐指标，用 Mann-Whitney U 检验比较智能体的风格切换与金融理论预期。",
+   "tags": [
+    "市场仿真",
+    "行为一致性",
+    "交易风格"
+   ],
+   "status": "selected",
+   "topics": [
+    "economy",
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "f23f3f241ac47b98": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -11411,6 +14802,28 @@
    "topics": [
     "economy",
     "framework"
+   ],
+   "applied": false
+  },
+  "f2f9c81da3bb838d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "综述：以人为中心的 LLM 能力，从个体认知到群体动态的模拟",
+   "summary_zh": "这篇综述梳理 LLM 在推理、感知、社会认知上与人类的对比，以及它在行为科学、政治学、社会学中替代单个人类或协调多智能体模拟群体动态的应用，并讨论适应性、情感智能与文化敏感度等缺口。",
+   "tags": [
+    "人类行为模拟",
+    "社会仿真",
+    "综述"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "social-sim",
+    "eval"
    ],
    "applied": false
   },
@@ -11544,7 +14957,8 @@
    ],
    "score1": 58,
    "score2": 65,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "f75b26067d3e8b16": {
    "llm": true,
@@ -11610,7 +15024,8 @@
     "org",
     "health",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "f89e61b266b78ea2": {
    "llm": true,
@@ -11741,7 +15156,8 @@
    ],
    "score1": 58,
    "score2": 70,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "fb4e465d56d30de8": {
    "llm": true,
@@ -11789,6 +15205,29 @@
    ],
    "applied": false
   },
+  "fc1180f0851654b3": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:13:29Z",
+   "domain": "academic",
+   "score": 78,
+   "relevant": true,
+   "title_zh": "GenWorld：以东广岛市为参照，把 196608 个合成居民放进可扩展城市仿真",
+   "summary_zh": "作者提出 GenWorld 城市仿真基础设施，结合建筑级合成城市、结构化智能体环境接口，并把大模型决策信号离线编译成查表策略以支持大规模推演。以东广岛市为参照，用普查和地理数据锚定 196608 个合成居民，用 YJMob100K 手机数据检验通勤距离，并跑了全城工作日、工作日与周末对比、预警响应扰动三个可复现案例。",
+   "tags": [
+    "城市仿真",
+    "大模型智能体",
+    "数字孪生",
+    "开源框架"
+   ],
+   "status": "selected",
+   "topics": [
+    "urban",
+    "world-env",
+    "framework"
+   ],
+   "applied": true
+  },
   "fc97273e83d39f85": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -11834,7 +15273,8 @@
    ],
    "score1": 63,
    "score2": 85,
-   "model2": "Qwen3.8-27B"
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "fd0b4e5ac8bc7e59": {
    "llm": true,
@@ -11855,7 +15295,8 @@
    "topics": [
     "human-behavior",
     "economy"
-   ]
+   ],
+   "applied": false
   },
   "fd7af38072f26e9a": {
    "llm": true,
@@ -11902,6 +15343,28 @@
    ],
    "applied": false
   },
+  "fdc27a58a50de826": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-20T14:14:42Z",
+   "domain": "academic",
+   "score": 74,
+   "relevant": true,
+   "title_zh": "多智能体交互中的人设偏差：历史优势群体人设被判定更不可信、更不坚持",
+   "summary_zh": "作者在协作解题与说服任务中给 LLM 智能体分配人设，发现男性、白人等人设的智能体被同伴认为可信度更低、坚持度更弱，且智能体明显偏向顺从与自己人设相同的同伴。这些偏差在不同模型、群体规模和交互轮数下都稳定存在。",
+   "tags": [
+    "多智能体",
+    "人设偏差",
+    "社会仿真"
+   ],
+   "status": "selected",
+   "topics": [
+    "social-sim",
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "fe57e8b5ade2c0ca": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -11920,7 +15383,8 @@
    "topics": [
     "human-behavior",
     "eval"
-   ]
+   ],
+   "applied": false
   },
   "fe5cb6db33c3c81b": {
    "llm": true,
@@ -15099,9 +18563,9 @@
   "01fdaa0fb2ad2630": [
    "dc0122ed40412d6c",
    "b24a348b65b3adf6",
-   "343abaeab5bbf5a1",
    "e79ace9f69852390",
-   "5df907d31efbfb91"
+   "5df907d31efbfb91",
+   "2bcb841d9f7f9983"
   ],
   "026607611efdcaa8": [
    "c2cf86c7168ea25c",
@@ -15212,8 +18676,8 @@
    "a295251fe41cc0da",
    "703ac50e4d750286",
    "a325dd6e0ced6f34",
-   "343abaeab5bbf5a1",
-   "9c37456024526def"
+   "9c37456024526def",
+   "3893b1ae0bef8c52"
   ],
   "054c6254bdfd70d9": [
    "d63f03e2dcb1fcf4",
@@ -15241,7 +18705,7 @@
    "c9b413341b8399d5",
    "9dc5cf37a5a0a4bb",
    "0a4c666a216a6265",
-   "2212cae2d81c48d1"
+   "d3de5054cc266ef5"
   ],
   "0599676be458de0d": [
    "3cbcf6022a9093ab",
@@ -15311,7 +18775,7 @@
    "a480bed7c5460ca4",
    "7a3eeda26c88c283",
    "6e5e96469b8d2197",
-   "1a75b40f74a9497f"
+   "00504662a01de38d"
   ],
   "075bfc9f428362e0": [
    "c327ff1c60ab9a79",
@@ -15392,10 +18856,10 @@
   ],
   "0971d995f2893413": [
    "dd42d91d15db61dc",
-   "395d64eb9bafa831",
    "bc9654a8f1dba006",
    "fd6f27d8dedabcb4",
-   "f3b107b32a642876"
+   "f3b107b32a642876",
+   "fb123e12936139b6"
   ],
   "097be1c351b00ee3": [
    "2dffdfa471348a71",
@@ -15478,8 +18942,8 @@
    "e16c6b1fdad58c74",
    "cede7a528cd7c566",
    "e84b96a963496080",
-   "5eac797df516853e",
-   "8283246b25d62b2c"
+   "8283246b25d62b2c",
+   "dd4123629934871d"
   ],
   "0c0e78dcd3988c1a": [
    "b5d6734182857bca",
@@ -15517,18 +18981,18 @@
    "12f64111a08d91c8"
   ],
   "0e7a6e6b6f0e960f": [
-   "3778a88ed217de5b",
    "c0457de4d1dfc92b",
    "938fa5940d38797a",
    "e330d7ac8c0ab8d0",
-   "eafa3ae19e2190fd"
+   "eafa3ae19e2190fd",
+   "1094aa02ebe28cfb"
   ],
   "0e9de469b0948ab1": [
    "9d55a9f268496eee",
    "4c619e81ccd04b8c",
-   "343abaeab5bbf5a1",
    "b56883435d2a519d",
-   "1185b77e483bd667"
+   "1185b77e483bd667",
+   "3314461fbb1f6834"
   ],
   "0ed7cdc897601c6e": [
    "d9884887bed5bbbe",
@@ -15555,8 +19019,8 @@
    "2406366e4b2e93b7",
    "5f14acf985c55152",
    "cede7a528cd7c566",
-   "d5d709061a1d21d6",
-   "6ce61a491ccd387c"
+   "6ce61a491ccd387c",
+   "660fbef37e63a043"
   ],
   "0fc6fd9e1ddf0bb2": [
    "0541b4d3134738d8",
@@ -15623,10 +19087,10 @@
   ],
   "1185b77e483bd667": [
    "d509fd896ab437cf",
-   "c5855b353200b765",
    "b56883435d2a519d",
    "86750a924e107414",
-   "bfe7a2cc49e9fa82"
+   "bfe7a2cc49e9fa82",
+   "0e9de469b0948ab1"
   ],
   "118c69c4709d277c": [
    "dcc0d8bc854f767c",
@@ -15678,11 +19142,11 @@
    "18a0dc9a34751113"
   ],
   "13064bc157903fe6": [
+   "52bb7277fa3b2d7d",
    "865095d9af647288",
    "ef6896c9ba5f0dcd",
    "897f17a3ee0d6265",
-   "d9747d391f1732ef",
-   "adeda36c6289a821"
+   "d9747d391f1732ef"
   ],
   "1307adfc9d972fce": [
    "aded671fd81e1d63",
@@ -15700,10 +19164,10 @@
   ],
   "13d378a774a44ba2": [
    "afa2cc5c72af1d76",
-   "d5d709061a1d21d6",
    "3c32ca0a17b73697",
    "37b7dab28436cd02",
-   "47be521c059f34ff"
+   "47be521c059f34ff",
+   "eb2b70293a48b1d2"
   ],
   "1413a4ddc72a2582": [
    "b98fd10f807d82f2",
@@ -15730,8 +19194,8 @@
    "7379d2d200eb7b49",
    "271df2f2321e4552",
    "6281613eef2b3451",
-   "1ee7cb824a100fc1",
-   "9246af62e5898356"
+   "54781f522d8aadba",
+   "d509fd896ab437cf"
   ],
   "14e443452fa764a0": [
    "ca170e0602365a3a",
@@ -15818,11 +19282,11 @@
    "78b78dd8291be2f5"
   ],
   "17cf950e0680388b": [
-   "d5d709061a1d21d6",
    "eb2b70293a48b1d2",
    "df906319e9e52de2",
    "be0387287f015b55",
-   "b012ceea72acf0fc"
+   "13d378a774a44ba2",
+   "5df907d31efbfb91"
   ],
   "182e71ca4f407794": [
    "9d25417a3d92c202",
@@ -15951,11 +19415,11 @@
    "47354b297e593a1f"
   ],
   "1ae9f634af531906": [
-   "9242f948c69905bb",
    "e9e0a40ded7de718",
    "2d71bcc273fdcb24",
    "086699e1222289a4",
-   "d1edc1611345d976"
+   "d1edc1611345d976",
+   "eb34495e943ec4b3"
   ],
   "1b170cf43f47cc5a": [
    "cea02f2b5c275d28",
@@ -15996,8 +19460,8 @@
    "9dc5cf37a5a0a4bb",
    "3eb8d7c22fa598d1",
    "d6fee3349b8b9f22",
-   "353fc5b059acb038",
-   "0a4c666a216a6265"
+   "0a4c666a216a6265",
+   "4be2ddb84408c0d9"
   ],
   "1c9556dec7157d23": [
    "e6e86884a268a404",
@@ -16043,10 +19507,10 @@
   ],
   "1ed657b61aefd61b": [
    "bf7b99438672f6b8",
-   "d5d709061a1d21d6",
    "662f50a4264a875c",
    "5d72cc7df6c04f72",
-   "4f67071f8587bdb0"
+   "4f67071f8587bdb0",
+   "afa2cc5c72af1d76"
   ],
   "1ee7cb824a100fc1": [
    "6281613eef2b3451",
@@ -16101,8 +19565,8 @@
    "f23f3f241ac47b98",
    "d63f03e2dcb1fcf4",
    "9e2e30ccd5aec0a6",
-   "6c26609dc83ebc36",
-   "50d66ae117f14137"
+   "50d66ae117f14137",
+   "e22ce95f245b7ad7"
   ],
   "2084416b8e3f4e83": [
    "baf80426f1c5edee",
@@ -16214,7 +19678,7 @@
    "076463a98f9257f7",
    "e84b96a963496080",
    "53800a352ff7d1c6",
-   "5233774ab3006322"
+   "5d72cc7df6c04f72"
   ],
   "231d05e020ea0913": [
    "afc07989703cc5b2",
@@ -16226,16 +19690,16 @@
   "2389a96618303f62": [
    "3c5dac258f0d71c4",
    "3c32ca0a17b73697",
-   "4ab398a10cee74cb",
    "f1be77ffa321b464",
-   "85689d499d65f156"
+   "85689d499d65f156",
+   "4604c3794cf6e92c"
   ],
   "23cc31f80e887750": [
    "5841c527683b9974",
    "97166a1d9f8fa5c6",
-   "ca170e0602365a3a",
-   "343abaeab5bbf5a1",
-   "3a1ac69527073fa9"
+   "9772ca3115020a24",
+   "d509fd896ab437cf",
+   "bd8649cc4e583263"
   ],
   "23f1910100eb6518": [
    "9ab53d3c155c6953",
@@ -16247,9 +19711,9 @@
   "2406366e4b2e93b7": [
    "5f14acf985c55152",
    "0fa6272ca2cc0fa5",
-   "d5d709061a1d21d6",
    "86750a924e107414",
-   "a941594bd77c34eb"
+   "a941594bd77c34eb",
+   "48c9bb8e1b63877f"
   ],
   "24396290feb11a03": [
    "7a3eeda26c88c283",
@@ -16305,7 +19769,7 @@
    "7d1c1f92e8b110a5",
    "73b3e51c3d0af155",
    "3391fbbbce7278bc",
-   "eb25ef6e0349a383"
+   "7379d2d200eb7b49"
   ],
   "25e24a63821a39cb": [
    "8ad5220a89a9bd3a",
@@ -16408,9 +19872,9 @@
   "28d9a1aea8b65228": [
    "e22ac3a7500996b6",
    "fd6f27d8dedabcb4",
-   "2f9e818caa6b3df3",
    "ab8228fc46b2b0a2",
-   "3db5c502ed5a13a7"
+   "3db5c502ed5a13a7",
+   "8134719a84a07917"
   ],
   "290b842511193a21": [
    "34b2654142e7d01a",
@@ -16435,10 +19899,10 @@
   ],
   "2924752fca432d2b": [
    "9d55a9f268496eee",
-   "9246af62e5898356",
-   "343abaeab5bbf5a1",
    "c6fd0694b18109c4",
-   "b5aeedfab36a7d69"
+   "b5aeedfab36a7d69",
+   "9e84420ba73fa519",
+   "d63f03e2dcb1fcf4"
   ],
   "2944f1746c1b162f": [
    "3eefc5d18a4ade26",
@@ -16491,10 +19955,10 @@
   ],
   "2ac601a470215e11": [
    "eafa3ae19e2190fd",
-   "2f9e818caa6b3df3",
    "5b5da1ff92691bef",
    "2b09014f7653140f",
-   "c419a6790d29db36"
+   "c419a6790d29db36",
+   "cd181b82196eb0e0"
   ],
   "2ac92516af93b3e1": [
    "31fde3164d228b7c",
@@ -16527,16 +19991,16 @@
   "2b09014f7653140f": [
    "3189b851eff08dd8",
    "cd181b82196eb0e0",
-   "2f9e818caa6b3df3",
    "eafa3ae19e2190fd",
-   "c419a6790d29db36"
+   "c419a6790d29db36",
+   "e6dff640154a6b4c"
   ],
   "2bcb841d9f7f9983": [
-   "353fc5b059acb038",
    "e19aa5840619a2b8",
    "d509fd896ab437cf",
-   "343abaeab5bbf5a1",
-   "01fdaa0fb2ad2630"
+   "01fdaa0fb2ad2630",
+   "887e701ac97d5041",
+   "afa2cc5c72af1d76"
   ],
   "2c51b2b2fa1f3ba8": [
    "be1a32f15ed6abf9",
@@ -16584,8 +20048,8 @@
    "aded671fd81e1d63",
    "9cf2e125a25991f9",
    "6894f44108818494",
-   "414fe4562d904ad6",
-   "cf7d6c98603bb666"
+   "cf7d6c98603bb666",
+   "105a99a0405e260d"
   ],
   "2ddc13ebcfeb8a9a": [
    "951982280b357cdb",
@@ -16749,11 +20213,11 @@
    "afa2cc5c72af1d76"
   ],
   "3376a3ae310ad903": [
-   "343abaeab5bbf5a1",
    "438f92da92ae0190",
    "0fa6272ca2cc0fa5",
    "5f14acf985c55152",
-   "e22ce95f245b7ad7"
+   "e22ce95f245b7ad7",
+   "c35d8ff28f86c180"
   ],
   "337e3a4a5a7bc05f": [
    "a2778046860d4028",
@@ -16820,10 +20284,10 @@
   ],
   "34f6d41f4a6eb470": [
    "e67026567d911f6f",
-   "94b68aae463969ef",
    "6894f44108818494",
    "29f81cafed7a67e5",
-   "6ebbdd40def0bdd4"
+   "6ebbdd40def0bdd4",
+   "80025ad6357df175"
   ],
   "34fef4aca9be81e9": [
    "425f390be1d1e120",
@@ -16841,10 +20305,10 @@
   ],
   "3506d68ad82297ef": [
    "97579754d322a919",
-   "94b68aae463969ef",
    "a47fdb305498120b",
    "6cdb1ea6dd13ae2a",
-   "c16b3de4025bbbc6"
+   "c16b3de4025bbbc6",
+   "3f4cccd70fdb1d61"
   ],
   "350cb8174bfa5832": [
    "31fde3164d228b7c",
@@ -16913,8 +20377,8 @@
    "e79ace9f69852390",
    "105a99a0405e260d",
    "41ecfbfd86d236d5",
-   "0bbb668930c58322",
-   "e055d2e137babfc5"
+   "e055d2e137babfc5",
+   "a91aa78aa6961d9d"
   ],
   "374a0283682d2333": [
    "fad2648c72549191",
@@ -16995,10 +20459,10 @@
   ],
   "391eff5ca5fc9e51": [
    "86750a924e107414",
-   "415f503701d8925f",
    "8f848c383db6d951",
    "1185b77e483bd667",
-   "d509fd896ab437cf"
+   "d509fd896ab437cf",
+   "cdaff7db1b0526dc"
   ],
   "3926789bf0e17e45": [
    "be1a32f15ed6abf9",
@@ -17135,7 +20599,8 @@
   ],
   "3cf41a97b1c6ee7d": [
    "9773c1ebbc83374d",
-   "9947314626cf5e94"
+   "9947314626cf5e94",
+   "c171307311ed53a0"
   ],
   "3cfe286a841e55f8": [
    "6ff9809b1b5fb264",
@@ -17236,11 +20701,11 @@
    "a9a85fcb41e84458"
   ],
   "3f4cccd70fdb1d61": [
-   "94b68aae463969ef",
    "e5057aea82287946",
    "3506d68ad82297ef",
    "3e487ed38f911029",
-   "97579754d322a919"
+   "97579754d322a919",
+   "c16b3de4025bbbc6"
   ],
   "3f6c8be79bdf323c": [
    "91c736e21d4e3552",
@@ -17264,11 +20729,11 @@
    "b019af99666c5b59"
   ],
   "3ff50e885a24acda": [
-   "415f503701d8925f",
    "9772ca3115020a24",
    "86750a924e107414",
    "5534ab33eb497186",
-   "97166a1d9f8fa5c6"
+   "97166a1d9f8fa5c6",
+   "2406366e4b2e93b7"
   ],
   "4051d969919b8423": [
    "c8c418961fdad3e7",
@@ -17378,9 +20843,9 @@
   "428902e2f96e61da": [
    "fcd8d9c585f09966",
    "f837b52082533612",
-   "93b0a797751fa9b8",
    "f033d2df81ed6a4d",
-   "ae8491ae5a38bbca"
+   "ae8491ae5a38bbca",
+   "517ae3531f8bcfa7"
   ],
   "42b11258037d21b0": [
    "b03f4054749b42dd",
@@ -17408,7 +20873,7 @@
    "4ffb0b30102d6038",
    "f712dad26d4def88",
    "e62663c24c5cbe47",
-   "343abaeab5bbf5a1"
+   "d2bd278b44c7b809"
   ],
   "43cd5c60162d6562": [
    "5d72cc7df6c04f72",
@@ -17583,7 +21048,7 @@
    "1750d7c8f150a25d",
    "f6696657e4d0ea0a",
    "d1b73129d4f16e67",
-   "6c26609dc83ebc36"
+   "a941594bd77c34eb"
   ],
   "4a0c0d9f5dc6eccc": [
    "4f3a43c24fac32d8",
@@ -17670,11 +21135,11 @@
    "f04a76ae9ccbeb74"
   ],
   "4c8140bc73c8da1c": [
-   "994bc76bf185de5e",
    "819027e58c316205",
    "97166a1d9f8fa5c6",
    "3ff50e885a24acda",
-   "cf7d6c98603bb666"
+   "cf7d6c98603bb666",
+   "7379d2d200eb7b49"
   ],
   "4cce3bf17b7a0262": [
    "debf91ae68788884",
@@ -17743,8 +21208,8 @@
    "dcc0d8bc854f767c",
    "5df907d31efbfb91",
    "f74e0826be73c7ed",
-   "dea34105d9b7762d",
-   "d1b73129d4f16e67"
+   "d1b73129d4f16e67",
+   "eb2b70293a48b1d2"
   ],
   "4eebbe5dba30fd15": [
    "34b2654142e7d01a",
@@ -17768,11 +21233,11 @@
    "31ae75f36948c88b"
   ],
   "4f3a43c24fac32d8": [
-   "415f503701d8925f",
-   "902144a7871cce60",
    "e859d99fa81124dc",
    "6a6dddb997efb5ee",
-   "4a0c0d9f5dc6eccc"
+   "36419b1d54bddb36",
+   "3ff50e885a24acda",
+   "391eff5ca5fc9e51"
   ],
   "4f3f0ec482f63826": [
    "8d9a67c180135d02",
@@ -17868,9 +21333,9 @@
   "5139d6f099bface2": [
    "07a258f8bcaa38ef",
    "e1cc72e8f9ed637e",
-   "ed3add70ca8e747d",
    "a41b08fb5ee5b141",
-   "372fc5aa33adca1e"
+   "372fc5aa33adca1e",
+   "3e487ed38f911029"
   ],
   "5161e9f679ba8559": [
    "32ff9538845c3b8a",
@@ -17910,9 +21375,9 @@
   "51bce9ad981a44fa": [
    "5a26a6977f58cfad",
    "3dc5b6bb1fadd45a",
-   "1a75b40f74a9497f",
    "7c34a7a750df61e9",
-   "c5ea418997695a4e"
+   "c5ea418997695a4e",
+   "6e5e96469b8d2197"
   ],
   "51fe30678f70677d": [
    "2084416b8e3f4e83",
@@ -17927,6 +21392,13 @@
    "8a958ebbb1c54eac",
    "b5c0748305213a37",
    "2302ad3915aa32d9"
+  ],
+  "52bb7277fa3b2d7d": [
+   "13064bc157903fe6",
+   "865095d9af647288",
+   "ef6896c9ba5f0dcd",
+   "cd3069afe2dbf23e",
+   "679a7e0ca3e12e94"
   ],
   "52ee6fbbe1d17951": [
    "b5d6734182857bca",
@@ -17999,11 +21471,11 @@
    "dffe5b6218143f26"
   ],
   "5450d06ed836a2b8": [
-   "2212cae2d81c48d1",
    "cea495165a6b9629",
    "ae8822a42f91d324",
    "4c57c27fd1150e59",
-   "3893b1ae0bef8c52"
+   "3893b1ae0bef8c52",
+   "d49a28d2bcc3bca0"
   ],
   "545487d0c7006e32": [
    "c6fd0694b18109c4",
@@ -18023,8 +21495,8 @@
    "b2c485b53a59b6fb",
    "dc2a8ca54310bc66",
    "1836246dfbfb504c",
-   "5b5e1757f4e66807",
-   "a38783bd4d4b64e0"
+   "a38783bd4d4b64e0",
+   "b30472b468b7fa63"
   ],
   "548326e330468eec": [
    "aae474bd8a2d4565",
@@ -18140,15 +21612,15 @@
    "2ed793029807a54a",
    "cb9ab4a069e64305",
    "69c6bd5ab39923dd",
-   "1a75b40f74a9497f",
-   "ed1eae350ecc65d0"
+   "ed1eae350ecc65d0",
+   "f3b107b32a642876"
   ],
   "5841c527683b9974": [
    "23cc31f80e887750",
-   "ca170e0602365a3a",
-   "343abaeab5bbf5a1",
    "5f1635be7ca5efe7",
-   "9772ca3115020a24"
+   "9772ca3115020a24",
+   "01fdaa0fb2ad2630",
+   "dc0122ed40412d6c"
   ],
   "58b649a84f87fa06": [
    "1086e772026ac543",
@@ -18328,9 +21800,9 @@
   "5cdf7d2359bfaef5": [
    "9cf2e125a25991f9",
    "eb04b45f1143326a",
-   "414fe4562d904ad6",
    "b47f60f17b6b6a13",
-   "2da98c03a2ac20cb"
+   "2da98c03a2ac20cb",
+   "9dc5cf37a5a0a4bb"
   ],
   "5d057ae8fcc2e58a": [
    "afcf6cc459b4a0cb",
@@ -18341,10 +21813,10 @@
   ],
   "5d1d7d7516f97577": [
    "85885d61610927ed",
-   "5eac797df516853e",
    "662f50a4264a875c",
    "8283246b25d62b2c",
-   "5d72cc7df6c04f72"
+   "5d72cc7df6c04f72",
+   "37b7dab28436cd02"
   ],
   "5d4d9019747b098f": [
    "268d1198708eddae",
@@ -18412,9 +21884,9 @@
   "5f1635be7ca5efe7": [
    "438f92da92ae0190",
    "5841c527683b9974",
-   "343abaeab5bbf5a1",
    "4ffb0b30102d6038",
-   "a19bf5b7231a2d8c"
+   "a19bf5b7231a2d8c",
+   "6897fe70920458f9"
   ],
   "5f33e9a71c4c93e6": [
    "035439ae5b3992f0",
@@ -18515,11 +21987,11 @@
    "76aa00899a7d8b47"
   ],
   "6281613eef2b3451": [
-   "1ee7cb824a100fc1",
    "85689d499d65f156",
    "9c37456024526def",
    "d509fd896ab437cf",
-   "d4d49dd5394f6434"
+   "d4d49dd5394f6434",
+   "40578ca089704cb6"
   ],
   "6303ffc5ee4f789b": [
    "e90a112adb83b530",
@@ -18545,7 +22017,7 @@
   "63626a310eb12141": [
    "ef6896c9ba5f0dcd",
    "13064bc157903fe6",
-   "9242f948c69905bb",
+   "52bb7277fa3b2d7d",
    "8045aa5102870e05",
    "3c963032cb39ba26"
   ],
@@ -18812,8 +22284,8 @@
    "6ce61a491ccd387c",
    "0a4c666a216a6265",
    "e859d99fa81124dc",
-   "415f503701d8925f",
-   "902144a7871cce60"
+   "59803e5f950f9748",
+   "cede7a528cd7c566"
   ],
   "6a7c202ed3a48dcc": [
    "d9884887bed5bbbe",
@@ -18840,8 +22312,8 @@
    "2b09014f7653140f",
    "cd181b82196eb0e0",
    "1465a55bff71e654",
-   "2f9e818caa6b3df3",
-   "3189b851eff08dd8"
+   "3189b851eff08dd8",
+   "67ba56434d4a8cfe"
   ],
   "6c26609dc83ebc36": [
    "eb2b70293a48b1d2",
@@ -18858,11 +22330,11 @@
    "9e231c2d620e6712"
   ],
   "6c320502320247d0": [
-   "64e5b78f516eadc9",
    "b73647dc4bc61749",
    "380cd9d6e38b5a37",
    "1086e772026ac543",
-   "cd177b8645612a0e"
+   "cd177b8645612a0e",
+   "f712dad26d4def88"
   ],
   "6c72b4665c55a27f": [
    "fb4e465d56d30de8",
@@ -18873,10 +22345,10 @@
   ],
   "6c943341bad9e01f": [
    "1ed657b61aefd61b",
-   "5eac797df516853e",
    "5020d8d5fba330a1",
    "8283246b25d62b2c",
-   "37b7dab28436cd02"
+   "37b7dab28436cd02",
+   "6e1cdbc9ad3f4e5c"
   ],
   "6ca947f832e5bc7e": [
    "8d9637e543a0cc86",
@@ -18916,9 +22388,9 @@
   "6d96cf6c4f95d26a": [
    "5bf7b6e7ca77ed24",
    "66f1e888edf1c91d",
-   "2212cae2d81c48d1",
    "d37cb47ed0ce0c4f",
-   "b5d6734182857bca"
+   "b5d6734182857bca",
+   "5197dcfee35f4855"
   ],
   "6d9a0d27eb516a4f": [
    "9e3f653e0313d611",
@@ -18946,7 +22418,7 @@
    "8f12f0dae2ea5127",
    "372fc5aa33adca1e",
    "e1cc72e8f9ed637e",
-   "414fe4562d904ad6"
+   "e5057aea82287946"
   ],
   "6e01ae41cb52ef94": [
    "5b4d4d395cf7f184",
@@ -18977,18 +22449,18 @@
    "61ceb6376b1ec092"
   ],
   "6e8c6a95712b4a3c": [
-   "0bbb668930c58322",
    "ab880bd8b8fb9d32",
    "78e2d06de9b6dd47",
    "9d8238d886bc104a",
-   "5d91d657e7a29e3b"
+   "5d91d657e7a29e3b",
+   "af03b7ee48b990ca"
   ],
   "6e909c8d4d1dd511": [
-   "3a1ac69527073fa9",
    "59803e5f950f9748",
    "6281613eef2b3451",
    "9ac49cfd60d09294",
-   "5841c527683b9974"
+   "5841c527683b9974",
+   "418c8315aef10217"
   ],
   "6ebbdd40def0bdd4": [
    "6894f44108818494",
@@ -19163,7 +22635,7 @@
    "b5d6734182857bca",
    "c3808aacf816453d",
    "94c28484ff2a5ce2",
-   "52ee6fbbe1d17951"
+   "afa2cc5c72af1d76"
   ],
   "73ca8ad1c0bc4af4": [
    "d0515552c15a2699",
@@ -19237,10 +22709,10 @@
   ],
   "768de91f60274c8a": [
    "aded671fd81e1d63",
-   "414fe4562d904ad6",
    "9d02ea6d7b671bf3",
    "105a99a0405e260d",
-   "2da98c03a2ac20cb"
+   "2da98c03a2ac20cb",
+   "a809332edc384a98"
   ],
   "76aa00899a7d8b47": [
    "697acf0a52c6dd5e",
@@ -19315,9 +22787,9 @@
   "799d45c57b9a0c45": [
    "32ff9538845c3b8a",
    "e1cc72e8f9ed637e",
-   "353fc5b059acb038",
    "5161e9f679ba8559",
-   "41ecfbfd86d236d5"
+   "41ecfbfd86d236d5",
+   "d9884887bed5bbbe"
   ],
   "79a1ae92a4bebdf4": [
    "34fef4aca9be81e9",
@@ -19349,10 +22821,10 @@
   ],
   "79ee4a2408bc74b2": [
    "9acdb3d2c8f0a103",
-   "4ab398a10cee74cb",
    "79fbe3d280f684c6",
    "0e25e6dbc26c25d5",
-   "39043a7863c41ff3"
+   "39043a7863c41ff3",
+   "d355813e90b240cf"
   ],
   "79fbe3d280f684c6": [
    "cd177b8645612a0e",
@@ -19442,8 +22914,8 @@
    "ea77329bd2071698",
    "6de95b4e47cd959b",
    "bde8d07ca49bc0d5",
-   "b012ceea72acf0fc",
-   "d9884887bed5bbbe"
+   "d9884887bed5bbbe",
+   "8a958ebbb1c54eac"
   ],
   "7c34a7a750df61e9": [
    "75638112c7d26a8e",
@@ -19502,11 +22974,11 @@
    "12f64111a08d91c8"
   ],
   "7d798b71213f75ec": [
-   "353fc5b059acb038",
    "4ef246f38df29701",
    "afa2cc5c72af1d76",
    "8a5345c0e6cd0241",
-   "5841c527683b9974"
+   "5841c527683b9974",
+   "2bcb841d9f7f9983"
   ],
   "7e1e75eafc2eabaf": [
    "337e3a4a5a7bc05f",
@@ -19519,8 +22991,8 @@
    "afa2cc5c72af1d76",
    "2a7c337d3195182a",
    "17cf950e0680388b",
-   "d5d709061a1d21d6",
-   "25d2c71b2f2eb956"
+   "25d2c71b2f2eb956",
+   "a3ebf1a4a4ed669f"
   ],
   "7e4320adea834c32": [
    "8273230d7c7b38fd",
@@ -19638,15 +23110,15 @@
    "cf7d6c98603bb666",
    "a578f1e92027653e",
    "feaa9471ad0d6e22",
-   "994bc76bf185de5e",
-   "a645a4ed99d3e385"
+   "a645a4ed99d3e385",
+   "7d1c1f92e8b110a5"
   ],
   "81d644a15235c2ff": [
-   "353fc5b059acb038",
    "a4ed1dfafff3f816",
    "9d55a9f268496eee",
    "2645af668aef5b64",
-   "bdd0167d50d92395"
+   "bdd0167d50d92395",
+   "f04a76ae9ccbeb74"
   ],
   "81df3f2058116856": [
    "ef1fba0c494d4d22",
@@ -19680,8 +23152,8 @@
    "cede7a528cd7c566",
    "5d1d7d7516f97577",
    "48c9bb8e1b63877f",
-   "5eac797df516853e",
-   "5020d8d5fba330a1"
+   "5020d8d5fba330a1",
+   "6184e292008539d7"
   ],
   "829aa8d0fdaf0a08": [
    "5d72cc7df6c04f72",
@@ -19708,8 +23180,8 @@
    "e62663c24c5cbe47",
    "0920620ba4b7b06d",
    "703ac50e4d750286",
-   "353fc5b059acb038",
-   "b2686ed96f1c92e5"
+   "b2686ed96f1c92e5",
+   "a82d9fee99c6a0c2"
   ],
   "82fe29a83b00ab34": [
    "67a8c4f27cf53904",
@@ -19733,11 +23205,11 @@
    "95400c766d84df02"
   ],
   "8457feaa32c91e1b": [
-   "0bbb668930c58322",
    "4416ecc5ca10c341",
    "e79ace9f69852390",
    "5d72cc7df6c04f72",
-   "85885d61610927ed"
+   "85885d61610927ed",
+   "e5057aea82287946"
   ],
   "8493d1c006f44666": [
    "cd177b8645612a0e",
@@ -19756,9 +23228,9 @@
   "85689d499d65f156": [
    "6281613eef2b3451",
    "40578ca089704cb6",
-   "1ee7cb824a100fc1",
    "0fa6272ca2cc0fa5",
-   "86750a924e107414"
+   "86750a924e107414",
+   "57ab93d898306514"
   ],
   "85885d61610927ed": [
    "5d72cc7df6c04f72",
@@ -19827,15 +23299,15 @@
    "5841c527683b9974",
    "4c183ae454e69d3c",
    "819027e58c316205",
-   "994bc76bf185de5e",
-   "f1b8417f4323a03e"
+   "0541b4d3134738d8",
+   "57e1dde90f6d35ad"
   ],
   "885889c90104f89e": [
    "9d02ea6d7b671bf3",
    "9ed068be6f7623c0",
-   "94b68aae463969ef",
    "4051d969919b8423",
-   "01fdaa0fb2ad2630"
+   "01fdaa0fb2ad2630",
+   "0323ea68b0585520"
   ],
   "886eb34dd4802dfc": [
    "6c943341bad9e01f",
@@ -19860,10 +23332,10 @@
   ],
   "88d4bd38c0b9feb3": [
    "b73647dc4bc61749",
-   "d5d709061a1d21d6",
    "6faa3fc99118a25c",
    "3314461fbb1f6834",
-   "0e9de469b0948ab1"
+   "0e9de469b0948ab1",
+   "afa2cc5c72af1d76"
   ],
   "88d84db85dd4ea17": [
    "f4dcc7503327c052",
@@ -19929,18 +23401,18 @@
    "563e5eb689c5c0c5"
   ],
   "8a40abdadfe1e5c3": [
-   "36ced8dcfaf05b74",
    "65562c263781d123",
    "b027be94af8fb24d",
    "6e747f382fd2f6c8",
-   "de9d54a5ca874df6"
+   "de9d54a5ca874df6",
+   "ee0c7cde2128367e"
   ],
   "8a5345c0e6cd0241": [
-   "353fc5b059acb038",
-   "343abaeab5bbf5a1",
    "9d55a9f268496eee",
    "bfe7a2cc49e9fa82",
-   "06dea333baf0a1ed"
+   "06dea333baf0a1ed",
+   "d509fd896ab437cf",
+   "0a4c666a216a6265"
   ],
   "8a55cf75efd61d69": [
    "dc2a8ca54310bc66",
@@ -20216,11 +23688,11 @@
    "5aedb5cd1c2bb28c"
   ],
   "90d0a7da4684c500": [
-   "353fc5b059acb038",
-   "343abaeab5bbf5a1",
    "86750a924e107414",
    "b0f1d8f106b350c2",
-   "e62663c24c5cbe47"
+   "e62663c24c5cbe47",
+   "afa2cc5c72af1d76",
+   "563e5eb689c5c0c5"
   ],
   "90d95cad3128e268": [
    "9ff36f330ad0ff8d",
@@ -20231,17 +23703,17 @@
   ],
   "9118441302b6edff": [
    "cdaff7db1b0526dc",
-   "36ced8dcfaf05b74",
    "1185b77e483bd667",
    "d509fd896ab437cf",
-   "e90a112adb83b530"
+   "e90a112adb83b530",
+   "697acf0a52c6dd5e"
   ],
   "91403590391f428a": [
    "0541b4d3134738d8",
-   "4364fb4ec04108a0",
    "c16b3de4025bbbc6",
    "4aeb53e4a0d79498",
-   "2f9e818caa6b3df3"
+   "c77f3861f45a1958",
+   "7a7e4851013385f3"
   ],
   "91403e38602c1d0b": [
    "95e33ecfe0ac0232",
@@ -20454,11 +23926,11 @@
    "6fae7a1f202935b0"
   ],
   "96891968e0cdba92": [
-   "64e5b78f516eadc9",
    "95e33ecfe0ac0232",
    "b5c0748305213a37",
    "39b497b33ba98095",
-   "d509fd896ab437cf"
+   "d509fd896ab437cf",
+   "548326e330468eec"
   ],
   "96ba4d7793826827": [
    "e859d99fa81124dc",
@@ -20477,9 +23949,9 @@
   "97166a1d9f8fa5c6": [
    "23cc31f80e887750",
    "f1be77ffa321b464",
-   "9246af62e5898356",
-   "ca170e0602365a3a",
-   "b012ceea72acf0fc"
+   "95e33ecfe0ac0232",
+   "d6ca2118dda38265",
+   "d72ae23e91c09901"
   ],
   "972da3992f246e57": [
    "ae8822a42f91d324",
@@ -20517,11 +23989,11 @@
    "ef6896c9ba5f0dcd"
   ],
   "9786426f00c9ceb3": [
-   "395d64eb9bafa831",
    "9610ee649bf9c047",
    "517ae3531f8bcfa7",
    "a12608633abde048",
-   "a11f15291c2eb8c6"
+   "a11f15291c2eb8c6",
+   "cea02f2b5c275d28"
   ],
   "97de1564c7de959b": [
    "a8f1b664902247e4",
@@ -20618,8 +24090,8 @@
    "cd3069afe2dbf23e",
    "ef6896c9ba5f0dcd",
    "865095d9af647288",
-   "9242f948c69905bb",
-   "3c963032cb39ba26"
+   "3c963032cb39ba26",
+   "db83adb19c3dac72"
   ],
   "994bc76bf185de5e": [
    "cf7d6c98603bb666",
@@ -20762,11 +24234,11 @@
    "5161e9f679ba8559"
   ],
   "9cf2e125a25991f9": [
-   "414fe4562d904ad6",
    "5cdf7d2359bfaef5",
    "aded671fd81e1d63",
    "2da98c03a2ac20cb",
-   "6457f4ef054c2d55"
+   "6457f4ef054c2d55",
+   "eb04b45f1143326a"
   ],
   "9d02ea6d7b671bf3": [
    "28d9a1aea8b65228",
@@ -20793,8 +24265,8 @@
    "b56883435d2a519d",
    "2924752fca432d2b",
    "9c37456024526def",
-   "9246af62e5898356",
-   "0e9de469b0948ab1"
+   "0e9de469b0948ab1",
+   "f04285849dcf3cb2"
   ],
   "9d8238d886bc104a": [
    "ab8228fc46b2b0a2",
@@ -20848,9 +24320,9 @@
   "9e3f653e0313d611": [
    "6d9a0d27eb516a4f",
    "c5ea418997695a4e",
-   "93b0a797751fa9b8",
    "57e1dde90f6d35ad",
-   "7cff669a5e295e28"
+   "7cff669a5e295e28",
+   "982a937e957a6376"
   ],
   "9e525aa87271e133": [
    "210782e6525c8a53",
@@ -20868,10 +24340,10 @@
   ],
   "9ed068be6f7623c0": [
    "bcb357fb3381eb40",
-   "94b68aae463969ef",
    "938fa5940d38797a",
    "fd6f27d8dedabcb4",
-   "9d8238d886bc104a"
+   "9d8238d886bc104a",
+   "82cce7ec9f5a35aa"
   ],
   "9fa39fae29a6d2f5": [
    "86750a924e107414",
@@ -20940,8 +24412,8 @@
    "aded671fd81e1d63",
    "6457f4ef054c2d55",
    "1307adfc9d972fce",
-   "414fe4562d904ad6",
-   "2da98c03a2ac20cb"
+   "2da98c03a2ac20cb",
+   "9cf2e125a25991f9"
   ],
   "a0b87ee6810ec6fe": [
    "67ba56434d4a8cfe",
@@ -21045,8 +24517,8 @@
    "33081e076d2214c2",
    "5139d6f099bface2",
    "aded671fd81e1d63",
-   "414fe4562d904ad6",
-   "a578f1e92027653e"
+   "a578f1e92027653e",
+   "6de95b4e47cd959b"
   ],
   "a325dd6e0ced6f34": [
    "b1fd6335c69a72e0",
@@ -21072,9 +24544,9 @@
   "a39c3d937475f837": [
    "36419b1d54bddb36",
    "1f59c7cf6e1bd898",
-   "4a0c0d9f5dc6eccc",
    "b5c0748305213a37",
-   "3af3295f4bc1e957"
+   "3af3295f4bc1e957",
+   "97166a1d9f8fa5c6"
   ],
   "a3b9dc32372c08c3": [
    "37ceeabda38f73d0",
@@ -21084,11 +24556,11 @@
    "9abe06979694aaa2"
   ],
   "a3ebf1a4a4ed669f": [
-   "902144a7871cce60",
    "193041a31e1a203e",
    "cede7a528cd7c566",
    "8283246b25d62b2c",
-   "a23c85ecaf300719"
+   "a23c85ecaf300719",
+   "7e2ea2be49fa9dc1"
   ],
   "a41b08fb5ee5b141": [
    "5020d8d5fba330a1",
@@ -21198,7 +24670,7 @@
    "a941594bd77c34eb",
    "d3de5054cc266ef5",
    "9772ca3115020a24",
-   "5eac797df516853e"
+   "d1b73129d4f16e67"
   ],
   "a72c37c231708763": [
    "22c6b77548d7db03",
@@ -21226,7 +24698,7 @@
    "c967111bdc85aaa2",
    "9d3e19363b8ecb57",
    "c42f31a2d9300300",
-   "94b68aae463969ef"
+   "67ba56434d4a8cfe"
   ],
   "a81df975afe0f0fb": [
    "182e71ca4f407794",
@@ -21281,8 +24753,8 @@
    "228357f33e93d541",
    "cd177b8645612a0e",
    "dd899f014d5ffd18",
-   "64e5b78f516eadc9",
-   "01c601ab578c8adc"
+   "01c601ab578c8adc",
+   "d4a32922cbdfc1df"
   ],
   "a97bd54c83b6161f": [
    "7c34a7a750df61e9",
@@ -21302,8 +24774,8 @@
    "96891968e0cdba92",
    "2389a96618303f62",
    "79fbe3d280f684c6",
-   "4ab398a10cee74cb",
-   "cf7d6c98603bb666"
+   "cf7d6c98603bb666",
+   "819027e58c316205"
   ],
   "a9b60d3144941a9f": [
    "d9747d391f1732ef",
@@ -21349,10 +24821,10 @@
   ],
   "ab880bd8b8fb9d32": [
    "6e8c6a95712b4a3c",
-   "94b68aae463969ef",
-   "0bbb668930c58322",
    "d6fee3349b8b9f22",
-   "eb04b45f1143326a"
+   "eb04b45f1143326a",
+   "21fd4f340d26034f",
+   "65562c263781d123"
   ],
   "abcb556f796c4743": [
    "bcb357fb3381eb40",
@@ -21427,9 +24899,9 @@
   "ae8491ae5a38bbca": [
    "e92e5815e24b2d75",
    "0a1d111f460a04b6",
-   "93b0a797751fa9b8",
    "428902e2f96e61da",
-   "f033d2df81ed6a4d"
+   "f033d2df81ed6a4d",
+   "c5ea418997695a4e"
   ],
   "ae8822a42f91d324": [
    "ee0c7cde2128367e",
@@ -21588,9 +25060,9 @@
   "b24a348b65b3adf6": [
    "dc0122ed40412d6c",
    "01fdaa0fb2ad2630",
-   "343abaeab5bbf5a1",
    "28d9a1aea8b65228",
-   "86750a924e107414"
+   "86750a924e107414",
+   "8134719a84a07917"
   ],
   "b2686ed96f1c92e5": [
    "e62663c24c5cbe47",
@@ -21658,9 +25130,9 @@
   "b47f60f17b6b6a13": [
    "ead151b08645a7b9",
    "e5057aea82287946",
-   "414fe4562d904ad6",
    "e67026567d911f6f",
-   "9cf2e125a25991f9"
+   "9cf2e125a25991f9",
+   "c77f3861f45a1958"
   ],
   "b4efa2faee656a47": [
    "e90a112adb83b530",
@@ -21832,10 +25304,10 @@
   ],
   "b9e66319622db342": [
    "5139d6f099bface2",
-   "ed3add70ca8e747d",
    "dffe5b6218143f26",
    "b9226356760a196a",
-   "a41b08fb5ee5b141"
+   "a41b08fb5ee5b141",
+   "0ff2720effe500f4"
   ],
   "ba27ddef424a128f": [
    "bcb357fb3381eb40",
@@ -21876,8 +25348,8 @@
    "93830379823a1268",
    "dd42d91d15db61dc",
    "57e1dde90f6d35ad",
-   "395d64eb9bafa831",
-   "097be1c351b00ee3"
+   "097be1c351b00ee3",
+   "6cdb1ea6dd13ae2a"
   ],
   "bcb357fb3381eb40": [
    "ba27ddef424a128f",
@@ -21905,11 +25377,11 @@
    "a946d990e04e3f53"
   ],
   "bd8649cc4e583263": [
-   "d5d709061a1d21d6",
    "3c32ca0a17b73697",
    "23cc31f80e887750",
-   "14e443452fa764a0",
-   "61ceb6376b1ec092"
+   "61ceb6376b1ec092",
+   "e19aa5840619a2b8",
+   "73b3e51c3d0af155"
   ],
   "bdd0167d50d92395": [
    "e62663c24c5cbe47",
@@ -21982,11 +25454,11 @@
    "97166a1d9f8fa5c6"
   ],
   "c0457de4d1dfc92b": [
-   "3778a88ed217de5b",
    "0e7a6e6b6f0e960f",
-   "2f9e818caa6b3df3",
    "5071f896f798eb83",
-   "e330d7ac8c0ab8d0"
+   "e330d7ac8c0ab8d0",
+   "e22ac3a7500996b6",
+   "24396290feb11a03"
   ],
   "c04b8565c5904649": [
    "6de95b4e47cd959b",
@@ -22030,6 +25502,13 @@
    "b6469672b92c7679",
    "2c54dc17f620acec"
   ],
+  "c171307311ed53a0": [
+   "3c963032cb39ba26",
+   "ef6896c9ba5f0dcd",
+   "13064bc157903fe6",
+   "9773c1ebbc83374d",
+   "3cf41a97b1c6ee7d"
+  ],
   "c17bea1790859202": [
    "6fb7d86f5cf1d0ec",
    "ef1fba0c494d4d22",
@@ -22063,7 +25542,7 @@
    "8e3f54a6d8f726d2",
    "997371afec02c161",
    "4c57c27fd1150e59",
-   "d5d709061a1d21d6"
+   "57ab93d898306514"
   ],
   "c327ff1c60ab9a79": [
    "4e4bd3ad705c8e2d",
@@ -22083,8 +25562,8 @@
    "9831cb442b949e3f",
    "3b4f92832d18160f",
    "91c736e21d4e3552",
-   "343abaeab5bbf5a1",
-   "f2f4f3ec4d43fd89"
+   "f2f4f3ec4d43fd89",
+   "1ed657b61aefd61b"
   ],
   "c3808aacf816453d": [
    "b5d6734182857bca",
@@ -22186,17 +25665,17 @@
   ],
   "c67b7b3bb32ecbb1": [
    "cede7a528cd7c566",
-   "902144a7871cce60",
    "5f14acf985c55152",
    "0fa6272ca2cc0fa5",
-   "1a24db5859c90c27"
+   "1a24db5859c90c27",
+   "193041a31e1a203e"
   ],
   "c6e225ee1cfd54d7": [
    "9cf2e125a25991f9",
-   "414fe4562d904ad6",
    "d6fee3349b8b9f22",
    "5cdf7d2359bfaef5",
-   "9772ca3115020a24"
+   "9772ca3115020a24",
+   "6de95b4e47cd959b"
   ],
   "c6fd0694b18109c4": [
    "a52edc0dfce0b9dd",
@@ -22237,8 +25716,8 @@
    "ffc35ad69f55679b",
    "9abe187f028bfcb7",
    "8a958ebbb1c54eac",
-   "c5855b353200b765",
-   "e0e104f18b8c06a1"
+   "e0e104f18b8c06a1",
+   "da3799bd19d35a3a"
   ],
   "c9143a1f2ac2cace": [
    "dffe5b6218143f26",
@@ -22262,11 +25741,11 @@
    "a72c37c231708763"
   ],
   "c97630a3b46c30b7": [
-   "d5d709061a1d21d6",
    "d4d49dd5394f6434",
    "3c5dac258f0d71c4",
    "d57be9246b5c9387",
-   "17cf950e0680388b"
+   "17cf950e0680388b",
+   "afa2cc5c72af1d76"
   ],
   "c9b413341b8399d5": [
    "d6fee3349b8b9f22",
@@ -22377,8 +25856,8 @@
    "c419a6790d29db36",
    "5b5da1ff92691bef",
    "2b09014f7653140f",
-   "2f9e818caa6b3df3",
-   "eafa3ae19e2190fd"
+   "eafa3ae19e2190fd",
+   "3189b851eff08dd8"
   ],
   "cd2db2ca93f8c455": [
    "642b1319623de080",
@@ -22390,9 +25869,9 @@
   "cd3069afe2dbf23e": [
    "9947314626cf5e94",
    "865095d9af647288",
-   "9242f948c69905bb",
    "ef6896c9ba5f0dcd",
-   "3c963032cb39ba26"
+   "3c963032cb39ba26",
+   "8045aa5102870e05"
   ],
   "cd7179b5c2f9fb19": [
    "0a2a1a58a413f97e",
@@ -22460,16 +25939,16 @@
   "cede7a528cd7c566": [
    "8283246b25d62b2c",
    "0fa6272ca2cc0fa5",
-   "5eac797df516853e",
    "3202349524168e9a",
-   "e16c6b1fdad58c74"
+   "e16c6b1fdad58c74",
+   "0a4c666a216a6265"
   ],
   "cf7d6c98603bb666": [
    "a578f1e92027653e",
    "6457f4ef054c2d55",
    "819027e58c316205",
    "feaa9471ad0d6e22",
-   "994bc76bf185de5e"
+   "c77f3861f45a1958"
   ],
   "d0515552c15a2699": [
    "b161517befe3515a",
@@ -22655,10 +26134,10 @@
   ],
   "d37cb47ed0ce0c4f": [
    "d49a28d2bcc3bca0",
-   "25ab19f85b3082ea",
    "ee0c7cde2128367e",
    "dea49990fc98e792",
-   "922aefc032c3d951"
+   "922aefc032c3d951",
+   "563e5eb689c5c0c5"
   ],
   "d3a9c143bd932af1": [
    "a4ed1dfafff3f816",
@@ -22686,7 +26165,7 @@
    "45b3ce91455f3edf",
    "f96262dd124ee7df",
    "f5a2c4ab3c4c2e6b",
-   "52ee6fbbe1d17951"
+   "b3087f972a526242"
   ],
   "d49a28d2bcc3bca0": [
    "d9747d391f1732ef",
@@ -22711,10 +26190,10 @@
   ],
   "d4d49dd5394f6434": [
    "5020d8d5fba330a1",
-   "d5d709061a1d21d6",
    "a41b08fb5ee5b141",
    "afa2cc5c72af1d76",
-   "6c943341bad9e01f"
+   "6c943341bad9e01f",
+   "c6fd0694b18109c4"
   ],
   "d509fd896ab437cf": [
    "86750a924e107414",
@@ -22739,10 +26218,10 @@
   ],
   "d58a3b42ac6b4793": [
    "7d1c1f92e8b110a5",
-   "9246af62e5898356",
    "73b3e51c3d0af155",
    "cea495165a6b9629",
-   "d49a28d2bcc3bca0"
+   "d49a28d2bcc3bca0",
+   "b56883435d2a519d"
   ],
   "d5bc6e71334e58c7": [
    "985bd6dd3b2c571d",
@@ -22780,11 +26259,11 @@
    "3dcbc9122540a129"
   ],
   "d6ca2118dda38265": [
-   "9246af62e5898356",
    "9d55a9f268496eee",
-   "25ab19f85b3082ea",
    "f04a76ae9ccbeb74",
-   "d509fd896ab437cf"
+   "d509fd896ab437cf",
+   "ed0cddb711ad36d3",
+   "97166a1d9f8fa5c6"
   ],
   "d6f40ed2e33a36d5": [
    "b09bbd94bc8c2f68",
@@ -22798,14 +26277,14 @@
    "056cc7c28b21ff21",
    "9dc5cf37a5a0a4bb",
    "5197dcfee35f4855",
-   "353fc5b059acb038"
+   "1c566de067ad7121"
   ],
   "d72ae23e91c09901": [
    "97166a1d9f8fa5c6",
    "030b5e5da1112309",
    "cede7a528cd7c566",
-   "b012ceea72acf0fc",
-   "17cf950e0680388b"
+   "17cf950e0680388b",
+   "91403e38602c1d0b"
   ],
   "d78342506a69effe": [
    "5624aabffcf09c9e",
@@ -22819,7 +26298,7 @@
    "df906319e9e52de2",
    "43cf0336b28eb655",
    "fcd8d9c585f09966",
-   "5eac797df516853e"
+   "f837b52082533612"
   ],
   "d7e85a3c38702b15": [
    "8ad5220a89a9bd3a",
@@ -22923,8 +26402,8 @@
    "4a9036644eac9d36",
    "ef6896c9ba5f0dcd",
    "dffe5b6218143f26",
-   "ed3add70ca8e747d",
-   "187e7616f25666c9"
+   "187e7616f25666c9",
+   "5fa1845b1b3c5f1d"
   ],
   "dbc161157636202c": [
    "9c4e7d91600a5cfc",
@@ -23088,11 +26567,11 @@
    "a81df975afe0f0fb"
   ],
   "e055d2e137babfc5": [
-   "9246af62e5898356",
    "2924752fca432d2b",
    "8a5345c0e6cd0241",
    "4051d969919b8423",
-   "b5aeedfab36a7d69"
+   "b5aeedfab36a7d69",
+   "0e9de469b0948ab1"
   ],
   "e0ae39bac689cfee": [
    "53800a352ff7d1c6",
@@ -23201,10 +26680,10 @@
   ],
   "e330d7ac8c0ab8d0": [
    "b9226356760a196a",
-   "3778a88ed217de5b",
    "eafa3ae19e2190fd",
    "0e7a6e6b6f0e960f",
-   "c0457de4d1dfc92b"
+   "c0457de4d1dfc92b",
+   "938fa5940d38797a"
   ],
   "e3b6a743f5dc50b5": [
    "afcf6cc459b4a0cb",
@@ -23243,10 +26722,10 @@
   ],
   "e5057aea82287946": [
    "b47f60f17b6b6a13",
-   "414fe4562d904ad6",
-   "94b68aae463969ef",
    "e79ace9f69852390",
-   "ead151b08645a7b9"
+   "ead151b08645a7b9",
+   "3f4cccd70fdb1d61",
+   "c77f3861f45a1958"
   ],
   "e50854750e3c8223": [
    "ed53d8c8968d1fb3",
@@ -23295,14 +26774,14 @@
    "ed0cddb711ad36d3",
    "b2686ed96f1c92e5",
    "a82d9fee99c6a0c2",
-   "343abaeab5bbf5a1"
+   "f04a76ae9ccbeb74"
   ],
   "e67026567d911f6f": [
    "29f81cafed7a67e5",
-   "414fe4562d904ad6",
    "34f6d41f4a6eb470",
    "b47f60f17b6b6a13",
-   "94b68aae463969ef"
+   "e5057aea82287946",
+   "01fdaa0fb2ad2630"
   ],
   "e6caf4e2e1b657e0": [
    "7efa30a7595fc527",
@@ -23442,7 +26921,7 @@
    "ef1fba0c494d4d22",
    "6eeaceb0ac81243d",
    "b56883435d2a519d",
-   "d5d709061a1d21d6"
+   "58b649a84f87fa06"
   ],
   "ea45479b566e851a": [
    "8ad5220a89a9bd3a",
@@ -23468,16 +26947,16 @@
   "ead151b08645a7b9": [
    "b47f60f17b6b6a13",
    "e5057aea82287946",
-   "414fe4562d904ad6",
    "8d9637e543a0cc86",
-   "5cdf7d2359bfaef5"
+   "5cdf7d2359bfaef5",
+   "eb04b45f1143326a"
   ],
   "eafa3ae19e2190fd": [
-   "2f9e818caa6b3df3",
    "c419a6790d29db36",
    "2ac601a470215e11",
    "b9226356760a196a",
-   "938fa5940d38797a"
+   "938fa5940d38797a",
+   "cd2db2ca93f8c455"
   ],
   "eb04b45f1143326a": [
    "5cdf7d2359bfaef5",
@@ -23497,8 +26976,8 @@
    "c77f3861f45a1958",
    "17cf950e0680388b",
    "13d378a774a44ba2",
-   "343abaeab5bbf5a1",
-   "c6693bb7de7b2dd9"
+   "c6693bb7de7b2dd9",
+   "6d8a2b95881427f1"
   ],
   "eb34495e943ec4b3": [
    "85885d61610927ed",
@@ -23522,11 +27001,11 @@
    "662f50a4264a875c"
   ],
   "ec58c1a75b23597e": [
-   "94b68aae463969ef",
    "34f6d41f4a6eb470",
    "97579754d322a919",
    "90d95cad3128e268",
-   "e5057aea82287946"
+   "e5057aea82287946",
+   "8457feaa32c91e1b"
   ],
   "ec67226e90f076de": [
    "3dccb41c2cc4ab54",
@@ -23600,10 +27079,10 @@
   ],
   "ede333cc9365c1b9": [
    "1750d7c8f150a25d",
-   "6c26609dc83ebc36",
    "afa2cc5c72af1d76",
    "49ed99001b9bec92",
-   "555152d99b529df5"
+   "555152d99b529df5",
+   "f712dad26d4def88"
   ],
   "ee0c7cde2128367e": [
    "ae8822a42f91d324",
@@ -23700,8 +27179,8 @@
    "0a1d111f460a04b6",
    "c5ea418997695a4e",
    "428902e2f96e61da",
-   "93b0a797751fa9b8",
-   "e92e5815e24b2d75"
+   "e92e5815e24b2d75",
+   "f345f29fd9807972"
   ],
   "f04285849dcf3cb2": [
    "b56883435d2a519d",
@@ -23712,10 +27191,10 @@
   ],
   "f04a76ae9ccbeb74": [
    "4c619e81ccd04b8c",
-   "25ab19f85b3082ea",
    "d509fd896ab437cf",
    "40f378fd3bda92a7",
-   "e62663c24c5cbe47"
+   "e62663c24c5cbe47",
+   "1ac2d5bc00227f6a"
   ],
   "f0570a60b095a588": [
    "056049c248a6ef9d",
@@ -23924,15 +27403,15 @@
    "afa2cc5c72af1d76",
    "d1b73129d4f16e67",
    "eb2b70293a48b1d2",
-   "36ced8dcfaf05b74",
-   "b56883435d2a519d"
+   "b56883435d2a519d",
+   "9c37456024526def"
   ],
   "f69215e93c8f1db9": [
    "9ce638c0c31e56b5",
    "7b973e5cb3288143",
-   "d5d709061a1d21d6",
    "32ff9538845c3b8a",
-   "93b0a797751fa9b8"
+   "0fa6272ca2cc0fa5",
+   "9b9cdf7e34998dbd"
   ],
   "f7045ddacae448fb": [
    "5c76af632da675c9",
@@ -24018,9 +27497,9 @@
   "f96262dd124ee7df": [
    "9c37456024526def",
    "65562c263781d123",
-   "2212cae2d81c48d1",
    "436a3b350c536cc1",
-   "ee0c7cde2128367e"
+   "ee0c7cde2128367e",
+   "f6696657e4d0ea0a"
   ],
   "f966a6ab52ce62d3": [
    "cea495165a6b9629",
@@ -24191,11 +27670,11 @@
    "d31b8c5d6c867f07"
   ],
   "fdeb06b47dd33e5b": [
-   "ca170e0602365a3a",
    "8d9a67c180135d02",
    "9b9ac735c0520de6",
    "de579dfb54a0392c",
-   "36419b1d54bddb36"
+   "36419b1d54bddb36",
+   "9772ca3115020a24"
   ],
   "fe57e8b5ade2c0ca": [
    "37ceeabda38f73d0",
@@ -24237,7 +27716,7 @@
    "c9b413341b8399d5",
    "48c9bb8e1b63877f",
    "6e1cdbc9ad3f4e5c",
-   "94b68aae463969ef"
+   "3e487ed38f911029"
   ],
   "ffc35ad69f55679b": [
    "c8de8bcbf6fd6c86",
