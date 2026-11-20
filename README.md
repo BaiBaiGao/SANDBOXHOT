@@ -61,6 +61,12 @@ HN / GitHub / 游戏      ┘   发布网站  ◀──合并──────�
 
 **写作风格**：所有模型生成的中文（标题、摘要、精读、速读卡、日报、研判、专题）都遵守 [`prompts/style.md`](prompts/style.md) 的“活人感”规则，改编自数字生命卡兹克的 [human-writing](https://github.com/KKKKhazix/human-writing)（MIT 协议）：只写材料里有的东西，不写翻案腔和套话，不用破折号和黑话。
 
+## 访问统计
+
+网站用 [GoatCounter](https://www.goatcounter.com/) 统计访问量（不使用 Cookie，不收集可以识别个人的信息），后台在 https://sandboxhot.goatcounter.com 。每个页面（包括 `#/` 之后的路由，比如某篇论文的详情页）都单独计数，本地预览（localhost）不计数。
+
+**排除站长自己的访问**：在你常用的每台设备和每个浏览器里各打开一次 `https://baibaigao.github.io/SANDBOXHOT/#owner`，之后这台设备就不再计数；打开 `#owner-off` 可以恢复计数。清除浏览器数据后需要重新设置。
+
 ## 额度策略（同济平台 Free 套餐：每周 1000 积分，所有模型共用）
 
 流水线每周最多用 **800 积分**（滚动 7 天统计），剩下 200 留给你自己手动调用。单价写在 [`config/settings.json`](config/settings.json)。

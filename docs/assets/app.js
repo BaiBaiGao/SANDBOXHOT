@@ -431,10 +431,40 @@
       "<li><b>日报/周报</b>：每天为前一天、每周一为上一周生成编辑版综述，含今日必读、方法动向和可复用资源。</li></ul>" +
       "<p>标有“规则”的条目暂时只经过关键词预筛，之后有模型额度时会自动改写。分数是编辑评估的阅读价值，不代表内容真伪；所有模型生成内容都可能出错，请以原文为准。</p>" +
       '<h2>给 Agent 用</h2><p>本站所有数据都是公开 JSON，说明见 <a href="llms.txt">llms.txt</a>，最新精选在 <a href="api/latest.json">api/latest.json</a>。</p>' +
-      '<p class="muted">网站为纯静态页面，没有账号、评论和追踪。框架思路参考 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank" rel="noopener">AIHOT</a> 与“横纵分析法”。</p></div>';
+      '<p class="muted">网站为纯静态页面，没有账号和评论。访问量用 <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a> 统计，它不使用 Cookie，也不收集可以识别个人的信息。框架思路参考 <a href="https://github.com/KKKKhazix/AIHOT" target="_blank" rel="noopener">AIHOT</a> 与“横纵分析法”。</p></div>';
   }
 
   function notFound() { app.innerHTML = '<div class="empty">页面不存在，<a href="#/">回首页</a></div>'; }
+
+  // ---------- 访问统计（GoatCounter，无 Cookie）----------
+  // 站长在自己的设备上打开一次 #owner，这台设备之后不再计数；打开 #owner-off 恢复计数。
+  // localStorage 键名 skipgc 与 GoatCounter 官方的“跳过本机”约定一致。
+  var GC_ENDPOINT = "https://sandboxhot.goatcounter.com/count";
+  var gcReady = false;
+  function isOwner() { return store("skipgc") === "t"; }
+  function handleOwnerToggle() {
+    var h = location.hash;
+    if (h !== "#owner" && h !== "#owner-off") return false;
+    try { if (h === "#owner") localStorage.setItem("skipgc", "t"); else localStorage.removeItem("skipgc"); } catch (e) { }
+    alert(h === "#owner" ? "已设置：这台设备的访问不再计入访问统计。" : "已恢复：这台设备的访问会计入访问统计。");
+    history.replaceState(null, "", location.pathname + "#/");
+    return true;
+  }
+  function countView() {
+    if (!gcReady || isOwner() || !window.goatcounter || !window.goatcounter.count) return;
+    var route = location.hash.replace(/^#/, "") || "/";
+    window.goatcounter.count({ path: location.pathname.replace(/\/$/, "") + route, title: document.title });
+  }
+  function loadCounter() {
+    if (isOwner() || /^(localhost|127\.|0\.0\.0\.0)/.test(location.hostname)) return;
+    window.goatcounter = { no_onload: true };
+    var sc = document.createElement("script");
+    sc.async = true;
+    sc.setAttribute("data-goatcounter", GC_ENDPOINT);
+    sc.src = "https://gc.zgo.at/count.v4.js";
+    sc.onload = function () { gcReady = true; countView(); };
+    document.head.appendChild(sc);
+  }
 
   function route() {
     var h = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
@@ -453,6 +483,7 @@
     else if (r === "about") aboutPage();
     else notFound();
     if (r !== "d" && r !== "t") window.scrollTo(0, 0);
+    countView();
   }
 
   Promise.all([getJSON("data/items.json"), getJSON("data/meta.json"),
@@ -467,7 +498,9 @@
       state.topics.forEach(function (t) { state.topicBy[t.slug] = t; });
       var g = dt(state.meta.generated);
       document.getElementById("foot-meta").textContent = "更新于 " + (g ? g.toLocaleString("zh-CN", { hour12: false }) : "—") + " · 收录 " + state.items.length + " 条（模型精选 " + (state.meta.ai_items || 0) + " 条，精读 " + (state.meta.reads || 0) + " 篇）";
-      window.addEventListener("hashchange", route);
+      handleOwnerToggle();
+      loadCounter();
+      window.addEventListener("hashchange", function () { handleOwnerToggle(); route(); });
       route();
     })
     .catch(function (e) {
