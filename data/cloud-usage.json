@@ -1549,6 +1549,1096 @@
    "completion": 424,
    "reasoning": 0,
    "credits": 0.36608
+  },
+  {
+   "at": "2026-11-20T02:27:01Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4506,
+   "cached": 0,
+   "completion": 1420,
+   "reasoning": 0,
+   "credits": 0.20372
+  },
+  {
+   "at": "2026-11-20T02:27:08Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4318,
+   "cached": 0,
+   "completion": 1278,
+   "reasoning": 0,
+   "credits": 0.1886
+  },
+  {
+   "at": "2026-11-20T02:27:17Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4313,
+   "cached": 0,
+   "completion": 1274,
+   "reasoning": 0,
+   "credits": 0.18818
+  },
+  {
+   "at": "2026-11-20T02:27:23Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4369,
+   "cached": 0,
+   "completion": 1007,
+   "reasoning": 0,
+   "credits": 0.16794
+  },
+  {
+   "at": "2026-11-20T02:27:32Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4269,
+   "cached": 256,
+   "completion": 1208,
+   "reasoning": 0,
+   "credits": 0.177
+  },
+  {
+   "at": "2026-11-20T02:27:43Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4423,
+   "cached": 0,
+   "completion": 1290,
+   "reasoning": 0,
+   "credits": 0.19166
+  },
+  {
+   "at": "2026-11-20T02:27:50Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4407,
+   "cached": 0,
+   "completion": 1346,
+   "reasoning": 0,
+   "credits": 0.19582
+  },
+  {
+   "at": "2026-11-20T02:27:57Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4317,
+   "cached": 0,
+   "completion": 1130,
+   "reasoning": 0,
+   "credits": 0.17674
+  },
+  {
+   "at": "2026-11-20T02:28:04Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4409,
+   "cached": 0,
+   "completion": 1467,
+   "reasoning": 0,
+   "credits": 0.20554
+  },
+  {
+   "at": "2026-11-20T02:28:11Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4355,
+   "cached": 256,
+   "completion": 1178,
+   "reasoning": 0,
+   "credits": 0.17632
+  },
+  {
+   "at": "2026-11-20T02:28:18Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4476,
+   "cached": 2048,
+   "completion": 1007,
+   "reasoning": 0,
+   "credits": 0.12994
+  },
+  {
+   "at": "2026-11-20T02:28:26Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4289,
+   "cached": 0,
+   "completion": 1073,
+   "reasoning": 0,
+   "credits": 0.17162
+  },
+  {
+   "at": "2026-11-20T02:28:34Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4383,
+   "cached": 0,
+   "completion": 1247,
+   "reasoning": 0,
+   "credits": 0.18742
+  },
+  {
+   "at": "2026-11-20T02:28:42Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4481,
+   "cached": 0,
+   "completion": 1343,
+   "reasoning": 0,
+   "credits": 0.19706
+  },
+  {
+   "at": "2026-11-20T02:28:50Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4397,
+   "cached": 0,
+   "completion": 1218,
+   "reasoning": 0,
+   "credits": 0.18538
+  },
+  {
+   "at": "2026-11-20T02:29:00Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4351,
+   "cached": 0,
+   "completion": 1335,
+   "reasoning": 0,
+   "credits": 0.19382
+  },
+  {
+   "at": "2026-11-20T02:29:06Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4204,
+   "cached": 2048,
+   "completion": 1006,
+   "reasoning": 0,
+   "credits": 0.12442
+  },
+  {
+   "at": "2026-11-20T02:29:13Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4315,
+   "cached": 0,
+   "completion": 1006,
+   "reasoning": 0,
+   "credits": 0.16678
+  },
+  {
+   "at": "2026-11-20T02:29:20Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4394,
+   "cached": 0,
+   "completion": 1188,
+   "reasoning": 0,
+   "credits": 0.18292
+  },
+  {
+   "at": "2026-11-20T02:29:26Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 4334,
+   "cached": 0,
+   "completion": 1000,
+   "reasoning": 0,
+   "credits": 0.16668
+  },
+  {
+   "at": "2026-11-20T02:29:30Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2476,
+   "cached": 256,
+   "completion": 114,
+   "reasoning": 0,
+   "credits": 0.1621
+  },
+  {
+   "at": "2026-11-20T02:29:35Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2498,
+   "cached": 0,
+   "completion": 243,
+   "reasoning": 0,
+   "credits": 0.2082
+  },
+  {
+   "at": "2026-11-20T02:29:39Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2600,
+   "cached": 0,
+   "completion": 109,
+   "reasoning": 0,
+   "credits": 0.18216
+  },
+  {
+   "at": "2026-11-20T02:29:42Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2504,
+   "cached": 0,
+   "completion": 114,
+   "reasoning": 0,
+   "credits": 0.1776
+  },
+  {
+   "at": "2026-11-20T02:29:47Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2639,
+   "cached": 0,
+   "completion": 245,
+   "reasoning": 0,
+   "credits": 0.21714
+  },
+  {
+   "at": "2026-11-20T02:29:52Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2592,
+   "cached": 0,
+   "completion": 250,
+   "reasoning": 0,
+   "credits": 0.21552
+  },
+  {
+   "at": "2026-11-20T02:29:54Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1985,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04594
+  },
+  {
+   "at": "2026-11-20T02:29:57Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1880,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04384
+  },
+  {
+   "at": "2026-11-20T02:30:00Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1895,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04414
+  },
+  {
+   "at": "2026-11-20T02:30:02Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1884,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04392
+  },
+  {
+   "at": "2026-11-20T02:30:04Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1808,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.0424
+  },
+  {
+   "at": "2026-11-20T02:30:05Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1963,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.0455
+  },
+  {
+   "at": "2026-11-20T02:30:07Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1896,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04416
+  },
+  {
+   "at": "2026-11-20T02:30:09Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1924,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04472
+  },
+  {
+   "at": "2026-11-20T02:30:11Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1887,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04398
+  },
+  {
+   "at": "2026-11-20T02:30:13Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1828,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.0428
+  },
+  {
+   "at": "2026-11-20T02:30:15Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1968,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.0456
+  },
+  {
+   "at": "2026-11-20T02:30:17Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1892,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04408
+  },
+  {
+   "at": "2026-11-20T02:30:19Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1888,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.044
+  },
+  {
+   "at": "2026-11-20T02:30:21Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1884,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04392
+  },
+  {
+   "at": "2026-11-20T02:30:23Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1919,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04462
+  },
+  {
+   "at": "2026-11-20T02:30:25Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1814,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04252
+  },
+  {
+   "at": "2026-11-20T02:30:27Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1911,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04446
+  },
+  {
+   "at": "2026-11-20T02:30:28Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1830,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04284
+  },
+  {
+   "at": "2026-11-20T02:30:30Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1832,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04288
+  },
+  {
+   "at": "2026-11-20T02:30:33Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "applied",
+   "prompt": 1856,
+   "cached": 0,
+   "completion": 78,
+   "reasoning": 0,
+   "credits": 0.04336
+  },
+  {
+   "at": "2026-11-20T02:30:39Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-new",
+   "prompt": 1922,
+   "cached": 256,
+   "completion": 577,
+   "reasoning": 0,
+   "credits": 0.59992
+  },
+  {
+   "at": "2026-11-20T02:30:41Z",
+   "model": "Qwen3-Embedding",
+   "purpose": "embed",
+   "prompt": 1114,
+   "cached": 0,
+   "completion": 0,
+   "reasoning": 0,
+   "credits": 0.00056
+  },
+  {
+   "at": "2026-11-20T02:32:21Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 3053,
+   "cached": 0,
+   "completion": 1055,
+   "reasoning": 434,
+   "credits": 2.22858
+  },
+  {
+   "at": "2026-11-20T02:33:44Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 7761,
+   "cached": 0,
+   "completion": 1353,
+   "reasoning": 704,
+   "credits": 3.85794
+  },
+  {
+   "at": "2026-11-20T02:34:16Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 1497,
+   "cached": 0,
+   "completion": 945,
+   "reasoning": 382,
+   "credits": 1.67442
+  },
+  {
+   "at": "2026-11-20T02:35:14Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 4641,
+   "cached": 0,
+   "completion": 1699,
+   "reasoning": 1055,
+   "credits": 3.5173
+  },
+  {
+   "at": "2026-11-20T02:35:20Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-new",
+   "prompt": 1247,
+   "cached": 0,
+   "completion": 457,
+   "reasoning": 0,
+   "credits": 0.45544
+  },
+  {
+   "at": "2026-11-20T02:35:25Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-new",
+   "prompt": 1164,
+   "cached": 512,
+   "completion": 278,
+   "reasoning": 0,
+   "credits": 0.28048
+  },
+  {
+   "at": "2026-11-20T02:35:32Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1915,
+   "cached": 1024,
+   "completion": 601,
+   "reasoning": 0,
+   "credits": 0.52008
+  },
+  {
+   "at": "2026-11-20T02:35:37Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1772,
+   "cached": 256,
+   "completion": 402,
+   "reasoning": 0,
+   "credits": 0.47792
+  },
+  {
+   "at": "2026-11-20T02:35:44Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1860,
+   "cached": 1024,
+   "completion": 517,
+   "reasoning": 0,
+   "credits": 0.46424
+  },
+  {
+   "at": "2026-11-20T02:35:51Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1898,
+   "cached": 1024,
+   "completion": 550,
+   "reasoning": 5,
+   "credits": 0.4888
+  },
+  {
+   "at": "2026-11-20T02:35:58Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1787,
+   "cached": 256,
+   "completion": 486,
+   "reasoning": 0,
+   "credits": 0.52736
+  },
+  {
+   "at": "2026-11-20T02:36:05Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1924,
+   "cached": 1024,
+   "completion": 608,
+   "reasoning": 0,
+   "credits": 0.52544
+  },
+  {
+   "at": "2026-11-20T02:36:11Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1826,
+   "cached": 256,
+   "completion": 434,
+   "reasoning": 3,
+   "credits": 0.50448
+  },
+  {
+   "at": "2026-11-20T02:36:19Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1955,
+   "cached": 256,
+   "completion": 604,
+   "reasoning": 5,
+   "credits": 0.62032
+  },
+  {
+   "at": "2026-11-20T02:36:27Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1890,
+   "cached": 256,
+   "completion": 608,
+   "reasoning": 0,
+   "credits": 0.61216
+  },
+  {
+   "at": "2026-11-20T02:36:33Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1776,
+   "cached": 1024,
+   "completion": 457,
+   "reasoning": 0,
+   "credits": 0.4172
+  },
+  {
+   "at": "2026-11-20T02:36:39Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1792,
+   "cached": 1024,
+   "completion": 506,
+   "reasoning": 0,
+   "credits": 0.4472
+  },
+  {
+   "at": "2026-11-20T02:36:46Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1826,
+   "cached": 1024,
+   "completion": 509,
+   "reasoning": 0,
+   "credits": 0.45432
+  },
+  {
+   "at": "2026-11-20T02:36:53Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1882,
+   "cached": 1024,
+   "completion": 581,
+   "reasoning": 0,
+   "credits": 0.5036
+  },
+  {
+   "at": "2026-11-20T02:36:59Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1726,
+   "cached": 1024,
+   "completion": 458,
+   "reasoning": 5,
+   "credits": 0.40976
+  },
+  {
+   "at": "2026-11-20T02:37:08Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1872,
+   "cached": 256,
+   "completion": 504,
+   "reasoning": 0,
+   "credits": 0.55104
+  },
+  {
+   "at": "2026-11-20T02:37:14Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1814,
+   "cached": 1024,
+   "completion": 427,
+   "reasoning": 0,
+   "credits": 0.40648
+  },
+  {
+   "at": "2026-11-20T02:37:20Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1833,
+   "cached": 1024,
+   "completion": 478,
+   "reasoning": 0,
+   "credits": 0.43808
+  },
+  {
+   "at": "2026-11-20T02:37:26Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1872,
+   "cached": 256,
+   "completion": 529,
+   "reasoning": 0,
+   "credits": 0.56504
+  },
+  {
+   "at": "2026-11-20T02:37:32Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1820,
+   "cached": 1024,
+   "completion": 443,
+   "reasoning": 0,
+   "credits": 0.4164
+  },
+  {
+   "at": "2026-11-20T02:37:38Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1876,
+   "cached": 1024,
+   "completion": 520,
+   "reasoning": 0,
+   "credits": 0.46848
+  },
+  {
+   "at": "2026-11-20T02:37:44Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1788,
+   "cached": 1024,
+   "completion": 423,
+   "reasoning": 0,
+   "credits": 0.40008
+  },
+  {
+   "at": "2026-11-20T02:37:54Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1888,
+   "cached": 1024,
+   "completion": 591,
+   "reasoning": 5,
+   "credits": 0.51016
+  },
+  {
+   "at": "2026-11-20T02:38:00Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1773,
+   "cached": 1024,
+   "completion": 448,
+   "reasoning": 0,
+   "credits": 0.41168
+  },
+  {
+   "at": "2026-11-20T02:38:05Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1773,
+   "cached": 1024,
+   "completion": 399,
+   "reasoning": 0,
+   "credits": 0.38424
+  },
+  {
+   "at": "2026-11-20T02:38:11Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1826,
+   "cached": 1024,
+   "completion": 464,
+   "reasoning": 0,
+   "credits": 0.42912
+  },
+  {
+   "at": "2026-11-20T02:38:16Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1771,
+   "cached": 1024,
+   "completion": 423,
+   "reasoning": 0,
+   "credits": 0.39736
+  },
+  {
+   "at": "2026-11-20T02:38:25Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1794,
+   "cached": 1024,
+   "completion": 453,
+   "reasoning": 8,
+   "credits": 0.41784
+  },
+  {
+   "at": "2026-11-20T02:38:32Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1866,
+   "cached": 1024,
+   "completion": 538,
+   "reasoning": 0,
+   "credits": 0.47696
+  },
+  {
+   "at": "2026-11-20T02:38:38Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1823,
+   "cached": 1024,
+   "completion": 583,
+   "reasoning": 0,
+   "credits": 0.49528
+  },
+  {
+   "at": "2026-11-20T02:38:44Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1905,
+   "cached": 1024,
+   "completion": 528,
+   "reasoning": 0,
+   "credits": 0.4776
+  },
+  {
+   "at": "2026-11-20T02:38:51Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1267,
+   "cached": 0,
+   "completion": 473,
+   "reasoning": 0,
+   "credits": 0.4676
+  },
+  {
+   "at": "2026-11-20T02:38:56Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1108,
+   "cached": 0,
+   "completion": 329,
+   "reasoning": 0,
+   "credits": 0.36152
+  },
+  {
+   "at": "2026-11-20T02:39:00Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1190,
+   "cached": 0,
+   "completion": 271,
+   "reasoning": 0,
+   "credits": 0.34216
+  },
+  {
+   "at": "2026-11-20T02:39:05Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1239,
+   "cached": 512,
+   "completion": 373,
+   "reasoning": 0,
+   "credits": 0.34568
+  },
+  {
+   "at": "2026-11-20T02:39:09Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1114,
+   "cached": 512,
+   "completion": 307,
+   "reasoning": 0,
+   "credits": 0.28872
+  },
+  {
+   "at": "2026-11-20T02:39:16Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1252,
+   "cached": 512,
+   "completion": 450,
+   "reasoning": 0,
+   "credits": 0.39088
+  },
+  {
+   "at": "2026-11-20T02:39:20Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1150,
+   "cached": 512,
+   "completion": 237,
+   "reasoning": 0,
+   "credits": 0.25528
+  },
+  {
+   "at": "2026-11-20T02:39:28Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1314,
+   "cached": 512,
+   "completion": 528,
+   "reasoning": 0,
+   "credits": 0.44448
+  },
+  {
+   "at": "2026-11-20T02:39:33Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1218,
+   "cached": 512,
+   "completion": 381,
+   "reasoning": 0,
+   "credits": 0.3468
+  },
+  {
+   "at": "2026-11-20T02:39:37Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1128,
+   "cached": 512,
+   "completion": 240,
+   "reasoning": 0,
+   "credits": 0.25344
+  },
+  {
+   "at": "2026-11-20T02:39:42Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1150,
+   "cached": 512,
+   "completion": 334,
+   "reasoning": 0,
+   "credits": 0.3096
+  },
+  {
+   "at": "2026-11-20T02:39:47Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1182,
+   "cached": 512,
+   "completion": 365,
+   "reasoning": 0,
+   "credits": 0.33208
+  },
+  {
+   "at": "2026-11-20T02:39:53Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1229,
+   "cached": 512,
+   "completion": 398,
+   "reasoning": 0,
+   "credits": 0.35808
+  },
+  {
+   "at": "2026-11-20T02:39:56Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1070,
+   "cached": 0,
+   "completion": 170,
+   "reasoning": 0,
+   "credits": 0.2664
+  },
+  {
+   "at": "2026-11-20T02:40:02Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1190,
+   "cached": 512,
+   "completion": 478,
+   "reasoning": 0,
+   "credits": 0.39664
+  },
+  {
+   "at": "2026-11-20T02:40:07Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1137,
+   "cached": 512,
+   "completion": 256,
+   "reasoning": 0,
+   "credits": 0.26384
+  },
+  {
+   "at": "2026-11-20T02:40:11Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1161,
+   "cached": 512,
+   "completion": 301,
+   "reasoning": 0,
+   "credits": 0.29288
+  },
+  {
+   "at": "2026-11-20T02:40:16Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1087,
+   "cached": 0,
+   "completion": 302,
+   "reasoning": 0,
+   "credits": 0.34304
+  },
+  {
+   "at": "2026-11-20T02:40:20Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1067,
+   "cached": 512,
+   "completion": 206,
+   "reasoning": 0,
+   "credits": 0.22464
+  },
+  {
+   "at": "2026-11-20T02:40:24Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1111,
+   "cached": 512,
+   "completion": 247,
+   "reasoning": 0,
+   "credits": 0.25464
+  },
+  {
+   "at": "2026-11-20T02:40:28Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1127,
+   "cached": 512,
+   "completion": 260,
+   "reasoning": 0,
+   "credits": 0.26448
+  },
+  {
+   "at": "2026-11-20T02:40:32Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1126,
+   "cached": 512,
+   "completion": 232,
+   "reasoning": 0,
+   "credits": 0.24864
+  },
+  {
+   "at": "2026-11-20T02:40:38Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1105,
+   "cached": 512,
+   "completion": 382,
+   "reasoning": 0,
+   "credits": 0.32928
+  },
+  {
+   "at": "2026-11-20T02:40:42Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1139,
+   "cached": 512,
+   "completion": 294,
+   "reasoning": 0,
+   "credits": 0.28544
+  },
+  {
+   "at": "2026-11-20T02:40:48Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1105,
+   "cached": 0,
+   "completion": 296,
+   "reasoning": 0,
+   "credits": 0.34256
   }
  ]
 }
