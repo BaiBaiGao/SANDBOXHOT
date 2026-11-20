@@ -11,15 +11,25 @@ from .relevance import item_topics
 EXTRA_KEYS = ("venue", "pdf", "stars", "points", "comments", "discussion", "language", "cited_by", "categories")
 
 
+def _plain_summary(it: dict, title: str) -> str:
+    """没有中文摘要时用原文摘要；Google 新闻的“摘要”只是标题加媒体名，和标题重复就不显示。"""
+    text = it.get("text", "")[:280]
+    norm = lambda x: "".join(ch for ch in x.lower() if ch.isalnum())
+    if title and norm(text).startswith(norm(title)[:60]):
+        return ""
+    return text
+
+
 def public_item(it: dict, defs: list[dict]) -> dict:
     extra = {k: v for k, v in (it.get("extra") or {}).items() if k in EXTRA_KEYS and v}
     read = it.get("read") or {}
+    title, pub = cluster.split_publisher(it)
     out = {
-        "id": it["id"], "url": it["url"], "title": it["title"], "title_zh": it.get("title_zh", ""),
-        "summary": it.get("summary_zh") or it.get("text", "")[:280],
+        "id": it["id"], "url": it["url"], "title": title, "title_zh": it.get("title_zh", ""),
+        "summary": it.get("summary_zh") or _plain_summary(it, title),
         "summary_is_zh": bool(it.get("summary_zh")),
         "domain": it.get("domain", "application"), "score": it.get("score", 0), "hot": it.get("hot", 0),
-        "source": it["source_name"], "source_id": it["source_id"], "kind": it["kind"],
+        "source": f"{pub}（Google 新闻）" if pub else it["source_name"], "source_id": it["source_id"], "kind": it["kind"],
         "published": it["published"], "added": it.get("added", it["published"]),
         "authors": it.get("authors", [])[:6], "tags": it.get("tags", []), "ai": bool(it.get("llm")),
         "topics": item_topics(it, defs),
