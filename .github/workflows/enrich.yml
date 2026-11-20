@@ -6,7 +6,9 @@ name: Enrich via Tongji VPN
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 1-21/4 * * *'   # UTC；在发布任务（每 4 小时的 53 分）之前半小时
+    # 每小时第 23 分检查一次。GitHub 经常跳过定时任务，所以多触发；
+    # scripts/cloud_gate.py 判断距上次成功加工是否满约 4 小时，不满就在一分钟内退出，不连 VPN、不花积分。
+    - cron: '23 * * * *'
 concurrency:
   group: sandboxhot-production   # 和发布任务排队执行，不会同时推送
   cancel-in-progress: false
@@ -41,50 +43,59 @@ jobs:
         with:
           ref: main
           fetch-depth: 30
-      - uses: actions/setup-python@v5
+      - name: 检查距上次成功加工是否满 4 小时
+        id: gate
         if: steps.secrets.outputs.ok == 'true'
+        run: python3 scripts/cloud_gate.py check
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
         with:
           python-version: '3.12'
       - name: 恢复额度账本与向量缓存
-        if: steps.secrets.outputs.ok == 'true'
+        if: steps.gate.outputs.run == 'true'
         run: |
           mkdir -p state
           if [ -f data/cloud-usage.json ]; then cp data/cloud-usage.json state/usage.json; fi
       - uses: actions/cache/restore@v4
-        if: steps.secrets.outputs.ok == 'true'
+        if: steps.gate.outputs.run == 'true'
         with:
           path: state/embeddings.json
           key: sandboxhot-embeddings-${{ github.run_id }}
           restore-keys: sandboxhot-embeddings-
       - name: 安装 openconnect
-        if: steps.secrets.outputs.ok == 'true'
+        if: steps.gate.outputs.run == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq openconnect dnsutils > /dev/null
       - name: 连接同济 VPN
         id: vpn
-        if: steps.secrets.outputs.ok == 'true'
+        if: steps.gate.outputs.run == 'true'
         run: scripts/cloud_vpn.sh up
       - name: 模型加工
-        if: steps.secrets.outputs.ok == 'true' && steps.vpn.outcome == 'success'
+        id: enrich
+        if: steps.gate.outputs.run == 'true' && steps.vpn.outcome == 'success'
         run: python run.py enrich
       - name: 断开同济 VPN
-        if: always() && steps.secrets.outputs.ok == 'true'
+        if: always() && steps.gate.outputs.run == 'true'
         run: scripts/cloud_vpn.sh down
       - uses: actions/cache/save@v4
-        if: always() && steps.secrets.outputs.ok == 'true' && hashFiles('state/embeddings.json') != ''
+        if: always() && steps.gate.outputs.run == 'true' && hashFiles('state/embeddings.json') != ''
         with:
           path: state/embeddings.json
           key: sandboxhot-embeddings-${{ github.run_id }}
-      - name: 提交加工结果
+      - name: 提交加工结果与运行记录
         id: commit
-        if: always() && steps.secrets.outputs.ok == 'true' && steps.vpn.outcome == 'success'
+        if: always() && steps.gate.outputs.run == 'true'
+        env:
+          ENRICH_OUTCOME: ${{ steps.enrich.outcome }}
         run: |
+          if [ "$ENRICH_OUTCOME" = "success" ]; then result=success; else result=failure; fi
+          python scripts/cloud_gate.py record "$result"
           if [ -f state/usage.json ]; then cp state/usage.json data/cloud-usage.json; fi
           python run.py guard
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/enrichments.json data/cloud-usage.json
+          git add data/enrichments.json data/cloud-usage.json data/cloud-schedule.json
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -q -m "enrich(cloud): model picks $(date -u +'%Y-%m-%d %H:%M')"
           for i in 1 2 3; do

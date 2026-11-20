@@ -111,7 +111,7 @@ GitHub 上这个文件里**没有 Key**（`SBH_KEY` 留空，第一次运行时�
 
 ### 云端连同济 VPN（GitHub Actions，不需要开电脑）
 
-`.github/workflows/enrich.yml` 每 4 小时在 GitHub 的服务器上用开源的 `openconnect --protocol=array`（同济 VPN 用的 Array Networks 协议）连上同济 VPN，运行和笔记本完全相同的 `python run.py enrich`，然后断开 VPN，只提交 `data/enrichments.json` 和额度账本 `data/cloud-usage.json`，再触发网站发布。
+`.github/workflows/enrich.yml` 每小时检查一次（GitHub 经常跳过定时任务，所以多触发），距上次成功加工满约 4 小时才真正运行；上次失败时也要等满 4 小时再试，避免账号被锁。运行时在 GitHub 的服务器上用开源的 `openconnect --protocol=array`（同济 VPN 用的 Array Networks 协议）连上同济 VPN，运行和笔记本完全相同的 `python run.py enrich`，然后断开 VPN，只提交 `data/enrichments.json` 和额度账本 `data/cloud-usage.json`，再触发网站发布。
 
 需要在仓库 **Settings → Secrets and variables → Actions → New repository secret** 里添加：
 
