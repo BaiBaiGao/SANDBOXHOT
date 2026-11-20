@@ -376,5 +376,28 @@ class TestCloudGate(unittest.TestCase):
             self.assertEqual(st["last_success"], iso(self.now))
 
 
+class TestCluster(unittest.TestCase):
+    def _news(self, iid, title, src="gnews-biz-digital-twin-agents", kind="rss", h=0):
+        return {"id": iid, "title": title, "title_zh": "", "source_id": src, "kind": kind, "score": 60,
+                "added": iso(now_utc()), "published": iso(now_utc() - timedelta(hours=h))}
+
+    def test_google_news_duplicates_merge(self):
+        from sandboxhot import cluster
+        items = [
+            self._news("a", "Plurai Raises $13M Seed to Stress-Test AI Agents in Digital Twin Simulations - BigGo Finance"),
+            self._news("b", "Plurai raises $13 million for AI agent simulation platform - TechGig", h=5),
+            self._news("c", "Plurai Secures $13M Seed to Bring Self-Driving Simulation Techniques to AI Agents - AI Insider", src="gnews-app-policy-sim"),
+            self._news("d", "Acme launches city digital twin with generative agents - Reuters"),
+            self._news("p1", "Plurai: a benchmark for agent simulation", src="arxiv-x", kind="paper"),
+        ]
+        cluster.assign(items)
+        by = {it["id"]: it for it in items}
+        self.assertEqual(len({by[x]["cluster"] for x in "abc"}), 1)   # 同一融资新闻合并
+        self.assertEqual(by["a"]["cluster_size"], 3)                  # 按实际媒体计来源数
+        self.assertNotEqual(by["d"]["cluster"], by["a"]["cluster"])   # 不同事件不合并
+        self.assertNotEqual(by["p1"]["cluster"], by["a"]["cluster"])  # 论文不按专有名词规则合并
+        self.assertEqual(cluster.split_publisher(by["a"]), ("Plurai Raises $13M Seed to Stress-Test AI Agents in Digital Twin Simulations", "BigGo Finance"))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -208,7 +208,7 @@ def run_reads(store, cfg: dict, llm: LLM, log=print, phase: str = "new") -> int:
     p = cfg["pipeline"]
     cands = _queue([it for it in store.items.values()
                     if it.get("status") == "selected" and it.get("llm") and not it.get("read")
-                    and it.get("read_fail", 0) < 2], cfg, phase)
+                    and it.get("read_fail", 0) < 2 and it.get("is_lead", True)], cfg, phase)  # 同一事件只精读代表条目
 
     def user(it):
         return json.dumps({"source": it["source_name"], "kind": it["kind"], "venue": (it.get("extra") or {}).get("venue", ""),
@@ -252,7 +252,7 @@ def run_briefs(store, cfg: dict, llm: LLM, log=print, phase: str = "new") -> int
         return 0
     cands = _queue([it for it in store.items.values()
                     if it.get("status") == "selected" and it.get("llm") and not it.get("brief")
-                    and it.get("brief_fail", 0) < 2
+                    and it.get("brief_fail", 0) < 2 and it.get("is_lead", True)
                     and it.get("domain") in p["brief_domains"] and it.get("score", 0) >= p["brief_min_score"]
                     and len(it.get("text", "")) >= 200], cfg, phase)
 
@@ -389,7 +389,7 @@ def run_embeddings(store, cfg: dict, llm: LLM, log=print) -> dict:
                 ia, ib = store.items[a], store.items[b]
                 # 同一事件：只合并新闻/帖子类（两篇不同论文永远是两件事），且来源不同、标题也有重合
                 if sim >= p["dupe_sim"] and a in recent and b in recent and "paper" not in (ia["kind"], ib["kind"]) \
-                        and ia["source_id"] != ib["source_id"] \
+                        and cluster.publisher_of(ia) != cluster.publisher_of(ib) \
                         and cluster.jaccard(cluster.tokens(ia), cluster.tokens(ib)) >= 0.2:
                     dupes.append(sorted([a, b]))
     for i in ids:
