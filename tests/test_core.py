@@ -346,5 +346,35 @@ class TestPipeline(Base):
         self.assertTrue(any(not d["ai"] for d in st.digests["daily"]))
 
 
+class TestCloudGate(unittest.TestCase):
+    def setUp(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("cloud_gate", ROOT / "scripts" / "cloud_gate.py")
+        self.g = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.g)
+        self.now = now_utc()
+
+    def ago(self, h):
+        return iso(self.now - timedelta(hours=h))
+
+    def test_rules(self):
+        d = self.g.decide
+        self.assertTrue(d({}, self.now, "schedule", 3.75)[0])  # 第一次：执行
+        ok = {"last_success": self.ago(1), "last_attempt": self.ago(1), "last_result": "success"}
+        self.assertFalse(d(ok, self.now, "schedule", 3.75)[0])  # 1 小时前刚成功：跳过
+        self.assertTrue(d(ok, self.now, "workflow_dispatch", 3.75)[0])  # 手动运行：总是执行
+        self.assertTrue(d({**ok, "last_success": self.ago(4), "last_attempt": self.ago(4)}, self.now, "schedule", 3.75)[0])
+        fail = {"last_success": self.ago(9), "last_attempt": self.ago(1), "last_result": "failure"}
+        self.assertFalse(d(fail, self.now, "schedule", 3.75)[0])  # 刚失败过：等满间隔，避免反复登录失败
+        self.assertTrue(d({**fail, "last_attempt": self.ago(4)}, self.now, "schedule", 3.75)[0])
+
+    def test_record(self):
+        with tempfile.TemporaryDirectory() as t, mock.patch.object(self.g, "STATE", Path(t) / "s.json"):
+            self.g.record("success", self.now)
+            st = self.g.record("failure", self.now + timedelta(hours=5))
+            self.assertEqual(st["last_result"], "failure")
+            self.assertEqual(st["last_success"], iso(self.now))
+
+
 if __name__ == "__main__":
     unittest.main()
