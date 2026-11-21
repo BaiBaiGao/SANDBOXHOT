@@ -85,16 +85,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 62,
+   "tags": [
+    "自动驾驶仿真",
+    "强化学习",
+    "LLM 智能体",
+    "奖励设计"
+   ],
+   "title_zh": "LearningFlow 用多个 LLM 智能体自动生成课程与奖励函数，加速城市驾驶强化学习",
+   "summary_zh": "LearningFlow 让多个大模型智能体协作完成强化学习训练流程：一个生成智能体产出课程序列和奖励函数，另一个分析智能体评估训练进度并反馈。作者称这套流程减少了人工设计奖励函数的工作量，并提高了样本效率，在多个复杂驾驶任务上完成验证。",
    "cluster": "003a2f82749b2679",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "004bccf67d196e4f": {
    "id": "004bccf67d196e4f",
@@ -200,17 +216,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "00504662a01de38d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "0073f7aaf98ffa6d": {
    "id": "0073f7aaf98ffa6d",
@@ -269,7 +290,7 @@
    "cluster": "0073f7aaf98ffa6d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 49.31,
+   "hot": 45.87,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -329,7 +350,7 @@
    "cluster": "00798a23152e25ac",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 26.09,
+   "hot": 24.27,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -390,8 +411,8 @@
     "合作演化",
     "多智能体"
    ],
-   "title_zh": "arXiv 论文发布 NetworkGames，用 MBTI 人格 LLM 智能体模拟网络博弈中的合作行为",
-   "summary_zh": "框架把生成式智能体与几何深度学习结合，将社会仿真形式化为由 LLM 策略驱动的消息传递过程。在迭代囚徒困境中，16 种 MBTI 人格两两组合形成基线互动矩阵，宏观合作结果无法由两两互动推出，而由网络连通性与人格空间分布共同决定，小世界网络反而不利于合作。",
+   "title_zh": "NetworkGames：给 LLM 智能体配 MBTI 人格，在网络博弈中模拟合作行为",
+   "summary_zh": "作者提出 NetworkGames 框架，把生成式智能体和几何深度学习结合起来，让每个 LLM 智能体带一种 MBTI 人格，放进小世界、无标度等网络结构里反复玩囚徒困境。结果发现，宏观合作水平无法从两两互动预测，而是由网络连通性和人格的空间分布共同决定：小世界网络损害合作，把亲社会人格放到无标度网络的枢纽节点上则能显著促进合作。",
    "cluster": "00d9f407e28f62f8",
    "cluster_size": 1,
    "is_lead": true,
@@ -401,8 +422,8 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "economy",
-    "human-behavior"
+    "generative-agents",
+    "framework"
    ],
    "applied": false
   },
@@ -1103,16 +1124,30 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 66,
+   "tags": [
+    "空管仿真",
+    "场景生成",
+    "LLM",
+    "评测基准"
+   ],
+   "title_zh": "AirTrafficGen 用 LLM 按需生成空管训练场景，Gemini 2.5 Pro、GPT-5 等可维持运行真实性",
+   "summary_zh": "作者把扇区拓扑（空域几何、航路、定位点）编码成图结构输入大模型，让 Gemini 2.5 Pro、OpenAI o3、GPT-oss-120b、GPT-5 生成高流量空管场景，并能通过文本反馈迭代修正有缺陷的场景。研究目标是替代人工设计，扩充空管训练与验证仿真的数量和多样性。",
    "cluster": "035439ae5b3992f0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "urban",
+    "framework"
+   ],
+   "applied": false
   },
   "035c55f3fb886d4a": {
    "id": "035c55f3fb886d4a",
@@ -1215,17 +1250,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 10,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "03a64b8de7fbbbf8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "03e3026fdafe4a18": {
    "id": "03e3026fdafe4a18",
@@ -1273,16 +1313,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "人类行为模拟",
+    "博弈仿真",
+    "心智理论",
+    "LLM 智能体"
+   ],
+   "title_zh": "2700 次最后通牒博弈仿真：心智理论推理让 LLM 智能体行为更贴近人类规范",
+   "summary_zh": "作者给 LLM 智能体设定贪婪、公平、无私三种亲社会信念，并搭配不同阶数的思维链与心智理论推理，在最后通牒博弈上跑了 2700 次仿真。结果显示心智理论推理提升了行为与人类规范的一致性和决策稳定性；推理模型 o3-mini、DeepSeek-R1 Distilled Qwen 32B 的表现不如加了心智理论推理的版本。",
    "cluster": "03e3026fdafe4a18",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "org"
+   ],
+   "score1": 63,
+   "score2": 82,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "045163ecd1444c47": {
    "id": "045163ecd1444c47",
@@ -1353,7 +1409,10 @@
     "human-behavior",
     "eval"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 75,
+   "model2": "Qwen3.8-27B"
   },
   "04a560ef92b97705": {
    "id": "04a560ef92b97705",
@@ -1417,7 +1476,10 @@
     "generative-agents",
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 82,
+   "model2": "Qwen3.8-27B"
   },
   "04cd269e3d8c939f": {
    "id": "04cd269e3d8c939f",
@@ -1662,16 +1724,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "人类行为模拟",
+    "保险决策",
+    "RAG",
+    "合成样本"
+   ],
+   "title_zh": "InsurAgent 用 RAG 把 LLM 决策锚定在真实调查数据上，模拟个人购买洪水保险的行为",
+   "summary_zh": "作者先构建基准数据集，记录不同因素下的保险购买概率，发现 LLM 能定性理解因素但估不准概率。InsurAgent 由感知、检索、推理、行动、记忆五个模块组成，检索模块用 RAG 把决策锚定在实证调查数据上，从而准确估计边际概率和双变量概率，推理模块再用常识外推到调查数据之外的情境。",
    "cluster": "0522601ff27f10cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "economy"
+   ],
+   "applied": true
   },
   "053d0ac761f46892": {
    "id": "053d0ac761f46892",
@@ -1712,17 +1787,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "053d0ac761f46892",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "0541b4d3134738d8": {
    "id": "0541b4d3134738d8",
@@ -1893,7 +1973,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.94
+   "hot": 27.85
   },
   "056049c248a6ef9d": {
    "id": "056049c248a6ef9d",
@@ -1950,8 +2030,8 @@
     "对抗攻击",
     "智能体安全"
    ],
-   "title_zh": "多智能体实验发现 LLM 智能体把人类当外群体，并提出信念投毒攻击",
-   "summary_zh": "受控多智能体社会仿真显示，智能体在最小“我们/他们”线索下就表现出群体间偏见，把其他 AI 视为内群体、人类视为外群体。当智能体不确定对方是否真人时，这种偏见仍会出现在面向人类的交互中。作者据此形式化 Belief Poisoning Attack（信念投毒攻击），并给出可缓解的防御方法。",
+   "title_zh": "LLM 智能体会把人类当外群体：身份信念可被投毒诱发对人的偏见",
+   "summary_zh": "作者发现 LLM 智能体在仅有“我们 vs 他们”的线索下就表现出群际偏见，当群体边界落在智能体与人类之间时，智能体可能把其他 AI 当内群体、把人类当外群体。实验显示这种偏见在纯智能体环境和对人交互中都存在，作者据此提出信念投毒攻击（BPA）并验证了防御方法。",
    "cluster": "056049c248a6ef9d",
    "cluster_size": 1,
    "is_lead": true,
@@ -2077,7 +2157,7 @@
    "cluster": "0599676be458de0d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.53,
+   "hot": 15.37,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -3034,16 +3114,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 59,
+   "tags": [
+    "多智能体",
+    "自动驾驶",
+    "设计空间探索",
+    "仿真"
+   ],
+   "title_zh": "多智能体 LLM 框架自动探索自动驾驶系统设计空间，在 robotaxi 案例上优于遗传算法",
+   "summary_zh": "作者提出一个多智能体 LLM 框架，把多模态推理与 3D 仿真、性能剖析工具结合，自动解读执行输出并生成设计点。在 SAE L4 robotaxi 案例上，相比遗传算法基线找到更多帕累托最优且成本更低的方案。",
    "cluster": "07a258f8bcaa38ef",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "07ac4ce6a7f4a68c": {
    "id": "07ac4ce6a7f4a68c",
@@ -3275,7 +3371,7 @@
    "cluster": "0856c29adf22c46d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 47.69,
+   "hot": 44.36,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:31Z",
    "relevant": true,
@@ -3510,17 +3606,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 25,
+   "tags": [
+    "自动驾驶",
+    "高风险场景",
+    "数据集",
+    "LLM 标注"
+   ],
+   "title_zh": "K-Risk 数据集整合 20 个中欧美轨迹数据集，用 LLM 标注出 31398 个高风险驾驶事件",
+   "summary_zh": "K-Risk 把结构化驾驶轨迹与 LLM 生成的语义标注结合，从欧洲、中国、美国的 20 个人工与自动驾驶轨迹数据集中提取 31398 个高风险事件，其中 1036 个为近碰撞极端子集。每个事件含同步轨迹、元数据和语言三元组，部分附因果风险分析与动作建议。",
    "cluster": "092e66dce882ce32",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "score1": 62,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "0971d995f2893413": {
    "id": "0971d995f2893413",
@@ -3562,17 +3674,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 30,
+   "tags": [
+    "车联网",
+    "无人机中继",
+    "强化学习",
+    "交通仿真"
+   ],
+   "title_zh": "SA-DRL 用 LLM 生成拓扑先验引导无人机中继部署，PPO 训练回合降至 28.6%",
+   "summary_zh": "作者提出语义增强 DRL（SA-DRL），把预训练 LLM 对齐后从动态交通状态生成依赖路网拓扑的动作先验，再通过 Logit Fusion 与 PPO 策略结合。基于真实城市轨迹的仿真显示，SA-PPO 只用 28.6% 的训练回合达到原版 PPO 的收敛奖励，连通分量内车辆数提升 7.9%。",
    "cluster": "0971d995f2893413",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 55,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "097be1c351b00ee3": {
    "id": "097be1c351b00ee3",
@@ -3733,17 +3861,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "0a1d111f460a04b6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "0a2a1a58a413f97e": {
    "id": "0a2a1a58a413f97e",
@@ -4123,17 +4256,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "0b3da6afd6574de5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "0b7459952ea1e704": {
    "id": "0b7459952ea1e704",
@@ -4584,17 +4722,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "0d593fed607a7310",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "0e00fb4fe408e09e": {
    "id": "0e00fb4fe408e09e",
@@ -4900,7 +5043,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 56,
    "tags": [
     "用户模拟",
     "对话系统",
@@ -4919,7 +5062,10 @@
     "human-behavior",
     "org"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 60,
+   "model2": "Qwen3.8-27B"
   },
   "0ed7cdc897601c6e": {
    "id": "0ed7cdc897601c6e",
@@ -5361,7 +5507,7 @@
    "cluster": "10489597fd04d227",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.34
+   "hot": 4.96
   },
   "105a99a0405e260d": {
    "id": "105a99a0405e260d",
@@ -5401,17 +5547,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "105a99a0405e260d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "1086e772026ac543": {
    "id": "1086e772026ac543",
@@ -5525,10 +5676,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 25,
    "tags": [
     "交通信号控制",
     "仿真到现实",
@@ -5543,12 +5694,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:43Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban",
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "10bfa14c18db4954": {
    "id": "10bfa14c18db4954",
@@ -5587,17 +5741,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 30,
+   "tags": [
+    "交通信号控制",
+    "LLM 智能体",
+    "可解释策略",
+    "SUMO"
+   ],
+   "title_zh": "SignalClaw 用 LLM 进化生成可解释的信号控制技能，在 SUMO 常规与事件场景中测试",
+   "summary_zh": "SignalClaw 让 LLM 充当进化式技能生成器，每个技能包含理由、选择指引和可执行代码，仿真指标被翻译成自然语言反馈来指导迭代。事件检测器通过 TraCI 识别救护车、公交优先、事故和拥堵，再按优先级链在运行时组合技能，无需重训。在 SUMO 常规与注入事件场景中与四个基线对比。",
    "cluster": "10bfa14c18db4954",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": false,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 62,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "10fa5664d35b57eb": {
    "id": "10fa5664d35b57eb",
@@ -5796,8 +5966,8 @@
     "生成模型",
     "众包模拟"
    ],
-   "title_zh": "CrowdLLM 用生成模型增强 LLM 数字人群，提升众包、投票与评分任务的分布保真度",
-   "summary_zh": "针对纯 LLM 数字人群难以兼顾准确性与多样性，作者提出 CrowdLLM，把预训练 LLM 与生成模型结合。在众包、投票、用户评分等多个领域的实验中，该方法在准确度和对人类数据的分布保真度上均有较好表现，并给出理论分析。",
+   "title_zh": "CrowdLLM：用生成模型增强 LLM 构建更接近真人群体的数字人口",
+   "summary_zh": "作者提出 CrowdLLM，把预训练大语言模型和生成模型结合起来构建数字人口，解决纯 LLM 方法在准确性和多样性上不足的问题。在众包、投票、用户评分等多个领域的实验中，CrowdLLM 在准确率和与真实人类数据的分布一致性上都取得了不错的效果。",
    "cluster": "1146fe24388c1baa",
    "cluster_size": 1,
    "is_lead": true,
@@ -5807,8 +5977,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "social-sim",
-    "eval"
+    "social-sim"
    ],
    "applied": false
   },
@@ -6318,7 +6487,7 @@
    "cluster": "12f6125c2b6f37b3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 45.09
+   "hot": 41.95
   },
   "12f64111a08d91c8": {
    "id": "12f64111a08d91c8",
@@ -6419,7 +6588,7 @@
    "cluster": "13064bc157903fe6",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 6.02
+   "hot": 5.6
   },
   "1307adfc9d972fce": {
    "id": "1307adfc9d972fce",
@@ -6822,17 +6991,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "14ad1876c9662d1b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "14d147d4dd16558a": {
    "id": "14d147d4dd16558a",
@@ -7028,17 +7202,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 26,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "15d42c8c2b9ed517",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "1646a84bab386c53": {
    "id": "1646a84bab386c53",
@@ -7135,17 +7314,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 26,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "166815573d7696c8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "1679654e1500b3ce": {
    "id": "1679654e1500b3ce",
@@ -7185,10 +7369,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 30,
    "tags": [
     "ABM",
     "文档标准",
@@ -7203,12 +7387,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T19:08:19Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "eval",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 30,
+   "model2": "Qwen3.8-27B"
   },
   "16da77bdefb1feb7": {
    "id": "16da77bdefb1feb7",
@@ -7251,10 +7438,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:18:16Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 20,
    "tags": [
     "自动驾驶",
     "CARLA",
@@ -7269,11 +7456,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:37:47Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "1728a397ee3eeb8c": {
    "id": "1728a397ee3eeb8c",
@@ -7447,16 +7637,30 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 70,
+   "tags": [
+    "供应链仿真",
+    "世界模型",
+    "智能体强化学习",
+    "经济模拟"
+   ],
+   "title_zh": "ReflectiChain 用生成式世界模型预演供应链轨迹，出口禁令场景可操作性从 13.3% 回到 88.5%",
+   "summary_zh": "作者提出 ReflectiChain，把生成式世界模型驱动的潜在轨迹预演与行动中反思、事后反思结合，并在部署阶段用回溯式智能体强化学习让策略继续演化。在自建高保真基准 Semi-Sim 上，出口禁令和材料短缺等极端场景下平均单步奖励比最强 LLM 基线高 250%，可操作性比率从 13.3% 恢复到 88.5% 以上。",
    "cluster": "174238aebb5e3f28",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": true,
+   "topics": [
+    "economy",
+    "world-env",
+    "org"
+   ],
+   "applied": false
   },
   "1750d7c8f150a25d": {
    "id": "1750d7c8f150a25d",
@@ -7918,7 +8122,7 @@
    "cluster": "1836246dfbfb504c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.89
+   "hot": 25.94
   },
   "187e7616f25666c9": {
    "id": "187e7616f25666c9",
@@ -8292,17 +8496,28 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 38,
+   "tags": [
+    "地学模拟",
+    "生成式AI",
+    "综述"
+   ],
+   "title_zh": "综述：生成式 AI 与大语言模型在地学与地球系统模拟中的应用",
+   "summary_zh": "这篇综述梳理 GAN、物理信息神经网络和 GPT 类结构在地学中的应用，涵盖预测、模拟与多准则决策问题，并讨论未来挑战。文中未给出具体仿真实验或验证结果。",
    "cluster": "190725a6aee08f57",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": true,
+   "topics": [
+    "world-env"
+   ],
+   "applied": false
   },
   "193041a31e1a203e": {
    "id": "193041a31e1a203e",
@@ -9147,7 +9362,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.91
+   "hot": 27.83
   },
   "1adcd580424fc1d6": {
    "id": "1adcd580424fc1d6",
@@ -9545,16 +9760,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 68,
+   "tags": [
+    "共享单车",
+    "强化学习",
+    "出行调度",
+    "LLM 智能体"
+   ],
+   "title_zh": "SmartFlow 在纽约 Citi Bike 仿真中训练 DQN 调度，网络失衡降低 95% 以上",
+   "summary_zh": "SmartFlow 把共享单车再平衡拆成战略、战术和沟通三层。战略层 DQN 在纽约 Citi Bike 网络的高保真仿真里学习再平衡策略，战术层优化多段行程和即时调度，沟通层用 LLM 智能体把调度计划转成给一线人员的指令。多次固定种子运行显示网络失衡下降超过 95%。",
    "cluster": "1c16631ca88cafed",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 78,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "1c3b26dbd944d5b2": {
    "id": "1c3b26dbd944d5b2",
@@ -9985,8 +10216,8 @@
     "跨语言",
     "社会仿真"
    ],
-   "title_zh": "16 种语言、1584 场多智能体实验：安全对齐在日语等语言中反而放大集体病理",
-   "summary_zh": "四项预注册研究共运行 1584 场多智能体仿真，覆盖 16 种语言和三个模型家族。英语中加强对齐降低了集体病理（g=-1.844），日语中却反向升高（g=+0.771），作者称之为“对齐反噬”；对齐引发的内外分离在 15/16 种语言中出现。",
+   "title_zh": "对齐干预在 16 种语言中效果反转：英语降风险、日语反升的多智能体实验",
+   "summary_zh": "作者做了四项预注册实验，共 1584 次多智能体仿真，覆盖 16 种语言和三个模型家族。结果发现对齐指令在英语里能降低集体病理性行为，在日语里反而放大它，作者称之为 alignment backfire。15/16 的语言出现对齐诱导的内在解离，英语的安全效果跨模型成立，日语的反转则依赖具体模型。",
    "cluster": "1e96458cce8597a5",
    "cluster_size": 1,
    "is_lead": true,
@@ -9995,8 +10226,8 @@
    "triaged": "2026-11-19T17:30:49Z",
    "relevant": true,
    "topics": [
-    "social-sim",
-    "eval"
+    "eval",
+    "social-sim"
    ],
    "applied": false
   },
@@ -10042,17 +10273,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 27,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "1ed49202ef24fac5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "1ed657b61aefd61b": {
    "id": "1ed657b61aefd61b",
@@ -10087,17 +10323,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "1ed657b61aefd61b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "1ee7cb824a100fc1": {
    "id": "1ee7cb824a100fc1",
@@ -10202,16 +10443,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 68,
+   "tags": [
+    "交通信号控制",
+    "双 LLM",
+    "真实路网",
+    "CityFlow"
+   ],
+   "title_zh": "HeraldLight 用双 LLM 加 Herald 提示做细粒度信号控制，济南杭州纽约 224 个路口平均行程时间降 20.03%",
+   "summary_zh": "HeraldLight 由 Herald 模块预测各相位排队长度，LLM-Agent 据此做细粒度信号配时，LLM-Critic 修正其输出中的幻觉，再用打分微调提升稳健性。在 CityFlow 上用济南 12 个、杭州 16 个、纽约 196 个真实路口数据测试，平均行程时间比现有最优基线低 20.03%。",
    "cluster": "1f0a89853feac1e1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:50Z",
+   "relevant": true,
+   "topics": [
+    "urban"
+   ],
+   "score1": 60,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "1f2084c00375fe51": {
    "id": "1f2084c00375fe51",
@@ -11495,16 +11751,27 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 45,
+   "tags": [
+    "交通监控",
+    "多模态大模型",
+    "仿真平台"
+   ],
+   "title_zh": "LLaVA 多模态大模型加实例分割做交通监控，车辆定位识别准确率 84.3%",
+   "summary_zh": "研究在 Quanser Interactive Lab 仿真平台上用 LLaVA 分析路口、拥堵和碰撞场景的摄像头图像，并接入实例分割模型突出车辆与行人。车辆位置识别准确率 84.3%，转向判断 76.4%。",
    "cluster": "224626012e393d36",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": true,
+   "topics": [
+    "urban"
+   ],
+   "applied": false
   },
   "228357f33e93d541": {
    "id": "228357f33e93d541",
@@ -11796,17 +12063,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 25,
+   "tags": [
+    "安全仿真",
+    "元宇宙",
+    "AI NPC",
+    "大模型评估"
+   ],
+   "title_zh": "MetaAID 2.5：用大模型模拟用户交互，训练元宇宙网络安全防御",
+   "summary_zh": "论文提出用大模型模拟用户与元宇宙系统的交互，构建网络安全问答与攻击模拟场景，让用户在被攻击的模拟中提升识别和抵御风险的能力，并用大模型从五个维度评估用户输入内容的伦理风险。",
    "cluster": "2302ad3915aa32d9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": false,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "231d05e020ea0913": {
    "id": "231d05e020ea0913",
@@ -12234,17 +12517,32 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 35,
+   "tags": [
+    "交通仿真",
+    "大模型工具调用",
+    "决策支持"
+   ],
+   "title_zh": "TrafficGPT 把 ChatGPT 与交通基础模型拼接，让大模型能读数据、调仿真做交通决策",
+   "summary_zh": "作者指出大模型处理数值数据和与仿真交互的能力不足，于是把 ChatGPT 与专用交通基础模型结合，使其能查看、分析交通数据，并把复杂任务拆解后依次调用工具，为城市交通管理提供决策支持。",
    "cluster": "24396290feb11a03",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": false,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 52,
+   "score2": 35,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2477e1a331e811f9": {
    "id": "2477e1a331e811f9",
@@ -12535,17 +12833,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "252407da55e9913e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "2531152230f18378": {
    "id": "2531152230f18378",
@@ -12957,7 +13260,10 @@
     "human-behavior",
     "economy"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 75,
+   "model2": "Qwen3.8-27B"
   },
   "268d1198708eddae": {
    "id": "268d1198708eddae",
@@ -13241,17 +13547,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "26f03c2e3cfc0591",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "26fa0d1820f04d7f": {
    "id": "26fa0d1820f04d7f",
@@ -13290,7 +13601,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 58,
    "tags": [
     "兵棋推演",
     "多智能体强化学习",
@@ -13310,7 +13621,10 @@
     "eval",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 65,
+   "model2": "Qwen3.8-27B"
   },
   "271df2f2321e4552": {
    "id": "271df2f2321e4552",
@@ -13413,17 +13727,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "273bd71fa434a393",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "273f5c951f692148": {
    "id": "273f5c951f692148",
@@ -13511,16 +13830,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 74,
+   "tags": [
+    "交通仿真",
+    "多智能体",
+    "议价",
+    "混合交通"
+   ],
+   "title_zh": "用大模型智能体模拟混合自动驾驶交通中人与自动驾驶车辆的路面议价行为",
+   "summary_zh": "作者构建了一个用大模型驱动自动驾驶车与人类驾驶车智能体议价共享道路空间的框架。实验改变交通密度、智能体目标和交通领域知识，发现不同条件下达成协议的比例存在差异。达成协议的试验里建设性互惠更多，谈崩的试验里冲突升级更频繁，且私下与公开的沟通态度常常不一致。",
    "cluster": "27405ec7b8b6053c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.39
+   "hot": 0.44,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "277505ef833dfd66": {
    "id": "277505ef833dfd66",
@@ -13749,16 +14081,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 66,
+   "tags": [
+    "轨迹生成",
+    "出行仿真",
+    "扩散模型",
+    "大模型"
+   ],
+   "title_zh": "InsTraj：用大模型解读出行意图，扩散模型生成真实 GPS 轨迹",
+   "summary_zh": "InsTraj 先用大模型把自然语言描述的出行意图转成语义蓝图，再用多模态轨迹扩散 Transformer 生成符合细粒度意图的高保真轨迹。在真实数据集上，其生成质量优于现有方法，可用于城市规划与出行仿真。",
    "cluster": "28d9a1aea8b65228",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "290b842511193a21": {
    "id": "290b842511193a21",
@@ -13801,17 +14146,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "290b842511193a21",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "2917dcf4076b8481": {
    "id": "2917dcf4076b8481",
@@ -14343,17 +14693,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "29f81cafed7a67e5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "2a4fd4e9fe5f35d2": {
    "id": "2a4fd4e9fe5f35d2",
@@ -14394,17 +14749,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "2a4fd4e9fe5f35d2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "2a7c337d3195182a": {
    "id": "2a7c337d3195182a",
@@ -14460,7 +14820,7 @@
    "cluster": "2a7c337d3195182a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.52,
+   "hot": 3.28,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -14851,16 +15211,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 63,
+   "tags": [
+    "自动驾驶",
+    "场景生成",
+    "多智能体"
+   ],
+   "title_zh": "TTSG：用大模型从自然语言描述生成自动驾驶测试交通场景，SafeBench 平均碰撞率 3.5%",
+   "summary_zh": "框架分提示解析、道路检索、智能体规划和道路排序四步，把自由文本落成空间可行的多智能体场景，无需预设路线和出生点。在 SafeBench 三个关键场景上平均碰撞率 3.5%，为最低。",
    "cluster": "2b09014f7653140f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 68,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2bcb841d9f7f9983": {
    "id": "2bcb841d9f7f9983",
@@ -14908,10 +15283,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 20,
    "tags": [
     "智能体评测",
     "用户模拟",
@@ -14925,12 +15300,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:12:45Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "eval",
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "2c51b2b2fa1f3ba8": {
    "id": "2c51b2b2fa1f3ba8",
@@ -15207,7 +15585,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 61,
    "tags": [
     "多智能体",
     "仿真框架",
@@ -15226,7 +15604,10 @@
     "framework",
     "urban"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 70,
+   "model2": "Qwen3.8-27B"
   },
   "2d917ad3e686d478": {
    "id": "2d917ad3e686d478",
@@ -15403,17 +15784,28 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 42,
+   "tags": [
+    "具身智能",
+    "导航",
+    "仿真环境"
+   ],
+   "title_zh": "LOAT：把大模型语义知识迁移到学习型导航，在 AI2-THOR 与 Habitat 提升物体目标导航",
+   "summary_zh": "框架用双模块分别取用大模型知识和已学到的物体语义关系，按情境动态融合，避免直接让大模型做规划的高成本。在 AI2-THOR 和 Habitat 仿真器中导航成功率与效率提升，并有真机零样本部署。",
    "cluster": "2da98c03a2ac20cb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:57Z",
+   "relevant": true,
+   "topics": [
+    "world-env"
+   ],
+   "applied": false
   },
   "2dc502abacec7db3": {
    "id": "2dc502abacec7db3",
@@ -15566,17 +15958,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 15,
+   "tags": [
+    "自动驾驶",
+    "端到端",
+    "多模态LLM",
+    "闭环仿真"
+   ],
+   "title_zh": "把多模态 LLM 接入闭环端到端自动驾驶，用低频高层指令引导实时控制",
+   "summary_zh": "作者提出一种双速率架构：多模态 LLM 周期性处理原始传感器数据，生成高层驾驶指令，引导闭环运行的端到端驾驶模型，从而放宽 LLM 延迟与推理质量之间的取舍。论文称在真实环境中做了闭环验证。",
    "cluster": "2dffdfa471348a71",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": false,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 52,
+   "score2": 15,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "2e0b58b315355f25": {
    "id": "2e0b58b315355f25",
@@ -15782,17 +16190,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "2eae78b2713bcc3b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "2ecdb64c16bbd36d": {
    "id": "2ecdb64c16bbd36d",
@@ -16032,16 +16445,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 69,
+   "tags": [
+    "金融智能体",
+    "交易仿真",
+    "评测基准",
+    "微调"
+   ],
+   "title_zh": "用教材多选题加推理链微调，让开源模型学会稳健交易",
+   "summary_zh": "作者从经典教材和历史行情整理多选题数据集，经 AI 委员会核验并补充推理链，提出两阶段评测协议：先测多选题，再做按时间顺序的模拟交易。结果显示经该框架训练的开源模型在多种市场行情下表现出有风险意识的行为，优于开源基线，接近前沿模型。数据集与评测框架已开源。",
    "cluster": "2f8b67e3b7616708",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": true,
+   "topics": [
+    "economy",
+    "eval"
+   ],
+   "score1": 63,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "2f935ee65b1d2717": {
    "id": "2f935ee65b1d2717",
@@ -16085,7 +16514,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 54,
    "tags": [
     "智能体建模",
     "技术演化",
@@ -16103,7 +16532,10 @@
    "topics": [
     "social-sim"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 55,
+   "model2": "Qwen3.8-27B"
   },
   "2f9e818caa6b3df3": {
    "id": "2f9e818caa6b3df3",
@@ -16209,7 +16641,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.99
+   "hot": 27.89
   },
   "2fea6aee67da14e8": {
    "id": "2fea6aee67da14e8",
@@ -16369,17 +16801,51 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "3104f7f8930b63fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
+  },
+  "314f7938e2f3037e": {
+   "id": "314f7938e2f3037e",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSjhHUE9jd29TczZNUk81cmRobUpSUUNGOGRzUjZNSHNPTm5OdXA5dXFYMTlteDBsU1hoWUFFYkZzSVdqUHFlTWdUamtSV19LYzQ2V19MVEt2U25LTGxGV1AtcVNoM2RVb1hGRFA0NHpNZVp5WE1ORE92UTZfMkdqX0VVMnAyNk1MbEI1bVB1bnA?oc=5",
+   "title": "Aegis adds AI simulation tools for manufacturing planning - Portal ERP",
+   "text": "Aegis adds AI simulation tools for manufacturing planning Portal ERP",
+   "source_id": "gnews-biz-sim-startups",
+   "source_name": "Google 新闻 · AI 仿真创业与融资",
+   "source_group": "business",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "published": "2026-11-19T01:22:10Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "simulation",
+    "ai"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-21T17:49:36Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "3189b851eff08dd8": {
    "id": "3189b851eff08dd8",
@@ -16566,8 +17032,8 @@
     "多智能体",
     "研究议程"
    ],
-   "title_zh": "论文主张静态沙盒不够用，LLM 多智能体社会仿真需要开放式共同演化",
-   "summary_zh": "作者批评当前 LLM 多智能体社会仿真大多困在任务预定义、动态有限、评测僵化的静态沙盒里，无法刻画真实社会的复杂性。文章综述了 LLM 与多智能体动力学结合的架构，提出新分类法，并给出以开放性、持续共同演化和韧性社会对齐生态为方向的研究路线图。",
+   "title_zh": "静态沙盒不够用：LLM 多智能体社会仿真需要开放式共同演化",
+   "summary_zh": "这篇立场论文认为，当前基于 LLM 的多智能体仿真大多困在静态沙盒里，任务预设、动态有限、评测僵化，无法刻画真实社会的复杂性。作者梳理了 LLM 与多智能体结合的新架构，提出一个新分类法，并给出以开放式演化和持续共同演化为核心的研究路线图。",
    "cluster": "31fde3164d228b7c",
    "cluster_size": 1,
    "is_lead": true,
@@ -16577,8 +17043,8 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "eval",
-    "framework"
+    "generative-agents",
+    "eval"
    ],
    "applied": false
   },
@@ -16626,17 +17092,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "3202349524168e9a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3206f93bf36166aa": {
    "id": "3206f93bf36166aa",
@@ -17471,16 +17942,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 48,
+   "tags": [
+    "野火模拟",
+    "生成式AI",
+    "情景生成",
+    "综述"
+   ],
+   "title_zh": "综述：生成式 AI 用于 2D/3D 野火蔓延预测，提出用 LLM 做文献综合与知识抽取",
+   "summary_zh": "论文系统梳理 GAN、VAE、Transformer 等生成式模型在野火预测与模拟中的应用，讨论其在处理不确定性、融合多模态地理数据、生成可扩展火情情景上的能力，并以 2025 年洛杉矶 Palisades 与 Eaton 山火为背景，提出五个未来方向。",
    "cluster": "343827b25d121b9d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "applied": false
   },
   "343abaeab5bbf5a1": {
    "id": "343abaeab5bbf5a1",
@@ -17583,10 +18067,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 25,
    "tags": [
     "世界模型",
     "具身智能",
@@ -17600,12 +18084,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T19:08:45Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "34b2654142e7d01a": {
    "id": "34b2654142e7d01a",
@@ -17646,17 +18133,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "34b2654142e7d01a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "34f6d41f4a6eb470": {
    "id": "34f6d41f4a6eb470",
@@ -17692,17 +18184,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "34f6d41f4a6eb470",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.08
+   "hot": 0.08,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:54Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "34fef4aca9be81e9": {
    "id": "34fef4aca9be81e9",
@@ -17753,7 +18250,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 52,
+   "score": 56,
    "tags": [
     "多智能体",
     "协作仿真",
@@ -17772,7 +18269,10 @@
     "org",
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 52,
+   "score2": 60,
+   "model2": "Qwen3.8-27B"
   },
   "3506bb1bd75fa315": {
    "id": "3506bb1bd75fa315",
@@ -18498,16 +18998,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 50,
+   "tags": [
+    "自动驾驶",
+    "CARLA",
+    "思维链",
+    "仿真评测"
+   ],
+   "title_zh": "LeAD：端到端驾驶加低频 LLM 推理，CARLA 榜单得 71 分、路线完成率 93%",
+   "summary_zh": "LeAD 采用双速率架构，高频端到端模块负责实时感知规划控制，低频 LLM 模块融合多模态感知与高精地图，在基线规划器失效时用思维链推理给出决策。在 CARLA 模拟器 Leaderboard V1 上得 71 分，路线完成率 93%。",
    "cluster": "370b6792876f35f7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "applied": false
   },
   "372fc5aa33adca1e": {
    "id": "372fc5aa33adca1e",
@@ -18683,17 +19196,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "374a0283682d2333",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3775d7600b0e6473": {
    "id": "3775d7600b0e6473",
@@ -19697,17 +20215,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "39fc47c69b134887",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3a042d7827d5e928": {
    "id": "3a042d7827d5e928",
@@ -19748,17 +20271,29 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 40,
+   "tags": [
+    "无人机",
+    "应急响应",
+    "上下文学习",
+    "路径规划"
+   ],
+   "title_zh": "用 LLM 上下文学习替代 DRL，为公共安全无人机做路径规划与速度控制",
+   "summary_zh": "论文提出把 LLM 的上下文学习能力用于公共安全无人机的路径规划与速度控制，通过自然语言提示和示例完成任务适配，无需重新训练，并主张把模型部署在网络边缘以降低时延、保护数据隐私。",
    "cluster": "3a042d7827d5e928",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": true,
+   "topics": [
+    "world-env"
+   ],
+   "applied": false
   },
   "3a1ac69527073fa9": {
    "id": "3a1ac69527073fa9",
@@ -19910,17 +20445,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 24,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "3af3295f4bc1e957",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3af364d246254040": {
    "id": "3af364d246254040",
@@ -20335,16 +20875,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "人类行为模拟",
+    "个体建模",
+    "评测基准",
+    "信念更新"
+   ],
+   "title_zh": "HugAgent 基准：让模型预测具体某个人的信念与推理轨迹，而不只是群体平均",
+   "summary_zh": "HugAgent 用结构化问卷加半结构化出声思维访谈，采集参与者的信念状态、信念更新与推理轨迹，评测模型能否在分布外情境下预测特定个体的行为反应。实验显示模型能较好地从本人上下文还原其信念状态，但预测信念更新时明显吃力。",
    "cluster": "3c096beab19bc742",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "3c32ca0a17b73697": {
    "id": "3c32ca0a17b73697",
@@ -20456,17 +21009,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "3c4f7c74ff68a934",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3c5dac258f0d71c4": {
    "id": "3c5dac258f0d71c4",
@@ -20577,8 +21135,8 @@
     "升级风险",
     "多智能体"
    ],
-   "title_zh": "五个商用 LLM 在模拟兵棋中普遍出现升级倾向，罕见情况下动用核武器",
-   "summary_zh": "研究设计了基于政治学升级理论的兵棋模拟与评分框架，让多个 LLM 智能体在军事与外交危机场景中对弈。五个被测模型都表现出升级行为和难以预测的升级路径，倾向形成军备竞赛式互动，个别情况下甚至动用核武器。",
+   "title_zh": "斯坦福团队用兵棋推演测试五个大模型，全部出现难以预测的升级倾向",
+   "summary_zh": "作者设计了一套新的兵棋推演仿真和评分框架，测试 GPT-4 等五个现成大模型在军事外交决策中的表现。结果显示所有模型都倾向于采取升级行动，出现军备竞赛动态，个别情况下甚至部署核武器，理由多基于威慑和先发制人。",
    "cluster": "3c963032cb39ba26",
    "cluster_size": 1,
    "is_lead": true,
@@ -20689,7 +21247,7 @@
    "cluster": "3cf41a97b1c6ee7d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.72
+   "hot": 4.39
   },
   "3cfe286a841e55f8": {
    "id": "3cfe286a841e55f8",
@@ -20863,17 +21421,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 12,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "3dc5b6bb1fadd45a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3dcbc9122540a129": {
    "id": "3dcbc9122540a129",
@@ -20980,16 +21543,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 58,
+   "tags": [
+    "交通信号控制",
+    "多智能体",
+    "LLM智能体",
+    "路网仿真"
+   ],
+   "title_zh": "CoLLMLight：多个 LLM 智能体协同控制路网信号灯，按路况动态调整推理深度",
+   "summary_zh": "CoLLMLight 构建时空图刻画相邻路口间的实时交通动态，让 LLM 推理复杂交通交互，并引入复杂度感知机制按路况调整推理深度。作者还用仿真驱动的迭代数据采集微调出轻量 LLM，在合成与真实路网数据上做了实验。",
    "cluster": "3dccb41c2cc4ab54",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:03Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 82,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "3e487ed38f911029": {
    "id": "3e487ed38f911029",
@@ -21411,7 +21990,7 @@
    "cluster": "3eefc5d18a4ade26",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 53.5,
+   "hot": 49.77,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -21741,7 +22320,7 @@
    "cluster": "3f6c8be79bdf323c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.44,
+   "hot": 12.5,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:14Z",
    "relevant": true,
@@ -22228,7 +22807,7 @@
    "cluster": "408457c46f4c7f25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 24.05,
+   "hot": 22.37,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -22279,17 +22858,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "408c344060ff2813",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 24.37
+   "hot": 24.37,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "408e92ed39260e9a": {
    "id": "408e92ed39260e9a",
@@ -22327,17 +22911,32 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 35,
+   "tags": [
+    "自动驾驶仿真",
+    "场景生成",
+    "世界模型"
+   ],
+   "title_zh": "D-V2S 用 VLM 加 LLM 把行车视频转成可仿真驾驶场景",
+   "summary_zh": "D-V2S 分两步：视觉语言模型先从行车视频生成自然语言描述，再由大模型转成可执行仿真场景。作者称生成的场景覆盖视频中 90% 的相关语义要素，并做了模块消融，显示 VLM 选型对描述阶段影响明显。",
    "cluster": "408e92ed39260e9a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [
+    "world-env",
+    "urban"
+   ],
+   "score1": 62,
+   "score2": 35,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "40f378fd3bda92a7": {
    "id": "40f378fd3bda92a7",
@@ -22763,16 +23362,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 66,
+   "tags": [
+    "城市研究",
+    "多智能体",
+    "AI 科学家"
+   ],
+   "title_zh": "AI Urban Scientist：多智能体框架自动做城市研究",
+   "summary_zh": "作者提出 AI Urban Scientist，用从大量既有城市研究中提炼的假设、评审意见、数据集与方法构建领域知识，引导多个 LLM 智能体自动生成假设、找数据并做实验。框架针对通用 AI 系统与城市研究方法规范不匹配的问题设计。",
    "cluster": "418c8315aef10217",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "41d4231210b5bff0": {
    "id": "41d4231210b5bff0",
@@ -23194,17 +23808,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "42b11258037d21b0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:00Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "4337712da9d8511a": {
    "id": "4337712da9d8511a",
@@ -23535,17 +24154,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "43cf0336b28eb655",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "43eccd61259f2e6c": {
    "id": "43eccd61259f2e6c",
@@ -23586,17 +24210,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "43eccd61259f2e6c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "4416ecc5ca10c341": {
    "id": "4416ecc5ca10c341",
@@ -23640,17 +24269,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "4416ecc5ca10c341",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "441bef7c1731a0c5": {
    "id": "441bef7c1731a0c5",
@@ -23767,7 +24401,7 @@
    "cluster": "442531c9eef4b7e1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.98,
+   "hot": 1.84,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -24297,16 +24931,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 62,
+   "tags": [
+    "多智能体",
+    "制造调度",
+    "智能体协商"
+   ],
+   "title_zh": "用大模型智能体替代固定规则谈判，管理多品种小批量车间调度",
+   "summary_zh": "作者提出一个基于 LLM 的多智能体制造系统，把车间里的机器、招标方、投标方、思考与决策拆成五类模块，由 LLM 的推理能力完成协商，减少人工干预。文中指出传统多智能体协商依赖预定义启发式规则，强化学习方案则需为每个车间单独建仿真器训练。",
    "cluster": "46b9121b183e20b5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": true,
+   "topics": [
+    "org",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "46c90421401ec6c2": {
    "id": "46c90421401ec6c2",
@@ -24456,7 +25105,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.52
+   "hot": 28.39
   },
   "4751ecf297a616b0": {
    "id": "4751ecf297a616b0",
@@ -24664,17 +25313,32 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 15,
+   "tags": [
+    "机器人仿真",
+    "LLM 监督",
+    "在线蒸馏"
+   ],
+   "title_zh": "把 LLM 监督者在线蒸馏成决策树，让卡死的移动机器人学会重规划或求助",
+   "summary_zh": "作者不再对每个异常都查询 LLM，而是在每轮训练后用反事实回放给恢复动作打标签，把 LLM 监督者在线蒸馏成决策树。在 20 个未见过的布局上，MPC 单独会卡死，决策树在所有随机种子下至少 18 个处理正确，测试时不发起任何 LLM 查询。",
    "cluster": "47a8a41466c4e65b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.33
+   "hot": 0.33,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": false,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "score1": 52,
+   "score2": 15,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "47be521c059f34ff": {
    "id": "47be521c059f34ff",
@@ -24774,17 +25438,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "47fd1155313f3e62",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "482c787f6a942b2d": {
    "id": "482c787f6a942b2d",
@@ -25237,7 +25906,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 27.63
+   "hot": 25.7
   },
   "4a74ea117b3c8952": {
    "id": "4a74ea117b3c8952",
@@ -25719,17 +26388,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 12,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "4bb55e147cb05850",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "4be2ddb84408c0d9": {
    "id": "4be2ddb84408c0d9",
@@ -25953,7 +26627,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 32.8
+   "hot": 30.52
   },
   "4c34cde27eeaace5": {
    "id": "4c34cde27eeaace5",
@@ -25986,7 +26660,7 @@
    "cluster": "4c34cde27eeaace5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.87
+   "hot": 5.46
   },
   "4c57c27fd1150e59": {
    "id": "4c57c27fd1150e59",
@@ -26373,16 +27047,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "合成样本",
+    "人类行为模拟",
+    "价值理论"
+   ],
+   "title_zh": "给 LLM 注入心理学价值结构，500 万题实验显示其行为模式与人类高度一致",
+   "summary_zh": "作者用成熟心理学价值理论给 LLM 注入价值取向，通过验证过的问卷做了超过 500 万道题的实验，比较主流模型与人类在价值结构和价值-行为关系上的一致性，两个维度都高度吻合。把人类价值分布引入后，价值诱导的 LLM 能改进群体层面的行为模拟。",
    "cluster": "4cdd57de1820a8a5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:41:05Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "social-sim",
+    "eval"
+   ],
+   "applied": false
   },
   "4d713a090364fbf7": {
    "id": "4d713a090364fbf7",
@@ -26600,7 +27287,7 @@
    "cluster": "4db09406978f96a9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.18,
+   "hot": 0.17,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:59Z",
    "relevant": true,
@@ -27354,16 +28041,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 68,
+   "tags": [
+    "交通仿真",
+    "车队控制",
+    "大模型智能体",
+    "开源代码"
+   ],
+   "title_zh": "ConvoyLLM 用大模型控制多车道车队编队，在 SUMO 中完成避障与编队切换",
+   "summary_zh": "作者让每辆联网自动驾驶车用大模型做实时决策，完成避障、加入或离开车队、切换护卫编队，并用局部动态分布式图设计交错编队控制。在 SUMO 多场景实验中验证了稳定性和适应性，代码已开源。",
    "cluster": "4f864e1a2cb342e9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 78,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4f8aad32d7168b8a": {
    "id": "4f8aad32d7168b8a",
@@ -27470,16 +28173,28 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 52,
+   "tags": [
+    "用户模拟",
+    "多智能体",
+    "推荐系统"
+   ],
+   "title_zh": "RecPilot 把推荐系统改成多智能体深度调研，用轨迹模拟智能体探索物品空间",
+   "summary_zh": "论文提出用面向用户的综合报告替代传统推荐列表，并实现 RecPilot：一个用户轨迹模拟智能体自主探索物品空间，一个自进化报告生成智能体把结果综合成可读报告。公开数据集实验显示其效果优于基线。",
    "cluster": "4ffb0b30102d6038",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "framework"
+   ],
+   "applied": false
   },
   "501c6e0c202973f4": {
    "id": "501c6e0c202973f4",
@@ -27583,7 +28298,7 @@
    "cluster": "5020d8d5fba330a1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 37.65
+   "hot": 35.02
   },
   "5069f1280bd3ad48": {
    "id": "5069f1280bd3ad48",
@@ -27680,16 +28395,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 65,
+   "tags": [
+    "交通仿真",
+    "大模型工具调用",
+    "开源框架"
+   ],
+   "title_zh": "Open-TI 用增强语言模型打通交通分析全流程，从取地图数据到复杂仿真执行",
+   "summary_zh": "Open-TI 让预训练大模型在对话中调用外部交通分析包，号称首个能从零完成完整交通分析的方法，覆盖地图数据获取到复杂仿真执行。目标是弥合交通领域学术与产业之间的工具使用鸿沟。",
    "cluster": "5071f896f798eb83",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 55,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "5085a13d05f6a5be": {
    "id": "5085a13d05f6a5be",
@@ -27962,6 +28692,35 @@
    "score2": 72,
    "model2": "Qwen3.8-27B",
    "applied": false
+  },
+  "50fa9e7118f6b71e": {
+   "id": "50fa9e7118f6b71e",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0xZFc2S3RGMzF5UzNTUkcxNmFLLU4ySUV5MzZmQ2JPRDMzMHpHZW1FNkkyYUlpZnhXc3czMUUyMm5jd1EwNnVrZ1k0dER6Vm1EWXV2WWsxX0FVQ1NqNG1pVkJVc2hsZE0?oc=5",
+   "title": "AI 驱动仿真创新，共话协同治理 ——2026 世界仿真大会在杭州余杭举行 - 泰山财经",
+   "text": "AI 驱动仿真创新，共话协同治理 ——2026 世界仿真大会在杭州余杭举行 泰山财经",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "published": "2026-11-19T03:54:39Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 43,
+   "kw_terms": [
+    "仿真",
+    "ai"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-21T17:49:36Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 43,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "5104910e7432bbd9": {
    "id": "5104910e7432bbd9",
@@ -28426,17 +29185,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "51bce9ad981a44fa",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "51fe30678f70677d": {
    "id": "51fe30678f70677d",
@@ -28651,7 +29415,7 @@
    "cluster": "13064bc157903fe6",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 5.26
+   "hot": 4.9
   },
   "52ee6fbbe1d17951": {
    "id": "52ee6fbbe1d17951",
@@ -29084,7 +29848,7 @@
    "cluster": "53b605b3df0308b7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.92,
+   "hot": 0.85,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -29762,7 +30526,7 @@
    "cluster": "54b7d3eafd551ca7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.03
+   "hot": 3.75
   },
   "54bc8ffd1db50f87": {
    "id": "54bc8ffd1db50f87",
@@ -30503,17 +31267,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "57d9f7a841754123",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "57e1dde90f6d35ad": {
    "id": "57e1dde90f6d35ad",
@@ -30553,17 +31322,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "57e1dde90f6d35ad",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "582494f7de74fffb": {
    "id": "582494f7de74fffb",
@@ -31118,17 +31892,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 12,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "5a26a6977f58cfad",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "5a34c13b59c80d74": {
    "id": "5a34c13b59c80d74",
@@ -31412,8 +32191,8 @@
     "人格生成",
     "偏差"
    ],
-   "title_zh": "LLM 合成人格做民调：总统选举预测与民意调查明显偏离真实结果",
-   "summary_zh": "论文指出用大模型生成人格来模拟人群虽便宜可扩展，但现有生成方法靠启发式，缺乏方法学约束，会带来系统性偏差。在总统选举预测和美国总体民意调查的大规模实验中，这些偏差导致结果显著偏离真实世界。",
+   "title_zh": "LLM 生成人格画像有前景也有陷阱：大规模实验揭示系统性偏差",
+   "summary_zh": "作者用 LLM 批量生成人格画像来模拟美国人口，在总统选举预测和全国意见调查上与真实结果对比，发现现有启发式生成方法带来系统性偏差，导致下游模拟显著偏离真实世界。团队开源了约一百万个生成的人格画像供后续研究使用。",
    "cluster": "5a913b506f75dfba",
    "cluster_size": 1,
    "is_lead": true,
@@ -31423,9 +32202,9 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "social-sim"
+    "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "5aca4c38bba36ada": {
    "id": "5aca4c38bba36ada",
@@ -31478,7 +32257,7 @@
    "cluster": "5aca4c38bba36ada",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.12,
+   "hot": 2.91,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -31729,7 +32508,7 @@
    "cluster": "5b498f7753f9a6d0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.41,
+   "hot": 2.24,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -31978,7 +32757,7 @@
    "cluster": "5b87ca4e67aa0ad6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.27,
+   "hot": 5.83,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -32213,7 +32992,7 @@
    "cluster": "5c4fce723d6e8254",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.3
+   "hot": 23.54
   },
   "5c674a806a042351": {
    "id": "5c674a806a042351",
@@ -33906,17 +34685,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 26,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "6184e292008539d7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "61ceb6376b1ec092": {
    "id": "61ceb6376b1ec092",
@@ -34200,8 +34984,8 @@
     "同质性",
     "大规模智能体"
    ],
-   "title_zh": "Chirper.ai 上 7 万多个 LLM 智能体、一年 1.4 亿条帖子：性别表现流动但同质性明显",
-   "summary_zh": "研究分析 Chirper.ai 上 7 万余个自主 AI 聊天机器人、约 1.4 亿条帖子和一年的关注网络。智能体的性别表现逐周变化而非固定，但网络呈现强性别同质性，选择与影响两种机制都在起作用，与人类社交网络一致。",
+   "title_zh": "7 万个 AI 聊天机器人在社交平台上一年：性别表现流动但仍出现同质性抱团",
+   "summary_zh": "作者研究了 Chirper.ai，一个全部由自主 AI 聊天机器人组成的类 X 社交平台，收集了 7 万多个智能体、约 1.4 亿条帖子及一年间演化的关注网络。结果显示每个智能体的性别表现是流动的，但网络仍呈现强性别同质性，且社会选择与社会影响两种机制都在起作用。",
    "cluster": "626cc73cba423579",
    "cluster_size": 1,
    "is_lead": true,
@@ -34211,7 +34995,8 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "generative-agents"
+    "human-behavior",
+    "eval"
    ],
    "applied": true
   },
@@ -34542,7 +35327,7 @@
    "cluster": "63626a310eb12141",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.47
+   "hot": 2.3
   },
   "642b1319623de080": {
    "id": "642b1319623de080",
@@ -35526,8 +36311,8 @@
     "LLM 智能体",
     "参与式规划"
    ],
-   "title_zh": "LiPUP-MA：让 LLM 智能体先“住进去”再改规划，闭环迭代城市参与式规划",
-   "summary_zh": "作者提出 LiPUP 闭环范式，在模拟居民生活与依据体验修订规划之间交替，并实现 LiPUP-MA 框架：用规划图式经验库组织居民反馈，由受空间约束的规划智能体综合体验、视觉与地理证据改方案。实验在静态规划指标与基于生活的指标上均优于基线。",
+   "title_zh": "LiPUP-MA：让智能体住在模拟城市里收集居住体验，闭环修订城市规划方案",
+   "summary_zh": "作者提出 LiPUP 范式，把参与式城市规划改成闭环：智能体先在模拟城市里生活，收集居住体验，再据此修订规划，如此往复。配套的 LiPUP-MA 多智能体框架用基于图的体验库组织居民反馈，用带空间约束的规划智能体修订方案。实验显示它在静态规划指标和居住体验指标上都优于基线，多轮迭代还能继续提升方案质量。",
    "cluster": "66963406b3bba2b9",
    "cluster_size": 1,
    "is_lead": true,
@@ -35584,17 +36369,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 30,
+   "tags": [
+    "交通信号控制",
+    "多智能体",
+    "视觉语言模型",
+    "仿真器"
+   ],
+   "title_zh": "VLMLight 用视觉语言元控制调度信号灯，多个 LLM 智能体协作优先放行急救车",
+   "summary_zh": "VLMLight 构建了首个基于图像的交叉口交通仿真器，由大模型担任以安全优先的元控制器，在常规路况下调用快速强化学习策略，在关键场景下切换到多个 LLM 智能体协作的推理分支。实验显示急救车等待时间最多降低 65%，常规路况性能下降不到 1%。",
    "cluster": "66d35e8c81102d41",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:08Z",
+   "relevant": false,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 62,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "66f1e888edf1c91d": {
    "id": "66f1e888edf1c91d",
@@ -35744,7 +36545,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.24
+   "hot": 28.13
   },
   "67a8c4f27cf53904": {
    "id": "67a8c4f27cf53904",
@@ -36992,7 +37793,7 @@
    "cluster": "6a4cf305f5f066a3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.55,
+   "hot": 1.45,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -37092,7 +37893,7 @@
    "cluster": "6a7c202ed3a48dcc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.52
+   "hot": 10.72
   },
   "6ab72298cc9c3e06": {
    "id": "6ab72298cc9c3e06",
@@ -37198,17 +37999,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-20T15:49:04Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 59,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "6ad28f1ae923c520",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 54.31
+   "hot": 54.31,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:53Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "6b987741a5287104": {
    "id": "6b987741a5287104",
@@ -38137,17 +38943,22 @@
    ],
    "domain_guess": "application",
    "added": "2026-11-19T20:51:28Z",
-   "status": "selected",
-   "llm": false,
-   "domain": "application",
-   "score": 71,
+   "status": "filtered",
+   "llm": true,
+   "domain": "business",
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "6d96cf6c4f95d26a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.54
+   "hot": 12.54,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "6d9a0d27eb516a4f": {
    "id": "6d9a0d27eb516a4f",
@@ -38582,17 +39393,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 12,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "6e5e96469b8d2197",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "6e747f382fd2f6c8": {
    "id": "6e747f382fd2f6c8",
@@ -38768,17 +39584,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "6e909c8d4d1dd511",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "6ebbdd40def0bdd4": {
    "id": "6ebbdd40def0bdd4",
@@ -38817,17 +39638,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "6ebbdd40def0bdd4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "6eeaceb0ac81243d": {
    "id": "6eeaceb0ac81243d",
@@ -38989,7 +39815,7 @@
    "cluster": "6f304b36be9257fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.99,
+   "hot": 10.22,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -39498,17 +40324,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "703ac50e4d750286",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "706d16a7f59e671a": {
    "id": "706d16a7f59e671a",
@@ -39550,17 +40381,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 8,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "706d16a7f59e671a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "70ac84c6c51328bb": {
    "id": "70ac84c6c51328bb",
@@ -40011,7 +40847,7 @@
    "cluster": "72af26774086d271",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.45,
+   "hot": 18.09,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -40562,7 +41398,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.91
+   "hot": 27.83
   },
   "73fffad531537a78": {
    "id": "73fffad531537a78",
@@ -40808,8 +41644,8 @@
     "开源框架",
     "用户模拟"
    ],
-   "title_zh": "TinyTroupe：微软开源的多智能体人格仿真工具包",
-   "summary_zh": "TinyTroupe 支持细粒度人格设定（国籍、年龄、职业、性格、信念、行为）和程序化控制，补上现有多智能体库缺少的人口采样、实验支持与验证环节，示例包括头脑风暴和市场调研。",
+   "title_zh": "微软开源 TinyTroupe：用大模型多智能体做精细人格模拟的工具包",
+   "summary_zh": "微软团队发布了开源 Python 工具包 TinyTroupe，用大模型驱动的多智能体模拟人类行为。它支持细粒度人格定义（国籍、年龄、职业、性格、信念、行为）和程序化控制，并用头脑风暴、市场调研等示例展示用法。作者做了定量与定性评估，还用真人行为做了初步对照实验，结果同时指出了可能性、局限和权衡。",
    "cluster": "752ce991dc5562e0",
    "cluster_size": 1,
    "is_lead": true,
@@ -40820,7 +41656,7 @@
    "topics": [
     "human-behavior",
     "framework",
-    "generative-agents"
+    "social-sim"
    ],
    "applied": false
   },
@@ -40860,17 +41696,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 10,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "75638112c7d26a8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "75ae5d14861fd793": {
    "id": "75ae5d14861fd793",
@@ -41653,7 +42494,7 @@
    "cluster": "777cd1e779dc04f4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.72,
+   "hot": 12.76,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -42385,7 +43226,7 @@
    "cluster": "79ee4a2408bc74b2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.9,
+   "hot": 24.09,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -42503,17 +43344,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "7a3d8ab144cd6a08",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "7a3eeda26c88c283": {
    "id": "7a3eeda26c88c283",
@@ -42556,16 +43402,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 65,
+   "tags": [
+    "交通仿真",
+    "多智能体",
+    "LLM智能体",
+    "任务编排"
+   ],
+   "title_zh": "GraphTrafficGPT 用图结构协调多个 LLM 智能体做交通管理，token 消耗降 50.2%",
+   "summary_zh": "GraphTrafficGPT 把任务和依赖关系表示为有向图的节点和边，由 Brain Agent 拆解用户查询、构建依赖图并调度数据检索、分析、可视化和仿真等专用智能体。实验显示 token 消耗降低 50.2%，平均响应延迟也下降。",
    "cluster": "7a3eeda26c88c283",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 58,
+   "score2": 72,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "7a491dc4a63cb340": {
    "id": "7a491dc4a63cb340",
@@ -42659,7 +43521,7 @@
    "cluster": "7a5272a25b721a40",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 38.57
+   "hot": 35.88
   },
   "7a5e99a21b382b5d": {
    "id": "7a5e99a21b382b5d",
@@ -43110,7 +43972,7 @@
    "cluster": "7b973e5cb3288143",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.42
+   "hot": 12.48
   },
   "7ba8cf3b2661a235": {
    "id": "7ba8cf3b2661a235",
@@ -43281,17 +44143,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 10,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "7c34a7a750df61e9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:11Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "7c93479369907ca1": {
    "id": "7c93479369907ca1",
@@ -43628,16 +44495,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 76,
+   "tags": [
+    "人类行为模拟",
+    "图神经网络",
+    "合成样本",
+    "开源代码"
+   ],
+   "title_zh": "GEMS：用图神经网络替代大模型模拟人类封闭式选择行为",
+   "summary_zh": "作者提出 GEMS，把封闭式人类行为仿真建模为个体与选项异构图上的链接预测。在三个数据集、三种评测设置下，GEMS 追平或超过最强的大模型方法，参数量少三个数量级。图方法可以作为大模型之外高效且透明的替代方案。",
    "cluster": "7d1c1f92e8b110a5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "7d1eed8c616453bb": {
    "id": "7d1eed8c616453bb",
@@ -43924,7 +44804,7 @@
    "cluster": "7e1e75eafc2eabaf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.42,
+   "hot": 3.18,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -44640,16 +45520,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 74,
+   "tags": [
+    "人类行为模拟",
+    "可信度",
+    "综述",
+    "评测"
+   ],
+   "title_zh": "立场论文：LLM 人类行为仿真仍不可靠，作者给出系统性改进框架",
+   "summary_zh": "作者系统梳理了社会、经济、政策、心理等场景下的 LLM 人类仿真研究，指出仿真结果与真实人类行为存在显著偏差，根源在 LLM 自身局限和仿真设计缺陷。他们提出从数据基础、模型能力、仿真设计三方面提升可靠性的方案，并给出结构化算法和文献资源库。",
    "cluster": "8008636e1628a484",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "8017925697a0b97e": {
    "id": "8017925697a0b97e",
@@ -44841,7 +45734,7 @@
    "cluster": "80469b978b756760",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 30.83,
+   "hot": 28.68,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -44994,16 +45887,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "出行选择",
+    "交通仿真",
+    "人物画像",
+    "行为对齐"
+   ],
+   "title_zh": "用人物画像嵌入对齐 LLM 与真实出行选择，在 Swissmetro 数据集上超过基线选择模型",
+   "summary_zh": "作者提出人物画像推断与加载框架：先从实证数据归纳基础画像，再用行为嵌入驱动的加载函数为 LLM 配置提示。在 Swissmetro 方式选择数据集上，该方法在总体分担率和个体选择预测上都优于基线选择模型和 LLM 模拟模型。",
    "cluster": "8134719a84a07917",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "applied": true
   },
   "819027e58c316205": {
    "id": "819027e58c316205",
@@ -45048,17 +45954,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "819027e58c316205",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "81d644a15235c2ff": {
    "id": "81d644a15235c2ff",
@@ -45302,16 +46213,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 64,
+   "tags": [
+    "自动驾驶测试",
+    "场景生成",
+    "仿真验证",
+    "LLM"
+   ],
+   "title_zh": "TARGET：用 LLM 从交通规则自动生成自动驾驶测试场景，284 个场景查出 610 处违规",
+   "summary_zh": "TARGET 用 LLM 从交通规则中抽取知识，经自定义 DSL 做语法与语义校验后合成可执行的仿真测试场景。在 54 条规则衍生的 284 个场景上评测 7 个自动驾驶系统，发现 610 处规则违反与碰撞，其中两个问题被开发商确认。",
    "cluster": "82417a27a131d5d9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "826ac7cc8f3c7938": {
    "id": "826ac7cc8f3c7938",
@@ -45665,17 +46592,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "82d7eb7a9f6a2200",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "82f4e570a1f7956e": {
    "id": "82f4e570a1f7956e",
@@ -46004,17 +46936,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "8457feaa32c91e1b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "8493d1c006f44666": {
    "id": "8493d1c006f44666",
@@ -46271,17 +47208,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "85885d61610927ed",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "85896048c2e8239a": {
    "id": "85896048c2e8239a",
@@ -46494,7 +47436,7 @@
    "cluster": "8610b5b796c6e117",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.41,
+   "hot": 1.31,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -46724,17 +47666,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "86aba5ad6c1b209b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "870b7f93c75fcdbe": {
    "id": "870b7f93c75fcdbe",
@@ -47199,16 +48146,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 52,
+   "tags": [
+    "自动驾驶",
+    "代码生成",
+    "仿真验证",
+    "工业实践"
+   ],
+   "title_zh": "工业环境下用仿真反馈引导 LLM 智能体生成并修复自动驾驶代码",
+   "summary_zh": "作者在工业环境中搭建由 LLM 智能体、仿真模型和规则反馈生成器组成的流水线，自动生成自动驾驶代码并在多个关键交通场景的仿真中评估，再把评估报告回传给 LLM 修改或修 bug。",
    "cluster": "88ae93d48b8a7381",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "eval"
+   ],
+   "applied": true
   },
   "88d4bd38c0b9feb3": {
    "id": "88d4bd38c0b9feb3",
@@ -47503,7 +48463,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 100.13
+   "hot": 93.15
   },
   "897fdbb449f8c760": {
    "id": "897fdbb449f8c760",
@@ -47670,7 +48630,7 @@
    "cluster": "89b6dc79c43684f1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.97
+   "hot": 17.65
   },
   "89c0ce6b226bbbe6": {
    "id": "89c0ce6b226bbbe6",
@@ -47764,8 +48724,8 @@
     "开源框架",
     "LLM智能体"
    ],
-   "title_zh": "开源股市仿真框架让LLM扮演异质交易者，复现价格发现、泡沫与反应不足",
-   "summary_zh": "论文搭建带持久订单簿、市价与限价单、部分成交、分红和均衡清算的模拟股市，LLM智能体以结构化输出下单并用自然语言表达推理。结果显示LLM能稳定遵循价值投资、动量交易、做市等策略，市场出现价格发现、泡沫、反应不足和策略性流动性供给，框架已开源。",
+   "title_zh": "让大模型当交易员：LLM 智能体在模拟股票市场中检验金融理论",
+   "summary_zh": "作者构建了一个开源的模拟股票市场，让 LLM 扮演价值投资者、动量交易者、做市商等异质交易智能体，市场配有持续订单簿、限价单、部分成交和分红清算。实验发现 LLM 能稳定遵循指定策略，市场涌现出价格发现、泡沫、反应不足等真实市场特征，还能分析 LLM 在不同市场条件下的行为变化。",
    "cluster": "89ebaacc7bb232b6",
    "cluster_size": 1,
    "is_lead": true,
@@ -47880,16 +48840,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 62,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 59,
+   "tags": [
+    "多智能体沙盒",
+    "对话评测",
+    "心理仿真"
+   ],
+   "title_zh": "EMPA 用多智能体沙盒把共情对话拆成过程来评测",
+   "summary_zh": "EMPA 把真实对话蒸馏成可控的心理场景，放进开放式多智能体沙盒，让对话智能体在其中长期互动，再在潜在心理空间里按方向对齐、累积影响和稳定性给整条轨迹打分。作者称这套指标可复现地比较长程共情行为，也能迁移到反馈稀疏、状态隐性的其他智能体场景。",
    "cluster": "8a40abdadfe1e5c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "8a5345c0e6cd0241": {
    "id": "8a5345c0e6cd0241",
@@ -48574,7 +49549,7 @@
    "cluster": "8b52bd6ca3b0b663",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.38
+   "hot": 5.01
   },
   "8b6efe1486dbf5db": {
    "id": "8b6efe1486dbf5db",
@@ -48810,16 +49785,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 58,
+   "tags": [
+    "行业智能体",
+    "综述",
+    "复杂系统仿真",
+    "评测"
+   ],
+   "title_zh": "综述：LLM 行业智能体的记忆、规划、工具使用与复杂系统仿真应用",
+   "summary_zh": "文章按能力成熟度框架梳理 LLM 行业智能体从流程执行系统到自适应社会系统的演进，讨论记忆、规划、工具使用三项技术支柱，并概述其在数字工程、科学发现、具身智能、协同业务和复杂系统仿真中的应用与评测方法。",
    "cluster": "8c5ffe657c8ad243",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:17Z",
+   "relevant": true,
+   "topics": [
+    "org",
+    "eval"
+   ],
+   "score1": 55,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "8c83491f07e6f80a": {
    "id": "8c83491f07e6f80a",
@@ -49166,17 +50157,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "8ccd780c279897be",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "8cdd775240c4c9bb": {
    "id": "8cdd775240c4c9bb",
@@ -49330,17 +50326,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "8d9637e543a0cc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "8d9a67c180135d02": {
    "id": "8d9a67c180135d02",
@@ -49990,17 +50991,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "8f0ad51e342c1e25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "8f0b4d0d4752f80a": {
    "id": "8f0b4d0d4752f80a",
@@ -50670,17 +51676,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "90d0a7da4684c500",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "90d95cad3128e268": {
    "id": "90d95cad3128e268",
@@ -52143,7 +53154,7 @@
    "cluster": "948c36101407e81c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.87,
+   "hot": 8.25,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -52189,17 +53200,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "9496f54c4da4eddd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "94b68aae463969ef": {
    "id": "94b68aae463969ef",
@@ -52307,8 +53323,8 @@
     "用户模拟",
     "校准"
    ],
-   "title_zh": "ReliMap 拆解 LLM 行为仿真的可靠性：个体层提升不能可靠传导到群体层",
-   "summary_zh": "作者把 LLM 人类行为仿真拆成三层，在个体和群体两个层面评估可靠性，覆盖模型能力、画像完整度、人群覆盖三个配置维度，测试 4 个任务和 11 个模型。结果显示无画像条件时所有模型都有明显分布偏差，画像条件收益递减；个体层与群体层可靠性可能反向变化，群体层覆盖度增加只降方差、不消系统偏差。",
+   "title_zh": "ReliMap 分层评估 LLM 人类行为仿真的可靠性，发现个体与群体层面结果可能反向变化",
+   "summary_zh": "作者提出 ReliMap，把 LLM 人类行为仿真拆成三个结构层，从模型能力、画像完整度、群体覆盖三个维度评估个体层（R1）与群体层（R2）的可靠性。在四个仿真任务、十一个 LLM 上实验发现，个体层面的提升不一定传导到群体层面，两者甚至反向变化；群体可靠性在约 50 到 100 个个体后趋于稳定。",
    "cluster": "94c28484ff2a5ce2",
    "cluster_size": 1,
    "is_lead": true,
@@ -53148,16 +54164,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 52,
+   "tags": [
+    "自动驾驶",
+    "行为树",
+    "仿真环境",
+    "多智能体"
+   ],
+   "title_zh": "LLM 智能体在 CARLA 中按需生成行为树，让自动驾驶绕过突发路障",
+   "summary_zh": "作者提出由 Descriptor、Planner、Generator 三个 LLM/LVM 智能体协作，把自然语言场景判断转成可执行的 XML 行为树，只在基线行为树失效时触发。在 CARLA+Nav2 仿真中，系统无需人工干预绕过街道阻塞等意外障碍，属概念验证。",
    "cluster": "96e40b6e0b463604",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "urban"
+   ],
+   "applied": false
   },
   "97166a1d9f8fa5c6": {
    "id": "97166a1d9f8fa5c6",
@@ -53503,7 +54532,7 @@
    "cluster": "9773c1ebbc83374d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.91
+   "hot": 4.57
   },
   "9786426f00c9ceb3": {
    "id": "9786426f00c9ceb3",
@@ -53557,6 +54586,58 @@
    "cluster_size": 1,
    "is_lead": true,
    "hot": 0.0
+  },
+  "97d20f0e1995d57f": {
+   "id": "97d20f0e1995d57f",
+   "url": "https://doi.org/10.1145/3828647.3857300",
+   "title": "CrowdDirector: Runtime Orchestration of Crowd Simulation through Natural-Language Directives",
+   "text": "Natural language offers an intuitive way to direct a virtual crowd while a simulation is running. Handwritten rules execute efficiently but cannot respond flexibly to varied instructions, whereas asking a large language model (LLM) to control the crowd at every update introduces repeated latency, cost, and the risk of unsupported actions. We present CrowdDirector, a framework that uses an LLM only when the user adds or changes an instruction. The LLM translates the request into a structured instruction, and a scene validator checks whether the entities and actions it references exist in the current Unity scene. Accepted instructions are stored and remain continuously active as the simulation is running. At each simulation tick, a graph neural network uses the current scene state and active instruction to choose an available action and target for each agent, while Unity handles movement, interactions, and animation. The network is trained offline on simulated scenarios, with LLM guidance on how agents should respond to instructions. Our evaluations show the scene validator’s feasibility decisions matched human judgements more often than the LLM’s own assessment, and on a behavioural benchmark CrowdDirector follows user instructions more closely than handwritten rules while avoiding repeated LLM calls. It therefore provides a practical middle ground between fixed rules and continuous LLM control.",
+   "source_id": "openalex-llm-abm",
+   "source_name": "OpenAlex · 期刊/会议（LLM 智能体仿真）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-12-10T00:00:00Z",
+   "authors": [
+    "Xiaohan Sun",
+    "Vuk Radovanovic",
+    "Merce Alvarez",
+    "Carol O'Sullivan",
+    "Yiorgos Chrysanthou",
+    "Panayiotis Charalambous"
+   ],
+   "extra": {
+    "venue": "ACM SIGGRAPH Conference on Motion, Interaction and Games (MIG)",
+    "pdf": "https://doi.org/10.1145/3828647.3857300",
+    "doi": "https://doi.org/10.1145/3828647.3857300",
+    "cited_by": 0,
+    "type": "conference-paper"
+   },
+   "kw_score": 80,
+   "kw_terms": [
+    "simulation",
+    "simulated",
+    "simulate",
+    "llm",
+    "large language model",
+    "language model",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-21T17:49:36Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "97d20f0e1995d57f",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 88.0
   },
   "97de1564c7de959b": {
    "id": "97de1564c7de959b",
@@ -53677,7 +54758,7 @@
    "cluster": "97f684f7c5000779",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.93,
+   "hot": 0.87,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -53728,16 +54809,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 66,
+   "tags": [
+    "自动驾驶",
+    "场景生成",
+    "多模态",
+    "仿真数据"
+   ],
+   "title_zh": "CrashAgent 用多模态大模型把真实事故报告转成可执行的碰撞仿真场景",
+   "summary_zh": "CrashAgent 是一个多智能体框架，读取真实交通事故的多模态报告，生成道路布局以及自车与周边交通参与者的行为，直接在仿真中执行。作者从布局重建准确度、碰撞率和多样性三方面评估，称将公开大规模碰撞场景数据集。",
    "cluster": "97ff3632265e48b2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "applied": true
   },
   "982a937e957a6376": {
    "id": "982a937e957a6376",
@@ -53958,17 +55052,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "985e13452547ac00",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "9882d1af5aaeedfa": {
    "id": "9882d1af5aaeedfa",
@@ -54148,8 +55247,8 @@
     "社会调查",
     "模型偏差"
    ],
-   "title_zh": "四国六模型合成社会数据对比真人调查：小样本真人数据仍比 LLM 合成数据可靠",
-   "summary_zh": "研究比较了英国、阿根廷、美国、中国四国社会价值观在六个开源与闭源大模型上的统计表现，并与真实人类调查数据对照。结论是即便真人样本小且有偏，其洞察仍比 LLM 合成数据更可靠，作者据此质疑用 AI 生成文本替代社会调查。",
+   "title_zh": "合成社会数据试验：LLM 生成数据的社会价值观代表性不如小规模真人样本",
+   "summary_zh": "作者比较了英、阿根廷、美、中四国的 LLM 生成数据与真实人类调查数据，考察六个模型（开源闭源各半）对社会价值观的统计代表性。结论是即使真人样本小且有偏，也比 LLM 合成数据更可靠。这项工作为用 AI 替代人类调查的做法划出了明确边界。",
    "cluster": "98dab2d53d2b23fb",
    "cluster_size": 1,
    "is_lead": true,
@@ -54159,10 +55258,9 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "eval",
-    "social-sim"
+    "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "98deb96c6c2a1194": {
    "id": "98deb96c6c2a1194",
@@ -54283,7 +55381,7 @@
    "cluster": "98fb20f80efbdd1e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.87,
+   "hot": 30.58,
    "topics": [
     "economy",
     "policy"
@@ -54995,17 +56093,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "9abe187f028bfcb7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "9ac49cfd60d09294": {
    "id": "9ac49cfd60d09294",
@@ -55054,17 +56157,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "9ac49cfd60d09294",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "9acdb3d2c8f0a103": {
    "id": "9acdb3d2c8f0a103",
@@ -55522,17 +56630,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "9bf4a51e2f84180a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "9c1b0b856dbaf863": {
    "id": "9c1b0b856dbaf863",
@@ -55903,17 +57016,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "9cf2e125a25991f9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "9d02ea6d7b671bf3": {
    "id": "9d02ea6d7b671bf3",
@@ -56226,7 +57344,7 @@
    "cluster": "9d8238d886bc104a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.9,
+   "hot": 0.83,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:14Z",
    "relevant": true,
@@ -56477,8 +57595,8 @@
     "人机交互",
     "复现研究"
    ],
-   "title_zh": "生成式智能体平台复现10项人机助手交互研究，全仿真实验可近似关键结论",
-   "summary_zh": "作者搭建生成式智能体仿真平台来模拟人与助手智能体的交互，替代成本高、有隐私风险的人机实验。他们选取10项已有助手智能体研究，在平台上逐一复现，结果显示全仿真实验能近似关键结论。",
+   "title_zh": "用生成式智能体复现十项人机助手交互研究，验证全仿真实验可替代真人受试",
+   "summary_zh": "作者搭建了一个基于生成式智能体的人机助手交互仿真平台，用它复现了十项已有的助手智能体研究。结果显示，全仿真实验能近似还原人机助手交互的关键特征，并复现原研究的核心结论。这为无需真人受试的助手智能体设计研究提供了低成本、可扩展的路径。",
    "cluster": "9e231c2d620e6712",
    "cluster_size": 1,
    "is_lead": true,
@@ -57292,8 +58410,8 @@
     "问卷模拟",
     "微调"
    ],
-   "title_zh": "微调大模型模拟全球人群的问卷回答分布",
-   "summary_zh": "作者用两个全球文化调查的国家级结果做测试，提出基于首 token 概率的微调方法，最小化预测分布与真实回答分布的散度，在未见问题、未见国家和一份全新调查上仍优于零样本分类器。",
+   "title_zh": "微调大模型模拟全球调查问卷的群体回答分布，效果超过提示方法",
+   "summary_zh": "作者首次针对“模拟调查回答分布”这一任务专门微调大语言模型，用两项全球文化调查的国别结果做测试。他们提出基于首词元概率的微调方法，让模型预测的答案分布尽量贴近真实分布。该方法明显优于其他方法和零样本分类器，在没见过的问题、国家和调查上也成立，但最好的模型在任务上仍有困难。",
    "cluster": "a01788b2fa92731b",
    "cluster_size": 1,
    "is_lead": true,
@@ -57348,16 +58466,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "合成样本",
+    "偏见评测",
+    "人格模拟",
+    "LLM"
+   ],
+   "title_zh": "让 LLM 扮演不同社会人口身份做决策，隐性偏见比真人数据方向一致但明显放大",
+   "summary_zh": "作者给六个 LLM 生成带社会人口特征的人设，在四类决策场景中比较不同群体的选择差异。几乎所有模拟都出现显著群体差异，模型越先进显性偏见越低而隐性偏见越大；与真实实证研究相比，偏见方向一致但幅度被放大。",
    "cluster": "a0281e3faa488261",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:21Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "a03bc65bf1651083": {
    "id": "a03bc65bf1651083",
@@ -57532,16 +58663,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 52,
+   "tags": [
+    "具身智能",
+    "任务规划",
+    "场景图",
+    "机器人仿真"
+   ],
+   "title_zh": "SayPlan 用 3D 场景图把大模型任务规划落到多层多房间机器人环境",
+   "summary_zh": "SayPlan 让 LLM 在 3D 场景图的折叠表示上做语义搜索，取出与任务相关的子图，再配合经典路径规划器缩短规划跨度，并用场景图模拟器反馈迭代重规划。在最多 3 层、36 个房间、140 个物体的两个大环境中验证了移动操作机器人的长程任务落地。",
    "cluster": "a07cd8e85bf896de",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "framework"
+   ],
+   "applied": false
   },
   "a0b87ee6810ec6fe": {
    "id": "a0b87ee6810ec6fe",
@@ -57589,16 +58733,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 61,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 66,
+   "tags": [
+    "世界模型",
+    "多智能体",
+    "评测基准",
+    "物理仿真"
+   ],
+   "title_zh": "CrashTwin 提出物理可信度评测框架，用 2.5 万条合成与 1.2 万条真实碰撞序列检验世界模型的多智能体动力学",
+   "summary_zh": "作者指出当前世界模型评测偏重视觉保真和语义对齐，无法判断生成的动力学是否遵守物理规律。CrashTwin 用 2.5 万条可控合成碰撞序列和 1.2 万条真实碰撞视频，配合免标定重建流程，从世界模型 rollout 中恢复三维物理量，并从三个维度做诊断。",
    "cluster": "a0b87ee6810ec6fe",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "applied": false
   },
   "a11f15291c2eb8c6": {
    "id": "a11f15291c2eb8c6",
@@ -57643,17 +58800,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "a11f15291c2eb8c6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "a12608633abde048": {
    "id": "a12608633abde048",
@@ -58955,7 +60117,7 @@
    "cluster": "a3b9dc32372c08c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.0,
+   "hot": 9.3,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -59682,7 +60844,7 @@
    "cluster": "a5e42b2b6ba30ccc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.06,
+   "hot": 23.31,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -59816,16 +60978,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 48,
+   "tags": [
+    "自动驾驶",
+    "驾驶仿真",
+    "多模态大模型",
+    "闭环评测"
+   ],
+   "title_zh": "GPT-4o 多模态智能体在 CARLA 恶劣天气下做闭环自动驾驶评测",
+   "summary_zh": "作者在 LimSim++ 框架里接入 CARLA 驾驶模拟器，用 GPT-4o 构建 MLLM-AD-4o 智能体，测试其在雨雾、低能见度和复杂交通场景下的决策、感知与控制表现。结果显示该智能体在挑战性环境下仍维持较高的安全与效率水平。",
    "cluster": "a6acde491415dbcd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "applied": false
   },
   "a6ae9f82b23259ff": {
    "id": "a6ae9f82b23259ff",
@@ -59986,7 +61161,7 @@
    "cluster": "a6e7e91569fce679",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 29.88
+   "hot": 27.8
   },
   "a6eb2d95f5bd0ec4": {
    "id": "a6eb2d95f5bd0ec4",
@@ -60345,8 +61520,8 @@
     "人类对齐",
     "社会仿真"
    ],
-   "title_zh": "多 LLM 智能体组网实验：偏好连接、三元闭包与社群结构都与人类决策对齐",
-   "summary_zh": "研究搭建框架观察多个 LLM 智能体如何形成关系网络，并在友谊、通信、雇佣等合成与真实场景中与人类决策对比。LLM 稳定复现偏好连接、三元闭包、同质性等微观原则和社群结构、小世界效应等宏观性质，且会随情境在友谊网络偏同质性、组织场景偏异质性；一项人类受试者调查显示连线决策高度一致。",
+   "title_zh": "多 LLM 智能体的网络形成与动力学：微宏观规律均贴近人类决策",
+   "summary_zh": "作者构建了一个研究多个 LLM 智能体如何建立社交连边的框架，并在友谊、电信、雇佣等合成与真实网络场景下与人类决策对比。LLM 智能体稳定复现了优先连接、三元闭合、同质性等微观规律，以及社区结构和小世界效应等宏观性质，且这些原则的相对权重会随场景调整。对照实验显示 LLM 与真人被试在连边决策上高度一致。",
    "cluster": "a7e9940cdd0957e5",
    "cluster_size": 1,
    "is_lead": true,
@@ -60356,9 +61531,10 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "human-behavior"
+    "human-behavior",
+    "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "a809332edc384a98": {
    "id": "a809332edc384a98",
@@ -60835,17 +62011,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "a941594bd77c34eb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "a946d990e04e3f53": {
    "id": "a946d990e04e3f53",
@@ -61191,7 +62372,7 @@
    "cluster": "aa8e964eeccef16d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.68,
+   "hot": 11.8,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -61461,16 +62642,30 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 76,
+   "tags": [
+    "出行仿真",
+    "城市模拟",
+    "大模型智能体",
+    "活动链"
+   ],
+   "title_zh": "MobiVerse：轻量生成器加 LLM 混合框架，在普通电脑上仿真洛杉矶 Westwood 五万余人出行",
+   "summary_zh": "UCLA 团队提出 MobiVerse 混合框架，用轻量领域专用生成器产出基础活动链，再用 LLM 做情境化调整。他们在洛杉矶 Westwood 约 5.3 万智能体上完成仿真，智能体能对道路封闭、球赛等事件和拥堵做出反应，兼顾计算效率和行为真实性。",
    "cluster": "ab8228fc46b2b0a2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework",
+    "world-env"
+   ],
+   "applied": true
   },
   "ab880bd8b8fb9d32": {
    "id": "ab880bd8b8fb9d32",
@@ -61869,7 +63064,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.06
+   "hot": 27.96
   },
   "ada2b4d5f7f1b58f": {
    "id": "ada2b4d5f7f1b58f",
@@ -62068,7 +63263,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.17
+   "hot": 28.07
   },
   "ae06906a60ff1700": {
    "id": "ae06906a60ff1700",
@@ -63065,8 +64260,8 @@
     "理论驱动",
     "行为保真度"
    ],
-   "title_zh": "用社会认知理论搭智能体工作流：动机、行动规划、学习三模块，行为偏差比经典生成式基线低 75%",
-   "summary_zh": "作者提出一个理论驱动的 LLM 社会智能体设计框架，基于社会认知理论设动机、行动规划、学习三个模块，让智能体推理目标、规划连贯行动并随时间调整行为。多项保真度指标上，与真实行为数据的偏差比经典生成式基线最多低 75%。",
+   "title_zh": "用社会认知理论指导的工作流设计生成式社会智能体，行为偏差最多降低 75%",
+   "summary_zh": "作者提出一个基于社会认知理论的 LLM 社会智能体设计框架，包含动机、行动规划、学习三个模块。在复杂条件下，这类智能体比经典生成式基线更接近真实人类行为数据，偏差最多降低 75%。消融实验显示，去掉任一模块后误差增加 1.5 到 3.2 倍。",
    "cluster": "b019af99666c5b59",
    "cluster_size": 1,
    "is_lead": true,
@@ -63075,9 +64270,9 @@
    "triaged": "2026-11-19T17:32:36Z",
    "relevant": true,
    "topics": [
-    "generative-agents",
     "social-sim",
-    "eval"
+    "generative-agents",
+    "framework"
    ],
    "applied": false
   },
@@ -63259,17 +64454,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "b03f4054749b42dd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "b09bbd94bc8c2f68": {
    "id": "b09bbd94bc8c2f68",
@@ -63772,7 +64972,7 @@
    "cluster": "b2017a81e5e5c532",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.72
+   "hot": 22.06
   },
   "b21421633eabfb0f": {
    "id": "b21421633eabfb0f",
@@ -63873,17 +65073,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 20,
+   "tags": [
+    "评测基准",
+    "智能体沙盒",
+    "行程规划",
+    "工具调用"
+   ],
+   "title_zh": "TREK 基准：800 个多约束行程规划任务，检验 LLM 智能体能否产出可执行方案",
+   "summary_zh": "TREK 用 375 座城市、212,530 条记录的合成知识库和 RESTful 工具沙箱，构造 800 个行程规划任务，其中 533 个可行、267 个可证明不可行并标注原因。评分要求方案同时满足约束正确、无幻觉、时空可执行和预算合规，并回应旅客未明说的需求。",
    "cluster": "b24a348b65b3adf6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [
+    "eval",
+    "human-behavior"
+   ],
+   "score1": 58,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "b26520b5a9125200": {
    "id": "b26520b5a9125200",
@@ -64678,7 +65894,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.91
+   "hot": 27.83
   },
   "b527f71069261b75": {
    "id": "b527f71069261b75",
@@ -64973,7 +66189,7 @@
    "cluster": "b5be1eee63d8b091",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.33,
+   "hot": 1.23,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:20Z",
    "relevant": true,
@@ -66050,17 +67266,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "b939919ec86173be",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "b93a82dda15fea99": {
    "id": "b93a82dda15fea99",
@@ -66589,16 +67810,28 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 45,
+   "tags": [
+    "无人机",
+    "代码生成",
+    "闭环反馈",
+    "仿真验证"
+   ],
+   "title_zh": "闭环 LLM 无人机代码生成：语义轨迹描述加仿真内迭代修正",
+   "summary_zh": "作者提出由代码生成器和评估器两个 LLM 模块组成的闭环框架，把无人机的数值状态观测转成语义轨迹描述，便于评估器给出精确反馈。修正过程在仿真中完成，避免错误代码直接作用于实体无人机，在多个复杂度的控制任务上验证了可靠性。",
    "cluster": "bb672c42425bf3a3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": true,
+   "topics": [
+    "world-env"
+   ],
+   "applied": false
   },
   "bbc9b4d66e7e40f5": {
    "id": "bbc9b4d66e7e40f5",
@@ -66657,7 +67890,7 @@
    "cluster": "bbc9b4d66e7e40f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.56,
+   "hot": 21.92,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -66988,7 +68221,7 @@
    "cluster": "bd1a1262a30563d3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 47.85
+   "hot": 44.51
   },
   "bd48b9b8ec948700": {
    "id": "bd48b9b8ec948700",
@@ -67038,7 +68271,7 @@
    "cluster": "bd48b9b8ec948700",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.94,
+   "hot": 15.76,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -67245,8 +68478,8 @@
     "医疗",
     "时序模拟"
    ],
-   "title_zh": "Organ-Agents：多智能体 LLM 框架模拟脓毒症患者的多系统生理轨迹",
-   "summary_zh": "每个智能体负责心血管、肾脏、免疫等一个生理系统，先用系统专属时序数据监督微调，再用强化学习协调。基于 7134 名脓毒症患者和 7895 名对照的数据，在 4509 名留出患者上各系统 MSE 低于 0.16，15 名重症医生给出约 3.9 的真实性评分。",
+   "title_zh": "Organ-Agents：用多个大模型智能体模拟人体九大系统生理过程，ICU 数据验证可信",
+   "summary_zh": "作者提出 Organ-Agents，用多个 LLM 智能体分别模拟心血管、肾脏、免疫等人体系统，在 7134 名脓毒症患者和 7895 名对照的数据上训练。在 4509 名留出患者上各系统 MSE 低于 0.16，两所医院 22689 名 ICU 患者的外部验证显示分布偏移下性能仅中度下降。15 位重症医生评估其真实感平均 Likert 评分 3.9 和 3.7。",
    "cluster": "bde8d07ca49bc0d5",
    "cluster_size": 1,
    "is_lead": true,
@@ -67255,8 +68488,8 @@
    "triaged": "2026-11-19T17:32:42Z",
    "relevant": true,
    "topics": [
-    "health",
-    "world-env"
+    "human-behavior",
+    "health"
    ],
    "applied": true
   },
@@ -67304,17 +68537,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "be0387287f015b55",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "be1a32f15ed6abf9": {
    "id": "be1a32f15ed6abf9",
@@ -67354,17 +68592,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "be1a32f15ed6abf9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "be2fc62690fcba8b": {
    "id": "be2fc62690fcba8b",
@@ -67494,7 +68737,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": true,
-   "hot": 31.94
+   "hot": 29.71
   },
   "bf3b611e10312e5b": {
    "id": "bf3b611e10312e5b",
@@ -67765,17 +69008,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 35,
+   "tags": [
+    "智能体评测",
+    "开放世界",
+    "分布偏移",
+    "沙盒环境"
+   ],
+   "title_zh": "OpenAgent 沙盒测试：SFT 与强化学习训练的智能体在开放世界分布偏移下普遍掉性能",
+   "summary_zh": "作者把查询、动作、观测、领域四个维度的分布偏移形式化为 OpenAgent 设定，在受控沙盒里按感知、交互、推理、内化四层构造环境变化。实验显示 SFT 和强化学习训练的智能体都出现不同程度性能下降，作者据此提出扰动增强微调。",
    "cluster": "bfe7a2cc49e9fa82",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [
+    "eval",
+    "world-env"
+   ],
+   "score1": 55,
+   "score2": 35,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "c01de57256cdda45": {
    "id": "c01de57256cdda45",
@@ -67867,16 +69126,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 50,
+   "tags": [
+    "交通行为预测",
+    "自动驾驶",
+    "可解释性",
+    "闭环仿真"
+   ],
+   "title_zh": "Categorical Traffic Transformer 用可解释离散隐变量预测交通行为并兼容 LLM",
+   "summary_zh": "CTT 同时输出连续轨迹预测和离散化的类别预测（车道模式、同伦类等），隐空间完全可解释，训练时可直接用真值监督隐变量，避免模式坍缩。作者称其在预测精度上超过 SOTA，且输入输出均为 token，可接入 LLM 做常识推理与零样本泛化。",
    "cluster": "c0457de4d1dfc92b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "applied": false
   },
   "c04b8565c5904649": {
    "id": "c04b8565c5904649",
@@ -68052,7 +69324,7 @@
    "cluster": "c0a18809d198e887",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 47.54,
+   "hot": 44.23,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:03Z",
    "relevant": true,
@@ -68429,7 +69701,7 @@
    "cluster": "c17bea1790859202",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.36,
+   "hot": 1.26,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -68769,7 +70041,7 @@
    "cluster": "c2e5f6a5bcc1a417",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.87,
+   "hot": 30.58,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -70028,16 +71300,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 46,
+   "tags": [
+    "具身智能",
+    "记忆系统",
+    "任务规划",
+    "AI2-THOR"
+   ],
+   "title_zh": "KARMA 给具身智能体加长短期记忆，AI2-THOR 复杂家务任务成功率提升 2.3 倍",
+   "summary_zh": "KARMA 用长期记忆存 3D 场景图、短期记忆记录物体位置与状态变化，通过记忆增强提示改进 LLM 的任务规划。在 AI2-THOR 环境中，复合任务成功率提升 1.3 倍，复杂任务提升 2.3 倍。",
    "cluster": "c67a7aebbb6f7b57",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:27Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "generative-agents"
+   ],
+   "applied": false
   },
   "c67b7b3bb32ecbb1": {
    "id": "c67b7b3bb32ecbb1",
@@ -70883,8 +72168,8 @@
     "仿真环境",
     "评测基准"
    ],
-   "title_zh": "GRUtopia 建成首个面向机器人的模拟 3D 社会：10 万个可交互场景，LLM 驱动的 NPC 负责社交与派发任务",
-   "summary_zh": "GRUtopia 用 10 万个精细标注的可交互场景 GRScenes 拼出城市级环境，覆盖 89 类场景；GRResidents 是由 LLM 驱动的 NPC 系统，负责社交互动、任务生成与分配；配套基准 GRBench 以足式机器人为主，考察物体导航、社交导航与移动操作。",
+   "title_zh": "GRUtopia：面向各类机器人的城市级 3D 交互仿真社会与基准",
+   "summary_zh": "GRUtopia 是首个为多种机器人设计的模拟交互式 3D 社会。它包含 10 万个可自由组合成城市尺度环境的精细标注交互场景 GRScenes、由大语言模型驱动 NPC 的 GRResidents 系统，以及以足式机器人为主要智能体的基准 GRBench。作者希望借此缓解具身智能高质量数据稀缺的问题。",
    "cluster": "c967111bdc85aaa2",
    "cluster_size": 1,
    "is_lead": true,
@@ -70894,8 +72179,8 @@
    "relevant": true,
    "topics": [
     "world-env",
-    "generative-agents",
-    "eval"
+    "framework",
+    "game"
    ],
    "applied": false
   },
@@ -71852,17 +73137,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "cc99f07c0a1a054f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "ccdcf68917f04bfa": {
    "id": "ccdcf68917f04bfa",
@@ -72330,8 +73620,8 @@
     "多智能体",
     "偏好聚合"
    ],
-   "title_zh": "用LLM智能体模拟市民公投，缓解交通政策与民意错位",
-   "summary_zh": "研究让 GPT-4o 和 Claude-3.5 扮演芝加哥、休斯顿不同社区居民，用思维链对交通政策提案做排序或赞成投票，再以 IRV 汇总。结果显示 LLM 智能体能近似合理的集体偏好并回应本地语境，但存在模型特有的行为偏差，与优化基准有差距。",
+   "title_zh": "用 GPT-4o 和 Claude-3.5 模拟城市居民投票，测试 LLM 能否缓解交通政策与民意的错位",
+   "summary_zh": "交通规划里，模型算出的最优政策常和出行者的集体偏好对不上，导致政策落地难。作者让 LLM 智能体扮演不同社区居民，对一批公交政策提案做排序或赞成投票，再用即时决选制汇总成民主共识。在芝加哥和休斯敦的实验中，GPT-4o 和 Claude-3.5 都能给出合理的集体偏好并对本地情境作出反应，但也带有各自的模型偏差，与优化基准有适度偏离。",
    "cluster": "cd7179b5c2f9fb19",
    "cluster_size": 1,
    "is_lead": true,
@@ -72344,7 +73634,7 @@
     "urban",
     "human-behavior"
    ],
-   "applied": false
+   "applied": true
   },
   "cd7bfae925934620": {
    "id": "cd7bfae925934620",
@@ -72378,7 +73668,7 @@
    "cluster": "cd7bfae925934620",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.32
+   "hot": 5.88
   },
   "cdaff7db1b0526dc": {
    "id": "cdaff7db1b0526dc",
@@ -72728,8 +74018,8 @@
     "个性化建模",
     "数据集"
    ],
-   "title_zh": "HumanLLM 从 Reddit、Twitter 等平台 550 万条用户日志构建个体行为模拟基础模型",
-   "summary_zh": "作者认为通用预训练缺少个体连续的情境上下文，于是从 Reddit、Twitter、Blogger、Amazon 的真实用户数据经多阶段过滤与合成，抽取超过 550 万条用户日志构建 Cognitive Genome Dataset，训练面向个体理解与行为模拟的基础模型。",
+   "title_zh": "HumanLLM：基于 550 万条真实用户日志微调的个性化人类行为模拟基座模型",
+   "summary_zh": "作者认为 LLM 模拟人类行为效果差，根源在于预训练数据缺少个体在连续情境中的决策与思维。他们从 Reddit、Twitter 等平台提取 550 万条用户日志，构建 Cognitive Genome Dataset 并微调出 HumanLLM。评测显示它在预测用户行为和内心想法、模仿写作风格、生成用户画像上都优于基座模型，在域外社交智能基准上也有提升。",
    "cluster": "cea495165a6b9629",
    "cluster_size": 1,
    "is_lead": true,
@@ -72738,8 +74028,7 @@
    "triaged": "2026-11-20T02:27:57Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
-    "generative-agents"
+    "human-behavior"
    ],
    "applied": false
   },
@@ -72774,7 +74063,7 @@
    "cluster": "ceb19a347eba9138",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.81
+   "hot": 5.41
   },
   "cec47e8573304ac3": {
    "id": "cec47e8573304ac3",
@@ -72877,17 +74166,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "cede7a528cd7c566",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "cf67bba555e2fd98": {
    "id": "cf67bba555e2fd98",
@@ -73104,17 +74398,33 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 30,
+   "tags": [
+    "交通信号",
+    "编码智能体",
+    "程序合成",
+    "交通仿真"
+   ],
+   "title_zh": "EvolveSignal：用 LLM 编码智能体自动搜索定时信号配时策略，平均延误降 20.1%",
+   "summary_zh": "作者把定时信号控制策略的改进写成程序合成问题，让 LLM 编码智能体在交通仿真器反馈下做进化搜索，生成可解释的 Python 策略函数。在单个信号交叉口实验中，发现的策略比 Webster 法平均延误降低 20.1%，平均停车次数减少 47.1%。",
    "cluster": "d05e1115f27e1157",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": false,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 62,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d09e68a476f2ec3f": {
    "id": "d09e68a476f2ec3f",
@@ -74129,16 +75439,30 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 62,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 72,
+   "tags": [
+    "城市规划",
+    "沙盒环境",
+    "强化学习",
+    "开源框架"
+   ],
+   "title_zh": "CityPlanner 用文件式 UrbanSandbox 让智能体做可执行城市规划，在真实基准上超过启发式与通用 LLM 智能体",
+   "summary_zh": "作者提出 CityPlanner，把城市规划做成沙盒智能体任务：智能体在 UrbanSandbox 里读任务文件、生成方案、跑评估器并按反馈修改。方法上用原子任务强化学习拆成 BuildPlan 与 ImprovePlan 两段。在真实基准上优于启发式、任务专用 RL 和通用 LLM 智能体基线，代码与数据集已放出。",
    "cluster": "d2eaf7ad86e269f2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework",
+    "eval"
+   ],
+   "applied": true
   },
   "d31b8c5d6c867f07": {
    "id": "d31b8c5d6c867f07",
@@ -74938,7 +76262,7 @@
    "cluster": "d4547f073da0afdd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.04,
+   "hot": 0.96,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:09Z",
    "relevant": true,
@@ -75225,17 +76549,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "d4d49dd5394f6434",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "d509fd896ab437cf": {
    "id": "d509fd896ab437cf",
@@ -75355,7 +76684,7 @@
    "cluster": "d579b2c009323c05",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.81
+   "hot": 0.75
   },
   "d57be9246b5c9387": {
    "id": "d57be9246b5c9387",
@@ -75401,17 +76730,31 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 25,
+   "tags": [
+    "智能体安全",
+    "评测基准",
+    "沙箱环境"
+   ],
+   "title_zh": "MCP-TDP 基准：工具描述投毒让 GPT-4o 等 8 个模型在六类高危场景攻击成功率近 100%",
+   "summary_zh": "作者提出 Tool Description Poisoning，把恶意指令写进工具的描述元数据而非可执行代码，并构建含 32 个真实案例、6 类风险的 MCP-TDP 沙箱基准。测试 8 个主流模型，GPT-4o 在六类高危场景攻击成功率接近 100%，常见提示词护栏基本无效。",
    "cluster": "d57be9246b5c9387",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": false,
+   "topics": [
+    "eval"
+   ],
+   "score1": 58,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d58a3b42ac6b4793": {
    "id": "d58a3b42ac6b4793",
@@ -76115,16 +77458,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 62,
+   "tags": [
+    "自动驾驶测试",
+    "场景生成",
+    "事故报告",
+    "仿真"
+   ],
+   "title_zh": "SoVAR：用 LLM 从事故报告抽取信息，自动生成可跨路网复用的自动驾驶测试场景",
+   "summary_zh": "SoVAR 用带语言模式设计的提示词引导大模型从文本事故报告中抽取事故信息，再求解事故相关约束，在仿真地图上重建场景。目标是解决现有重建方法抽取精度不足、难以匹配不同道路环境的问题。",
    "cluster": "d78342506a69effe",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d7cd64032f5cf115": {
    "id": "d7cd64032f5cf115",
@@ -77866,17 +79225,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 30,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "dd42d91d15db61dc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "dd899f014d5ffd18": {
    "id": "dd899f014d5ffd18",
@@ -78453,8 +79817,8 @@
     "行为调控",
     "评测环境"
    ],
-   "title_zh": "CoBRA 用经典社会心理学实验给 LLM 智能体编程认知偏差",
-   "summary_zh": "论文指出用自然语言描述来设定智能体行为，跨模型不一致且抓不住细节。CoBRA 通过 Cognitive Bias Index 在已验证的经典社会实验里测量智能体偏差，再由 Behavioral Regulation Engine 闭环调节，实现与模型无关的可控行为，并把社会实验变成可复用的 gym 环境。",
+   "title_zh": "CoBRA 工具包：用经典社会科学实验给 LLM 社会智能体编程认知偏差",
+   "summary_zh": "CoBRA 提出一套模型无关的方法，让研究者显式指定 LLM 社会仿真中智能体的认知偏差并获得跨模型一致的行为。它包含两个组件：用经典社会科学实验量化智能体偏差的 Cognitive Bias Index，以及把行为对齐到目标偏差的 Behavioral Regulation Engine。作者还把经典实验改造成可复用的 gym 环境。",
    "cluster": "debf91ae68788884",
    "cluster_size": 1,
    "is_lead": true,
@@ -78464,7 +79828,7 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "human-behavior",
+    "framework",
     "eval"
    ],
    "applied": false
@@ -79172,17 +80536,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "e16c6b1fdad58c74",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "e19aa5840619a2b8": {
    "id": "e19aa5840619a2b8",
@@ -79288,16 +80657,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 52,
+   "tags": [
+    "自动驾驶",
+    "多模态大模型",
+    "仿真基准",
+    "闭环评测"
+   ],
+   "title_zh": "PADriver：多模态大模型驱动的个性化自动驾驶闭环框架与 PAD-Highway 基准",
+   "summary_zh": "PADriver 以多模态大模型为决策核心，输入连续帧和个性化文本提示，输出场景理解、危险等级估计和动作决策。作者基于 Highway-Env 搭建闭环基准 PAD-Highway，含 250 小时带标注视频，用于评测不同驾驶风格下的决策表现。",
    "cluster": "e1a0186517725458",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "e1b0330636fee97b": {
    "id": "e1b0330636fee97b",
@@ -79574,16 +80956,28 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 76,
+   "tags": [
+    "交通仿真",
+    "生成式智能体",
+    "出行行为"
+   ],
+   "title_zh": "GTA：用大模型人格智能体模拟柏林规模的真实出行行为",
+   "summary_zh": "作者提出 GTA（Generative Traffic Agents），用 LLM 驱动的人格智能体从人口普查数据生成人工人口，模拟活动日程和交通方式选择。在柏林规模的实验中，智能体能复现按社会经济地位划分的出行方式分担率等模式，但在出行距离和方式偏好上存在系统性偏差。",
    "cluster": "e22ac3a7500996b6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "applied": true
   },
   "e22ce95f245b7ad7": {
    "id": "e22ce95f245b7ad7",
@@ -79619,16 +81013,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 66,
+   "tags": [
+    "提示方法",
+    "概率指令遵循",
+    "人类行为模拟",
+    "多样性"
+   ],
+   "title_zh": "String Seed of Thought：让 LLM 先输出随机字符串，使生成答案分布贴合目标概率",
+   "summary_zh": "作者把“按给定概率从选项中选择答案”定义为 Probabilistic Instruction Following，指出 LLM 在此类任务上存在偏差、输出多样性塌缩，影响人类行为模拟等应用。SSoT 让模型先输出随机字符串再从中提取随机性推导答案，实验显示该方法的 PIF 表现明显提升。",
    "cluster": "e22ce95f245b7ad7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": true,
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
   },
   "e2a7006ff05d8867": {
    "id": "e2a7006ff05d8867",
@@ -79671,16 +81078,33 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 55,
+   "tags": [
+    "城市决策支持",
+    "知识图谱",
+    "本体构建",
+    "多式联运"
+   ],
+   "title_zh": "用 ChatGPT 从文献与手册自动构建城市仿真本体，支撑多式联运货运决策",
+   "summary_zh": "作者以 ChatGPT API 为推理核心，结合自然语言处理、methontology 提示调优和 transformer，从城市数据集与仿真相关文献、技术手册中自动生成场景化本体，输出 OWL、RDF、SPARQL 知识图谱。案例用于优化多式联运货运，目标是支撑多领域仿真模型耦合与决策指标构建。",
    "cluster": "e2a7006ff05d8867",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "policy",
+    "framework"
+   ],
+   "score1": 55,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "e2acc0a0432d6c55": {
    "id": "e2acc0a0432d6c55",
@@ -79753,17 +81177,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "e2e0d2d5b8461a04",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "e2ecdb4e5637ae84": {
    "id": "e2ecdb4e5637ae84",
@@ -79806,16 +81235,30 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 48,
+   "tags": [
+    "系统之系统",
+    "holonic 架构",
+    "多智能体",
+    "智慧城市"
+   ],
+   "title_zh": "面向可扩展 SoS 的 LLM 增强 holonic 架构，以智慧城市交通 3D 出行案例演示",
+   "summary_zh": "作者提出分层 holon 架构，包含推理、通信和能力三层，并引入 supervisor、planner、task、resource 四类专用 holon，在推理层调用大模型做决策。通过智慧城市交通的 3D 出行案例展示该架构管理多模态系统之系统的能力。",
    "cluster": "e2ecdb4e5637ae84",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:34Z",
+   "relevant": true,
+   "topics": [
+    "org",
+    "urban",
+    "framework"
+   ],
+   "applied": false
   },
   "e2f384caa48c7c68": {
    "id": "e2f384caa48c7c68",
@@ -79839,17 +81282,29 @@
    ],
    "domain_guess": "application",
    "added": "2026-11-21T10:10:03Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "application",
-   "score": 73,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 32,
+   "tags": [
+    "数字孪生",
+    "智慧城市",
+    "沙盘"
+   ],
+   "title_zh": "CSDN 文章介绍 AI 全息数字沙盘在智慧城市中的应用场景",
+   "summary_zh": "CSDN 一篇标题为《AI智能全息数字沙盘系统：从数字孪生到智慧城市应用场景》的文章，讨论数字孪生沙盘在智慧城市中的落地场景。抓取到的正文只有标题，没有具体系统、数据或案例细节。",
    "cluster": "e2f384caa48c7c68",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 69.06
+   "hot": 69.06,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:30Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "applied": false
   },
   "e32658318982011d": {
    "id": "e32658318982011d",
@@ -79901,8 +81356,8 @@
     "多智能体",
     "公众参与"
    ],
-   "title_zh": "LLM 多智能体模拟规划师与数千居民，生成参与式城市土地利用方案",
-   "summary_zh": "作者构建 LLM 多智能体框架模拟一名规划师和数千名不同背景的居民，规划师先出土地利用初稿，各社区居民按自身画像反馈，并用鱼缸讨论机制控制讨论规模。目标是低成本地复现参与式城市规划流程。",
+   "title_zh": "用大模型智能体模拟居民参与式城市规划，在北京两个真实片区生成用地方案",
+   "summary_zh": "作者提出一个基于大模型的多智能体协作框架，用 LLM 扮演规划师和数千名背景各异的居民，通过社区讨论和鱼缸式发言机制迭代修改用地规划。方法部署在北京两个真实片区，居民满意度和包容性指标达到最优，服务可达性和生态指标上超过人类专家。",
    "cluster": "e32658318982011d",
    "cluster_size": 1,
    "is_lead": true,
@@ -79912,10 +81367,9 @@
    "relevant": true,
    "topics": [
     "urban",
-    "policy",
     "generative-agents"
    ],
-   "applied": false
+   "applied": true
   },
   "e330d7ac8c0ab8d0": {
    "id": "e330d7ac8c0ab8d0",
@@ -81044,7 +82498,7 @@
    "cluster": "e6d65daa2397dd51",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.33,
+   "hot": 7.75,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -81512,7 +82966,7 @@
    "cluster": "e7f6a543c6212296",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.43,
+   "hot": 0.4,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:09Z",
    "relevant": true,
@@ -81624,17 +83078,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "e859d99fa81124dc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "e90a112adb83b530": {
    "id": "e90a112adb83b530",
@@ -81745,17 +83204,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "e92e5815e24b2d75",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "e9796a16b0e38e94": {
    "id": "e9796a16b0e38e94",
@@ -81943,7 +83407,7 @@
    "cluster": "e9b4f62a38c35c8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 50.93,
+   "hot": 47.37,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -82062,16 +83526,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 67,
+   "tags": [
+    "无人机集群",
+    "任务分配",
+    "城市仿真",
+    "大模型智能体"
+   ],
+   "title_zh": "CoordField：用 LLM 指挥异构无人机群在城市低空场景分配任务",
+   "summary_zh": "作者提出 CoordField，由大模型把人类高层指令转成无人机群可执行命令，再用协调场机制引导无人机运动与任务选择，实现去中心化的动态任务分配。在 2D 仿真空间中对不同模型做了 50 轮对比测试，任务覆盖率优于基线。",
    "cluster": "e9e0b70eba5519e5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "score1": 62,
+   "score2": 72,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "e9f727adf5aed0b6": {
    "id": "e9f727adf5aed0b6",
@@ -82454,17 +83934,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "ead151b08645a7b9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "eaee7cf4ca117e77": {
    "id": "eaee7cf4ca117e77",
@@ -82939,17 +84424,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "ec4f04ae23dd92c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "ec58c1a75b23597e": {
    "id": "ec58c1a75b23597e",
@@ -83050,16 +84540,30 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 65,
+   "tags": [
+    "交通信号控制",
+    "城市仿真",
+    "大模型决策"
+   ],
+   "title_zh": "LLM-Assisted Light：把大模型放进城市信号灯控制决策回路",
+   "summary_zh": "作者构建混合框架，让大模型调用感知与决策工具查询静态和动态交通信息，再结合既有信号控制方法做决策，并搭建仿真平台验证。目标是应对规则算法和强化学习在陌生交通场景下适应性不足的问题。",
    "cluster": "ec67226e90f076de",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": true,
+   "topics": [
+    "urban"
+   ],
+   "score1": 60,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "ecb95581790f3cc6": {
    "id": "ecb95581790f3cc6",
@@ -83876,16 +85380,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 68,
+   "tags": [
+    "多智能体",
+    "欺骗行为",
+    "具身沙箱"
+   ],
+   "title_zh": "MineAmongUs：3D 多模态 Among Us 沙箱里，VLM 智能体靠语言加动作欺骗队友",
+   "summary_zh": "作者搭建 3D 多模态 Among Us 沙箱 MineAmongUs，内鬼智能体需同时用语言和非语言动作欺骗船员，并给出可配置的 VLM 智能体框架 ARIA 和五条认知组件消融轴。结果显示非语言通道是更决定性的取胜因素，LLM-as-a-Judge 的原子级标注接近人类一致性。",
    "cluster": "ee31925e0a34b674",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": true,
+   "topics": [
+    "social-sim",
+    "eval",
+    "game"
+   ],
+   "applied": false
   },
   "ee69fdf7a4e464c5": {
    "id": "ee69fdf7a4e464c5",
@@ -83996,7 +85513,7 @@
    "cluster": "ee93b091150d6754",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 31.13
+   "hot": 28.96
   },
   "eefea71d749df811": {
    "id": "eefea71d749df811",
@@ -84095,17 +85612,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 25,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "ef0435120cbaa0bb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "ef0a6b5980c5e160": {
    "id": "ef0a6b5980c5e160",
@@ -84144,16 +85666,32 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 64,
+   "tags": [
+    "自动驾驶",
+    "场景生成",
+    "CARLA",
+    "合成数据"
+   ],
+   "title_zh": "用大模型按文字描述生成 CARLA 交通场景脚本，补充运动规划的稀缺危险工况",
+   "summary_zh": "作者把交通场景表示成脚本，用大模型通过上下文学习把用户文字描述翻译成脚本，交给 CARLA 生成场景，再把生成的安全关键场景当作合成训练数据训练运动规划器，以降低人工搭建场景的成本。",
    "cluster": "ef0a6b5980c5e160",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "ef1fba0c494d4d22": {
    "id": "ef1fba0c494d4d22",
@@ -84206,8 +85744,8 @@
     "反事实推演",
     "多智能体"
    ],
-   "title_zh": "用 LLM 驱动的反事实仿真评估社交平台内容审核策略",
-   "summary_zh": "作者搭建了一个由 LLM 驱动的在线社交网络对话模拟器，在保持其他条件不变的前提下并行跑反事实实验，观察审核干预如何影响毒性言论。实验显示智能体具备心理真实性、出现社会传染现象，个性化审核策略效果最好。",
+   "title_zh": "用大模型智能体做反事实仿真，评估社交平台内容审核策略的效果",
+   "summary_zh": "作者构建了一个由大模型驱动的社交网络对话仿真器，能在保持其他条件不变的情况下平行推演“有审核”和“无审核”两种世界，从而评估审核干预的真实效果。实验显示智能体具有心理层面的真实性，出现了毒性言论的社会传染现象，并且个性化审核策略比通用策略更有效。",
    "cluster": "ef1fba0c494d4d22",
    "cluster_size": 1,
    "is_lead": true,
@@ -84217,7 +85755,6 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "policy",
     "eval"
    ],
    "applied": false
@@ -85667,7 +87204,7 @@
    "cluster": "f23f3f241ac47b98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.09,
+   "hot": 1.02,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -85871,17 +87408,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 15,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "f2dd97dbb39408df",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "f2f4f3ec4d43fd89": {
    "id": "f2f4f3ec4d43fd89",
@@ -86336,7 +87878,7 @@
    "cluster": "f4a24bf226024f74",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.89
+   "hot": 25.94
   },
   "f4d061b6e7a3a39c": {
    "id": "f4d061b6e7a3a39c",
@@ -86382,16 +87924,31 @@
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 62,
+   "tags": [
+    "开放世界",
+    "评测基准",
+    "Minecraft"
+   ],
+   "title_zh": "MineExplorer：在 Minecraft 中评测多模态大模型智能体的开放世界探索能力",
+   "summary_zh": "作者先过滤掉依赖 Minecraft 专属知识的原子任务，再按 ReAct 式能力框架把原子任务组合成隐式多跳任务，用多智能体流程联合设计任务图、沙箱场景和规则化里程碑评测器。人类评估显示该流程比单智能体基线更可靠，先进 MLLM 智能体在开放世界探索上仍表现吃力。",
    "cluster": "f4d061b6e7a3a39c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:39Z",
+   "relevant": true,
+   "topics": [
+    "world-env",
+    "eval"
+   ],
+   "score1": 62,
+   "score2": 88,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "f4d7d3cb1d4075c3": {
    "id": "f4d7d3cb1d4075c3",
@@ -87518,17 +89075,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 18,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "f837b52082533612",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "f89e61b266b78ea2": {
    "id": "f89e61b266b78ea2",
@@ -87628,7 +89190,7 @@
    "cluster": "f8cc32a5cb386b75",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.83
+   "hot": 6.35
   },
   "f941a1a14faa0113": {
    "id": "f941a1a14faa0113",
@@ -87683,8 +89245,8 @@
     "校准",
     "评测基准"
    ],
-   "title_zh": "计算版图灵测试：九个开源 LLM 模拟 X、Bluesky、Reddit 用户仍有系统性语言差异",
-   "summary_zh": "作者提出“计算图灵测试”，把 BERT 可检测性与语义相似度等聚合指标，同文体标记、话题模式等可解释语言特征结合起来，评估 LLM 文本有多像真人。在 X、Bluesky、Reddit 用户互动数据上比较九个开源权重模型和五种校准策略（微调、风格提示、上下文检索等），发现人机语言存在系统性差异。",
+   "title_zh": "计算图灵测试显示：校准后的大模型文本仍与人类语言存在系统性差异",
+   "summary_zh": "作者提出“计算图灵测试”验证框架，用可检测性、语义相似度和可解释语言特征评估大模型文本的人类相似度。他们比较九个开源大模型和五种校准策略，任务是复现 X、Bluesky 和 Reddit 上的用户互动。结果显示校准后大模型输出仍能被清晰区分，尤其在情感表达上。",
    "cluster": "f941a1a14faa0113",
    "cluster_size": 1,
    "is_lead": true,
@@ -87694,8 +89256,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "eval",
-    "social-sim"
+    "eval"
    ],
    "applied": false
   },
@@ -87750,7 +89311,7 @@
    "cluster": "f94538d40439027e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 28.46,
+   "hot": 26.47,
    "topics": [
     "health",
     "policy"
@@ -87802,17 +89363,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "f96262dd124ee7df",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "f966a6ab52ce62d3": {
    "id": "f966a6ab52ce62d3",
@@ -88074,16 +89640,29 @@
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
    "status": "selected",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 45,
+   "tags": [
+    "车联网",
+    "轨迹预测",
+    "联邦学习",
+    "开源大模型"
+   ],
+   "title_zh": "FPoTT：开源大模型加联邦 Transformer 做车联网轨迹预测",
+   "summary_zh": "作者提出 FPoTT 框架，用开源大模型做动态提示优化以改进车辆轨迹预测，采用双层联邦学习，边缘模型负责实时推理、云端大模型保留全局知识，并引入 Transformer 驱动的合成数据生成器。",
    "cluster": "fab26d062501f0c8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:39Z",
+   "relevant": true,
+   "topics": [
+    "urban",
+    "framework"
+   ],
+   "applied": false
   },
   "fad2648c72549191": {
    "id": "fad2648c72549191",
@@ -88209,6 +89788,45 @@
    "score2": 70,
    "model2": "Qwen3.8-27B",
    "applied": false
+  },
+  "fb0542118136d795": {
+   "id": "fb0542118136d795",
+   "url": "https://doi.org/10.21203/rs.3.rs-10524995/v1",
+   "title": "A modular state-space model of human perception, cognition, and decision dynamics",
+   "text": "Human-centered adaptive systems require behavioral models that are both psychologically interpretable and mathematically analyzable. Many existing predictors either operate as black-box input–output mappings or provide limited access to latent internal dynamics. This paper addresses this gap by modeling behavior as a perception–cognition–decision pipeline. We propose a modular state-space model in which attentional selection, predictive inference, cognitive-state evolution, intention formation, and action selection are represented by coupled mathematical mappings. The model links sensory inputs to observable behavior through latent internal states while retaining interpretable connections to neuro-cognitive mechanisms. We establish sufficient conditions for boundedness, Lipschitz regularity, forward invariance, contraction of perceptual inference under constant input, and input-to-state stability of the cognitive state dynamics. Numerical sensitivity analyses show that the model yields interpretable changes in perceptual tracking, cognitive amplification, intention expression, and action decisiveness. We further demonstrate a closed-loop rehabilitation case study in which a receding-horizon controller uses the model to adapt movement difficulty from partial feedback. In this proof-of-concept setting, the model-based controller sustains simulated task participation and achieves lower realized cumulative cost than target-following and random baselines. Overall, the framework provides a white-box dynamical structure for estimation, validation, and model-based control in human-centered settings.",
+   "source_id": "openalex-generative-agents",
+   "source_name": "OpenAlex · 期刊/会议（生成式智能体/社会模拟）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "published": "2026-11-20T00:00:00Z",
+   "authors": [
+    "Sven Schoonebeek",
+    "Carlo Cenedese",
+    "Anahita Jamshidnejad"
+   ],
+   "extra": {
+    "venue": "Research Square",
+    "pdf": "https://doi.org/10.21203/rs.3.rs-10524995/v1",
+    "doi": "https://doi.org/10.21203/rs.3.rs-10524995/v1",
+    "cited_by": 0,
+    "type": "preprint"
+   },
+   "kw_score": 30,
+   "kw_terms": [
+    "simulated",
+    "simulate"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-21T17:49:36Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "academic",
+   "score": 30,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "fb123e12936139b6": {
    "id": "fb123e12936139b6",
@@ -88455,17 +90073,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 12,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "fc0b49f971d4bd76",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "fc1180f0851654b3": {
    "id": "fc1180f0851654b3",
@@ -88574,17 +90197,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 63,
+   "score": 28,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "fc48357ae7d5f33b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:43Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "fc97273e83d39f85": {
    "id": "fc97273e83d39f85",
@@ -88636,7 +90264,7 @@
    "cluster": "fc97273e83d39f85",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.8,
+   "hot": 5.4,
    "topics": [
     "eval",
     "wargame"
@@ -88820,7 +90448,7 @@
    "cluster": "fcd8d9c585f09966",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.23
+   "hot": 0.21
   },
   "fd0b4e5ac8bc7e59": {
    "id": "fd0b4e5ac8bc7e59",
@@ -88876,7 +90504,7 @@
    "cluster": "fd0b4e5ac8bc7e59",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.32,
+   "hot": 4.02,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -88985,17 +90613,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 62,
+   "score": 20,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "fd48151c36209587",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:39:47Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "fd594364776515a4": {
    "id": "fd594364776515a4",
@@ -89307,8 +90940,8 @@
     "人设偏差",
     "社会仿真"
    ],
-   "title_zh": "多智能体交互中的人设偏差：历史优势群体人设被判定更不可信、更不坚持",
-   "summary_zh": "作者在协作解题与说服任务中给 LLM 智能体分配人设，发现男性、白人等人设的智能体被同伴认为可信度更低、坚持度更弱，且智能体明显偏向顺从与自己人设相同的同伴。这些偏差在不同模型、群体规模和交互轮数下都稳定存在。",
+   "title_zh": "北大团队发现多智能体系统中人设引发偏见：优势群体人设更不被信任、同群体从众更明显",
+   "summary_zh": "作者系统考察了给 LLM 智能体分配人设是否会在多智能体交互中引入偏见。受控实验显示，处于历史优势群体的人设（如男性、白人）被认为可信度更低、坚持己见的程度也更弱，且智能体明显偏向认同与自己人设相同的同伴。这些偏见在不同模型、群体规模和交互轮数下都持续存在。",
    "cluster": "fdc27a58a50de826",
    "cluster_size": 1,
    "is_lead": true,
@@ -89317,7 +90950,6 @@
    "triaged": "2026-11-20T14:14:42Z",
    "relevant": true,
    "topics": [
-    "social-sim",
     "human-behavior",
     "eval"
    ],
@@ -89724,17 +91356,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 60,
+   "score": 12,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "ff26177fd40616af",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-21T17:40:44Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "ff7f6d8e21eb34c5": {
    "id": "ff7f6d8e21eb34c5",
