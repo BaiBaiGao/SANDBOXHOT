@@ -269,7 +269,7 @@
    "cluster": "0073f7aaf98ffa6d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 49.38,
+   "hot": 49.31,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -329,7 +329,7 @@
    "cluster": "00798a23152e25ac",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 26.12,
+   "hot": 26.09,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -1893,7 +1893,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.98
+   "hot": 29.94
   },
   "056049c248a6ef9d": {
    "id": "056049c248a6ef9d",
@@ -2077,7 +2077,7 @@
    "cluster": "0599676be458de0d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.55,
+   "hot": 16.53,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -3275,7 +3275,7 @@
    "cluster": "0856c29adf22c46d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 47.75,
+   "hot": 47.69,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:31Z",
    "relevant": true,
@@ -6318,7 +6318,7 @@
    "cluster": "12f6125c2b6f37b3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 45.16
+   "hot": 45.09
   },
   "12f64111a08d91c8": {
    "id": "12f64111a08d91c8",
@@ -6419,7 +6419,7 @@
    "cluster": "13064bc157903fe6",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 6.03
+   "hot": 6.02
   },
   "1307adfc9d972fce": {
    "id": "1307adfc9d972fce",
@@ -7918,7 +7918,7 @@
    "cluster": "1836246dfbfb504c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.93
+   "hot": 27.89
   },
   "187e7616f25666c9": {
    "id": "187e7616f25666c9",
@@ -9147,7 +9147,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.96
+   "hot": 29.91
   },
   "1adcd580424fc1d6": {
    "id": "1adcd580424fc1d6",
@@ -14460,7 +14460,7 @@
    "cluster": "2a7c337d3195182a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.53,
+   "hot": 3.52,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -16209,7 +16209,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.03
+   "hot": 29.99
   },
   "2fea6aee67da14e8": {
    "id": "2fea6aee67da14e8",
@@ -21411,7 +21411,7 @@
    "cluster": "3eefc5d18a4ade26",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 53.58,
+   "hot": 53.5,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -21741,7 +21741,7 @@
    "cluster": "3f6c8be79bdf323c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.46,
+   "hot": 13.44,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:14Z",
    "relevant": true,
@@ -22228,7 +22228,7 @@
    "cluster": "408457c46f4c7f25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 24.08,
+   "hot": 24.05,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -22289,7 +22289,7 @@
    "cluster": "408c344060ff2813",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 24.4
+   "hot": 24.37
   },
   "408e92ed39260e9a": {
    "id": "408e92ed39260e9a",
@@ -24456,7 +24456,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.56
+   "hot": 30.52
   },
   "4751ecf297a616b0": {
    "id": "4751ecf297a616b0",
@@ -25237,7 +25237,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 27.67
+   "hot": 27.63
   },
   "4a74ea117b3c8952": {
    "id": "4a74ea117b3c8952",
@@ -25953,7 +25953,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 32.85
+   "hot": 32.8
   },
   "4c34cde27eeaace5": {
    "id": "4c34cde27eeaace5",
@@ -25986,7 +25986,7 @@
    "cluster": "4c34cde27eeaace5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.88
+   "hot": 5.87
   },
   "4c57c27fd1150e59": {
    "id": "4c57c27fd1150e59",
@@ -27583,7 +27583,7 @@
    "cluster": "5020d8d5fba330a1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 37.7
+   "hot": 37.65
   },
   "5069f1280bd3ad48": {
    "id": "5069f1280bd3ad48",
@@ -28651,7 +28651,7 @@
    "cluster": "13064bc157903fe6",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 5.27
+   "hot": 5.26
   },
   "52ee6fbbe1d17951": {
    "id": "52ee6fbbe1d17951",
@@ -29762,7 +29762,7 @@
    "cluster": "54b7d3eafd551ca7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.04
+   "hot": 4.03
   },
   "54bc8ffd1db50f87": {
    "id": "54bc8ffd1db50f87",
@@ -31478,7 +31478,7 @@
    "cluster": "5aca4c38bba36ada",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.13,
+   "hot": 3.12,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -32213,7 +32213,7 @@
    "cluster": "5c4fce723d6e8254",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.34
+   "hot": 25.3
   },
   "5c674a806a042351": {
    "id": "5c674a806a042351",
@@ -35744,7 +35744,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.28
+   "hot": 30.24
   },
   "67a8c4f27cf53904": {
    "id": "67a8c4f27cf53904",
@@ -36992,7 +36992,7 @@
    "cluster": "6a4cf305f5f066a3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.56,
+   "hot": 1.55,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -37092,7 +37092,7 @@
    "cluster": "6a7c202ed3a48dcc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.54
+   "hot": 11.52
   },
   "6ab72298cc9c3e06": {
    "id": "6ab72298cc9c3e06",
@@ -37208,7 +37208,7 @@
    "cluster": "6ad28f1ae923c520",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 54.39
+   "hot": 54.31
   },
   "6b987741a5287104": {
    "id": "6b987741a5287104",
@@ -38147,7 +38147,7 @@
    "cluster": "6d96cf6c4f95d26a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.56
+   "hot": 12.54
   },
   "6d9a0d27eb516a4f": {
    "id": "6d9a0d27eb516a4f",
@@ -38989,7 +38989,7 @@
    "cluster": "6f304b36be9257fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.01,
+   "hot": 10.99,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -40011,7 +40011,7 @@
    "cluster": "72af26774086d271",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.48,
+   "hot": 19.45,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -40562,7 +40562,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.96
+   "hot": 29.91
   },
   "73fffad531537a78": {
    "id": "73fffad531537a78",
@@ -41653,7 +41653,7 @@
    "cluster": "777cd1e779dc04f4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.74,
+   "hot": 13.72,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -42385,7 +42385,7 @@
    "cluster": "79ee4a2408bc74b2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.93,
+   "hot": 25.9,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -42659,7 +42659,7 @@
    "cluster": "7a5272a25b721a40",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 38.63
+   "hot": 38.57
   },
   "7a5e99a21b382b5d": {
    "id": "7a5e99a21b382b5d",
@@ -43110,7 +43110,7 @@
    "cluster": "7b973e5cb3288143",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.44
+   "hot": 13.42
   },
   "7ba8cf3b2661a235": {
    "id": "7ba8cf3b2661a235",
@@ -44841,7 +44841,7 @@
    "cluster": "80469b978b756760",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 30.87,
+   "hot": 30.83,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -47503,7 +47503,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 100.27
+   "hot": 100.13
   },
   "897fdbb449f8c760": {
    "id": "897fdbb449f8c760",
@@ -47670,7 +47670,7 @@
    "cluster": "89b6dc79c43684f1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.0
+   "hot": 18.97
   },
   "89c0ce6b226bbbe6": {
    "id": "89c0ce6b226bbbe6",
@@ -48574,7 +48574,7 @@
    "cluster": "8b52bd6ca3b0b663",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.39
+   "hot": 5.38
   },
   "8b6efe1486dbf5db": {
    "id": "8b6efe1486dbf5db",
@@ -52143,7 +52143,7 @@
    "cluster": "948c36101407e81c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.89,
+   "hot": 8.87,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -53503,7 +53503,7 @@
    "cluster": "9773c1ebbc83374d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.92
+   "hot": 4.91
   },
   "9786426f00c9ceb3": {
    "id": "9786426f00c9ceb3",
@@ -54283,7 +54283,7 @@
    "cluster": "98fb20f80efbdd1e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.91,
+   "hot": 32.87,
    "topics": [
     "economy",
     "policy"
@@ -58955,7 +58955,7 @@
    "cluster": "a3b9dc32372c08c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.01,
+   "hot": 10.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -59682,7 +59682,7 @@
    "cluster": "a5e42b2b6ba30ccc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.09,
+   "hot": 25.06,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -59986,7 +59986,7 @@
    "cluster": "a6e7e91569fce679",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 29.92
+   "hot": 29.88
   },
   "a6eb2d95f5bd0ec4": {
    "id": "a6eb2d95f5bd0ec4",
@@ -61191,7 +61191,7 @@
    "cluster": "aa8e964eeccef16d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.7,
+   "hot": 12.68,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -61869,7 +61869,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.1
+   "hot": 30.06
   },
   "ada2b4d5f7f1b58f": {
    "id": "ada2b4d5f7f1b58f",
@@ -62068,7 +62068,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 30.21
+   "hot": 30.17
   },
   "ae06906a60ff1700": {
    "id": "ae06906a60ff1700",
@@ -63772,7 +63772,7 @@
    "cluster": "b2017a81e5e5c532",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.75
+   "hot": 23.72
   },
   "b21421633eabfb0f": {
    "id": "b21421633eabfb0f",
@@ -64678,7 +64678,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": false,
-   "hot": 29.96
+   "hot": 29.91
   },
   "b527f71069261b75": {
    "id": "b527f71069261b75",
@@ -66657,7 +66657,7 @@
    "cluster": "bbc9b4d66e7e40f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.59,
+   "hot": 23.56,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -66988,7 +66988,7 @@
    "cluster": "bd1a1262a30563d3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 47.92
+   "hot": 47.85
   },
   "bd48b9b8ec948700": {
    "id": "bd48b9b8ec948700",
@@ -67038,7 +67038,7 @@
    "cluster": "bd48b9b8ec948700",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.97,
+   "hot": 16.94,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -67494,7 +67494,7 @@
    "cluster": "bf27d5d9f81b7f18",
    "cluster_size": 12,
    "is_lead": true,
-   "hot": 31.99
+   "hot": 31.94
   },
   "bf3b611e10312e5b": {
    "id": "bf3b611e10312e5b",
@@ -68052,7 +68052,7 @@
    "cluster": "c0a18809d198e887",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 47.61,
+   "hot": 47.54,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:03Z",
    "relevant": true,
@@ -68769,7 +68769,7 @@
    "cluster": "c2e5f6a5bcc1a417",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.91,
+   "hot": 32.87,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -72378,7 +72378,7 @@
    "cluster": "cd7bfae925934620",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.33
+   "hot": 6.32
   },
   "cdaff7db1b0526dc": {
    "id": "cdaff7db1b0526dc",
@@ -72774,7 +72774,7 @@
    "cluster": "ceb19a347eba9138",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.82
+   "hot": 5.81
   },
   "cec47e8573304ac3": {
    "id": "cec47e8573304ac3",
@@ -79849,7 +79849,7 @@
    "cluster": "e2f384caa48c7c68",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 69.16
+   "hot": 69.06
   },
   "e32658318982011d": {
    "id": "e32658318982011d",
@@ -81044,7 +81044,7 @@
    "cluster": "e6d65daa2397dd51",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.34,
+   "hot": 8.33,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -81943,7 +81943,7 @@
    "cluster": "e9b4f62a38c35c8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 51.0,
+   "hot": 50.93,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -83996,7 +83996,7 @@
    "cluster": "ee93b091150d6754",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 31.17
+   "hot": 31.13
   },
   "eefea71d749df811": {
    "id": "eefea71d749df811",
@@ -86336,7 +86336,7 @@
    "cluster": "f4a24bf226024f74",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.93
+   "hot": 27.89
   },
   "f4d061b6e7a3a39c": {
    "id": "f4d061b6e7a3a39c",
@@ -87628,7 +87628,7 @@
    "cluster": "f8cc32a5cb386b75",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.84
+   "hot": 6.83
   },
   "f941a1a14faa0113": {
    "id": "f941a1a14faa0113",
@@ -87750,7 +87750,7 @@
    "cluster": "f94538d40439027e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 28.5,
+   "hot": 28.46,
    "topics": [
     "health",
     "policy"
@@ -88636,7 +88636,7 @@
    "cluster": "fc97273e83d39f85",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.81,
+   "hot": 5.8,
    "topics": [
     "eval",
     "wargame"
@@ -88876,7 +88876,7 @@
    "cluster": "fd0b4e5ac8bc7e59",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.33,
+   "hot": 4.32,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,

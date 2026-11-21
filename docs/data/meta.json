@@ -4,7 +4,7 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-21T10:10:04Z",
+ "generated": "2026-11-21T10:18:52Z",
  "counts": {
   "academic": 1073,
   "application": 108,
@@ -243,7 +243,7 @@
    "items": 0,
    "home": "https://importai.substack.com/feed",
    "query": "",
-   "ok": false
+   "ok": true
   },
   {
    "id": "rss-latent-space",
@@ -375,7 +375,7 @@
    "items": 9,
    "home": "",
    "query": "large language model agent-based simulation",
-   "ok": true
+   "ok": false
   },
   {
    "id": "openalex-generative-agents",
@@ -387,7 +387,7 @@
    "items": 7,
    "home": "",
    "query": "generative agents social simulation",
-   "ok": true
+   "ok": false
   },
   {
    "id": "openalex-wargame-llm",
@@ -399,7 +399,7 @@
    "items": 2,
    "home": "",
    "query": "wargaming artificial intelligence large language model",
-   "ok": true
+   "ok": false
   },
   {
    "id": "hn-agent-simulation",
@@ -583,7 +583,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-21T10:10:04Z",
+  "at": "2026-11-21T10:18:52Z",
   "llm": false,
   "spent_run": 0.0
  }
