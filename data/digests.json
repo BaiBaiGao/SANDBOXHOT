@@ -69,5 +69,56 @@
    "created": "2026-11-19T17:37:38Z"
   }
  ],
- "weekly": []
+ "weekly": [
+  {
+   "key": "2026-W47",
+   "label": "2026 年第 47 周周报（11.16–11.22）",
+   "markdown": "## 2026 年第 47 周周报（11.16–11.22）\n\n（模型暂不可用，以下为按分数自动排列的条目，稍后会自动改写为编辑版。）\n\n### 学术前沿\n- ABSClaw：把自然语言编译成基于真实数据的社会仿真，并配套 193 项任务基准 ABSBench [来源](https://arxiv.org/abs/2611.24517)\n- Chiron 基础模型：联合微调 LLM 测量与预测人类行为 [来源](https://arxiv.org/abs/2611.24830)\n- Nature：认知接地提升大模型对群体人类行为的仿真 [来源](https://news.google.com/rss/articles/CBMiX0FVX3lxTE05NTBUaWNBNXhhOWJEUHI0MmhYU1g0MDhJX2hPRFlCcTktQ2RTR2tjZnM2bDFjQXVUUFhva3hPMC0yNnZsd1BPYUZWWW5ydGVrUFJJOEp3UElwOGRoekI0?oc=5)\n- 从流利度谬误到微观-宏观效度鸿沟：LLM 用于社会仿真的机会与陷阱 [来源](https://doi.org/10.3389/frai.2026.1988865)\n- 用大语言模型做民意调查：GPT-4 估计全国意见分布误差约 4–8.5%，但党派偏差明显 [来源](https://doi.org/10.1057/s41599-026-09593-8)\n- 分阶段语义蒸馏：用1300万参数小模型替代LLM智能体，决策快万倍且保留自由文本语义 [来源](https://arxiv.org/abs/2611.19299)\n- 用可复现流水线模拟公共审议：结构化多智能体在瑞士气候公投案例中更稳定 [来源](https://doi.org/10.1145/3858422)\n- ODD+LLM：给大模型智能体仿真补上可复现的描述规范 [来源](https://arxiv.org/abs/2611.08932)\n\n### 落地应用\n- 德国 5000 次兵棋推演显示：自主舰队的关键在整合而非数量 [来源](https://news.google.com/rss/articles/CBMivAFBVV95cUxORUhhRlRXQUJ0bFBqSXZpYUNqeldUWkM4TDJHSWVPaWFUUmVTcmswQjlqRFlBOGNHSF9HSHM5NEJIc2g3S1MtckoyVkZ4NTNTS0VJQkU5YjVYN1ppb2hVdjljczZlcUtDR01Hc2R1UlJ5LWd5ZmJ5cExtNGtxa2tUaXhlNVJPZjdXZ2pGYWNBS1ExanB5UG5ubEtCTVZIelpBQmJhckVRWnR6SlBXQ0pNempLR0tiOEJtTlNfdg?oc=5)\n- 五角大楼下令制定全军种统一的 AI 兵棋推演采购策略 [来源](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbDFJcEE3eXpDbkZnRHBudV9JOEswbmk5bmV6enRUMVVIWFBFbUVPUDZVTjdmUGt1NkVnRTZDUmFERTlCUFhkU3R6YklEdUhxaGZLcWhBUk9XNGZUdW5RRzFZN3RDcWRGY0dSSkEzN0pjZFNtYXVYSU1GQ2w4b2VUay1PMGNiV2NwYkcydktTZGZLb1N3U3puSHJYYm13czN5eWZPdE9RNGptOE0?oc=5)\n- Sandtable 获美国陆军 4500 万美元任务规划与兵棋推演支持合同 [来源](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZGpVNS01U3U4UUlTUjR6aGlJXzY5U3d5enVHUWpZQ2VNcjA3SmFZX1UzTlNxamFaa0Jqcmk1S0d6SXlPRUlPaFNuYUg3MmJNb0VqOUZYSGJYeWlqTXZMdTlaNmJlSGdsZUM4MHVIbHUyeFVhSGNjNnBNWENzY0RXQno0VXluOXlsZHRyNVN2SmdaVGVyMG5sTmZJR0pwRzlYdmFLaERHR1lrQm1ydS12dHh1LThxMk50?oc=5)\n- 美防长赫格塞思宣布军校改革：毕业考试改用AI兵棋推演，新聘文职教师取消终身教职 [来源](https://news.google.com/rss/articles/CBMiUkFVX3lxTFB2dENMcDJXanUxZEZvbExIQlNrdEd0c0d1ZUttemhOT1dfRFNadXlLbEZBeURjRVlDYUNnZTlOUjdUN0xkV0lqNk8zS3UwRWNVZXc?oc=5)\n- 《泰晤士报》报道模拟俄罗斯进攻北约的兵棋推演 [来源](https://news.google.com/rss/articles/CBMijwFBVV95cUxPczlvZXdLRmFkSmtzdWdMWTVTMWJkV0tIeWZweXZ0Yy1SelRtVmI0cFRPLXd2TWhFTk5vc2R1UUhuam1tXzd0MFB5MGFSSGtZbER3Q0tXSjZiUmlnVU5vMVU4bTA4WkZSa0YyWm9VWjJLZlU5bWdLcF9SYXhDblFPcmJndS15TTAteEdYaFJuNA?oc=5)\n\n### 商业 · 游戏 · 平台\n- 本期暂无",
+   "ai": false,
+   "model": null,
+   "item_ids": [
+    "0073f7aaf98ffa6d",
+    "e9b4f62a38c35c8e",
+    "2ecdb64c16bbd36d",
+    "80469b978b756760",
+    "b2017a81e5e5c532",
+    "0599676be458de0d",
+    "0856c29adf22c46d",
+    "5b498f7753f9a6d0",
+    "3eefc5d18a4ade26",
+    "e6d65daa2397dd51",
+    "fc97273e83d39f85",
+    "3f6c8be79bdf323c",
+    "408457c46f4c7f25",
+    "5aca4c38bba36ada",
+    "6f304b36be9257fd",
+    "777cd1e779dc04f4",
+    "97d20f0e1995d57f",
+    "f94538d40439027e",
+    "b32a8ca7c7009a9c",
+    "1836246dfbfb504c",
+    "52bb7277fa3b2d7d",
+    "a5e42b2b6ba30ccc",
+    "7e1e75eafc2eabaf",
+    "00798a23152e25ac",
+    "2a7c337d3195182a",
+    "948c36101407e81c",
+    "98fb20f80efbdd1e",
+    "a6e7e91569fce679",
+    "bd1a1262a30563d3",
+    "c0a18809d198e887",
+    "c2e5f6a5bcc1a417",
+    "c92a503eabc2be2c",
+    "e572dc28a6688b52",
+    "f4a24bf226024f74",
+    "f7ed0bde1dfdf148",
+    "fd0b4e5ac8bc7e59",
+    "3cf41a97b1c6ee7d",
+    "63626a310eb12141",
+    "bbc9b4d66e7e40f5",
+    "442531c9eef4b7e1"
+   ],
+   "created": "2026-11-22T18:06:28Z"
+  }
+ ]
 }
