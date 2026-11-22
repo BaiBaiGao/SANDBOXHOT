@@ -19,6 +19,9 @@
     "social-sim",
     "eval"
    ],
+   "score1": 55,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "003a2f82749b2679": {
@@ -2431,8 +2434,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:11:04Z",
    "domain": "academic",
-   "score": 55,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "多无人机追逃：MARL加自适应环境生成器，未见场景捕获率100%并零样本上真机",
    "summary_zh": "论文考虑无人机动力学与物理约束，提出逃逸者预测增强网络应对部分可观测，并在训练中加入自适应环境生成器。仿真中在困难场景全面超过基线，未见场景捕获率100%，策略经两阶段奖励精调后零样本部署到真实四旋翼。",
    "tags": [
@@ -2440,10 +2443,13 @@
     "无人机",
     "仿真到真机"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env"
    ],
+   "score1": 55,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "14e443452fa764a0": {
@@ -3060,6 +3066,29 @@
    "tags": [],
    "status": "filtered",
    "topics": [],
+   "applied": false
+  },
+  "1a441ed6cf9fa02f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "platform",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "Nvidia 在 CoRL 发布 GR00T 2 机器人模型及配套仿真工具与基准",
+   "summary_zh": "Nvidia 在 CoRL 会议上推出 GR00T 2 机器人模型，同时发布新的仿真工具和基准。材料只有标题，未给出模型能力、仿真环境细节或基准指标。",
+   "tags": [
+    "机器人仿真",
+    "具身智能",
+    "评测基准"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env"
+   ],
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "1a52935841f1205c": {
@@ -3725,7 +3754,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:31Z",
    "domain": "academic",
-   "score": 57,
+   "score": 58,
    "relevant": true,
    "title_zh": "混合仿真框架把城市视为由关键基础设施互联的复杂适应系统，用于风险缓解决策",
    "summary_zh": "作者提出面向风险缓解的城市混合仿真框架，把城市空间建模为由互联关键基础设施组成的复杂适应系统，其中社会系统模拟市民日常活动模式与社交互动，并据此驱动基础设施需求。框架把基于智能体和基于网络的建模结合，将城市智能体拆成依赖系统的子智能体，并建立分层指标。",
@@ -3739,6 +3768,9 @@
     "urban",
     "policy"
    ],
+   "score1": 57,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "20b956c3b7e07c7b": {
@@ -7510,7 +7542,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:10:14Z",
    "domain": "academic",
-   "score": 58,
+   "score": 66,
    "relevant": true,
    "title_zh": "PRISM：用语言模型智能体自动生成并验证实验室实验流程",
    "summary_zh": "Argonne 团队提出 PRISM，让多个语言模型智能体从网络收集实验流程，经规划、批评、验证循环转成结构化步骤，再输出为 MADSci 协议格式，驱动 Opentrons OT-2、PF400 等仪器执行。论文对比了单模型与多智能体工作流的协议生成表现。",
@@ -7524,6 +7556,9 @@
     "world-env",
     "framework"
    ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "3ff50e885a24acda": {
@@ -8384,8 +8419,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:44Z",
    "domain": "academic",
-   "score": 55,
-   "relevant": true,
+   "score": 15,
+   "relevant": false,
    "title_zh": "用数字孪生损失约束轨迹预测：在真实 V2X 路口数据上预测多智能体运动",
    "summary_zh": "作者搭建数字孪生驱动的 V2X 轨迹预测流程，用 Bi-LSTM 生成器加 MSE 损失和新的 twin loss 训练，后者把基础设施约束、碰撞规避、多模态多样性和规则先验写进目标函数。模型在路口发往车辆的真实 V2X 数据上训练评估，除 ADE/FDE 外还引入 ITS 安全指标。",
    "tags": [
@@ -8394,11 +8429,14 @@
     "交通仿真",
     "V2X"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "urban",
     "world-env"
    ],
+   "score1": 55,
+   "score2": 15,
+   "model2": "Qwen3.8-27B",
    "applied": true
   },
   "4799fda288a05a97": {
@@ -8641,7 +8679,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:03Z",
    "domain": "academic",
-   "score": 55,
+   "score": 52,
    "relevant": true,
    "title_zh": "用 LLM 引导概率程序归纳，从数据中学习 POMDP 模型",
    "summary_zh": "作者让 LLM 生成候选概率程序作为先验，再用经验分布检验并反馈修正，从而学出低复杂度的 POMDP 观测、奖励与转移函数。在经典玩具问题、MiniGrid 仿真和两个真实移动机器人搜索任务上，效果优于表格 POMDP 学习、行为克隆和直接 LLM 规划。",
@@ -8656,6 +8694,9 @@
     "world-env",
     "eval"
    ],
+   "score1": 55,
+   "score2": 50,
+   "model2": "Qwen3.8-27B",
    "applied": true
   },
   "4a74f3a1283d0947": {
@@ -9086,6 +9127,9 @@
     "urban",
     "framework"
    ],
+   "score1": 58,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "4db09406978f96a9": {
@@ -11526,7 +11570,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:55Z",
    "domain": "academic",
-   "score": 52,
+   "score": 54,
    "relevant": true,
    "title_zh": "IPMSRL：为海事工业控制系统搭建多智能体强化学习网络防御仿真环境",
    "summary_zh": "作者构建了通用综合平台管理系统 IPMS 的仿真环境 IPMSRL，用多智能体强化学习做海事 OT 网络的自主防御决策。实验中共享 critic 的 MAPPO 表现优于独立学习版本。",
@@ -11540,6 +11584,9 @@
     "wargame",
     "framework"
    ],
+   "score1": 52,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "6052a20540fdca38": {
@@ -12583,7 +12630,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:34Z",
    "domain": "academic",
-   "score": 58,
+   "score": 64,
    "relevant": true,
    "title_zh": "ROMAN 用多头注意力加 LLM 风险加权，为自动驾驶系统生成高风险违章测试场景",
    "summary_zh": "ROMAN 把多头注意力网络和交通法规加权机制结合，用 LLM 模块从严重程度和发生频率两个维度评估违章风险，生成闯红灯、超速等高风险场景来测试自动驾驶系统。作者称现有方法难以生成多车交互的复杂违章场景。",
@@ -12597,6 +12644,9 @@
     "urban",
     "eval"
    ],
+   "score1": 58,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "6a08338f390b2921": {
@@ -12726,7 +12776,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:08Z",
    "domain": "academic",
-   "score": 52,
+   "score": 56,
    "relevant": true,
    "title_zh": "WARP-CA 用元胞自动机加多智能体强化学习模拟野火蔓延与无人机灭火",
    "summary_zh": "作者用 Perlin 噪声生成地形，结合元胞自动机模拟野火蔓延，再让 UAV、UGV 等自主智能体在 MARL 框架下协同灭火，观察风场与地形影响下的涌现行为。属于仿真环境内的智能体训练，未涉及社会或决策推演。",
@@ -12739,6 +12789,9 @@
    "topics": [
     "world-env"
    ],
+   "score1": 52,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "6bb49056078557b6": {
@@ -13906,7 +13959,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:08Z",
    "domain": "academic",
-   "score": 58,
+   "score": 66,
    "relevant": true,
    "title_zh": "Hephaestus 提出“网络安全 AI 科学家”：多智能体研究系统依赖数字孪生与网络靶场评估",
    "summary_zh": "论文主张网络安全是不同于稳定学科的科研对象，可信评估要靠数字孪生、网络靶场和可审计证据，而非单一基准分数。提出的 Hephaestus 是模块化、角色分工的多智能体研究系统，覆盖问题界定、威胁建模、受控实验与治理报告。",
@@ -13920,6 +13973,9 @@
     "world-env",
     "eval"
    ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "748a0788900c8286": {
@@ -15191,6 +15247,9 @@
     "economy",
     "framework"
    ],
+   "score1": 58,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "7f2d3ead9a4c28f4": {
@@ -15529,7 +15588,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:55Z",
    "domain": "academic",
-   "score": 54,
+   "score": 60,
    "relevant": true,
    "title_zh": "GNN 加持的多智能体强化学习让 10% 联网车辆把交通激波传播削减最多 80%",
    "summary_zh": "作者提出去中心化的多智能体强化学习框架，用图神经网络让车辆仅凭局部信息和邻车交互学习协同控制策略。在可扩展的高速公路仿真中，即使只有 10% 车辆联网，交通激波传播也能减少最多 80%。",
@@ -15543,6 +15602,9 @@
     "urban",
     "world-env"
    ],
+   "score1": 54,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "8273230d7c7b38fd": {
@@ -16096,7 +16158,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:39:10Z",
    "domain": "academic",
-   "score": 52,
+   "score": 51,
    "relevant": true,
    "title_zh": "区块链约束的野火监测智能体：把人工授权写进智能合约",
    "summary_zh": "论文把野火早期预警建模为带治理约束的 POMDP，用分层多智能体协调无人机按风险动态调度，并在许可链上以智能合约强制人工授权作为状态转移不变量，给出告警完整性、不可否认性等形式化保证。",
@@ -16111,6 +16173,9 @@
     "policy",
     "framework"
    ],
+   "score1": 52,
+   "score2": 50,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "887e701ac97d5041": {
@@ -16140,8 +16205,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:17Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "工业环境下用仿真反馈引导 LLM 智能体生成并修复自动驾驶代码",
    "summary_zh": "作者在工业环境中搭建由 LLM 智能体、仿真模型和规则反馈生成器组成的流水线，自动生成自动驾驶代码并在多个关键交通场景的仿真中评估，再把评估报告回传给 LLM 修改或修 bug。",
    "tags": [
@@ -16150,11 +16215,14 @@
     "仿真验证",
     "工业实践"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "urban",
     "eval"
    ],
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": true
   },
   "88d4bd38c0b9feb3": {
@@ -16281,8 +16349,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:49Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "用大模型生成并迭代演化高速公路驾驶的强化学习奖励函数",
    "summary_zh": "框架先让大模型按驾驶环境和任务描述写出初始奖励函数代码，再通过 RL 训练与大模型反思的循环迭代改进。在高速公路模拟器的三种交通配置下，效果超过专家手写的奖励函数。",
    "tags": [
@@ -16290,10 +16358,13 @@
     "奖励函数",
     "强化学习"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env"
    ],
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "8989e4a2b381cbaa": {
@@ -16382,8 +16453,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T17:32:06Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 30,
+   "relevant": false,
    "title_zh": "APEMO：按“峰值—结尾”信号调度算力，提升长程智能体轨迹可靠性",
    "summary_zh": "论文提出 APEMO，一个运行时调度层，不改模型权重，而是通过行为代理信号检测轨迹不稳定，把修复算力集中投在峰值时刻和结尾段。在多智能体仿真和 LLM 规划—执行流程上评测，轨迹级质量与复用概率优于结构化编排器。",
    "tags": [
@@ -16391,11 +16462,14 @@
     "长程任务",
     "编排调度"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "org",
     "eval"
    ],
+   "score1": 52,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "8a40abdadfe1e5c3": {
@@ -17216,6 +17290,9 @@
    "topics": [
     "economy"
    ],
+   "score1": 52,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "8fe9b5bb85ee8650": {
@@ -17584,6 +17661,29 @@
    ],
    "applied": false
   },
+  "92b94b27c1a6a1ff": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "application",
+   "score": 35,
+   "relevant": false,
+   "title_zh": "英国国家网络安全中心启动对手模拟计划",
+   "summary_zh": "英国国家网络安全中心（NCSC）推出一项对手模拟计划。材料只有标题，未说明是否使用 AI 智能体，也未给出参与机构与演练形式。",
+   "tags": [
+    "网络攻防",
+    "对手模拟",
+    "红蓝对抗"
+   ],
+   "status": "filtered",
+   "topics": [
+    "wargame"
+   ],
+   "score1": 45,
+   "score2": 35,
+   "model2": "Qwen3.8-27B",
+   "applied": true
+  },
   "9340b30660ad2496": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -17936,6 +18036,9 @@
     "human-behavior",
     "game"
    ],
+   "score1": 52,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "960c320a15656b5d": {
@@ -18027,7 +18130,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:13:49Z",
    "domain": "academic",
-   "score": 52,
+   "score": 58,
    "relevant": true,
    "title_zh": "RULEARN 基准与 IDEA 框架：让 LLM 智能体在交互环境中学会规则",
    "summary_zh": "作者提出 RULEARN 基准，让智能体在模拟环境中主动交互、收集观察并归纳规则；配套的 IDEA 框架把溯因、演绎、归纳串起来，先由有限观察生成假设，再验证和修正。在五个代表性 LLM 上均优于基线，与人类参与者的对比显示两者规则学习行为存在明显差异。",
@@ -18041,6 +18144,9 @@
     "world-env",
     "eval"
    ],
+   "score1": 52,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "968038404dfc4a32": {
@@ -18107,8 +18213,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:21Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "LLM 智能体在 CARLA 中按需生成行为树，让自动驾驶绕过突发路障",
    "summary_zh": "作者提出由 Descriptor、Planner、Generator 三个 LLM/LVM 智能体协作，把自然语言场景判断转成可执行的 XML 行为树，只在基线行为树失效时触发。在 CARLA+Nav2 仿真中，系统无需人工干预绕过街道阻塞等意外障碍，属概念验证。",
    "tags": [
@@ -18117,11 +18223,14 @@
     "仿真环境",
     "多智能体"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "urban"
    ],
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "97166a1d9f8fa5c6": {
@@ -18882,7 +18991,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T17:32:13Z",
    "domain": "academic",
-   "score": 52,
+   "score": 56,
    "relevant": true,
    "title_zh": "OptAgent 让多个 LLM 智能体扮演购物顾客，为电商查询改写提供动态奖励信号",
    "summary_zh": "OptAgent 把多智能体模拟与遗传算法结合，让多个 LLM 智能体扮演模拟购物顾客，用它们的平均打分作为适应度函数迭代优化用户查询。在 1000 条真实电商查询上平均比原始查询提升 21.98%，比 Best-of-N 改写基线高 3.36%。",
@@ -18896,6 +19005,9 @@
     "economy",
     "human-behavior"
    ],
+   "score1": 52,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "9b9cdf7e34998dbd": {
@@ -18925,8 +19037,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:49Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 15,
+   "relevant": false,
    "title_zh": "Octopus 用 LLM 群体加物理引擎，自主发现结直肠癌可攻击靶点",
    "summary_zh": "作者提出神经符号架构 Octopus，把零泄漏的本地 LLM 群体与严格的算法物理引擎结合，从体外 CRISPR 依赖数据（CCLE）自主生成治疗假设，用 XGBoost SHAP 向量追踪因果级联，再在计算机上预测 PDX 小鼠肿瘤走向。",
    "tags": [
@@ -18935,11 +19047,14 @@
     "数字孪生",
     "神经符号"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "eval"
    ],
+   "score1": 52,
+   "score2": 15,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "9bf4a51e2f84180a": {
@@ -19268,7 +19383,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:14:26Z",
    "domain": "academic",
-   "score": 52,
+   "score": 54,
    "relevant": true,
    "title_zh": "用 LLM 模拟人类干预来引导多智能体强化学习，规则控制器效果更强",
    "summary_zh": "作者把 MARL 与 LLM 中介的干预结合，比较自然语言控制器和规则控制器对智能体学习轨迹的塑造。用 7B/8B 小模型模拟人类式干预的自然语言控制器，效果弱于规则控制器。两类干预都优于无干预基线，且早期介入收益更大。",
@@ -19282,6 +19397,9 @@
     "world-env",
     "framework"
    ],
+   "score1": 52,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "9e31cdca70a0d0e5": {
@@ -19367,8 +19485,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:12Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 10,
+   "relevant": false,
    "title_zh": "SMART：面向千级机器人的物理引擎多智能体路径规划测试平台",
    "summary_zh": "SMART 用物理引擎仿真机器人运动学与执行不确定性，通过基于 Action Dependency Graph 的执行监控框架接入各类 MAPF 规划器，可扩展到数千台机器人。代码已公开，目标是让缺少实体机器人的研究者也能评估规划器在真实条件下的表现。",
    "tags": [
@@ -19376,11 +19494,14 @@
     "机器人仿真",
     "开源框架"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "framework"
    ],
+   "score1": 52,
+   "score2": 10,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "9f2ba0dd4ef25673": {
@@ -19591,8 +19712,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:27Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "SayPlan 用 3D 场景图把大模型任务规划落到多层多房间机器人环境",
    "summary_zh": "SayPlan 让 LLM 在 3D 场景图的折叠表示上做语义搜索，取出与任务相关的子图，再配合经典路径规划器缩短规划跨度，并用场景图模拟器反馈迭代重规划。在最多 3 层、36 个房间、140 个物体的两个大环境中验证了移动操作机器人的长程任务落地。",
    "tags": [
@@ -19601,11 +19722,14 @@
     "场景图",
     "机器人仿真"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "framework"
    ],
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "a0b87ee6810ec6fe": {
@@ -21583,6 +21707,29 @@
    "tags": [],
    "status": "filtered",
    "topics": [],
+   "applied": false
+  },
+  "b0cc531d799bd418": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "academic",
+   "score": 30,
+   "relevant": false,
+   "title_zh": "反馈框架提升自动驾驶车辆在复杂仿真中的决策表现",
+   "summary_zh": "一项研究提出反馈框架，用于改善自动驾驶车辆在复杂仿真场景中的决策。材料只有标题，没有给出方法细节和量化结果。",
+   "tags": [
+    "自动驾驶",
+    "仿真测试",
+    "决策"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env"
+   ],
+   "score1": 48,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "b0f1d8f106b350c2": {
@@ -23837,6 +23984,20 @@
    "topics": [],
    "applied": false
   },
+  "c59cf0026d44f67c": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "business",
+   "score": 22,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "c5ea418997695a4e": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -24573,6 +24734,23 @@
    "title_zh": "",
    "summary_zh": "",
    "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "ccdcf68917f04bfa": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "business",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "Aegis 为制造计划新增 AI 仿真工具",
+   "summary_zh": "Aegis 在制造计划环节加入 AI 仿真工具。材料只有标题，没有说明仿真对象、方法或客户案例。",
+   "tags": [
+    "制造仿真",
+    "生产计划"
+   ],
    "status": "filtered",
    "topics": [],
    "applied": false
@@ -26186,6 +26364,27 @@
    ],
    "applied": false
   },
+  "d9695a3fead3ca90": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "business",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "Accenture 引用 TÜV SÜD 估算：仿真驱动安全评估可缩短机器人部署时间最多 30%",
+   "summary_zh": "Accenture 引用 TÜV SÜD 的估算称，以仿真为主导的安全评估最多能把机器人部署调试时间缩短 30%。材料未说明具体项目或验证方式。",
+   "tags": [
+    "机器人仿真",
+    "安全评估",
+    "数字孪生"
+   ],
+   "status": "filtered",
+   "topics": [],
+   "score1": 40,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "d9719a9cb09db35c": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -26795,6 +26994,26 @@
     "framework",
     "eval",
     "social-sim"
+   ],
+   "applied": false
+  },
+  "e009c0bd0c625a72": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:34Z",
+   "domain": "business",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "特斯拉 Autopilot 三名前成员创办仿真初创公司，估值达 10 亿美元",
+   "summary_zh": "据 The Information 报道，三名特斯拉 Autopilot 团队前成员创办的仿真初创公司获得 10 亿美元估值。报道未披露公司名称、产品形态与融资细节。",
+   "tags": [
+    "仿真平台",
+    "融资",
+    "自动驾驶"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env"
    ],
    "applied": false
   },
@@ -27482,6 +27701,27 @@
    "model2": "Qwen3.8-27B",
    "applied": true
   },
+  "e572dc28a6688b52": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "academic",
+   "score": 66,
+   "relevant": true,
+   "title_zh": "Nature 刊文：研究规划用蒙特卡洛模拟比 AI 生成受访者更可靠",
+   "summary_zh": "Nature 刊出的研究认为，在研究规划阶段，蒙特卡洛模拟的效果优于用 AI 生成受访者。材料只有标题，未给出对比实验的规模与指标。",
+   "tags": [
+    "合成样本",
+    "蒙特卡洛",
+    "方法对比"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "e57fee2dfc027e3a": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -28009,6 +28249,29 @@
     "human-behavior"
    ],
    "applied": false
+  },
+  "ea4f03f6a80bba8d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-22T15:29:16Z",
+   "domain": "business",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "荷兰初创 Gradyent 获欧洲投资银行 2000 万欧元贷款，扩展供热管网数字孪生",
+   "summary_zh": "Gradyent 拿到欧洲投资银行 2000 万欧元贷款，用于把供热管网数字孪生技术推广到更多欧洲城市。材料未提及 AI 在其中的具体作用。",
+   "tags": [
+    "数字孪生",
+    "供热管网",
+    "融资"
+   ],
+   "status": "filtered",
+   "topics": [
+    "urban"
+   ],
+   "score1": 42,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "ea77329bd2071698": {
    "llm": true,
@@ -29748,7 +30011,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:55Z",
    "domain": "academic",
-   "score": 55,
+   "score": 62,
    "relevant": true,
    "title_zh": "CityLearn v2：用美国建筑存量负荷数据生成虚拟社区，支持多智能体能源调度基准测试",
    "summary_zh": "CityLearn v2 基于美国建筑存量终端用能负荷数据构建虚拟的电网互动社区，支持多智能体分布式能源控制和动态住户反馈。论文给出电池充放电、车网互动和热泵调峰时热舒适度的强化学习应用示例。",
@@ -29763,6 +30026,9 @@
     "urban",
     "world-env"
    ],
+   "score1": 55,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "f802782cdb8d6f5d": {

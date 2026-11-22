@@ -7549,6 +7549,66 @@
    "completion": 315,
    "reasoning": 0,
    "credits": 0.29624
+  },
+  {
+   "at": "2026-11-22T15:29:16Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 2867,
+   "cached": 0,
+   "completion": 789,
+   "reasoning": 0,
+   "credits": 0.12046
+  },
+  {
+   "at": "2026-11-22T15:29:34Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 2271,
+   "cached": 0,
+   "completion": 115,
+   "reasoning": 0,
+   "credits": 0.05462
+  },
+  {
+   "at": "2026-11-22T15:29:38Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 1621,
+   "cached": 0,
+   "completion": 109,
+   "reasoning": 0,
+   "credits": 0.12342
+  },
+  {
+   "at": "2026-11-22T15:29:47Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2611,
+   "cached": 0,
+   "completion": 109,
+   "reasoning": 0,
+   "credits": 0.18282
+  },
+  {
+   "at": "2026-11-22T15:29:52Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2498,
+   "cached": 0,
+   "completion": 245,
+   "reasoning": 0,
+   "credits": 0.20868
+  },
+  {
+   "at": "2026-11-22T15:30:17Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 2663,
+   "cached": 0,
+   "completion": 109,
+   "reasoning": 0,
+   "credits": 0.18594
   }
  ]
 }
