@@ -4,18 +4,18 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-22T23:55:24Z",
+ "generated": "2026-11-23T03:02:29Z",
  "counts": {
   "academic": 888,
-  "application": 139,
+  "application": 142,
   "platform": 2,
   "business": 9,
   "game": 1
  },
- "total": 911,
+ "total": 914,
  "reads": 299,
  "research": 3,
- "ai_items": 911,
+ "ai_items": 912,
  "sources": [
   {
    "id": "wechat-jiqizhixin",
@@ -504,7 +504,7 @@
    "group": "business",
    "tier": "T2",
    "enabled": true,
-   "items": 4,
+   "items": 5,
    "home": "https://news.google.com/rss/search?q=%22digital+twin%22+%28%22AI+agents%22+OR+%22generative+AI%22+OR+LLM%29+%28company+OR+platform+OR+launch%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -516,7 +516,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 5,
+   "items": 6,
    "home": "https://news.google.com/rss/search?q=%28wargaming+OR+wargame+OR+%22war+game%22%29+%28%22AI%22+OR+%22large+language+model%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -576,14 +576,14 @@
    "group": "business",
    "tier": "T2",
    "enabled": true,
-   "items": 1,
+   "items": 2,
    "home": "https://news.google.com/rss/search?q=%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F+%28%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E6%99%BA%E8%83%BD%E4%BD%93%29+%28%E5%9F%8E%E5%B8%82+OR+%E5%B9%B3%E5%8F%B0+OR+%E5%8F%91%E5%B8%83+OR+%E5%BA%94%E7%94%A8%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
    "query": "",
    "ok": true
   }
  ],
  "last_run": {
-  "at": "2026-11-22T23:55:24Z",
+  "at": "2026-11-23T03:02:29Z",
   "llm": false,
   "spent_run": 0.0
  }
