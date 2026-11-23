@@ -744,6 +744,160 @@
       "focused": true,
       "enabled": true,
       "interval_hours": 4
+    },
+    {
+      "id": "rss-warontherocks",
+      "name": "War on the Rocks",
+      "kind": "rss",
+      "url": "https://warontherocks.com/feed/",
+      "tier": "T2",
+      "group": "application",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "rss-cset",
+      "name": "CSET（乔治城大学）",
+      "kind": "rss",
+      "url": "https://cset.georgetown.edu/feed/",
+      "tier": "T2",
+      "group": "application",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 12
+    },
+    {
+      "id": "rss-rand-press",
+      "name": "RAND 新闻稿",
+      "kind": "rss",
+      "url": "https://www.rand.org/news/press.xml",
+      "tier": "T2",
+      "group": "application",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 12
+    },
+    {
+      "id": "rss-smartcitiesdive",
+      "name": "Smart Cities Dive",
+      "kind": "rss",
+      "url": "https://www.smartcitiesdive.com/feeds/news/",
+      "tier": "T2",
+      "group": "application",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 12
+    },
+    {
+      "id": "rss-gamesindustry",
+      "name": "GamesIndustry.biz",
+      "kind": "rss",
+      "url": "https://www.gamesindustry.biz/feed",
+      "tier": "T2",
+      "group": "game",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "rss-80lv",
+      "name": "80.lv",
+      "kind": "rss",
+      "url": "https://80.lv/feed/",
+      "tier": "T2",
+      "group": "game",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "rss-gamelook",
+      "name": "GameLook",
+      "kind": "rss",
+      "url": "http://www.gamelook.com.cn/feed",
+      "tier": "T2",
+      "group": "game",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "rss-inworld",
+      "name": "Inworld AI 博客",
+      "kind": "rss",
+      "url": "https://inworld.ai/blog/rss.xml",
+      "tier": "T2",
+      "group": "game",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 12
+    },
+    {
+      "id": "rss-siliconangle-ai",
+      "name": "SiliconANGLE · AI",
+      "kind": "rss",
+      "url": "https://siliconangle.com/category/ai/feed/",
+      "tier": "T2",
+      "group": "business",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "wechat-xinzhiyuan",
+      "name": "新智元",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "wechat-jizhi",
+      "name": "集智俱乐部",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/8540570d27c0bfe0a219173cf1ace83ae79445cb.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "wechat-paperweekly",
+      "name": "PaperWeekly",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/3be891c2f4e526629ab055a297cc2cd6c1f0a563.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "wechat-xixiaoyao",
+      "name": "夕小瑶科技说",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/a1cd365aa14ed7d64cabfc8aa086da40ecaba34d.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "wechat-kongtian",
+      "name": "空天防务观察",
+      "kind": "rss",
+      "url": "https://wechat2rss.xlab.app/feed/b3da5de3b7697f10c0e22ce8909063ea84c44bbd.xml",
+      "tier": "T2",
+      "group": "wechat",
+      "focused": false,
+      "enabled": true,
+      "interval_hours": 12
     }
   ]
 }
