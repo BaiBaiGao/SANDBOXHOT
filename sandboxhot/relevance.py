@@ -45,6 +45,8 @@ def keyword_score(item: dict, kw: dict) -> dict:
 
 
 def guess_domain(item: dict, kw: dict) -> str:
+    if item.get("domain_hint") in DOMAINS:
+        return item["domain_hint"]
     if item.get("kind") == "paper":
         return "academic"
     text = _norm(f"{item.get('title', '')} {item.get('text', '')[:2000]}")
@@ -67,6 +69,8 @@ def guess_domain(item: dict, kw: dict) -> str:
 
 
 def passes_prefilter(item: dict, cfg: dict) -> bool:
+    if item.get("skip_prefilter"):  # 信源本身就是本领域（如核心框架的 GitHub Releases），不做关键词预筛
+        return True
     p = cfg["pipeline"]
     th = p["keyword_threshold_focused"] if item.get("focused") else p["keyword_threshold"]
     return item.get("kw_score", 0) >= th

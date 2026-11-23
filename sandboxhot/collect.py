@@ -74,6 +74,8 @@ def make_item(source: dict, *, url: str, title: str, summary: str = "", publishe
     title = clean_text(title, 400)
     if not url or not title:
         return None
+    if source.get("title_prefix") and not title.startswith(source["title_prefix"]):
+        title = f"{source['title_prefix']} {title}"
     return {
         "id": item_id(url),
         "url": url,
@@ -85,6 +87,8 @@ def make_item(source: dict, *, url: str, title: str, summary: str = "", publishe
         "kind": kind or ("paper" if source["kind"] in ("arxiv", "openalex") else source["kind"]),
         "tier": source.get("tier", "T2"),
         "focused": bool(source.get("focused")),
+        "skip_prefilter": bool(source.get("skip_prefilter")),
+        "domain_hint": source.get("domain", ""),
         "published": iso(published) if published else iso(now_utc()),
         "authors": authors or [],
         "extra": extra or {},
