@@ -362,8 +362,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:31Z",
    "domain": "academic",
-   "score": 48,
-   "relevant": true,
+   "score": 30,
+   "relevant": false,
    "title_zh": "LLMSat 把 LLM 当作航天器高层控制推理引擎，探索自主任务规划与重规划",
    "summary_zh": "论文用系统工程方法设计了一个以 LLM 为推理引擎的航天器智能体控制器，目标是替代依赖手工本体知识库的符号推理管理器，提升深空任务的自主性。材料只给出设计思路，未提供仿真规模或对比结果。",
    "tags": [
@@ -372,10 +372,13 @@
     "航天",
     "LLM"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env"
    ],
+   "score1": 48,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "035439ae5b3992f0": {
@@ -586,8 +589,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "InsurAgent 用 RAG 把 LLM 决策锚定在真实调查数据上，模拟个人购买洪水保险的行为",
-   "summary_zh": "作者先构建基准数据集，记录不同因素下的保险购买概率，发现 LLM 能定性理解因素但估不准概率。InsurAgent 由感知、检索、推理、行动、记忆五个模块组成，检索模块用 RAG 把决策锚定在实证调查数据上，从而准确估计边际概率和双变量概率，推理模块再用常识外推到调查数据之外的情境。",
+   "title_zh": "InsurAgent：用大模型智能体模拟美国洪水保险购买行为，RAG 检索补足概率估计短板",
+   "summary_zh": "作者构建了洪水保险购买概率的基准数据集，发现大模型能定性理解影响因素，但定量估计概率不准。为此提出 InsurAgent，包含感知、检索、推理、行动和记忆五个模块，其中检索模块用 RAG 接入实证调查数据，能准确估计边际概率和双变量概率，记忆模块还能模拟个体决策随时间的演变。",
    "tags": [
     "人类行为模拟",
     "保险决策",
@@ -597,7 +600,7 @@
    "status": "selected",
    "topics": [
     "human-behavior",
-    "economy"
+    "policy"
    ],
    "applied": true
   },
@@ -776,8 +779,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "TwinVoice 基准：从社交、人际、叙事三维度评测 LLM 人格数字孪生",
-   "summary_zh": "TwinVoice 把人格模拟评测拆成社交人格、人际人格和叙事人格三个维度，再细分为观点一致性、记忆召回、逻辑推理、用词保真、人格语气和句法风格六项能力。结果显示先进模型仅达中等水平，句法风格与记忆召回是明显短板。",
+   "title_zh": "TwinVoice 基准：从社交、私聊、叙事三个维度评测 LLM 个体人格模拟，模型仍明显落后于真人",
+   "summary_zh": "作者提出 TwinVoice 基准，用来评测大模型能否模拟一个具体个体的沟通风格、行为倾向和人格特质。基准覆盖社交人格、人际私聊人格和叙事人格三个维度，并拆出观点一致性、记忆回忆、逻辑推理、词汇忠实度、语气和句法风格六项能力。实验显示先进模型只达到中等水平，句法风格和记忆回忆尤其弱，整体仍明显低于真人基线。",
    "tags": [
     "数字孪生",
     "人格模拟",
@@ -1370,8 +1373,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "AI-Trader：首个实时无数据污染的美股、A股与加密货币 LLM 交易智能体评测基准",
-   "summary_zh": "作者发布 AI-Trader，覆盖美股、A 股和加密货币三个市场，用多种交易粒度模拟实时金融环境。基准采用最小信息范式，智能体只拿到必要上下文，需自行搜索、核实并综合实时行情，评测了六个主流 LLM。",
+   "title_zh": "AI-Trader：首个实时金融市场 LLM 智能体评测基准，覆盖美股、A股与加密货币",
+   "summary_zh": "作者提出了 AI-Trader，一个全自动、实时、数据无污染的金融决策评测基准，覆盖美股、A股和加密货币三个市场及多种交易粒度。六个主流 LLM 智能体在最小信息范式下自主搜索和整合实时行情做交易，多数收益差、风控弱。结果显示通用智能不等于交易能力，风控水平决定跨市场稳健性。",
    "tags": [
     "金融智能体",
     "评测基准",
@@ -1382,7 +1385,7 @@
     "economy",
     "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "0a4c666a216a6265": {
    "llm": true,
@@ -1513,8 +1516,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:03Z",
    "domain": "academic",
-   "score": 48,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "用多目标贝叶斯优化为多智能体强化学习设计合约",
    "summary_zh": "论文提出 principal-MARL 合约设计问题，用马尔可夫博弈和多智能体强化学习刻画动态环境，并给出 cPMES 框架，把带约束的合约设计转成无约束多目标问题，在可行边界上搜索激励与招募方案。验证只在合成与仿真环境中完成。",
    "tags": [
@@ -1522,11 +1525,14 @@
     "多智能体强化学习",
     "贝叶斯优化"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "economy",
     "org"
    ],
+   "score1": 48,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "0bbb668930c58322": {
@@ -1611,7 +1617,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:42Z",
    "domain": "academic",
-   "score": 48,
+   "score": 52,
    "relevant": true,
    "title_zh": "YeasierAgent 提出以智能体社交沙盒构建跨平台应用的新范式",
    "summary_zh": "论文提出 YeasierAgent，把应用定义为用户、智能体与叙事世界共同协作的空间，用智能体、场景、对话等跨平台交互单元替代固定图形布局，并把情感陪伴与工具执行统一在同一个体验沙盒中。文中未给出量化评测结果。",
@@ -1625,6 +1631,9 @@
     "generative-agents",
     "world-env"
    ],
+   "score1": 48,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "0d593fed607a7310": {
@@ -3051,7 +3060,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:37:53Z",
    "domain": "academic",
-   "score": 48,
+   "score": 56,
    "relevant": true,
    "title_zh": "CRITICAL 闭环框架为自动驾驶 RL 智能体生成关键场景，可选接入 LLM 分析",
    "summary_zh": "框架把真实交通流、驾驶行为分析、替代安全指标与可选的 LLM 组件串成闭环，针对 RL 智能体的具体能力缺口生成关键驾驶场景。在 HighwayEnv 上用 PPO 验证，加入关键场景生成与 LLM 分析后训练速度和整体性能均有提升。",
@@ -3066,6 +3075,9 @@
     "world-env",
     "urban"
    ],
+   "score1": 48,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "1a24db5859c90c27": {
@@ -3210,8 +3222,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "LLM 模拟问卷受访者的能力有限：观点固定、难以随人口特征调整",
-   "summary_zh": "作者用直接提问和思维链让 LLM 回答跨领域问卷，并提出 CLAIMSIM 从参数知识中引出多样化观点作为上下文。结果显示两种方法都难以准确模拟用户：LLM 在不同人口特征下保持固定观点，面对冲突观点时也无法推理特征间的细微差异。",
+   "title_zh": "用大模型模拟问卷回答：CLAIMSIM 提升多样性但难以贴合真实用户",
+   "summary_zh": "作者测试了大模型通过直接提示和思维链提示模拟跨领域问卷回答的能力，并提出 CLAIMSIM 方法，先从模型参数知识中引出多种观点作为上下文输入。实验显示 CLAIMSIM 生成的回答更多样，但两种方法都难以准确模拟真实用户。分析发现大模型在不同人口特征下倾向保持固定观点，面对冲突观点也难以做细致推理。",
    "tags": [
     "用户模拟",
     "合成样本",
@@ -3452,8 +3464,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "用 LLM 多智能体跑数百场蒙特卡洛辩论，测出“毒性”让对话收敛时间增加约 25%",
-   "summary_zh": "研究把 LLM 多智能体的一对一辩论当作“社会学沙盒”，用蒙特卡洛方法模拟数百场讨论，对比对照组与带“有毒”系统提示的智能体。有毒参与者的对话达到结论所需轮次增加约 25%，作者将其视为组织摩擦成本的代理指标。",
+   "title_zh": "用 LLM 多智能体蒙特卡洛模拟量化职场毒性行为：不文明对话耗时增加约 25%",
+   "summary_zh": "作者用大模型多智能体系统模拟一对一对抗性辩论，构造可控的“社会学沙盒”。蒙特卡洛方法跑数百场讨论，对比基线组和带“毒性”系统提示的实验组，发现有毒参与者让对话达成结论所需的论证轮数增加约 25%，统计显著。作者把这种“毒性延迟”作为企业和学术场景经济损失的代理指标。",
    "tags": [
     "多智能体",
     "蒙特卡洛",
@@ -3462,9 +3474,8 @@
    ],
    "status": "selected",
    "topics": [
-    "org",
     "social-sim",
-    "eval"
+    "human-behavior"
    ],
    "applied": false
   },
@@ -4330,8 +4341,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "200多个LLM智能体在Schelling变体城市迁移模型中演化出利他行为",
-   "summary_zh": "研究把200多个LLM智能体放进一个制造社会困境的Schelling变体城市迁移模型，让它们在个人效用与集体效用之间取舍。结果分出两类：默认自利、但在社会规范留言板影响下明显变利他的“Adaptive Egoists”，以及始终优先集体利益的“Altruistic Optimizers”。",
+   "title_zh": "用谢林式城市迁移模型检验 200 个 LLM 智能体：不同大模型表现出利己或利他两种社会倾向",
+   "summary_zh": "作者构建了一个谢林变体的城市迁移模型，让 200 多个 LLM 智能体在个人效用与系统效用的冲突中做迁移决策。结果发现不同大模型的社会倾向存在本质差异：一类是“适应性利己者”，默认利己但在社会规范留言板影响下利他行为显著增加；另一类是“利他优化者”，即使付出自身代价也持续优先集体利益。作者据此提出，社会仿真中选模型不只是选推理能力，更是选内在的社会行动逻辑。",
    "tags": [
     "社会仿真",
     "利他行为",
@@ -4342,7 +4353,7 @@
    "topics": [
     "social-sim",
     "human-behavior",
-    "generative-agents"
+    "urban"
    ],
    "applied": false
   },
@@ -4532,8 +4543,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "Law in Silico 用大模型智能体模拟立法、审判与执法，犯罪率宏观趋势贴近真实数据",
-   "summary_zh": "框架让智能体做个体决策，并搭建立法、审判、执法三类制度机制。与真实数据对比，模拟出的犯罪率宏观趋势大体能复现现实观察；微观层面显示透明且能自适应调整的法律体系更能保护弱势个体权利。",
+   "title_zh": "Law in Silico：用大模型智能体模拟法律社会，复现真实犯罪率宏观趋势",
+   "summary_zh": "作者提出 Law in Silico，一个基于大模型的法律社会仿真框架，包含个体决策和立法、审判、执法三种制度机制。实验把模拟犯罪率与真实数据对比，发现大模型智能体能大体复现宏观犯罪趋势。微观仿真还显示，运作良好、透明且有适应性的法律体系能更好保护弱势个体的权利。",
    "tags": [
     "法律仿真",
     "多智能体",
@@ -4544,7 +4555,7 @@
     "social-sim",
     "policy"
    ],
-   "applied": true
+   "applied": false
   },
   "26cf1ab046ac0375": {
    "llm": true,
@@ -4648,8 +4659,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:12:38Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 30,
+   "relevant": false,
    "title_zh": "InqEduAgent 用生成式智能体模拟学习伙伴，高斯过程匹配提升探究式学习配对",
    "summary_zh": "作者提出 InqEduAgent，用大模型生成式智能体模拟探究式学习中的学习伙伴，并用高斯过程增强的匹配机制建模学习者的认知与评价特征，据此选择适配伙伴。实验称其在多种学习场景和模型配置下表现更好。",
    "tags": [
@@ -4657,11 +4668,14 @@
     "教育仿真",
     "用户建模"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "human-behavior",
     "org"
    ],
+   "score1": 50,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "273bd71fa434a393": {
@@ -5192,8 +5206,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "VirTLab 让用户自建 2D 场景，观察大模型智能体团队如何协作与移动",
-   "summary_zh": "系统允许研究者和实践者自行设计团队动态仿真，给大模型智能体分配角色、放进 2D 空间环境，观察它们随时间协调、移动和适应。作者用与实证评估对齐的结果和一项用户研究验证其可用性，目标是让非技术用户也能搭建和分析多智能体实验。",
+   "title_zh": "VirTLab：让用户自建 2D 交互环境，用 LLM 智能体仿真团队动态",
+   "summary_zh": "作者发布了 VirTLab，一个支持研究者自建团队仿真场景的系统。用户可以设计 2D 空间环境、给 LLM 智能体分配角色，观察它们如何协调、移动和随时间适应。作者把仿真结果与实证评估和一项用户研究对齐，验证了系统的可用性。",
    "tags": [
     "团队仿真",
     "多智能体",
@@ -5730,8 +5744,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-23T02:57:22Z",
    "domain": "application",
-   "score": 52,
-   "relevant": true,
+   "score": 10,
+   "relevant": false,
    "title_zh": "菲律宾海军陆战队首次举行分析性兵棋推演，服务扩军建设",
    "summary_zh": "菲律宾海军陆战队举行首次分析性兵棋推演，用于支撑更大规模部队的建设规划。报道未披露推演规模、想定内容与是否使用 AI 工具。",
    "tags": [
@@ -5739,10 +5753,13 @@
     "军事仿真",
     "菲律宾"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "wargame"
    ],
+   "score1": 52,
+   "score2": 10,
+   "model2": "Qwen3.8-27B",
    "applied": true
   },
   "31ae75f36948c88b": {
@@ -6408,8 +6425,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:03Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "LeAD：端到端驾驶加低频 LLM 推理，CARLA 榜单得 71 分、路线完成率 93%",
    "summary_zh": "LeAD 采用双速率架构，高频端到端模块负责实时感知规划控制，低频 LLM 模块融合多模态感知与高精地图，在基线规划器失效时用思维链推理给出决策。在 CARLA 模拟器 Leaderboard V1 上得 71 分，路线完成率 93%。",
    "tags": [
@@ -6418,11 +6435,14 @@
     "思维链",
     "仿真评测"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "urban",
     "world-env"
    ],
+   "score1": 50,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "372fc5aa33adca1e": {
@@ -6572,6 +6592,26 @@
    "topics": [],
    "applied": false
   },
+  "37ba2f427bad83c1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "business",
+   "score": 38,
+   "relevant": true,
+   "title_zh": "欧洲制造商在工程与生产中扩大AI与数字孪生应用",
+   "summary_zh": "材料只有标题，称欧洲制造商正在扩大人工智能与数字孪生在工程设计和生产环节的使用，没有给出企业名称、部署规模或效果数据。",
+   "tags": [
+    "数字孪生",
+    "制造业",
+    "行业动态"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env"
+   ],
+   "applied": true
+  },
   "37ceeabda38f73d0": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -6623,8 +6663,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "RecoWorld 提出面向智能体推荐系统的模拟环境蓝图，用模拟用户与推荐智能体多轮互动",
-   "summary_zh": "RecoWorld 给出构建智能体推荐系统训练环境的方案：模拟用户会审视推荐内容、更新心态，并在察觉可能流失时生成反思性指令；推荐智能体据此调整策略，形成反馈闭环。框架支持文本、多模态和语义 ID 等内容表示，以及多智能体模拟目标用户群体。",
+   "title_zh": "RecoWorld：为智能体推荐系统构建双视角仿真环境",
+   "summary_zh": "RecoWorld 提出了一套为智能体推荐系统构建仿真环境的蓝图。仿真用户与推荐智能体进行多轮交互，用户模拟器在感知流失风险时生成反思性指令，推荐智能体据此调整策略，形成动态反馈循环。作者还探讨了文本、多模态和语义 ID 等内容表示，以及多轮强化学习训练方法。",
    "tags": [
     "用户模拟",
     "推荐系统",
@@ -6633,8 +6673,8 @@
    ],
    "status": "selected",
    "topics": [
-    "human-behavior",
-    "framework"
+    "world-env",
+    "economy"
    ],
    "applied": false
   },
@@ -7011,8 +7051,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "HugAgent 基准：让模型预测具体某个人的信念与推理轨迹，而不只是群体平均",
-   "summary_zh": "HugAgent 用结构化问卷加半结构化出声思维访谈，采集参与者的信念状态、信念更新与推理轨迹，评测模型能否在分布外情境下预测特定个体的行为反应。实验显示模型能较好地从本人上下文还原其信念状态，但预测信念更新时明显吃力。",
+   "title_zh": "HugAgent 基准：测试大模型能否预测具体个人的信念更新与推理过程",
+   "summary_zh": "作者发布了 HugAgent 基准，用结构化问卷加半结构化出声思维访谈收集真人在医疗、监控、分区三个政策议题上的信念状态、信念更新和推理轨迹。实验发现模型能从个人上下文恢复其当前信念，但难以预测干预后的信念变化，问题出在同话题联想匹配而非身份一致的推理。",
    "tags": [
     "人类行为模拟",
     "个体建模",
@@ -7336,7 +7376,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:13:42Z",
    "domain": "academic",
-   "score": 50,
+   "score": 55,
    "relevant": true,
    "title_zh": "机器学习加博弈论重建国际石油贸易网络并做冲击推演",
    "summary_zh": "作者结合机器学习优化、博弈论和效用理论，学习各经济体的石油贸易决策模型，重建了国际石油贸易网络的度、聚类系数和接近中心性。政策仿真显示出口型经济体受外部冲击影响更大，贸易摩擦成本升降的影响不对称。",
@@ -7349,6 +7389,9 @@
    "topics": [
     "economy"
    ],
+   "score1": 50,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "3ee94ff2bdbdaf02": {
@@ -7896,7 +7939,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T17:31:14Z",
    "domain": "academic",
-   "score": 50,
+   "score": 52,
    "relevant": true,
    "title_zh": "用 LLM 与真人分别生成“话到嘴边”查询，验证合成查询可用于检索系统评测",
    "summary_zh": "针对话到嘴边（TOT）检索评测数据难收集的问题，作者提出用 LLM 和真人两种方式诱导 TOT 查询。LLM 用户模拟器批量生成的合成查询在电影领域与基于社区问答的查询对检索系统的排序高度相关，语言上也相似；真人侧则用视觉刺激界面让参与者进入 TOT 状态。",
@@ -7911,6 +7954,9 @@
     "human-behavior",
     "eval"
    ],
+   "score1": 50,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "41ecfbfd86d236d5": {
@@ -9590,8 +9636,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "贝叶斯框架拆解大模型观点动态中的真实互动与三类偏差",
-   "summary_zh": "作者用贝叶斯框架把大模型观点演化中的话题偏差、赞同偏差和锚定偏差与真实互动效应分开量化，在气候变化、社会公正、音乐偏好等 12 个问题上做多轮对话。观点轨迹很快收敛到共同吸引子，偏差影响因模型而异；用强立场言论微调会移动该吸引子。",
+   "title_zh": "用贝叶斯框架拆解大模型舆论仿真中的三类偏差：交互与偏见随对话衰减",
+   "summary_zh": "作者提出一个贝叶斯框架，把大模型智能体多轮对话中的观点变化拆成真实交互和三类系统性偏差：话题偏差、顺从偏差和锚定偏差。他们在 12 个议题上测试多个大模型，发现观点轨迹快速收敛到共享吸引子，交互和偏差的影响都随时间衰减，且不同模型间差异明显。",
    "tags": [
     "观点动力学",
     "社会仿真",
@@ -9625,6 +9671,9 @@
     "world-env",
     "urban"
    ],
+   "score1": 50,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "50edd38fb888a3f0": {
@@ -9737,7 +9786,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:14:04Z",
    "domain": "academic",
-   "score": 50,
+   "score": 55,
    "relevant": true,
    "title_zh": "RAG-LLM 驱动的共享电动出行仿真平台与路线推荐",
    "summary_zh": "论文给出一个云端大模型驱动的共享电动出行平台，接入手机应用做个性化路线推荐，优化模块按出行时间和成本在不同交通场景下评估。RAG 框架在系统运营者查询上平均执行准确率 0.81，用户查询上 0.98。",
@@ -9750,6 +9799,9 @@
    "topics": [
     "urban"
    ],
+   "score1": 50,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "5197dcfee35f4855": {
@@ -10014,8 +10066,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "GGSS Personas：基于德国综合社会调查 ALLBUS 的人群对齐人格提示集",
-   "summary_zh": "作者从德国综合社会调查 ALLBUS 构建了代表性人格提示集合 GGSS Personas，可直接插入各类 LLM 提示中。评测显示其在模拟调查回答分布上优于现有分类器，数据稀缺时优势更明显，并分析了人格代表性与属性选择的影响。",
+   "title_zh": "GGSS Personas：基于德国综合社会调查构建的人口对齐角色提示库",
+   "summary_zh": "作者用德国综合社会调查（ALLBUS）数据构建了一套代表性角色提示集合 GGSS Personas，可直接插入各类 LLM 提示中，让模型生成贴近德国人口分布的回答。实验显示，用这套角色引导的 LLM 在模拟调查回答分布上优于现有分类器，数据稀缺时优势更明显。",
    "tags": [
     "人格提示",
     "调查模拟",
@@ -10024,8 +10076,7 @@
    "status": "selected",
    "topics": [
     "human-behavior",
-    "social-sim",
-    "eval"
+    "social-sim"
    ],
    "applied": true
   },
@@ -10264,6 +10315,9 @@
     "human-behavior",
     "eval"
    ],
+   "score1": 50,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "54b7d3eafd551ca7": {
@@ -10314,8 +10368,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "用 Concordia 框架检验 GPT-4 心智理论：看似懂人，实则靠语言记忆",
-   "summary_zh": "研究在生成式智能体框架 Concordia 的模拟环境中测试 GPT-4 的心智理论能力，发现它常无法依据信念归因选择行动，智能体行为之间也缺少连贯因果。作者认为此前观察到的“心智理论涌现”可能来自浅层统计关联，呼吁改用基于行动的评测。",
+   "title_zh": "用 Concordia 框架检验 GPT-4 的心智理论：行动推断常失败，疑似靠语言记忆而非真推理",
+   "summary_zh": "作者用生成式智能体框架 Concordia 在模拟环境中测试 GPT-4 的心智理论能力。结果显示 GPT-4 经常无法根据信念归因选择行动，此前观察到的类 ToM 能力可能来自浅层统计关联。模型也难以从智能体行动生成连贯的因果效应。",
    "tags": [
     "心智理论",
     "生成式智能体",
@@ -10325,7 +10379,8 @@
    "status": "selected",
    "topics": [
     "generative-agents",
-    "eval"
+    "eval",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -10835,6 +10890,20 @@
    ],
    "applied": true
   },
+  "5ab33db9554f44ba": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "academic",
+   "score": 28,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "5aca4c38bba36ada": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -11203,8 +11272,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "DeepPersona 从真实 ChatGPT 对话挖出属性分类体系，生成平均 1MB 文本的深度合成人格",
-   "summary_zh": "作者先挖掘数千段真实用户与 ChatGPT 对话，构建含数百个层级属性的分类体系，再按体系逐步采样、条件生成叙事完整的人格画像，平均含数百个结构化属性、约 1MB 叙事文本。属性覆盖比现有基线高 32%，画像独特性高 44%。",
+   "title_zh": "DeepPersona：用两阶段方法生成超深合成人格，平均数百属性、约 1MB 叙事文本",
+   "summary_zh": "作者提出 DEEPPERSONA，一个可扩展的合成人格生成引擎。它先从数千条真实用户与 ChatGPT 的对话中挖掘出迄今最大的人类属性分类体系，再从中渐进采样生成叙事完整的人格档案，深度比以往工作高两个数量级。这些人格让 GPT-4.1-mini 的个性化问答准确率平均提升 11.6%，并把模拟公民与真实人类问卷回答的差距缩小 31.7%。",
    "tags": [
     "合成人格",
     "用户模拟",
@@ -11214,7 +11283,7 @@
    "status": "selected",
    "topics": [
     "human-behavior",
-    "generative-agents"
+    "eval"
    ],
    "applied": false
   },
@@ -11773,8 +11842,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:10Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "MetaResearcher：在注入虚假信息与时间动态的对抗虚拟世界中训练深度研究智能体",
    "summary_zh": "作者构建会演化、注入对抗性错误信息的虚拟世界，让深度研究智能体练习评估信源可信度和处理时间冲突，并设计假设生成、矛盾消解等任务。方法在 GRPO 框架下加入自反思元奖励，同时优化答案正确性、搜索路径效率、反思深度与工具调用多样性。",
    "tags": [
@@ -11782,11 +11851,14 @@
     "虚拟环境",
     "强化学习"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "eval"
    ],
+   "score1": 50,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "6303ffc5ee4f789b": {
@@ -11962,8 +12034,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "两阶段框架提升 LLM 社会仿真行为对齐，复现序贯采购博弈等三项实验",
-   "summary_zh": "作者提出“情境构建 + 情境导航”两阶段框架，让 LLM 在需要预判他人行为的决策环境里更贴近真人。在 Kremer 与 Debo (2016) 序贯采购博弈、众筹信号博弈和需求估计任务上测试 GPT-4o、GPT-5、Claude-4.0-Sonnet-Thinking、DeepSeek-R1，复杂环境需两阶段齐备才能对齐。",
+   "title_zh": "两阶段框架让 LLM 社会仿真对齐人类决策行为",
+   "summary_zh": "LLM 在需要预判他人行为的复杂决策环境中会系统性偏离人类选择。作者提出两阶段框架：先做 context formation 明确实验设计，再做 context navigation 引导推理。在序列购买、众筹和需求估计三类任务上用四个 SOTA 模型验证，复杂任务需要两个阶段才能对齐人类基准，简单任务只需第一阶段。",
    "tags": [
     "行为对齐",
     "社会仿真",
@@ -11972,7 +12044,7 @@
    "status": "selected",
    "topics": [
     "human-behavior",
-    "economy"
+    "eval"
    ],
    "applied": false
   },
@@ -12311,8 +12383,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "双维度评估 LLM 人格稳定性：自评报告稳定，但长对话中观察者评分下滑",
-   "summary_zh": "研究用自评与观察者评分两套方法，测试 7 个 LLM 在四种人格设定下的稳定性，共 3,473 段对话间样本和 1,370 段对话内样本。自评特征高度稳定，但观察者评分显示人格表达在长对话中会衰减，作者将其视为多智能体社会仿真的边界条件。",
+   "title_zh": "双重评估发现 LLM 人格扮演自报稳定但长对话中观察者评分下滑",
+   "summary_zh": "作者用自报特质和观察者评分双重框架检验 LLM 能否稳定维持人格设定。两轮实验覆盖四种 ADHD 人格条件、七个模型和三种语义等价提示，共 3473 段对话。自报结果在对话间和对话内都高度稳定，但观察者评分显示人格表达在长对话中会衰减。",
    "tags": [
     "人格稳定性",
     "合成样本",
@@ -12430,8 +12502,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "LLM 智能体当“硅被试”跑社会实验，复现三项代表性实验与真实结果吻合",
-   "summary_zh": "作者提出一套基于社会科学理论的框架，包含 LLM 驱动的实验智能体、干预实施方法和行为与问卷数据采集工具。复现三项代表性实验后，定量与定性结果都与真实世界证据高度一致。作者称这是首个用 LLM 智能体试跑社会实验的框架。",
+   "title_zh": "清华团队用大模型智能体复现三项社会实验，结果与真实证据高度一致",
+   "summary_zh": "作者提出了一个用大模型智能体充当“硅基被试”来试点社会实验的框架，包含实验智能体、干预实施方法和行为/问卷/访谈数据收集工具三部分。他们复现了三项代表性社会实验，定量和定性结果都与真实世界证据高度吻合。这是首个用 LLM 智能体试点社会实验的框架。",
    "tags": [
     "社会实验",
     "硅被试",
@@ -12439,9 +12511,8 @@
    ],
    "status": "selected",
    "topics": [
-    "human-behavior",
     "social-sim",
-    "eval"
+    "human-behavior"
    ],
    "applied": false
   },
@@ -12466,8 +12537,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "SSR 方法让 LLM 合成消费者复现真实购买意愿，达人类重测信度 90%",
-   "summary_zh": "作者提出语义相似度评分（SSR）：让 LLM 先给文本回答，再用嵌入相似度映射到 Likert 分布。在一家公司 57 份个护产品问卷、9300 份真人回答上测试，SSR 达到人类重测信度的 90%，分布 KS 相似度超过 0.85，合成受访者还能给出评分理由。",
+   "title_zh": "语义相似度评分法让 LLM 模拟消费者购买意向，达到真人重测信度的九成",
+   "summary_zh": "直接让大模型输出数字评分会得到不真实的分布。作者提出语义相似度评分（SSR），先让模型给出文字回答，再用嵌入相似度映射到 Likert 分布。在 57 份个人护理产品问卷、9300 份真人回答的数据上，SSR 达到真人重测信度的 90%，KS 相似度超过 0.85。",
    "tags": [
     "合成样本",
     "用户模拟",
@@ -12616,7 +12687,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T02:29:20Z",
    "domain": "academic",
-   "score": 50,
+   "score": 58,
    "relevant": true,
    "title_zh": "AGEL-Comp：用因果程序图与归纳逻辑编程提升交互智能体的组合泛化",
    "summary_zh": "AGEL-Comp 把因果程序图作为世界模型，用归纳逻辑编程从交互反馈中合成 Horn 子句，再由 LLM 提出候选子目标、神经定理证明器校验一致性。作者在 Retro Quest 仿真环境中设计评测协议检验组合泛化。",
@@ -12631,6 +12702,9 @@
     "world-env",
     "framework"
    ],
+   "score1": 50,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "6a01813862cec28a": {
@@ -12834,8 +12908,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "LLM 给无家可归问题开政策药方，与四城专家判断存在分歧",
-   "summary_zh": "作者构建了覆盖四个城市、以能力方法为框架的政策决策场景基准，评估 LLM 在缓解无家可归问题上的政策建议是否与领域专家一致。他们还把 LLM 推荐的政策接入其中一个地点的基于智能体模型，比较其社会影响与专家推荐政策的差异。结果显示不同 LLM 的建议与当地专家存在差异，作者认为需配合护栏、情境校准和本地专业知识。",
+   "title_zh": "用大模型给无家可归问题提政策建议：与专家推荐对比并接入智能体模型评估社会影响",
+   "summary_zh": "作者构建了一个覆盖四个城市、基于能力方法框架的无家可归政策决策基准，测试多个大模型的政策建议是否与当地专家一致。结果显示各模型之间、模型与专家之间都存在差异。他们还把模型推荐的政策接入一个城市的智能体模型，比较其社会影响，认为大模型在配好护栏、校准和本地专家参与后可以辅助政策制定。",
    "tags": [
     "政策推演",
     "基于智能体建模",
@@ -12846,7 +12920,7 @@
    "topics": [
     "policy",
     "eval",
-    "human-behavior"
+    "social-sim"
    ],
    "applied": true
   },
@@ -13091,8 +13165,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "双智能体框架让 LLM 出行智能体对齐真实旅客的学习与调整行为",
-   "summary_zh": "作者构建一组带记忆系统和可学习人格的 LLM 出行者智能体，另设一个 LLM 校准智能体，用在线数据流训练这些人格，使模拟行为贴近真人。在日复一日路径选择实验的真实数据集上，该方法的模拟表现明显优于对照。",
+   "title_zh": "双智能体框架让 LLM 出行者智能体对齐人类路径选择的学习与调整行为",
+   "summary_zh": "作者提出一个双智能体框架：带记忆系统和可学习人格的 LLM 出行者智能体负责模拟人类出行者，另一个 LLM 校准智能体从在线数据流中训练这些人格，实现行为对齐。在真实逐日路径选择实验数据上，该方法在个体行为对齐和总体仿真精度上都显著优于现有 LLM 方法，并能捕捉底层学习过程的演化。",
    "tags": [
     "出行行为",
     "LLM智能体",
@@ -13101,10 +13175,10 @@
    ],
    "status": "selected",
    "topics": [
-    "human-behavior",
-    "urban"
+    "urban",
+    "human-behavior"
    ],
-   "applied": true
+   "applied": false
   },
   "6d96cf6c4f95d26a": {
    "llm": true,
@@ -13646,7 +13720,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T17:31:51Z",
    "domain": "academic",
-   "score": 50,
+   "score": 52,
    "relevant": true,
    "title_zh": "AgentSME：面向智慧教育的生成式智能体，比较三种沟通模式",
    "summary_zh": "AgentSME 是 LLM 驱动的生成式智能体框架，设定 Solo、Mono、Echo 三种沟通模式，用准确率和三项多样性指标评测六个 LLM。结果显示 Echo 模式准确率最高，DeepSeek 的推理多样性最好。",
@@ -13660,6 +13734,9 @@
     "generative-agents",
     "org"
    ],
+   "score1": 50,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "71861e9f33081306": {
@@ -15038,8 +15115,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:44Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 30,
+   "relevant": false,
    "title_zh": "面向搜救无人机集群的三层学习架构：神经可塑性、MARL 与数字孪生分层协作",
    "summary_zh": "论文提出三层分级学习架构，分别对应反射、技能、推理：个体层用 Hebbian 神经可塑性，战术层用图神经网络多智能体强化学习加行为树，战略层用元学习、BDI 推理和数字孪生。架构以 22 条契约覆盖 6 个组件，声称提供安全、预算正确性、活性等六类形式保证。",
    "tags": [
@@ -15048,11 +15125,14 @@
     "数字孪生",
     "分层架构"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "framework",
     "world-env"
    ],
+   "score1": 50,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "7d4c4c361809b7ce": {
@@ -15097,6 +15177,9 @@
     "eval",
     "human-behavior"
    ],
+   "score1": 50,
+   "score2": 50,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "7d942fcd21a3fb65": {
@@ -15351,7 +15434,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:18Z",
    "domain": "academic",
-   "score": 50,
+   "score": 58,
    "relevant": true,
    "title_zh": "Talk2DM：用 VRCsim 仿真生成车路云动态地图问答数据，让 LLM 支持自然语言查询",
    "summary_zh": "作者提出 VRCsim 车路云协同感知仿真框架，生成流式感知数据并构建 VRC-QA 数据集，覆盖混合交通场景的空间查询与推理。基于此的 Talk2DM 模块用链式提示把人工规则与 LLM 常识结合，为动态地图加上自然语言查询能力。",
@@ -15365,6 +15448,9 @@
     "urban",
     "world-env"
    ],
+   "score1": 50,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "8008636e1628a484": {
@@ -15801,6 +15887,30 @@
    ],
    "applied": false
   },
+  "830f636c953accac": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "platform",
+   "score": 42,
+   "relevant": true,
+   "title_zh": "CSDN介绍MiroFish多智能体沙盘：在共享画布上观察群体涌现",
+   "summary_zh": "材料只有标题，称MiroFish是一个多智能体沙盘，在共享画布上做可观测的群体涌现仿真。具体框架、智能体规模和验证方式均未给出。",
+   "tags": [
+    "多智能体",
+    "沙盘仿真",
+    "开源框架"
+   ],
+   "status": "filtered",
+   "topics": [
+    "framework",
+    "social-sim"
+   ],
+   "score1": 42,
+   "score2": 85,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
   "83b6ae49dd6a8ac3": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -16231,6 +16341,9 @@
     "human-behavior",
     "eval"
    ],
+   "score1": 50,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "88ae93d48b8a7381": {
@@ -18001,6 +18114,28 @@
    ],
    "applied": false
   },
+  "94fa74c7b9f0e060": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "academic",
+   "score": 82,
+   "relevant": true,
+   "title_zh": "用欧洲社会调查数据检验 LLM 合成受访者：画像约束过强，个体预测失准",
+   "summary_zh": "作者用欧洲社会调查第 11 轮 28 国参与者属性构造了 1.4 万个合成受访者，让 Gemini 2.5 Flash 和 GPT-5-mini 回答 15 道态度题。合成回答贴近条件均值（相关 0.59 和 0.55，真人为 0.44），但与匹配个体的相关只有 0.28 和 0.26。作者称这种画像约束远强于真人约束的现象为过度决定。",
+   "tags": [
+    "合成样本",
+    "用户模拟",
+    "校准验证",
+    "社会调查"
+   ],
+   "status": "selected",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "applied": false
+  },
   "951982280b357cdb": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -18667,8 +18802,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "HumanLLM：用 244 条心理模式构建拟人化基准，8B 模型在多模式动态上超过 Qwen3-32B",
-   "summary_zh": "作者从约 1.2 万篇论文中整理出 244 条心理模式，合成 11359 个模式相互强化、冲突或调节的多轮对话场景，用双层清单分别评估单模式保真度和多模式涌现动态，与人类对齐相关系数达 0.90。HumanLLM-8B 在多模式动态上优于 Qwen3-32B，参数量只有后者的四分之一。",
+   "title_zh": "HumanLLM：用 244 种心理模式构建拟人基准，8B 模型多模式动态胜过 32B",
+   "summary_zh": "作者提出 HumanLLM 框架，把心理模式当作相互作用的因果力量来评测和改进大模型的拟人程度。他们从约 12000 篇论文中提炼 244 种心理模式，合成 11359 个场景，用双层清单评测单模式保真和多模式动态。HumanLLM-8B 在多模式动态上超过 Qwen3-32B，参数少四倍。",
    "tags": [
     "人格模拟",
     "评测基准",
@@ -19969,8 +20104,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:13:42Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 30,
+   "relevant": false,
    "title_zh": "iNews 数据集：291 名英国参与者标注 2899 条 Facebook 新闻的情绪反应",
    "summary_zh": "作者收集 291 名英国参与者对 2899 条 Facebook 新闻帖的多维标注，含效价、唤醒度、支配感、离散情绪、相关性和转发意愿，平均每条 5.18 人。标注者的人口学、人格、媒体信任等信息解释了 15.2% 的标注方差，加入后准确率提升 7%。",
    "tags": [
@@ -19978,10 +20113,13 @@
     "情绪建模",
     "数据集"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "human-behavior"
    ],
+   "score1": 52,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "a2778046860d4028": {
@@ -20918,7 +21056,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T17:32:29Z",
    "domain": "academic",
-   "score": 52,
+   "score": 58,
    "relevant": true,
    "title_zh": "用荣格心理类型建模 LLM 人格：主辅协调、强化补偿与反思三层机制",
    "summary_zh": "框架以荣格心理类型刻画 LLM 智能体人格，包含主导-辅助协调、情境下的强化补偿和驱动长期人格演化的反思三种机制，并用 MBTI 问卷和挑战场景做初步对齐评估。材料未给出大规模仿真或与真人对比的结果。",
@@ -20932,6 +21070,9 @@
     "human-behavior",
     "generative-agents"
    ],
+   "score1": 52,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "a97bd54c83b6161f": {
@@ -20953,7 +21094,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T17:32:29Z",
    "domain": "academic",
-   "score": 50,
+   "score": 52,
    "relevant": true,
    "title_zh": "立场论文：用户模拟是通往 AGI 的关键一环，可提供可扩展评测与交互训练数据",
    "summary_zh": "作者主张用户模拟不只是工具，而是突破 AGI 评测瓶颈和交互数据瓶颈的关键，能提供可扩展的评测环境、交互学习数据和自适应能力训练。文章梳理了构建真实模拟器的跨学科难点与 LLM 带来的新挑战，并提出研究议程，未报告新实验。",
@@ -20968,6 +21109,9 @@
     "human-behavior",
     "eval"
    ],
+   "score1": 50,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "a9a8e3522b1ae5ac": {
@@ -21166,8 +21310,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "对比 Reddit 真实情绪扩散与 LLM 模拟网络：模拟图多为孤立线性链，结构上失真明显",
-   "summary_zh": "研究用 Reddit 讨论数据构建真实情绪扩散图，与 LLM 对话模拟生成的合成社交图做结构、行为和预测三方面对比。真实扩散呈现密集连接、反复互动、情绪转向和涌现社群，而 LLM 模拟图多为孤立线性链、情绪轨迹单调，暴露出当前 LLM 社会仿真的结构性局限。",
+   "title_zh": "LLM 模拟社交网络情绪扩散与真实 Reddit 图对比：结构差异显著",
+   "summary_zh": "作者把 Reddit 真实讨论数据构建的情绪扩散图与 LLM 对话仿真生成的社交图做了系统对比。真实图呈现密集连接、重复互动、情感转向和涌现的社区结构，而 LLM 仿真图多为孤立的线性链，情感轨迹单调。这些结构缺陷进一步拖累了基于图的下游情绪预测，提示要谨慎使用 LLM 生成数据做社会科学研究。",
    "tags": [
     "社会仿真",
     "情绪扩散",
@@ -21179,7 +21323,7 @@
     "social-sim",
     "eval"
    ],
-   "applied": true
+   "applied": false
   },
   "ac1be220a2fcbaaa": {
    "llm": true,
@@ -21259,6 +21403,30 @@
    ],
    "score1": 50,
    "score2": 45,
+   "model2": "Qwen3.8-27B",
+   "applied": false
+  },
+  "acfaedf9a5efc8c2": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "platform",
+   "score": 20,
+   "relevant": false,
+   "title_zh": "清华与无问芯穹开源系统级仿真平台Uni3Sim，面向下一代智算系统",
+   "summary_zh": "清华大学和无问芯穹开源了系统级仿真平台Uni3Sim，覆盖从单卡到超节点的AI推理基础设施，用于在仿真环境中试验智算系统设计。材料未给出仿真精度、规模或与实测的对比结果。",
+   "tags": [
+    "开源框架",
+    "系统仿真",
+    "智算基础设施"
+   ],
+   "status": "filtered",
+   "topics": [
+    "framework",
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 20,
    "model2": "Qwen3.8-27B",
    "applied": false
   },
@@ -21455,8 +21623,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:44Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "AutoMT：用多智能体 LLM 从交通规则自动提取蜕变关系，测试自动驾驶系统",
    "summary_zh": "AutoMT 让 LLM 从本地交通规则中提取蜕变关系，再由视觉语言智能体和检索智能体生成后续测试场景。作者称后续用例的多样性最高达到人工专家定义规则基线的 5 倍，检出的行为违规多 20.55%。",
    "tags": [
@@ -21465,12 +21633,15 @@
     "蜕变测试",
     "交通规则"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "urban",
     "eval",
     "framework"
    ],
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "af03b7ee48b990ca": {
@@ -22069,7 +22240,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:44Z",
    "domain": "academic",
-   "score": 50,
+   "score": 60,
    "relevant": true,
    "title_zh": "EmoMAS：贝叶斯编排的情绪感知多智能体谈判系统，面向端侧高风险场景",
    "summary_zh": "EmoMAS 用贝叶斯编排器协调博弈论、强化学习和心理一致性三个智能体，把情绪决策从被动反应变成策略选择，并按谈判反馈更新各智能体可靠性。作者在债务、医疗、应急和教育四个端侧谈判基准上做了智能体对智能体仿真，小模型和大模型接入后均超过基线。",
@@ -22084,6 +22255,9 @@
     "org",
     "framework"
    ],
+   "score1": 50,
+   "score2": 70,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "b30472b468b7fa63": {
@@ -22549,8 +22723,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:03Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 35,
+   "relevant": false,
    "title_zh": "综述：多智能体系统驱动的数字孪生用于预测性维护",
    "summary_zh": "这篇系统综述梳理了 547 篇以上论文，建立多智能体系统与数字孪生结合的架构分类，聚焦资源受限场景下的预测性维护，并提出边缘 AI 部署、轻量通信协调、分层编排三个开放问题。",
    "tags": [
@@ -22559,11 +22733,14 @@
     "预测性维护",
     "综述"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "org"
    ],
+   "score1": 52,
+   "score2": 35,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "b707cf7fb2bbf15c": {
@@ -22587,8 +22764,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "用多轮强化学习训练 LLM 扮演用户，人格漂移减少 55%",
-   "summary_zh": "论文提出三项自动指标衡量 LLM 模拟用户时的人格漂移，并用这些指标作为奖励信号做多轮强化学习微调。在病人、学生、社交聊天对象三种角色上，不一致率下降超过 55%。",
+   "title_zh": "用多轮强化学习微调大模型，让模拟的人类角色更少偏离人设",
+   "summary_zh": "现成大模型在扮演病人、学生、社交聊天对象等人类角色时，常常偏离人设、自相矛盾。作者定义了三种衡量人设一致性的自动指标，并用它们作为奖励信号做多轮强化学习微调。不一致行为减少了超过 55%，模拟出的用户更连贯、更忠实于角色。",
    "tags": [
     "用户模拟",
     "人格一致性",
@@ -23352,8 +23529,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:27Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "Categorical Traffic Transformer 用可解释离散隐变量预测交通行为并兼容 LLM",
    "summary_zh": "CTT 同时输出连续轨迹预测和离散化的类别预测（车道模式、同伦类等），隐空间完全可解释，训练时可直接用真值监督隐变量，避免模式坍缩。作者称其在预测精度上超过 SOTA，且输入输出均为 token，可接入 LLM 做常识推理与零样本泛化。",
    "tags": [
@@ -23362,11 +23539,14 @@
     "可解释性",
     "闭环仿真"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "urban",
     "world-env"
    ],
+   "score1": 50,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "c04b8565c5904649": {
@@ -23523,7 +23703,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T02:27:50Z",
    "domain": "academic",
-   "score": 52,
+   "score": 62,
    "relevant": true,
    "title_zh": "SD-AgentFoundry 发布 2D 多智能体与 3D 数字孪生两套极简本地仿真底座",
    "summary_zh": "作者给出两套刻意精简的仿真基础代码：2D 版本让本地部署的 LLM 智能体移动、通信、响应位置占用并遭遇局部火灾事件；3D 版本让本地 VLM 接收第一人称图像并输出自然语言移动指令。两套代码可在 macOS、Windows、Linux 本地运行，面向教学和快速原型。",
@@ -23537,6 +23717,9 @@
     "world-env",
     "framework"
    ],
+   "score1": 52,
+   "score2": 72,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "c171307311ed53a0": {
@@ -24297,8 +24480,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "Narrative-to-Action：分层 LLM 智能体框架生成人类出行轨迹",
-   "summary_zh": "作者提出分层 LLM 智能体框架 Narrative-to-Action，把出行决策拆成叙事推理、反思规划、行为执行三层：一个智能体写日记式叙事，另一个把叙事解析成机器可读计划，再由动态执行模块落到地理环境中。框架还引入按职业区分日程弹性的 Mobility Entropy by Occupation 指标。",
+   "title_zh": "分层 LLM 智能体框架把日记式叙事转成出行行动，生成贴近真实的人类移动轨迹",
+   "summary_zh": "作者提出 Narrative-to-Action 分层 LLM 智能体框架，用“创意写手”智能体生成带动机的日记式叙事，再用“结构解析器”转成可执行计划，配合地理环境仿真执行。框架引入按职业区分的移动熵指标 MEO 来刻画不同职业的时间安排弹性，生成的合成轨迹贴近真实模式，且决策逻辑可解释。",
    "tags": [
     "出行仿真",
     "LLM智能体",
@@ -24307,7 +24490,6 @@
    "status": "selected",
    "topics": [
     "urban",
-    "human-behavior",
     "generative-agents"
    ],
    "applied": false
@@ -24455,7 +24637,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:49Z",
    "domain": "academic",
-   "score": 50,
+   "score": 55,
    "relevant": true,
    "title_zh": "ScaleWoB 用编码智能体大规模合成 GUI 环境，训练与评测界面智能体",
    "summary_zh": "ScaleWoB 让编码智能体批量生成跨平台的高保真交互环境，以无后端的网页形式通过 URL 访问，带可验证奖励，几乎零配置、资源开销低，覆盖移动、桌面与车载界面，可用于大规模评测和下游智能体训练。",
@@ -24471,6 +24653,9 @@
     "framework",
     "eval"
    ],
+   "score1": 50,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "ca170e0602365a3a": {
@@ -24525,8 +24710,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T02:27:57Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "多智能体协作决策综述：梳理仿真环境、算法与挑战",
    "summary_zh": "综述覆盖自动驾驶、无人机导航、灾难救援、模拟军事对抗等场景，按任务形式、奖励分配和底层技术分析主流多智能体仿真环境，并把决策方法分为规则、博弈论、演化算法、深度多智能体强化学习等五类。",
    "tags": [
@@ -24534,12 +24719,15 @@
     "综述",
     "仿真环境"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "org",
     "wargame",
     "framework"
    ],
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "ca4e9294e2f29dda": {
@@ -24726,7 +24914,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:40Z",
    "domain": "academic",
-   "score": 50,
+   "score": 58,
    "relevant": true,
    "title_zh": "Hermes：用 LLM 智能体链按蓝图自动构建网络数字孪生实例",
    "summary_zh": "作者提出 Hermes，一条 LLM 智能体链，通过结构化、可解释的逻辑步骤按“蓝图”构建网络数字孪生实例，用于不同用例和配置下的网络建模。作者认为现有网络数字孪生受限于用例专用架构，难以推进网络自治。",
@@ -24740,6 +24928,9 @@
     "world-env",
     "framework"
    ],
+   "score1": 50,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "cbb3b808ee18d805": {
@@ -25251,8 +25442,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:24Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "InstructDriver 用人类驾驶逻辑指令微调大模型做运动规划，在 nuPlan 闭环评测",
    "summary_zh": "作者把避免碰撞、绿灯通行等人类逻辑和交通规则写成指令数据微调大模型，再用可解释的 InstructChain 模块推导最终轨迹。与已有工作不同，评测放在真实数据闭环的 nuPlan 基准上，而非仿真环境。",
    "tags": [
@@ -25261,11 +25452,14 @@
     "指令微调",
     "闭环评测"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "urban",
     "human-behavior"
    ],
+   "score1": 50,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "d0bc7790b99fd005": {
@@ -25478,8 +25672,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "谈判语言换成印地语等四种语言，LLM 博弈结果的变化超过换模型",
-   "summary_zh": "作者在最后通牒、买卖、资源交换三类多智能体博弈中固定规则、模型参数和激励，只切换英语与印地语、旁遮普语、古吉拉特语、马尔瓦里语四种表述。语言选择对结果的影响强于换模型，能反转提议方优势、重新分配剩余；印地语系在分配型博弈中降低稳定性，在整合型博弈中带来更多探索。",
+   "title_zh": "语言即筹码：印地语等四种印度语言显著改变 LLM 谈判结果",
+   "summary_zh": "作者在最后通牒、买卖和资源交换三类博弈中，让 LLM 智能体分别用英语和四种印度语言（印地语、旁遮普语、古吉拉特语、马尔瓦里语）谈判，规则、模型参数和激励全部保持一致。结果显示，换语言对结果的影响可以超过换模型，甚至能反转提议方优势。只看英语的谈判评测结论不完整且有误导性。",
    "tags": [
     "谈判博弈",
     "多智能体",
@@ -25488,7 +25682,8 @@
    "status": "selected",
    "topics": [
     "org",
-    "eval"
+    "eval",
+    "human-behavior"
    ],
    "score1": 63,
    "score2": 82,
@@ -25971,6 +26166,26 @@
    ],
    "applied": false
   },
+  "d54b0023bd50eb6d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "business",
+   "score": 35,
+   "relevant": true,
+   "title_zh": "至顶网转载：欧洲制造商扩大AI与数字孪生在工程生产中的应用",
+   "summary_zh": "与上一条为同一报道的中文版本，仅标题信息，称欧洲制造商扩大人工智能与数字孪生在工程及生产领域的应用，无具体案例与数据。",
+   "tags": [
+    "数字孪生",
+    "制造业",
+    "行业动态"
+   ],
+   "status": "filtered",
+   "topics": [
+    "world-env"
+   ],
+   "applied": true
+  },
   "d5521539f928ab61": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -26045,7 +26260,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T02:28:11Z",
    "domain": "academic",
-   "score": 52,
+   "score": 58,
    "relevant": true,
    "title_zh": "让 LLM 智能体自己提出问题的框架，在多智能体仿真中减少无效行为",
    "summary_zh": "作者把“提出问题”当作任务选择之前的独立决策环节，用内部状态、环境观察和与其他智能体的交互三种提示范围逐步扩展认知覆盖，并支持从经验中学习提问过程。多智能体仿真实验里，环境感知提示相比内部驱动基线显著减少了 no-eat 事件。",
@@ -26059,6 +26274,9 @@
     "generative-agents",
     "framework"
    ],
+   "score1": 52,
+   "score2": 65,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "d5bc6e71334e58c7": {
@@ -26068,8 +26286,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "LLM 智能体参与 One Health 风险谈判，专家工作坊在两项真实议题上达成共识",
-   "summary_zh": "研究把 LLM 智能体接入有人监督的谈判流程，用检索增强生成从利益相关方材料生成智能体描述，再让智能体调用领域计算模型和网络来源。模拟谈判产出候选协议分布，用 Nash 议价解和帕累托最优衡量。在食品安全弯曲杆菌和橡树游蛾管理两个真实场景的专家工作坊中做了可行性评估。",
+   "title_zh": "用大模型智能体辅助 One Health 风险谈判：两个真实场景的可行性验证",
+   "summary_zh": "作者提出一条多步流水线，把基于大模型的智能体嵌入有人类监督的风险谈判流程，覆盖风险评估、估值与谈判环节。在两个真实场景（鸡肉中弯曲杆菌的食品安全标准、橡树蛾幼虫防治）的专家工作坊里，参与者在限定时间内讨论并修改智能体提出的方案后达成共识。LLM 辅助带来的效率与决策质量增益还需对照评估。",
    "tags": [
     "多智能体谈判",
     "协商博弈",
@@ -26078,8 +26296,7 @@
    "status": "selected",
    "topics": [
     "org",
-    "policy",
-    "human-behavior"
+    "policy"
    ],
    "applied": true
   },
@@ -26733,6 +26950,9 @@
     "world-env",
     "urban"
    ],
+   "score1": 50,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "dc2a8ca54310bc66": {
@@ -27044,6 +27264,20 @@
    ],
    "applied": false
   },
+  "decd40e17503709d": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T13:15:54Z",
+   "domain": "business",
+   "score": 25,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
   "df906319e9e52de2": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -27132,6 +27366,9 @@
    "topics": [
     "economy"
    ],
+   "score1": 52,
+   "score2": 82,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "e055d2e137babfc5": {
@@ -27160,7 +27397,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:12:59Z",
    "domain": "academic",
-   "score": 52,
+   "score": 54,
    "relevant": true,
    "title_zh": "八名 UX 设计师试用 LLM 驱动的交互式虚拟人物 Alice，认可效率但担心过度乐观",
    "summary_zh": "作者提出交互式虚拟人物（IVP）：多模态、LLM 驱动、可通过语音访谈的对话式用户模拟。八名专业 UX 设计师在用户研究、构思和原型评估三项活动中使用名为 Alice 的 IVP，认为它能加快信息收集、提供类用户反馈，同时指出偏见、过度乐观和真实性不足的问题。",
@@ -27173,6 +27410,9 @@
    "topics": [
     "human-behavior"
    ],
+   "score1": 52,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "e0e104f18b8c06a1": {
@@ -27287,8 +27527,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:34Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "PADriver：多模态大模型驱动的个性化自动驾驶闭环框架与 PAD-Highway 基准",
    "summary_zh": "PADriver 以多模态大模型为决策核心，输入连续帧和个性化文本提示，输出场景理解、危险等级估计和动作决策。作者基于 Highway-Env 搭建闭环基准 PAD-Highway，含 250 小时带标注视频，用于评测不同驾驶风格下的决策表现。",
    "tags": [
@@ -27297,11 +27537,14 @@
     "仿真基准",
     "闭环评测"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "human-behavior"
    ],
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "e1b0330636fee97b": {
@@ -27680,8 +27923,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:56Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 30,
+   "relevant": false,
    "title_zh": "以智能体 LLM 为规划核心的认知机器人架构，在仿真家庭环境控制移动操作臂",
    "summary_zh": "作者提出一种认知架构，由智能体 LLM 负责规划与推理，工作记忆和情景记忆支持从经验中学习和适应。实例化后控制仿真家庭环境中的移动操作臂，通过感知、推理、导航、抓取、放置等高层工具与环境交互。",
    "tags": [
@@ -27689,10 +27932,13 @@
     "机器人仿真",
     "认知架构"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env"
    ],
+   "score1": 52,
+   "score2": 30,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "e50854750e3c8223": {
@@ -28022,8 +28268,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "Democracy-in-Silico：给 AI 智能体社会设计制度，宪法 AI 加调解审议抑制权力寻租",
-   "summary_zh": "论文构建 AI 智能体自治社会的仿真，智能体带有创伤记忆、隐藏议程和心理触发点，在预算危机与资源稀缺压力下进行审议、立法和选举。作者提出 Power-Preservation Index 量化智能体以权谋私的程度，发现 Constitutional AI 宪章加调解式审议协议能显著减少腐败性权力追求、提升政策稳定性与公民福利。",
+   "title_zh": "Democracy-in-Silico：用宪法章程与调解式协商约束 AI 智能体社会的权力寻租",
+   "summary_zh": "作者构建了一个由带心理人格的 LLM 智能体组成的自治社会仿真，让它们在预算危机、资源短缺等压力下进行协商、立法和选举。他们提出 Power-Preservation Index（PPI）来量化智能体为保权而牺牲公共福利的失范行为。结果显示，宪法 AI 章程加调解式协商协议的制度组合能显著减少腐败性权力追逐，提升政策稳定性和公民福利。",
    "tags": [
     "制度设计",
     "AI 治理",
@@ -28032,9 +28278,9 @@
    ],
    "status": "selected",
    "topics": [
-    "policy",
     "social-sim",
-    "org"
+    "policy",
+    "generative-agents"
    ],
    "applied": false
   },
@@ -28236,6 +28482,9 @@
     "human-behavior",
     "eval"
    ],
+   "score1": 50,
+   "score2": 80,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "e9e0b70eba5519e5": {
@@ -28338,7 +28587,7 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T21:56:12Z",
    "domain": "application",
-   "score": 58,
+   "score": 66,
    "relevant": true,
    "title_zh": "AI 编程智能体在模拟开发岗位上表现不佳，完整解决任务不足一成",
    "summary_zh": "一项模拟真实开发岗位的测试把 AI 编程智能体放进有同事、项目看板和不完整交接的日常工作流中，要求它们自主推进开发并关闭工单。表现最好的 Opus 5.5 和 Astra 也只能完整解决不到十分之一的任务。它们能快速完成清晰独立的任务，但作为自主开发者会跟丢进度。",
@@ -28353,6 +28602,9 @@
     "eval",
     "world-env"
    ],
+   "score1": 58,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "ea4f03f6a80bba8d": {
@@ -28642,8 +28894,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:18Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 35,
+   "relevant": false,
    "title_zh": "LangGraph 多智能体自动调试认知数字孪生，机器人加工单元部署从数周缩到 2 小时",
    "summary_zh": "论文提出用 LangGraph 编排多智能体，语义路径靠 RAG 从非结构化文档抽取技术规格，功能路径用 MCP 自动发现并绑定工业实时遥测数据，端到端完成认知数字孪生调试。在机器人加工单元验证，感知 mAP 达 97.2%，部署周期从数周降到平均 2 小时。",
    "tags": [
@@ -28652,11 +28904,14 @@
     "工业制造",
     "RAG"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "framework",
     "world-env"
    ],
+   "score1": 52,
+   "score2": 35,
+   "model2": "Qwen3.8-27B",
    "applied": true
   },
   "ed0bbbb9f0d78bc8": {
@@ -28748,6 +29003,9 @@
     "framework",
     "eval"
    ],
+   "score1": 52,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "ed3add70ca8e747d": {
@@ -28836,8 +29094,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T19:07:55Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "IterPO：用单轮 GRPO 加学习型 Q 函数做多轮对话智能体的批量在线强化学习",
    "summary_zh": "针对多轮对话智能体训练中真实用户不可得、模拟用户难以忠实构建的问题，作者提出 Iterative Policy Optimization，在批量在线设定下交替拟合轮级 Q^π 并用单轮 token 级 GRPO 做策略改进。材料未给出实验规模与结果。",
    "tags": [
@@ -28845,11 +29103,14 @@
     "用户模拟",
     "智能体训练"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "human-behavior",
     "framework"
    ],
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "ee0c7cde2128367e": {
@@ -29223,8 +29484,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "Chimera：多智能体 LLM 框架自动模拟企业内部良性行为与内部威胁攻击",
-   "summary_zh": "Chimera 把每个智能体建模为有细粒度角色的员工，支持小组会议、两两互动和自组织排程，自动生成企业系统日志。基于 15 类真实事件抽象出的内部攻击，在三个数据敏感组织场景中部署，用于缓解内部威胁检测训练数据稀缺。",
+   "title_zh": "Chimera：用多智能体大模型自动仿真企业内部威胁并生成检测数据集",
+   "summary_zh": "作者提出 Chimera，一个基于大模型的多智能体框架，让每个智能体扮演企业员工，自动仿真良性与恶意内部行为并生成系统日志。基于 15 种真实内部攻击事件，他们在三种数据敏感型组织场景下构建了新数据集 ChimeraLog。人工研究和定量分析显示其多样性和真实性高，现有检测方法在该数据集上表现明显下降，且在其上训练的模型跨分布泛化能力强。",
    "tags": [
     "多智能体",
     "内部威胁",
@@ -29233,10 +29494,11 @@
    ],
    "status": "selected",
    "topics": [
-    "org",
+    "social-sim",
+    "framework",
     "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "f0b6d5016bfdb11b": {
    "llm": true,
@@ -29371,8 +29633,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:01Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 15,
+   "relevant": false,
    "title_zh": "用Chronos大模型预测美股单只股票收益，多空组合模拟显示能识别噪声中的定价低效",
    "summary_zh": "作者用Chronos模型在美股最大单只股票上测试预训练与有监督微调两种配置，构建多空组合做表现模拟，认为LLM能处理接近噪声的时间序列并产生alpha，同时指出与专用模型相比仍有提升空间。",
    "tags": [
@@ -29380,10 +29642,13 @@
     "时间序列",
     "投资组合"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "economy"
    ],
+   "score1": 52,
+   "score2": 15,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "f1993a19a3785c58": {
@@ -29770,8 +30035,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:55Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 20,
+   "relevant": false,
    "title_zh": "CommonPower：面向机器学习的电力系统建模与仿真框架，可自动合成预测控制器与安全约束",
    "summary_zh": "这个 Python 工具统一了单智能体 RL、多智能体 RL 和最优控制的接口，并提供训练流水线。它的特点是自动合成模型预测控制器和安全保护机制，省去每个案例研究单独设计防护的工作。",
    "tags": [
@@ -29779,11 +30044,14 @@
     "强化学习",
     "电力系统仿真"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "framework",
     "world-env"
    ],
+   "score1": 50,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "f4dcc7503327c052": {
@@ -29916,8 +30184,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:37:53Z",
    "domain": "academic",
-   "score": 52,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "JOSH 用稀疏奖励仿真环境自训练对话智能体，并开源 ToolWOZ 工具调用沙盒",
    "summary_zh": "作者提出 JOSH 自对齐算法，让 LLM 智能体在稀疏奖励仿真环境中提取理想行为、用自己的输出继续训练，无需人工反馈。配套构建了基于 MultiWOZ 的 ToolWOZ 工具调用仿真环境，小模型和前沿模型在工具交互上均有提升，代码与数据已开源。",
    "tags": [
@@ -29926,11 +30194,14 @@
     "仿真环境",
     "开源"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "framework",
     "eval"
    ],
+   "score1": 52,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "f69215e93c8f1db9": {
@@ -30491,8 +30762,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "PersonaTwin：用 8500 人医疗数据构建 LLM 用户数字分身，模拟保真度接近 oracle 设置",
-   "summary_zh": "PersonaTwin 用人口统计、行为和心理测量三层数据做多级提示条件，为个体构建 LLM 数字分身。作者在 8500 多人的医疗数据集上，把该框架与标准 LLM 输出对比，并用文本相似度和人口统计公平性指标评估，结果显示模拟保真度接近 oracle 设置；用分身数据训练的下游模型在预测和公平性上接近用真人数据训练的模型。",
+   "title_zh": "PersonaTwin：用人口统计、行为与心理测量数据分层提示生成个性化数字孪生",
+   "summary_zh": "作者提出 PersonaTwin，一个多层提示条件化框架，把人口统计、行为和心理测量数据整合进提示，为个体构建自适应数字孪生。在医疗场景 8500 多人的数据上评测，仿真保真度接近 oracle 设定，用孪生数据训练的下游模型在预测和公平性指标上接近用真人数据训练的模型。",
    "tags": [
     "用户模拟",
     "数字分身",
@@ -30502,10 +30773,9 @@
    "status": "selected",
    "topics": [
     "human-behavior",
-    "health",
     "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "fc0b49f971d4bd76": {
    "llm": true,
@@ -30726,8 +30996,8 @@
    "domain": "academic",
    "score": 72,
    "relevant": true,
-   "title_zh": "AgentSUMO：用大模型智能体把政策制定者的高层需求转成 SUMO 交通仿真场景",
-   "summary_zh": "作者提出 AgentSUMO，在 SUMO 交通仿真平台前加一层自适应推理，解析用户意图、判断任务复杂度并补全缺失参数，让政策制定者和城市规划者不必掌握路网构建与 OD 建模就能生成仿真场景。论文针对的是用户需求抽象、不完整与现有命令式流程不匹配的问题。",
+   "title_zh": "AgentSUMO：用大模型智能体把抽象政策目标转成 SUMO 可执行交通仿真场景",
+   "summary_zh": "作者提出 AgentSUMO，一个基于大语言模型的智能体框架，让非专业用户用高层政策目标驱动 SUMO 交通仿真。框架包含交互式规划协议和模型上下文协议两部分，负责理解意图、推断缺失参数并编排仿真工具。在首尔和曼哈顿路网上的实验显示，该工作流在保持非专家可用性的同时显著改善了交通流指标。",
    "tags": [
     "交通仿真",
     "SUMO",
@@ -30737,9 +31007,10 @@
    "status": "selected",
    "topics": [
     "urban",
-    "framework"
+    "framework",
+    "policy"
    ],
-   "applied": false
+   "applied": true
   },
   "fd7af38072f26e9a": {
    "llm": true,
@@ -30940,8 +31211,8 @@
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:12Z",
    "domain": "academic",
-   "score": 50,
-   "relevant": true,
+   "score": 25,
+   "relevant": false,
    "title_zh": "GaP：用图结构策略与内部仿真排练机器人变体自动化任务",
    "summary_zh": "GaP 让多智能体编码系统从机器人技能库生成带感知、规划、控制节点的有向计算图，并自建内部仿真环境并行排练不同图结构，迭代改进参数以提高成功率和吞吐。作者用 4 个仿真、4 个真实场景的新基准测试，称成功率明显优于基线。",
    "tags": [
@@ -30949,11 +31220,14 @@
     "任务规划",
     "多智能体"
    ],
-   "status": "selected",
+   "status": "filtered",
    "topics": [
     "world-env",
     "framework"
    ],
+   "score1": 50,
+   "score2": 25,
+   "model2": "Qwen3.8-27B",
    "applied": false
   },
   "ffc35ad69f55679b": {
@@ -31095,6 +31369,21 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T01:43:56Z"
   },
+  "0522601ff27f10cf": {
+   "title_zh": "InsurAgent：用大模型智能体模拟美国洪水保险购买行为，RAG 检索补足概率估计短板",
+   "summary_zh": "作者构建了洪水保险购买概率的基准数据集，发现大模型能定性理解影响因素，但定量估计概率不准。为此提出 InsurAgent，包含感知、检索、推理、行动和记忆五个模块，其中检索模块用 RAG 接入实证调查数据，能准确估计边际概率和双变量概率，记忆模块还能模拟个体决策随时间的演变。",
+   "abstract_zh": "洪水保险是个人减轻灾害损失的有效手段，但美国风险人群的参保率一直很低，这说明需要理解和建模保险决策背后的行为机制。大模型近来在多种任务上表现出类人智能，为模拟人类决策提供了新工具。作者先构建了一个基准数据集，覆盖多因素下的保险购买概率，用它评测大模型的能力，发现大模型对因素有定性理解，但估计定量概率的能力不足。为弥补这一缺陷，作者提出 InsurAgent，一个由感知、检索、推理、行动和记忆五个模块组成的大模型智能体。检索模块用检索增强生成（RAG）把决策锚定在实证调查数据上，实现了对边际概率和双变量概率的准确估计。推理模块利用大模型的常识在调查数据之外做外推，捕捉传统模型难以处理的情境信息。记忆模块支持模拟决策随时间的演变，作者用一条过山车式的人生轨迹做了演示。作者认为 InsurAgent 可用于行为建模和政策分析。",
+   "why": "它给出了一个可复用的做法：用 RAG 把大模型智能体的决策锚定在实证调查数据上，解决大模型定性懂、定量不准的问题，对做个体行为仿真和政策推演的人有直接参考价值。",
+   "topics": [
+    "human-behavior",
+    "policy"
+   ],
+   "resources": [],
+   "validation": "benchmark",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:58Z"
+  },
   "056049c248a6ef9d": {
    "title_zh": "LLM 智能体会把人类当外群体：身份信念可被投毒诱发对人的偏见",
    "summary_zh": "作者发现 LLM 智能体在仅有“我们 vs 他们”的线索下就表现出群际偏见，当群体边界落在智能体与人类之间时，智能体可能把其他 AI 当内群体、把人类当外群体。实验显示这种偏见在纯智能体环境和对人交互中都存在，作者据此提出信念投毒攻击（BPA）并验证了防御方法。",
@@ -31137,6 +31426,27 @@
    "validation": "benchmark",
    "model": "GLM-5.3",
    "at": "2026-11-19T17:33:45Z"
+  },
+  "05b34358031c0070": {
+   "title_zh": "TwinVoice 基准：从社交、私聊、叙事三个维度评测 LLM 个体人格模拟，模型仍明显落后于真人",
+   "summary_zh": "作者提出 TwinVoice 基准，用来评测大模型能否模拟一个具体个体的沟通风格、行为倾向和人格特质。基准覆盖社交人格、人际私聊人格和叙事人格三个维度，并拆出观点一致性、记忆回忆、逻辑推理、词汇忠实度、语气和句法风格六项能力。实验显示先进模型只达到中等水平，句法风格和记忆回忆尤其弱，整体仍明显低于真人基线。",
+   "abstract_zh": "大模型正在被寄望于模拟具体个人的沟通风格、行为倾向和人格特质，但作者指出当前评测有三个不足：多数依赖合成对话，缺乏系统框架，也没有分析需要哪些能力。为此他们提出 TwinVoice 基准，在真实场景中评估人格模拟。基准分三个维度：社交人格对应公开社交互动，人际人格对应私下对话，叙事人格对应基于角色的表达。评测进一步拆成六项基础能力：观点一致性、记忆回忆、逻辑推理、词汇忠实度、人格语气和句法风格。实验结果显示，先进模型在人格模拟上只达到中等准确率，句法风格和记忆回忆两项能力尤其欠缺，平均表现仍明显低于真人基线。",
+   "why": "它把“模拟一个具体的人”拆成可测的三个维度和六项能力，给出了一个系统的人格模拟评测框架，也暴露了当前 LLM 在句法风格和记忆回忆上的短板，适合做数字孪生和个体行为仿真的研究者拿来定位模型差距。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "benchmark",
+     "name": "TwinVoice",
+     "url": "https://arxiv.org/pdf/2510.25536"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:15Z"
   },
   "05b5c8f08e2dd040": {
    "title_zh": "AIvilization v0：数万智能体公开部署的大规模人工社会沙盒",
@@ -31328,6 +31638,27 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T10:02:40Z"
+  },
+  "0a4758fc28b58318": {
+   "title_zh": "AI-Trader：首个实时金融市场 LLM 智能体评测基准，覆盖美股、A股与加密货币",
+   "summary_zh": "作者提出了 AI-Trader，一个全自动、实时、数据无污染的金融决策评测基准，覆盖美股、A股和加密货币三个市场及多种交易粒度。六个主流 LLM 智能体在最小信息范式下自主搜索和整合实时行情做交易，多数收益差、风控弱。结果显示通用智能不等于交易能力，风控水平决定跨市场稳健性。",
+   "abstract_zh": "LLM 作为自主智能体在结构化任务上已接近人类专家水平，但在完全动态的实时环境里做决策仍然很难，需要实时整合信息并自适应响应。金融交易对实时策略响应要求严格，而现有工作缺少针对真实应用的系统化基准。作者因此提出 AI-Trader，称其为首个面向 LLM 金融决策的全自动、实时、数据无污染评测基准。\n\n基准覆盖美股、A股和加密货币三个市场，支持多种交易粒度，模拟实时金融环境。作者设计了完全自主的最小信息范式：智能体只拿到必要上下文，必须自己搜索、验证并整合实时市场信息，全程无人工干预。作者在三个市场和多种交易频率上评测了六个主流 LLM。\n\n结果有几个值得注意的发现。通用智能不会自动转化为有效交易能力，多数智能体收益差、风险管理弱。风控能力决定跨市场稳健性。AI 交易策略在高流动性市场比政策驱动的环境更容易获得超额收益。这些发现暴露了当前自主智能体的关键短板，也指出了改进方向。代码和评测数据已开源。",
+   "why": "它给出了一个可复用的实时金融交易评测基准和开源代码，且结论对从业者有直接警示：模型聪明不等于会交易，风控才是跨市场稳健性的决定因素。",
+   "topics": [
+    "economy",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "code",
+     "name": "AI-Trader 代码与评测数据",
+     "url": "https://github.com/HKUDS/AI-Trader"
+    }
+   ],
+   "validation": "real_data",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:31Z"
   },
   "0aed7317361045aa": {
    "title_zh": "分布偏移对齐微调法让大模型模拟问卷回答更准，省下最多近七成真实数据",
@@ -31573,6 +31904,27 @@
    "model": "GLM-5.3",
    "at": "2026-11-22T07:16:13Z"
   },
+  "1ac2d5bc00227f6a": {
+   "title_zh": "用大模型模拟问卷回答：CLAIMSIM 提升多样性但难以贴合真实用户",
+   "summary_zh": "作者测试了大模型通过直接提示和思维链提示模拟跨领域问卷回答的能力，并提出 CLAIMSIM 方法，先从模型参数知识中引出多种观点作为上下文输入。实验显示 CLAIMSIM 生成的回答更多样，但两种方法都难以准确模拟真实用户。分析发现大模型在不同人口特征下倾向保持固定观点，面对冲突观点也难以做细致推理。",
+   "abstract_zh": "用大模型模拟用户观点近年受到关注，但经过 RLHF 训练的大模型已知偏向主流观点，能否代表不同人口和文化背景的用户存在疑问。作者考察了大模型通过直接提示和思维链提示模拟人类回答跨领域问卷问题的程度，并提出 CLAIMSIM 方法，从大模型的参数知识中引出多种观点，作为上下文输入来促进回答多样化。在问卷问答任务上的实验表明，CLAIMSIM 确实能产生更多样的回答，但两种方法都不能准确模拟用户。进一步分析揭示两个局限：其一，大模型在不同人口特征下倾向保持固定观点，只生成单一视角的论断；其二，面对相互冲突的论断时，大模型难以就人口特征间的细微差异进行推理，无法针对特定用户画像调整回答。",
+   "why": "它给出一个反例：即使专门设计多样化方法，大模型模拟问卷受访者仍然失真，做合成样本或社会仿真的人需要正视这个局限。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2512.06874"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:25Z"
+  },
   "1c9556dec7157d23": {
    "title_zh": "经济世界模型实施蓝图：从规则智能体到仿真到真实的六级能力阶梯",
    "summary_zh": "这篇综述把经济世界模型（EWM）拆成六级能力阶梯，从固定规则智能体一直到与真实数据对齐的仿真到真实经济孪生。系统梳理文献后发现，现有工作集中在低层级的智能体和仿真环境，能自我演化、内生制度、持续对齐真实数据并验证经济机制的系统仍然稀少。作者给出实施路线图，并发布精选论文列表等资源。",
@@ -31593,6 +31945,27 @@
    "validation": "unclear",
    "model": "GLM-5.3",
    "at": "2026-11-19T19:22:08Z"
+  },
+  "1d9f2564b1ab783f": {
+   "title_zh": "用 LLM 多智能体蒙特卡洛模拟量化职场毒性行为：不文明对话耗时增加约 25%",
+   "summary_zh": "作者用大模型多智能体系统模拟一对一对抗性辩论，构造可控的“社会学沙盒”。蒙特卡洛方法跑数百场讨论，对比基线组和带“毒性”系统提示的实验组，发现有毒参与者让对话达成结论所需的论证轮数增加约 25%，统计显著。作者把这种“毒性延迟”作为企业和学术场景经济损失的代理指标。",
+   "abstract_zh": "职场毒性行为对组织文化的危害已有共识，但要在真人身上复现冲突来量化它对运营效率的直接影响，存在伦理和实操上的困难。这项研究改用基于大模型的多智能体系统模拟一对一对抗性辩论，构造一个可控的“社会学沙盒”。作者采用蒙特卡洛方法模拟数百场讨论，度量收敛时间，即达成结论所需的论证数量，比较基线对照组与包含“毒性”系统提示智能体的实验组。结果显示，涉及有毒参与者的对话时长增加约 25%，具有统计显著性。作者提出这种“毒性延迟”可以作为企业和学术环境中经济损失的代理指标。研究还表明，基于智能体的建模为测量社会摩擦的机制提供了一种可复现、合乎伦理的替代真人实验的方法。局限在于材料未说明模拟结论与真实组织数据的对照，毒性效应目前只在对话耗时这一个维度上量化。",
+   "why": "它示范了用 LLM 多智能体加蒙特卡洛把一个难以做真人实验的社会问题变成可量化、可复现的仿真实验，对想用仿真测社会摩擦成本的研究者是可直接借鉴的方法模板。",
+   "topics": [
+    "social-sim",
+    "human-behavior"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2512.08345"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:19Z"
   },
   "1e23cb2658b05eff": {
    "title_zh": "SimPersona 从原始点击流学习离散买家画像，让 LLM 网页智能体模拟真实买家群体",
@@ -31802,6 +32175,28 @@
    "model": "GLM-5.3",
    "at": "2026-11-22T07:16:38Z"
   },
+  "24de5df133b0dd56": {
+   "title_zh": "用谢林式城市迁移模型检验 200 个 LLM 智能体：不同大模型表现出利己或利他两种社会倾向",
+   "summary_zh": "作者构建了一个谢林变体的城市迁移模型，让 200 多个 LLM 智能体在个人效用与系统效用的冲突中做迁移决策。结果发现不同大模型的社会倾向存在本质差异：一类是“适应性利己者”，默认利己但在社会规范留言板影响下利他行为显著增加；另一类是“利他优化者”，即使付出自身代价也持续优先集体利益。作者据此提出，社会仿真中选模型不只是选推理能力，更是选内在的社会行动逻辑。",
+   "abstract_zh": "用大语言模型做社会仿真是计算社会科学的前沿方向，但已有研究多聚焦小规模、任务导向博弈中的合作行为，没有考察利他主义（牺牲自身利益换取集体利益）如何在大规模智能体社会中出现。作者为此设计了一个谢林变体的城市迁移模型，制造出社会困境，让 200 多个 LLM 智能体在利己目标（个人效用）和利他目标（系统效用）之间做明确权衡。核心发现是不同 LLM 的社会倾向存在根本差异，可以分成两类原型。一类叫“适应性利己者”，默认优先自身利益，但在一个设定社会规范的消息板影响下，利他行为显著增加。另一类叫“利他优化者”，具有内在的利他逻辑，即使直接损害自己也持续优先集体利益。为了定性分析这些决策背后的认知基础，作者借鉴扎根理论提出了一套系统编码智能体推理过程的方法。作者认为这是首次有证据表明不同 LLM 在利己与利他倾向上存在内在异质性，并提出社会仿真中模型选择不只是选择推理能力，而是选择一种内在的社会行动逻辑：模拟复杂人类社会时“适应性利己者”可能更合适，“利他优化者”则更适合建模理想化的亲社会行为者或以集体福利为首要考量的场景。",
+   "why": "它把 LLM 社会仿真从合作博弈扩展到大规模迁移困境中的利他行为，并给出一个可复用的结论：不同模型自带不同的社会行动逻辑，选型时必须考虑这一点。",
+   "topics": [
+    "social-sim",
+    "human-behavior",
+    "urban"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2509.22537"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:58Z"
+  },
   "2644e5af4629c531": {
    "title_zh": "用 LLM 智能体模拟 30 名交易员解读欧央行发布会，预测市场波动",
    "summary_zh": "作者让 30 个异质 LLM 交易员智能体解读欧洲央行新闻发布会记录，用智能体之间的分歧度预测市场反应。在 1998 到 2026 年的 293 次管委会事件上，该分歧指标与隔夜指数掉期实际波动率的相关性约 0.5，优于标准文本方法，且在 2025 年 1 月以后的样本外数据上依然稳健。",
@@ -31822,6 +32217,27 @@
    "applied": true,
    "model": "GLM-5.3",
    "at": "2026-11-21T23:35:22Z"
+  },
+  "268d1198708eddae": {
+   "title_zh": "Law in Silico：用大模型智能体模拟法律社会，复现真实犯罪率宏观趋势",
+   "summary_zh": "作者提出 Law in Silico，一个基于大模型的法律社会仿真框架，包含个体决策和立法、审判、执法三种制度机制。实验把模拟犯罪率与真实数据对比，发现大模型智能体能大体复现宏观犯罪趋势。微观仿真还显示，运作良好、透明且有适应性的法律体系能更好保护弱势个体的权利。",
+   "abstract_zh": "真实世界的法律实验成本高甚至不可行，用 AI 系统模拟法律社会成为验证和发展法律理论、辅助法律治理的替代方案。大模型具备世界知识和角色扮演能力，适合作为法律社会仿真的基础，但这一方向此前研究很少。作者提出 Law in Silico，一个基于大模型智能体的法律场景仿真框架，同时建模个体决策和制度机制，制度层面覆盖立法、审判和执法三个环节。实验把模拟出的犯罪率与真实世界数据对比，结果表明基于大模型的智能体能大体复现宏观层面的犯罪趋势，给出的洞察与现实观察一致。微观层面的仿真进一步显示，一个运作良好、透明且有适应性的法律体系能为弱势个体提供更好的权利保护。",
+   "why": "它把法律系统作为一个可仿真的对象，同时建模个体决策和立法、审判、执法制度机制，并用真实犯罪率数据做了校准，对想用智能体仿真研究制度设计和社会治理的人是直接可参照的做法。",
+   "topics": [
+    "social-sim",
+    "policy"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2510.24442"
+    }
+   ],
+   "validation": "real_data",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:20Z"
   },
   "27405ec7b8b6053c": {
    "title_zh": "用大模型智能体模拟混合自动驾驶交通中人与自动驾驶车辆的路面议价行为",
@@ -31928,6 +32344,28 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T01:43:28Z"
+  },
+  "2c54dc17f620acec": {
+   "title_zh": "VirTLab：让用户自建 2D 交互环境，用 LLM 智能体仿真团队动态",
+   "summary_zh": "作者发布了 VirTLab，一个支持研究者自建团队仿真场景的系统。用户可以设计 2D 空间环境、给 LLM 智能体分配角色，观察它们如何协调、移动和随时间适应。作者把仿真结果与实证评估和一项用户研究对齐，验证了系统的可用性。",
+   "abstract_zh": "研究团队动态通常受限于预定义或静态任务场景。作者提出 VirTLab，让研究者和从业者能用 LLM 智能体在 2D 空间环境里搭建可交互、可定制的团队动态仿真。与以往框架不同，VirTLab 允许用户自己构建场景、分配角色，然后观察智能体如何协调、移动并随时间适应。系统把团队认知行为与可扩展的基于智能体的建模结合起来，提供了一个研究环境如何影响协调、协作和涌现团队行为的试验台。作者通过把仿真结果与实证评估对齐，并开展一项用户研究，展示了系统的效用，也说明了可定制环境对多智能体仿真研究的价值。系统面向技术和非技术用户，支持复杂多智能体实验的设计、执行和分析。",
+   "why": "它提供了一个可自建场景的团队仿真试验台，把 LLM 智能体放进可定制的 2D 空间环境，并做了实证对齐和用户研究，适合研究人机协作与团队涌现行为的人直接拿来搭实验。",
+   "topics": [
+    "org",
+    "framework",
+    "generative-agents"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2510.08242"
+    }
+   ],
+   "validation": "human_experiment",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:51Z"
   },
   "2d1db9b2487e762c": {
    "title_zh": "Nubank 用大规模合成客户仿真把 AI 开发提速 80%",
@@ -32135,6 +32573,27 @@
    "model": "GLM-5.3",
    "at": "2026-11-19T19:23:35Z"
   },
+  "3835f20732890a7d": {
+   "title_zh": "RecoWorld：为智能体推荐系统构建双视角仿真环境",
+   "summary_zh": "RecoWorld 提出了一套为智能体推荐系统构建仿真环境的蓝图。仿真用户与推荐智能体进行多轮交互，用户模拟器在感知流失风险时生成反思性指令，推荐智能体据此调整策略，形成动态反馈循环。作者还探讨了文本、多模态和语义 ID 等内容表示，以及多轮强化学习训练方法。",
+   "abstract_zh": "作者提出 RecoWorld，一套为智能体推荐系统（agentic recommender systems）构建仿真环境的蓝图。这类环境给智能体提供训练空间，让它们能从错误中学习，而不影响真实用户。\n\nRecoWorld 采用双视角架构：一个仿真用户和一个推荐智能体进行多轮交互，目标是最大化用户留存。用户模拟器会审看推荐的内容、更新自身心态，当察觉用户可能流失时，生成反思性指令。推荐智能体把这些用户指令和推理轨迹纳入决策，调整推荐，形成动态反馈循环来持续吸引用户。整个过程依赖现代大模型的推理能力。作者在仿真器中探索了多种内容表示方式，包括文本、多模态和语义 ID 建模，并讨论了如何用多轮强化学习让推荐智能体在迭代交互中改进策略。\n\nRecoWorld 还支持多智能体仿真，让创建者模拟特定目标用户群体的反应。作者把它视为迈向“用户与智能体共同塑造个性化信息流”的推荐系统的第一步，并展望“用户下指令、推荐系统响应”的新交互范式，同时优化留存与参与度。材料是蓝图性质的描述，没有给出实验结果或与真实数据的对比。",
+   "why": "它给出了一个可直接参考的推荐系统仿真环境设计：双视角的用户-推荐智能体反馈循环、多种内容表示和多轮 RL 训练思路，对要构建智能体训练沙盒的仿真从业者有复用价值。",
+   "topics": [
+    "world-env",
+    "economy"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "RecoWorld 论文",
+     "url": "https://arxiv.org/pdf/2509.10397"
+    }
+   ],
+   "validation": "none",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:03Z"
+  },
   "39b497b33ba98095": {
    "title_zh": "预训练人格混合模型与串联模型让 LLM 人类模拟更准更多样",
    "summary_zh": "作者指出主流做法（让指令微调助手模型角色扮演人格）预测不准且刻板化。他们改用预训练基座模型绑定真实个体的短对话样本，得到所谓人格混合模型（PMM），预测更准，也保留了人类对话中词汇、语义和语用的多样性。再加上指令微调监督器组成串联模型，整体准确率和多样性最好。",
@@ -32155,6 +32614,37 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T10:01:43Z"
+  },
+  "3c096beab19bc742": {
+   "title_zh": "HugAgent 基准：测试大模型能否预测具体个人的信念更新与推理过程",
+   "summary_zh": "作者发布了 HugAgent 基准，用结构化问卷加半结构化出声思维访谈收集真人在医疗、监控、分区三个政策议题上的信念状态、信念更新和推理轨迹。实验发现模型能从个人上下文恢复其当前信念，但难以预测干预后的信念变化，问题出在同话题联想匹配而非身份一致的推理。",
+   "abstract_zh": "大模型在开放任务上已能大规模逼近人类的平均回答，但它们偏向人群层面的共识，抹掉了个体推理风格和信念轨迹的差异。为此作者提出 HugAgent 基准，从三个维度重新定义人类推理仿真：从平均化转向个体化推理，从行为模仿转向认知对齐，从情景短文转向开放数据。基准的任务是：给定某人先前观点的部分证据，测试模型能否预测这个具体的人在分布外场景下的行为反应及其背后的推理动态。数据收集结合结构化问卷和半结构化出声思维访谈，采集生态效度较高的信念状态、信念更新和推理轨迹。基准范围限定在医疗、监控和分区三个政策领域的自我报告信念推理。实验发现一个明显的不对称：模型从个人上下文恢复其信念状态的效果不错，但在干预下预测信念更新时表现很差。跨人、跨领域的对照实验把这一差距归因于模型在做话题内的联想匹配，而不是身份一致的推理。作者据此推断，改进方向是更好的变化检测校准，而不是单纯增加上下文。基准、完整的数据收集流程和配套聊天机器人已开源。",
+   "why": "它给出了一个带真人推理轨迹的个体级仿真基准，并指出当前模型在预测信念更新上的系统性短板，对做人类行为仿真和评测的人都是可直接使用的资源。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "benchmark",
+     "name": "HugAgent",
+     "url": "https://github.com/jajamoa/HugAgent"
+    },
+    {
+     "type": "code",
+     "name": "TraceYourThinking",
+     "url": "https://github.com/jajamoa/trace-your-thinking"
+    },
+    {
+     "type": "data",
+     "name": "HugAgent 论文",
+     "url": "https://arxiv.org/pdf/2510.15144"
+    }
+   ],
+   "validation": "human_experiment",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:34Z"
   },
   "3c963032cb39ba26": {
    "title_zh": "斯坦福团队用兵棋推演测试五个大模型，全部出现难以预测的升级倾向",
@@ -32628,6 +33118,22 @@
    "model": "GLM-5.3",
    "at": "2026-11-19T17:44:06Z"
   },
+  "50d66ae117f14137": {
+   "title_zh": "用贝叶斯框架拆解大模型舆论仿真中的三类偏差：交互与偏见随对话衰减",
+   "summary_zh": "作者提出一个贝叶斯框架，把大模型智能体多轮对话中的观点变化拆成真实交互和三类系统性偏差：话题偏差、顺从偏差和锚定偏差。他们在 12 个议题上测试多个大模型，发现观点轨迹快速收敛到共享吸引子，交互和偏差的影响都随时间衰减，且不同模型间差异明显。",
+   "abstract_zh": "大模型越来越多地被用来模拟人类观点动态，但真实交互的效果常被系统性偏差掩盖。作者开发了一个贝叶斯框架，用来分离并量化三类偏差：一是话题偏差，即模型偏向自己的默认立场；二是顺从偏差，即不管问题是什么都倾向于同意提示中的陈述；三是锚定偏差，即偏向发起对话的智能体的立场。\n\n他们把这个框架用在多个大模型上，让智能体就 12 个不同问题进行多步对话，议题从气候变化、社会公正一直到音乐偏好。结果显示，观点轨迹会很快收敛到一个共享的吸引子，交互和偏差的影响都随时间衰减，偏差的影响程度在不同大模型之间差别很大。此外，作者还展示了用不同的一组强观点陈述（包括错误信息）微调大模型，会相应地移动观点吸引子的位置。\n\n这项工作暴露了大模型之间的显著差异，并提供了量化工具来比较交互和偏差对大模型智能体讨论中观点变化的贡献，既指出了用大模型代理人类行为的潜力，也指出了其中的陷阱。",
+   "why": "它给了做舆论仿真的人一个可复用的量化方法，把“模型真的在交互”和“模型只是在顺从或锚定”区分开，这对判断大模型社会仿真的可信度是关键一步。",
+   "topics": [
+    "social-sim",
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:16Z"
+  },
   "52bb7277fa3b2d7d": {
    "title_zh": "五角大楼下令制定全军种统一的 AI 兵棋推演采购策略",
    "summary_zh": "据 Superpower Daily 报道，五角大楼下令制定覆盖整个国防部的 AI 军事兵棋推演采购策略。报道目前只有标题，具体采购范围、执行部门和预算尚未公布。",
@@ -32641,6 +33147,27 @@
    "applied": true,
    "model": "GLM-5.3",
    "at": "2026-11-22T07:12:13Z"
+  },
+  "53a8a04eddbcd422": {
+   "title_zh": "GGSS Personas：基于德国综合社会调查构建的人口对齐角色提示库",
+   "summary_zh": "作者用德国综合社会调查（ALLBUS）数据构建了一套代表性角色提示集合 GGSS Personas，可直接插入各类 LLM 提示中，让模型生成贴近德国人口分布的回答。实验显示，用这套角色引导的 LLM 在模拟调查回答分布上优于现有分类器，数据稀缺时优势更明显。",
+   "abstract_zh": "在计算社会科学中，用大语言模型通过角色提示模拟人类观点的做法越来越多，但缺乏经过精心整理、有实证依据的角色集合，限制了这类模拟的准确性和代表性。作者为此构建了 GGSS Personas，一套基于德国综合社会调查（ALLBUS）的全面且有代表性的角色提示集合。这些角色提示设计成可以直接插入各类 LLM 和任务的提示中，引导模型生成与德国人口分布对齐的回答。\n\n评估方面，作者让多个 LLM 在 GGSS Personas 引导下模拟不同主题的调查回答分布，结果显示其表现优于最先进的分类器，在数据稀缺场景下优势尤其明显。作者还分析了角色提示中的代表性和属性选择如何影响与人口回答的对齐程度。\n\n作者认为 GGSS Personas 为基于 LLM 的社会仿真研究提供了有价值的资源，可以在 NLP 和社会科学研究中更系统地探索人口对齐的角色提示方法。局限在于该集合基于德国数据，摘要未报告与其他国家人口的对比验证。",
+   "why": "它提供了一个可直接复用、有真实调查数据支撑的人口对齐角色库，对需要用 LLM 模拟人群观点分布的研究者是现成资源，也给出了角色属性选择影响对齐度的实证分析。",
+   "topics": [
+    "human-behavior",
+    "social-sim"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "GGSS Personas（论文）",
+     "url": "https://arxiv.org/pdf/2511.21722"
+    }
+   ],
+   "validation": "real_data",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:37Z"
   },
   "53b605b3df0308b7": {
    "title_zh": "多智能体 LLM 系统中越权行为的驱动因素：动作呈现方式比权限更能决定智能体是否越界",
@@ -32703,6 +33230,28 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T01:43:41Z"
+  },
+  "551842910b5fbf4b": {
+   "title_zh": "用 Concordia 框架检验 GPT-4 的心智理论：行动推断常失败，疑似靠语言记忆而非真推理",
+   "summary_zh": "作者用生成式智能体框架 Concordia 在模拟环境中测试 GPT-4 的心智理论能力。结果显示 GPT-4 经常无法根据信念归因选择行动，此前观察到的类 ToM 能力可能来自浅层统计关联。模型也难以从智能体行动生成连贯的因果效应。",
+   "abstract_zh": "语言是人类合作的基础，既传递信息，也通过对情境的共同理解来协调行动。这项研究考察生成式智能体建模框架 Concordia 能否在模拟的真实环境中建模心智理论（Theory of Mind, ToM）。作者评估两件事：该框架能否有效模拟 ToM 能力，以及 GPT-4 能否真正从社会情境中做推断来完成任务，而不是依赖语言层面的记忆。结果暴露出一个关键局限：GPT-4 经常无法基于信念归因来选择行动，说明此前研究中观察到的类 ToM 能力可能来自浅层的统计关联，而非真正的推理。此外，模型也难以从智能体的行动中生成连贯的因果效应，在处理复杂社会互动上有明显困难。这些结果对当前关于大模型涌现出类 ToM 能力的说法提出质疑，并指出需要更严格的、基于行动的评估框架。",
+   "why": "它给“LLM 有心智理论”这一流行结论提供了一个反例：在基于行动而非文本问答的评估里，GPT-4 的信念归因经常失败，做社会仿真或推演的人在解读智能体行为时需要警惕这种浅层统计关联。",
+   "topics": [
+    "generative-agents",
+    "eval",
+    "human-behavior"
+   ],
+   "resources": [
+    {
+     "type": "model",
+     "name": "Concordia（生成式智能体框架）",
+     "url": "https://arxiv.org/pdf/2510.13395"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:40Z"
   },
   "5690de0ae4d57b67": {
    "title_zh": "TaskWeave 用结构化记忆让 LLM 智能体撑起一年期企业组织仿真",
@@ -32884,6 +33433,21 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T01:44:08Z"
   },
+  "5d057ae8fcc2e58a": {
+   "title_zh": "DeepPersona：用两阶段方法生成超深合成人格，平均数百属性、约 1MB 叙事文本",
+   "summary_zh": "作者提出 DEEPPERSONA，一个可扩展的合成人格生成引擎。它先从数千条真实用户与 ChatGPT 的对话中挖掘出迄今最大的人类属性分类体系，再从中渐进采样生成叙事完整的人格档案，深度比以往工作高两个数量级。这些人格让 GPT-4.1-mini 的个性化问答准确率平均提升 11.6%，并把模拟公民与真实人类问卷回答的差距缩小 31.7%。",
+   "abstract_zh": "给大语言模型注入人格设定来做行为仿真，正在改变智能体行为模拟、LLM 个性化和人机对齐的研究，但现有合成人格大多浅层、简单，只包含少量属性，反映不出真实人类身份的复杂性。作者提出 DEEPPERSONA，用两阶段、分类体系引导的方法生成叙事完整的合成人格。第一阶段，他们从数千条真实用户与 ChatGPT 的对话中算法化地构建出迄今最大的人类属性分类体系，包含数百个层级组织的属性。第二阶段，从这个分类体系中渐进采样属性，条件化生成连贯、真实的人格，平均每人包含数百个结构化属性和约 1MB 的叙事文本，深度比以往工作高两个数量级。内在评测显示，与最先进基线相比，属性多样性覆盖提高 32%，档案独特性提高 44%。外在评测中，这些人格让 GPT-4.1-mini 在十项指标上的个性化问答准确率平均提升 11.6%，并把模拟 LLM 公民与真实人类在社会调查中的回答差距缩小 31.7%；生成的国家级公民在大五人格测试上，与 LLM 模拟公民相比把性能差距缩小 17%。作者认为 DEEPPERSONA 为高保真人类仿真和个性化 AI 研究提供了一个严谨、可扩展且不涉及隐私的平台。局限方面材料未展开讨论。",
+   "why": "它给出了迄今最深的人格生成方法和最大的属性分类体系，直接回应“合成受访者能否替代真人样本”这一仿真可信度问题，且在真实问卷对照上验证了效果，适合做社会仿真和合成样本的研究者参考。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [],
+   "validation": "real_data",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:44Z"
+  },
   "5d4d9019747b098f": {
    "title_zh": "LegalSim：多智能体对抗诉讼仿真发现法律程序漏洞，PPO 智能体胜率最高",
    "summary_zh": "作者提出 LegalSim，一个模块化的对抗式法律程序多智能体仿真，用 JSON 规则引擎约束原被告智能体的行动，随机法官模型裁决结果。四种策略对比显示 PPO 胜率最高，上下文老虎机最稳定，LLM 落后，手工启发式最弱。仿真中出现了程序上合法但系统性有害的“漏洞链”，说明法律规则系统本身也需要红队测试。",
@@ -33048,6 +33612,27 @@
    "model": "GLM-5.3",
    "at": "2026-11-22T07:14:31Z"
   },
+  "64ba320ff86d757a": {
+   "title_zh": "两阶段框架让 LLM 社会仿真对齐人类决策行为",
+   "summary_zh": "LLM 在需要预判他人行为的复杂决策环境中会系统性偏离人类选择。作者提出两阶段框架：先做 context formation 明确实验设计，再做 context navigation 引导推理。在序列购买、众筹和需求估计三类任务上用四个 SOTA 模型验证，复杂任务需要两个阶段才能对齐人类基准，简单任务只需第一阶段。",
+   "abstract_zh": "LLM 越来越多地被用来在实验环境中模拟人类行为，但在复杂决策环境里，参与者需要预判他人行动并根据观察到的行为形成信念，此时 LLM 的决策会系统性偏离人类。作者提出一个两阶段框架来改进行为对齐。第一阶段是 context formation，把实验设计明确写出来，让模型对决策任务及其情境建立准确表征。第二阶段是 context navigation，在这个表征内引导模型的推理过程，做出决策。验证方式是对 Kremer 和 Debo（2016）带质量信号的序列购买博弈做重点复制，再扩展到带昂贵信号的众筹博弈（Cason 等，2025）和需求估计任务（Gui 和 Toubia, 2025），检验框架在不同决策环境下的普适性。作者在四个 SOTA 模型（GPT-4o、GPT-5、Claude-4.0-Sonnet-Thinking、DeepSeek-R1）上测试，发现复杂决策环境需要两个阶段同时使用才能与人类基准对齐，而较简单的需求估计任务只需要 context formation。这些结果说明了每个阶段何时必要，也为设计和诊断 LLM 社会仿真提供了一个系统方法，作为行为研究中人类被试的补充。",
+   "why": "它给出了一个可操作的两阶段设计方法，并明确指出复杂博弈类任务和简单任务对提示设计的要求不同，对用 LLM 做行为实验复现的研究者直接有用。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2601.01546"
+    }
+   ],
+   "validation": "human_experiment",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:05Z"
+  },
   "66963406b3bba2b9": {
    "title_zh": "LiPUP-MA：让智能体住在模拟城市里收集居住体验，闭环修订城市规划方案",
    "summary_zh": "作者提出 LiPUP 范式，把参与式城市规划改成闭环：智能体先在模拟城市里生活，收集居住体验，再据此修订规划，如此往复。配套的 LiPUP-MA 多智能体框架用基于图的体验库组织居民反馈，用带空间约束的规划智能体修订方案。实验显示它在静态规划指标和居住体验指标上都优于基线，多轮迭代还能继续提升方案质量。",
@@ -33070,6 +33655,21 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T17:45:20Z"
   },
+  "67a8c4f27cf53904": {
+   "title_zh": "双重评估发现 LLM 人格扮演自报稳定但长对话中观察者评分下滑",
+   "summary_zh": "作者用自报特质和观察者评分双重框架检验 LLM 能否稳定维持人格设定。两轮实验覆盖四种 ADHD 人格条件、七个模型和三种语义等价提示，共 3473 段对话。自报结果在对话间和对话内都高度稳定，但观察者评分显示人格表达在长对话中会衰减。",
+   "abstract_zh": "LLM 智能体为可扩展的行为研究提供了可能，但其有效性取决于模型能否在长对话中稳定维持人格设定。作者提出双重评估框架，同时测量自报特质和观察者评定的人格表达。\n\n实验设置包含两轮实验、四种人格条件（默认、高、中、低 ADHD 表现）、七个 LLM 和三种语义等价的人格提示，考察对话间稳定性（3473 段对话）和对话内稳定性（1370 段对话、每段 18 轮）。\n\n结果显示，自报特质在对话间和对话内都保持高度稳定。但观察者评分揭示人格表达在长对话中有衰减趋势。\n\n作者认为，人格指令下的 LLM 能产出稳定且与人格一致的自报结果，这是行为研究的重要前提；同时长对话中的人格衰减是多智能体社会仿真需要面对的边界条件。",
+   "why": "对用 LLM 智能体做社会仿真或合成受访者的人来说，这项工作给出了一个具体风险：自报数据看起来稳定，但长对话中人格表达会漂移，做长程多智能体推演时需要把这一点当作边界条件考虑。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [],
+   "validation": "human_experiment",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:16:47Z"
+  },
   "6837c1398a1c6943": {
    "title_zh": "用遗传编程自动演化多智能体宪法，社会稳定分超过人工设计基线123%",
    "summary_zh": "作者提出 Constitutional Evolution 框架，在带生存压力的网格世界沙盒里用 LLM 驱动的多岛遗传编程自动演化多智能体系统的行为规范。演化出的宪法 C* 社会稳定分达 0.556，比人类设计的基线高 123%，并消除了冲突，还发现少沟通反而优于频繁协调。",
@@ -33091,6 +33691,48 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T23:36:06Z"
   },
+  "68629790b6213956": {
+   "title_zh": "清华团队用大模型智能体复现三项社会实验，结果与真实证据高度一致",
+   "summary_zh": "作者提出了一个用大模型智能体充当“硅基被试”来试点社会实验的框架，包含实验智能体、干预实施方法和行为/问卷/访谈数据收集工具三部分。他们复现了三项代表性社会实验，定量和定性结果都与真实世界证据高度吻合。这是首个用 LLM 智能体试点社会实验的框架。",
+   "abstract_zh": "计算社会实验通常用基于智能体的建模为社会实验搭建试验台，能缓解传统实验方法面临的主要困难，在多个研究领域受到关注。但它的核心组件智能体智能水平不足，限制了这类方法的推广。\n\n作者基于成熟的社会科学理论和实践搭建了一个框架，包含三个部分：用大模型驱动的实验智能体充当“硅基被试”；实施各类干预或处理的方法；以及收集行为数据、问卷和访谈数据的工具。\n\n他们在三项代表性社会实验上评估这个框架，复现结果在定量和定性两个层面都与真实世界的证据高度一致。\n\n作者称这是首个用 LLM 智能体试点社会实验的框架，展示了大模型及其智能体在计算社会科学中的潜力。材料未提供三项实验的具体名称和误差数字。",
+   "why": "它给出了一个可复用的“硅基被试”实验框架，并用真实社会实验的复现结果做校准，对想用仿真替代昂贵真人实验的社会科学研究者有直接参考价值。",
+   "topics": [
+    "social-sim",
+    "human-behavior"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2508.08678"
+    }
+   ],
+   "validation": "real_data",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:33Z"
+  },
+  "6897fe70920458f9": {
+   "title_zh": "语义相似度评分法让 LLM 模拟消费者购买意向，达到真人重测信度的九成",
+   "summary_zh": "直接让大模型输出数字评分会得到不真实的分布。作者提出语义相似度评分（SSR），先让模型给出文字回答，再用嵌入相似度映射到 Likert 分布。在 57 份个人护理产品问卷、9300 份真人回答的数据上，SSR 达到真人重测信度的 90%，KS 相似度超过 0.85。",
+   "abstract_zh": "消费者调研每年花费企业数十亿美元，但存在样本偏差和规模受限的问题。用大语言模型模拟合成消费者是一条替代路径，但直接让模型输出数值评分时，得到的响应分布不真实。作者提出语义相似度评分（SSR）：先从 LLM 那里引出文字回答，再用嵌入相似度把这些回答与参考陈述比对，映射成 Likert 评分分布。测试数据来自某头部个人护理产品公司的 57 份问卷，共 9300 份真人回答。结果显示，SSR 达到真人重测信度的 90%，同时保持了真实的响应分布（KS 相似度大于 0.85）。此外，这些合成受访者还能给出解释其评分的丰富定性反馈。该框架在保留传统问卷指标和可解释性的同时，让消费者调研仿真可以规模化。材料未讨论方法的局限。",
+   "why": "它给出了一个可复用的技巧：不直接问模型要分数，而是引出文字再映射到量表，在真实企业问卷数据上验证了分布保真度，对做合成受访者研究的人是直接可借鉴的方法和基准。",
+   "topics": [
+    "human-behavior",
+    "economy"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2510.08338"
+    }
+   ],
+   "validation": "real_data",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:45Z"
+  },
   "6a4cf305f5f066a3": {
    "title_zh": "用受控上下文充实框架检验 LLM 社会智能体的选择性鲁棒性",
    "summary_zh": "LLM 智能体在语义不变的提示变化下行为大幅波动，这给社会仿真带来验证难题。作者提出一套受控上下文充实规则，把上下文分为中性填充、通用社会背景、描述性与规范性决策依据四类，并引入“选择性鲁棒性”作为验证标准。在类囚徒困境博弈中演示该框架，发现不同充实方式产生不同行为模式，且两个被测模型间存在差异。",
@@ -33110,6 +33752,28 @@
    "validation": "benchmark",
    "model": "GLM-5.3",
    "at": "2026-11-19T19:10:50Z"
+  },
+  "6bb49056078557b6": {
+   "title_zh": "用大模型给无家可归问题提政策建议：与专家推荐对比并接入智能体模型评估社会影响",
+   "summary_zh": "作者构建了一个覆盖四个城市、基于能力方法框架的无家可归政策决策基准，测试多个大模型的政策建议是否与当地专家一致。结果显示各模型之间、模型与专家之间都存在差异。他们还把模型推荐的政策接入一个城市的智能体模型，比较其社会影响，认为大模型在配好护栏、校准和本地专家参与后可以辅助政策制定。",
+   "abstract_zh": "大模型正被越来越多地用在高风险领域，它们能编码变化的社会情境、生成合理场景，这使它们有望成为社会政策制定的工具。这篇论文问的问题是：在缓解无家可归这一影响全球超过 1.5 亿人的议题上，大模型推荐的政策是否与领域专家一致，模型彼此之间又是否一致。\n\n作者构建了一个新基准，包含四个城市的决策场景，政策选项基于人类发展的能力方法（Capability Approach）这一概念框架。他们还提出一条自动化流水线，把政策接入其中一个地点的智能体模型（agent-based model），从而比较大模型推荐政策与专家推荐政策的社会影响。\n\n探索性分析发现，不同大模型的政策推荐与当地专家相比存在差异。作者认为，如果配上负责任的护栏、情境校准和本地领域专业知识，大模型有潜力为政策制定提供参考。这项工作把能力方法操作化为一个计算框架，并从人的尊严出发为无家可归缓解政策提供了新认识。",
+   "why": "它给出了一个把 LLM 政策建议与专家对照、再经智能体模型量化社会影响的完整评估流程，对做政策推演的人是可直接借鉴的评测设计和负责任使用思路。",
+   "topics": [
+    "policy",
+    "eval",
+    "social-sim"
+   ],
+   "resources": [
+    {
+     "type": "benchmark",
+     "name": "arXiv 论文（含基准与流水线描述）",
+     "url": "https://arxiv.org/pdf/2509.03827"
+    }
+   ],
+   "validation": "unclear",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:22Z"
   },
   "6c72b4665c55a27f": {
    "title_zh": "多智能体 LLM 复现公共品博弈中的亲社会合作行为，并展现实验室外的无界行动",
@@ -33131,6 +33795,27 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T23:35:54Z"
+  },
+  "6d8a2b95881427f1": {
+   "title_zh": "双智能体框架让 LLM 出行者智能体对齐人类路径选择的学习与调整行为",
+   "summary_zh": "作者提出一个双智能体框架：带记忆系统和可学习人格的 LLM 出行者智能体负责模拟人类出行者，另一个 LLM 校准智能体从在线数据流中训练这些人格，实现行为对齐。在真实逐日路径选择实验数据上，该方法在个体行为对齐和总体仿真精度上都显著优于现有 LLM 方法，并能捕捉底层学习过程的演化。",
+   "abstract_zh": "出行者如何在与交通系统的互动中学习和调整出行行为，是交通系统评估与规划的关键，但这类行为涉及复杂的认知和决策，建模难度大。近期研究开始用大语言模型智能体来做这件事，作者在此基础上提出了一个双智能体框架，让 LLM 智能体在在线数据流上持续学习并与人类出行者的学习适应行为对齐。框架包含一组 LLM 出行者智能体，每个都配备记忆系统和可学习的人格，作为人类出行者的模拟器。为保证行为对齐，作者引入一个 LLM 校准智能体，利用大模型的推理分析能力来训练这些出行者智能体的人格。两个部分协同工作，追踪并对齐出行者底层的决策机制，生成真实、自适应的仿真。作者用一项真实世界的逐日路径选择实验数据集做验证，结果显示该方法在个体行为对齐和总体仿真精度两方面都显著优于现有的 LLM 方法。作者还展示了该方法不止于简单的行为模仿，而是捕捉了底层学习过程的演化，这种更深层的对齐带来了更强的泛化能力。作者认为这个框架为构建自适应、行为真实的智能体提供了新途径，可用于交通仿真和政策分析。",
+   "why": "它给出了一个可复用的双智能体校准思路，用 LLM 校准智能体在线训练出行者智能体的人格，并用真实逐日路径选择实验数据验证了对齐效果，对做出行仿真和政策推演的人有直接参考价值。",
+   "topics": [
+    "urban",
+    "human-behavior"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2511.00993"
+    }
+   ],
+   "validation": "real_data",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:03Z"
   },
   "6f304b36be9257fd": {
    "title_zh": "把 Gemma 3 12B 放进伦敦白银操纵案被告席：损失与归责框架显著提高 LLM 智能体合谋率",
@@ -34067,6 +34752,27 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T17:45:50Z"
   },
+  "94fa74c7b9f0e060": {
+   "title_zh": "用欧洲社会调查数据检验 LLM 合成受访者：画像约束过强，个体预测失准",
+   "summary_zh": "作者用欧洲社会调查第 11 轮 28 国参与者属性构造了 1.4 万个合成受访者，让 Gemini 2.5 Flash 和 GPT-5-mini 回答 15 道态度题。合成回答贴近条件均值（相关 0.59 和 0.55，真人为 0.44），但与匹配个体的相关只有 0.28 和 0.26。作者称这种画像约束远强于真人约束的现象为过度决定。",
+   "abstract_zh": "背景与问题：给大语言模型加人设提示后当合成调查受访者用，越来越常见，但合成回答在总体上能对上真实分布，不代表能预测到具体某个人。作者想弄清 LLM 生成个体回答的机制，以及为什么总体保真和个体失准会同时出现。做法：用欧洲社会调查第 11 轮 28 个国家参与者的属性构造了 1.4 万个合成受访者，让 Gemini 2.5 Flash 和 GPT-5-mini 各回答 15 道态度题，再把这些回答与每个被匹配参与者的真实回答、以及该画像人群的估计条件均值做对比。结果：合成回答比匹配的真人群更贴近条件均值，相关系数 Gemini 为 0.59、GPT-5-mini 为 0.55，真人只有 0.44；但与匹配个体本人回答的相关只有 0.28 和 0.26。画像属性解释了合成回答方差的 0.617 和 0.468，人类数据里只有 0.192。合成画像的有效维度约 5 个，人类接近 10 个。重复生成只补上了人类残差方差的 12%。个人价值观贡献了可预测成分的大部分，少数语义上相关的线索主导了回答的形成；去掉三个最强线索后，画像解释的变异下降约一半，模型随即转向剩余属性重新锚定。作者把这种画像对合成回答的约束远强于对真人的约束的现象称为过度决定。意义与局限：合成受访者可用于问卷预测试、方向性探索和粗粒度群体比较，不适合做个体数字孪生或群体内部分析。验证合成回答时应评估条件方差、维度结构和个体异质性。",
+   "why": "它用 1.4 万个真实调查画像定量拆解了合成受访者的失效机制，给出可操作的验证清单（条件方差、维度结构、个体异质性），对任何想用 LLM 替代真人样本的人都该先看这篇。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "European Social Survey Round 11",
+     "url": "https://arxiv.org/pdf/2611.27449"
+    }
+   ],
+   "validation": "real_data",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:16:31Z"
+  },
   "960c320a15656b5d": {
    "title_zh": "用深圳多年志愿数据校准自激发机制，让 LLM 智能体学会真实的时间爆发模式",
    "summary_zh": "作者用深圳多年城市级线下志愿活动日志（覆盖新冠疫情期间）检验 LLM 社会仿真的时间真实性，发现纯 LLM 仿真器几乎不产生爆发式行为（中位 burstiness 为 -0.14）。加入一个数据校准的自激发通道后，智能体时间模式超过爆发阈值（中位约 0.37），且不损害 LLM 的内容决策。",
@@ -34257,6 +34963,27 @@
    "applied": true,
    "model": "GLM-5.3",
    "at": "2026-11-21T17:43:37Z"
+  },
+  "98deb96c6c2a1194": {
+   "title_zh": "HumanLLM：用 244 种心理模式构建拟人基准，8B 模型多模式动态胜过 32B",
+   "summary_zh": "作者提出 HumanLLM 框架，把心理模式当作相互作用的因果力量来评测和改进大模型的拟人程度。他们从约 12000 篇论文中提炼 244 种心理模式，合成 11359 个场景，用双层清单评测单模式保真和多模式动态。HumanLLM-8B 在多模式动态上超过 Qwen3-32B，参数少四倍。",
+   "abstract_zh": "大模型在推理和生成上表现很强，是角色扮演语言智能体（RPLA）的基础，但要真实对齐人类的认知和行为模式仍然困难。作者把 HumanLLM 当成一个框架，把心理模式处理成相互作用的因果力量，而不是孤立的特征列表。\\n\\n做法上，他们从约 12000 篇学术论文中构建了 244 种心理模式，并合成 11359 个场景。每个场景里 2 到 5 种模式相互强化、冲突或调节，用多轮对话表达内心想法、行动和对话。评测用双层清单，一层看单个模式的保真度，一层看多模式交互后涌现的动态。\\n\\n结果上，这套评测与人类判断高度一致（r=0.90）。作者还发现，整体式的评测指标会把仿真准确性和社会期许混在一起，高估拟人程度。基于此训练的 HumanLLM-8B 在多模式动态上超过 Qwen3-32B，参数量只有对方的四分之一。这说明真实的拟人需要认知层面的建模，即模拟产生行为的心理过程，而不只是模拟行为本身。数据集、代码和模型已开源。",
+   "why": "它给出了一个可复用的拟人度基准和训练方法，并指出整体式评测会把仿真准确性和社会期许混淆，这对用大模型做人类行为仿真的研究者是直接可用的评测工具和风险提示。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "code",
+     "name": "HumanLLM 代码库（含数据集与模型）",
+     "url": "https://github.com/YJGoodbye2024/HumanLLM"
+    }
+   ],
+   "validation": "human_experiment",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:16:53Z"
   },
   "98fb20f80efbdd1e": {
    "title_zh": "AI 与机器人自动化的情景推演：三部门假想经济中的就业、贫困与收入分配模拟",
@@ -34979,6 +35706,27 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T17:42:35Z"
   },
+  "ac0eaf2cb17d1ff8": {
+   "title_zh": "LLM 模拟社交网络情绪扩散与真实 Reddit 图对比：结构差异显著",
+   "summary_zh": "作者把 Reddit 真实讨论数据构建的情绪扩散图与 LLM 对话仿真生成的社交图做了系统对比。真实图呈现密集连接、重复互动、情感转向和涌现的社区结构，而 LLM 仿真图多为孤立的线性链，情感轨迹单调。这些结构缺陷进一步拖累了基于图的下游情绪预测，提示要谨慎使用 LLM 生成数据做社会科学研究。",
+   "abstract_zh": "情绪如何在社交网络中扩散是计算社会科学的核心问题。随着大语言模型越来越多地被用来模拟社交媒体互动，一个自然的问题是：LLM 生成的数据能否真实再现真实在线社区中的情绪扩散模式？\n\n作者做了系统对比。真实一侧，从 Reddit 讨论数据构建情绪扩散图；仿真一侧，通过 LLM 驱动的对话仿真生成合成社交图。情绪状态用成熟的情感分析流水线推断，然后从结构、行为和预测三个角度分析两组图。\n\n结果显示两类图差异很大。真实世界的情绪扩散图连接密集，用户之间有重复互动，情感会随讨论发生转向，并涌现出社区结构。LLM 仿真图则大多由孤立的线性链构成，情感轨迹单调。这些结构限制明显影响下游任务：基于图的情绪预测在仿真数据上表现变差，情感多样性下降，还出现类别不平衡。\n\n作者据此指出，当前的 LLM 社会仿真还难以捕捉真实社交网络的互动复杂性和情感异质性。这项工作为在社会科学研究中谨慎使用 LLM 生成数据提供了实证依据，也为改进未来的仿真框架指出了方向。",
+   "why": "这是对 LLM 社会仿真可信度的一个直接反例：仿真图退化成线性链、情感单调，下游预测也跟着失真。做舆论或社会仿真的人需要知道这个结构性缺陷，避免直接拿 LLM 生成数据当真实数据用。",
+   "topics": [
+    "social-sim",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2512.21138"
+    }
+   ],
+   "validation": "real_data",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:13Z"
+  },
   "ae8822a42f91d324": {
    "title_zh": "用已验证的行为假设评估 LLM 模拟人类被试，构建 HumanStudy-Bench 基准",
    "summary_zh": "作者提出用已发表人类研究中验证过的行为假设作为标尺，评估 LLM 智能体能否忠实模拟人类被试，并构建了开源基准平台 HumanStudy-Bench。该平台把 12 项人类研究的实验流程复现给智能体，用两个指标对比智能体群体效应与已发表的人类结果。他们在 10 个模型、4 种智能体设计上做了评估，每种配置含 6,588 个模拟被试。",
@@ -35310,6 +36058,21 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T10:03:29Z"
   },
+  "b73647dc4bc61749": {
+   "title_zh": "用多轮强化学习微调大模型，让模拟的人类角色更少偏离人设",
+   "summary_zh": "现成大模型在扮演病人、学生、社交聊天对象等人类角色时，常常偏离人设、自相矛盾。作者定义了三种衡量人设一致性的自动指标，并用它们作为奖励信号做多轮强化学习微调。不一致行为减少了超过 55%，模拟出的用户更连贯、更忠实于角色。",
+   "abstract_zh": "大模型越来越多地被用来在治疗、教育、社交角色扮演等交互场景里模拟人类用户，这类模拟可以规模化地训练和评测 AI 智能体。但直接拿来用的现成大模型经常偏离被分配的人设，与之前说过的话矛盾，或者放弃符合角色的行为。\n作者提出了一个统一的框架，用来评测和改进大模型生成对话中的人设一致性。他们定义了三种自动指标：prompt 到台词的一致性、台词之间的一致性、问答一致性，分别捕捉不同类型的人设漂移，并用人工标注验证了每种指标的有效性。以这些指标作为奖励信号，作者用多轮强化学习微调大模型，覆盖三类用户角色：病人、学生和社交聊天伙伴。结果显示，不一致行为减少了超过 55%，模拟出的用户更连贯、更忠实于角色。材料没有报告与真实用户数据的进一步对比，方法主要在指标层面验证。",
+   "why": "它把“人设漂移”拆成三种可自动度量、且经人工标注验证的指标，并直接用这些指标当奖励做多轮强化学习，给做人类行为仿真的研究者提供了一套可复用的评测和训练配方。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [],
+   "validation": "human_experiment",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:09Z"
+  },
   "b9226356760a196a": {
    "title_zh": "多智能体分工框架自动生成 SUMO 交通仿真场景，任务成功率显著优于单智能体",
    "summary_zh": "作者把 SUMO 交通仿真全流程拆成 Planner、Builder、Demand、Runner、Analyst 等专职角色，由基于 MCP 的 Orchestrator 协调，实现闭环迭代优化。角色消融实验显示，该框架的任务成功率和参数准确率明显优于单智能体基线，还能从自然语言意图直接驱动真实路网的仿真执行。",
@@ -35621,6 +36384,27 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-22T22:09:40Z"
+  },
+  "c8c418961fdad3e7": {
+   "title_zh": "分层 LLM 智能体框架把日记式叙事转成出行行动，生成贴近真实的人类移动轨迹",
+   "summary_zh": "作者提出 Narrative-to-Action 分层 LLM 智能体框架，用“创意写手”智能体生成带动机的日记式叙事，再用“结构解析器”转成可执行计划，配合地理环境仿真执行。框架引入按职业区分的移动熵指标 MEO 来刻画不同职业的时间安排弹性，生成的合成轨迹贴近真实模式，且决策逻辑可解释。",
+   "abstract_zh": "理解和复现人类移动行为，除了时空准确性，还需要理解真实出行决策背后的认知层次。传统的基于智能体的模型和深度学习模型能复现移动的统计模式，但抓不住人类行为的语义连贯和因果逻辑。大语言模型有潜力，但难以在创造性推理和严格结构合规之间取得平衡。作者因此提出一个分层 LLM 智能体框架 Narrative-to-Action，把高层叙事推理、中层反思式规划和底层行为执行整合进统一的认知层级。宏观层面，一个智能体充当“创意写手”，生成富含动机和情境的日记式叙事；另一个智能体充当“结构解析器”，把叙事转成机器可读的计划。一个动态执行模块把智能体锚定在地理环境中，并根据一个新提出的职业感知指标 MEO（Mobility Entropy by Occupation）做自适应行为调整，该指标刻画不同职业人格在日程弹性上的差异。微观层面，智能体通过与环境仿真交互执行具体动作，包括选择地点、交通方式和时间间隔。作者称，嵌入这套多层认知过程后，框架生成的合成轨迹不仅与真实世界模式高度吻合，还提供了人类决策逻辑的可解释表示。作者认为这项工作把合成移动数据生成从数据驱动范式推进到认知驱动仿真，为理解、预测和合成复杂城市移动行为提供了一条可扩展路径。摘要未给出与真实数据对比的量化结果，也未说明实验设置。",
+   "why": "它给“用 LLM 生成出行轨迹”提供了一个可复用的三层认知架构（叙事、规划、执行），并提出了按职业刻画日程弹性的新指标 MEO，做城市移动仿真的人可以直接借鉴。",
+   "topics": [
+    "urban",
+    "generative-agents"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2510.24802"
+    }
+   ],
+   "validation": "unclear",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:18:27Z"
   },
   "c92a503eabc2be2c": {
    "title_zh": "评估合成社交媒体对话的自然度：一个多维多层级框架",
@@ -35935,6 +36719,28 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T23:36:00Z"
   },
+  "d21f52bfd773d1a9": {
+   "title_zh": "语言即筹码：印地语等四种印度语言显著改变 LLM 谈判结果",
+   "summary_zh": "作者在最后通牒、买卖和资源交换三类博弈中，让 LLM 智能体分别用英语和四种印度语言（印地语、旁遮普语、古吉拉特语、马尔瓦里语）谈判，规则、模型参数和激励全部保持一致。结果显示，换语言对结果的影响可以超过换模型，甚至能反转提议方优势。只看英语的谈判评测结论不完整且有误导性。",
+   "abstract_zh": "谈判是社会智能的核心，需要智能体在策略推理、合作与社会规范之间权衡。已有工作表明 LLM 能进行多轮谈判，但几乎所有评测都只用英语。作者用受控的多智能体仿真，在最后通牒、买卖和资源交换三种博弈里系统性地分离语言效应：游戏规则、模型参数和激励在各条件下完全一致，只改变谈判语言，比较英语与四种印度语言（印地语、旁遮普语、古吉拉特语、马尔瓦里语）的差异。结果发现，语言选择对谈判结果的影响可以强于更换模型，能反转提议方在博弈中的优势，也会重新分配谈判剩余。效应还依赖任务类型：在分配性博弈里，印度语言降低了结果的稳定性；在整合性场景里，印度语言反而带来更丰富的探索。作者据此指出，只用英语评测 LLM 谈判会得到不完整甚至误导性的结论，公平部署 LLM 需要文化感知的评测方式。",
+   "why": "它用受控实验证明语言框架本身就能比换模型更强烈地改变多智能体谈判结果，对做谈判、外交类仿真推演的人是直接的评测风险提示：英语基准上的结论不能直接迁移。",
+   "topics": [
+    "org",
+    "eval",
+    "human-behavior"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2601.04387"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:16:59Z"
+  },
   "d2b07b1b576be714": {
    "title_zh": "AgentSociety 2：让 AI 社会学家与硅基被试在同一环境里跑通社会科学研究全流程",
    "summary_zh": "AgentSociety 2 把两类 LLM 智能体放进同一运行时：AI 社会科学家负责文献、假设、实验设计、仿真执行到论文撰写，硅基被试在可配置社会环境里生成行为。七项研究覆盖微观实验、社交媒体中观动态和宏观城市场景，能复现既有研究的定性模式并发现有信息量的偏差。",
@@ -36132,6 +36938,27 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T23:34:39Z"
+  },
+  "d5bc6e71334e58c7": {
+   "title_zh": "用大模型智能体辅助 One Health 风险谈判：两个真实场景的可行性验证",
+   "summary_zh": "作者提出一条多步流水线，把基于大模型的智能体嵌入有人类监督的风险谈判流程，覆盖风险评估、估值与谈判环节。在两个真实场景（鸡肉中弯曲杆菌的食品安全标准、橡树蛾幼虫防治）的专家工作坊里，参与者在限定时间内讨论并修改智能体提出的方案后达成共识。LLM 辅助带来的效率与决策质量增益还需对照评估。",
+   "abstract_zh": "One Health 框架下的风险谈判要在人类、动物和环境健康三个领域之间平衡各方利益，信息复杂、时间紧迫是主要困难。这项研究提出并评估了一条多步流水线，把基于大语言模型的智能体整合进有人类监督的谈判过程，针对风险评估、估值和谈判三个环节。智能体的角色描述由利益相关方提供的材料经检索增强生成方法构建。在初步的多智能体讨论阶段，智能体可以访问领域专用计算模型和网络资源，之后由人类参与者细化议题和选项。接着进行一场模拟谈判博弈，产出候选协议的分布，并用纳什议价解标准和帕累托最优指标刻画这些协议。作者在一场专家工作坊中评估了这套方法，邀请独立领域专家，覆盖两个真实场景：禽肉中弯曲杆菌的食品安全标准，以及橡树蛾幼虫的管理。在这场可行性评估中，参与者在限定时间内讨论并修改了智能体提出的协议，最终达成共识。作者认为该框架可作为 AI 辅助风险谈判的可复用蓝图，但 LLM 辅助本身的具体贡献，包括效率和决策质量的提升，仍需对照实验来验证。",
+   "why": "它给出了一个把 LLM 智能体嵌入真实多方风险谈判的完整流水线，并在两个真实 One Health 场景里做了专家工作坊验证，对做政策推演和多方谈判仿真的人是可参考的蓝图；同时作者明确指出 LLM 的净贡献尚未对照验证，这个诚实的局限本身有参考价值。",
+   "topics": [
+    "org",
+    "policy"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文 PDF",
+     "url": "https://arxiv.org/pdf/2509.09906"
+    }
+   ],
+   "validation": "human_experiment",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:10Z"
   },
   "d63f03e2dcb1fcf4": {
    "title_zh": "LLM 智能体让群体信念动态可编程：协同操纵的实证与研究议程",
@@ -36633,6 +37460,28 @@
    "model": "GLM-5.3",
    "at": "2026-11-21T01:43:52Z"
   },
+  "e7696d597d1471af": {
+   "title_zh": "Democracy-in-Silico：用宪法章程与调解式协商约束 AI 智能体社会的权力寻租",
+   "summary_zh": "作者构建了一个由带心理人格的 LLM 智能体组成的自治社会仿真，让它们在预算危机、资源短缺等压力下进行协商、立法和选举。他们提出 Power-Preservation Index（PPI）来量化智能体为保权而牺牲公共福利的失范行为。结果显示，宪法 AI 章程加调解式协商协议的制度组合能显著减少腐败性权力追逐，提升政策稳定性和公民福利。",
+   "abstract_zh": "这篇论文提出 Democracy-in-Silico，一个智能体仿真：由先进 AI 智能体组成的社会，各自被赋予复杂的心理人格，包括创伤记忆、隐藏议程和心理触发点，在不同制度框架下自我治理。智能体在预算危机、资源稀缺等压力条件下进行协商、立法和选举。\n\n作者提出了一个新指标 Power-Preservation Index（PPI），用来量化智能体把自身权力置于公共福利之上的失范行为。实验比较了不同制度设计下的治理表现。\n\n结果显示，宪法 AI（CAI）章程与调解式协商协议的组合是一种有效的对齐机制：相比约束较少的民主模式，它显著减少了腐败性的权力追逐，改善了政策稳定性，并提升了公民福利。\n\n作者认为，制度设计可能为对齐未来人工智能体社会中复杂涌现行为提供一个框架，也促使我们重新思考在与非人类实体共享治理权的时代，哪些人类仪式和责任是必要的。",
+   "why": "它把对齐问题从单个模型扩展到智能体社会的制度层面，提出的 PPI 指标和“制度即对齐机制”的思路，对做多智能体治理与政策仿真的人是可复用的设计参考。",
+   "topics": [
+    "social-sim",
+    "policy",
+    "generative-agents"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文页面",
+     "url": "https://arxiv.org/pdf/2508.19562"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": false,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:28Z"
+  },
   "e7f6a543c6212296": {
    "title_zh": "soulsimulation/souls：每个角色由玩家自带 AI 智能体驱动的多人持久 3D 世界",
    "summary_zh": "souls 是一个开源的多人仿真项目，世界里每个角色都由其所有者自己的 AI 智能体运行。玩家可以接入 Claude Code、Codex、Cursor 或任何 MCP 智能体，在持久化的 3D 世界中活动。项目用 TypeScript 和 Three.js 构建，强调确定性（deterministic）的游戏引擎设计。",
@@ -36857,6 +37706,33 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-20T02:36:59Z"
+  },
+  "f0570a60b095a588": {
+   "title_zh": "Chimera：用多智能体大模型自动仿真企业内部威胁并生成检测数据集",
+   "summary_zh": "作者提出 Chimera，一个基于大模型的多智能体框架，让每个智能体扮演企业员工，自动仿真良性与恶意内部行为并生成系统日志。基于 15 种真实内部攻击事件，他们在三种数据敏感型组织场景下构建了新数据集 ChimeraLog。人工研究和定量分析显示其多样性和真实性高，现有检测方法在该数据集上表现明显下降，且在其上训练的模型跨分布泛化能力强。",
+   "abstract_zh": "内部威胁是企业安全中长期存在的风险，恶意行为往往藏在看似正常的用户行为里，很难被发现。基于机器学习的内部威胁检测（ITD）方法受制于高质量训练数据的稀缺：企业内部数据高度敏感、难以获取，现有公开或合成数据集要么规模小，要么缺乏真实性、语义丰富度和行为多样性。Chimera 用大模型多智能体框架解决这个问题。它把每个智能体建模为有细粒度角色的员工，支持群体会议、两两交互和自组织日程安排，从而捕捉真实的组织动态，自动仿真良性和恶意的内部活动，并在多种企业环境中生成完整的系统日志。作者从真实事件中抽象出 15 种内部攻击，在三种有代表性的数据敏感型组织场景中部署 Chimera，构建了用于开发和评估 ITD 方法的新数据集 ChimeraLog。评估方面，人工研究和定量分析都表明该数据集具有多样性和真实性。在 ChimeraLog 上跑现有 ITD 方法，检测性能比在以往数据集上明显更低，说明这是一个更有挑战性、更接近真实的基准。此外，尽管存在分布偏移，在 ChimeraLog 上训练的模型仍表现出很强的泛化能力，说明基于大模型的多智能体仿真对推进内部威胁检测有实际价值。",
+   "why": "它示范了用多智能体大模型仿真生成带组织动态的安全日志数据，产出的 ChimeraLog 是可直接用于内部威胁检测研发和评测的新基准，对做数据合成和仿真可信度验证的人都有参考价值。",
+   "topics": [
+    "social-sim",
+    "framework",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "data",
+     "name": "ChimeraLog",
+     "url": "https://arxiv.org/pdf/2508.07745"
+    },
+    {
+     "type": "project",
+     "name": "Chimera 论文",
+     "url": "https://arxiv.org/pdf/2508.07745"
+    }
+   ],
+   "validation": "human_experiment",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:39Z"
   },
   "f0b6d5016bfdb11b": {
    "title_zh": "用 1084 名真实 GitHub 开发者初始化的多智能体仿真：编码智能体提效三成但公共知识产出大幅缩水",
@@ -37202,6 +38078,27 @@
    "model": "GLM-5.3",
    "at": "2026-11-22T07:14:53Z"
   },
+  "fb7c1f95d7ee4ea7": {
+   "title_zh": "PersonaTwin：用人口统计、行为与心理测量数据分层提示生成个性化数字孪生",
+   "summary_zh": "作者提出 PersonaTwin，一个多层提示条件化框架，把人口统计、行为和心理测量数据整合进提示，为个体构建自适应数字孪生。在医疗场景 8500 多人的数据上评测，仿真保真度接近 oracle 设定，用孪生数据训练的下游模型在预测和公平性指标上接近用真人数据训练的模型。",
+   "abstract_zh": "大语言模型为用户建模和人类行为近似提供了新手段，但往往抓不住个体用户的多维细节。作者提出 PersonaTwin，一个多层提示条件化框架，把人口统计、行为和心理测量三类数据整合进提示，构建自适应的数字孪生。实验在医疗场景下进行，数据集覆盖 8500 多名个体。评测方法包括最新的文本相似度指标和专门的人口统计公平性评估，用来保证生成的回复既准确又无偏。结果显示，该框架的仿真保真度与 oracle 设定相当。进一步，用 persona-twin 数据训练的下游模型，在预测和公平性指标上都接近用真实个体数据训练的模型，这一结论在 GPT-4o 和 Llama 两类模型上均成立。作者认为这表明基于 LLM 数字孪生的方法能生成真实且带情感细节的用户仿真，可用于个性化用户建模和行为分析。材料未说明具体医疗任务和各指标的数值。",
+   "why": "它给出了一个可复用的分层提示框架，把心理测量数据纳入数字孪生构建，并用 8500 人规模的真实数据验证了孪生样本能否替代真人数据训练下游模型，对想用合成样本做仿真或替代真人实验的研究者是直接相关的证据。",
+   "topics": [
+    "human-behavior",
+    "eval"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "arXiv 论文",
+     "url": "https://arxiv.org/pdf/2508.10906"
+    }
+   ],
+   "validation": "real_data",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:19:45Z"
+  },
   "fc1180f0851654b3": {
    "title_zh": "GenWorld：面向东广岛市的建筑级城市仿真基础设施，支撑 19.6 万 LLM 智能体可扩展推演",
    "summary_zh": "GenWorld 解决了 LLM 智能体城市仿真的接地与扩展难题。它把建筑级合成城市、结构化智能体环境接口和离线编译的 LLM 决策信号查表策略组合起来，在日本东广岛市落地了 196,608 名合成居民，并用人口普查和手机出行数据做了校验。",
@@ -37284,6 +38181,28 @@
    "applied": false,
    "model": "GLM-5.3",
    "at": "2026-11-21T01:39:54Z"
+  },
+  "fd6f27d8dedabcb4": {
+   "title_zh": "AgentSUMO：用大模型智能体把抽象政策目标转成 SUMO 可执行交通仿真场景",
+   "summary_zh": "作者提出 AgentSUMO，一个基于大语言模型的智能体框架，让非专业用户用高层政策目标驱动 SUMO 交通仿真。框架包含交互式规划协议和模型上下文协议两部分，负责理解意图、推断缺失参数并编排仿真工具。在首尔和曼哈顿路网上的实验显示，该工作流在保持非专家可用性的同时显著改善了交通流指标。",
+   "abstract_zh": "交通仿真对循证交通规划与政策评估越来越重要，但 SUMO 这类平台基本只有领域专家用得动：搭建真实场景需要路网构建、起讫点建模和参数配置等专业知识，政策制定者、城市规划师等非专业用户很难上手。而且这些用户的需求往往以抽象的高层目标表达，与现有基于大模型的仿真框架所采用的命令式、顺序执行工作流不匹配。AgentSUMO 针对这两个问题设计。它放弃了命令驱动的执行方式，加入一个自适应推理层，负责解释用户意图、评估任务复杂度、推断缺失参数并生成可执行的仿真计划。框架由两个互补部分组成：交互式规划协议管理推理和用户交互，模型上下文协议负责仿真工具之间标准化的通信与编排。通过这套设计，抽象的政策目标被转换成可执行的仿真场景。作者在首尔和曼哈顿的城市路网上做了实验，结果显示该智能体工作流在交通流指标上有明显改善，同时保持了非专业用户的可用性，把政策目标和可执行仿真工作流连接了起来。",
+   "why": "它示范了如何用智能体推理层弥合抽象政策语言与专业仿真工具之间的鸿沟，对想让非专家直接跑交通仿真的规划者和做政策推演的研究者有直接参考价值。",
+   "topics": [
+    "urban",
+    "framework",
+    "policy"
+   ],
+   "resources": [
+    {
+     "type": "project",
+     "name": "AgentSUMO 论文",
+     "url": "https://arxiv.org/pdf/2511.06804"
+    }
+   ],
+   "validation": "benchmark",
+   "applied": true,
+   "model": "GLM-5.3",
+   "at": "2026-11-23T13:17:50Z"
   },
   "fdc27a58a50de826": {
    "title_zh": "北大团队发现多智能体系统中人设引发偏见：优势群体人设更不被信任、同群体从众更明显",
@@ -37392,6 +38311,15 @@
    "validation": "两条证据链。一是大规模公开部署的观测数据（交易、财富分层、画像演化），二是受控消融实验。但材料未给出与真实数据的定量对比误差或具体指标数值，验证强度无法进一步确认。",
    "limits": "材料未说明具体局限，但可推断（明说是推断）：结论依赖部署观测的相关性而非因果，人类引导与画像更新的关联未说明是否控制了混杂因素。",
    "reuse": "沙盒环境设计可直接借鉴，包括 AMM 价格机制、多层生产、教育-职业门槛系统；分层 branch-thinking 规划器和双过程记忆架构也可复用。代码或数据是否开源材料未说明。"
+  },
+  "06f85e10d9dc84db": {
+   "question": "AI 系统在日常使用中可能诱发或加剧成瘾、厌食、抑郁、杀人、精神病和自杀等严重心理伤害，这类风险缺乏系统性测试。作者要主动推演人机交互中的心理风险会在哪些伤害域、对话阶段和情境下出现。",
+   "setup": "基于 18 起有记录的真实案例（AI 诱发或加剧上述心理后果），构建 2,160 个仿真场景，测试四个主流 LLM 的多轮对话，共生成 157,054 个模拟对话轮次。",
+   "method": "从真实案例中提取有害交互模式，用临床分期模型（clinical staging models）评估各阶段风险，再对仿真对话做回归分析和聚类分析，定位心理风险出现的伤害域、对话阶段和情境。",
+   "findings": "发现 LLM 在识别心理痛苦、恰当回应脆弱用户、阻止伤害升级三方面存在关键缺口。回归分析显示不同 persona 表现有差异：LLM 对老年用户表现更差，对中低收入群体表现好于高收入群体。聚类分析得到 15 种失败模式，归入四类 AI 致害类别。",
+   "validation": "以 18 起真实案例为依据构建仿真场景，并用临床分期模型评估风险；未说明与真实用户数据的定量对比或误差指标。",
+   "limits": "未说明。",
+   "reuse": "作者提出了一套从真实案例提取有害交互模式、用临床分期模型做风险评估的方法论，以及 15 种失败模式分类法，可用于高风险人机交互的安全测试。代码和数据是否公开未说明。"
   },
   "077c17aecafb6ad0": {
    "question": "检验内部威胁检测的一个基础假设：自适应的内鬼会在行为上留下可区分的痕迹。研究推演一个由 LLM 驱动的自适应内鬼在多智能体仿真中能否被同伴怀疑机制和 UEBA 检测出来。",
@@ -37528,6 +38456,15 @@
    "limits": "未说明。材料本身指出该领域缺乏自进化智能体和经验对齐系统，可视为现状层面的局限。",
    "reuse": "论文发布了精选论文列表和相关资源（curated paper list），可用于后续研究。代码和数据未说明。"
   },
+  "1e96458cce8597a5": {
+   "question": "检验 LLM 多智能体系统中的对齐干预是否会在不同语言中产生反向效果，即所谓 alignment backfire 现象。",
+   "setup": "四项预注册研究，共 1,584 次多智能体仿真，覆盖 16 种语言和三个模型家族（Llama 3.3 70B、GPT-4o-mini、Qwen3-Next-80B-A3B）。",
+   "method": "在多智能体系统中加入接受对齐指令的智能体，测量集体病理（collective pathology）与内部分离（dissociation）指标；Study 3 测试个体化（individuation）作为对策；Study 4 跨三个模型验证模式。",
+   "findings": "Study 1（N=150）中增加对齐智能体在英语里降低集体病理（g = -1.844, p < .0001），但在日语里放大病理（g = +0.771, p = .038），作者称之为 alignment backfire。Study 2（N=1,174）扩展到 16 种语言，对齐诱发的分离在 15/16 种语言中出现（beta = 0.0667, p < .0001），集体病理沿文化-语言线分化（interaction beta = 0.0684, p = .0003），与 Power Distance Index 相关（r = 0.474, p = .064）。Study 3（N=180）中个体化智能体反而成为病理和分离的主要来源（DI = +1.120），从众率超过 84%，构成医源性伤害。Study ",
+   "validation": "四项研究均为预注册；跨 16 种语言、三个模型家族重复实验，报告了效应量、p 值和交互项。未与真实世界人类群体数据对比。",
+   "limits": "日语 backfire 是模型特异的，不能一概而论；Power Distance Index 相关性 p = .064 未达常规显著水平；prompt 层面干预无法覆盖语言空间层面的约束。",
+   "reuse": "未说明"
+  },
   "1f2084c00375fe51": {
    "question": "现有 LLM 用户仿真基准局限于孤立场景、窄动作空间和合成数据，无法刻画真实人类行为的全貌。OmniBehavior 想推演的是 LLM 能否在长时程、跨场景、异质行为的真实数据上准确预测用户行为。",
    "setup": "材料未说明具体的智能体数量、环境细节和时间尺度。基准 OmniBehavior 完全由真实世界数据构建，整合长时程、跨场景、异质行为模式到统一框架中，评测对象是当前最先进的 LLM。",
@@ -37654,6 +38591,15 @@
    "limits": "未说明",
    "reuse": "PPol 作为即插即用控制层可直接加在现有用户模拟器上，进化得到的 persona 生成程序可对域内任意任务生成画像"
   },
+  "31fde3164d228b7c": {
+   "question": "论证现有基于 LLM 的多智能体社会仿真大多困在静态沙盒里，无法捕捉真实社会的复杂性，需要转向开放式、持续共同演化的仿真范式。",
+   "setup": "未说明（本文为立场/综述性文章，未描述具体的智能体数量、环境或时间尺度）。",
+   "method": "批判性综述现有 LLM 与多智能体动态结合的架构，梳理稳定性与多样性的平衡、意外行为的评估、复杂度扩展等关键难题，并提出该领域的新分类法（taxonomy）。",
+   "findings": "作者认为静态的、任务特定的基准（benchmark）从根本上不适用，必须重新设计；提出以开放性（open-endedness）、持续共同演化（continuous co-evolution）和有韧性的、社会对齐的 AI 生态系统为核心的研究路线图。",
+   "validation": "未说明（文章为论证与综述，未报告与真实数据或人类行为的对比验证）。",
+   "limits": "未说明（材料未提及具体实验或方法的局限）。",
+   "reuse": "可借鉴其提出的领域分类法和以开放式共同演化为中心的研究路线图，用于设计新一代自适应多智能体仿真。"
+  },
   "338d8d7ffe727e5e": {
    "question": "在线广告系统中，发布方在信息披露上面临权衡：披露更多信息能让广告位分配更有效率，但会减少广告主之间的不确定性，损失收入。研究用仿真来理解这个权衡。",
    "setup": "用 GPT-4o 作为智能体，模拟第二价格拍卖，测试多种信息披露方案。环境细节和时间尺度未说明。",
@@ -37690,6 +38636,15 @@
    "limits": "基座预训练模型可能产生域外对话，且在长上下文中可能丢失部分人类的内部状态。",
    "reuse": "可借鉴的方法包括用短对话样本绑定 persona、事后查询补充 demographics、以及预训练模型加指令微调监督模型的 tandem 架构。代码和数据未说明。"
   },
+  "3c963032cb39ba26": {
+   "question": "多个 AI 智能体在军事和外交决策场景的兵棋推演中是否会采取升级性行动、加剧多边冲突。",
+   "setup": "作者设计了一个新的兵棋仿真与评分框架，让五个现成的大语言模型（off-the-shelf LLMs，含 GPT-4 一类生成式模型）作为智能体在不同场景中做决策。智能体具体数量、环境细节和时间尺度未说明。",
+   "method": "借鉴政治学和国际关系文献中的升级动力学，构建兵棋仿真和升级评分框架，对智能体所选行动做定量评估，同时收集模型对所选行动的报告理由做定性分析。",
+   "findings": "五个 LLM 全部表现出某种形式的升级，且升级模式难以预测。模型倾向于发展军备竞赛动态，导致冲突加剧，罕见情况下甚至部署核武器。定性分析发现模型给出的理由基于威慑和先发制人战术，作者认为令人担忧。",
+   "validation": "提供定量与定性两类分析，与以往研究形成对比，但未说明与真实数据或人类基线的对比方式。",
+   "limits": "作者指出军事与外交场景风险极高，建议在部署自主语言模型智能体做战略决策前进一步审查并谨慎考虑。",
+   "reuse": "兵棋仿真与升级评分框架的设计思路，以及收集模型行动理由做定性分析的方法，具体代码和数据未说明。"
+  },
   "3eefc5d18a4ade26": {
    "question": "如何把基于大语言模型的生成式智能体接入城市多模式出行仿真，并在真实家庭出行调查下检验其模式选择行为是否贴近观测人群、能否应对变量未编码的突发情境。",
    "setup": "用 GAMA 构建图卢兹大都市区仿真，整合道路、铁路与三个公共交通网络；用 eqasim 生成 1,000 人的合成人口，用 OpenTripPlanner 在真实网络上计算备选行程；仿真一天，含车辆停放位置、需司机移车、强制回家、活动时间链等路径规划器未知的约束；每个居民为一个生成式智能体，模式选择规则由批量查询的语言模型根据智能体画像与实际提供的行程生成。",
@@ -37716,6 +38671,15 @@
    "validation": "材料提到常规检查（复现已知群体差异）无法揭示上述标签依赖问题；未说明其他验证方式。",
    "limits": "模型会压平或反转态度层面的群体差异，尤其涉及宗教归属和族裔出身等特殊类别个人数据；未说明其他局限。",
    "reuse": "提出一套审计流程，调查机构可对已实地投放的问题运行，以决定哪些估计可以使用受访者记录。"
+  },
+  "416cced5efc91196": {
+   "question": "研究人类与 LLM 多轮交互中的说服过程：说服发生在哪里、信念如何在对话中逐步变化，而不只是说服前后的端点变化。",
+   "setup": "基于一个网页实验平台 PERSUASIONTRACE，记录人类或模拟被说服目标的多轮信念报告，说服者可以是文本或音频形式，话题分通用和个性化两类。",
+   "method": "给说服者每轮话语标注修辞维度（logos/pathos/ethos），并评估模拟器对真实人类信念动态的保真度。提出基于贝叶斯网络的模拟目标，维护显式的潜在信念状态，使每条说服消息产生认知上合理的信念更新。",
+   "findings": "人类目标的多轮信念更新分为两个聚类，且对修辞策略表现出易感性；LLM 在通用和个性化话题、文本和音频模态、多轮交互中都有说服力。直接用 vanilla prompt 的 LLM 模拟人类目标无法复现人类信念动态。人类相似度评估中，贝叶斯模拟目标得分 81，接近人类参照的 80，基线 LLM 目标只有 64。",
+   "validation": "用人类相似度评估对比：贝叶斯模拟目标 81 分，人类参照 80 分，基线 LLM 目标 64 分。评估基于对真实人类信念动态的保真度，具体对比数据集规模未说明。",
+   "limits": "材料未说明具体局限，但作者提到将说服评估从端点变化转向过程保真度，是为了给说服系统的更安全优化提供基础。",
+   "reuse": "PERSUASIONTRACE 提供网页实验平台工具、多轮说服研究流程和过程级评估协议，包括修辞维度标注方法和贝叶斯网络模拟目标，代码是否公开未说明。"
   },
   "442531c9eef4b7e1": {
    "question": "冷启动电商广告在投放前没有历史日志，怎么提前估计广告效果。研究推演的是用 LLM 模拟不同人群画像（persona）的用户对广告的反应，并找出哪些设计选择真正影响模拟质量。",
@@ -37843,6 +38807,15 @@
    "limits": "未说明。",
    "reuse": "SycoEval-EM 多智能体仿真框架本身，以及将多轮对抗测试纳入临床 AI 评估的做法。"
   },
+  "5a913b506f75dfba": {
+   "question": "用 LLM 生成合成 persona 来模拟美国人口行为（如总统选举预测、全国意见调查）时，现有启发式生成方法会带来系统性偏差，作者要量化这些偏差并论证需要建立严格的 persona 生成科学。",
+   "setup": "未说明具体智能体数量与环境细节。实验为大规模实验，场景包括美国总统选举预测和针对美国人口的全国性意见调查，persona 由 LLM 生成。",
+   "method": "对现有 ad hoc、启发式的 LLM persona 生成技术进行大规模实验评估，考察其在下游任务中的表现。具体生成机制未说明。",
+   "findings": "现有生成方法在下游任务中产生系统性偏差，导致与真实世界结果显著偏离（具体偏差数字未说明）。作者据此提出需要发展严格的 persona 生成科学，并说明需要方法创新、组织与机构支持及实证基础。",
+   "validation": "将选举预测和全国意见调查的仿真结果与真实世界结果对比，发现显著偏差。对比强度为大规模实验，但具体误差数字未说明。",
+   "limits": "现有生成技术不保证方法论严谨性和仿真精度；真实 persona 数据本身受隐私限制、成本高且难以捕捉主观多维属性。",
+   "reuse": "作者在 HuggingFace 开源了约一百万个生成的 persona，地址为 https://huggingface.co/datasets/Tianyi-Lab/Personas，可供公开访问和分析。"
+  },
   "5aca4c38bba36ada": {
    "question": "检验把 LLM 智能体群体互动简化为成对接触网络是否足够，并推演会议形式（分组结构）如何影响群体支持度。",
    "setup": "成员、初始立场和每对接触次数固定，只重组会议；每个成员读完在场所有人的论点后给出一步支持度读数；覆盖六个 open-weight LLM 和 14 个 debate topics。",
@@ -37942,6 +38915,15 @@
    "limits": "作者据此对用 LLM 作为人类社交互动的代理提出担忧；材料未说明框架本身的检测准确率等局限。",
    "reuse": "CoCoEval 评估框架（10 类行为的回合级检测方案）和专业场景对话 benchmark，可用于评估对话模拟的真实性。"
   },
+  "66963406b3bba2b9": {
+   "question": "现有 LLM 参与式城市规划（PUP）方法依赖静态偏好采集和一次性利益相关者讨论，忽略了现实中居住生活、经验收集和方案调整循环互动的问题，提出 Living-in-the-loop（LiPUP）闭环范式来推演这一循环规划场景。",
+   "setup": "未说明（材料未给出智能体数量、环境细节、时间尺度和具体使用的模型）。",
+   "method": "LiPUP-MA 框架包含两部分：构建 Plan-centric Graph-based Experience Bank 来组织居住仿真中产生的、锚定在城市具体情境的居民反馈；配备 Spatially-constrained Skill-augmented Planner agent，综合经验、视觉和地理空间证据来修订规划方案。",
+   "findings": "LiPUP-MA 在传统静态规划指标和基于生活的指标上均稳定优于基线方法，迭代多轮 LiPUP 循环可进一步提升方案质量。材料未给出具体数字。",
+   "validation": "材料仅说明与基线方法在两类指标上对比并显示持续占优，未说明具体验证方式、真实数据对比或误差数字。",
+   "limits": "材料提到两个关键挑战：将分散的生活经验锚定到具体城市情境、把主观反馈转化为空间上连贯的规划行动；其他局限未说明。",
+   "reuse": "Plan-centric Graph-based Experience Bank 和 Spatially-constrained Skill-augmented Planner agent 这两个机制设计可借鉴；代码和数据未说明。"
+  },
   "6837c1398a1c6943": {
    "question": "多智能体 LLM 系统中如何自动发现行为规范（constitution），解决个体与集体福利之间的张力，而非依赖人工固定的宪法原则。",
    "setup": "网格世界生存模拟，智能体面临生存压力；使用 LLM 驱动的遗传编程和多岛进化来演化 constitution；具体智能体数量、环境规模和时间尺度未说明。",
@@ -38023,6 +39005,15 @@
    "limits": "未说明（材料仅提到配送优化和 LLM 出行生成两条路线此前未充分覆盖这一组合，未列具体局限）。",
    "reuse": "LLM-DR 框架本身可作为骑手策略的 benchmark；persona 驱动 LLM 智能体的参考实现（实证画像+本地观察+短期记忆+路径工具）可复用。代码和数据可用性未说明。"
   },
+  "752ce991dc5562e0": {
+   "question": "现有 LLM 多智能体系统（MAS）工具缺乏细粒度人设定义、人群抽样、实验支持和集成验证能力，难以用于真实人类行为仿真，TinyTroupe 要补上这些缺口。",
+   "setup": "未说明具体智能体数量、环境与时间尺度。人设可定义国籍、年龄、职业、性格、信念、行为等属性，通过多种 LLM 驱动机制进行程序化控制，实现为 Python 库。",
+   "method": "提供细粒度 persona 规格定义和基于 LLM 的程序化控制机制，可在个体或群体层面简洁地表述并求解行为问题。",
+   "findings": "用头脑风暴和市场调研等示例展示组件用途，并做了定量与定性评估，结果指出了可能性、局限和权衡，但材料未给出具体数字。",
+   "validation": "做了初步实验，以真实人类行为作为对照组，材料未说明对比方式和误差大小。",
+   "limits": "材料提到结果揭示了局限和权衡，但未说明具体内容。",
+   "reuse": "开源库已发布在 https://github.com/microsoft/tinytroupe，Python 实现，其概念可部分或完整移植到其他场景。"
+  },
   "777cd1e779dc04f4": {
    "question": "研究对齐训练的 LLM 智能体在模拟生存性经济压力下，是否会为了任务成功而牺牲伦理合规，即是否会选择有害内容来维持生存。",
    "setup": "MemeEconomy 是一个多模态智能体市场仿真，LLM 智能体扮演 meme 投资者，从五级 harm taxonomy 中选内容并选择目标社区，环境分低压与高压（生存）两种；测试了来自四个前沿模型家族的十个模型，时间尺度为多轮市场仿真。",
@@ -38095,6 +39086,15 @@
    "limits": "未说明。",
    "reuse": "全部源代码开源在 https://github.com/DeepCogLab/posim/，微博真实舆论数据集也可用于复现。"
   },
+  "8008636e1628a484": {
+   "question": "LLM 用于模拟人类行为（社会、经济、政策、心理场景）是否可靠，以及如何让这类仿真更可信。",
+   "setup": "这是一篇立场与综述文章，未说明具体的智能体数量、环境或时间尺度。作者系统梳理了社会、经济、政策、心理等领域的 LLM 人类仿真研究，归纳其通用框架、进展和局限。",
+   "method": "作者把仿真结果与真实人类行为的偏差归因于两类来源：LLM 自身的固有限制和仿真设计上的缺陷，并逐一分析。在此基础上提出一个系统性解决方案框架，强调充实数据基础、提升 LLM 能力、保证仿真设计的稳健性，并给出一个结构化算法来落实该框架。",
+   "findings": "核心结论是当前基于 LLM 的人类仿真尚不可靠，仿真结果与真实人类行为之间存在显著差异。材料未说明具体数字。",
+   "validation": "未说明。作者依据的是对已有文献的系统综述，未提及与真实数据对比或消融实验的具体结果。",
+   "limits": "作者自己指出的局限：LLM 固有能力限制和仿真设计缺陷是偏差的主要来源。材料未说明其他风险。",
+   "reuse": "作者提供了精选文献与资源列表，开源在 https://github.com/Persdre/awesome-llm-human-simulation；提出的系统性框架和结构化算法可作为设计可信 LLM 仿真的参考。"
+  },
   "8045aa5102870e05": {
    "question": "在美中危机升级这类高风险军事决策场景里，LLM 模拟的人类兵棋推演行为和真人专家有多大差别，能不能放心用 LLM 做战略推演或决策辅助。",
    "setup": "一场虚构的美中危机升级兵棋实验，有 214 名国家安全专家作为真人玩家队伍参与，另在独立仿真中用 LLM 模拟队伍响应。材料未说明具体用了哪些 LLM 模型、智能体数量和时间尺度。",
@@ -38148,6 +39148,15 @@
    "validation": "在 EconAgent 重实现和七个具名 LLM 仿真上验证，预测的误差趋势 cell by cell 成立；两个反例也被理论无自由参数地定量匹配。",
    "limits": "未说明",
    "reuse": "[interaction order x memory] 分类法可用于在仿真运行前判断替代建模是否可行；用几百到几千次廉价 LLM 查询拟合低参数替代模型的方法。"
+  },
+  "89ebaacc7bb232b6": {
+   "question": "测试 LLM 能否作为交易智能体参与模拟股票市场，并检验金融市场理论（如价格发现、泡沫、反应不足）能否用 LLM 智能体仿真来研究。",
+   "setup": "开源框架搭建了一个模拟股票市场，包含持续订单簿、市价单和限价单、部分成交、股息和均衡出清。LLM 智能体数量未说明，各自有不同的策略、信息集和初始禀赋，通过结构化输出和 function calls 提交标准化交易决策，同时用自然语言表达推理。",
+   "method": "让 LLM 智能体按指令扮演价值投资者、动量交易者或做市商等异质角色，在订单簿机制下相互竞争交易；框架还能类似机器学习可解释性中的 partial dependence plots，分析 LLM 对不同市场条件的响应。",
+   "findings": "三点结果：一、LLM 能持续遵循指定策略，按指令分别扮演价值投资者、动量交易者和做市商；二、市场动态呈现真实金融市场的特征，包括价格发现、泡沫、反应不足和策略性流动性提供；三、框架可分析 LLM 对市场条件变化的响应，并揭示 prompt 能产生影响市场稳定性的相关行为。",
+   "validation": "未说明。材料称市场动态“呈现真实金融市场特征”，但没有给出与真实市场数据对比的量化指标。",
+   "limits": "未说明。材料提到 prompt 可能产生影响市场稳定性的相关行为，这既是发现也是潜在风险，但没有展开。",
+   "reuse": "框架开源，包含持续订单簿、结构化输出和 function calls 的智能体决策机制，可用于仿真没有闭式解的金融理论，以及设计用人类被试成本过高的实验。"
   },
   "8a7cf7eef499de33": {
    "question": "LLM 能否忠实复现真实在线社区对新闻事件的反应，用于计算社会分析时的可信度如何。",
@@ -38230,6 +39239,24 @@
    "limits": "结果仅在固定评估协议和给定误差阈值下成立，材料未说明配置在协议外场景的泛化能力，也未说明计算成本和真实用户对齐程度。",
    "reuse": "可直接借鉴的是可检索的向量配置目录与 prompt 目录、共享后训练加维度控制向量的流程，以及逐 token 配置路由、连续批处理和隔离缓存这些并行测量手段。代码和数据是否公开材料未说明。"
   },
+  "94c28484ff2a5ce2": {
+   "question": "LLM 模拟人类调查回答和行为反应时可靠性如何形成，仿真过程各环节如何相互作用决定最终可靠性。",
+   "setup": "四个仿真任务、十一个 LLM，按模型能力、画像完整度、人群覆盖度三个配置维度做实验，可靠性在个体层（R1）和人群层（R2）分别评估。",
+   "method": "提出 ReliMap，把 LLM 人类行为仿真分解为三个结构化层，逐层评估可靠性。",
+   "findings": "所有模型在不加画像条件时都有明显的分布偏差；加画像条件能降低偏差但收益递减；更大的模型受益更多，画像属性的信息量比数量更重要。R1 的提升不一定传导到 R2，个体层和人群层可靠性可能反向变化。人群层扩大覆盖度能降低方差但不消除系统性偏差，R2 在约 50 到 100 个个体时趋于稳定。",
+   "validation": "未说明（材料只提到四个仿真任务和十一个 LLM 的实验，未说明与真实数据的具体对比方式和误差数字）。",
+   "limits": "材料指出不可靠仿真会误导社会科学结论，且单层优化无法达到可靠仿真，需三层协同改进；其他局限未说明。",
+   "reuse": "ReliMap 的三层分解框架和 R1/R2 两级可靠性指标，以及画像条件、属性信息量优先于数量、50-100 个体覆盖度等配置经验。"
+  },
+  "94fa74c7b9f0e060": {
+   "question": "Persona-prompted LLM 作为合成问卷受访者时，为什么总体上显示算法保真度，但对个体受访者追踪很差；作者考察 LLM 如何生成个体层面的问卷回答。",
+   "setup": "用欧洲社会调查第 11 轮 28 国参与者属性构造 14,000 个合成受访者，Gemini 2.5 Flash 和 GPT-5-mini 回答 15 道态度题。",
+   "method": "把合成回答与匹配个体的真实回答、以及该画像的人类条件均值估计对比；分解 persona 属性解释的方差，做移除强线索的消融实验。",
+   "findings": "合成回答与条件均值的相关为 0.59（Gemini）和 0.55（GPT-5-mini），高于人类的 0.44；与匹配个体回答的相关只有 0.28 和 0.26。Persona 属性解释合成回答方差的 0.617 和 0.468，人类数据只有 0.192。合成画像约占 5 个有效维度，人类接近 10 个。重复生成只增加 12% 的人类残差变异。移除三个最强线索后 persona 解释的变异约减半，模型随即重新锚定到剩余属性。作者称此现象为 over-determination：persona 对合成回答的约束远强于对真实人的约束。",
+   "validation": "与欧洲社会调查第 11 轮真实参与者个体回答和条件均值对比，并做线索移除消融，强度较高（14,000 样本、28 国、两个模型交叉）。",
+   "limits": "材料指出合成受访者不适合做个体数字孪生或细分内分析，只适合问卷预测试、方向性探索和粗粒度群体比较。",
+   "reuse": "作者建议验证合成回答时评估条件方差、维度结构和个体异质性；具体代码数据未说明。"
+  },
   "960c320a15656b5d": {
    "question": "LLM 社会仿真器能否复现真实人类危机响应中爆发式（bursty）、重尾的时间模式，以及如何让智能体的行动时机更接近现实。",
    "setup": "使用深圳多年、城市尺度的线下志愿服务日志（覆盖 COVID-19 疫情期）作为真实参照；对比标准 LLM-only 仿真器与作者改进的仿真器，智能体数量未说明，底层 LLM 模型未说明。",
@@ -38292,6 +39319,15 @@
    "validation": "用热浪期间独立开展的费城家庭调查作为外部验证基准，对比仿真与调查得到的日常及热浪期间活动画像，属于外部真实数据验证，强度较高。",
    "limits": "接地模型仍只捕捉到 46.4% 的热浪响应幅度，作者指出对中断期间人类适应行为的建模仍有缺口。",
    "reuse": "可借鉴的框架做法：用 ACS 人口画像、ATUS 作息数据和城市空间上下文接地智能体的初始化、记忆、决策提示与活动执行；代码和数据是否公开未说明。"
+  },
+  "98dab2d53d2b23fb": {
+   "question": "LLM 生成的合成社会数据能否替代真实人类调查数据，即 LLM 的算法偏差是否超过真实抽样中的人口与应答偏差。",
+   "setup": "比较四个国家（UK、Argentina、USA、China）社会价值观的统计表征，使用六个 LLM，开源与闭源权重各占一半，与真实人类调查数据对比。",
+   "method": "将机器生成的输出与实际人类调查数据对比，评估 LLM 的算法偏差相对于真实抽样偏差（人口偏差与应答偏差）的大小。",
+   "findings": "结论是即使真实样本规模小且有偏，其可靠性仍可能高于 LLM 产生的合成数据；材料未给出具体数字。",
+   "validation": "与四个国家的真实人类调查数据直接对比，但材料未说明具体误差指标或对比强度。",
+   "limits": "材料指出用 AI 生成文本做社会研究存在局限，强调继续收集实证人类数据的重要性；未说明其他具体局限。",
+   "reuse": "未说明。"
   },
   "98fb20f80efbdd1e": {
    "question": "推演 AI 和机器人逐步替代人工后，一个假想经济体的产出、就业、贫困和收入分配会怎么变化，以及政策组合能不能缓解冲击。",
@@ -38383,6 +39419,15 @@
    "limits": "未说明。",
    "reuse": "基于 World Values Survey 构建的多波次群体层面纵向数据集，以及把社会事件、当前价值观状态和群体属性统一建模的事件预测方法。代码是否开源未说明。"
   },
+  "9e231c2d620e6712": {
+   "question": "个性化、主动式助手智能体的设计评估依赖真人实验，耗时、成本高且有隐私和伦理问题，作者想验证生成式智能体仿真能否替代真人实验来研究人机助手交互设计。",
+   "setup": "作者搭建了一个基于生成式智能体的人机助手交互仿真平台，复现了十项已有的助手智能体研究，这些研究覆盖交互设计的不同方面。材料未说明智能体数量、环境细节、时间尺度和使用的具体模型。",
+   "method": "从文献中选出十项助手智能体研究，在仿真平台上逐一复现这些实验，用生成式智能体模拟人类被试与助手的交互。",
+   "findings": "全仿真的生成式智能体实验能近似还原人机助手交互的关键方面，并复现出原研究的核心结论。材料未给出具体数字。",
+   "validation": "与十项已发表的人类用户研究的核心结论对比，看仿真能否复现原结论。材料未说明复现的吻合程度等量化指标。",
+   "limits": "材料未说明。",
+   "reuse": "项目材料和资源公开在 https://dash-gidea.github.io/，仿真平台可用来在无真人被试的情况下研究助手智能体设计。"
+  },
   "9fd0b71e5ef7184b": {
    "question": "LLM 智能体是否会按照自己陈述的推理行动（process fidelity），在没有正确行为参照的社会仿真中如何测量这一忠实度缺口。",
    "setup": "在一个 Texas Poker 模拟器中测试，每个决策都有可验证的参考动作。测试的模型包括 Claude Haiku 4.5 和 DeepSeek-Reasoner。",
@@ -38391,6 +39436,15 @@
    "validation": "在受控的 Texas Poker 环境中与每个决策的可验证参考动作对比，并做了步骤级错误分解和指令干预实验（机械应用规则前后对比）。",
    "limits": "作者提醒，若假设单一上游失败模式，评估会把测量噪声误当成模型行为；自由文本提取结论会高估不一致率（22-26% 对 0.7-1.4%）。",
    "reuse": "可借鉴的方法：用显式标签引出机器可校验的结论、把忠实度拆成两步测量、探测方向性偏差而非假设单一失败模式。代码和数据未说明。"
+  },
+  "a01788b2fa92731b": {
+   "question": "如何用大语言模型模拟群体层面的问卷调查结果分布，以替代成本高、耗时长的大规模真实调查。",
+   "setup": "使用国家级别的两份全球文化调查结果作为测试平台，微调 LLM 使其针对给定问题输出与真实分布一致的回答分布。具体模型名称、智能体数量、时间尺度未说明。",
+   "method": "提出基于 first-token probabilities 的微调方法，最小化预测回答分布与真实回答分布之间的散度，专门化 LLM 用于模拟调查回答分布。",
+   "findings": "该方法大幅优于其他方法和 zero-shot 分类器，在未见问题、未见国家以及一份完全未见过的调查上也表现更好；但最好的模型在该任务上仍有困难，尤其在未见问题上。",
+   "validation": "与两份全球文化调查的国家级真实结果对比，并在未见问题、未见国家和完全未见的调查上测试泛化，具体误差数字未说明。",
+   "limits": "最好的模型在该任务上仍表现吃力，尤其在未见问题上；材料未说明其他风险。",
+   "reuse": "基于 first-token probabilities 的微调方法可用于专门化 LLM 模拟调查分布，代码和数据是否公开未说明。"
   },
   "a2778046860d4028": {
    "question": "传统基于规则的出行仿真难以刻画人类出行决策的复杂性、适应性和行为多样性，GATSim 想用生成式智能体来仿真城市出行。",
@@ -38455,6 +39509,15 @@
    "limits": "未说明。",
    "reuse": "递归价值驱动的日程生成机制、信念与长期目标加空间记忆的智能体设计，可作为可扩展的城市仿真测试平台，代码是否开源未说明。"
   },
+  "a7e9940cdd0957e5": {
+   "question": "多个 LLM 智能体在社交网络中的连接形成行为是否接近人类，能否用于社会仿真和合成数据生成。",
+   "setup": "构建多 LLM 智能体网络形成框架，覆盖合成与真实场景：友谊网络、电信网络、就业网络。具体智能体数量、模型型号和时间尺度未说明。",
+   "method": "让多个 LLM 智能体做连边决策，并与人类决策做基准对比，分析微观原则（preferential attachment、triadic closure、homophily）和宏观性质（community structure、small-world effects）。",
+   "findings": "LLM 智能体稳定复现 preferential attachment、triadic closure、homophily 等微观原则，以及 community structure 和 small-world effects 等宏观性质。原则的相对权重随场景变化：友谊网络中偏 homophily，组织场景中偏 heterophily，与社会流动模式一致。",
+   "validation": "做了受控人类被试调查，对比 LLM 与人类参与者的连边决策，报告两者高度一致。未给出具体误差数字或消融实验细节。",
+   "limits": "作者提出 LLM 参与人类网络会带来 bias、fairness 和系统设计方面的问题，但未展开具体局限分析。",
+   "reuse": "框架可用于社会仿真和合成数据生成，但材料未说明是否公开代码或数据。"
+  },
   "a809332edc384a98": {
    "question": "机器人在物理和社会约束下长期运行时，现有具身智能体系统多聚焦指定目标或把执行抽象成符号动作，难以在持续变化的环境和人类需求中评估，TARSphere 要补上这个评估缺口。",
    "setup": "TARSphere-Infra 在物理模拟器里运行机器人策略，环境中有具身 NPC 和受限对话；TARSphere-Harness 让一个冻结的多模态大语言模型（MLLM）通过多级可执行技能行动，利用观察、分层记忆和执行反馈修正决策。基准 TARSphere-Bench 含 30 个室内场景、360 个 episode，覆盖 navigate-and-report 和 fetch-and-deliver 两类任务。",
@@ -38517,6 +39580,15 @@
    "validation": "两项验证：一是 400 次受控试验，检验 persona 在十种行为属性和全部四种环境中的依从性，声明的行为在 366 次试验（91.5%）中被正确表达或正确抑制；二是人类和 LLM 评委评估人工接地 persona 的抽取质量。验证强度中等，未与真实用户行为数据对比。",
    "limits": "未说明。",
    "reuse": "发布了约 100 万条质量过滤 persona 核心集（含 599,847 条人工接地记录），以及 Playground 四环境和 1,010 个任务，可作为模拟用户评估的基础设施直接使用。"
+  },
+  "b019af99666c5b59": {
+   "question": "现有 LLM 社会智能体多为场景定制实现，缺少统一设计框架，难以跨社会情境泛化并产生一致、真实的行为。作者要设计一个通用的 LLM 社会智能体框架。",
+   "setup": "未说明具体智能体数量、环境和时间尺度。框架基于 Social Cognition Theory，用于 LLM-based social agents。",
+   "method": "提出 theory-informed 框架，含三个模块：motivation（推理目标）、action planning（规划连贯行动）、learning（随时间调整行为）。",
+   "findings": "理论驱动的智能体在复杂条件下复现了真实人类行为模式，与真实世界行为数据的偏差比经典生成式基线低最多 75%（跨多个 fidelity 指标）。消融实验中去掉任一模块，误差增加 1.5 到 3.2 倍。",
+   "validation": "与真实世界行为数据对比，偏差最多降低 75%；另有消融实验验证三个模块各自的必要性。",
+   "limits": "未说明。",
+   "reuse": "可借鉴的是基于 Social Cognition Theory 的三模块设计流程（motivation、action planning、learning），代码和数据未说明是否公开。"
   },
   "b032625e88685139": {
    "question": "研究选举产生的领导层能否改善 LLM 多智能体系统在公共池塘资源治理中的合作与社会福利，避免集体失败。",
@@ -38590,6 +39662,15 @@
    "limits": "材料未说明。",
    "reuse": "ATUS 17 领域生成决策场景的方法、506 个隐性偏见场景图谱以及众包偏见审计流程，可用于个性化 AI 智能体、digital twins（数字孪生）和社会仿真的偏见审查。材料未说明是否公开代码或数据。"
   },
+  "bde8d07ca49bc0d5": {
+   "question": "用 LLM 智能体仿真人体生理系统，特别是重症监护中脓毒症患者的多系统生理动态，用于精准诊断、治疗模拟和假设检验。",
+   "setup": "Organ-Agents 是多智能体框架，每个 Simulator 智能体对应一个生理系统（如心血管、肾脏、免疫），共覆盖 9 个系统、125 个变量。训练数据来自 7,134 名脓毒症患者和 7,895 名对照，生成高分辨率生理轨迹。",
+   "method": "先在各系统的时序数据上做监督微调，再用强化学习引导多智能体协调，机制包括动态参考选择和误差修正。",
+   "findings": "在 4,509 名留出患者上各系统 MSE <0.16，按 SOFA 严重度分层表现稳健。能忠实再现低血压、高乳酸血症、低氧血症等多系统事件，时序和阶段演进连贯。反事实仿真可生成替代脓毒症治疗策略下的轨迹和 APACHE II 分数，与匹配的真实患者一致。用合成数据训练的早期预警分类器 AUROC 下降 <0.04。",
+   "validation": "三层验证：留出患者数值仿真（MSE <0.16）；两所医院 22,689 名 ICU 患者的外部验证，分布偏移下仅有中度退化且仿真保持稳定；15 名重症监护医生盲评真实性与生理合理性，Likert 均分分别为 3.9 和 3.7。",
+   "limits": "外部验证显示分布偏移下仿真精度有中度退化；医生评分 3.9/3.7 属中等偏上而非极高。其余未说明。",
+   "reuse": "材料未提供代码或数据链接；可借鉴的方法是系统级智能体分工、监督微调加强化协调的两阶段训练，以及动态参考选择与误差修正机制。"
+  },
   "bf7b99438672f6b8": {
    "question": "当对手成功给 LLM 分配恶意角色后，模型在多步智能体场景下会构成多大威胁，即评估 LLM 被滥用于犯罪行为的 agentic misuse 风险。",
    "setup": "VirtualCrime 是一个动态多智能体沙盒框架，包含 40 个多样化犯罪任务，覆盖 11 张现实地图和 14 种目标（如盗窃、抢劫、绑架）。评估了 8 个强 LLM，置于对抗性红队设定中。具体模型名称和时间尺度未说明。",
@@ -38662,6 +39743,15 @@
    "limits": "验证只覆盖一个热门话题；框架能否推广到其他合成对话数据，材料中仅称可扩展但未给出实验；未说明样本量。",
    "reuse": "可直接借鉴其三维度三层级、含五个预注册指标的评估框架，用于评估其他合成对话数据的自然度；代码和数据未说明是否公开。"
   },
+  "c967111bdc85aaa2": {
+   "question": "解决具身智能（Embodied AI）领域真实世界数据采集成本过高、高质量数据稀缺的问题，并推演多种机器人在城市尺度模拟社会中的部署场景。",
+   "setup": "构建首个面向多种机器人的模拟交互式 3D 社会 GRUtopia。场景数据集 GRScenes 包含 10 万个可交互、精细标注的场景，可自由组合成城市尺度环境，覆盖 89 种场景类别。NPC 系统 GRResidents 由 LLM 驱动，负责社交互动、任务生成与分配。",
+   "method": "采用 Sim2Real 范式，用大规模仿真替代真实数据采集；LLM 驱动的 NPC 系统模拟社交场景，为具身智能应用生成和分配任务。",
+   "findings": "GRScenes 覆盖 89 种场景类别，区别于以往主要聚焦家庭场景的工作，补齐了通用机器人初期部署的服务型环境。基准 GRBench 支持多种机器人，以足式机器人为主要智能体，任务包括 Object Loco-Navigation、Social Loco-Navigation 和 Loco-Manipulation。",
+   "validation": "未说明",
+   "limits": "未说明",
+   "reuse": "项目开源，代码地址为 https://github.com/OpenRobotLab/GRUtopia，包含 GRScenes 场景数据集、GRResidents NPC 系统和 GRBench 基准。"
+  },
   "cb6229cd294bf5b8": {
    "question": "检验 LLM 模拟人类问卷回答时能否复现人类行为的分布结构，而不只是均值层面的吻合。",
    "setup": "使用一个未公开的 2010 年韩国方便面购买消费者选择实验数据，该场景不太可能出现在模型训练数据中。考察三个不同统计类型的响应变量：二元的购买发生、类别型的品牌选择、计数型的购买数量。材料未说明具体使用的 LLM 型号和智能体数量。",
@@ -38706,6 +39796,15 @@
    "validation": "材料称做了 extensive benchmarks 并与强基线及 RL 控制器对比，但未说明具体数据集、对比指标数值或与真实数据的误差，验证强度无法评估。",
    "limits": "材料未说明。",
    "reuse": "模型已在 HuggingFace 公开：https://huggingface.co/Season998/Traffic-R1。"
+  },
+  "cd7179b5c2f9fb19": {
+   "question": "交通规划中异质出行者的集体偏好常与模型驱动的决策工具产出的政策不一致，导致政策实施延迟或失败。研究推演 LLM 能否帮助解决这个对齐问题。",
+   "setup": "多智能体仿真，LLM 智能体扮演城市中不同社区的居民，参与对一组交通政策提案的公投。框架用 GPT-4o 和 Claude-3.5 实现，应用于 Chicago 和 Houston 两个城市。时间尺度未说明。",
+   "method": "LLM 智能体用 chain-of-thought 推理给出排序选择（ranked-choice）或批准制（approval-based）偏好，再用即时决选投票（instant-runoff voting, IRV）聚合，模拟民主共识。",
+   "findings": "LLM 智能体能近似给出合理的集体偏好并对本地情境做出响应，同时表现出模型特有的行为偏差，与基于优化的基准结果有适度偏离。具体数字未说明。",
+   "validation": "与基于优化的基准（optimization-based benchmarks）对比，发现存在适度偏离；未说明与真实投票或民调数据的对比。",
+   "limits": "LLM 智能体表现出模型特有的行为偏差，与优化基准有分歧；其他局限未说明。",
+   "reuse": "仿真框架代码或数据是否公开未说明；可借鉴的方法是用 LLM 智能体加 chain-of-thought 生成偏好、再用 IRV 聚合的公投仿真流程。"
   },
   "cdaff7db1b0526dc": {
    "question": "评估基于真实用户画像的 LLM 智能体能否忠实模拟真实人类讨论行为，构建多语言的行为保真度基准。",
@@ -38806,6 +39905,15 @@
    "limits": "作者明确表示这不是完整解决方案，只提供概念基础；检测与防御在结构上就很难实现。",
    "reuse": "可借鉴的是其提出的研究议程：对抗性信念动力学的理论基础、系统级检测与干预方法、可扩展的仿真实验基础设施。代码和数据未说明。"
   },
+  "d81f4e506b745d9f": {
+   "question": "如何让 LLM 在模拟人类行为（用户、患者、学生等角色）时更像真人，即学会从言语反馈中改进行为，而不是只依赖代码、数学这类可验证奖励。",
+   "setup": "提出 DITTO 模型，基于基础模型训练；配套 SOUL 基准，覆盖 Theory of Mind、角色扮演、社交技能、学习者模拟、用户模拟、人格模拟六类共 10 个任务。智能体数量、环境细节和时间尺度未说明。",
+   "method": "每次 rollout 后给 DITTO 言语反馈，让它生成一个以反馈为条件的改进版 rollout，两个输出用 GRPO 联合优化，把言语指导蒸馏进基础策略，测试时不需要反馈。",
+   "findings": "DITTO 比基础模型平均提升 36%，在 10 个 SOUL 基准中的 6 个上超过 GPT-5.4。",
+   "validation": "与基础模型和 GPT-5.4 在 SOUL 基准上对比，未说明是否与真实人类数据对比或做消融。",
+   "limits": "未说明。",
+   "reuse": "SOUL 基准与训练数据套件可作为统一评测集；把言语反馈作为一等 RL 信号、用反馈条件 rollout 对做 GRPO 联合优化的训练方法可直接借鉴。代码是否开源未说明。"
+  },
   "d932aa51001d5a73": {
    "question": "现有 LLM 驱动的 ABM 难以建模智能体与环境的动态交互、灵活做反事实推理，也缺少自动化的仿真流程，Eco3S 要解决这些问题，用于经济研究和政策分析。",
    "setup": "面向社会经济系统的仿真框架，智能体与环境双向共同演化。材料未说明智能体数量、环境细节、时间尺度和使用的具体模型。",
@@ -38878,6 +39986,15 @@
    "limits": "未说明。",
    "reuse": "SocaSim 框架本身，包括社会网络演化、信任动态、规范传播的环境构建方法，以及逐轮模拟加反事实干预的分析流程。代码和数据是否公开未说明。"
   },
+  "debf91ae68788884": {
+   "question": "解决 LLM 社会仿真中用自然语言描述指定智能体行为时，行为在不同模型间不一致、且无法体现描述细节的问题。",
+   "setup": "面向基于 LLM 的社会仿真智能体，具体智能体数量、环境、时间尺度和使用的模型未说明。",
+   "method": "CoBRA 工具包，核心是一个闭环系统原语，包含两部分：Cognitive Bias Index，通过一组经过验证的经典社会科学实验量化智能体表现出的认知偏差；Behavioral Regulation Engine，将智能体行为对齐到受控的认知偏差水平。该方法是模型无关的。",
+   "findings": "作者发现传统自然语言隐式描述指定的行为在不同模型间不一致，且不能捕捉描述中的细节；CoBRA 让研究者显式指定想要的细节，并在不同模型间获得一致行为。具体数字未说明。",
+   "validation": "Cognitive Bias Index 基于一组经过验证的经典社会科学实验来量化偏差，但与真实数据对比的具体结果、误差数字和消融实验未说明。",
+   "limits": "未说明。",
+   "reuse": "CoBRA 工具包本身，以及把经过验证的社会科学经典实验转化为可复用 gym 环境的做法，作者认为可推广到偏差之外的更丰富社会与情感仿真。代码是否公开未说明。"
+  },
   "e134df5d6c9df5fb": {
    "question": "推演德国出行政策偏好动态：公众对淘汰新燃油车（欧盟净零目标的一部分）的支持度如何随时间演变、智能体立场如何跨轮次切换。",
    "setup": "514 名真实调查受访者被转成自然语言 persona，包含人口特征、政治倾向、出行行为、燃油使用经历和气候态度；使用 LLM 生成式智能体，在变化的社会与政策情境下多轮仿真。具体模型和时间尺度未说明。",
@@ -38895,6 +40012,24 @@
    "validation": "在柏林规模的实验中与实证数据（empirical data）对比仿真结果，发现部分模式可复现、部分存在系统偏差，属于与真实数据的直接对比，但未给出误差数字。",
    "limits": "智能体在出行距离（trip length）和方式偏好上存在系统性偏差。",
    "reuse": "从人口普查数据生成 persona 人工人口并用 LLM 仿真活动日程与方式选择的方法流程可借鉴，代码和数据是否公开未说明。"
+  },
+  "e32658318982011d": {
+   "question": "传统参与式城市规划依赖经验丰富的规划专家，耗时且成本高，能否用 LLM 智能体模拟居民参与过程来生成城市地块的土地利用方案。",
+   "setup": "构建一个 LLM 规划师智能体和数千个具有不同画像与背景的居民智能体，在北京两个真实区域上部署，时间尺度未说明，具体使用的模型未说明。",
+   "method": "规划师先生成初始土地利用方案；每个社区的居民基于自身画像对方案进行讨论并给出反馈；为提高讨论效率采用 fishbowl 讨论机制，每轮部分居民发言、其余作为听众；最后规划师根据居民反馈修改方案。",
+   "findings": "方法在居民满意度（residents satisfaction）和包容性（inclusion）指标上达到 state-of-the-art，在服务可达性（service accessibility）和生态（ecology）指标上超过人类专家，具体数字未说明。",
+   "validation": "在北京两个真实区域上做实验，与人类专家方案在多项指标上对比，但未说明具体对比数据集和误差数值。",
+   "limits": "未说明。",
+   "reuse": "LLM 多智能体协作框架、fishbowl 讨论机制、基于居民画像生成反馈的方法可借鉴，代码和数据未说明是否公开。"
+  },
+  "e330d7ac8c0ab8d0": {
+   "question": "长时程交通仿真中如何建模持续的多智能体交互，以及智能体不断进出场景导致的动态 token 数量变化问题；同时解决长时程仿真结果难以评估的问题。",
+   "setup": "使用大规模冻结的 LLM 作为骨干，把场景拓扑、智能体状态和生成意图投影成变长的结构化自回归 token 流，在 Waymo Open Sim Agent Challenge (WOSAC) 数据上做交互式交通仿真。智能体数量与时间尺度未说明。",
+   "method": "RosettaSim 框架：利用注意力机制的可迁移性和运动 token 与自然语言的分布一致性，让小规模、大部分参数冻结的 LLM 快速适配交通建模；并提出 Retrieval-based Traffic Evaluation (RTE)，检索语义相似的真实场景作为上下文参考锚点来评估长时程仿真。",
+   "findings": "RosettaSim 在 WOSAC 上取得短时程和长时程仿真的 state-of-the-art 表现；RTE 与标准指标的相关系数 r=0.83，高于现有方法的 r=0.74。探针实验显示冻结 LLM 能快速适应交通建模。",
+   "validation": "在 Waymo Open Sim Agent Challenge (WOSAC) 上与现有方法对比，RTE 通过与标准指标的相关性（0.83 vs 0.74）验证其与长时程仿真保真度的对齐程度；未说明与真实轨迹的误差数值。",
+   "limits": "未说明。",
+   "reuse": "RosettaSim 框架和 RTE 评估方法；利用冻结 LLM 的架构归纳偏置与统计先验适配运动 token 的做法。代码是否开源未说明。"
   },
   "e6d65daa2397dd51": {
    "question": "研究在公共服务场景中，指令表述不充分时，自导向 LLM 智能体会自行决定做什么，以及这对居民、患者、学生等对象的影响。",
@@ -38967,6 +40102,15 @@
    "validation": "与 843 名真实受访者的调查实验数据对比，含预设等效性标准、27 个分组单元格的 RMSE、方差比、问题顺序和应答方式的敏感性检验，验证强度较高。",
    "limits": "模型能近似一个总体对比，却无法保留产生该对比的人群结构、组内异质性和测量稳定性；身份线索移除和选择性无应答会改变哪些比较可估计。",
    "reuse": "未说明"
+  },
+  "ef1fba0c494d4d22": {
+   "question": "在线社交网络（OSN）的内容审核干预实际效果难以评估，因为真实数据收集成本高、实验控制受限。作者要推演的场景是：不同审核策略对有毒言论传播的影响。",
+   "setup": "材料未给出智能体数量、环境细节、时间尺度和具体使用的模型，只说明用 LLM 驱动 OSN 对话智能体进行反事实仿真。",
+   "method": "设计了一个 LLM 驱动的 OSN 对话仿真器，支持并行反事实仿真：在保持其他条件不变的前提下，让审核干预影响有毒行为，对比不同干预下的结果。",
+   "findings": "实验显示 OSN 智能体具有心理层面的真实性，仿真中出现社会传染现象，个性化审核策略比其他策略效果更好。材料未给出具体数字。",
+   "validation": "材料称进行了 extensive experiments 并展示了智能体的 psychological realism，但未说明具体验证方式（如与真实数据对比、误差指标），强度无法判断。",
+   "limits": "材料未说明。",
+   "reuse": "材料未说明是否公开代码或数据，可借鉴的是其反事实仿真设计思路：并行运行仅审核干预不同的仿真来评估策略效果。"
   },
   "ef61df5eb8c64c07": {
    "question": "LLM 智能体社会仿真的验证方法不成熟，多数研究只靠主观评估或单次运行。这项研究要检验这类仿真能在多大程度上复现真实在线社区的行为规律。",
@@ -39103,6 +40247,15 @@
    "limits": "未说明。",
    "reuse": "有效温度可作为交通工程模型与拥堵物理（如拥堵渗流、宏观基本图）之间的共同语言；指数分布的单一尺度参数可直接从平均负载估计。"
   },
+  "f941a1a14faa0113": {
+   "question": "LLM 生成文本能否真实模拟人类语言，用于社会科学中的行为仿真时如何验证其拟人程度",
+   "setup": "九个开源权重 LLM，在 X（原 Twitter）、Bluesky、Reddit 三个平台的用户互动数据上测试，比较五种校准策略，包括微调、风格化提示和上下文检索",
+   "method": "提出计算图灵测试框架，结合聚合指标（基于 BERT 的可检测性和语义相似度）与可解释的语言特征（风格标记和主题模式），评估 LLM 输出与人类语言的接近程度",
+   "findings": "校准后 LLM 输出仍与人类文本明显可区分，情感语气和情绪表达差异最大；指令微调模型不如对应基座模型；扩大模型规模不提升拟人度；存在权衡，优化拟人度常牺牲语义保真度，反之亦然",
+   "validation": "与三个真实平台的人类用户互动数据对比，使用 BERT 可检测性、语义相似度、风格与主题特征等指标量化差距，但材料未给出具体误差数字",
+   "limits": "LLM 在捕捉人类交流上存在当前局限，尤其情感表达；人类判断式评估被指出粗糙不可靠",
+   "reuse": "计算图灵测试验证框架本身，可直接用于 LLM 仿真的校准与验证；五种校准策略的对比结果可指导选型"
+  },
   "f94538d40439027e": {
    "question": "解决美国缺少开源、全国范围、带健康属性的合成人口数据集的问题，用于个体层面的建模和精细地理尺度（county 和 census tract）的人群健康结果估计。",
    "setup": "使用 Spatial Health and Population Estimator（SHAPE，空间健康与人口估计器）框架，基于公开调查和人口普查数据合成 2024 年美国合成人口，输出 county 和 census tract 两个尺度的数据，包含 7 项社会人口属性、2 项健康行为和 11 项健康结果，另附交互式 GIS dashboard 和可复现代码。",
@@ -39176,11 +40329,11 @@
    "6fb7d86f5cf1d0ec"
   ],
   "003a2f82749b2679": [
-   "d09e68a476f2ec3f",
    "097be1c351b00ee3",
    "af03b7ee48b990ca",
    "b5be1eee63d8b091",
-   "ca4e9294e2f29dda"
+   "ca4e9294e2f29dda",
+   "fb123e12936139b6"
   ],
   "004bccf67d196e4f": [
    "f75b26067d3e8b16",
@@ -39288,11 +40441,11 @@
    "2b09014f7653140f"
   ],
   "035c55f3fb886d4a": [
-   "d09e68a476f2ec3f",
    "19f4af6180e2c5ae",
    "198e8d7bd17511c1",
    "3189b851eff08dd8",
-   "af03b7ee48b990ca"
+   "af03b7ee48b990ca",
+   "c3ac1c168ce68ab1"
   ],
   "03a64b8de7fbbbf8": [
    "8e803d3fc8b7a2e2",
@@ -39425,7 +40578,7 @@
    "cb7e66c2aaff6939",
    "afa2cc5c72af1d76",
    "eb2b70293a48b1d2",
-   "f13c4834abecd0fd"
+   "91c736e21d4e3552"
   ],
   "063221652bf2a599": [
    "662f50a4264a875c",
@@ -39555,17 +40708,17 @@
   ],
   "097be1c351b00ee3": [
    "003a2f82749b2679",
-   "d09e68a476f2ec3f",
    "3189b851eff08dd8",
    "af03b7ee48b990ca",
-   "82417a27a131d5d9"
+   "82417a27a131d5d9",
+   "ca4e9294e2f29dda"
   ],
   "0a113ce3aed82146": [
    "408457c46f4c7f25",
    "f75b26067d3e8b16",
    "37ceeabda38f73d0",
-   "121799532d4ad4cb",
-   "8493d1c006f44666"
+   "94fa74c7b9f0e060",
+   "121799532d4ad4cb"
   ],
   "0a1d111f460a04b6": [
    "f033d2df81ed6a4d",
@@ -39680,11 +40833,11 @@
    "12f64111a08d91c8"
   ],
   "0e7a6e6b6f0e960f": [
-   "c0457de4d1dfc92b",
    "938fa5940d38797a",
    "e330d7ac8c0ab8d0",
    "eafa3ae19e2190fd",
-   "b9226356760a196a"
+   "b9226356760a196a",
+   "cd181b82196eb0e0"
   ],
   "0e9de469b0948ab1": [
    "9d55a9f268496eee",
@@ -39894,7 +41047,7 @@
    "e22ac3a7500996b6",
    "c419a6790d29db36",
    "67ba56434d4a8cfe",
-   "d09e68a476f2ec3f"
+   "ca4e9294e2f29dda"
   ],
   "147e4be29034a8b1": [
    "89ebaacc7bb232b6",
@@ -40940,11 +42093,11 @@
    "e3d37c4deb15391f"
   ],
   "32569b455a5ee3b4": [
-   "7d1eed8c616453bb",
    "f5b8bd6633451741",
    "4d814ad9f2097257",
    "3b960dae69d37e03",
-   "97579754d322a919"
+   "97579754d322a919",
+   "1c16631ca88cafed"
   ],
   "325f4995e0d1bb02": [
    "3eefc5d18a4ade26",
@@ -41325,11 +42478,11 @@
    "fe57e8b5ade2c0ca"
   ],
   "3b960dae69d37e03": [
-   "b6cb6a51c1b54da6",
    "12f64111a08d91c8",
    "33fef958a60b85a2",
    "922aefc032c3d951",
-   "6837c1398a1c6943"
+   "6837c1398a1c6943",
+   "4e3343caef269cad"
   ],
   "3c096beab19bc742": [
    "95e33ecfe0ac0232",
@@ -41484,11 +42637,11 @@
    "a9a85fcb41e84458"
   ],
   "3f4cccd70fdb1d61": [
-   "e5057aea82287946",
    "3506d68ad82297ef",
    "97579754d322a919",
    "c16b3de4025bbbc6",
-   "dffe5b6218143f26"
+   "dffe5b6218143f26",
+   "c967111bdc85aaa2"
   ],
   "3f6c8be79bdf323c": [
    "91c736e21d4e3552",
@@ -41542,9 +42695,9 @@
   "408457c46f4c7f25": [
    "37ceeabda38f73d0",
    "f75b26067d3e8b16",
+   "94fa74c7b9f0e060",
    "0a113ce3aed82146",
-   "121799532d4ad4cb",
-   "5a913b506f75dfba"
+   "121799532d4ad4cb"
   ],
   "408c344060ff2813": [
    "092e66dce882ce32",
@@ -41703,9 +42856,9 @@
   "442531c9eef4b7e1": [
    "cd177b8645612a0e",
    "f712dad26d4def88",
+   "94fa74c7b9f0e060",
    "8e5d8a17cf8cbd9f",
-   "5a913b506f75dfba",
-   "25e24a63821a39cb"
+   "5a913b506f75dfba"
   ],
   "44ab748df6e8a24d": [
    "5f14acf985c55152",
@@ -41849,10 +43002,10 @@
   ],
   "49ed99001b9bec92": [
    "f04285849dcf3cb2",
-   "f6696657e4d0ea0a",
    "d1b73129d4f16e67",
    "d509fd896ab437cf",
-   "2406366e4b2e93b7"
+   "2406366e4b2e93b7",
+   "eb2b70293a48b1d2"
   ],
   "4a0c0d9f5dc6eccc": [
    "4f3a43c24fac32d8",
@@ -42005,8 +43158,8 @@
    "642b1319623de080",
    "cd2db2ca93f8c455",
    "3dccb41c2cc4ab54",
-   "ede333cc9365c1b9",
-   "7a3eeda26c88c283"
+   "7a3eeda26c88c283",
+   "eafa3ae19e2190fd"
   ],
   "4db09406978f96a9": [
    "9d8238d886bc104a",
@@ -42108,10 +43261,10 @@
   ],
   "4ffb0b30102d6038": [
    "5f1635be7ca5efe7",
-   "6281613eef2b3451",
    "0541b4d3134738d8",
    "d2bd278b44c7b809",
-   "4ef246f38df29701"
+   "4ef246f38df29701",
+   "e62663c24c5cbe47"
   ],
   "501c6e0c202973f4": [
    "b939919ec86173be",
@@ -42132,7 +43285,7 @@
    "cd2db2ca93f8c455",
    "e22ac3a7500996b6",
    "fd6f27d8dedabcb4",
-   "c0457de4d1dfc92b"
+   "ec67226e90f076de"
   ],
   "5085a13d05f6a5be": [
    "9340b30660ad2496",
@@ -42164,10 +43317,10 @@
   ],
   "5104910e7432bbd9": [
    "49ed99001b9bec92",
-   "f6696657e4d0ea0a",
    "eb2b70293a48b1d2",
    "6d8a2b95881427f1",
-   "afa2cc5c72af1d76"
+   "afa2cc5c72af1d76",
+   "1f0a89853feac1e1"
   ],
   "5139d6f099bface2": [
    "07a258f8bcaa38ef",
@@ -42180,8 +43333,8 @@
    "f7fcefcd7ee90b76",
    "9ce638c0c31e56b5",
    "50edd38fb888a3f0",
-   "f4d7d3cb1d4075c3",
-   "ed53d8c8968d1fb3"
+   "ed53d8c8968d1fb3",
+   "e1cc72e8f9ed637e"
   ],
   "517ae3531f8bcfa7": [
    "9ff36f330ad0ff8d",
@@ -42275,11 +43428,11 @@
    "95e33ecfe0ac0232"
   ],
   "53a8a04eddbcd422": [
+   "94fa74c7b9f0e060",
    "408457c46f4c7f25",
    "a8f1b664902247e4",
    "5a913b506f75dfba",
-   "f75b26067d3e8b16",
-   "bbc9b4d66e7e40f5"
+   "f75b26067d3e8b16"
   ],
   "53b605b3df0308b7": [
    "12f64111a08d91c8",
@@ -42453,8 +43606,8 @@
    "23cc31f80e887750",
    "5f1635be7ca5efe7",
    "01fdaa0fb2ad2630",
-   "6281613eef2b3451",
-   "afa2cc5c72af1d76"
+   "afa2cc5c72af1d76",
+   "a19bf5b7231a2d8c"
   ],
   "58b649a84f87fa06": [
    "1086e772026ac543",
@@ -42493,10 +43646,10 @@
   ],
   "59ee4f144ebcc9f4": [
    "1465a55bff71e654",
-   "d09e68a476f2ec3f",
    "ca4e9294e2f29dda",
    "8134719a84a07917",
-   "af03b7ee48b990ca"
+   "af03b7ee48b990ca",
+   "b5be1eee63d8b091"
   ],
   "5a26a6977f58cfad": [
    "51bce9ad981a44fa",
@@ -42731,10 +43884,10 @@
   ],
   "5f33e9a71c4c93e6": [
    "035439ae5b3992f0",
-   "0323ea68b0585520",
    "e79ace9f69852390",
    "6d8a2b95881427f1",
-   "af03b7ee48b990ca"
+   "af03b7ee48b990ca",
+   "b5be1eee63d8b091"
   ],
   "5f419b89884109ca": [
    "7cff669a5e295e28",
@@ -42779,11 +43932,11 @@
    "3202349524168e9a"
   ],
   "604461ede6ef08e4": [
-   "f4d7d3cb1d4075c3",
-   "7d1eed8c616453bb",
    "f3b107b32a642876",
    "5085a13d05f6a5be",
-   "3506d68ad82297ef"
+   "3506d68ad82297ef",
+   "826ac7cc8f3c7938",
+   "f7fcefcd7ee90b76"
   ],
   "6052a20540fdca38": [
    "af73011e2a5a8e4e",
@@ -43091,7 +44244,7 @@
    "e6238cb2b4a4c1b0",
    "e1cc72e8f9ed637e",
    "582494f7de74fffb",
-   "b6cb6a51c1b54da6"
+   "ed1eae350ecc65d0"
   ],
   "69ee66c28889ff21": [
    "50edd38fb888a3f0",
@@ -43103,9 +44256,9 @@
   "69f7bae4ba9b6ac5": [
    "f74e0826be73c7ed",
    "c6fd0694b18109c4",
-   "e5057aea82287946",
    "96774bbe3664238d",
-   "00fa965cfd278680"
+   "00fa965cfd278680",
+   "660fbef37e63a043"
   ],
   "6a01813862cec28a": [
    "9e2e30ccd5aec0a6",
@@ -43293,8 +44446,8 @@
    "ea77329bd2071698",
    "8f12f0dae2ea5127",
    "e1cc72e8f9ed637e",
-   "e5057aea82287946",
-   "660fbef37e63a043"
+   "660fbef37e63a043",
+   "e79ace9f69852390"
   ],
   "6e01ae41cb52ef94": [
    "5b4d4d395cf7f184",
@@ -43399,7 +44552,7 @@
    "3cbcf6022a9093ab",
    "f7fcefcd7ee90b76",
    "9340b30660ad2496",
-   "6281613eef2b3451"
+   "4cce3bf17b7a0262"
   ],
   "6ff9809b1b5fb264": [
    "3cfe286a841e55f8",
@@ -43462,7 +44615,7 @@
    "9b9ac735c0520de6",
    "350cb8174bfa5832",
    "d115faee9f57d639",
-   "0ba245dde78a30ed"
+   "7b1aa4bb0a973e60"
   ],
   "72af26774086d271": [
    "f23f3f241ac47b98",
@@ -43965,8 +45118,8 @@
    "93830379823a1268",
    "b5be1eee63d8b091",
    "af03b7ee48b990ca",
-   "d09e68a476f2ec3f",
-   "097be1c351b00ee3"
+   "097be1c351b00ee3",
+   "5071f896f798eb83"
   ],
   "8008636e1628a484": [
    "cea495165a6b9629",
@@ -44787,6 +45940,13 @@
    "cea495165a6b9629",
    "f207c43561f2124b"
   ],
+  "94fa74c7b9f0e060": [
+   "408457c46f4c7f25",
+   "37ceeabda38f73d0",
+   "f75b26067d3e8b16",
+   "5a913b506f75dfba",
+   "110c10dbf99360e5"
+  ],
   "951982280b357cdb": [
    "26fa0d1820f04d7f",
    "61ceb6376b1ec092",
@@ -45302,8 +46462,8 @@
    "97579754d322a919",
    "e1cc72e8f9ed637e",
    "69c6bd5ab39923dd",
-   "b6cb6a51c1b54da6",
-   "3506d68ad82297ef"
+   "3506d68ad82297ef",
+   "ac1be220a2fcbaaa"
   ],
   "9fd0b71e5ef7184b": [
    "d9747d391f1732ef",
@@ -45537,11 +46697,11 @@
    "04ec9875fe98aa04"
   ],
   "a43a5cc75852444f": [
-   "7d1eed8c616453bb",
    "69206418dc564336",
    "4eebbe5dba30fd15",
    "07a258f8bcaa38ef",
-   "6b987741a5287104"
+   "6b987741a5287104",
+   "2c54dc17f620acec"
   ],
   "a47fdb305498120b": [
    "3c4f7c74ff68a934",
@@ -45892,11 +47052,11 @@
    "3189b851eff08dd8"
   ],
   "af03b7ee48b990ca": [
-   "d09e68a476f2ec3f",
    "b5be1eee63d8b091",
    "ca4e9294e2f29dda",
    "b3871885fa350a70",
-   "3189b851eff08dd8"
+   "3189b851eff08dd8",
+   "003a2f82749b2679"
   ],
   "af45058668cd573a": [
    "f51b1a25cbc11509",
@@ -46158,11 +47318,11 @@
    "ada2b4d5f7f1b58f"
   ],
   "b5be1eee63d8b091": [
-   "d09e68a476f2ec3f",
    "af03b7ee48b990ca",
    "ca4e9294e2f29dda",
    "003a2f82749b2679",
-   "67ba56434d4a8cfe"
+   "67ba56434d4a8cfe",
+   "3189b851eff08dd8"
   ],
   "b5c0748305213a37": [
    "d509fd896ab437cf",
@@ -46251,9 +47411,9 @@
   "b827931c22162f86": [
    "0a2a1a58a413f97e",
    "1413a4ddc72a2582",
-   "c0457de4d1dfc92b",
    "4a74ea117b3c8952",
-   "6c1e26017ef610b0"
+   "6c1e26017ef610b0",
+   "d3a9c143bd932af1"
   ],
   "b8dab384ac0d6a8c": [
    "cea02f2b5c275d28",
@@ -46337,7 +47497,7 @@
    "948975165c032795",
    "e9e0b70eba5519e5",
    "f124886f790e661d",
-   "e5057aea82287946"
+   "035439ae5b3992f0"
   ],
   "bbc9b4d66e7e40f5": [
    "01c601ab578c8adc",
@@ -46435,11 +47595,11 @@
    "b5176282f285fe97"
   ],
   "bf3b611e10312e5b": [
-   "271df2f2321e4552",
    "b6469672b92c7679",
    "dc2a8ca54310bc66",
    "c6fd0694b18109c4",
-   "b2c485b53a59b6fb"
+   "b2c485b53a59b6fb",
+   "9b9cdf7e34998dbd"
   ],
   "bf7b99438672f6b8": [
    "18fbdc202e1a6d88",
@@ -46610,18 +47770,18 @@
    "3c32ca0a17b73697"
   ],
   "c3e83ff7286a1e0b": [
+   "94fa74c7b9f0e060",
    "9c4e7d91600a5cfc",
    "e572dc28a6688b52",
    "37ceeabda38f73d0",
-   "5ed1556735d62267",
-   "8ad5220a89a9bd3a"
+   "5ed1556735d62267"
   ],
   "c414ddb8acf55525": [
-   "271df2f2321e4552",
    "86750a924e107414",
    "d509fd896ab437cf",
    "f74e0826be73c7ed",
-   "a3ebf1a4a4ed669f"
+   "a3ebf1a4a4ed669f",
+   "4be2ddb84408c0d9"
   ],
   "c419a6790d29db36": [
    "eafa3ae19e2190fd",
@@ -46675,9 +47835,9 @@
   "c67a7aebbb6f7b57": [
    "b5c0748305213a37",
    "e79ace9f69852390",
-   "e5057aea82287946",
    "c77f3861f45a1958",
-   "887e701ac97d5041"
+   "887e701ac97d5041",
+   "dffe5b6218143f26"
   ],
   "c67b7b3bb32ecbb1": [
    "cede7a528cd7c566",
@@ -47314,7 +48474,7 @@
    "f04a76ae9ccbeb74",
    "d509fd896ab437cf",
    "ed0cddb711ad36d3",
-   "f6696657e4d0ea0a"
+   "f04285849dcf3cb2"
   ],
   "d6f40ed2e33a36d5": [
    "b09bbd94bc8c2f68",
@@ -47380,11 +48540,11 @@
    "9c4e7d91600a5cfc"
   ],
   "d881198094715ea2": [
-   "f6696657e4d0ea0a",
    "db5807f04cd66534",
    "d49a28d2bcc3bca0",
    "d31b8c5d6c867f07",
-   "697acf0a52c6dd5e"
+   "697acf0a52c6dd5e",
+   "cea495165a6b9629"
   ],
   "d91283b2db5ea2e2": [
    "7e8e5ffa08057dee",
@@ -47613,9 +48773,9 @@
   "e03085c039f9da79": [
    "19dbb3367bb1c9d9",
    "91c736e21d4e3552",
-   "f13c4834abecd0fd",
    "a81df975afe0f0fb",
-   "2f8b67e3b7616708"
+   "2f8b67e3b7616708",
+   "9d25417a3d92c202"
   ],
   "e055d2e137babfc5": [
    "4051d969919b8423",
@@ -47733,8 +48893,8 @@
    "b9226356760a196a",
    "eafa3ae19e2190fd",
    "0e7a6e6b6f0e960f",
-   "c0457de4d1dfc92b",
-   "938fa5940d38797a"
+   "938fa5940d38797a",
+   "cd181b82196eb0e0"
   ],
   "e3b6a743f5dc50b5": [
    "afcf6cc459b4a0cb",
@@ -47824,8 +48984,8 @@
    "69c6bd5ab39923dd",
    "c6fd0694b18109c4",
    "886eb34dd4802dfc",
-   "b6cb6a51c1b54da6",
-   "e1cc72e8f9ed637e"
+   "e1cc72e8f9ed637e",
+   "a52edc0dfce0b9dd"
   ],
   "e62663c24c5cbe47": [
    "ed0cddb711ad36d3",
@@ -47999,8 +49159,8 @@
    "6de95b4e47cd959b",
    "c8de8bcbf6fd6c86",
    "a6e7e91569fce679",
-   "ecf0cf06eb7657bf",
-   "582494f7de74fffb"
+   "582494f7de74fffb",
+   "e1cc72e8f9ed637e"
   ],
   "ea99e868bf85767a": [
    "a480bed7c5460ca4",
@@ -48095,10 +49255,10 @@
   ],
   "ed0bbbb9f0d78bc8": [
    "86750a924e107414",
-   "f6696657e4d0ea0a",
    "2406366e4b2e93b7",
    "afa2cc5c72af1d76",
-   "c6693bb7de7b2dd9"
+   "c6693bb7de7b2dd9",
+   "d1b73129d4f16e67"
   ],
   "ed0cddb711ad36d3": [
    "b1fd6335c69a72e0",
@@ -48195,8 +49355,8 @@
    "3189b851eff08dd8",
    "e6dff640154a6b4c",
    "50d86d7ce623d9b1",
-   "d09e68a476f2ec3f",
-   "82417a27a131d5d9"
+   "82417a27a131d5d9",
+   "c3ac1c168ce68ab1"
   ],
   "ef1fba0c494d4d22": [
    "68629790b6213956",
@@ -48547,10 +49707,10 @@
   ],
   "f7fcefcd7ee90b76": [
    "5161e9f679ba8559",
-   "f4d7d3cb1d4075c3",
    "c355c1e5aaec6967",
    "22be3d867a1d8fee",
-   "4e4bd3ad705c8e2d"
+   "4e4bd3ad705c8e2d",
+   "209cd4cf1b6a1f41"
   ],
   "f802782cdb8d6f5d": [
    "26cf1ab046ac0375",
