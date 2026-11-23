@@ -700,6 +700,50 @@
       "title_prefix": "edsl",
       "enabled": true,
       "interval_hours": 12
+    },
+    {
+      "id": "rss-paxsims",
+      "name": "PAXsims（兵棋推演）",
+      "kind": "rss",
+      "url": "https://paxsims.wordpress.com/feed/",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 12
+    },
+    {
+      "id": "gnews-game-ai-npc",
+      "name": "Google 新闻 · AI NPC",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22AI+NPC%22+OR+%22AI+NPCs%22+OR+%22generative+NPC%22+OR+%22AI-driven+NPC%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "game",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-game-npc",
+      "name": "Google 新闻 · 中文：AI NPC 与游戏",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28AI+NPC+OR+%E6%99%BA%E8%83%BDNPC+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8BNPC%29+%E6%B8%B8%E6%88%8F+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "game",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-biz-sim-funding",
+      "name": "Google 新闻 · 智能体仿真融资",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22simulation%22+OR+%22digital+twin%22+OR+%22synthetic+data%22%29+%28%22AI+agents%22+OR+%22multi-agent%22%29+%28raises+OR+funding+OR+%22seed+round%22+OR+%22Series+A%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
     }
   ]
 }

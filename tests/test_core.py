@@ -146,6 +146,18 @@ class TestRelevance(unittest.TestCase):
         self.assertEqual(relevance.guess_domain({"kind": "paper", "title": "x"}, kw), "academic")
         self.assertEqual(relevance.guess_domain({"kind": "news", "title": "AI NPC game simulation", "text": ""}, kw), "game")
 
+    def test_ai_npc_news_passes_prefilter(self):
+        kw, cfg = keywords(), settings()
+        it = {"title": "Activision AI NPC patent could teach game characters to trash-talk", "text": "", "focused": False}
+        it.update(relevance.keyword_score(it, kw))
+        self.assertTrue(relevance.passes_prefilter(it, cfg))
+        zh = {"title": "动视专利申请拟让游戏NPC通过玩家语音聊天学习反应", "text": "", "focused": True}
+        zh.update(relevance.keyword_score(zh, kw))
+        self.assertTrue(relevance.passes_prefilter(zh, cfg))
+        plain = {"title": "Patch notes: NPC pathing fixes", "text": "", "focused": False}
+        plain.update(relevance.keyword_score(plain, kw))
+        self.assertFalse(relevance.passes_prefilter(plain, cfg))  # 普通游戏新闻里的 NPC 没有 AI 词，不放行
+
     def test_github_release_source(self):
         atom = """<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
