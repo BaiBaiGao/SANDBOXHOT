@@ -146,6 +146,29 @@ class TestRelevance(unittest.TestCase):
         self.assertEqual(relevance.guess_domain({"kind": "paper", "title": "x"}, kw), "academic")
         self.assertEqual(relevance.guess_domain({"kind": "news", "title": "AI NPC game simulation", "text": ""}, kw), "game")
 
+    def test_keyword_scope(self):
+        """扩充后的关键词仍限定在“LLM 智能体做沙盘推演/仿真”的范围内。"""
+        kw, th = keywords(), settings()["pipeline"]["keyword_threshold"]
+        inside = [
+            "基于大模型智能体的城市暴雨疏散仿真",
+            "Studio ships AI NPCs driven by a large language model in its open-world game",
+            "Homo silicus: simulated participants built on GPT reproduce classic experiments",
+            "用大模型做舆情推演：模拟网民在突发事件中的反应",
+            "Opinion dynamics with LLM-based agents on a simulated social network",
+        ]
+        outside = [
+            "EU launches regulatory sandbox for AI startups and LLM providers",
+            "监管沙盒新规：人工智能企业可申请试点",
+            "LLM speeds up computational fluid dynamics simulation of turbines",
+            "Crowd simulation for stadium design using finite element methods",
+            "A new open-world game with smarter NPC pathfinding",
+            "疏散仿真软件发布新版本",  # 没有 AI 成分
+        ]
+        for t in inside:
+            self.assertGreaterEqual(relevance.keyword_score({"title": t, "text": ""}, kw)["kw_score"], th, t)
+        for t in outside:
+            self.assertLess(relevance.keyword_score({"title": t, "text": ""}, kw)["kw_score"], th, t)
+
     def test_github_release_source(self):
         atom = """<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">

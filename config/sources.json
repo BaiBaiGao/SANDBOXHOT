@@ -700,6 +700,86 @@
       "title_prefix": "edsl",
       "enabled": true,
       "interval_hours": 12
+    },
+    {
+      "id": "arxiv-crisis-infrastructure",
+      "name": "arXiv · 应急、疏散与基础设施仿真",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:evacuation OR abs:disaster OR abs:\"emergency response\" OR abs:\"emergency management\" OR abs:\"critical infrastructure\" OR abs:blackout OR abs:\"power outage\" OR abs:flood OR abs:earthquake OR abs:\"crowd\") AND (abs:\"agent-based\" OR abs:simulation OR abs:simulate OR abs:\"multi-agent\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\" OR abs:\"generative agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "arxiv-opinion-media",
+      "name": "arXiv · 舆论、社交媒体与选举仿真",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(abs:\"opinion dynamics\" OR abs:\"social media\" OR abs:misinformation OR abs:polarization OR abs:election OR abs:voters OR abs:\"information diffusion\") AND (abs:\"agent-based\" OR abs:simulation OR abs:simulate OR abs:\"simulated users\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\" OR abs:\"generative agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
+    },
+    {
+      "id": "gnews-game-ai-npc",
+      "name": "Google 新闻 · AI NPC 与智能体游戏",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22AI+NPC%22+OR+%22AI+NPCs%22+OR+%22generative+agents%22+OR+%22LLM-powered+NPC%22+OR+%22AI-driven+NPCs%22+OR+%22AI+town%22%29+game+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "game",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-game-npc",
+      "name": "Google 新闻 · 中文 AI NPC 与智能体游戏",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28AI+NPC+OR+%E6%99%BA%E8%83%BDNPC+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8BNPC+OR+AI%E5%B0%8F%E9%95%87+OR+%E6%99%BA%E8%83%BD%E4%BD%93%E6%B8%B8%E6%88%8F%29+%E6%B8%B8%E6%88%8F+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "game",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-biz-sim-funding",
+      "name": "Google 新闻 · 合成用户与 AI 仿真公司融资",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22synthetic+users%22+OR+%22synthetic+respondents%22+OR+%22AI+simulation%22+OR+%22simulated+customers%22+OR+%22agent-based+simulation%22+OR+%22human+digital+twin%22%29+%28raises+OR+funding+OR+%22Series+A%22+OR+seed+OR+acquires%29+when%3A30d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-biz-sim",
+      "name": "Google 新闻 · 中文智能体仿真公司与产品",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B%29+%28%E4%BB%BF%E7%9C%9F+OR+%E7%A4%BE%E4%BC%9A%E6%A8%A1%E6%8B%9F+OR+%E5%90%88%E6%88%90%E7%94%A8%E6%88%B7+OR+%E6%8E%A8%E6%BC%94%E5%B9%B3%E5%8F%B0%29+%28%E8%9E%8D%E8%B5%84+OR+%E5%8F%91%E5%B8%83+OR+%E5%95%86%E4%B8%9A%E5%8C%96+OR+%E4%B8%8A%E7%BA%BF%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "business",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
     }
   ]
 }
