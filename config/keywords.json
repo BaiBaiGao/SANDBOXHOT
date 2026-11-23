@@ -154,7 +154,12 @@
     "智能npc": 25,
     "桌面推演": 35,
     "场景推演": 30,
-    "数字人群": 25
+    "数字人群": 25,
+    "虚拟市民": 35,
+    "合成人口": 35,
+    "synthetic citizens": 35,
+    "virtual citizens": 30,
+    "simulated residents": 30
   },
   "ai": {
     "llm": 20,

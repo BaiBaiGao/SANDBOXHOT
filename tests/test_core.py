@@ -155,6 +155,7 @@ class TestRelevance(unittest.TestCase):
             "Homo silicus: simulated participants built on GPT reproduce classic experiments",
             "用大模型做舆情推演：模拟网民在突发事件中的反应",
             "Opinion dynamics with LLM-based agents on a simulated social network",
+            "4万个AI虚拟市民：数字孪生如何模拟未来城市？——安道尔实践（四）",
         ]
         outside = [
             "EU launches regulatory sandbox for AI startups and LLM providers",

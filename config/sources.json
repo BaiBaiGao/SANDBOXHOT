@@ -780,6 +780,28 @@
       "focused": true,
       "enabled": true,
       "interval_hours": 4
+    },
+    {
+      "id": "gnews-app-synthetic-city",
+      "name": "Google 新闻 · 合成人口与城市数字孪生案例",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22synthetic+population%22+OR+%22synthetic+citizens%22+OR+%22virtual+citizens%22+OR+%22AI+residents%22+OR+%22simulated+residents%22%29+%28city+OR+%22urban+planning%22+OR+%22national+planning%22+OR+%22digital+twin%22%29+%28AI+OR+LLM+OR+agents%29+when%3A30d&hl=en-US&gl=US&ceid=US%3Aen",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
+    },
+    {
+      "id": "gnews-zh-synthetic-city",
+      "name": "Google 新闻 · 中文虚拟市民与城市仿真案例",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%E8%99%9A%E6%8B%9F%E5%B8%82%E6%B0%91+OR+%E5%90%88%E6%88%90%E4%BA%BA%E5%8F%A3+OR+%E5%9F%8E%E5%B8%82%E7%A7%91%E5%AD%A6+OR+%E5%9F%8E%E5%B8%82%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F+OR+%E5%9F%8E%E5%B8%82%E4%BB%BF%E7%9C%9F%29+%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+AI%29+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "tier": "T2",
+      "group": "application",
+      "focused": true,
+      "enabled": true,
+      "interval_hours": 4
     }
   ]
 }
