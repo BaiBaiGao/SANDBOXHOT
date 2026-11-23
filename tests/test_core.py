@@ -156,6 +156,8 @@ class TestRelevance(unittest.TestCase):
             "用大模型做舆情推演：模拟网民在突发事件中的反应",
             "Opinion dynamics with LLM-based agents on a simulated social network",
             "4万个AI虚拟市民：数字孪生如何模拟未来城市？——安道尔实践（四）",
+            "Algorithmic fidelity of GPT-4 in predicting voting behavior",
+            "用大模型做调查模拟：硅基样本能否替代问卷？",
         ]
         outside = [
             "EU launches regulatory sandbox for AI startups and LLM providers",
@@ -164,6 +166,7 @@ class TestRelevance(unittest.TestCase):
             "Crowd simulation for stadium design using finite element methods",
             "A new open-world game with smarter NPC pathfinding",
             "疏散仿真软件发布新版本",  # 没有 AI 成分
+            "Using LLMs to annotate tweets for computational social science",  # 计算社会科学但不是仿真
         ]
         for t in inside:
             self.assertGreaterEqual(relevance.keyword_score({"title": t, "text": ""}, kw)["kw_score"], th, t)

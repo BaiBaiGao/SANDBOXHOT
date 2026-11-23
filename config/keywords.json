@@ -159,7 +159,15 @@
     "合成人口": 35,
     "synthetic citizens": 35,
     "virtual citizens": 30,
-    "simulated residents": 30
+    "simulated residents": 30,
+    "algorithmic fidelity": 35,
+    "survey simulation": 35,
+    "simulated survey": 35,
+    "synthetic survey": 35,
+    "simulated human samples": 40,
+    "llm-simulated": 30,
+    "调查模拟": 35,
+    "模拟调查": 35
   },
   "ai": {
     "llm": 20,

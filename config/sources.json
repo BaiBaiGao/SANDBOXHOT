@@ -802,6 +802,60 @@
       "focused": true,
       "enabled": true,
       "interval_hours": 4
+    },
+    {
+      "id": "openalex-silicon-survey",
+      "name": "OpenAlex · 硅基样本与调查模拟（社会学/政治学期刊）",
+      "kind": "openalex",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "large language model simulated survey respondents public opinion",
+      "max_results": 40,
+      "interval_hours": 12,
+      "enabled": true
+    },
+    {
+      "id": "openalex-css-abm",
+      "name": "OpenAlex · 计算社会科学中的 LLM 智能体建模",
+      "kind": "openalex",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "computational social science large language model agent-based model",
+      "max_results": 40,
+      "interval_hours": 12,
+      "enabled": true
+    },
+    {
+      "id": "openalex-sociology-llm-sim",
+      "name": "OpenAlex · 社会学的 LLM 社会仿真",
+      "kind": "openalex",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "sociology large language model agents social simulation",
+      "max_results": 40,
+      "interval_hours": 12,
+      "enabled": true
+    },
+    {
+      "id": "arxiv-social-science",
+      "name": "arXiv · 社会科学分类（社会物理/社会网络/计算与社会/经济）",
+      "kind": "arxiv",
+      "tier": "T1",
+      "group": "academic",
+      "focused": true,
+      "query": "(cat:physics.soc-ph OR cat:cs.SI OR cat:cs.CY OR cat:econ.GN) AND (abs:simulation OR abs:simulate OR abs:\"agent-based\" OR abs:\"synthetic respondents\" OR abs:\"silicon\" OR abs:\"survey responses\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language models\" OR abs:\"generative agents\")",
+      "max_results": 60,
+      "interval_hours": 6,
+      "enabled": true,
+      "backfill": {
+        "since": "2023-01-01",
+        "page_size": 100,
+        "pages_per_fetch": 2,
+        "max_pages": 4
+      }
     }
   ]
 }
