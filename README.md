@@ -59,6 +59,8 @@ HN / GitHub / 游戏      ┘   发布网站  ◀──合并──────�
 
 **商业和实际应用的扩充**：新增 9 个 Google 新闻检索源（中英文，免费），覆盖合成用户与合成样本公司、AI 仿真创业与融资、数字孪生产品、兵棋推演、政策/城市/应急推演和公共卫生模拟。论文如果用真实地区、机构或事件的数据做了案例推演，会被标成“真实场景应用”，同时出现在实际应用板块。应用和商业的入选门槛分别降到 40 和 50 分。
 
+**2026-11-23 实测补充的信源**：PAXsims（兵棋推演专业博客）、Google 新闻的 AI NPC 检索（中英文各一个）和智能体仿真融资检索，另外有 8 个核心仿真框架（Concordia、OASIS、AgentSociety、TinyTroupe、Mesa、Mesa-LLM、Sotopia、EDSL）的 GitHub Releases。关键词表加了 `npc`、`ai npc`。同一天又加了其余能正常抓取的源：War on the Rocks、CSET、RAND 新闻稿、Smart Cities Dive、GamesIndustry.biz、80.lv、GameLook、Inworld 博客、SiliconANGLE AI 频道，以及公众号新智元、集智俱乐部、PaperWeekly、夕小瑶科技说、空天防务观察。这些是通用源，相关内容不多，靠关键词预筛（不花积分）先挡掉大部分。没有加的：JASSS 没有 RSS，游戏葡萄的 feed 是 404，36氪的 feed 解析失败，VentureBeat 返回 429，RAND 出版物 feed 是空的，Jack Clark 博客和已有的 Import AI 内容相同。
+
 **写作风格**：所有模型生成的中文（标题、摘要、精读、速读卡、日报、研判、专题）都遵守 [`prompts/style.md`](prompts/style.md) 的“活人感”规则，改编自数字生命卡兹克的 [human-writing](https://github.com/KKKKhazix/human-writing)（MIT 协议）：只写材料里有的东西，不写翻案腔和套话，不用破折号和黑话。
 
 ## 访问统计

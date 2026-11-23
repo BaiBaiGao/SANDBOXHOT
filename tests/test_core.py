@@ -146,6 +146,43 @@ class TestRelevance(unittest.TestCase):
         self.assertEqual(relevance.guess_domain({"kind": "paper", "title": "x"}, kw), "academic")
         self.assertEqual(relevance.guess_domain({"kind": "news", "title": "AI NPC game simulation", "text": ""}, kw), "game")
 
+    def test_ai_npc_news_passes_prefilter(self):
+        kw, cfg = keywords(), settings()
+        it = {"title": "Activision AI NPC patent could teach game characters to trash-talk", "text": "", "focused": False}
+        it.update(relevance.keyword_score(it, kw))
+        self.assertTrue(relevance.passes_prefilter(it, cfg))
+        zh = {"title": "动视专利申请拟让游戏NPC通过玩家语音聊天学习反应", "text": "", "focused": True}
+        zh.update(relevance.keyword_score(zh, kw))
+        self.assertTrue(relevance.passes_prefilter(zh, cfg))
+        plain = {"title": "Patch notes: NPC pathing fixes", "text": "", "focused": False}
+        plain.update(relevance.keyword_score(plain, kw))
+        self.assertFalse(relevance.passes_prefilter(plain, cfg))  # 普通游戏新闻里的 NPC 没有 AI 词，不放行
+
+    def test_github_release_source(self):
+        atom = """<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <id>tag:github.com,2008:Repository/1/v0.2.6</id>
+    <updated>2026-11-02T19:25:58Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/camel-ai/oasis/releases/tag/v0.2.6"/>
+    <title>v0.2.6</title>
+    <content type="html">Bug fixes and dependency bumps.</content>
+  </entry>
+</feed>"""
+        src = {"id": "gh-release-oasis", "name": "GitHub Releases · OASIS", "kind": "rss", "group": "platform",
+               "focused": True, "skip_prefilter": True, "domain": "platform", "title_prefix": "oasis"}
+        items = collect.parse_feed(atom, src)
+        self.assertEqual(len(items), 1)
+        it = items[0]
+        self.assertEqual(it["title"], "oasis v0.2.6")
+        it.update(relevance.keyword_score(it, keywords()))
+        self.assertEqual(it["kw_score"], 0)  # 发版说明里没有仿真关键词……
+        self.assertTrue(relevance.passes_prefilter(it, settings()))  # ……但信源可信，照样保留
+        self.assertEqual(relevance.guess_domain(it, keywords()), "platform")
+        plain = collect.parse_feed(atom, dict(SRC))[0]
+        plain.update(relevance.keyword_score(plain, keywords()))
+        self.assertFalse(relevance.passes_prefilter(plain, settings()))
+
 
 class TestBudget(Base):
     def test_cost_formula(self):
