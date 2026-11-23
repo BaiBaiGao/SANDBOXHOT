@@ -7779,6 +7779,16 @@
    "completion": 523,
    "reasoning": 0,
    "credits": 0.46952
+  },
+  {
+   "at": "2026-11-23T02:57:22Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 2362,
+   "cached": 0,
+   "completion": 155,
+   "reasoning": 0,
+   "credits": 0.05964
   }
  ]
 }

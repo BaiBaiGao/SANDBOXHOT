@@ -5725,6 +5725,26 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "319dd34a4b4957b1": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T02:57:22Z",
+   "domain": "application",
+   "score": 52,
+   "relevant": true,
+   "title_zh": "菲律宾海军陆战队首次举行分析性兵棋推演，服务扩军建设",
+   "summary_zh": "菲律宾海军陆战队举行首次分析性兵棋推演，用于支撑更大规模部队的建设规划。报道未披露推演规模、想定内容与是否使用 AI 工具。",
+   "tags": [
+    "兵棋推演",
+    "军事仿真",
+    "菲律宾"
+   ],
+   "status": "selected",
+   "topics": [
+    "wargame"
+   ],
+   "applied": true
+  },
   "31ae75f36948c88b": {
    "llm": true,
    "model": "DeepSeek-V4.1-Flash",
@@ -17505,6 +17525,20 @@
    "triaged": "2026-11-21T09:59:41Z",
    "domain": "academic",
    "score": 26,
+   "relevant": false,
+   "title_zh": "",
+   "summary_zh": "",
+   "tags": [],
+   "status": "filtered",
+   "topics": [],
+   "applied": false
+  },
+  "9163bb3586353d3f": {
+   "llm": true,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-23T02:57:22Z",
+   "domain": "business",
+   "score": 22,
    "relevant": false,
    "title_zh": "",
    "summary_zh": "",
