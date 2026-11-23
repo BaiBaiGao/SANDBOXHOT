@@ -4,18 +4,18 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-23T11:22:55Z",
+ "generated": "2026-11-23T13:50:14Z",
  "counts": {
-  "academic": 889,
-  "application": 144,
+  "academic": 869,
+  "application": 140,
   "platform": 2,
   "business": 9,
   "game": 1
  },
- "total": 917,
- "reads": 299,
+ "total": 893,
+ "reads": 330,
  "research": 3,
- "ai_items": 912,
+ "ai_items": 892,
  "sources": [
   {
    "id": "wechat-jiqizhixin",
@@ -264,10 +264,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 241,
+   "items": 240,
    "home": "",
    "query": "(abs:\"social simulation\" OR abs:\"agent-based model\" OR abs:\"agent-based modeling\" OR abs:\"agent-based simulation\" OR abs:\"multi-agent simulation\" OR abs:\"generative agents\" OR abs:\"simulated society\" OR abs:\"society simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
-   "ok": true
+   "ok": false
   },
   {
    "id": "arxiv-wargame",
@@ -276,10 +276,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 20,
+   "items": 19,
    "home": "",
    "query": "(abs:wargame OR abs:wargaming OR abs:\"war game\" OR abs:\"tabletop exercise\" OR abs:\"crisis simulation\" OR abs:\"policy simulation\" OR abs:\"scenario simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:agent OR abs:agents)",
-   "ok": true
+   "ok": false
   },
   {
    "id": "arxiv-human-behavior-sim",
@@ -288,10 +288,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 256,
+   "items": 254,
    "home": "",
    "query": "(abs:\"simulate human\" OR abs:\"human behavior simulation\" OR abs:\"user simulation\" OR abs:\"synthetic respondents\" OR abs:\"silicon sampling\" OR abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"persona simulation\") AND (abs:LLM OR abs:\"large language model\")",
-   "ok": true
+   "ok": false
   },
   {
    "id": "arxiv-sandbox-env",
@@ -300,10 +300,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 115,
+   "items": 107,
    "home": "",
    "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
-   "ok": true
+   "ok": false
   },
   {
    "id": "arxiv-econ-finance",
@@ -312,10 +312,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 37,
+   "items": 36,
    "home": "",
    "query": "(abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"agent-based economic\" OR abs:\"financial market\" OR abs:\"trading agents\" OR abs:\"macroeconomic\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
-   "ok": true
+   "ok": false
   },
   {
    "id": "arxiv-epidemic-health",
@@ -336,7 +336,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 163,
+   "items": 157,
    "home": "",
    "query": "(abs:urban OR abs:traffic OR abs:mobility OR abs:\"travel behavior\") AND (abs:\"agent-based\" OR abs:\"generative agents\" OR abs:simulation) AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -348,7 +348,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 23,
+   "items": 22,
    "home": "",
    "query": "(abs:negotiation OR abs:diplomacy OR abs:\"game theory\" OR abs:\"social dilemma\") AND abs:\"multi-agent\" AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -504,7 +504,7 @@
    "group": "business",
    "tier": "T2",
    "enabled": true,
-   "items": 5,
+   "items": 4,
    "home": "https://news.google.com/rss/search?q=%22digital+twin%22+%28%22AI+agents%22+OR+%22generative+AI%22+OR+LLM%29+%28company+OR+platform+OR+launch%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -516,7 +516,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 6,
+   "items": 5,
    "home": "https://news.google.com/rss/search?q=%28wargaming+OR+wargame+OR+%22war+game%22%29+%28%22AI%22+OR+%22large+language+model%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -528,7 +528,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 5,
+   "items": 6,
    "home": "https://news.google.com/rss/search?q=%28%22AI+agents%22+OR+%22generative+agents%22+OR+LLM%29+%28simulation+OR+%22digital+twin%22%29+%28city+OR+government+OR+policy+OR+emergency+OR+evacuation%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -552,7 +552,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 5,
+   "items": 3,
    "home": "https://news.google.com/rss/search?q=%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B%29+%28%E4%BB%BF%E7%9C%9F+OR+%E6%B2%99%E7%9B%98%E6%8E%A8%E6%BC%94+OR+%E6%83%85%E6%99%AF%E6%8E%A8%E6%BC%94+OR+%E6%A8%A1%E6%8B%9F%E6%BC%94%E7%BB%83%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
    "query": "",
    "ok": true
@@ -576,14 +576,14 @@
    "group": "business",
    "tier": "T2",
    "enabled": true,
-   "items": 2,
+   "items": 1,
    "home": "https://news.google.com/rss/search?q=%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F+%28%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E6%99%BA%E8%83%BD%E4%BD%93%29+%28%E5%9F%8E%E5%B8%82+OR+%E5%B9%B3%E5%8F%B0+OR+%E5%8F%91%E5%B8%83+OR+%E5%BA%94%E7%94%A8%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
    "query": "",
    "ok": true
   }
  ],
  "last_run": {
-  "at": "2026-11-23T11:22:55Z",
+  "at": "2026-11-23T13:50:14Z",
   "llm": false,
   "spent_run": 0.0
  }
