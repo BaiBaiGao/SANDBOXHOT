@@ -4,18 +4,18 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-24T13:14:44Z",
+ "generated": "2026-11-24T21:36:04Z",
  "counts": {
-  "academic": 864,
-  "game": 4,
-  "application": 146,
+  "academic": 861,
+  "application": 150,
+  "game": 2,
   "platform": 3,
   "business": 13
  },
- "total": 900,
- "reads": 398,
+ "total": 895,
+ "reads": 436,
  "research": 3,
- "ai_items": 884,
+ "ai_items": 892,
  "sources": [
   {
    "id": "wechat-jiqizhixin",
@@ -267,7 +267,7 @@
    "items": 243,
    "home": "",
    "query": "(abs:\"social simulation\" OR abs:\"agent-based model\" OR abs:\"agent-based modeling\" OR abs:\"agent-based simulation\" OR abs:\"multi-agent simulation\" OR abs:\"generative agents\" OR abs:\"simulated society\" OR abs:\"society simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
-   "ok": false
+   "ok": true
   },
   {
    "id": "arxiv-wargame",
@@ -279,7 +279,7 @@
    "items": 20,
    "home": "",
    "query": "(abs:wargame OR abs:wargaming OR abs:\"war game\" OR abs:\"tabletop exercise\" OR abs:\"crisis simulation\" OR abs:\"policy simulation\" OR abs:\"scenario simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:agent OR abs:agents)",
-   "ok": false
+   "ok": true
   },
   {
    "id": "arxiv-human-behavior-sim",
@@ -288,10 +288,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 256,
+   "items": 255,
    "home": "",
    "query": "(abs:\"simulate human\" OR abs:\"human behavior simulation\" OR abs:\"user simulation\" OR abs:\"synthetic respondents\" OR abs:\"silicon sampling\" OR abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"persona simulation\") AND (abs:LLM OR abs:\"large language model\")",
-   "ok": false
+   "ok": true
   },
   {
    "id": "arxiv-sandbox-env",
@@ -300,10 +300,10 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 102,
+   "items": 99,
    "home": "",
    "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
-   "ok": false
+   "ok": true
   },
   {
    "id": "arxiv-econ-finance",
@@ -315,7 +315,7 @@
    "items": 36,
    "home": "",
    "query": "(abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"agent-based economic\" OR abs:\"financial market\" OR abs:\"trading agents\" OR abs:\"macroeconomic\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
-   "ok": false
+   "ok": true
   },
   {
    "id": "arxiv-epidemic-health",
@@ -351,7 +351,7 @@
    "items": 23,
    "home": "",
    "query": "(abs:negotiation OR abs:diplomacy OR abs:\"game theory\" OR abs:\"social dilemma\") AND abs:\"multi-agent\" AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
-   "ok": false
+   "ok": true
   },
   {
    "id": "arxiv-npc-narrative",
@@ -363,7 +363,7 @@
    "items": 13,
    "home": "",
    "query": "(abs:NPC OR abs:\"non-player character\" OR abs:\"interactive narrative\" OR abs:\"game agents\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
-   "ok": false
+   "ok": true
   },
   {
    "id": "openalex-llm-abm",
@@ -396,7 +396,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 3,
+   "items": 4,
    "home": "",
    "query": "wargaming artificial intelligence large language model",
    "ok": true
@@ -447,7 +447,7 @@
    "items": 2,
    "home": "",
    "query": "llm agent simulation",
-   "ok": false
+   "ok": true
   },
   {
    "id": "github-multi-agent-sandbox",
@@ -459,7 +459,7 @@
    "items": 0,
    "home": "",
    "query": "multi-agent social simulation",
-   "ok": false
+   "ok": true
   },
   {
    "id": "rss-gamedeveloper",
@@ -552,7 +552,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 4,
+   "items": 3,
    "home": "https://news.google.com/rss/search?q=%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B%29+%28%E4%BB%BF%E7%9C%9F+OR+%E6%B2%99%E7%9B%98%E6%8E%A8%E6%BC%94+OR+%E6%83%85%E6%99%AF%E6%8E%A8%E6%BC%94+OR+%E6%A8%A1%E6%8B%9F%E6%BC%94%E7%BB%83%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
    "query": "",
    "ok": true
@@ -696,7 +696,7 @@
    "group": "game",
    "tier": "T2",
    "enabled": true,
-   "items": 2,
+   "items": 1,
    "home": "https://news.google.com/rss/search?q=%28%22AI+NPC%22+OR+%22AI+NPCs%22+OR+%22generative+NPC%22+OR+%22AI-driven+NPC%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -895,7 +895,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-24T13:14:44Z",
+  "at": "2026-11-24T21:36:04Z",
   "llm": false,
   "spent_run": 0.0
  }
