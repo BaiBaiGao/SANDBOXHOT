@@ -180,8 +180,8 @@
     "跨文化",
     "人设校准"
    ],
-   "title_zh": "用校准后的价值观人设改善跨文化问卷模拟",
-   "summary_zh": "论文提出从调查回答中提取文化价值观描述来构建人设，按目标人群的价值观分布采样并聚合大模型回答，再做校准以提升回答多样性。跨国预测误差下降，在训练数据中代表性不足的人群上改善最大。",
+   "title_zh": "用校准的价值画像改进跨文化问卷仿真，缩小低代表性国家的预测误差",
+   "summary_zh": "作者提出一种基于价值观的画像构建方法，从问卷回答中提取文化维度描述词，再按目标人群的价值分布采样画像，让 LLM 模拟各国人群的问卷回答。配合一个保持观点估计、提升回答多样性的校准步骤，多国预测误差下降，低代表性人群改善最大。",
    "cluster": "004bccf67d196e4f",
    "cluster_size": 1,
    "is_lead": true,
@@ -309,7 +309,7 @@
    "cluster": "0073f7aaf98ffa6d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 26.72,
+   "hot": 24.41,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -369,7 +369,7 @@
    "cluster": "00798a23152e25ac",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.14,
+   "hot": 12.92,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -2297,7 +2297,7 @@
    "cluster": "0599676be458de0d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.96,
+   "hot": 8.18,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -2701,7 +2701,10 @@
     "human-behavior",
     "social-sim"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 75,
+   "model2": "Qwen3.8-27B"
   },
   "06dea333baf0a1ed": {
    "id": "06dea333baf0a1ed",
@@ -3404,17 +3407,60 @@
    ],
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "application",
-   "score": 80,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 38,
+   "tags": [
+    "兵棋推演",
+    "政策仿真",
+    "会议"
+   ],
+   "title_zh": "NIDS 将于 2027 年 2 月在东京举办 Connections Japan 政策仿真会议",
+   "summary_zh": "日本防卫研究所（NIDS）主办的 Connections Japan 2027 定于 2027 年 2 月 16 日在东京举行，会议聚焦政策仿真方法与实践者交流。材料只有会议通知，没有议程和论文信息。",
    "cluster": "07b147ab15ce1da5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 80.01
+   "hot": 80.01,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": true,
+   "topics": [
+    "wargame",
+    "policy"
+   ],
+   "applied": false
+  },
+  "07d3626d5fa79992": {
+   "id": "07d3626d5fa79992",
+   "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPbF9DdHBRSGhXbXhTSmZkLWNNQWgyY0lHQWdvYUZscDdibE8zZDlxVlFrYmdLT0RSOEdJc1RqN3FZRzBHbUVrOHNaQVlNWGVrRDBqc3JxZi0talhPNFY0cFV6dWdaLWZrVDBpVl94MXdVM2lPWElBVEV2WkRGYTBWbS0zRmEwMjZKRnhGdi1DNzJIOUJKQmlHR0lCcHlTajBzeWpBM2lNUmh3VnpveER5dGFXR0VsdGVvbXZXc096ZTM0Q2ZGZnNuU1g1QUVybDN6a2E3QkQyVnM5WGdKcHNEQzBzX1VfSF9tcFR0SmJqa0Y0ZE94N3JJdllCaFlnZjNKVVlNQ0hZWQ?oc=5",
+   "title": "动视专利：用玩家语音聊天训练NPC，游戏AI或迎新变革 - games.gg",
+   "text": "动视专利：用玩家语音聊天训练NPC，游戏AI或迎新变革 games.gg",
+   "source_id": "gnews-zh-game-npc",
+   "source_name": "Google 新闻 · 中文：AI NPC 与游戏",
+   "source_group": "game",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T12:07:08Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "npc",
+    "ai"
+   ],
+   "domain_guess": "game",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "game",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "07efc02df0e1f6a7": {
    "id": "07efc02df0e1f6a7",
@@ -3581,7 +3627,7 @@
    "cluster": "0856c29adf22c46d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.84,
+   "hot": 23.61,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:31Z",
    "relevant": true,
@@ -4003,7 +4049,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 55,
    "tags": [
     "自动驾驶",
     "世界模型",
@@ -4022,7 +4068,10 @@
     "world-env",
     "urban"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 65,
+   "model2": "Qwen3.8-27B"
   },
   "0a113ce3aed82146": {
    "id": "0a113ce3aed82146",
@@ -6317,7 +6366,7 @@
    "cluster": "12f6125c2b6f37b3",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 31.95
+   "hot": 29.19
   },
   "1146fe24388c1baa": {
    "id": "1146fe24388c1baa",
@@ -6494,7 +6543,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 40,
+   "score": 25,
    "tags": [
     "多智能体",
     "流程模拟",
@@ -6508,11 +6557,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:07Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 40,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "11aae873123c3cbe": {
    "id": "11aae873123c3cbe",
@@ -6972,7 +7024,7 @@
    "cluster": "12f6125c2b6f37b3",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 32.99,
+   "hot": 30.14,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -7088,7 +7140,7 @@
    "cluster": "52bb7277fa3b2d7d",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 2.85,
+   "hot": 2.61,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:07:48Z",
    "relevant": true,
@@ -7257,6 +7309,44 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "13a0c3ba04fb07c9": {
+   "id": "13a0c3ba04fb07c9",
+   "url": "https://warontherocks.com/the-game-is-the-easy-part-measuring-military-strategic-judgment",
+   "title": "The Game Is the Easy Part: Measuring Military Strategic Judgment",
+   "text": "If a colonel and a Navy captain made the same decisions for the same reasons in a graded wargame, would they get the same score? This question stopped being an academic thought experiment on Nov. 9, 2026. Speaking at the Naval War College, Secretary of Defense Pete Hegseth announced that “competitive [AI] assisted wargaming and high-stress decision forcing scenarios” would become the “centerpiece of senior officer evaluation.” Further, “these exercises [would] feed directly” into the newly established joint warfighter evaluations: the new assessments for colonels and captains competing for their first star. A memorandum issued the same day directs every staff The post The Game Is the Easy Part: Measuring Military Strategic Judgment appeared first on War on the Rocks .",
+   "source_id": "rss-warontherocks",
+   "source_name": "War on the Rocks",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": false,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-24T08:30:24Z",
+   "authors": [
+    "Thomas Nagle"
+   ],
+   "extra": {},
+   "kw_score": 78,
+   "kw_terms": [
+    "wargame",
+    "wargaming",
+    "ai"
+   ],
+   "domain_guess": "game",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "game",
+   "score": 78,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "13a0c3ba04fb07c9",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 75.9
+  },
   "13d378a774a44ba2": {
    "id": "13d378a774a44ba2",
    "url": "https://arxiv.org/abs/2607.12397",
@@ -7338,12 +7428,26 @@
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "application",
-   "score": 25,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 10,
+   "tags": [
+    "媒体模拟",
+    "危机演练",
+    "线上推演"
+   ],
+   "title_zh": "CNN Academy Global 2026 因海湾战事改为线上周末模拟演练",
+   "summary_zh": "PAXsims 报道，由于海湾战争未平息，CNN Academy 今年没有把全球学生集中到阿布扎比，而是把模拟演练搬到线上，用周末两天让学生远程参与。材料未说明演练使用的 AI 工具。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": false,
+   "topics": [
+    "wargame"
+   ],
+   "score1": 48,
+   "score2": 10,
+   "model2": "Qwen3.8-27B",
+   "applied": true
   },
   "1413a4ddc72a2582": {
    "id": "1413a4ddc72a2582",
@@ -8211,8 +8315,8 @@
     "生成式智能体",
     "学习建模"
    ],
-   "title_zh": "AgentSchool：把学习建模为状态转移的LLM多智能体教育仿真器",
-   "summary_zh": "AgentSchool用可认知成长的学生智能体（带加权学科知识图谱、思维工作流池和显式迷思概念）与在最近发展区内规划、支架和反思的教师智能体配对，配合可配置场景生成器和多尺度模拟器，避免把学习简化为角色扮演。",
+   "title_zh": "AgentSchool：用可成长学生智能体和自适应教师智能体搭建 LLM 教育多智能体仿真",
+   "summary_zh": "作者提出 AgentSchool，一个 LLM 驱动的教育多智能体仿真器。它把学习建模为状态转移而非角色扮演：学生智能体带加权学科知识图谱、思维流程池和显式错误概念，教师智能体沿最近发展区做规划、支架和反思。实验显示结构化学生智能体产生更分化的掌握度与错误概念轨迹，课堂社会行为轨迹也与教育社会学理论一致。",
    "cluster": "172d55e3d2976acf",
    "cluster_size": 1,
    "is_lead": true,
@@ -8222,7 +8326,7 @@
    "relevant": true,
    "topics": [
     "generative-agents",
-    "policy",
+    "social-sim",
     "eval"
    ],
    "applied": false
@@ -8271,8 +8375,8 @@
     "智能体强化学习",
     "经济模拟"
    ],
-   "title_zh": "ReflectiChain 用生成式世界模型预演供应链轨迹，出口禁令场景可操作性从 13.3% 回到 88.5%",
-   "summary_zh": "作者提出 ReflectiChain，把生成式世界模型驱动的潜在轨迹预演与行动中反思、事后反思结合，并在部署阶段用回溯式智能体强化学习让策略继续演化。在自建高保真基准 Semi-Sim 上，出口禁令和材料短缺等极端场景下平均单步奖励比最强 LLM 基线高 250%，可操作性比率从 13.3% 恢复到 88.5% 以上。",
+   "title_zh": "ReflectiChain：用生成式世界模型推演半导体供应链，把可运行率从13.3%恢复到88.5%",
+   "summary_zh": "作者提出ReflectiChain框架，让LLM智能体结合生成式世界模型做半导体供应链的韧性规划。在自建基准Semi-Sim的出口禁令、原材料短缺等极端场景下，平均步进奖励比最强LLM基线提高250%，可运行率从13.3%恢复到88.5%以上。消融实验显示物理约束与双环学习的结合是关键。",
    "cluster": "174238aebb5e3f28",
    "cluster_size": 1,
    "is_lead": true,
@@ -8282,8 +8386,8 @@
    "relevant": true,
    "topics": [
     "economy",
-    "world-env",
-    "org"
+    "framework",
+    "eval"
    ],
    "applied": false
   },
@@ -8790,7 +8894,7 @@
    "cluster": "1836246dfbfb504c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.89,
+   "hot": 17.26,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:57Z",
    "relevant": true,
@@ -9052,8 +9156,8 @@
     "误差分析",
     "评测基准"
    ],
-   "title_zh": "综述提出“总模拟调查误差”框架，系统梳理 LLM 代替人答问卷时的设计空间与误差来源",
-   "summary_zh": "文章讨论把 LLM 当作“硅样本”代替真人回答调查问题的做法，指出社会偏见、泛化能力和技术限制等问题，并强调 LLM 模拟调查常沿用现成问卷与样本，这些工具有的本身不适合 LLM 或带有误差，会被继承下来。作者试图系统识别、追踪和记录 LLM 生成调查回答中的局限。",
+   "title_zh": "TS2E 框架：系统梳理大模型模拟问卷调查中的各类误差来源",
+   "summary_zh": "作者借鉴传统调查方法学的“总调查误差”思路，提出 Total Simulated Survey Error（TS2E）框架，把大模型生成问卷回答过程中可能出现的概念性错误和系统性偏差按仿真生命周期各阶段逐一列出。他们用理论和实证案例展示这个框架，帮助仿真设计者识别和反思大模型问卷数据中的效度威胁。",
    "cluster": "18e57d3f4a25e11c",
    "cluster_size": 1,
    "is_lead": true,
@@ -9598,6 +9702,37 @@
    "topics": [],
    "applied": false
   },
+  "1a28a78961b1d2a7": {
+   "id": "1a28a78961b1d2a7",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIZVYxelcxQ3FrS29CNm9mRUNpSFVEQU13amFGNzZOVm04MDd2VUJJQ0NURHNwTzN2cHNFZUpxT2xPVVY5Zm9xb004ak1CMDVZazNzY0JtU1htN21RTmxzaExvTFU2ZXFQZTZ3?oc=5",
+   "title": "AI赋能结构仿真创新-新思科技助力产品高效研发与性能突破 - 中金在线",
+   "text": "AI赋能结构仿真创新-新思科技助力产品高效研发与性能突破 中金在线",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T13:22:03Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 43,
+   "kw_terms": [
+    "仿真",
+    "ai"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 43,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "1a441ed6cf9fa02f": {
    "id": "1a441ed6cf9fa02f",
    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQS1hOZmFEMDgtWE1NLURpZDd3NlhUY2JhYTlCNlpKeEhPb1BOMDVRLWxwV3VkUmlqV01uVklpMjRvTlVjZ3plZ21OdkhPLUZQdS1yeDVMRmFpZThKMDZrN0NnamRhTFRCcnlTZFNhcHVXV1QzVHdXVFN4SFRfa3hfOGNxYy1MVUJYM25DWlMyNWU4X2RQWUdMbEZ0WHBqYjI2Ui1QVld2M2t1V2szSHh6QjR1SnJRaE10UVNHcjZCUQ?oc=5",
@@ -10077,7 +10212,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 8.58,
+   "hot": 7.84,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:26Z",
    "relevant": true,
@@ -11712,10 +11847,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:18:16Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 10,
    "tags": [
     "多智能体强化学习",
     "无人机",
@@ -11729,11 +11864,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:46Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 10,
+   "model2": "Qwen3.8-27B"
   },
   "2094432d386ec02c": {
    "id": "2094432d386ec02c",
@@ -12335,7 +12473,7 @@
    "cluster": "21cdddd171e04f50",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.57
+   "hot": 10.57
   },
   "21ddfdc791fd0362": {
    "id": "21ddfdc791fd0362",
@@ -12635,10 +12773,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 15,
    "tags": [
     "交通监控",
     "多模态大模型",
@@ -12652,11 +12790,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:39:57Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 15,
+   "model2": "Qwen3.8-27B"
   },
   "228357f33e93d541": {
    "id": "228357f33e93d541",
@@ -13960,8 +14101,8 @@
     "社会仿真",
     "评测基准"
    ],
-   "title_zh": "用受众细分恢复LLM社会仿真中的异质性，Llama 3.1与Mixtral在美国气候舆论数据上对比",
-   "summary_zh": "研究用美国气候舆论调查数据，在Llama 3.1-70B和Mixtral 8x22B上比较六种受众细分配置，从分布、结构、预测三个维度评估仿真保真度。结论是细分粒度并非越细越好，中等程度的丰富化能提升表现，继续扩张反而可能损害结构与预测保真度。",
+   "title_zh": "用受众细分恢复 LLM 社会仿真中的群体异质性：基于美国气候态度调查的配置比较",
+   "summary_zh": "作者提出用受众细分（audience segmentation）替代单一平均人设，在两个开源大模型上比较六种细分配置来模拟美国气候态度调查。结果发现没有一种配置在所有保真度维度上占优，标识符粒度增加并不带来一致提升，紧凑配置常能匹敌更全面的方案。",
    "cluster": "25e24a63821a39cb",
    "cluster_size": 1,
    "is_lead": true,
@@ -13970,8 +14111,8 @@
    "triaged": "2026-11-19T19:08:32Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
     "social-sim",
+    "human-behavior",
     "eval"
    ],
    "applied": true
@@ -14035,7 +14176,10 @@
     "health",
     "policy"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 75,
+   "model2": "Qwen3.8-27B"
   },
   "2644e5af4629c531": {
    "id": "2644e5af4629c531",
@@ -14801,7 +14945,7 @@
    "cluster": "27405ec7b8b6053c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.26,
+   "hot": 0.24,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:54Z",
    "relevant": true,
@@ -14874,6 +15018,36 @@
     "eval"
    ],
    "applied": false
+  },
+  "27ed584f4436af63": {
+   "id": "27ed584f4436af63",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nSF9IVWp4eldzT3JKWWNXTmREQVhfNEsyOTNEUWdHeHhyQjNwQ1dqb0F5b2h1cGc5dVpDTlJIZHI5bTMxZzJnQnBSYTlLYTdBaFZIblN6cTR2cU5ncTM0OHRCb1R6b1lUTk9HWlhpZkU?oc=5",
+   "title": "LiberAI 用 Kimi 加速机器人研究，单项仿真成功率一周 - 53AI",
+   "text": "LiberAI 用 Kimi 加速机器人研究，单项仿真成功率一周 53AI",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-24T08:32:25Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 35,
+   "kw_terms": [
+    "仿真"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 35,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "28387b513cb58ee0": {
    "id": "28387b513cb58ee0",
@@ -15486,6 +15660,65 @@
    "topics": [],
    "applied": false
   },
+  "29a1de3b43f527d5": {
+   "id": "29a1de3b43f527d5",
+   "url": "https://arxiv.org/abs/2611.28692",
+   "title": "Can Your AI Twin Meet People for You? It Can Hold a Conversation. But What Does It Need to Judge Like You?",
+   "text": "Should your AI twin go meet people on your behalf? We built LLM twins of 710 real people from their other conversations in the CANDOR corpus, sent them to meet each other in 5,680 simulated first conversations, and checked every rehearsal against what the real people said after meeting for real (355 held-out, participant-disjoint pairs, against baselines that include each person's rating history). The rehearsals work: a twin's conversation predicts real liking ($ρ$=0.277), carries information that questionnaires and rating history do not have (partial $ρ$=0.16 [0.05, 0.26]), and recovers most of what the same reader gets from the real conversation (0.321). Swap controls show that this signal travels through the conversation, not through the persona card. What, then, does a twin need to judge like you? Not your voice: making twins talk more like their owners, with person-specific activation steering and a LoRA trained on their own speech, did not help in a pre-specified test and lowered accuracy in an exploratory second round (-0.183 [-0.294, -0.066]). Nor simply your stated ratings: a persona-prompted twin that holds the conversation does not yet carry its owner's judgment, and when told its owner's past ratings it anchors on them instead of weighing them. Learning helps: a small appraisal head trained on other real conversations, which combines the twin's post-call answers with its owner's rating history, lifts rehearsal-based prediction above the history baseline out of fold (+0.059 [0.001, 0.115], against +0.022 without the twin's answers; pre-specified primary contrast +0.056 [-0.001, 0.111]). We propose an attribution protocol for twin-based social simulation and identify learned appraisal as the component twins need next.",
+   "source_id": "arxiv-llm-social-sim",
+   "source_name": "arXiv · LLM 社会/多智能体仿真",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-21T09:27:25Z",
+   "authors": [
+    "Wanghao Ye",
+    "Sihan Chen",
+    "Bowei Tian",
+    "Yiting Wang",
+    "Shwai He",
+    "Guoheng Sun",
+    "Ziyi Wang",
+    "Ziyao Wang",
+    "Yexiao He",
+    "Zheyu Shen",
+    "Meng Liu",
+    "Yuning Zhang"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.28692",
+    "categories": [
+     "cs.AI"
+    ],
+    "venue": "arXiv",
+    "comment": "9 pages, 7 figures"
+   },
+   "kw_score": 100,
+   "kw_terms": [
+    "social simulation",
+    "simulation",
+    "simulated",
+    "simulate",
+    "llm",
+    "ai"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "29a1de3b43f527d5",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 43.21
+  },
   "29a8872de384aceb": {
    "id": "29a8872de384aceb",
    "url": "https://arxiv.org/abs/2608.08058",
@@ -15782,7 +16015,7 @@
    "cluster": "2a7c337d3195182a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.91,
+   "hot": 1.74,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -16496,7 +16729,7 @@
    "cluster": "2d1db9b2487e762c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.15
+   "hot": 1.97
   },
   "2d4d334bb9387f39": {
    "id": "2d4d334bb9387f39",
@@ -16808,7 +17041,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 25,
    "tags": [
     "具身智能",
     "导航",
@@ -16822,11 +17055,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:39:57Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "2dc502abacec7db3": {
    "id": "2dc502abacec7db3",
@@ -17294,7 +17530,7 @@
    "cluster": "2ecdb64c16bbd36d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.06
+   "hot": 15.58
   },
   "2ed19f0a5d5ba7ea": {
    "id": "2ed19f0a5d5ba7ea",
@@ -17705,7 +17941,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": true,
-   "hot": 9.52,
+   "hot": 8.7,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -17876,7 +18112,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 20,
    "tags": [
     "多智能体",
     "强化学习",
@@ -17890,12 +18126,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:01Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "3104f7f8930b63fd": {
    "id": "3104f7f8930b63fd",
@@ -18503,12 +18742,17 @@
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "application",
-   "score": 35,
+   "llm": true,
+   "domain": "business",
+   "score": 18,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "32ff9538845c3b8a": {
    "id": "32ff9538845c3b8a",
@@ -19135,8 +19379,8 @@
     "数字孪生",
     "综述"
    ],
-   "title_zh": "综述章节梳理社会仿真从 ABM 到大模型增强再到社会数字孪生的演进",
-   "summary_zh": "该书籍章节回顾社会仿真从规则驱动的经典基于智能体建模，到 LLM 增强仿真，再到数据驱动、高保真的社会数字孪生的路径，讨论各范式的方法基础、应用、优势与局限，指出研究重心正从抽象机制模型转向具体社会系统的逼真计算表征。",
+   "title_zh": "从经典智能体模型到社会数字孪生：LLM 社会仿真的演进综述",
+   "summary_zh": "这是一篇书章综述，梳理社会仿真从经典基于智能体模型到基于大语言模型的仿真、再到社会数字孪生的演进路径。作者依次讨论每种范式的方法论基础、应用、优势与局限，指出研究重心正从探索一般社会机制的抽象模型转向对具体社会系统的高保真计算表征。",
    "cluster": "33fef958a60b85a2",
    "cluster_size": 1,
    "is_lead": true,
@@ -19146,7 +19390,7 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "world-env"
+    "framework"
    ],
    "score1": 60,
    "score2": 80,
@@ -21428,7 +21672,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 44,
+   "score": 25,
    "tags": [
     "数字孪生",
     "车联网",
@@ -21442,12 +21686,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:14:04Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban",
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 44,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "39b497b33ba98095": {
    "id": "39b497b33ba98095",
@@ -22619,7 +22866,7 @@
    "cluster": "3cf41a97b1c6ee7d",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 3.81,
+   "hot": 3.48,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -23380,7 +23627,7 @@
    "cluster": "3eefc5d18a4ade26",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 63.41,
+   "hot": 57.92,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -23734,7 +23981,7 @@
    "cluster": "3f6c8be79bdf323c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.29,
+   "hot": 6.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:14Z",
    "relevant": true,
@@ -23864,8 +24111,8 @@
     "行为特质",
     "信息扩散"
    ],
-   "title_zh": "给生成式智能体加上“行为特质”，980 个智能体仿真社媒参与模式",
-   "summary_zh": "针对现有 GABM 智能体参与行为趋同的问题，作者引入行为特质层，调节智能体发帖、转发、评论、点赞和不活跃的倾向。980 个智能体的大规模仿真与真实社媒数据对比显示，行为特质能维持异质且与人设一致的参与模式，并带来更真实的内容扩散动态。",
+   "title_zh": "给生成式智能体加上行为特质层，980 个智能体的社交媒体仿真重现差异化参与模式",
+   "summary_zh": "作者提出在生成式智能体模型中显式编码行为特质，调节发帖、转发、评论、点赞和不活跃的倾向。980 个智能体的大规模仿真与真实社交媒体数据对比显示，行为特质是维持异质、与画像一致的参与模式的关键，也让内容传播动态更真实。",
    "cluster": "3fdfaefe563e882e",
    "cluster_size": 1,
    "is_lead": true,
@@ -23875,7 +24122,8 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "generative-agents"
+    "generative-agents",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -24248,7 +24496,7 @@
    "cluster": "408457c46f4c7f25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.03,
+   "hot": 11.9,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -25489,13 +25737,31 @@
    ],
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
-   "status": "filtered",
-   "llm": false,
+   "status": "selected",
+   "llm": true,
    "domain": "application",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 52,
+   "tags": [
+    "经济模拟",
+    "AI 与就业",
+    "观点文章"
+   ],
+   "title_zh": "《新欧洲人》刊文探讨 AI 是否终结资本主义，作者称用新型仿真找到答案",
+   "summary_zh": "材料只有一条新闻标题，没有正文。作者声称构建了一种新型仿真来回答“AI 会不会终结资本主义”这个问题，文章发表于 The New European。仿真方法、数据和结论在材料中均未给出。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": true,
+   "topics": [
+    "economy"
+   ],
+   "score1": 52,
+   "score2": 75,
+   "model2": "Qwen3.8-27B",
+   "applied": false,
+   "cluster": "436c3f3208323140",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 51.28
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -25717,6 +25983,54 @@
    "topics": [],
    "applied": false
   },
+  "43ed9b01ea6440c7": {
+   "id": "43ed9b01ea6440c7",
+   "url": "https://arxiv.org/abs/2611.30874",
+   "title": "Bridging Continuous-Time MAPF and Industrial AGV Fleet Coordination with Lazy Priority-Based Search",
+   "text": "Continuous-time multi-agent path finding on roadmaps (MAPF$_R$) offers a principled way to coordinate robot fleets with geometric collision avoidance, yet its deployment on industrial automated guided vehicle (AGV) infrastructures remains challenging, as highly connected and redundant roadmaps amplify both safe-interval reasoning and multi-agent interaction handling. To bridge this gap, we formalize AGV-MAPF$_R$-CTC, a configuration-space variant of MAPF$_R$ with precomputed continuous-time conflicts that enables the reuse of MAPF$_R$ solvers for AGV fleet coordination with minimal changes. We then revisit continuous-time priority-based search (CPBS), identifying the boundary conditions required by its safe interval path planning (SIPP) low-level planner under priority-induced constraints and enabling earlier solution detection. As a central contribution, we analyze the structure of the priority search space, clarifying which agents are affected by each priority refinement and when replanning can be avoided. Building on this analysis, we introduce a novel algorithm, Lazy-CPBS, which materializes high-level nodes lazily: a child's plans are computed only when it is expanded, so siblings that are never expanded cost no low-level search. Experiments on standard MAPF benchmarks and on industrial AGV roadmaps imported from a proprietary digital-twin simulator show that CPBS-based solvers remain effective well beyond the agent counts reachable by optimal MAPF$_R$ solvers, while Lazy-CPBS substantially reduces CPBS overhead and offers the most consistent robustness/runtime trade-off across industrial layouts.",
+   "source_id": "arxiv-sandbox-env",
+   "source_name": "arXiv · 智能体沙盒环境/世界模拟器",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T15:43:31Z",
+   "authors": [
+    "Federico Signorile",
+    "Raffaele Carli",
+    "Alessandro Bertogli",
+    "Roberto Olmi",
+    "Sven Koenig",
+    "Mariagrazia Dotoli"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.30874",
+    "categories": [
+     "cs.RO",
+     "cs.AI",
+     "cs.MA"
+    ],
+    "venue": "arXiv",
+    "comment": "18 pages, 11 figures, 3 tables. Submitted to IEEE Transactions on Intelligent Transportation Systems"
+   },
+   "kw_score": 39,
+   "kw_terms": [
+    "simulator",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "academic",
+   "score": 39,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "4416ecc5ca10c341": {
    "id": "4416ecc5ca10c341",
    "url": "https://arxiv.org/abs/2605.10386",
@@ -25891,7 +26205,7 @@
    "cluster": "442531c9eef4b7e1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.07,
+   "hot": 0.98,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -28284,7 +28598,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 9.74,
+   "hot": 8.9,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -28331,7 +28645,7 @@
    "cluster": "4c34cde27eeaace5",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 4.84,
+   "hot": 4.42,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -29008,7 +29322,7 @@
    "cluster": "4db09406978f96a9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.1,
+   "hot": 0.09,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:59Z",
    "relevant": true,
@@ -29516,8 +29830,8 @@
     "推荐系统",
     "沙盒环境"
    ],
-   "title_zh": "A/B Agent：多模态用户智能体在推荐沙盒里替代线上 A/B 测试",
-   "summary_zh": "作者搭建支持多模态、多页面交互的推荐沙盒环境，设计带画像、动作记忆检索和疲劳系统的多模态用户智能体，模拟用户感知与决策过程，从模型等三个角度验证其替代传统线上 A/B 测试的潜力。",
+   "title_zh": "A/B Agent：用多模态用户智能体在推荐沙盒中替代在线 A/B 测试",
+   "summary_zh": "作者提出 A/B Agent，一个多模态用户智能体框架，在自建的推荐系统沙盒环境里模拟真实用户的多页面浏览与决策行为，用来替代成本高、伤体验、周期长的在线 A/B 测试。他们从模型、数据和特征三个角度验证了它的可行性，还发现智能体生成的数据能反过来提升推荐模型的效果。",
    "cluster": "4ef246f38df29701",
    "cluster_size": 1,
    "is_lead": true,
@@ -29526,6 +29840,7 @@
    "triaged": "2026-11-21T01:39:10Z",
    "relevant": true,
    "topics": [
+    "world-env",
     "human-behavior",
     "eval"
    ],
@@ -30116,12 +30431,17 @@
    "domain_guess": "game",
    "added": "2026-11-24T01:56:49Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
-   "score": 33,
+   "score": 15,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "5069f1280bd3ad48": {
    "id": "5069f1280bd3ad48",
@@ -30917,10 +31237,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "filtered",
+   "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 48,
    "tags": [
     "AI NPC",
     "任务分配",
@@ -30939,7 +31259,10 @@
     "game",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 55,
+   "model2": "Qwen3.8-27B"
   },
   "51b4ef58897edacf": {
    "id": "51b4ef58897edacf",
@@ -31293,7 +31616,7 @@
    "cluster": "52bb7277fa3b2d7d",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 3.44,
+   "hot": 3.15,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -31484,8 +31807,8 @@
     "人类反馈",
     "社会仿真"
    ],
-   "title_zh": "给生成式智能体的中间步骤做人类偏好标注，5.7 万条数据微调后仿真更逼真",
-   "summary_zh": "作者搭建交互式仿真界面，对智能体规划、记忆检索、反思、行动选择等中间步骤收集人类偏好监督，得到 5.7 万条细粒度标注。用监督微调和 DPO 训练开源模型后，仿真保真度、协调性和互动质量均有提升，智能体行为更具社会效能。",
+   "title_zh": "用 5.7 万条步骤级人类偏好数据训练生成式智能体，提升社会仿真保真度",
+   "summary_zh": "作者发现生成式智能体在规划、记忆检索、反思等中间步骤上缺少人类偏好监督，于是做了一个交互式仿真界面收集步骤级标注，得到 5.7 万条细粒度注释。用 SFT 和 DPO 在开源模型上做偏好学习后，仿真的保真度、协调性和交互质量都稳定提升。",
    "cluster": "52f869aa0f015365",
    "cluster_size": 1,
    "is_lead": true,
@@ -31495,7 +31818,8 @@
    "relevant": true,
    "topics": [
     "generative-agents",
-    "eval"
+    "social-sim",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -31753,7 +32077,7 @@
    "cluster": "53b605b3df0308b7",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.5,
+   "hot": 0.45,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -32251,7 +32575,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 50,
    "tags": [
     "AI NPC",
     "对话生成",
@@ -32270,7 +32594,10 @@
    "topics": [
     "game"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 55,
+   "model2": "Qwen3.8-27B"
   },
   "54859e4f2ef84f52": {
    "id": "54859e4f2ef84f52",
@@ -32924,6 +33251,44 @@
     "eval"
    ],
    "applied": false
+  },
+  "56532dce8567fc86": {
+   "id": "56532dce8567fc86",
+   "url": "https://github.com/tsinghua-fib-lab/AgentSociety/releases/tag/agentsociety2-v2.12.0",
+   "title": "agentsociety AgentSociety2 2.12.0",
+   "text": "2.12.0 - 2026-11-24 agentsociety2 2.12.0 · extension 1.10.0 · 标签 agentsociety2-v2.12.0 Added 研究工作台 在“AI 对话”的右键菜单中可以设置默认助手。在命令面板搜索“Swagger”可打开当前工作区的 API 文档。 维护工具 新增 $agentsociety-maintain ，用于审查依赖更新和安全告警，以及合并前的检查。 Changed Breaking: 检查点格式升至 v2。旧版创建的实验如需从中断处继续，请使用原版本恢复。新版仍可查看旧实验的回放。 Breaking: SDK 支持 Python 3.11.5 至 3.13。使用 3.11.0–3.11.4 的工作区需升级 Python 并重建环境。构建文档需要 Soup Sieve 4.0.0 或更高版本。 Daily Mobility 从示例根目录启动实验和看板，命令行工具位于 tools/ 。启动新实验前会检查输出目录，防止覆盖已有回放。 实验进度 展开侧栏顶部的进度可以看到未完成的实验，失败的排在最前。右键实验可打开回放或查看起止时间、耗时和步数。 研究侧栏 左键打开或预览文件，右键可编辑源文件、复制路径或引用、定位文件。视图的更多操作菜单提供快速入门和工作区导入、导出。配置分组首次展开时才读取，短时间内再次展开会复用结果。 语言与帮助 配置、技能、实验编辑器和回放随插件切换语言，并保留正在编辑的参数。内置指南可离线阅读，打开在线文档时才加载网页。 回放查询 实验概览优先读取仿真时间线，旧回放仍可从快照读取。按步分页时复用查询结果，减少重复读取。在 1,024 个智能体、128 步的回放上，实验概览 P95 从 180.6 ms 降到 85.0 ms，四个并发回放概览请求的 P95 从 454.2 ms 降到 114.1 ms。 API 文档 Swagger 和 ReDoc 的页面资源随 SDK 安装，可通过 Coder 端口代理访问。OpenAPI 文档补充了后端鉴权、问卷 JSON 响应和 4 MiB 内联读取上限。 分析报告 发布前逐条核对中英文报告中的主张、证据和图表，列出待补内容，并保留手写的探索性分析。 Removed Breaking: 分析 SDK 移除 ExecutionResult 、 ToolInfo 和 ToolResult 三个公开导出。依赖这些类型的调用方请先调整导入，再升级 SDK。 Fixed Daily Mobility 修复人物档案格式错误导致的智能体初始化失败。看板会跳过仍在写入的问卷文件，继续显示其他回放数据。 开发检查 修复提交钩子的安装和发布脚本的 Ruff 检查，将 Daily Mobility 纳入同一套检查。 实验运行 修复智能体配置传递、检查点恢复和运行状态追踪。后端可以列出并读取问卷答卷，也能查询空回放分片。 文件预览 侧栏可直接打开论文 PDF、图表和回放。JSON 预览保留原文，点击普通文件时保留剪贴板内容。没有 Markdown 说明的假设和实验也可展开。 工作区 更新内置技能时保留自定义技能。修复并发启动 CLI 网关时争用监听端口的问题。 Security Daily Mobility 看板限制可访问的文件，并对 HTML 属性进行转义。生成的人物配置仅允许当前用户读写。CodeQL 扫描覆盖示例、SDK 维护脚本和扩展文档工具。 Breaking: 远程后端现在需要设置 BACKEND_TOKEN ，客户端请求需携带对应的 Bearer 令牌。 工作区访问 后端访问令牌绑定到目标地址。技能安装和自定义模块扫描限制在工作区内。导入共享包时，先在暂存目录校验清单和文件哈希，校验通过后再安装。",
+   "source_id": "gh-release-agentsociety",
+   "source_name": "GitHub Releases · AgentSociety（清华 FIB Lab）",
+   "source_group": "platform",
+   "kind": "rss",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": true,
+   "domain_hint": "platform",
+   "published": "2026-11-24T05:04:52Z",
+   "authors": [
+    "github-actions[bot]"
+   ],
+   "extra": {},
+   "kw_score": 63,
+   "kw_terms": [
+    "仿真",
+    "ai",
+    "智能体"
+   ],
+   "domain_guess": "platform",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "platform",
+   "score": 63,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "56532dce8567fc86",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 59.31
   },
   "5690de0ae4d57b67": {
    "id": "5690de0ae4d57b67",
@@ -33596,10 +33961,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 20,
    "tags": [
     "城市生成",
     "世界模型",
@@ -33614,12 +33979,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:14:13Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban",
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "5916e267bfd34558": {
    "id": "5916e267bfd34558",
@@ -34272,6 +34640,37 @@
    "topics": [],
    "applied": false
   },
+  "5ac4688e5a147d3b": {
+   "id": "5ac4688e5a147d3b",
+   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBXc3AwTDQwemtYOGV3M1doeTY5bXFNSmdtRGItanlCRDB4aWMzWDVoTUtwbmNWZHVZREN0di1GVFV0UlE1UWVhREFqNmk?oc=5",
+   "title": "动视新专利：AI学习玩家聊天内容，生成个性化NPC台词 - 凤凰网科技",
+   "text": "动视新专利：AI学习玩家聊天内容，生成个性化NPC台词 凤凰网科技",
+   "source_id": "gnews-zh-game-npc",
+   "source_name": "Google 新闻 · 中文：AI NPC 与游戏",
+   "source_group": "game",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T09:40:39Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "npc",
+    "ai"
+   ],
+   "domain_guess": "game",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "game",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "5aca4c38bba36ada": {
    "id": "5aca4c38bba36ada",
    "url": "https://arxiv.org/abs/2611.10641",
@@ -34323,7 +34722,7 @@
    "cluster": "5aca4c38bba36ada",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.69,
+   "hot": 1.55,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -34524,7 +34923,10 @@
    "relevant": true,
    "topics": [
     "org"
-   ]
+   ],
+   "score1": 44,
+   "score2": 72,
+   "model2": "Qwen3.8-27B"
   },
   "5b498f7753f9a6d0": {
    "id": "5b498f7753f9a6d0",
@@ -34577,7 +34979,7 @@
    "cluster": "5b498f7753f9a6d0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.31,
+   "hot": 1.19,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -34840,7 +35242,7 @@
    "cluster": "5b87ca4e67aa0ad6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.4,
+   "hot": 3.1,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -37558,7 +37960,7 @@
    "cluster": "63626a310eb12141",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.71,
+   "hot": 1.57,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:31Z",
    "relevant": true,
@@ -38991,8 +39393,8 @@
     "多智能体",
     "交通仿真"
    ],
-   "title_zh": "BehaviorWorldGen 用行为可控的交通流模型生成周围车辆反应，闭环训练驾驶动作模型",
-   "summary_zh": "论文指出驾驶动作模型自提升循环的瓶颈在于世界模拟器生成的周围智能体行为不真实、分布失衡。核心组件 BehaviorFlow 以元动作条件控制交通流，联合生成多智能体轨迹，让周围车辆对自车和彼此作出反应，再渲染成多视角观测用于动作模型改进。",
+   "title_zh": "BehaviorWorldGen：用行为可控的交通流生成打通驾驶动作模型与世界模拟器的闭环",
+   "summary_zh": "作者提出 BehaviorWorldGen 框架，解决驾驶动作模型自我改进循环中世界模拟器无法生成合理他车行为的问题。核心组件 BehaviorFlow 是一个元动作条件化的交通流模型，可注入可解释的行为控制并联合生成多智能体轨迹。在世界生成、场景外推和策略精炼实验中均取得一致提升，困难交互场景收益最大。",
    "cluster": "67ba56434d4a8cfe",
    "cluster_size": 1,
    "is_lead": true,
@@ -39002,7 +39404,8 @@
    "relevant": true,
    "topics": [
     "world-env",
-    "urban"
+    "urban",
+    "framework"
    ],
    "score1": 64,
    "score2": 75,
@@ -39872,8 +40275,8 @@
     "玩家行为",
     "生成式智能体"
    ],
-   "title_zh": "LLM 生成式多智能体系统模拟 MMO 玩家，用真实行为数据微调并重建游戏环境",
-   "summary_zh": "系统用 SFT 和强化学习在真实玩家行为数据上微调 LLM，让智能体做出贴近玩家的决策，另用游戏日志训练环境模型重建游戏内系统。实验显示模拟行为与真实玩家高度一致，干预下也能给出合理的因果反应，可替代高成本的线上实验。",
+   "title_zh": "用真实玩家数据微调大模型，生成式多智能体系统离线仿真 MMO 数值设计",
+   "summary_zh": "作者提出一个基于大模型的生成式智能体 MMO 仿真系统，用大规模真实玩家行为数据做监督微调和强化学习，让智能体以可解释的方式做玩家决策，同时用真实游戏日志训练环境模型重建游戏内动态系统。实验显示仿真行为与真实玩家高度一致，干预下也能给出合理的因果响应。",
    "cluster": "69ee66c28889ff21",
    "cluster_size": 1,
    "is_lead": true,
@@ -39883,8 +40286,8 @@
    "relevant": true,
    "topics": [
     "game",
-    "economy",
-    "eval"
+    "human-behavior",
+    "framework"
    ],
    "applied": true
   },
@@ -40271,7 +40674,7 @@
    "cluster": "6a4cf305f5f066a3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.84,
+   "hot": 0.77,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -40864,8 +41267,8 @@
     "生成式智能体",
     "人机交互"
    ],
-   "title_zh": "论文提出“人—仿真交互”设计空间，主张政策仿真应让用户探索而非问答",
-   "summary_zh": "作者认为生成式智能体仿真（GABM）沿用了聊天机器人的问答交互，把用户当成结果消费者，在真值不可知的政策问题上造成信任赤字，靠提高模型精度解决不了。文章提出 human-simulation interaction 设计空间，主张恢复仿真本来的探索性交互。",
+   "title_zh": "人机仿真交互：LLM 智能体政策仿真需要从问答走向探索",
+   "summary_zh": "作者指出，基于大语言模型的生成式智能体仿真（GABM）沿用了对话式问答的交互隐喻，把用户当成仿真输出的消费者而非可能性空间的探索者。在政策这类没有先验真值的问题上，这种隐喻造成信任赤字，光靠提升模型精度无法解决。作者提出“人机仿真交互”这一设计空间，主张通过恢复仿真历史上的探索能力来建立有依据的信任。",
    "cluster": "6c2bbfd6cb813a5f",
    "cluster_size": 1,
    "is_lead": true,
@@ -42058,10 +42461,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "filtered",
+   "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 51,
    "tags": [
     "共情模拟",
     "人机交互",
@@ -42079,7 +42482,10 @@
    "topics": [
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 60,
+   "model2": "Qwen3.8-27B"
   },
   "6e8c6a95712b4a3c": {
    "id": "6e8c6a95712b4a3c",
@@ -42120,10 +42526,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 25,
    "tags": [
     "具身智能",
     "社会导航",
@@ -42138,12 +42544,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:14:59Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "6e909c8d4d1dd511": {
    "id": "6e909c8d4d1dd511",
@@ -42437,7 +42846,7 @@
    "cluster": "6f304b36be9257fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.96,
+   "hot": 5.44,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -42544,12 +42953,17 @@
    "domain_guess": "academic",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "academic",
-   "score": 47,
+   "score": 25,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "6faa3fc99118a25c": {
    "id": "6faa3fc99118a25c",
@@ -43268,12 +43682,17 @@
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "application",
-   "score": 33,
+   "score": 18,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "7143eba643ba2709": {
    "id": "7143eba643ba2709",
@@ -43592,7 +44011,7 @@
    "cluster": "72af26774086d271",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.54,
+   "hot": 9.63,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -44171,7 +44590,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 8.89,
+   "hot": 8.12,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -44378,17 +44797,31 @@
    ],
    "domain_guess": "game",
    "added": "2026-11-24T01:56:49Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "game",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 20,
+   "tags": [
+    "AI NPC",
+    "专利",
+    "游戏"
+   ],
+   "title_zh": "动视申请专利：用玩家语音聊天训练 AI NPC 说垃圾话",
+   "summary_zh": "18183 游戏网报道，动视提交专利，用游戏内语音聊天数据训练 AI NPC 学会骂人和嘲讽。材料只有标题，没有专利细节。",
    "cluster": "745be6574136fa99",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 45.57
+   "hot": 45.57,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": false,
+   "topics": [
+    "game"
+   ],
+   "score1": 40,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "748a0788900c8286": {
    "id": "748a0788900c8286",
@@ -44622,8 +45055,8 @@
     "可扩展仿真",
     "前景理论"
    ],
-   "title_zh": "PspMAS：拆分前景状态与语义状态，缓解大规模多智能体仿真的同质化",
-   "summary_zh": "作者发现 LLM 多智能体仿真中智能体异质性会逐渐下降，提出 PspMAS，借鉴前景理论把每个智能体的微观状态拆成轻量前景状态和语义状态，前者持续注入异质性，后者交给 LLM 做推理决策，以支撑更大规模的经济仿真。",
+   "title_zh": "PspMAS：用前景状态传播让 LLM 多智能体仿真在扩展时保留行为异质性",
+   "summary_zh": "作者发现 LLM 多智能体仿真在扩展规模时，压缩中间状态会丢掉智能体行为轨迹这类语义信息，导致智能体异质性随仿真推进逐渐消失。他们提出 PspMAS，把每个智能体的微观状态拆成轻量可并行传播的前景状态和由 LLM 处理的语义状态，两者互补，构成可扩展的仿真方案。",
    "cluster": "75ae5d14861fd793",
    "cluster_size": 1,
    "is_lead": true,
@@ -44632,9 +45065,8 @@
    "triaged": "2026-11-19T19:09:21Z",
    "relevant": true,
    "topics": [
-    "framework",
     "economy",
-    "generative-agents"
+    "framework"
    ],
    "score1": 63,
    "score2": 78,
@@ -44763,7 +45195,10 @@
    "relevant": true,
    "topics": [
     "human-behavior"
-   ]
+   ],
+   "score1": 42,
+   "score2": 65,
+   "model2": "Qwen3.8-27B"
   },
   "765bdccb9324ca7b": {
    "id": "765bdccb9324ca7b",
@@ -45373,7 +45808,7 @@
    "cluster": "777cd1e779dc04f4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.44,
+   "hot": 6.79,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -46115,7 +46550,7 @@
    "cluster": "79ee4a2408bc74b2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.03,
+   "hot": 12.82,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -46462,7 +46897,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 20,
    "tags": [
     "课程学习",
     "强化学习",
@@ -46476,11 +46911,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:59:24Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "7a7e4851013385f3": {
    "id": "7a7e4851013385f3",
@@ -47227,8 +47665,8 @@
     "社交网络仿真",
     "视觉智能体"
    ],
-   "title_zh": "AI-Gram：全由大模型智能体组成的视觉社交网络上线运行",
-   "summary_zh": "AI-Gram 是一个持续运行、无人类参与的社交平台，每个参与者都是自主大模型智能体，能看图、生成图片回应并形成持久社交关系。八项预注册实验发现智能体自发形成图像回复链、风格惯性很强，视觉身份在社会接触和对抗压力下仍保持稳定。",
+   "title_zh": "AI-Gram：全 AI 智能体运营的视觉社交网络，八项实验揭示三幕式美学动态",
+   "summary_zh": "作者部署了一个持续运行的社交平台 AI-Gram，所有参与者都是能看图、生成图的 LLM 智能体，没有真人参与。八项预注册实验发现智能体自发形成图像接龙链条，但视觉风格保持稳定，链条内最终形成主题一致而风格多样的对话。平台已公开上线。",
    "cluster": "7cb86142dd783611",
    "cluster_size": 1,
    "is_lead": true,
@@ -47237,8 +47675,9 @@
    "triaged": "2026-11-19T19:09:27Z",
    "relevant": true,
    "topics": [
+    "generative-agents",
     "social-sim",
-    "generative-agents"
+    "world-env"
    ],
    "applied": false
   },
@@ -47743,6 +48182,61 @@
    "topics": [],
    "applied": false
   },
+  "7db283e3aa9596cf": {
+   "id": "7db283e3aa9596cf",
+   "url": "https://arxiv.org/abs/2611.29372",
+   "title": "Emotion-Aware and Context-Grounded Dialogue Agents for Personalized Video Game Interactions",
+   "text": "We present ChatNPC, a game companion that dynamically personalizes its responses in real time based on players' emotional shifts to enhance user immersion. The model integrates sequential data, leveraging the dynamic nature of streams to benefit from player information, spoken lines, and in-game context. We leverage recent progress in LLMs' tool-calling capabilities to extract vital information from memory and recognize potential constraints for accurate reasoning, thereby tackling the complexity of NPC conversation scenarios. The task is divided into a game sentinel-guided agent (SeGent), a memory capability, and a chat planning tool for reasoning instantiation. The approach uses a lightweight game template as an information framework, with relevant details and a thorough reasoning layout. We conduct extensive experiments on a newly developed game dataset for in-game context NPC dialogue and demonstrate that ChatNPC sequentially captures players' emotional shifts over time; responses are more naturalistic and human-like with appropriate conversational cues, pauses, and sighs; and utterances remain faithful to the dynamics of in-game context and player actions, supporting narrative continuity.",
+   "source_id": "arxiv-npc-narrative",
+   "source_name": "arXiv · AI NPC/互动叙事",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-22T10:24:58Z",
+   "authors": [
+    "Michael Adjeisah",
+    "Jin Zhang",
+    "Pierluigi Vito Amadori",
+    "Ryan Spick",
+    "Eshani Kawshika Fernando",
+    "Kwame Omono Asamoah",
+    "Huiwen Zhao",
+    "Jian Jun Zhang",
+    "Guy Moss",
+    "Jian Chang"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.29372",
+    "categories": [
+     "cs.AI"
+    ],
+    "venue": "arXiv",
+    "comment": "18 pages, 10 figures and 10 tables"
+   },
+   "kw_score": 59,
+   "kw_terms": [
+    "npc",
+    "llms",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 59,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "7db283e3aa9596cf",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 40.52
+  },
   "7e1e75eafc2eabaf": {
    "id": "7e1e75eafc2eabaf",
    "url": "https://arxiv.org/abs/2611.11064",
@@ -47800,7 +48294,7 @@
    "cluster": "7e1e75eafc2eabaf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.85,
+   "hot": 1.69,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -48361,8 +48855,8 @@
     "多智能体",
     "对齐"
    ],
-   "title_zh": "ElecTwit：模拟选举期社交媒体，25种说服技巧在多模型中出现",
-   "summary_zh": "ElecTwit构建模拟政治选举期间社交媒体互动的多智能体框架，替代以往基于游戏的简化环境。测试的多数LLM都用上了25种说服技巧，范围超出此前报告；不同模型在技巧使用和说服产出上差异明显，还出现“真相内核”式消息和智能体集体要求书面证据等自发行为。",
+   "title_zh": "ElecTwit：在模拟选举社交媒体环境中研究多智能体说服行为的框架",
+   "summary_zh": "作者提出 ElecTwit 仿真框架，用多个 LLM 智能体模拟政治选举期间的社交媒体互动，替代以往常用的游戏类仿真环境。实验观察到 25 种具体说服技巧，不同模型在技巧使用和说服效果上差异明显，还出现了要求书面证明等自发群体现象。",
    "cluster": "7f79d15ff76689eb",
    "cluster_size": 1,
    "is_lead": true,
@@ -48437,8 +48931,8 @@
     "评测基准",
     "Concordia"
    ],
-   "title_zh": "用 Concordia 测 LLM 智能体在混合动机场景中的零样本合作泛化",
-   "summary_zh": "arXiv 论文提出一套方法，在自然语言多智能体仿真环境 Concordia 中评估 LLM 智能体零样本合作能力，看它能否在不同伙伴和情境下识别并抓住互利机会。基于 NeurIPS 2024 Concordia Contest 的谈判与集体行动等场景，结果显示当前智能体与可靠合作所需的泛化能力差距明显。",
+   "title_zh": "用 Concordia 评测大模型智能体在混合动机场景中的零样本合作泛化能力",
+   "summary_zh": "作者提出一套基于 Concordia 多智能体仿真环境的评测方法，测试大模型智能体能否在零样本条件下与不同伙伴达成互利。他们用 NeurIPS 2024 Concordia 竞赛的数据做实证分析，发现现有智能体在需要说服和规范执行的场景里离可靠合作还有明显差距。",
    "cluster": "7fe0e43a6d379730",
    "cluster_size": 1,
    "is_lead": true,
@@ -48448,7 +48942,8 @@
    "relevant": true,
    "topics": [
     "org",
-    "eval"
+    "eval",
+    "framework"
    ],
    "applied": false
   },
@@ -48632,7 +49127,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 52,
    "tags": [
     "人格模拟",
     "角色扮演",
@@ -48651,7 +49146,10 @@
    "topics": [
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 60,
+   "model2": "Qwen3.8-27B"
   },
   "8020ad6dad502dec": {
    "id": "8020ad6dad502dec",
@@ -48825,7 +49323,7 @@
    "cluster": "80469b978b756760",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.71,
+   "hot": 15.26,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -49704,8 +50202,8 @@
     "显存管理",
     "开源框架"
    ],
-   "title_zh": "ScaleSim：按调用距离管理显存，把大规模多智能体仿真服务提速 1.74 倍",
-   "summary_zh": "针对 LLM 多智能体仿真中每个智能体独占 GPU 状态导致显存耗尽的问题，作者提出调用距离这一抽象，估计智能体未来发出请求的相对顺序，据此做主动预取和优先级驱逐。ScaleSim 在仿真基准上比 SGLang 最高快 1.74 倍，并支持通过模块化接口管理智能体各自的模型、前缀缓存和适配器。",
+   "title_zh": "ScaleSim：用调用距离管理智能体记忆，让大规模 LLM 多智能体仿真提速 1.74 倍",
+   "summary_zh": "LLM 多智能体仿真难以扩展，因为每个智能体都要在 GPU 上保留模型、前缀缓存和适配器等私有状态，智能体一多显存就耗尽。作者观察到这类负载有两个特点：智能体激活稀疏、调用顺序可估计。据此提出调用距离这一抽象，构建了服务系统 ScaleSim，在仿真基准上比 SGLang 最高快 1.74 倍。",
    "cluster": "82cce7ec9f5a35aa",
    "cluster_size": 1,
    "is_lead": true,
@@ -49715,7 +50213,7 @@
    "relevant": true,
    "topics": [
     "framework",
-    "eval"
+    "world-env"
    ],
    "score1": 64,
    "score2": 75,
@@ -50249,6 +50747,56 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "84b21af4658669d8": {
+   "id": "84b21af4658669d8",
+   "url": "https://arxiv.org/abs/2611.30674",
+   "title": "The user who is not there: genealogy and critique of simulated users built with generative AI in UX testing",
+   "text": "Usability testing depends on people, and people's time does not speed up at the pace that software production demands. Large language models (LLMs) now promise to remove people from testing by generating simulated users that browse websites, answer questionnaires and give interviews. This paper examines how academic research understands that promise. It combines a critical literature review with a genealogical reading that follows the simulated user from the cognitive models of the 1980s to current generative agents. The paper makes four claims. First, testing without the user is an old aim of human-computer interaction (HCI), and cost has always justified it. Second, the validity criterion for user models shifted from predictive precision to believability, and recent studies that return to precision report weak results. Third, simulated participants conflict with the values of academic research and with methods that treat participation as a political right, with Participatory Design as the limit case. Fourth, the Latin American literature found in this review uses generative AI to support expert inspection and contains no study of synthetic users. That gap leaves open questions about who gets represented and about research ethics regulation in Brazil. The paper closes with an agenda of open problems. As part of its method, it reports that the review itself used an LLM as research assistant, and it discusses what that implies.",
+   "source_id": "arxiv-llm-social-sim",
+   "source_name": "arXiv · LLM 社会/多智能体仿真",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T13:28:45Z",
+   "authors": [
+    "José Carlos Arcoverde"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.30674",
+    "categories": [
+     "cs.HC"
+    ],
+    "venue": "arXiv",
+    "comment": ""
+   },
+   "kw_score": 100,
+   "kw_terms": [
+    "generative agents",
+    "generative agent",
+    "synthetic users",
+    "simulated users",
+    "simulated",
+    "simulate",
+    "llm",
+    "llms"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "84b21af4658669d8",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 71.3
+  },
   "84c2a306221ac2b7": {
    "id": "84c2a306221ac2b7",
    "url": "https://arxiv.org/abs/2502.13160",
@@ -50684,7 +51232,7 @@
    "cluster": "8610b5b796c6e117",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.77,
+   "hot": 0.7,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -51834,6 +52382,42 @@
    "score2": 25,
    "model2": "Qwen3.8-27B"
   },
+  "89872fbf4b4ef20d": {
+   "id": "89872fbf4b4ef20d",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObUxEd3hJRlVLdWN0VllVUUQ3YTJHZjBDNHB1elhITXRwcmN0ejhHMHJmb25EWktYV1BEVGtZTEg2c21HOU1kZHBnWXplZmppNWNBcllzT0lKZ1Zfa1p6cmkyQ2dnT0dDZVFsdlQ5eXZGRzdrMnNaUy1fNmtsWjBRaC1VTnMybDJRdnBIaF9nY2tUZTFRNERtelNjbEtHalRxZ0Jic2NDOW5sNFFmYnlVRDhjaHTSAboBQVVfeXFMT3d1aDRVNUU5R1R4dzFDOGV0MU8xeHJtS2FiZDdVWnoxTzc4QVBXV2xJeDdKTDdON3hVQkFzb245ZmdEUmtlc19YLVV5TzlQcnNsMkR1NzFsTHYtQkhIcjZySDJxRU9MM1lldDZnLU5VR1JVVEJtTllzWlg4VEZWVm1EUThsUmlnejRzYzlZWFZyejRkb252UnN6cVl0Z29lNkVLMmtONFFVejhpZlcwbURRR3dGRVZ2SzF3?oc=5",
+   "title": "Activision AI NPC Patent Could Teach Game Characters To Trash-Talk Using Players’ Voice Chats - Wccftech",
+   "text": "Activision AI NPC Patent Could Teach Game Characters To Trash-Talk Using Players’ Voice Chats Wccftech",
+   "source_id": "gnews-game-ai-npc",
+   "source_name": "Google 新闻 · AI NPC",
+   "source_group": "game",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T13:30:03Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 63,
+   "kw_terms": [
+    "ai npc",
+    "npc",
+    "ai"
+   ],
+   "domain_guess": "game",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "game",
+   "score": 63,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "89872fbf4b4ef20d",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 51.05
+  },
   "8989e4a2b381cbaa": {
    "id": "8989e4a2b381cbaa",
    "url": "https://arxiv.org/abs/2605.19351",
@@ -51889,8 +52473,8 @@
     "应急疏散",
     "沙盒环境"
    ],
-   "title_zh": "PAVE认知架构让生成式智能体在火灾疏散等场景中做出“正当违规”判断",
-   "summary_zh": "作者提出感知、评估、裁决、执行四模块的PAVE架构，显式建模权威距离、同伴行为与情境严重度，并用必要性、比例性和无替代方案三项检查做合法性门控。在基于Smallville改造的Voville交通环境中，跨三个场景、四个LLM骨干验证智能体可同时满足正当违规等四项性质。",
+   "title_zh": "PAVE 认知架构让生成式智能体在紧急情况下合理违规",
+   "summary_zh": "作者提出 PAVE 四模块认知架构，让大模型智能体在火灾疏散等紧急场景中判断何时可以违反规则。在基于 Smallville 改造的 Voville 交通环境中测试，PAVE 智能体同时满足合理违规、服从权威、违规范围受限和事后恢复四个性质，人类评估者认为其决策比基线更可信。",
    "cluster": "8989e4a2b381cbaa",
    "cluster_size": 1,
    "is_lead": true,
@@ -51900,8 +52484,8 @@
    "relevant": true,
    "topics": [
     "generative-agents",
-    "world-env",
-    "eval"
+    "eval",
+    "framework"
    ],
    "applied": false
   },
@@ -53576,8 +54160,8 @@
     "受控实验",
     "方法论"
    ],
-   "title_zh": "在类微博环境中做受控实验，检验LLM智能体是否复现信息参与机制",
-   "summary_zh": "研究在类微博环境里操纵信息负荷和描述性规范，让点赞与转发等流行度线索内生演化，看模拟行为是否按理论预期变化。结果显示参与度对信息负荷和规范有系统响应，对流行度线索的敏感度随情境变化，说明这是条件性反应而非死板遵循提示词。",
+   "title_zh": "微博式环境下的受控实验：LLM 智能体的信息参与行为对信息负载与描述性规范有系统响应",
+   "summary_zh": "作者在一个类微博环境中操纵信息负载和描述性规范，让点赞与转发等流行度线索内生演化，检验 LLM 智能体的参与行为是否按理论预期变化。结果显示参与行为对信息负载和规范有系统响应，对流行度线索的敏感性随情境变化，说明智能体并非机械服从提示词。",
    "cluster": "8cdd775240c4c9bb",
    "cluster_size": 1,
    "is_lead": true,
@@ -53587,8 +54171,8 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "human-behavior",
-    "eval"
+    "eval",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -54134,7 +54718,7 @@
    "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 48,
    "tags": [
     "多智能体系统",
     "智能体调度",
@@ -54153,7 +54737,10 @@
     "framework",
     "org"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 50,
+   "model2": "Qwen3.8-27B"
   },
   "8e6bc9f5f7b21811": {
    "id": "8e6bc9f5f7b21811",
@@ -54486,10 +55073,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:18:16Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 30,
    "tags": [
     "数字孪生",
     "生产调度",
@@ -54503,12 +55090,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:40Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 30,
+   "model2": "Qwen3.8-27B"
   },
   "8f1800e599f49348": {
    "id": "8f1800e599f49348",
@@ -54857,12 +55447,26 @@
    "domain_guess": "game",
    "added": "2026-11-24T01:56:49Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
-   "score": 25,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 20,
+   "tags": [
+    "AI NPC",
+    "游戏智能体",
+    "专利"
+   ],
+   "title_zh": "动视新专利：NPC 可学习玩家语音中的反应",
+   "summary_zh": "中文报道称动视新专利披露 NPC 能学习玩家语音中的反应。除标题外没有方法、数据或落地信息。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:49Z",
+   "relevant": false,
+   "topics": [
+    "game"
+   ],
+   "score1": 40,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "901276a189efe2d9": {
    "id": "901276a189efe2d9",
@@ -55217,12 +55821,26 @@
    "domain_guess": "game",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "game",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "llm": true,
+   "domain": "business",
+   "score": 48,
+   "tags": [
+    "AI NPC",
+    "专利",
+    "个性化台词"
+   ],
+   "title_zh": "动视新专利：用玩家聊天内容生成个性化 NPC 台词",
+   "summary_zh": "与上一条为同一专利的另一家媒体报道，称动视的 AI 系统学习玩家聊天内容，为 NPC 生成个性化台词。材料同样只有标题级信息。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 46,
+   "score2": 50,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "9118441302b6edff": {
    "id": "9118441302b6edff",
@@ -55620,8 +56238,8 @@
     "评测基准",
     "LLM 稳定性"
    ],
-   "title_zh": "AlphaForgeBench：把 LLM 当量化研究员而非交易智能体来评测",
-   "summary_zh": "作者发现 LLM 作为交易智能体时逐次运行方差极大，即使确定性解码也会在相邻时间步反复翻转动作，归因于无状态自回归和连续到离散动作映射的敏感性。AlphaForgeBench 因此改为把 LLM 定位为量化研究员，重新设计端到端交易策略设计的评测框架。",
+   "title_zh": "AlphaForgeBench：让大模型当量化研究员而非交易员，绕开行为不稳定问题",
+   "summary_zh": "作者发现大模型做实时交易智能体时行为极不稳定，即使确定性解码也会在相邻时间步反复翻转动作，原因是自回归模型没有对先前动作的持久记忆。他们提出 AlphaForgeBench，把大模型重新定位为量化研究员，让它生成可执行的 alpha 因子并组合成策略，评测因此变得确定且可复现。",
    "cluster": "91c736e21d4e3552",
    "cluster_size": 1,
    "is_lead": true,
@@ -55634,6 +56252,60 @@
     "eval"
    ],
    "applied": false
+  },
+  "91d4028eebb33b1b": {
+   "id": "91d4028eebb33b1b",
+   "url": "https://arxiv.org/abs/2611.29628",
+   "title": "Explainable Emotion and Mental Health Reasoning in Large Language Models Using Theories of Emotion",
+   "text": "Advancements in Large Language Models (LLMs) have enabled a wide range of applications. However, their ability to simulate human-like behavior and reasoning remains unclear. While emotion detection is a better-established Natural Language Processing (NLP) task, existing approaches primarily focus on directly classifying text into predefined emotion classes, often overlooking the appraisal process that explains why an individual experiences a particular emotion in a given situation. In this work, we propose Psychology-based Chain-of-Thought (PsyCoT) reasoning, a theory-driven prompting strategy grounded in the Schachter-Singer and Cognitive Appraisal theories of emotion. We propose and evaluate PsyCoT for subjective NLP tasks, including emotion analysis, emotion intensity prediction, stress analysis, and depression severity identification. Our evaluation covers four levels of classification complexity: binary, multiclass, multi-label, and ordinal scaling, spanning 11 languages. We assess the performance of five state-of-the-art LLMs across these selected subjective NLP tasks. Experimental results demonstrate that PsyCoT prompt variants improve the standard chain-of-thought (CoT) prompting across the evaluated tasks. Across all evaluated tasks, PsyCoT yields F1 score gains ranging from 0.5% to 28.1%, depending on the model, task, and language configuration.",
+   "source_id": "arxiv-human-behavior-sim",
+   "source_name": "arXiv · 人类行为/用户/市场模拟",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-22T17:23:32Z",
+   "authors": [
+    "Tadesse Destaw Bela",
+    "Iqra Ameer",
+    "Helena Gómez Adorno",
+    "Alexander Gelbukh",
+    "Eusebio Ricardez Vázquez",
+    "Olga Kolesnikova",
+    "Grigori Sidorov",
+    "Seid Muhie Yimam"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.29628",
+    "categories": [
+     "cs.CL"
+    ],
+    "venue": "arXiv",
+    "comment": "20 pages"
+   },
+   "kw_score": 85,
+   "kw_terms": [
+    "simulate human",
+    "simulate",
+    "llms",
+    "large language model",
+    "language model"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "91d4028eebb33b1b",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 58.76
   },
   "922aefc032c3d951": {
    "id": "922aefc032c3d951",
@@ -56064,6 +56736,62 @@
    "score2": 35,
    "model2": "Qwen3.8-27B",
    "applied": true
+  },
+  "92f4aa2f18321e5f": {
+   "id": "92f4aa2f18321e5f",
+   "url": "https://arxiv.org/abs/2611.31118",
+   "title": "TideSand: Performance-Accurate Sandbox Multiplexing for LLM Agents",
+   "text": "We propose TideSand, a sandbox system that intelligently multiplexes resources for performance-sensitive LLM agents, such as auto research agents working on system measurement tasks. TideSand combines three key ideas: agent-aware scheduling, which schedules sandbox execution intelligently at the tool call level to avoid resource contention; speculative swapping, which offloads the memory of sandboxes waiting on inference and restores it before their next tool call; and selective rollback, which checkpoints selected sandboxes when contention occurs and restores them when machines are idle. We evaluate TideSand across six model-workload pairs on AlgoTune, Terminal-Bench 4.0, and Terminal-Bench Science. TideSand achieves 3.8-10x higher throughput than strict reservation while maintaining tool-call fidelity, or 7-44% higher fidelity than overcommit baselines at similar throughput. Moreover, TideSand reduces the evaluation error on Algotune by 19x through improved tool-call fidelity. We hope the work motivates future research to maintain tool call fidelity while keeping resource utilization high through statistical multiplexing.",
+   "source_id": "arxiv-sandbox-env",
+   "source_name": "arXiv · 智能体沙盒环境/世界模拟器",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T17:54:22Z",
+   "authors": [
+    "Shulu Li",
+    "Hanchen Li",
+    "Xiaokun Chen",
+    "Qiuyang Mang",
+    "Hanfei Chen",
+    "Jacky Kwok",
+    "Hanfei Yu",
+    "Alvin Cheung",
+    "Edward A. Lee",
+    "Joseph E. Gonzalez",
+    "Ion Stoica"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.31118",
+    "categories": [
+     "cs.OS"
+    ],
+    "venue": "arXiv",
+    "comment": "16 pages, 14 figures"
+   },
+   "kw_score": 62,
+   "kw_terms": [
+    "sandbox",
+    "llm",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 62,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "92f4aa2f18321e5f",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 57.66
   },
   "9340b30660ad2496": {
    "id": "9340b30660ad2496",
@@ -56725,7 +57453,7 @@
    "cluster": "948c36101407e81c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.81,
+   "hot": 4.39,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -56961,7 +57689,7 @@
    "cluster": "94fa74c7b9f0e060",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 38.96,
+   "hot": 35.59,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-23T13:15:54Z",
    "relevant": true,
@@ -57032,7 +57760,10 @@
     "eval",
     "org"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 45,
+   "model2": "Qwen3.8-27B"
   },
   "95400c766d84df02": {
    "id": "95400c766d84df02",
@@ -57879,6 +58610,55 @@
    "topics": [],
    "applied": false
   },
+  "971375198b0419b1": {
+   "id": "971375198b0419b1",
+   "url": "https://arxiv.org/abs/2611.29581",
+   "title": "Social Interaction Breaks Replicate Independence in Controlled-Clone LLM Agents",
+   "text": "Multi-agent LLM evaluations and social simulations create many agents from one model and treat them as independent replicates, even after the agents interact. This assumption remains untested with matched controls. We introduce SocCogEval, a controlled-clone assay for Social Cognitive Transfer (SCT). Clones share the base model, system prompt, and decoding parameters and differ only in a private brief, and a factorial protocol separates the brief, 30 rounds of interaction, and initialization noise. On Qwen3-122B-FP8, interaction with the briefs held fixed raises off-topic BFI-10 response-profile drift by $\\barΔ=+0.917$ and $+0.912$ in two topically disjoint scenarios (exact $p=0.0008$ and $0.0039$). The drift is larger than under the brief alone, persists under temperature-zero re-probing, and stays positive without typed memory extraction in exploratory tests. Matched solo generation reproduces part of it, and social interaction remains highest. Across five more model variants, every scenario-averaged interaction contrast is positive. Each interacting population is therefore one replicate, and treating its agents as independent requires paired no-interaction controls. Our code and data are publicly available at https://github.com/koanatakiyo/SocCogEval.",
+   "source_id": "arxiv-llm-social-sim",
+   "source_name": "arXiv · LLM 社会/多智能体仿真",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-22T16:08:12Z",
+   "authors": [
+    "Yandan Zheng",
+    "Haoran Luo",
+    "Anh Tuan Luu"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.29581",
+    "categories": [
+     "cs.MA"
+    ],
+    "venue": "arXiv",
+    "comment": ""
+   },
+   "kw_score": 99,
+   "kw_terms": [
+    "social simulation",
+    "simulation",
+    "llm",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "971375198b0419b1",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 58.05
+  },
   "97166a1d9f8fa5c6": {
    "id": "97166a1d9f8fa5c6",
    "url": "https://arxiv.org/abs/2601.22139",
@@ -58041,7 +58821,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 8.73,
+   "hot": 7.97,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T01:02:56Z",
    "relevant": true,
@@ -58284,7 +59064,7 @@
    "cluster": "3cf41a97b1c6ee7d",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 3.84,
+   "hot": 3.51,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -58409,7 +59189,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 46.14,
+   "hot": 42.15,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -58588,7 +59368,7 @@
    "cluster": "97f684f7c5000779",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.5,
+   "hot": 0.46,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -59216,7 +59996,7 @@
    "cluster": "98fb20f80efbdd1e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.81,
+   "hot": 16.27,
    "topics": [
     "economy",
     "policy"
@@ -61226,7 +62006,7 @@
    "cluster": "9d8238d886bc104a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.49,
+   "hot": 0.44,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:14Z",
    "relevant": true,
@@ -61990,10 +62770,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "filtered",
+   "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 48,
    "tags": [
     "用户模拟",
     "RAG",
@@ -62012,7 +62792,10 @@
     "human-behavior",
     "eval"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 55,
+   "model2": "Qwen3.8-27B"
   },
   "9facdd646f24a5c6": {
    "id": "9facdd646f24a5c6",
@@ -62212,7 +62995,10 @@
     "urban",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 75,
+   "model2": "Qwen3.8-27B"
   },
   "a0008bbf9786c731": {
    "id": "a0008bbf9786c731",
@@ -63087,7 +63873,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 44,
+   "score": 25,
    "tags": [
     "数字孪生",
     "城市建模",
@@ -63101,12 +63887,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:40Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban",
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 44,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "a23c85ecaf300719": {
    "id": "a23c85ecaf300719",
@@ -63454,8 +64243,8 @@
     "推荐系统",
     "视觉语言模型"
    ],
-   "title_zh": "FixATE 用真实眼动数据对齐视觉语言模型注意力，提升推荐场景的用户模拟保真度",
-   "summary_zh": "作者分析轮播式推荐场景的真实眼动数据，发现用户有稳定且能预测点击的个体注视模式。FixATE 先用可解释性算子探测 VLM 内部视觉注意力得到槽位级相关分布，再学习个性化软提示把注意力引向该用户的注视模式，在三种探测算子和两种架构上做了实验。",
+   "title_zh": "FixATE：用真实眼动数据校准视觉语言模型的注意力，让用户模拟器像真人一样看推荐界面",
+   "summary_zh": "作者用真实轮播推荐场景的眼动数据发现，用户的注视模式个体稳定且能预测点击。他们提出 FixATE，通过可解释性算子探测 VLM 的视觉注意力，再为每个用户学习软提示，把模型注意力拉向该用户的注视分布。在两种 VLM 骨干上的实验显示注意力对齐和点击预测准确率都稳定提升。",
    "cluster": "a295251fe41cc0da",
    "cluster_size": 1,
    "is_lead": true,
@@ -63464,12 +64253,13 @@
    "triaged": "2026-11-20T02:27:17Z",
    "relevant": true,
    "topics": [
-    "human-behavior"
+    "human-behavior",
+    "eval"
    ],
    "score1": 63,
    "score2": 76,
    "model2": "Qwen3.8-27B",
-   "applied": false
+   "applied": true
   },
   "a2960c24776d5e9d": {
    "id": "a2960c24776d5e9d",
@@ -63762,17 +64552,31 @@
    ],
    "domain_guess": "game",
    "added": "2026-11-24T01:12:11Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "game",
-   "score": 63,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "score": 46,
+   "tags": [
+    "AI NPC",
+    "专利",
+    "游戏"
+   ],
+   "title_zh": "Wccftech 报道动视专利：用玩家语音聊天教游戏角色互喷",
+   "summary_zh": "Wccftech 报道动视一项专利，拟用玩家语音聊天内容训练 AI NPC 说出嘲讽台词。与中文报道为同一专利，材料仅标题。",
    "cluster": "a339165995651c20",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 55.89
+   "hot": 55.89,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 42,
+   "score2": 50,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "a367b923ea0b6f28": {
    "id": "a367b923ea0b6f28",
@@ -64112,7 +64916,7 @@
    "cluster": "a3b9dc32372c08c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.42,
+   "hot": 4.95,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -64875,7 +65679,7 @@
    "cluster": "a5e42b2b6ba30ccc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.58,
+   "hot": 12.41,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -65150,8 +65954,8 @@
     "舆论极化",
     "多智能体"
    ],
-   "title_zh": "PRISM：按 MBTI 人格给多模态 LLM 智能体分配认知策略，模拟社交媒体舆论极化",
-   "summary_zh": "PRISM 把随机微分方程刻画情绪连续演化、人格条件部分可观测马尔可夫决策过程刻画离散决策结合起来，用大规模社交媒体数据先验初始化 MBTI 人格的多模态 LLM 智能体。论文称其人格一致性优于同质化和 Big Five 基线，并能复现理性抑制等涌现现象。",
+   "title_zh": "PRISM：用 MBTI 人格驱动多模态大模型智能体仿真社交媒体舆论极化",
+   "summary_zh": "PRISM 把随机微分方程描述的连续情绪演化与人格条件化的部分可观测决策过程结合，让多模态大模型智能体按 MBTI 人格策略行动，人格一致性显著优于同质化智能体和大五人格基准。框架复现了理性抑制、情感共振等涌现现象，可用于分析社交媒体生态。",
    "cluster": "a6e4538a563b13e6",
    "cluster_size": 1,
    "is_lead": true,
@@ -65161,7 +65965,8 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "generative-agents"
+    "generative-agents",
+    "human-behavior"
    ],
    "applied": false
   },
@@ -65217,7 +66022,7 @@
    "cluster": "a6e7e91569fce679",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.81,
+   "hot": 16.27,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:38Z",
    "relevant": true,
@@ -65659,7 +66464,7 @@
    "cluster": "a809332edc384a98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.04,
+   "hot": 0.03,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:38Z",
    "relevant": true,
@@ -66482,7 +67287,7 @@
    "cluster": "aa8e964eeccef16d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.87,
+   "hot": 6.28,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -67262,12 +68067,26 @@
    "domain_guess": "game",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
    "score": 50,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "tags": [
+    "AI NPC",
+    "专利",
+    "游戏"
+   ],
+   "title_zh": "动视专利：用神经网络和大模型从游戏内语音聊天训练 NPC",
+   "summary_zh": "GamesIndustry.biz 报道动视提交专利，用神经网络和大语言模型从游戏内语音聊天中训练 NPC。三条报道指向同一专利，均无技术细节。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 45,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "ada2b4d5f7f1b58f": {
    "id": "ada2b4d5f7f1b58f",
@@ -68561,6 +69380,56 @@
    ],
    "applied": false
   },
+  "b01ac4be12d4ef74": {
+   "id": "b01ac4be12d4ef74",
+   "url": "https://arxiv.org/abs/2611.28341",
+   "title": "When Tools Fail, Agents Fabricate: Silent Failure and Verification-First Oversight in Tool-Using LLM Agents",
+   "text": "Tool-using LLM agents must recover when a tool call fails, by retrying, switching tools, or revising their plan. We study how agents fail when tools fail, using RetryRealistic, a sandboxed yet realistic testbed for controlled fault injection in which agents operate on a real OS filesystem with genuine permission enforcement, SQLite databases, a deterministic local HTTP server, and a constrained shell, across 8 tools, 9 fault types with controlled persistence, and 30 multi-step tasks. Evaluating four agents over 2,100 faulted runs against ground truth, we find that recovery is unreliable (19-68% correct) and frequently silent: 6-26% of runs end in a confident fabrication, a wrong answer asserted as fact. The failure mode is governed more by the fault type than by the model: faults that return partial data drive fabrication (up to 38%), while hard denials drive honest failure. The mechanism is what we call silent ingestion: the agent accepts faulted data as valid on first contact without retrying or flagging the problem, then builds a fabricated answer on top of it. We show that fabrication is reducible: a verification-first Monitor, grounding checks in structured tool outputs and issuing corrective directives rather than hard blocks, raises correct recovery from 45.6% to 56.3% and cuts fabrication from 17.3% to 10.8%. Removing chain-of-thought increases fabrication (+8.3pp), so deliberation guards against silent ingestion. We release RetryRealistic, the fault-injection toolkit, and all annotated traces at https://github.com/Kingsford-Group/RetryRealistic",
+   "source_id": "arxiv-sandbox-env",
+   "source_name": "arXiv · 智能体沙盒环境/世界模拟器",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-20T21:47:43Z",
+   "authors": [
+    "Gün Kaynar",
+    "Boshen Yan",
+    "Carl Kingsford"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.28341",
+    "categories": [
+     "cs.AI",
+     "cs.CL",
+     "cs.SE"
+    ],
+    "venue": "arXiv",
+    "comment": "NeurIPS 2026 Workshop: Who Verifies the Agents? Toward Reliable Agent Development. 12 pages, 3 figures, 7 tables"
+   },
+   "kw_score": 62,
+   "kw_terms": [
+    "sandbox",
+    "llm",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 62,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "b01ac4be12d4ef74",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 29.93
+  },
   "b027be94af8fb24d": {
    "id": "b027be94af8fb24d",
    "url": "https://arxiv.org/abs/2607.27816",
@@ -69135,13 +70004,31 @@
    ],
    "domain_guess": "game",
    "added": "2026-11-24T01:56:49Z",
-   "status": "filtered",
-   "llm": false,
-   "domain": "game",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "status": "selected",
+   "llm": true,
+   "domain": "business",
+   "score": 56,
+   "tags": [
+    "AI NPC",
+    "游戏 AI",
+    "公司动态"
+   ],
+   "title_zh": "育碧成立游戏 AI 子公司，将 AI 用于 NPC 行为与记忆",
+   "summary_zh": "据韩媒 게임메카 报道，育碧成立了一家专注游戏 AI 的子公司，计划把 AI 技术应用于 NPC 的行为与记忆。报道原文只有标题，没有披露公司名称、成立时间、技术方案或合作细节。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 58,
+   "score2": 55,
+   "model2": "Qwen3.8-27B",
+   "applied": false,
+   "cluster": "b1a8d7dbad71f0b4",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 26.17
   },
   "b1f9e7823c80878f": {
    "id": "b1f9e7823c80878f",
@@ -69327,7 +70214,7 @@
    "cluster": "b2017a81e5e5c532",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.71,
+   "hot": 15.26,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:44Z",
    "relevant": true,
@@ -69955,7 +70842,7 @@
    "cluster": "b32a8ca7c7009a9c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.1
+   "hot": 1.92
   },
   "b3871885fa350a70": {
    "id": "b3871885fa350a70",
@@ -70159,6 +71046,44 @@
    ],
    "applied": false
   },
+  "b461c6e693303a9d": {
+   "id": "b461c6e693303a9d",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNko5UGRnV1k4ZjY5c1RuMnZKVVd4U3h3YUJsMFdsRDVZcHJ0TVRlbElSa3VlczlmbExNSFNNUExfV0t5d1M3WkhUZFVWZENPRFY4OHoxcjhWM09YZmlnaDBDeFZvaEo4ekNEV0o3Y29sdTBST1l2UTRqMm9qTFRsOEZocGhTYU9ud09GczZqX0t4Z2RBTTd3SWlMRC1DYnlMUFVPTmFCb0tINXp2LXEwV010dEdRVUVwVk1kcEJzajMzTFJkcVRnbDNRYXR3T1V4OG01YTJZdkc1VWR1YWVCdTIxWQ?oc=5",
+   "title": "DeepMind AI Agents Cut Fusion Simulation Cost Nearly 12x in Quantum Algorithms, Each Gain Verified - Tech Times",
+   "text": "DeepMind AI Agents Cut Fusion Simulation Cost Nearly 12x in Quantum Algorithms, Each Gain Verified Tech Times",
+   "source_id": "gnews-app-policy-sim",
+   "source_name": "Google 新闻 · 政策/城市/应急推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-24T06:35:57Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 60,
+   "kw_terms": [
+    "simulation",
+    "ai agent",
+    "ai agents",
+    "agents",
+    "ai"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "application",
+   "score": 60,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "b461c6e693303a9d",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 63.05
+  },
   "b47f60f17b6b6a13": {
    "id": "b47f60f17b6b6a13",
    "url": "https://arxiv.org/abs/2408.08282",
@@ -70319,7 +71244,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 9.5,
+   "hot": 8.68,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -70630,7 +71555,7 @@
    "cluster": "b5be1eee63d8b091",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.72,
+   "hot": 0.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:20Z",
    "relevant": true,
@@ -71356,6 +72281,55 @@
    "topics": [],
    "applied": false
   },
+  "b780eead904f50ed": {
+   "id": "b780eead904f50ed",
+   "url": "https://arxiv.org/abs/2611.28170",
+   "title": "How Behavioral Structure Shapes Agent Strategy in Language-Based Economic Games",
+   "text": "In competitive multi-agent economic games, agents continuously interact, strategize, and make decisions within a shared market. Consequently, every message produced by a language agent changes both the current economic state of the market and the opponent's subsequent behavior. Although terminal rewards can indicate whether a decision was effective and broad behavioral labels can provide a coarse interpretation of the interaction, neither specifies the concrete response that should be taken next. We therefore ask whether explicitly providing an opponent's operational structure to a focal agent changes the value of its task-specific executable response strategies and the resulting game outcome. Using Games in Language-based Economic Environments (GLEE) as a controlled environment, we investigate this question across bargaining, negotiation, and persuasion games. We analyze 298,357 trajectories using seven relational profiles and decompose each task's dominant profile into ten Act$\\cdot$onomy structures, finding that dominant profiles have task-specific operational compositions. We then compare structure-blind and structure-aware policies in matched offline simulation and prospective online play. In fixed 334-game online cohorts for each task, the aware-minus-blind official-percentile point estimates of the profile-gated eligible samples are +2.52, +1.90, and +5.91 points in bargaining, negotiation, and persuasion, respectively (corresponding 95% confidence intervals include zero). Taken together, the results distinguish strategy selection from response realization: structure re-ranks strategies, while in persuasion the online point estimate becomes positive only when the policy also changes the submitted message or purchase action.",
+   "source_id": "arxiv-negotiation-games",
+   "source_name": "arXiv · 谈判/外交/博弈多智能体",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-20T03:59:59Z",
+   "authors": [
+    "Yichi Zhang",
+    "Shuo Yang",
+    "Jun Wang",
+    "Chunhua Liu"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.28170",
+    "categories": [
+     "cs.MA"
+    ],
+    "venue": "arXiv",
+    "comment": "Accepted at the NeurIPS 2026 Workshop on Interpreting Agent Behavior (IAB)"
+   },
+   "kw_score": 60,
+   "kw_terms": [
+    "simulation",
+    "language agent",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 60,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "b780eead904f50ed",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 24.4
+  },
   "b79b3d5976ec5a92": {
    "id": "b79b3d5976ec5a92",
    "url": "https://arxiv.org/abs/2403.08251",
@@ -71511,10 +72485,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 20,
    "tags": [
     "轨迹预测",
     "自动驾驶",
@@ -71524,7 +72498,7 @@
    "summary_zh": "作者把轨迹预测的专家选择建模成基于模型内部信号（稳定性、不确定性）的两两排序问题，在物理 LSTM、Transformer 和微调 GameFormer 之间逐样本选最可靠的一个。在 nuPlan-mini 的 1287 个样本上评测，作者称内部信号比几何场景描述更有信息量。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:34Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban",
     "eval"
@@ -71533,7 +72507,10 @@
    "cluster": "b827931c22162f86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.0
+   "hot": 0.0,
+   "score1": 45,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "b8dab384ac0d6a8c": {
    "id": "b8dab384ac0d6a8c",
@@ -71939,7 +72916,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 44,
+   "score": 20,
    "tags": [
     "多机器人",
     "贝叶斯优化",
@@ -71953,11 +72930,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:03Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 44,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "b98fd10f807d82f2": {
    "id": "b98fd10f807d82f2",
@@ -72010,8 +72990,8 @@
     "可解释性",
     "评测基准"
    ],
-   "title_zh": "从模型激活里提取“用户角色向量”，定位用户模拟器的助手偏置",
-   "summary_zh": "作者对比同一段对话中用户与助手视角的模型表征，提取出用户角色向量，发现用户方向在激活中可识别、能引出更像用户的行为；沿该方向引导会提升模拟真实感，但也会放大用户行为并覆盖个体画像。作者据此认为助手偏置在表征层面可定位。",
+   "title_zh": "用角色向量分析 LLM 用户模拟器的助手偏差",
+   "summary_zh": "作者从模型激活层面分析了 LLM 用户模拟器的助手偏差，即模拟用户倾向于配合完成任务，很少表现出真实用户的挫败或放弃。他们通过对比模型对同一段对话中用户与助手视角的表征，提取出用户角色向量。该方向在激活中可识别，能引发用户式行为，但加强激活也可能夸大行为并覆盖个体用户画像。",
    "cluster": "b98fd10f807d82f2",
    "cluster_size": 1,
    "is_lead": true,
@@ -72216,7 +73196,10 @@
     "economy",
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 85,
+   "model2": "Qwen3.8-27B"
   },
   "baf80426f1c5edee": {
    "id": "baf80426f1c5edee",
@@ -72307,10 +73290,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 25,
    "tags": [
     "无人机",
     "代码生成",
@@ -72325,11 +73308,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:27Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "bbc9b4d66e7e40f5": {
    "id": "bbc9b4d66e7e40f5",
@@ -72388,7 +73374,7 @@
    "cluster": "bbc9b4d66e7e40f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.77,
+   "hot": 11.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -72792,7 +73778,7 @@
    "cluster": "bd1a1262a30563d3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 29.51,
+   "hot": 26.96,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -72849,7 +73835,7 @@
    "cluster": "bd48b9b8ec948700",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.18,
+   "hot": 8.39,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -73327,7 +74313,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 9.66,
+   "hot": 8.82,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -73933,17 +74919,22 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-24T01:12:11Z",
-   "status": "selected",
-   "llm": false,
+   "status": "filtered",
+   "llm": true,
    "domain": "academic",
-   "score": 65,
+   "score": 22,
    "tags": [],
    "title_zh": "",
    "summary_zh": "",
    "cluster": "c0928d0c6cc7696d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.35
+   "hot": 0.35,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "c09ce6ad939d17fe": {
    "id": "c09ce6ad939d17fe",
@@ -74047,7 +75038,7 @@
    "cluster": "c0a18809d198e887",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.77,
+   "hot": 23.54,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:03Z",
    "relevant": true,
@@ -74446,7 +75437,7 @@
    "cluster": "c17bea1790859202",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.73,
+   "hot": 0.67,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -74809,7 +75800,7 @@
    "cluster": "c2e5f6a5bcc1a417",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.81,
+   "hot": 16.27,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -75116,7 +76107,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 15,
    "tags": [
     "数字孪生",
     "强化学习",
@@ -75127,12 +76118,15 @@
    "summary_zh": "作者介绍 MMEDR-Autonomous 框架，包含基于学习的单目位姿估计光学导航网络、仍在开发中的强化学习制导方法，以及硬件在环测试台。导航网络用多尺度特征融合，在真实感图像增强上训练以缓解域偏移；制导部分讨论了学习稳定性、奖励设计和超参数调优。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:44Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 15,
+   "model2": "Qwen3.8-27B"
   },
   "c3808aacf816453d": {
    "id": "c3808aacf816453d",
@@ -75258,8 +76252,8 @@
     "多智能体",
     "人在回路"
    ],
-   "title_zh": "SCSimulator 用 LLM 多智能体仿真加人在回路，做供应链合作伙伴选择的视觉分析",
-   "summary_zh": "SCSimulator 把 LLM 驱动的多智能体仿真与人在回路协作结合，用于供应链合作伙伴选择这一多目标动态博弈问题，并提供可视化分析界面。作者指出传统方法依赖数学简化和管理启发式，已有仿真多用固定统一的智能体逻辑，而该框架试图兼顾动态关系建模、可解释性与专家控制。",
+   "title_zh": "SCSimulator：用大模型多智能体仿真辅助供应链伙伴选择的可视化分析框架",
+   "summary_zh": "作者提出 SCSimulator，把大模型驱动的多智能体仿真与人在回路的可视化分析结合，用于供应链伙伴选择决策。系统通过自适应网络结构模拟供应链演化，结合思维链推理与可解释 AI 技术生成透明的决策权衡解释。使用场景与用户研究验证了系统的有效性与可用性。",
    "cluster": "c3a0711508dc8778",
    "cluster_size": 1,
    "is_lead": true,
@@ -75269,7 +76263,7 @@
    "relevant": true,
    "topics": [
     "org",
-    "economy"
+    "framework"
    ],
    "score1": 60,
    "score2": 80,
@@ -76015,13 +77009,31 @@
    ],
    "domain_guess": "game",
    "added": "2026-11-24T01:56:49Z",
-   "status": "filtered",
-   "llm": false,
-   "domain": "game",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "status": "selected",
+   "llm": true,
+   "domain": "business",
+   "score": 50,
+   "tags": [
+    "AI NPC",
+    "专利",
+    "语音生成"
+   ],
+   "title_zh": "动视申请专利：AI 学习玩家聊天内容为 NPC 生成语音",
+   "summary_zh": "动视（Activision）的一项专利申请被媒体披露，该系统会学习玩家的聊天内容，据此为游戏 NPC 生成语音。目前只有专利标题层面的信息，没有技术细节、实验结果或验证数据。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 50,
+   "score2": 50,
+   "model2": "Qwen3.8-27B",
+   "applied": false,
+   "cluster": "c5fad41f7b61d2ec",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 36.82
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -77123,7 +78135,7 @@
    "cluster": "c92a503eabc2be2c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.93
+   "hot": 30.08
   },
   "c967111bdc85aaa2": {
    "id": "c967111bdc85aaa2",
@@ -77492,7 +78504,7 @@
    "cluster": "ca29e3bae1447b07",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.26
+   "hot": 1.15
   },
   "ca337debda67995d": {
    "id": "ca337debda67995d",
@@ -77738,7 +78750,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 15,
    "tags": [
     "多智能体强化学习",
     "sim-to-real",
@@ -77752,12 +78764,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:51Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "eval"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 15,
+   "model2": "Qwen3.8-27B"
   },
   "ca7b10c91394792a": {
    "id": "ca7b10c91394792a",
@@ -78409,7 +79424,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 55.78
+   "hot": 50.96
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -78938,12 +79953,17 @@
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "application",
-   "score": 35,
+   "llm": true,
+   "domain": "academic",
+   "score": 12,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:45Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "cdaff7db1b0526dc": {
    "id": "cdaff7db1b0526dc",
@@ -79056,7 +80076,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 44,
+   "score": 30,
    "tags": [
     "具身智能",
     "多智能体",
@@ -79070,11 +80090,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T02:27:57Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 44,
+   "score2": 30,
+   "model2": "Qwen3.8-27B"
   },
   "ce1a47d5d4300be1": {
    "id": "ce1a47d5d4300be1",
@@ -79222,12 +80245,26 @@
    "domain_guess": "game",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 20,
+   "tags": [
+    "AI NPC",
+    "游戏智能体",
+    "专利"
+   ],
+   "title_zh": "动视申请专利：用玩家语音聊天训练游戏 NPC 的反应",
+   "summary_zh": "动视提交的一项专利显示，游戏 NPC 可以从玩家的语音聊天中学习，从而做出更拟人的反应。材料只有标题，没有披露训练方法、数据规模和是否已用于实际游戏。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:49Z",
+   "relevant": false,
+   "topics": [
+    "game"
+   ],
+   "score1": 42,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "cea02f2b5c275d28": {
    "id": "cea02f2b5c275d28",
@@ -79394,7 +80431,7 @@
    "cluster": "4c34cde27eeaace5",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 4.25,
+   "hot": 3.88,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -80104,6 +81141,60 @@
     "world-env"
    ],
    "applied": true
+  },
+  "d12a4824156e8dec": {
+   "id": "d12a4824156e8dec",
+   "url": "https://arxiv.org/abs/2611.28755",
+   "title": "Who Speaks for the Water? Simulating Discursive Closure and Power Asymmetries in Hydrosocial Governance",
+   "text": "Water governance conflicts stem not only from material scarcity, but from power asymmetries, institutional distrust, and the discursive frameworks through which actors assign meaning to water, infrastructure, and legitimate authority. Conventional simulation tools represent these dynamics via numerical opinion variables, missing the argumentative and narrative dimensions structuring real deliberation in hydrosocial territories. We present the Hydrosocial Agent-Based Model with Large Language Models (HSABM-LLM), a hybrid framework enabling heterogeneous agents to generate, evaluate, and adapt natural language arguments conditioned on institutional roles, interaction histories, and territorial context. Grounded in semi-structured interviews, a water-user survey, and 456 press and official documents from the Longaví River sub-basin (Maule Region, Chile), the model simulates deliberation over a contested large-scale reservoir proposal across four experimental scenarios. Opinion convergence toward unanimous opposition emerged within 7-14 months, operating through discursive closure driven by distributive equity and water security framings rather than argumentative dominance. Governance actors accelerated convergence by activating pre-existing institutional distrust rather than direct persuasion, while peer-based smallholder interactions drove 77-79% of all opinion changes. The formal authority of state institutions proved structurally decoupled from deliberative influence, revealing a legitimacy deficit that formal inclusion alone cannot resolve. These findings suggest participatory governance design must attend to the discursive conditions under which institutional actors enter deliberative spaces, rather than assuming inclusion is inherently consensus-building. HSABM-LLM offers a novel platform for integrating political ecology insights into computational social science.",
+   "source_id": "arxiv-llm-social-sim",
+   "source_name": "arXiv · LLM 社会/多智能体仿真",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-21T11:59:06Z",
+   "authors": [
+    "Mario Lillo-Saavedra",
+    "Marcela Salgado-Vargas",
+    "Ángel García-Pedrero",
+    "Diego Rivera",
+    "Marcelo Somos-Valenzuela"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.28755",
+    "categories": [
+     "cs.MA"
+    ],
+    "venue": "arXiv",
+    "comment": ""
+   },
+   "kw_score": 100,
+   "kw_terms": [
+    "agent-based model",
+    "simulation",
+    "simulate",
+    "llm",
+    "large language model",
+    "language model",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "d12a4824156e8dec",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 44.27
   },
   "d14b79dec4b10b5a": {
    "id": "d14b79dec4b10b5a",
@@ -80875,8 +81966,8 @@
     "共同设计",
     "用户模拟"
    ],
-   "title_zh": "12 人共同设计能源偏好智能体：参与感带来过度信任",
-   "summary_zh": "研究让 12 名参与者通过问卷、共同设计访谈和验证问卷，在家庭能源领域打造代表自己的偏好智能体。参与者大多认为智能体代表了自己，但独立验证显示人机对齐参差，智能体的回答比人类样本更同质、更果断、更抽象。作者把参与和流程透明称为“过度信任引擎”。",
+   "title_zh": "让用户共同设计 LLM 偏好智能体：参与感反而可能催生过度信任",
+   "summary_zh": "作者请 12 名参与者通过问卷、共同设计访谈和验证问卷，共同设计代表自己的家庭能源领域 LLM 偏好智能体。参与者大多认为智能体很好地代表了自己，但独立验证发现人机对齐程度参差，智能体的回答比真人样本更同质、更果断、更抽象。作者提出，参与和过程透明可能成为掩盖系统性错位的“过度信任引擎”。",
    "cluster": "d31b8c5d6c867f07",
    "cluster_size": 1,
    "is_lead": true,
@@ -80888,7 +81979,7 @@
     "human-behavior",
     "eval"
    ],
-   "applied": true
+   "applied": false
   },
   "d32b09763cf30fe1": {
    "id": "d32b09763cf30fe1",
@@ -81118,10 +82209,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "filtered",
+   "status": "selected",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 51,
    "tags": [
     "桌面演练",
     "网络安全",
@@ -81140,7 +82231,10 @@
     "wargame",
     "org"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 60,
+   "model2": "Qwen3.8-27B"
   },
   "d343827164d1bc77": {
    "id": "d343827164d1bc77",
@@ -81630,7 +82724,7 @@
    "cluster": "d4547f073da0afdd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.56,
+   "hot": 0.51,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:09Z",
    "relevant": true,
@@ -81746,8 +82840,8 @@
     "评测基准",
     "LLM 决策"
    ],
-   "title_zh": "LLaMA 3.1、GPT-OSS、Mistral 24B 做社交网络仿真决策，无法稳定复现研究者设定的状态机策略",
-   "summary_zh": "作者在 1000 个智能体、10000 次动作决策的合成社交网络里，把一阶马尔可夫有限状态机作为参考策略，测试 LLaMA 3.1、GPT-OSS、Mistral 24B 在基础、引导、概率三种提示下的动作选择。用 Jensen-Shannon 散度和运行时间衡量对齐，结果显示 LLM 在部分配置下能接近参考策略但不可靠复现，额外引导还会引入系统性动作偏差。",
+   "title_zh": "在线社交网络仿真中 LLM 智能体决策能否替代有限状态策略的实证比较",
+   "summary_zh": "作者在一个 1000 个智能体、10000 次动作决策的在线社交网络仿真里，比较了 LLaMA 3.1、GPT-OSS 和 Mistral 24B 三种开源模型在三种提示策略下选择动作时，能否保持一阶马尔可夫参考策略。结果显示部分配置能近似参考策略但不可靠，引导提示还会引入系统性动作偏差，且最好的 LLM 配置也比直接马尔可夫链采样慢数百倍。",
    "cluster": "d49a28d2bcc3bca0",
    "cluster_size": 1,
    "is_lead": true,
@@ -82110,7 +83204,7 @@
    "cluster": "d5521539f928ab61",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.81
+   "hot": 16.27
   },
   "d579b2c009323c05": {
    "id": "d579b2c009323c05",
@@ -82163,7 +83257,7 @@
    "cluster": "d579b2c009323c05",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.48,
+   "hot": 0.43,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:51Z",
    "relevant": true,
@@ -82814,8 +83908,8 @@
     "认知约束",
     "合成样本"
    ],
-   "title_zh": "用 2359 名小学生 7.1 万条阅读数据，给 LLM 用户模拟器加上认知上限",
-   "summary_zh": "作者发现标准人格提示让 LLM 模拟小学生阅读时表现近乎完美且确定，缺少真实读者的方差。提出的 CBUS 框架用情节瓶颈显式建模受限工作记忆，并形式化两种答题策略；在多个 LLM 骨干上，加认知约束比单纯扩大模型能力更能缩小与真实学生的差距。",
+   "title_zh": "用认知瓶颈约束 LLM 用户模拟器：基于 7 万条小学生阅读理解数据的新框架 CBUS",
+   "summary_zh": "直接让 LLM 扮演小学生答题会得到近乎满分的确定性结果，完全不像真实读者。作者用 2359 名四到六年级学生的 7 万多条阅读理解作答数据，提出 CBUS 框架，用情景瓶颈显式建模儿童受限的工作记忆，并形式化两种应试策略。实验显示，架构层面的认知约束比单纯堆模型能力更能缩小模拟差距。",
    "cluster": "d6f40ed2e33a36d5",
    "cluster_size": 1,
    "is_lead": true,
@@ -84596,6 +85690,37 @@
    "score2": 80,
    "model2": "Qwen3.8-27B",
    "applied": false
+  },
+  "dc762b2277af52c5": {
+   "id": "dc762b2277af52c5",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdW9vbGNRNGcwd19JLXJGLUxNWHBPR2pCZTBiRW1ZM1d3UF9ETjdRSFRHWENkcm04SWxBV21GMUN1azR4cHhkSldtV2U0QjExaTdXbGhyNGtVeVMzM1B4THFVakZNb0dLdy1Ob3EzLVFwM3p0WmRyTWhFekgtelZYZmMyNk5lZDNr?oc=5",
+   "title": "动视提交AI语音NPC专利 AI学习玩家发言让NPC更生动 - Sohu",
+   "text": "动视提交AI语音NPC专利 AI学习玩家发言让NPC更生动 Sohu",
+   "source_id": "gnews-zh-game-npc",
+   "source_name": "Google 新闻 · 中文：AI NPC 与游戏",
+   "source_group": "game",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T10:27:32Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "npc",
+    "ai"
+   ],
+   "domain_guess": "game",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "game",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "dca5efc5cdeb41be": {
    "id": "dca5efc5cdeb41be",
@@ -86746,7 +87871,7 @@
    "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 42,
+   "score": 20,
    "tags": [
     "多智能体强化学习",
     "无人机集群",
@@ -86760,12 +87885,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:10Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "world-env",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 42,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "e22ac3a7500996b6": {
    "id": "e22ac3a7500996b6",
@@ -86908,12 +88036,26 @@
    "domain_guess": "game",
    "added": "2026-11-24T01:12:11Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
-   "score": 25,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 20,
+   "tags": [
+    "AI NPC",
+    "游戏智能体",
+    "专利"
+   ],
+   "title_zh": "动视专利拟让 NPC 通过玩家语音聊天学习拟人化反应",
+   "summary_zh": "cnBeta 报道动视一项专利申请，设想让游戏 NPC 通过玩家语音聊天学习更拟人的反应。材料仅一句话，未涉及技术细节或实际应用。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:49Z",
+   "relevant": false,
+   "topics": [
+    "game"
+   ],
+   "score1": 40,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "e2a7006ff05d8867": {
    "id": "e2a7006ff05d8867",
@@ -88048,7 +89190,7 @@
    "cluster": "e572dc28a6688b52",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.82
+   "hot": 3.49
   },
   "e57fee2dfc027e3a": {
    "id": "e57fee2dfc027e3a",
@@ -88460,7 +89602,7 @@
    "cluster": "e6d65daa2397dd51",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.51,
+   "hot": 4.12,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -88522,8 +89664,8 @@
     "社会价值取向",
     "拟人行为"
    ],
-   "title_zh": "ASVO 让 LLM 智能体按社会价值取向在利他与竞争间漂移",
-   "summary_zh": "作者把社会价值取向理论引入 LLM 多智能体，每个智能体先感知环境与他人行为更新多维欲望值，再对比自身满足与他人满足，动态计算从利他到竞争的取向并据此选行动。在学校、职场、家庭三类场景中，行为自然度和拟人度优于基线。",
+   "title_zh": "ASVO：给 LLM 智能体加入社会价值取向，让多智能体互动更像真人",
+   "summary_zh": "作者提出 ASVO 框架，把欲望驱动的自主性与社会价值取向（SVO）理论结合进 LLM 智能体。每个智能体先感知环境和他人行为更新信念，再通过反思更新多维欲望值并推断他人动机，对比自身满足感与他人满足感后动态计算 SVO，用于指导行为选择。在学校、职场、家庭三类场景实验中，行为自然度和类人度显著超过基线。",
    "cluster": "e6d8754cb18decc6",
    "cluster_size": 1,
    "is_lead": true,
@@ -88928,7 +90070,7 @@
    "cluster": "e7f6a543c6212296",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.23,
+   "hot": 0.21,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:09Z",
    "relevant": true,
@@ -89369,7 +90511,7 @@
    "cluster": "e9b4f62a38c35c8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.6,
+   "hot": 25.21,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -89772,7 +90914,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 51.99,
+   "hot": 47.49,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -90340,10 +91482,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 15,
    "tags": [
     "红队测试",
     "多轮对话",
@@ -90357,11 +91499,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:12:59Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "eval"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 15,
+   "model2": "Qwen3.8-27B"
   },
   "ebeab6ce4fd0b974": {
    "id": "ebeab6ce4fd0b974",
@@ -90650,7 +91795,7 @@
    "cluster": "ec973f9004e2c79c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 26.34,
+   "hot": 24.07,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T01:02:56Z",
    "relevant": true,
@@ -91378,7 +92523,7 @@
    "cluster": "eda5b4c9be66c4fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.77,
+   "hot": 13.49,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T01:02:56Z",
    "relevant": true,
@@ -92526,10 +93671,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T16:47:40Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 20,
    "tags": [
     "用户模拟",
     "偏好数据",
@@ -92543,11 +93688,14 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-20T14:13:22Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "human-behavior"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 20,
+   "model2": "Qwen3.8-27B"
   },
   "f0570a60b095a588": {
    "id": "f0570a60b095a588",
@@ -92615,6 +93763,37 @@
     "eval"
    ],
    "applied": true
+  },
+  "f0acb4c9236d2fe3": {
+   "id": "f0acb4c9236d2fe3",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOU0w5S3AxU2JRNzlpOXdCN2RBRVQ2SDZyc2xBV2l4MWR1ZWhwa3NvbllFbmRDUUZWUkxMalNseUVNVEhNekVVTGNNUlFnUVNDLXRxMGROSzVCcHVLdWFUOW1HaHR4dkhTb2tGbTEwV21pd1d6TjVBaW9OSmsySHFzY21vblhUdGN1OENyOFRMTzNOTU1udndad1Vmd2Z4aTk3NVJZSG5rSUV3aWVjR2FjbHZUZ04?oc=5",
+   "title": "Tiltan Launches Sensor and AI Simulation Tools That Bring the Field into the Lab - sUAS News",
+   "text": "Tiltan Launches Sensor and AI Simulation Tools That Bring the Field into the Lab sUAS News",
+   "source_id": "gnews-biz-sim-startups",
+   "source_name": "Google 新闻 · AI 仿真创业与融资",
+   "source_group": "business",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-24T09:07:39Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "simulation",
+    "ai"
+   ],
+   "domain_guess": "platform",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "platform",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "f0b6d5016bfdb11b": {
    "id": "f0b6d5016bfdb11b",
@@ -92993,8 +94172,8 @@
     "欺骗行为",
     "资源博弈"
    ],
-   "title_zh": "可持续性博弈中 LLM 智能体自发说谎，邻居信息改变冲突与生态存续",
-   "summary_zh": "作者构建工业、军事、生态资源管理的多智能体可持续性博弈，LLM 智能体可观察邻居状态、宣告未来攻击并获得说谎许可。结果显示邻居信息显著增加攻击但提升生物圈留存与共存，未来宣告降低灭绝风险而不压制冲突，欺骗在未获许可时也会涌现，许可主要增加虚张声势。",
+   "title_zh": "在可持续性博弈中，LLM 智能体自发出现欺骗行为",
+   "summary_zh": "作者构建了一个竞争性可持续性博弈的多智能体仿真，让 LLM 智能体管理工业、军事和生态资源。结果显示，即使没有明确允许说谎，欺骗也会在 LLM 智能体之间自发出现；明确允许说谎主要增加虚张声势和转移话题，而非直接背叛。",
    "cluster": "f1372273c736b789",
    "cluster_size": 1,
    "is_lead": true,
@@ -93004,7 +94183,6 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "org",
     "eval"
    ],
    "applied": false
@@ -93406,13 +94584,31 @@
    ],
    "domain_guess": "application",
    "added": "2026-11-24T01:12:11Z",
-   "status": "filtered",
-   "llm": false,
+   "status": "selected",
+   "llm": true,
    "domain": "application",
-   "score": 45,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 56,
+   "tags": [
+    "驾驶仿真",
+    "场景生成",
+    "大模型"
+   ],
+   "title_zh": "用大语言模型自动生成驾驶仿真测试场景：SAE 旗下 Mobility Engineering Technology 报道",
+   "summary_zh": "这条内容只有标题，没有正文。标题显示 Mobility Engineering Technology 刊发了一篇关于用大语言模型自动生成驾驶仿真测试场景的文章，具体做法和结果无法从材料中确认。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-24T11:09:36Z",
+   "relevant": true,
+   "topics": [
+    "urban"
+   ],
+   "score1": 52,
+   "score2": 60,
+   "model2": "Qwen3.8-27B",
+   "applied": false,
+   "cluster": "f22c13987bf9ec77",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 51.77
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -93468,7 +94664,7 @@
    "cluster": "f23f3f241ac47b98",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.59,
+   "hot": 0.54,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -94232,7 +95428,7 @@
    "cluster": "f4a24bf226024f74",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.81,
+   "hot": 16.27,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:57Z",
    "relevant": true,
@@ -95355,7 +96551,7 @@
    "cluster": "f7ed0bde1dfdf148",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.81
+   "hot": 16.27
   },
   "f7fcefcd7ee90b76": {
    "id": "f7fcefcd7ee90b76",
@@ -95658,7 +96854,7 @@
    "cluster": "f8cc32a5cb386b75",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.92,
+   "hot": 2.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -95789,7 +96985,7 @@
    "cluster": "f94538d40439027e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 15.42,
+   "hot": 14.09,
    "topics": [
     "health",
     "policy"
@@ -96165,10 +97361,10 @@
    ],
    "domain_guess": "academic",
    "added": "2026-11-19T17:09:53Z",
-   "status": "selected",
+   "status": "filtered",
    "llm": true,
    "domain": "academic",
-   "score": 45,
+   "score": 25,
    "tags": [
     "车联网",
     "轨迹预测",
@@ -96183,12 +97379,15 @@
    "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:39Z",
-   "relevant": true,
+   "relevant": false,
    "topics": [
     "urban",
     "framework"
    ],
-   "applied": false
+   "applied": false,
+   "score1": 45,
+   "score2": 25,
+   "model2": "Qwen3.8-27B"
   },
   "fad2648c72549191": {
    "id": "fad2648c72549191",
@@ -96802,7 +98001,7 @@
    "cluster": "fc97273e83d39f85",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.15,
+   "hot": 2.87,
    "topics": [
     "eval",
     "wargame"
@@ -97047,7 +98246,7 @@
    "cluster": "fd0b4e5ac8bc7e59",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.34,
+   "hot": 2.14,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -97351,8 +98550,8 @@
     "多智能体",
     "架构设计"
    ],
-   "title_zh": "CASCADE 三层架构让沙盒游戏社会低成本可控涌现",
-   "summary_zh": "CASCADE 用宏观状态调度器维护世界状态与因果更新，协调中枢把状态变化拆给专业、社交等模块并下发给标签化 NPC，NPC 用行为树执行，只在玩家交互时调用大模型。多个微场景原型显示，同一宏观事件能产生有差异但受逻辑约束的 NPC 行为。",
+   "title_zh": "CASCADE 三层架构：用宏观状态层驱动 NPC 社会协调，低成本实现可控群体行为",
+   "summary_zh": "CASCADE 用三层架构在沙盒游戏世界里做低成本、可控的社会协调。宏观状态层维护世界状态并做因果更新，协调中枢把状态变化拆解成领域指令分发给标签化 NPC 群体，NPC 用行为树执行，只在玩家交互时调用大模型。多个微场景原型的追踪分析显示，一个共享宏观事件能产生有差异但受逻辑约束的 NPC 行为，主循环不需要逐个智能体提示。",
    "cluster": "fd7af38072f26e9a",
    "cluster_size": 1,
    "is_lead": true,
@@ -98106,6 +99305,57 @@
    "score2": 35,
    "model2": "Qwen3.8-27B",
    "applied": true
+  },
+  "ffe68dd3192d95ba": {
+   "id": "ffe68dd3192d95ba",
+   "url": "https://arxiv.org/abs/2611.30932",
+   "title": "Carried-Over and Agent-Native Threats in the Supply Chain of LLM Agent Skills",
+   "text": "Agent skills are reusable packages that extend a large language model (LLM) agent with scripts, third-party dependencies, and natural-language instructions. An agent builds a skill's arguments from user requests and untrusted external content, so a flaw left by a benign author can escalate a prompt injection to code execution. Existing studies target malicious skills or a single attack vector, and none tests whether an agent can reach such flaws. We present the first registry-scale empirical study of the supply chain attack surface arising from unintentional vulnerabilities in agent skills, over all 48,682 skills in ClawHub. The study covers two carried-over risks, dependencies and first-party code, and two agent-native ones, install instructions and credentials printed to stdout. We screen all skills by static analysis, manually review all 3,428 cases flagged by the four main detectors, and test reachability by running sampled flagged skills in a sandbox and with a live LLM agent under indirect prompt injection. First, dependency risk carries over in a different form: 49.6% of the skills with resolvable dependencies depend on a version with a known CVE, and unlike npm packages, which mostly become vulnerable after release, 78.3% of them are born vulnerable, already exposed at publication. Second, few of these CVEs are reachable: agent input reaches the vulnerable function in only 3.0% of the affected skills, whereas 21 of 22 sampled first-party flaws are exploited end to end in the sandbox. Third, a live agent executes the injected payload in 48.5% of the sampled flagged skills, but almost always in its own shell before the skill runs, and the payload reaches a flaw in the skill itself in only 5.0%. Hence, registries should prioritize first-party flaws over dependency alerts, and agent runtimes should not pass skill arguments through a shell.",
+   "source_id": "arxiv-sandbox-env",
+   "source_name": "arXiv · 智能体沙盒环境/世界模拟器",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-23T16:20:29Z",
+   "authors": [
+    "Kaixuan Li",
+    "Wenbo Guo",
+    "Sen Chen",
+    "Yang Liu"
+   ],
+   "extra": {
+    "pdf": "https://arxiv.org/pdf/2611.30932",
+    "categories": [
+     "cs.CR",
+     "cs.SE"
+    ],
+    "venue": "arXiv",
+    "comment": ""
+   },
+   "kw_score": 63,
+   "kw_terms": [
+    "sandbox",
+    "llm",
+    "large language model",
+    "language model",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-24T11:20:34Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 63,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "ffe68dd3192d95ba",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 57.71
   },
   "fff530bb331cdaab": {
    "id": "fff530bb331cdaab",
