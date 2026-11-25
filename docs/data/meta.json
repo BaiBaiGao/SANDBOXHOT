@@ -4,15 +4,15 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-25T05:04:58Z",
+ "generated": "2026-11-25T11:49:16Z",
  "counts": {
-  "academic": 873,
+  "academic": 876,
   "application": 152,
   "platform": 3,
   "business": 13,
   "game": 1
  },
- "total": 905,
+ "total": 908,
  "reads": 468,
  "research": 3,
  "ai_items": 894,
@@ -372,7 +372,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 10,
+   "items": 13,
    "home": "",
    "query": "large language model agent-based simulation",
    "ok": true
@@ -447,7 +447,7 @@
    "items": 2,
    "home": "",
    "query": "llm agent simulation",
-   "ok": false
+   "ok": true
   },
   {
    "id": "github-multi-agent-sandbox",
@@ -459,7 +459,7 @@
    "items": 0,
    "home": "",
    "query": "multi-agent social simulation",
-   "ok": false
+   "ok": true
   },
   {
    "id": "rss-gamedeveloper",
@@ -895,7 +895,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-25T05:04:58Z",
+  "at": "2026-11-25T11:49:16Z",
   "llm": false,
   "spent_run": 0.0
  }
