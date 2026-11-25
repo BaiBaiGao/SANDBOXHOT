@@ -1,6 +1,24 @@
 {
  "daily": [
   {
+   "key": "2026-11-25",
+   "label": "11 月 25 日日报",
+   "markdown": "## 11 月 25 日日报\n\n（模型暂不可用，以下为按分数自动排列的条目，稍后会自动改写为编辑版。）\n\n### 学术前沿\n- 经济世界模型：用微观与宏观数据校准，让智能体仿真复现消费分布与 GDP 动态 [来源](https://arxiv.org/abs/2611.32663)\n- 用选择数据训练 KEV 决策模型，让硅基受访者更接近真人 [来源](https://arxiv.org/abs/2611.31613)\n- 用分层提示让 LLM 智能体生成事件驱动的情绪反应，并与 Facebook 真实数据校验 [来源](https://arxiv.org/abs/2611.31851)\n- COGENT：用模块化认知架构让 LLM 用户仿真更像真人 [来源](https://arxiv.org/abs/2611.31559)\n- 用双智能体框架融合气象预警，城市排水实时控制减涝 69%–91% [来源](https://arxiv.org/abs/2611.32046)\n- XMind：让 LLM 驾驶智能体通过跨记忆推理“三思而后行” [来源](https://arxiv.org/abs/2611.32209)\n- AI 智能体在 Slack 模拟中会找借口，有时还会泄露秘密 [来源](https://news.google.com/rss/articles/CBMiQkFVX3lxTE1helV0R09Pck5tZ2g1SGFOVXdTcmpUeHhYanhIODFUUklyX3FtWWtNYWNSUmxHeUloZmhrOG5kX01WZw?oc=5)\n\n### 落地应用\n- 本期暂无\n\n### 商业 · 游戏 · 平台\n- 上交发布RoboScopeKit：一站式具身模型评测工具，把仿真评测提速约16倍 [来源](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA%3D%3D&mid=2652745183&idx=3&sn=eaf3306d057eab82672904a997f934f7)",
+   "ai": false,
+   "model": null,
+   "item_ids": [
+    "bcbc6e9ed72f9565",
+    "0c62bc20e5192e24",
+    "87097a060214af63",
+    "4b55c71e9cce2644",
+    "f88b32686a7aa762",
+    "b4d1668269dc5edb",
+    "c5a70dd0609bfa7e",
+    "4b21b4815c9b2d5c"
+   ],
+   "created": "2026-11-25T23:23:26Z"
+  },
+  {
    "key": "2026-11-24",
    "label": "11 月 24 日日报",
    "markdown": "## 数字孪生验证说话风格不等于判断力，美军把 AI 兵棋接入晋升考评\n\n这期最重要的两条线索：一是 LLM 孪生和合成用户研究开始出现严格的对照验证，好几个结论都在纠正流行做法；二是 AI 兵棋推演从工具走向制度，美国防长宣布把它纳入高级军官晋升考评。\n\n### 今日必读\n\n- 作者用 CANDOR 语料库为 710 位真人构建 LLM 孪生体，让它们完成 5680 场模拟初次见面，再用 355 对真实见面评价做对照。孪生对话能预测真实好感（ρ=0.277），但让孪生更像主人的说话风格反而降低准确率，真正有用的是在他人真实对话上训练的小型评价头 [来源](https://arxiv.org/abs/2611.28692)\n- 美国防长 Hegseth 在海军战争学院宣布，AI 辅助的竞争性兵棋推演和高压力决策场景将成为高级军官评估的核心，直接接入新设立的联合作战人员考评体系，用于上校晋升准将的选拔 [来源](https://warontherocks.com/the-game-is-the-easy-part-measuring-military-strategic-judgment)\n- SocCogEval 用受控克隆实验检验多智能体仿真里“同源智能体可当独立样本”的假设：在 Qwen3-122B-FP8 上，30 轮交互使 BFI-10 回答漂移增加约 0.91，温度为零时仍然存在。结论是每个交互群体只能算一个样本，做独立推断需要配对的无交互对照组 [来源](https://arxiv.org/abs/2611.29581)\n\n### 学术前沿\n\n- 作者构建 HSABM-LLM，用大语言模型智能体模拟智利 Longaví 河子流域的水治理辩论，基于访谈、问卷和 456 份文件。四个情景显示舆论在 7 到 14 个月内收敛为一致反对，77% 到 79% 的意见变化来自小农户之间的同伴互动，国家机构的正式权威与辩论影响力脱钩 [来源](https://arxiv.org/abs/2611.28755)\n- 在 GLEE 环境的议价、谈判和说服三类博弈中，作者分析了 298,357 条轨迹，把对手主导行为画像分解为十种 Act·onomy 结构。在线对局中，结构感知策略在三类任务上分别高出 2.52、1.90 和 5.91 个百分点，但置信区间都包含零 [来源](https://arxiv.org/abs/2611.28170)\n- ChatNPC 是一个游戏内 NPC 伴侣，实时感知玩家情绪并动态个性化回复，系统由哨兵引导智能体、记忆和聊天规划工具三部分组成。在新构建的游戏对话数据集上，回复更自然、更贴近游戏情境 [来源](https://arxiv.org/abs/2611.29372)\n- 一篇综述梳理了从 1980 年代认知模型到生成式智能体的模拟用户谱系，指出用户模型的有效性标准已从预测精度滑向可信度，而近期回归精度检验的研究结果偏弱 [来源](https://arxiv.org/abs/2611.30674)\n\n### 落地应用\n\n- Mobility Engineering Technology 刊发一篇关于用大语言模型自动生成驾驶仿真测试场景的文章，材料只有标题，具体做法和结果需要找到原文确认 [来源](https://news.google.com/rss/articles/CBMi2AFBVV95cUxObnhwSFFKV1A0bGRId205MnUzQW9EMnkxTWxUdUhqRUpLNW43TzZ4aUV2ZGVzcDh5OC15Nk1mcHBjVDdZMXRJZDdjSmpocWhHWmpYYTFxMjluNEtzaUlJbXdpU1lzVmlSN3E4eWtXODFwV1BGaEc5dkFyTExRUUx3ZThmajlHZC1oRVYzSG5IRFl4MzlCQVhwTTFiSjRVWm43MXJnTjFJOFY5TGNiQ1IzRGM3U21yZVlXemFDQWpaOVpoTFk2VlhYRnhDOVhEMVNtQUNQRXdLY3g?oc=5)\n- The New European 刊文探讨 AI 是否终结资本主义，作者称用新型仿真找到答案，材料只有标题，仿真方法和结论均未给出 [来源](https://news.google.com/rss/articles/CBMiuwFBVV95cUxOU2NDWlVmZFpDSTdQa2FTQlpsUmJV4V9FeDZfckdrX3B4Yy1ETERGajYwcXk0UzZEdVhZLW1wQy05RXE1azB1cVd4eWN1LXFCY0R3TFdHaHNKV19uZ3NjMTZnbmpKWXpIcXdTZjV3Q2toNk92bG04MHV3c3ByWHRSa244cU9uMzQyYjlqV24xSnBRRWVuNi1SdnRIeVk0MzFtZDQxYlBBOHZVUTB3dzdDYm4xWll6aThMYTRn?oc=5)\n\n### 商业 · 游戏 · 平台\n\n- 据韩媒 게임메카 报道，育碧成立专注游戏 AI 的子公司，计划把 AI 用于 NPC 的行为与记忆，报道只有标题，没有公司名称和技术细节 [来源](https://news.google.com/rss/articles/CBMiXEFVX3lxTE4yaFcyOFVNTUVUNm8zZ2E2b3ctRUpVcHNISThqTU9JX1RadllHV3U4NUliTHpDdVE4WWxHZjhYRTZ4STZjVGRQUDRnRXdzUGJvd0p5bDVkQmRnWGRX?oc=5)\n- 动视一项专利申请被披露，系统会学习玩家聊天内容，据此为游戏 NPC 生成语音，目前只有专利标题层面的信息 [来源](https://news.google.com/rss/articles/CBMiqgFBVV95cUxPT05jbjREUVBwYUp1Tk1UWnUyZzJfZVI5UVo1cHRHWThRMUNlWG1teTE3YlBxZ0V6d2swVERPd0RZMTBhcXZueXlsN0VGUHNJM3RqQlpKTUNrTWhMX1gwNURRdjdiZEY3Z2tJcnlBR1FkWENsYmh0RUpNeV8tRHNHNVlleWhjMHk3Y2hzU2lzQWhWZ0hDR0Fod29VOXJDNkVuMGRNckRBNjZpZw?oc=5)\n- 清华 FIB Lab 发布 AgentSociety 2.12.0，新增研究工作台和维护工具，回放查询在 1,024 个智能体、128 步的实验上把实验概览 P95 从 180.6 ms 降到 85.0 ms。检查点格式升至 v2，远程后端强制 Bearer 令牌鉴权，旧实验需用原版本恢复 [来源](https://github.com/tsinghua-fib-lab/AgentSociety/releases/tag/agentsociety2-v2.12.0)\n\n### 方法动向\n\n- 验证方式在收紧。710 人孪生研究和 SocCogEval 都在用真人对照或无交互对照组做检验，前者发现模仿说话风格不带来更好判断，后者动摇了同源智能体当独立样本的通行做法。看起来“像不像”正在让位于“测得准不准”。\n- 对手建模走向结构化。GLEE 研究把对手行为画像分解成十种可操作结构再喂给策略，区分策略选择与回应实现两个环节，是谈判类仿真里可以直接搬的做法。\n- 兵棋推演进入考评体系。美军把 AI 辅助推演接入晋升选拔，推演结果从研究产出变成被测量的对象，评分公平性会成为新问题。\n\n### 可复用资源\n\n- SocCogEval 受控克隆实验协议与代码 [GitHub](https://github.com/koanatakiyo/SocCogEval)\n- ChatNPC 附带带游戏内上下文的 NPC 对话数据集 [论文](https://arxiv.org/pdf/2611.29372)",
