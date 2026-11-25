@@ -4,18 +4,18 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-24T23:41:10Z",
+ "generated": "2026-11-25T05:04:58Z",
  "counts": {
-  "academic": 861,
-  "game": 3,
-  "application": 150,
+  "academic": 873,
+  "application": 152,
   "platform": 3,
-  "business": 13
+  "business": 13,
+  "game": 1
  },
- "total": 896,
- "reads": 436,
+ "total": 905,
+ "reads": 468,
  "research": 3,
- "ai_items": 892,
+ "ai_items": 894,
  "sources": [
   {
    "id": "wechat-jiqizhixin",
@@ -264,7 +264,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 243,
+   "items": 244,
    "home": "",
    "query": "(abs:\"social simulation\" OR abs:\"agent-based model\" OR abs:\"agent-based modeling\" OR abs:\"agent-based simulation\" OR abs:\"multi-agent simulation\" OR abs:\"generative agents\" OR abs:\"simulated society\" OR abs:\"society simulation\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -288,7 +288,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 255,
+   "items": 258,
    "home": "",
    "query": "(abs:\"simulate human\" OR abs:\"human behavior simulation\" OR abs:\"user simulation\" OR abs:\"synthetic respondents\" OR abs:\"silicon sampling\" OR abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"persona simulation\") AND (abs:LLM OR abs:\"large language model\")",
    "ok": true
@@ -300,7 +300,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 99,
+   "items": 101,
    "home": "",
    "query": "(abs:sandbox OR abs:\"open-ended environment\" OR abs:\"world simulator\" OR abs:\"simulation environment\" OR abs:\"digital twin\") AND (abs:\"LLM agents\" OR abs:\"language agents\" OR abs:\"LLM-based agents\" OR abs:\"multi-agent\")",
    "ok": true
@@ -312,7 +312,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 36,
+   "items": 37,
    "home": "",
    "query": "(abs:\"market simulation\" OR abs:\"economic simulation\" OR abs:\"agent-based economic\" OR abs:\"financial market\" OR abs:\"trading agents\" OR abs:\"macroeconomic\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -336,7 +336,7 @@
    "group": "academic",
    "tier": "T1",
    "enabled": true,
-   "items": 146,
+   "items": 150,
    "home": "",
    "query": "(abs:urban OR abs:traffic OR abs:mobility OR abs:\"travel behavior\") AND (abs:\"agent-based\" OR abs:\"generative agents\" OR abs:simulation) AND (abs:LLM OR abs:\"large language model\" OR abs:\"language agents\")",
    "ok": true
@@ -447,7 +447,7 @@
    "items": 2,
    "home": "",
    "query": "llm agent simulation",
-   "ok": true
+   "ok": false
   },
   {
    "id": "github-multi-agent-sandbox",
@@ -459,7 +459,7 @@
    "items": 0,
    "home": "",
    "query": "multi-agent social simulation",
-   "ok": true
+   "ok": false
   },
   {
    "id": "rss-gamedeveloper",
@@ -684,7 +684,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 2,
+   "items": 1,
    "home": "https://paxsims.wordpress.com/feed/",
    "query": "",
    "ok": true
@@ -696,7 +696,7 @@
    "group": "game",
    "tier": "T2",
    "enabled": true,
-   "items": 1,
+   "items": 0,
    "home": "https://news.google.com/rss/search?q=%28%22AI+NPC%22+OR+%22AI+NPCs%22+OR+%22generative+NPC%22+OR+%22AI-driven+NPC%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -895,7 +895,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-24T23:41:10Z",
+  "at": "2026-11-25T05:04:58Z",
   "llm": false,
   "spent_run": 0.0
  }
