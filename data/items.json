@@ -309,7 +309,7 @@
    "cluster": "0073f7aaf98ffa6d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.25,
+   "hot": 17.04,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -369,7 +369,7 @@
    "cluster": "00798a23152e25ac",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.13,
+   "hot": 9.02,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -2418,7 +2418,7 @@
    "cluster": "0599676be458de0d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.78,
+   "hot": 5.71,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -3804,7 +3804,7 @@
    "cluster": "0856c29adf22c46d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.69,
+   "hot": 16.48,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T09:58:31Z",
    "relevant": true,
@@ -4486,8 +4486,8 @@
     "交通仿真",
     "行为建模"
    ],
-   "title_zh": "LLM能否复现路径选择中的非理性偏差，为免标定CPT参数的交通仿真提供可能",
-   "summary_zh": "研究以路径选择为场景，设计行为评测框架，把LLM生成的决策与累积前景理论（CPT）刻画的人类行为模式做系统对比。结果显示LLM能够复现偏离完全理性的选择偏差，作者认为这为大规模智能体交通仿真中免去逐个体标定CPT参数提供了可能。",
+   "title_zh": "用大语言模型复现人类路径选择中的行为偏差，无需显式设定前景理论参数",
+   "summary_zh": "传统前景理论（CPT）建模需要逐个标定参数，靠问卷和实验难以规模化。作者以路径选择为场景设计评测框架，检验大语言模型能否不指定参数就复现人类非理性选择偏差。实验显示 LLM 能再现 CPT 预测的行为模式，可作为大规模智能体仿真的可扩展替代方案。",
    "cluster": "0a2a1a58a413f97e",
    "cluster_size": 1,
    "is_lead": true,
@@ -4497,7 +4497,8 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "urban"
+    "urban",
+    "eval"
    ],
    "applied": false
   },
@@ -5356,7 +5357,7 @@
    "cluster": "0c62bc20e5192e24",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 53.31,
+   "hot": 52.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -6723,7 +6724,7 @@
    "cluster": "12f6125c2b6f37b3",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 20.63
+   "hot": 20.38
   },
   "1146fe24388c1baa": {
    "id": "1146fe24388c1baa",
@@ -7372,14 +7373,13 @@
     "多智能体",
     "可扩展性"
    ],
-   "title_zh": "Khora：把世界状态与渲染解耦的多智能体世界模型，推理时可扩展到任意智能体数量",
-   "summary_zh": "作者提出多智能体世界模型 Khora，把世界状态演化与视觉渲染分开，智能体观测通过统一渲染接口查询共享世界状态，因此推理时能扩展到任意数量的智能体而无需重训。跨视角一致性由共享世界状态维持，不依赖视频生成器内部的密集交互，计算量近似线性增长。",
+   "title_zh": "Khora：可扩展到任意数量智能体的多智能体世界模型",
+   "summary_zh": "作者提出 Khora，一个多智能体世界模型，推理时可以扩展到任意数量的智能体而无需重新训练。核心做法是把世界状态演化与视觉渲染解耦，各智能体的观测通过统一的渲染接口查询共享世界状态得到。实验显示该方法能泛化到训练时未见过的智能体数量，并保持了视觉质量与多视角一致性。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:31Z",
    "relevant": true,
    "topics": [
-    "world-env",
-    "framework"
+    "world-env"
    ],
    "applied": false,
    "cluster": "12e01c2583b1406c",
@@ -7425,7 +7425,7 @@
    "cluster": "12f6125c2b6f37b3",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 21.3,
+   "hot": 21.04,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -7541,7 +7541,7 @@
    "cluster": "52bb7277fa3b2d7d",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 1.84,
+   "hot": 1.82,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:07:48Z",
    "relevant": true,
@@ -7750,7 +7750,7 @@
    "cluster": "13a0c3ba04fb07c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 54.47,
+   "hot": 53.8,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -8401,7 +8401,7 @@
    "cluster": "1601caa884a2ecff",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.27,
+   "hot": 0.26,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -8975,8 +8975,8 @@
     "描述协议",
     "开源框架"
    ],
-   "title_zh": "VISA：用八张表加19条一致性规则让ABM模型可被机器复现，含三个LLM可执行技能",
-   "summary_zh": "VISA把ABM拆成智能体层和模型层共八张互联表格，配19条可执行一致性规则和三个LLM技能（编写、检查、代码生成），打通编写—检查—编码—复现闭环。在三个独立ABM上验证，其中两个从NetLogo跨语言复现到Python。",
+   "title_zh": "VISA：用八张表描述智能体仿真模型，让机器可复现成为可检查的属性",
+   "summary_zh": "作者提出 VISA，一个结构化的 ABM 描述协议，用智能体层和模型层共八张表把模型写成机器可解析的规范。配套十九条可执行一致性规则和三个 LLM 可执行技能，覆盖撰写、检查、代码生成到复现的全流程。在三个外部独立作者的 ABM 上验证，其中两个实现了 NetLogo 到 Python 的跨语言复现。",
    "cluster": "1779912892e0accc",
    "cluster_size": 1,
    "is_lead": true,
@@ -8988,7 +8988,7 @@
     "framework",
     "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "17869a9bbc5be3db": {
    "id": "17869a9bbc5be3db",
@@ -9370,7 +9370,7 @@
    "cluster": "1836246dfbfb504c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.2,
+   "hot": 12.05,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:57Z",
    "relevant": true,
@@ -10694,7 +10694,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 5.54,
+   "hot": 5.47,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:26Z",
    "relevant": true,
@@ -12093,8 +12093,8 @@
     "自进化智能体",
     "SUMO"
    ],
-   "title_zh": "SimSkill：在 SUMO 交通仿真中自我进化、积累技能的 LLM 智能体",
-   "summary_zh": "SimSkill 以 SUMO 交通仿真器为环境，自主发现能力缺口、生成并解决任务，通过行动-评审循环验证解，并把经验沉淀为情景、程序与语义记忆。在两个留出基准、三个基座模型上，验证成功率最高提升 25 个百分点；消融显示收益依赖基座与预算，记忆并非对所有模型都有效。",
+   "title_zh": "SimSkill：围绕 SUMO 交通仿真器自我进化的 LLM 智能体，验证成功率最高提升 25 个百分点",
+   "summary_zh": "作者借鉴人类累积文化的思路，构建了围绕 SUMO 交通仿真器的自进化智能体 SimSkill。它持续发现自身能力缺口，生成并求解基于环境的任务，用动作-评论循环验证解法，再把经验沉淀为情景、程序和语义三类记忆。在两个留出基准、三种骨干 LLM 上评测，验证成功率最高提升 25 个百分点。",
    "cluster": "1f600c3be006cda4",
    "cluster_size": 1,
    "is_lead": true,
@@ -12104,7 +12104,8 @@
    "relevant": true,
    "topics": [
     "urban",
-    "framework"
+    "framework",
+    "generative-agents"
    ],
    "applied": false
   },
@@ -13056,7 +13057,7 @@
    "cluster": "21cdddd171e04f50",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.47
+   "hot": 7.38
   },
   "21ddfdc791fd0362": {
    "id": "21ddfdc791fd0362",
@@ -15528,7 +15529,7 @@
    "cluster": "27405ec7b8b6053c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.17,
+   "hot": 0.16,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T17:40:54Z",
    "relevant": true,
@@ -16310,7 +16311,7 @@
    "cluster": "29a1de3b43f527d5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 31.3,
+   "hot": 30.92,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -16617,7 +16618,7 @@
    "cluster": "2a7c337d3195182a",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.23,
+   "hot": 1.22,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -17331,7 +17332,7 @@
    "cluster": "2d1db9b2487e762c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.39
+   "hot": 1.37
   },
   "2d4d334bb9387f39": {
    "id": "2d4d334bb9387f39",
@@ -18202,7 +18203,7 @@
    "cluster": "2ecdb64c16bbd36d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.02
+   "hot": 10.88
   },
   "2ed19f0a5d5ba7ea": {
    "id": "2ed19f0a5d5ba7ea",
@@ -18308,8 +18309,8 @@
     "网络安全",
     "智能体"
    ],
-   "title_zh": "分层智能体事件响应：用数字孪生校验攻击推断",
-   "summary_zh": "作者把微调大模型的攻击推断、rollout 规划和仿真网络数字孪生校验串成分层响应框架，数字孪生重放推断出的攻击并返回预测与观测的差异来校准推断，规划智能体再分层给出恢复动作。",
+   "title_zh": "分层智能体框架结合数字孪生校验，自动推断多阶段攻击并规划网络应急响应",
+   "summary_zh": "作者提出了一个分层智能体应急响应框架，用微调 LLM 从告警和系统测量中推断攻击进程，再用仿真网络数字孪生回放攻击、校准推断结果，最后由规划智能体和执行智能体生成并验证恢复命令。在 33 个组件的企业网络测试床上，该框架的恢复成功率比前沿 LLM 基线高 18 到 31 个百分点。",
    "cluster": "2ed793029807a54a",
    "cluster_size": 1,
    "is_lead": true,
@@ -18319,7 +18320,7 @@
    "relevant": true,
    "topics": [
     "world-env",
-    "eval"
+    "framework"
    ],
    "applied": false
   },
@@ -18613,7 +18614,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": true,
-   "hot": 6.15,
+   "hot": 6.07,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -19377,8 +19378,8 @@
     "多智能体",
     "ABM"
    ],
-   "title_zh": "SAMAS 把宏观理解与仿真轨迹嵌入 LLM 智能体，改进经济仿真的波动真实性与拐点预测",
-   "summary_zh": "针对传统基于智能体的建模（ABM）难以泛化到预设场景之外的问题，作者提出 SAMAS，让 LLM 智能体同时携带宏观经济理解和过往仿真步骤中的经济轨迹，联合建模宏观结构与微观行为。实验称其在波动真实性和拐点预测上表现更优。",
+   "title_zh": "SAMAS：用情境感知的 LLM 智能体做经济仿真，提升波动真实感与拐点预测",
+   "summary_zh": "作者提出 SAMAS，用大语言模型驱动的个体智能体做自下而上的经济仿真。每个智能体结合 LLM 内置的宏观经济知识和仿真过程中积累的经济轨迹做决策。在波动真实感和拐点预测两项指标上，SAMAS 优于现有方法。",
    "cluster": "325f4995e0d1bb02",
    "cluster_size": 1,
    "is_lead": true,
@@ -19387,7 +19388,8 @@
    "triaged": "2026-11-19T19:08:38Z",
    "relevant": true,
    "topics": [
-    "economy"
+    "economy",
+    "generative-agents"
    ],
    "applied": false
   },
@@ -20544,8 +20546,8 @@
     "心理状态",
     "对话训练"
    ],
-   "title_zh": "Mind2Dialogue 用模拟用户心理状态生成监督信号，训练更懂人的语言模型",
-   "summary_zh": "针对助手训练数据缺少“基于用户未言明信念与目标”的回复这一问题，作者提出心理学引导的用户模拟器，维护一个持续演化的心理状态来驱动对话，再通过特权蒸馏把 Oracle 助手的回复教给学生模型。",
+   "title_zh": "Mind2Dialogue：通过模拟用户心理状态训练更懂人的语言模型",
+   "summary_zh": "作者提出 Mind2Dialogue 框架，用心理学引导的模拟器生成用户心理状态，并让一个能读取这些状态的 Oracle 助手产出对话，再蒸馏给普通模型。在完整语料上训练后，Qwen、Llama、OLMo 的偏好遵循生成指标提升 26.6 到 40.9 个百分点，信念与行动推理也有改进。",
    "cluster": "3506bb1bd75fa315",
    "cluster_size": 1,
    "is_lead": true,
@@ -23128,8 +23130,8 @@
     "合成样本",
     "模型评测"
    ],
-   "title_zh": "模拟民意该用基座还是后训练模型？研究发现基座模型更擅长“模拟”，后训练模型更擅长“估计”",
-   "summary_zh": "作者把 LLM 模拟民意拆成两个任务：生成个体回答再聚合成分布（emulation），以及直接预测总体分布（estimation）。在 Pew American Trends Panel 上评测六对基座与后训练模型，发现基座模型模拟更准、更能保留人口结构，后训练模型直接估计分布更准。",
+   "title_zh": "仿真还是估计？基座与后训练语言模型在观点模拟上的强弱分化",
+   "summary_zh": "作者把用大模型模拟人类观点的做法拆成两个任务：模拟个体回答再汇总成分布，和直接预测总体分布。在 Pew 美国趋势面板数据上评测六对基座与后训练模型后发现，基座模型更擅长前者，后训练模型更擅长后者。选模型前应先弄清任务要生成文本还是预测分布。",
    "cluster": "3b6cbf15ff7167d0",
    "cluster_size": 1,
    "is_lead": true,
@@ -23141,7 +23143,7 @@
     "human-behavior",
     "eval"
    ],
-   "applied": true
+   "applied": false
   },
   "3b960dae69d37e03": {
    "id": "3b960dae69d37e03",
@@ -23629,7 +23631,7 @@
    "cluster": "3cf41a97b1c6ee7d",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 2.46,
+   "hot": 2.43,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -23879,8 +23881,8 @@
     "信息扩散",
     "社交机器人"
    ],
-   "title_zh": "把社交媒体机器人当作“网络社会智能体”：用 LLM 仿真异质舆论生态",
-   "summary_zh": "作者提出 Cyber Social Agents 分类体系，按操作手法和修辞风格划分自动化账号类型，再把基于实证数据设定的 persona 接入 LLM 驱动的网络社会仿真，观察智能体多样性如何影响信息扩散与社会影响。方法试图衔接规则型智能体模型与 LLM 生成式仿真。",
+   "title_zh": "用大模型模拟社交媒体机器人：Cyber Social Agents 分类体系驱动的异质网络仿真",
+   "summary_zh": "作者把社交媒体上的自动化账号概念化为 Cyber Social Agents，按操作策略和修辞风格划分出原型分类体系，再把这些基于实证数据的角色接入大模型驱动的网络仿真，观察异质智能体如何影响信息扩散与社会影响。方法衔接了规则型智能体模型和 LLM 仿真两条路线。",
    "cluster": "3dcbc9122540a129",
    "cluster_size": 1,
    "is_lead": true,
@@ -24390,7 +24392,7 @@
    "cluster": "3eefc5d18a4ade26",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 40.94,
+   "hot": 40.44,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -24744,7 +24746,7 @@
    "cluster": "3f6c8be79bdf323c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.7,
+   "hot": 4.65,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T01:38:14Z",
    "relevant": true,
@@ -25259,7 +25261,7 @@
    "cluster": "408457c46f4c7f25",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.41,
+   "hot": 8.31,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -26525,7 +26527,7 @@
    "cluster": "436c3f3208323140",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 36.25
+   "hot": 35.8
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -26974,7 +26976,7 @@
    "cluster": "442531c9eef4b7e1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.69,
+   "hot": 0.68,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -27127,12 +27129,26 @@
    "domain_guess": "game",
    "added": "2026-11-25T23:23:26Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 48,
+   "tags": [
+    "AI NPC",
+    "游戏智能体",
+    "专利"
+   ],
+   "title_zh": "动视申请AI专利：用玩家语音聊天训练NPC，让角色说话更自然",
+   "summary_zh": "动视提交一项AI系统专利，用玩家语音聊天数据训练游戏NPC，让NPC的语言和行为更贴近真人。材料只有标题信息，未披露训练方法与验证结果。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-26T00:32:27Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 52,
+   "score2": 45,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "45b3ce91455f3edf": {
    "id": "45b3ce91455f3edf",
@@ -29026,7 +29042,7 @@
    "cluster": "4b21b4815c9b2d5c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 42.11,
+   "hot": 41.59,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -29094,7 +29110,7 @@
    "cluster": "4b55c71e9cce2644",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 48.81,
+   "hot": 48.21,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -29517,7 +29533,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 6.29,
+   "hot": 6.21,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -29564,7 +29580,7 @@
    "cluster": "4c34cde27eeaace5",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 3.13,
+   "hot": 3.09,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -32534,7 +32550,7 @@
    "cluster": "52bb7277fa3b2d7d",
    "cluster_size": 2,
    "is_lead": true,
-   "hot": 2.22,
+   "hot": 2.2,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -34211,7 +34227,7 @@
    "cluster": "56532dce8567fc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 45.25,
+   "hot": 44.7,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -34965,8 +34981,8 @@
     "蒙特卡洛",
     "人格建模"
    ],
-   "title_zh": "PTMC：用带人格条件的交易机器人群体在订单簿里做蒙特卡洛估计",
-   "summary_zh": "论文提出 Persona-Trained Monte Carlo，让共享同一策略网络、但人格参数各异的交易机器人群体在连续双向拍卖中反复交互，把每次价格路径当作一个蒙特卡洛样本，用来估计市场结果统计量的分布。",
+   "title_zh": "Persona-Trained Monte Carlo：用带人格参数的神经网络交易机器人群体在限价订单簿中估计市场结果分布",
+   "summary_zh": "作者提出 PTMC 方法，让共享同一策略网络但人格参数各异的交易机器人群体在连续双向拍卖中互动，产生价格路径作为一次蒙特卡洛样本，重复多次得到市场统计量的分布估计。论文只给出形式化估计器、跨学科设计论证和四级验证路线图，尚未实现。",
    "cluster": "5916e267bfd34558",
    "cluster_size": 1,
    "is_lead": true,
@@ -34976,7 +34992,8 @@
    "relevant": true,
    "topics": [
     "economy",
-    "human-behavior"
+    "framework",
+    "eval"
    ],
    "score1": 63,
    "score2": 70,
@@ -35752,7 +35769,7 @@
    "cluster": "5aca4c38bba36ada",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.09,
+   "hot": 1.08,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -36009,7 +36026,7 @@
    "cluster": "5b498f7753f9a6d0",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.84,
+   "hot": 0.83,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -36272,7 +36289,7 @@
    "cluster": "5b87ca4e67aa0ad6",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.19,
+   "hot": 2.17,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:29Z",
    "relevant": true,
@@ -39130,7 +39147,7 @@
    "cluster": "63626a310eb12141",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.11,
+   "hot": 1.09,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:31Z",
    "relevant": true,
@@ -44075,7 +44092,7 @@
    "cluster": "6f304b36be9257fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.85,
+   "hot": 3.8,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -44572,8 +44589,8 @@
     "人格模拟",
     "展陈设计"
    ],
-   "title_zh": "SiMUSation：用 LLM 扮演观众模拟博物馆参观体验，辅助展陈早期设计",
-   "summary_zh": "框架为不同观众建立 LLM 人格，双层表示同时模拟移动、注视等可观察行为和困惑、叙事投入等内部反应，设计师可调整布局与叙事并查看模拟反馈。原型经 12 人用户研究评估，被认为有助于反思与迭代。",
+   "title_zh": "SiMUSation：用大模型人格模拟访客观展体验，辅助博物馆展览早期设计",
+   "summary_zh": "作者提出 SiMUSation，一个支持展览早期设计的交互式仿真框架。它用大模型驱动多样访客人格，双层模拟可观察行为（移动、注视）与内部反应（困惑、叙事投入）。12 人用户研究表明，该框架能为早期展览设计的反思与迭代提供参考。",
    "cluster": "7013d07277e4fddb",
    "cluster_size": 1,
    "is_lead": true,
@@ -44583,7 +44600,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "generative-agents"
+    "framework"
    ],
    "score1": 58,
    "score2": 75,
@@ -45240,7 +45257,7 @@
    "cluster": "72af26774086d271",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 6.81,
+   "hot": 6.72,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -45681,8 +45698,8 @@
     "评测基准",
     "知识状态"
    ],
-   "title_zh": "KnowSim 用带知识状态图的用户模拟器评测 LLM 信息校准，与 705 场真人会话排序一致率 73–74%",
-   "summary_zh": "KnowSim 让用户模拟器维护由信息单元及先修关系构成的知识状态图，按学习理论规则演化，并据此计算知识增益、传递校准和认知过载三项指标。在覆盖两个领域的 705 场人机会话上验证，排序与人类判断的符号一致率为 73–74%，优于三个基线模拟器。",
+   "title_zh": "KnowSim：用会学习知识状态的用户模拟器评测 LLM 助手的信息校准能力",
+   "summary_zh": "作者提出 KNOWSIM 评测框架，用户模拟器用带先修关系的信息单元图显式建模用户知识状态，并按学习理论的更新规则演化。它从知识状态轨迹计算知识增益、传递校准、认知过载三个指标。在 705 段人机对话上验证，与人类判断的符号一致率达 73–74%，超过三个基线模拟器。",
    "cluster": "73b3e51c3d0af155",
    "cluster_size": 1,
    "is_lead": true,
@@ -45864,7 +45881,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 5.74,
+   "hot": 5.67,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -46029,14 +46046,14 @@
     "数字孪生",
     "网络靶场"
    ],
-   "title_zh": "Hephaestus 提出“网络安全 AI 科学家”：多智能体研究系统依赖数字孪生与网络靶场评估",
-   "summary_zh": "论文主张网络安全是不同于稳定学科的科研对象，可信评估要靠数字孪生、网络靶场和可审计证据，而非单一基准分数。提出的 Hephaestus 是模块化、角色分工的多智能体研究系统，覆盖问题界定、威胁建模、受控实验与治理报告。",
+   "title_zh": "Hephaestus：面向网络安全的 AI 科学家架构与议程",
+   "summary_zh": "这篇立场论文提出“网络安全 AI 科学家”这一研究对象，认为网络安全研究以安全事件和交互痕迹为基本单元，工具与模型环境非平稳，可信评估依赖数字孪生、靶场和可审计证据。作者给出一个模块化、角色分工的多智能体研究系统架构，把目标锚定在风险、信任、事件、能耗四个维度的“四个零”框架上。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:08Z",
    "relevant": true,
    "topics": [
-    "world-env",
-    "eval"
+    "framework",
+    "world-env"
    ],
    "applied": false,
    "cluster": "7431d8270d6ee38f",
@@ -47082,7 +47099,7 @@
    "cluster": "777cd1e779dc04f4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.8,
+   "hot": 4.74,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -47824,7 +47841,7 @@
    "cluster": "79ee4a2408bc74b2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.06,
+   "hot": 8.95,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:42:04Z",
    "relevant": true,
@@ -49513,7 +49530,7 @@
    "cluster": "7db283e3aa9596cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.04,
+   "hot": 31.65,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -49583,7 +49600,7 @@
    "cluster": "7e1e75eafc2eabaf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.2,
+   "hot": 1.18,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -50612,7 +50629,7 @@
    "cluster": "80469b978b756760",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.79,
+   "hot": 10.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -50622,6 +50639,37 @@
     "generative-agents"
    ],
    "applied": false
+  },
+  "8088d3a0a69fb794": {
+   "id": "8088d3a0a69fb794",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOalNiaF9rWTFZd1QyeExXRWxnc0NQN3AxcGJ5LUhVdUQ2OTNXQjdsUnJmV1RvcTBWdElNcHV0TktlUzYycU1ocFNIaFRLVHdDMUhKSTQyWXFjT2otbVdDcmM4SjhzTFBzMURhclM3NlpLYjRMb1FfX2FLY0tNcGdxbmNaT19hcURMeUFJeg?oc=5",
+   "title": "我AI学新词㉟｜你有没有在景区里遇到过NPC？ - Sohu",
+   "text": "我AI学新词㉟｜你有没有在景区里遇到过NPC？ Sohu",
+   "source_id": "gnews-zh-game-npc",
+   "source_name": "Google 新闻 · 中文：AI NPC 与游戏",
+   "source_group": "game",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-25T08:34:13Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "npc",
+    "ai"
+   ],
+   "domain_guess": "game",
+   "added": "2026-11-26T00:40:05Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "game",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "80a86c29bfcf9d3e": {
    "id": "80a86c29bfcf9d3e",
@@ -51509,6 +51557,36 @@
    "model2": "Qwen3.8-27B",
    "applied": false
   },
+  "82d7234b4363ca94": {
+   "id": "82d7234b4363ca94",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBJMXRrZFIyWmVfY3NRUTg3NGZxSHV0c0lHVUtldDRUTUFKZ0VUc0JQTi1VVk9NZk5lNUdQTFRWcnNqVFdETW5fbjlmOEtDMlFfcjdaaGM5dw?oc=5",
+   "title": "面向具身智能与机器人仿真的三维生成：综述 - alphaXiv",
+   "text": "面向具身智能与机器人仿真的三维生成：综述 alphaXiv",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-19T08:00:00Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 35,
+   "kw_terms": [
+    "仿真"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-26T00:40:05Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 35,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "82d7eb7a9f6a2200": {
    "id": "82d7eb7a9f6a2200",
    "url": "https://arxiv.org/abs/2607.20121",
@@ -51735,8 +51813,8 @@
     "知识图谱",
     "出行行为"
    ],
-   "title_zh": "用空间知识图谱约束 LLM 智能体生成家庭日程，评估社区宜居性",
-   "summary_zh": "框架用空间知识图谱加 Graph-RAG 为 LLM 提供周边 POI 和步行时间，由 LLM 生成并修订不同行动能力、家庭角色的住户日程，再用规则做可行性校验，经路网计算实际出行路径与时间。目前是原型。",
+   "title_zh": "用空间知识图谱和 LLM 智能体评估社区宜居性：深圳原型显示设施可达不等于便利",
+   "summary_zh": "作者提出一个原型框架，用空间知识图谱加 Graph-RAG 让 LLM 生成并修订家庭日程，再经规则可行性检查和路网路径计算，评估社区宜居性。在深圳某社区的原型演示发现，名义上的设施可达不等于实际便利，行动受限者和有照护责任的家庭承受更多出行与协调负担。",
    "cluster": "8306bcae5cb93670",
    "cluster_size": 1,
    "is_lead": true,
@@ -51746,9 +51824,10 @@
    "relevant": true,
    "topics": [
     "urban",
-    "human-behavior"
+    "generative-agents",
+    "eval"
    ],
-   "applied": false
+   "applied": true
   },
   "830f636c953accac": {
    "id": "830f636c953accac",
@@ -52089,7 +52168,7 @@
    "cluster": "84b21af4658669d8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 41.57,
+   "hot": 41.06,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -52843,7 +52922,7 @@
    "cluster": "87097a060214af63",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 54.43,
+   "hot": 53.77,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -56210,8 +56289,8 @@
     "规范执行",
     "社会仿真"
    ],
-   "title_zh": "多智能体系统里的规范执行：简单惩罚机制会被语言模型智能体钻空子",
-   "summary_zh": "作者在三个仿真环境和多组智能体种群中测试语言模型智能体的规范执行机制，发现简单机制会被未对齐智能体利用来获取竞争优势。加入对每个智能体可靠性的持续估计和对重复违规的递增惩罚后，机制能抵抗这种利用，违规惩罚成本不高于基线。",
+   "title_zh": "研究规范执行机制：语言模型智能体多智能体系统中的行为约束设计",
+   "summary_zh": "作者研究了如何用规范执行机制约束共享环境中互相竞争的语言模型智能体。他们发现简单机制会被未对齐智能体自发利用来获取竞争优势，于是提出两个设计要素：随时间估计每个智能体的可靠性，并对重复违规施加递增惩罚。在三个模拟环境和多种智能体群体中，这类机制能抵抗利用，惩罚违规的成本与基线相当或更低。",
    "cluster": "8e6bc9f5f7b21811",
    "cluster_size": 1,
    "is_lead": true,
@@ -56220,9 +56299,8 @@
    "triaged": "2026-11-21T01:37:20Z",
    "relevant": true,
    "topics": [
-    "social-sim",
-    "eval",
-    "org"
+    "framework",
+    "eval"
    ],
    "applied": false
   },
@@ -56630,8 +56708,8 @@
     "故障诊断",
     "LLM 智能体"
    ],
-   "title_zh": "Onnes：物理数字孪生加多智能体 LLM 诊断稀释制冷机故障",
-   "summary_zh": "作者用真实 BlueFors 日志学到的噪声指纹构建稀释制冷机数字孪生，驱动多 LLM 智能体做低温故障诊断。1000 轮对比中零样本智能体检测与监督分类器无显著差异，分类落后；加入对比少样本示例与自一致性投票后准确率从 0.685 升到 0.990。",
+   "title_zh": "Onnes：物理接地的稀释制冷机数字孪生驱动 LLM 智能体做低温故障诊断",
+   "summary_zh": "作者构建了稀释制冷机的物理数字孪生，用真实 BlueFors 日志学习噪声指纹，让零样本 LLM 智能体与监督分类器在低温故障诊断上正面对比。零样本面板检测不输分类器但分类落后，加入六个对比式少样本示例后分类准确率从 0.685 升到 0.990，追平监督分类器，且无需参数更新。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:03Z",
    "relevant": true,
@@ -57348,12 +57426,17 @@
    "domain_guess": "business",
    "added": "2026-11-25T23:23:26Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "business",
-   "score": 20,
+   "score": 28,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-26T00:32:27Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "91403590391f428a": {
    "id": "91403590391f428a",
@@ -58961,7 +59044,7 @@
    "cluster": "948c36101407e81c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.1,
+   "hot": 3.07,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -59197,7 +59280,7 @@
    "cluster": "94fa74c7b9f0e060",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.16,
+   "hot": 24.85,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-23T13:15:54Z",
    "relevant": true,
@@ -60170,7 +60253,7 @@
    "cluster": "971375198b0419b1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 37.95,
+   "hot": 37.49,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -60343,7 +60426,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 5.63,
+   "hot": 5.56,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T01:02:56Z",
    "relevant": true,
@@ -60586,7 +60669,7 @@
    "cluster": "3cf41a97b1c6ee7d",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 2.48,
+   "hot": 2.45,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -60711,7 +60794,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 29.79,
+   "hot": 29.43,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -60890,7 +60973,7 @@
    "cluster": "97f684f7c5000779",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.33,
+   "hot": 0.32,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -61070,8 +61153,8 @@
     "交易策略",
     "仿真微调"
    ],
-   "title_zh": "MetaPS：让 LLM 在仿真中试跑候选策略程序，再微调成市场策略选择器",
-   "summary_zh": "作者不让 LLM 直接生成交易动作，而是让它从程序化策略库中选一个代码模块执行。MetaPS 在仿真或回测市场里试跑候选策略，把状态与策略的配对转成监督微调数据，推理时不再查询仿真器。在多股票交易和受控商品交易沙盒上，0.8B 到 9B 各规模模型均有提升，优于固定策略和直接决策智能体。",
+   "title_zh": "MetaPS：让市场智能体在仿真中学会自适应选择程序化交易策略",
+   "summary_zh": "MetaPS 不让大模型直接生成交易动作，而是从一组程序化策略库里选策略。它在仿真或回测市场中试跑候选策略，找出各策略占优的市场状态，把这些状态-策略对转成微调数据。从 0.8B 到 9B 的模型规模上，MetaPS 都稳定超过固定策略、直接决策智能体和 API 大模型智能体，微调后的小模型在部分场景甚至超过更强的 API 模型。",
    "cluster": "9831cb442b949e3f",
    "cluster_size": 1,
    "is_lead": true,
@@ -61253,8 +61336,8 @@
     "消费级硬件",
     "量化模型"
    ],
-   "title_zh": "在单张 RTX 5070 Ti 上跑缩小版 Agentopia：8B 量化模型完成 154 个系统周",
-   "summary_zh": "作者把原本用 397B 模型、100 个智能体跑 10 年的 Agentopia 缩到单张 12GB 显卡上用 Qwen3-8B-AWQ 运行，加入分层记忆压缩、每天四个活动时段和显式身心健康状态变量。三次独立运行中两次跑满 52 周、一次 50 周，共 154 个系统周，无智能体死亡，含 NO_RESPONSE 的活动记录占 10.15%–10.29%。",
+   "title_zh": "单张消费级显卡跑通缩减版 Agentopia：8B 量化模型完成 154 个模拟周",
+   "summary_zh": "作者把原本需要 Qwen3.5-397B-A17B 跑 100 个智能体的 Agentopia 移植到一张 RTX 5070 Ti 上，用 4-bit 量化的 Qwen3-8B 跑了三轮长时程模拟，两轮跑满 52 周、一轮跑到 50 周，共 154 个系统周。没有智能体死亡，也没有触发健康预警，但 10% 左右的活动记录含 NO_RESPONSE 字段。",
    "cluster": "9882d1af5aaeedfa",
    "cluster_size": 1,
    "is_lead": true,
@@ -61264,8 +61347,8 @@
    "relevant": true,
    "topics": [
     "generative-agents",
-    "social-sim",
-    "framework"
+    "framework",
+    "eval"
    ],
    "applied": false
   },
@@ -61518,7 +61601,7 @@
    "cluster": "98fb20f80efbdd1e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.5,
+   "hot": 11.36,
    "topics": [
     "economy",
     "policy"
@@ -61928,8 +62011,8 @@
     "微随机试验",
     "教育仿真"
    ],
-   "title_zh": "心理治疗课堂用 LLM 扮演病人做练习，微随机试验发现逐句反思加 AI 反馈效果最好",
-   "summary_zh": "研究者在研究生心理治疗课程中部署 LLM 病人练习工具，25 名学生参与 5 周微随机试验，交叉测试 AI 反馈有无与反思粒度两个因素。逐句反思加 AI 反馈的组合在学生投入度和教育价值上显著优于其他条件，学生更愿意把 AI 建议与自己的判断对照。",
+   "title_zh": "微随机试验评估 AI 模拟心理治疗练习工具：逐句反思加 AI 反馈效果最好",
+   "summary_zh": "研究者在研究生心理治疗课程中部署了一个 LLM 模拟练习工具，让学生与 LLM 扮演的病人对话练习，随后接受微调 LLM 的反馈并做书面反思。25 名学生参与 5 周的微随机试验，比较四种条件后发现，逐句级反思配合 AI 反馈在学生参与度和教育价值上显著优于其他条件。这是首个在健康教育场景用微随机试验评估 LLM 仿真系统的工作。",
    "cluster": "99eb8cb0fc2787c8",
    "cluster_size": 1,
    "is_lead": true,
@@ -61939,8 +62022,8 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "health",
-    "eval"
+    "eval",
+    "health"
    ],
    "score1": 62,
    "score2": 70,
@@ -63138,8 +63221,8 @@
     "工程智能体",
     "电力系统"
    ],
-   "title_zh": "PowerAgentBench-Dyn：评测智能体做电力系统动态分析的基准",
-   "summary_zh": "基准针对电力系统动态研究，要求智能体做模型质量审查和动态安全评估，涉及参数校准、工具调用和迭代实验。论文给出两个初始任务，强调这类工作无法化简为单次优化或编码任务。",
+   "title_zh": "PowerAgentBench-Dyn：面向电力系统动态分析的智能体 AI 基准",
+   "summary_zh": "作者提出了 PowerAgentBench-Dyn，一个评测智能体 AI 在电力系统动态分析任务上表现的基准。它包含两个任务：动态模型质量审查和动态安全风险筛查，要求智能体像有经验的工程师那样推理、调用仿真工具并迭代实验。基准附带确定性评测器，用重复运行的成功率等指标衡量随机性的智能体行为。",
    "cluster": "9ce638c0c31e56b5",
    "cluster_size": 1,
    "is_lead": true,
@@ -64958,8 +65041,8 @@
     "评测基准",
     "物理仿真"
    ],
-   "title_zh": "CrashTwin 提出物理可信度评测框架，用 2.5 万条合成与 1.2 万条真实碰撞序列检验世界模型的多智能体动力学",
-   "summary_zh": "作者指出当前世界模型评测偏重视觉保真和语义对齐，无法判断生成的动力学是否遵守物理规律。CrashTwin 用 2.5 万条可控合成碰撞序列和 1.2 万条真实碰撞视频，配合免标定重建流程，从世界模型 rollout 中恢复三维物理量，并从三个维度做诊断。",
+   "title_zh": "CrashTwin：用碰撞场景检验世界模型是否遵守物理规律",
+   "summary_zh": "作者提出 CrashTwin，一个检验世界模型物理可信度的评测框架，包含 2.5 万条可控合成碰撞序列和 1.2 万条真实碰撞序列，并配免标定重建流程，从模型生成的视频里恢复三维物理量。基准测试显示，视觉质量高的模型在复杂多智能体交互中常出现严重的物理违规。",
    "cluster": "a0b87ee6810ec6fe",
    "cluster_size": 1,
    "is_lead": true,
@@ -66437,7 +66520,7 @@
    "cluster": "a3b9dc32372c08c3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 3.5,
+   "hot": 3.46,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -66500,8 +66583,8 @@
     "合成样本",
     "教育"
    ],
-   "title_zh": "用 LLM 模拟学生 Java 编程错误，在 7.4 万份真实提交上比对多样性与真实度",
-   "summary_zh": "作者用 CodeWorkout 数据集中 37 道题、7.4 万余份学生 Java 提交，测试五种 LLM 在 IO、CoT、Self-Refine 三种提示下的表现。模型都能生成多样错误，但与真实学生错误的吻合度分化，Claude Sonnet 4 最均衡；另有 401 人盲评实验比较合成与真实错误。",
+   "title_zh": "用大模型模拟学生 Java 编程错误：Claude Sonnet 4 对齐最均衡，盲评难辨真假",
+   "summary_zh": "作者用 CodeWorkout 数据集里 37 道题的 7.4 万多份真实学生 Java 提交，评测五个大模型在三种提示策略下能否生成逼真的学生代码错误。所有模型都能生成多样的错误，但对齐真实学生错误的程度差异明显，Claude Sonnet 4 表现最均衡。401 条样本的盲评专家标注显示，合成错误与真实学生错误在功能上难以区分。",
    "cluster": "a3ebf1a4a4ed669f",
    "cluster_size": 1,
    "is_lead": true,
@@ -67199,7 +67282,7 @@
    "cluster": "a5e42b2b6ba30ccc",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.77,
+   "hot": 8.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -67542,7 +67625,7 @@
    "cluster": "a6e7e91569fce679",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.5,
+   "hot": 11.36,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:38Z",
    "relevant": true,
@@ -68850,7 +68933,7 @@
    "cluster": "aa8e964eeccef16d",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.44,
+   "hot": 4.38,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:47Z",
    "relevant": true,
@@ -71596,7 +71679,7 @@
    "cluster": "b1a8d7dbad71f0b4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.5
+   "hot": 18.27
   },
   "b1f9e7823c80878f": {
    "id": "b1f9e7823c80878f",
@@ -71782,7 +71865,7 @@
    "cluster": "b2017a81e5e5c532",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.79,
+   "hot": 10.66,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:44Z",
    "relevant": true,
@@ -72411,7 +72494,7 @@
    "cluster": "b32a8ca7c7009a9c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.36
+   "hot": 1.34
   },
   "b3871885fa350a70": {
    "id": "b3871885fa350a70",
@@ -72769,7 +72852,7 @@
    "cluster": "b4d1668269dc5edb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 44.05,
+   "hot": 43.51,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -72887,7 +72970,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 6.13,
+   "hot": 6.06,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -73974,7 +74057,7 @@
    "cluster": "b780eead904f50ed",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 21.85,
+   "hot": 21.58,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -75028,7 +75111,7 @@
    "cluster": "bbc9b4d66e7e40f5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.24,
+   "hot": 8.14,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:35Z",
    "relevant": true,
@@ -75270,7 +75353,7 @@
    "cluster": "bcbc6e9ed72f9565",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 63.96,
+   "hot": 63.18,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -75498,7 +75581,7 @@
    "cluster": "bd1a1262a30563d3",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.05,
+   "hot": 18.82,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -75555,7 +75638,7 @@
    "cluster": "bd48b9b8ec948700",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.93,
+   "hot": 5.86,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -76033,7 +76116,7 @@
    "cluster": "2fb652d640aecad3",
    "cluster_size": 6,
    "is_lead": false,
-   "hot": 6.24,
+   "hot": 6.16,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -76310,12 +76393,17 @@
    "domain_guess": "application",
    "added": "2026-11-25T23:23:26Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "application",
-   "score": 35,
+   "llm": true,
+   "domain": "business",
+   "score": 30,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-26T00:32:27Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "bfe7a2cc49e9fa82": {
    "id": "bfe7a2cc49e9fa82",
@@ -76617,8 +76705,8 @@
     "意见预测",
     "合成样本"
    ],
-   "title_zh": "GPT-4.1 人格模拟预测 2024 大选：九州中八州结果正确，儿童疫苗信念预测准确率达 0.94",
-   "summary_zh": "作者用哥伦比亚大学 Personas 数据集中九个美国州的人格设定，让 GPT-4.1 预测 2024 年大选结果，八州正确，唯一失手的是某个摇摆州。在 Pew 的 American Trends Panel 第 123 波数据上，模型预测儿童疫苗信念的准确率最高达 0.94；人格间对话符合设定，但缺少自然的人类语流。",
+   "title_zh": "用 GPT-4.1 做人格模拟预测美国民意：九州选举中八州命中，疫苗观点预测准确率达 0.94",
+   "summary_zh": "作者用 GPT-4.1 基于哥伦比亚大学 Personas 数据集的人格描述预测 2024 年美国大选，九个州里八个州预测正确，只在一个摇摆州失手。在 Pew 美国趋势面板第 123 波数据上，模型对儿童疫苗相关观点的预测准确率最高到 0.94。模拟生成的人格间对话贴合人格设定，但对话不够自然。",
    "cluster": "c072e6560a4655bd",
    "cluster_size": 1,
    "is_lead": true,
@@ -76628,7 +76716,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "social-sim"
+    "eval"
    ],
    "applied": true
   },
@@ -76788,7 +76876,7 @@
    "cluster": "c0a18809d198e887",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.64,
+   "hot": 16.43,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T10:00:03Z",
    "relevant": true,
@@ -77592,7 +77680,7 @@
    "cluster": "c2e5f6a5bcc1a417",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.5,
+   "hot": 11.36,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:53Z",
    "relevant": true,
@@ -78769,7 +78857,7 @@
    "cluster": "c5a70dd0609bfa7e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 57.83
+   "hot": 57.12
   },
   "c5ea418997695a4e": {
    "id": "c5ea418997695a4e",
@@ -78871,7 +78959,7 @@
    "cluster": "c5fad41f7b61d2ec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 26.03
+   "hot": 25.71
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -79973,7 +80061,7 @@
    "cluster": "c92a503eabc2be2c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 21.26
+   "hot": 21.0
   },
   "c967111bdc85aaa2": {
    "id": "c967111bdc85aaa2",
@@ -80342,7 +80430,7 @@
    "cluster": "ca29e3bae1447b07",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.82
+   "hot": 0.81
   },
   "ca337debda67995d": {
    "id": "ca337debda67995d",
@@ -80527,8 +80615,8 @@
     "可视化推演",
     "用户研究"
    ],
-   "title_zh": "SupplyNet：用图结构 LLM 多智能体做供应链可视化推演教学",
-   "summary_zh": "SupplyNet 是一个游戏化供应链仿真系统，底层是上下文图结构的 LLM 多智能体框架，模拟各层级相互依赖的供应链动态。界面提供网络状态视图、可分支的“what-if”时间线和任务分析台，支持反事实探索与因果追踪。用户研究显示参与者投入度和对供应链动态的理解有所提升。",
+   "title_zh": "SupplyNet：用图结构 LLM 多智能体仿真做供应链可视化探索式学习",
+   "summary_zh": "作者提出 SupplyNet，一个游戏化的供应链仿真系统，底层用基于图的 LLM 多智能体框架建模相互依赖的供应链动态。系统提供交互式网络视图、分支时间线和任务导向分析台，支持反事实探索与因果追踪。用户研究显示它提升了参与度，也帮助用户理解供应链动态。",
    "cluster": "ca5135d2bfaf5102",
    "cluster_size": 1,
    "is_lead": true,
@@ -80538,8 +80626,7 @@
    "relevant": true,
    "topics": [
     "economy",
-    "framework",
-    "eval"
+    "framework"
    ],
    "score1": 62,
    "score2": 70,
@@ -81262,7 +81349,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 36.02
+   "hot": 35.58
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -82268,7 +82355,7 @@
    "cluster": "4c34cde27eeaace5",
    "cluster_size": 2,
    "is_lead": false,
-   "hot": 2.75,
+   "hot": 2.71,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:09Z",
    "relevant": true,
@@ -83036,7 +83123,7 @@
    "cluster": "d12a4824156e8dec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 30.51,
+   "hot": 30.14,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -84555,12 +84642,17 @@
    "domain_guess": "application",
    "added": "2026-11-25T23:23:26Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "application",
-   "score": 41,
+   "llm": true,
+   "domain": "business",
+   "score": 25,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-26T00:32:27Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "d4547f073da0afdd": {
    "id": "d4547f073da0afdd",
@@ -84974,8 +85066,8 @@
     "合成数据",
     "评测基准"
    ],
-   "title_zh": "PersonaForge：按真实用户统计校准多轮用户模拟，训练后智能体综合分提高 4.1%",
-   "summary_zh": "作者分析 1.6 万条真实会话，发现 75.9% 的交互是多轮。PersonaForge 用四维人格空间、按真实用户统计校准的行为控制和基于真实种子查询的反向构造生成多轮对话，产出 6.3K 训练集和 138 题基准。Qwen3.5-27B 训练后综合分提高 4.1%，任务完成提高 6.0%。",
+   "title_zh": "PersonaForge：用真实用户统计校准的多轮用户模拟框架训练智能体",
+   "summary_zh": "作者分析了 1.6 万条真实会话，发现 75.9% 的交互是多轮的，而现有训练和评测大多假设单轮完整查询。他们提出 PersonaForge 框架，用四维人格空间、按真实用户统计校准的 SOUL 行为控制和基于真实种子查询的逆向深度构造，合成多轮用户-智能体交互数据。用 6.3K 记录训练 Qwen3.5-27B 后，综合分提高 4.1%，任务完成和回复质量分别提升 6.0% 和 6.8%。",
    "cluster": "d509fd896ab437cf",
    "cluster_size": 1,
    "is_lead": true,
@@ -85086,7 +85178,7 @@
    "cluster": "d5521539f928ab61",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.5
+   "hot": 11.36
   },
   "d579b2c009323c05": {
    "id": "d579b2c009323c05",
@@ -85139,7 +85231,7 @@
    "cluster": "d579b2c009323c05",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 0.31,
+   "hot": 0.3,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:51Z",
    "relevant": true,
@@ -85766,12 +85858,26 @@
    "domain_guess": "game",
    "added": "2026-11-25T23:23:26Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "game",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 46,
+   "tags": [
+    "AI NPC",
+    "游戏智能体",
+    "专利"
+   ],
+   "title_zh": "动视提交AI语音NPC专利，让NPC学习玩家发言变得更生动",
+   "summary_zh": "动视申请一项AI语音NPC专利，NPC通过玩家发言数据学习，以提升对话与表现的自然度。报道未给出技术细节或上线计划。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-26T00:32:27Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "score1": 48,
+   "score2": 45,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "d6f40ed2e33a36d5": {
    "id": "d6f40ed2e33a36d5",
@@ -87414,8 +87520,8 @@
     "法律判断",
     "人类行为模拟"
    ],
-   "title_zh": "26 个 LLM 能否复现人类“合理性”法律判断：硅陪审团可行性研究",
-   "summary_zh": "研究比较真人对 25 类法律相关问题的回答与 26 个 LLM 聊天机器人的回答，考察生成式模型能否模拟人类对“行为是否合理”的判断。作者把这类用途称为 silicon sampling 与硅陪审团，并关注合理性判断是否随人口特征变化。",
+   "title_zh": "26 个大模型回答 25 个法律“合理性”问题：整体贴近人类，但偏向政府企业和白人年长男性",
+   "summary_zh": "作者让 26 个大语言模型回答 25 个法律上常见的“合理性”判断题，再和真人受访者的答案对比。结果显示聊天机器人的回答总体上贴近人类，但更同质化，偶尔把可变标准当成固定规则，而且更偏向政府和企业，答案也更接近白人、男性、年长、高学历人群。",
    "cluster": "dbc161157636202c",
    "cluster_size": 1,
    "is_lead": true,
@@ -88457,8 +88563,8 @@
     "认知建模",
     "对话评测"
    ],
-   "title_zh": "CogWM：用 BDI/E 认知轨迹评估对话智能体的认知世界模型",
-   "summary_zh": "作者提出 CogWM，一个基于 LLM 的认知用户模型，同时建模用户的信念、欲望、意图和情绪状态与对应回复，从而显式追踪多轮对话中的认知轨迹。模型用 Qwen3-14B 在 15 万条用户轮次样本上训练，在回复保真度和认知状态理解上优于现有用户模拟基线。",
+   "title_zh": "CogWM：用认知世界模型追踪对话智能体影响用户 BDI/E 状态的轨迹",
+   "summary_zh": "作者提出 CogWM，一个基于 LLM 的认知用户模型，联合建模用户的信念、愿望、意图和情绪（BDI/E）及其回复，用于评估对话智能体。模型在 15 万条用户轮次样本上用 Qwen3-14B 训练，在回复保真度和认知状态理解上超过现有用户模拟基线，并能通过认知轨迹对比六个前沿 LLM 智能体的表现。",
    "cluster": "de9d54a5ca874df6",
    "cluster_size": 1,
    "is_lead": true,
@@ -91213,7 +91319,7 @@
    "cluster": "e572dc28a6688b52",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.46
+   "hot": 2.43
   },
   "e57fee2dfc027e3a": {
    "id": "e57fee2dfc027e3a",
@@ -91625,7 +91731,7 @@
    "cluster": "e6d65daa2397dd51",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.91,
+   "hot": 2.88,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:58Z",
    "relevant": true,
@@ -92534,7 +92640,7 @@
    "cluster": "e9b4f62a38c35c8e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.82,
+   "hot": 17.6,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,
@@ -92937,7 +93043,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 33.57,
+   "hot": 33.16,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -93343,6 +93449,42 @@
    "relevant": false,
    "topics": [],
    "applied": false
+  },
+  "eb23f0e3187b6aeb": {
+   "id": "eb23f0e3187b6aeb",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBOWnpZVGJncXRpWVRvWFRmUXBqLTFtLUszam5xR0dpOEVuS282dGo2SGZYYUlBQWdvTDhOSHNVbEgwTW1HS09ZbFRHSk0zT1l2MUpVa0tIZTVwajRra3Jjc3l0UURGSjVmdXdvaDBB?oc=5",
+   "title": "无人机—志愿者接力配送模式降低老龄化社区用药中断风险的多智能体仿真评估 - 生物通",
+   "text": "无人机—志愿者接力配送模式降低老龄化社区用药中断风险的多智能体仿真评估 生物通",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-25T23:59:08Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 95,
+   "kw_terms": [
+    "仿真",
+    "多智能体仿真",
+    "智能体"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-26T00:40:05Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "application",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "eb23f0e3187b6aeb",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 87.42
   },
   "eb25ef6e0349a383": {
    "id": "eb25ef6e0349a383",
@@ -93818,7 +93960,7 @@
    "cluster": "ec973f9004e2c79c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.01,
+   "hot": 16.8,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T01:02:56Z",
    "relevant": true,
@@ -94048,8 +94190,8 @@
     "多轮交互",
     "评测反馈"
    ],
-   "title_zh": "SkillEvo 用多轮用户模拟生成反馈梯度，让智能体技能持续自我进化",
-   "summary_zh": "论文指出，现有智能体技能进化依赖单轮问答评测，首轮补完缺口后进化梯度迅速衰减，只在多轮交互中暴露的缺陷无法被发现。SkillEvo 把多轮用户模拟从评测终点改为反馈生成器，并用可控治理约束进化方向。",
+   "title_zh": "SkillEvo：用多轮交互反馈持续进化智能体技能，比单轮问答驱动高 15.4 分",
+   "summary_zh": "现有智能体技能要么手写要么一次生成，缺少从交互失败中改进的闭环；已有进化方法靠单轮问答反馈，第一轮修完可见缺陷后梯度衰减、进化停滞。SkillEvo 把多轮用户模拟从评测端点改造成反馈生成器，并加一层独立治理来修复事实退化和结构膨胀。在六类云服务、9 个生产技能、98 个技能参考文件上，它比自反思进化高 23.0 分，比单轮问答驱动高 15.4 分。",
    "cluster": "ed0bbbb9f0d78bc8",
    "cluster_size": 1,
    "is_lead": true,
@@ -94058,7 +94200,7 @@
    "triaged": "2026-11-21T01:37:47Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
+    "framework",
     "eval"
    ],
    "score1": 58,
@@ -94546,7 +94688,7 @@
    "cluster": "eda5b4c9be66c4fd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.54,
+   "hot": 9.42,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T01:02:56Z",
    "relevant": true,
@@ -95654,7 +95796,8 @@
     "human-behavior",
     "eval"
    ],
-   "applied": false
+   "applied": false,
+   "read_fail": 1
   },
   "f04a76ae9ccbeb74": {
    "id": "f04a76ae9ccbeb74",
@@ -96001,8 +96144,8 @@
     "LLM 决策",
     "GAMA"
    ],
-   "title_zh": "把 LLM 接进 GAMA 做城市出行仿真决策层，智能体在道路阻断场景中更会改道",
-   "summary_zh": "作者提出一种混合架构，通过 API 把 GAMA 多智能体仿真平台与外部 LLM 模块连接，由 LLM 判断智能体是否需要重新规划路线，并加入持久记忆让过往交互影响后续决策。在多种道路阻断场景和不同人口规模下与规则方法对比，LLM 智能体表现出更强的适应性和情境感知，记忆对行为一致性的影响随配置不同而变化。",
+   "title_zh": "用大模型做城市出行智能体的改道决策层，GAMA 平台混合架构实验",
+   "summary_zh": "作者把 GAMA 多智能体仿真平台通过 API 接上外部大模型，让智能体自己判断是否需要重新规划路线，并加入持久记忆保持行为一致性。在多种道路封锁场景和人口规模下与规则方法对比，大模型智能体适应性更强，尤其在路线灵活性高的场景里表现明显。",
    "cluster": "f0ddcf45ea76dfc5",
    "cluster_size": 1,
    "is_lead": true,
@@ -96012,8 +96155,7 @@
    "relevant": true,
    "topics": [
     "urban",
-    "framework",
-    "human-behavior"
+    "framework"
    ],
    "applied": false
   },
@@ -96642,7 +96784,7 @@
    "cluster": "f22c13987bf9ec77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 36.59
+   "hot": 36.14
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -97462,7 +97604,7 @@
    "cluster": "f4a24bf226024f74",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.5,
+   "hot": 11.36,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:30:57Z",
    "relevant": true,
@@ -98585,7 +98727,7 @@
    "cluster": "f7ed0bde1dfdf148",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.5
+   "hot": 11.36
   },
   "f7fcefcd7ee90b76": {
    "id": "f7fcefcd7ee90b76",
@@ -98849,7 +98991,7 @@
    "cluster": "f88b32686a7aa762",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 53.44,
+   "hot": 52.78,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -98961,7 +99103,7 @@
    "cluster": "f8cc32a5cb386b75",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.88,
+   "hot": 1.86,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:08:05Z",
    "relevant": true,
@@ -99092,7 +99234,7 @@
    "cluster": "f94538d40439027e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.96,
+   "hot": 9.84,
    "topics": [
     "health",
     "policy"
@@ -100108,7 +100250,7 @@
    "cluster": "fc97273e83d39f85",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 2.03,
+   "hot": 2.01,
    "topics": [
     "eval",
     "wargame"
@@ -100353,7 +100495,7 @@
    "cluster": "fd0b4e5ac8bc7e59",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 1.51,
+   "hot": 1.49,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-19T15:41:41Z",
    "relevant": true,

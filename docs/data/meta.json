@@ -4,16 +4,16 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-25T23:23:26Z",
+ "generated": "2026-11-26T00:40:06Z",
  "counts": {
   "academic": 869,
+  "application": 159,
   "platform": 4,
-  "application": 157,
   "business": 13,
   "game": 1
  },
- "total": 902,
- "reads": 506,
+ "total": 903,
+ "reads": 535,
  "research": 3,
  "ai_items": 902,
  "sources": [
@@ -552,7 +552,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 3,
+   "items": 4,
    "home": "https://news.google.com/rss/search?q=%28%E6%99%BA%E8%83%BD%E4%BD%93+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B%29+%28%E4%BB%BF%E7%9C%9F+OR+%E6%B2%99%E7%9B%98%E6%8E%A8%E6%BC%94+OR+%E6%83%85%E6%99%AF%E6%8E%A8%E6%BC%94+OR+%E6%A8%A1%E6%8B%9F%E6%BC%94%E7%BB%83%29+when%3A14d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
    "query": "",
    "ok": true
@@ -895,7 +895,7 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-25T23:23:26Z",
+  "at": "2026-11-26T00:40:06Z",
   "llm": false,
   "spent_run": 0.0
  }
