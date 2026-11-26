@@ -13219,6 +13219,646 @@
    "completion": 259,
    "reasoning": 0,
    "credits": 0.26424
+  },
+  {
+   "at": "2026-11-26T19:43:16Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 3828,
+   "cached": 0,
+   "completion": 902,
+   "reasoning": 0,
+   "credits": 0.14872
+  },
+  {
+   "at": "2026-11-26T19:43:18Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 918,
+   "cached": 0,
+   "completion": 31,
+   "reasoning": 0,
+   "credits": 0.06252
+  },
+  {
+   "at": "2026-11-26T19:43:25Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-new",
+   "prompt": 1785,
+   "cached": 1024,
+   "completion": 467,
+   "reasoning": 0,
+   "credits": 0.42424
+  },
+  {
+   "at": "2026-11-26T19:43:31Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-new",
+   "prompt": 1850,
+   "cached": 1024,
+   "completion": 497,
+   "reasoning": 8,
+   "credits": 0.45144
+  },
+  {
+   "at": "2026-11-26T19:43:39Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-new",
+   "prompt": 1867,
+   "cached": 1024,
+   "completion": 580,
+   "reasoning": 34,
+   "credits": 0.50064
+  },
+  {
+   "at": "2026-11-26T19:43:40Z",
+   "model": "Qwen3-Embedding",
+   "purpose": "embed",
+   "prompt": 415,
+   "cached": 0,
+   "completion": 0,
+   "reasoning": 0,
+   "credits": 0.00021
+  },
+  {
+   "at": "2026-11-26T19:43:54Z",
+   "model": "GLM-5.3",
+   "purpose": "digest-daily",
+   "prompt": 2004,
+   "cached": 0,
+   "completion": 894,
+   "reasoning": 31,
+   "credits": 0.82128
+  },
+  {
+   "at": "2026-11-26T19:44:28Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 4774,
+   "cached": 0,
+   "completion": 1201,
+   "reasoning": 553,
+   "credits": 2.8746
+  },
+  {
+   "at": "2026-11-26T19:45:00Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 3455,
+   "cached": 0,
+   "completion": 1156,
+   "reasoning": 499,
+   "credits": 2.47046
+  },
+  {
+   "at": "2026-11-26T19:45:27Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 3004,
+   "cached": 0,
+   "completion": 968,
+   "reasoning": 392,
+   "credits": 2.09752
+  },
+  {
+   "at": "2026-11-26T19:45:58Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 5208,
+   "cached": 0,
+   "completion": 1103,
+   "reasoning": 387,
+   "credits": 2.85416
+  },
+  {
+   "at": "2026-11-26T19:48:10Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "research",
+   "prompt": 38005,
+   "cached": 0,
+   "completion": 4839,
+   "reasoning": 1380,
+   "credits": 16.46234
+  },
+  {
+   "at": "2026-11-26T19:50:29Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "research",
+   "prompt": 39323,
+   "cached": 0,
+   "completion": 5100,
+   "reasoning": 1720,
+   "credits": 17.15998
+  },
+  {
+   "at": "2026-11-26T19:50:33Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-new",
+   "prompt": 1118,
+   "cached": 512,
+   "completion": 303,
+   "reasoning": 0,
+   "credits": 0.28712
+  },
+  {
+   "at": "2026-11-26T19:50:38Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-new",
+   "prompt": 1176,
+   "cached": 512,
+   "completion": 354,
+   "reasoning": 0,
+   "credits": 0.32496
+  },
+  {
+   "at": "2026-11-26T19:50:44Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-new",
+   "prompt": 1211,
+   "cached": 512,
+   "completion": 428,
+   "reasoning": 0,
+   "credits": 0.372
+  },
+  {
+   "at": "2026-11-26T19:50:49Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1817,
+   "cached": 1024,
+   "completion": 385,
+   "reasoning": 0,
+   "credits": 0.38344
+  },
+  {
+   "at": "2026-11-26T19:50:55Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1879,
+   "cached": 1024,
+   "completion": 497,
+   "reasoning": 0,
+   "credits": 0.45608
+  },
+  {
+   "at": "2026-11-26T19:51:00Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1724,
+   "cached": 1024,
+   "completion": 418,
+   "reasoning": 0,
+   "credits": 0.38704
+  },
+  {
+   "at": "2026-11-26T19:51:06Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1751,
+   "cached": 1024,
+   "completion": 389,
+   "reasoning": 3,
+   "credits": 0.37512
+  },
+  {
+   "at": "2026-11-26T19:51:13Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1900,
+   "cached": 1024,
+   "completion": 529,
+   "reasoning": 0,
+   "credits": 0.47736
+  },
+  {
+   "at": "2026-11-26T19:51:18Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1840,
+   "cached": 1024,
+   "completion": 451,
+   "reasoning": 0,
+   "credits": 0.42408
+  },
+  {
+   "at": "2026-11-26T19:51:24Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1799,
+   "cached": 1024,
+   "completion": 418,
+   "reasoning": 0,
+   "credits": 0.39904
+  },
+  {
+   "at": "2026-11-26T19:51:31Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1844,
+   "cached": 1024,
+   "completion": 498,
+   "reasoning": 0,
+   "credits": 0.45104
+  },
+  {
+   "at": "2026-11-26T19:51:36Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1764,
+   "cached": 1024,
+   "completion": 400,
+   "reasoning": 0,
+   "credits": 0.38336
+  },
+  {
+   "at": "2026-11-26T19:51:42Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1802,
+   "cached": 1024,
+   "completion": 453,
+   "reasoning": 0,
+   "credits": 0.41912
+  },
+  {
+   "at": "2026-11-26T19:51:48Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1836,
+   "cached": 1024,
+   "completion": 451,
+   "reasoning": 0,
+   "credits": 0.42344
+  },
+  {
+   "at": "2026-11-26T19:51:54Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1756,
+   "cached": 1024,
+   "completion": 380,
+   "reasoning": 0,
+   "credits": 0.37088
+  },
+  {
+   "at": "2026-11-26T19:51:59Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1838,
+   "cached": 1024,
+   "completion": 400,
+   "reasoning": 0,
+   "credits": 0.3952
+  },
+  {
+   "at": "2026-11-26T19:52:05Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1862,
+   "cached": 1024,
+   "completion": 518,
+   "reasoning": 0,
+   "credits": 0.46512
+  },
+  {
+   "at": "2026-11-26T19:52:13Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1867,
+   "cached": 1024,
+   "completion": 635,
+   "reasoning": 5,
+   "credits": 0.53144
+  },
+  {
+   "at": "2026-11-26T19:52:19Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1800,
+   "cached": 1024,
+   "completion": 423,
+   "reasoning": 0,
+   "credits": 0.402
+  },
+  {
+   "at": "2026-11-26T19:52:25Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1806,
+   "cached": 1024,
+   "completion": 482,
+   "reasoning": 0,
+   "credits": 0.436
+  },
+  {
+   "at": "2026-11-26T19:52:30Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1800,
+   "cached": 1024,
+   "completion": 413,
+   "reasoning": 0,
+   "credits": 0.3964
+  },
+  {
+   "at": "2026-11-26T19:52:36Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1731,
+   "cached": 1024,
+   "completion": 426,
+   "reasoning": 0,
+   "credits": 0.39264
+  },
+  {
+   "at": "2026-11-26T19:52:42Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1773,
+   "cached": 1024,
+   "completion": 465,
+   "reasoning": 0,
+   "credits": 0.4212
+  },
+  {
+   "at": "2026-11-26T19:52:47Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1779,
+   "cached": 1024,
+   "completion": 398,
+   "reasoning": 0,
+   "credits": 0.38464
+  },
+  {
+   "at": "2026-11-26T19:52:53Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1881,
+   "cached": 1024,
+   "completion": 469,
+   "reasoning": 0,
+   "credits": 0.44072
+  },
+  {
+   "at": "2026-11-26T19:52:59Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1832,
+   "cached": 1024,
+   "completion": 431,
+   "reasoning": 0,
+   "credits": 0.4116
+  },
+  {
+   "at": "2026-11-26T19:53:05Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1888,
+   "cached": 1024,
+   "completion": 463,
+   "reasoning": 0,
+   "credits": 0.43848
+  },
+  {
+   "at": "2026-11-26T19:53:11Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1852,
+   "cached": 1024,
+   "completion": 465,
+   "reasoning": 0,
+   "credits": 0.43384
+  },
+  {
+   "at": "2026-11-26T19:53:17Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1811,
+   "cached": 1024,
+   "completion": 435,
+   "reasoning": 0,
+   "credits": 0.41048
+  },
+  {
+   "at": "2026-11-26T19:53:22Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1755,
+   "cached": 1024,
+   "completion": 439,
+   "reasoning": 0,
+   "credits": 0.40376
+  },
+  {
+   "at": "2026-11-26T19:53:29Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1832,
+   "cached": 1024,
+   "completion": 510,
+   "reasoning": 0,
+   "credits": 0.45584
+  },
+  {
+   "at": "2026-11-26T19:53:35Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1801,
+   "cached": 1024,
+   "completion": 420,
+   "reasoning": 0,
+   "credits": 0.40048
+  },
+  {
+   "at": "2026-11-26T19:53:42Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1923,
+   "cached": 1024,
+   "completion": 597,
+   "reasoning": 0,
+   "credits": 0.51912
+  },
+  {
+   "at": "2026-11-26T19:53:46Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1125,
+   "cached": 512,
+   "completion": 254,
+   "reasoning": 0,
+   "credits": 0.2608
+  },
+  {
+   "at": "2026-11-26T19:53:50Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1088,
+   "cached": 512,
+   "completion": 226,
+   "reasoning": 0,
+   "credits": 0.2392
+  },
+  {
+   "at": "2026-11-26T19:53:54Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1033,
+   "cached": 512,
+   "completion": 255,
+   "reasoning": 0,
+   "credits": 0.24664
+  },
+  {
+   "at": "2026-11-26T19:53:58Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1057,
+   "cached": 512,
+   "completion": 231,
+   "reasoning": 0,
+   "credits": 0.23704
+  },
+  {
+   "at": "2026-11-26T19:54:02Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1136,
+   "cached": 512,
+   "completion": 258,
+   "reasoning": 0,
+   "credits": 0.2648
+  },
+  {
+   "at": "2026-11-26T19:54:07Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1133,
+   "cached": 512,
+   "completion": 353,
+   "reasoning": 0,
+   "credits": 0.31752
+  },
+  {
+   "at": "2026-11-26T19:54:12Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1074,
+   "cached": 512,
+   "completion": 346,
+   "reasoning": 0,
+   "credits": 0.30416
+  },
+  {
+   "at": "2026-11-26T19:54:17Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1145,
+   "cached": 512,
+   "completion": 290,
+   "reasoning": 0,
+   "credits": 0.28416
+  },
+  {
+   "at": "2026-11-26T19:54:22Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1095,
+   "cached": 512,
+   "completion": 304,
+   "reasoning": 0,
+   "credits": 0.284
+  },
+  {
+   "at": "2026-11-26T19:54:26Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1074,
+   "cached": 512,
+   "completion": 300,
+   "reasoning": 0,
+   "credits": 0.2784
+  },
+  {
+   "at": "2026-11-26T19:54:31Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1120,
+   "cached": 512,
+   "completion": 251,
+   "reasoning": 0,
+   "credits": 0.25832
+  },
+  {
+   "at": "2026-11-26T19:54:35Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1214,
+   "cached": 512,
+   "completion": 325,
+   "reasoning": 0,
+   "credits": 0.3148
+  },
+  {
+   "at": "2026-11-26T19:54:40Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1144,
+   "cached": 512,
+   "completion": 307,
+   "reasoning": 0,
+   "credits": 0.29352
+  },
+  {
+   "at": "2026-11-26T19:54:44Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1140,
+   "cached": 512,
+   "completion": 242,
+   "reasoning": 0,
+   "credits": 0.25648
+  },
+  {
+   "at": "2026-11-26T19:54:49Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1179,
+   "cached": 512,
+   "completion": 339,
+   "reasoning": 0,
+   "credits": 0.31704
+  },
+  {
+   "at": "2026-11-26T19:54:53Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1119,
+   "cached": 512,
+   "completion": 309,
+   "reasoning": 0,
+   "credits": 0.29064
+  },
+  {
+   "at": "2026-11-26T19:54:58Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1165,
+   "cached": 512,
+   "completion": 288,
+   "reasoning": 0,
+   "credits": 0.28624
+  },
+  {
+   "at": "2026-11-26T19:55:02Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1138,
+   "cached": 512,
+   "completion": 264,
+   "reasoning": 0,
+   "credits": 0.26848
   }
  ]
 }
