@@ -12619,6 +12619,606 @@
    "completion": 278,
    "reasoning": 0,
    "credits": 0.27536
+  },
+  {
+   "at": "2026-11-26T09:40:49Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 2439,
+   "cached": 0,
+   "completion": 261,
+   "reasoning": 0,
+   "credits": 0.06966
+  },
+  {
+   "at": "2026-11-26T09:40:51Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 491,
+   "cached": 0,
+   "completion": 31,
+   "reasoning": 0,
+   "credits": 0.0369
+  },
+  {
+   "at": "2026-11-26T09:40:56Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-new",
+   "prompt": 1548,
+   "cached": 1024,
+   "completion": 257,
+   "reasoning": 13,
+   "credits": 0.26872
+  },
+  {
+   "at": "2026-11-26T09:40:58Z",
+   "model": "Qwen3-Embedding",
+   "purpose": "embed",
+   "prompt": 85,
+   "cached": 0,
+   "completion": 0,
+   "reasoning": 0,
+   "credits": 4e-05
+  },
+  {
+   "at": "2026-11-26T09:41:39Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 1723,
+   "cached": 0,
+   "completion": 1119,
+   "reasoning": 483,
+   "credits": 1.96982
+  },
+  {
+   "at": "2026-11-26T09:41:46Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1775,
+   "cached": 1024,
+   "completion": 408,
+   "reasoning": 0,
+   "credits": 0.3896
+  },
+  {
+   "at": "2026-11-26T09:41:52Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1757,
+   "cached": 1024,
+   "completion": 419,
+   "reasoning": 0,
+   "credits": 0.39288
+  },
+  {
+   "at": "2026-11-26T09:41:59Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1957,
+   "cached": 1024,
+   "completion": 550,
+   "reasoning": 0,
+   "credits": 0.49824
+  },
+  {
+   "at": "2026-11-26T09:42:05Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1787,
+   "cached": 1024,
+   "completion": 414,
+   "reasoning": 0,
+   "credits": 0.39488
+  },
+  {
+   "at": "2026-11-26T09:42:12Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1811,
+   "cached": 1024,
+   "completion": 447,
+   "reasoning": 0,
+   "credits": 0.4172
+  },
+  {
+   "at": "2026-11-26T09:42:20Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1910,
+   "cached": 1024,
+   "completion": 604,
+   "reasoning": 0,
+   "credits": 0.52096
+  },
+  {
+   "at": "2026-11-26T09:42:25Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1807,
+   "cached": 1024,
+   "completion": 409,
+   "reasoning": 0,
+   "credits": 0.39528
+  },
+  {
+   "at": "2026-11-26T09:42:33Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1929,
+   "cached": 1024,
+   "completion": 548,
+   "reasoning": 0,
+   "credits": 0.49264
+  },
+  {
+   "at": "2026-11-26T09:42:39Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1800,
+   "cached": 1024,
+   "completion": 473,
+   "reasoning": 0,
+   "credits": 0.43
+  },
+  {
+   "at": "2026-11-26T09:42:45Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1823,
+   "cached": 1024,
+   "completion": 439,
+   "reasoning": 0,
+   "credits": 0.41464
+  },
+  {
+   "at": "2026-11-26T09:42:50Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1811,
+   "cached": 1024,
+   "completion": 481,
+   "reasoning": 0,
+   "credits": 0.43624
+  },
+  {
+   "at": "2026-11-26T09:42:56Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1779,
+   "cached": 1024,
+   "completion": 397,
+   "reasoning": 0,
+   "credits": 0.38408
+  },
+  {
+   "at": "2026-11-26T09:43:03Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1790,
+   "cached": 1024,
+   "completion": 409,
+   "reasoning": 0,
+   "credits": 0.39256
+  },
+  {
+   "at": "2026-11-26T09:43:10Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1836,
+   "cached": 1024,
+   "completion": 444,
+   "reasoning": 0,
+   "credits": 0.41952
+  },
+  {
+   "at": "2026-11-26T09:43:17Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1840,
+   "cached": 1024,
+   "completion": 490,
+   "reasoning": 0,
+   "credits": 0.44592
+  },
+  {
+   "at": "2026-11-26T09:43:25Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1997,
+   "cached": 1024,
+   "completion": 673,
+   "reasoning": 0,
+   "credits": 0.57352
+  },
+  {
+   "at": "2026-11-26T09:43:32Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1866,
+   "cached": 1024,
+   "completion": 543,
+   "reasoning": 0,
+   "credits": 0.47976
+  },
+  {
+   "at": "2026-11-26T09:43:38Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1780,
+   "cached": 1024,
+   "completion": 449,
+   "reasoning": 0,
+   "credits": 0.41336
+  },
+  {
+   "at": "2026-11-26T09:43:44Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1714,
+   "cached": 1024,
+   "completion": 377,
+   "reasoning": 0,
+   "credits": 0.36248
+  },
+  {
+   "at": "2026-11-26T09:43:50Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1820,
+   "cached": 1024,
+   "completion": 437,
+   "reasoning": 0,
+   "credits": 0.41304
+  },
+  {
+   "at": "2026-11-26T09:43:57Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1770,
+   "cached": 1024,
+   "completion": 489,
+   "reasoning": 0,
+   "credits": 0.43416
+  },
+  {
+   "at": "2026-11-26T09:44:03Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1729,
+   "cached": 1024,
+   "completion": 427,
+   "reasoning": 0,
+   "credits": 0.39288
+  },
+  {
+   "at": "2026-11-26T09:44:10Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1819,
+   "cached": 1024,
+   "completion": 412,
+   "reasoning": 0,
+   "credits": 0.39888
+  },
+  {
+   "at": "2026-11-26T09:44:16Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1797,
+   "cached": 1024,
+   "completion": 443,
+   "reasoning": 0,
+   "credits": 0.41272
+  },
+  {
+   "at": "2026-11-26T09:44:22Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1769,
+   "cached": 1024,
+   "completion": 445,
+   "reasoning": 0,
+   "credits": 0.40936
+  },
+  {
+   "at": "2026-11-26T09:44:27Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1718,
+   "cached": 1024,
+   "completion": 378,
+   "reasoning": 0,
+   "credits": 0.36368
+  },
+  {
+   "at": "2026-11-26T09:44:34Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1807,
+   "cached": 1024,
+   "completion": 463,
+   "reasoning": 0,
+   "credits": 0.42552
+  },
+  {
+   "at": "2026-11-26T09:44:40Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1828,
+   "cached": 1024,
+   "completion": 465,
+   "reasoning": 0,
+   "credits": 0.43
+  },
+  {
+   "at": "2026-11-26T09:44:45Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1786,
+   "cached": 1024,
+   "completion": 432,
+   "reasoning": 0,
+   "credits": 0.4048
+  },
+  {
+   "at": "2026-11-26T09:44:51Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1803,
+   "cached": 1024,
+   "completion": 439,
+   "reasoning": 0,
+   "credits": 0.41144
+  },
+  {
+   "at": "2026-11-26T09:44:56Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1154,
+   "cached": 512,
+   "completion": 397,
+   "reasoning": 0,
+   "credits": 0.34552
+  },
+  {
+   "at": "2026-11-26T09:45:00Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1085,
+   "cached": 512,
+   "completion": 213,
+   "reasoning": 0,
+   "credits": 0.23144
+  },
+  {
+   "at": "2026-11-26T09:45:04Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1103,
+   "cached": 512,
+   "completion": 222,
+   "reasoning": 0,
+   "credits": 0.23936
+  },
+  {
+   "at": "2026-11-26T09:45:09Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1175,
+   "cached": 512,
+   "completion": 253,
+   "reasoning": 0,
+   "credits": 0.26824
+  },
+  {
+   "at": "2026-11-26T09:45:13Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1176,
+   "cached": 512,
+   "completion": 259,
+   "reasoning": 0,
+   "credits": 0.27176
+  },
+  {
+   "at": "2026-11-26T09:45:17Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1140,
+   "cached": 512,
+   "completion": 263,
+   "reasoning": 0,
+   "credits": 0.26824
+  },
+  {
+   "at": "2026-11-26T09:45:22Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1128,
+   "cached": 512,
+   "completion": 276,
+   "reasoning": 0,
+   "credits": 0.2736
+  },
+  {
+   "at": "2026-11-26T09:45:26Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1166,
+   "cached": 512,
+   "completion": 243,
+   "reasoning": 0,
+   "credits": 0.2612
+  },
+  {
+   "at": "2026-11-26T09:45:32Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1047,
+   "cached": 512,
+   "completion": 321,
+   "reasoning": 0,
+   "credits": 0.28584
+  },
+  {
+   "at": "2026-11-26T09:45:37Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1116,
+   "cached": 512,
+   "completion": 255,
+   "reasoning": 0,
+   "credits": 0.25992
+  },
+  {
+   "at": "2026-11-26T09:45:43Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1250,
+   "cached": 512,
+   "completion": 492,
+   "reasoning": 0,
+   "credits": 0.41408
+  },
+  {
+   "at": "2026-11-26T09:45:49Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1136,
+   "cached": 512,
+   "completion": 278,
+   "reasoning": 0,
+   "credits": 0.276
+  },
+  {
+   "at": "2026-11-26T09:45:53Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1167,
+   "cached": 512,
+   "completion": 284,
+   "reasoning": 0,
+   "credits": 0.28432
+  },
+  {
+   "at": "2026-11-26T09:45:57Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1092,
+   "cached": 512,
+   "completion": 245,
+   "reasoning": 0,
+   "credits": 0.25048
+  },
+  {
+   "at": "2026-11-26T09:46:03Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1141,
+   "cached": 512,
+   "completion": 334,
+   "reasoning": 0,
+   "credits": 0.30816
+  },
+  {
+   "at": "2026-11-26T09:46:08Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1101,
+   "cached": 512,
+   "completion": 335,
+   "reasoning": 0,
+   "credits": 0.30232
+  },
+  {
+   "at": "2026-11-26T09:46:12Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1109,
+   "cached": 512,
+   "completion": 254,
+   "reasoning": 0,
+   "credits": 0.25824
+  },
+  {
+   "at": "2026-11-26T09:46:17Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1169,
+   "cached": 512,
+   "completion": 307,
+   "reasoning": 0,
+   "credits": 0.29752
+  },
+  {
+   "at": "2026-11-26T09:46:21Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1189,
+   "cached": 512,
+   "completion": 206,
+   "reasoning": 0,
+   "credits": 0.24416
+  },
+  {
+   "at": "2026-11-26T09:46:25Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1076,
+   "cached": 512,
+   "completion": 223,
+   "reasoning": 0,
+   "credits": 0.2356
+  },
+  {
+   "at": "2026-11-26T09:46:30Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1142,
+   "cached": 512,
+   "completion": 289,
+   "reasoning": 0,
+   "credits": 0.28312
+  },
+  {
+   "at": "2026-11-26T09:46:35Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1180,
+   "cached": 512,
+   "completion": 332,
+   "reasoning": 0,
+   "credits": 0.31328
+  },
+  {
+   "at": "2026-11-26T09:46:39Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1197,
+   "cached": 512,
+   "completion": 255,
+   "reasoning": 0,
+   "credits": 0.27288
+  },
+  {
+   "at": "2026-11-26T09:46:44Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1173,
+   "cached": 512,
+   "completion": 386,
+   "reasoning": 0,
+   "credits": 0.3424
+  },
+  {
+   "at": "2026-11-26T09:46:49Z",
+   "model": "GLM-5.3",
+   "purpose": "速读卡-backfill",
+   "prompt": 1129,
+   "cached": 512,
+   "completion": 259,
+   "reasoning": 0,
+   "credits": 0.26424
   }
  ]
 }
