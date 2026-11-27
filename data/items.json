@@ -5355,7 +5355,7 @@
    "cluster": "0c62bc20e5192e24",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.04,
+   "hot": 19.42,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -7748,7 +7748,7 @@
    "cluster": "13a0c3ba04fb07c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 21.54,
+   "hot": 20.87,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -12622,8 +12622,8 @@
     "用户模拟",
     "充电行为"
    ],
-   "title_zh": "用大模型智能体模拟电动车出租车司机充电行为，结合心理与环境因素",
-   "summary_zh": "作者用大模型角色扮演模拟出租车司机的充电决策，考虑时间敏感、价格敏感和里程焦虑等因素，并把统计先验注入推理过程。论文称该框架在多个城市场景下能复现真实充电行为，并揭示司机群体的行为异质性。",
+   "title_zh": "用统计增强的大模型智能体模拟电动出租车司机充电行为，可复现真实充电模式",
+   "summary_zh": "作者提出一个统计增强的 LLM 智能体框架，模拟电动出租车司机的充电决策，考虑时间敏感度、价格意识和里程焦虑等心理因素。仿真结果在多个城市环境中复现了真实充电行为，并揭示了环境与心理变量的联合影响及不同用户群体的异质性。",
    "cluster": "20b956c3b7e07c7b",
    "cluster_size": 1,
    "is_lead": true,
@@ -12635,7 +12635,7 @@
     "urban",
     "human-behavior"
    ],
-   "applied": false
+   "applied": true
   },
   "20b964991af19726": {
    "id": "20b964991af19726",
@@ -15130,8 +15130,8 @@
     "生成式智能体",
     "交通仿真"
    ],
-   "title_zh": "LLMTraveler：带记忆的大模型智能体能否复现逐日路径选择行为",
-   "summary_zh": "作者构建以LLM为核心、带记忆系统的出行智能体LLMTraveler，在单OD对的逐日拥堵博弈中考察其路径切换行为，再与人类决策对比。研究检验大模型能否替代传统选择模型模拟出行者的动态适应。",
+   "title_zh": "LLMTraveler：用大模型智能体模拟逐日路径选择，行为模式接近真人实验数据",
+   "summary_zh": "作者提出 LLMTraveler，一个以大模型为核心、带记忆系统和人格特征的出行智能体，用来模拟逐日拥堵博弈中的路径选择。在单 OD 场景里，它的换路行为与实验室数据吻合，且传统模型解释不了；在 OW 路网的多 OD 场景里，效果与多项 Logit 和强化学习模型相当。它还能用自然语言解释决策，可辅助交通政策推演。",
    "cluster": "26ec496f58ca58e3",
    "cluster_size": 1,
    "is_lead": true,
@@ -15586,8 +15586,8 @@
     "评测基准",
     "人设模拟"
    ],
-   "title_zh": "BehaviorChain 基准：1001 个人设、15846 条行为链，测大模型能否当数字孪生",
-   "summary_zh": "现有评测多只看对话，忽略连续行为模拟。BehaviorChain 收录 1001 个带详细历史和画像元数据的人设、共 15846 条行为，让模型在动态场景中逐步推断下一步行为。结果显示即使最先进模型也难以准确模拟连续人类行为。",
+   "title_zh": "BehaviorChain 基准测试显示：最强 LLM 也难以模拟连续人类行为",
+   "summary_zh": "作者提出 BehaviorChain，首个评测 LLM 模拟连续人类行为的基准，覆盖 1,001 个人设、共 15,846 个行为。评测方法是把人设元数据注入 LLM，让它在动态场景中逐步推断合适行为。结果显示，即便最强的模型也难以准确模拟连续的人类行为。",
    "cluster": "277505ef833dfd66",
    "cluster_size": 1,
    "is_lead": true,
@@ -16307,7 +16307,7 @@
    "cluster": "29a1de3b43f527d5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.79,
+   "hot": 8.52,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -17517,8 +17517,8 @@
     "多智能体",
     "社会仿真"
    ],
-   "title_zh": "Sotopia 中测试大五人格对 LLM 模拟谈判的影响：宜人性与外向性显著改变结果",
-   "summary_zh": "作者以 Sotopia 为仿真测试床做两组实验。第一组用因果发现方法测人格特质对价格谈判的影响，发现宜人性与外向性显著影响可信度、目标达成与知识获取，并从对话中提取共情、道德基础与观点模式的词汇指标。第二组操纵模拟人类人格与 AI 系统特征，考察人机求职谈判。",
+   "title_zh": "用 Sotopia 仿真谈判对话，检验大五人格与 AI 系统特性对谈判结果的影响",
+   "summary_zh": "作者在 Sotopia 平台上做了两组 LLM 谈判仿真实验。实验一用因果发现方法发现宜人性与外向性显著影响谈判的可信度、目标达成和知识获取；实验二操纵模拟人类人格和 AI 的透明度、能力、适应性，考察 AI 可信度对任务效果的影响。",
    "cluster": "2d917ad3e686d478",
    "cluster_size": 1,
    "is_lead": true,
@@ -17527,8 +17527,8 @@
    "triaged": "2026-11-21T01:37:53Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
     "org",
+    "human-behavior",
     "eval"
    ],
    "applied": false
@@ -18016,8 +18016,8 @@
     "LLM助手",
     "落地部署"
    ],
-   "title_zh": "滴滴部署LLM打车助手DiMA，真实场景订单规划准确率93%",
-   "summary_zh": "DiMA是部署在滴滴出行App里的LLM对话式打车助手，用外部工具做时空推理和渐进式订单规划，并用真实交互加模拟对话做持续微调。上线后真实场景中订单规划准确率93%，回复生成准确率92%。",
+   "title_zh": "滴滴上线 LLM 打车助手 DiMA，真实交互中订单规划准确率 93%",
+   "summary_zh": "滴滴把大模型助手 DiMA 部署进了自家打车 App，用时空感知的订单规划模块和成本感知的对话系统，让用户通过自然语言完成打车。上线后在真实交互中订单规划准确率 93%，回复生成准确率 92%；离线对比三个主流智能体框架，订单规划最高提升 70.23%，回复生成最高提升 321.27%，延迟还降低了 0.72 到 5.47 倍。",
    "cluster": "2e5c60e4eba8ecaf",
    "cluster_size": 1,
    "is_lead": true,
@@ -18027,7 +18027,7 @@
    "relevant": true,
    "topics": [
     "urban",
-    "human-behavior"
+    "framework"
    ],
    "applied": true
   },
@@ -23565,7 +23565,7 @@
    "cluster": "3c8e24170a0e4ee2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.07,
+   "hot": 22.35,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -26642,7 +26642,7 @@
    "cluster": "436c3f3208323140",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.76
+   "hot": 13.33
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -29192,7 +29192,7 @@
    "cluster": "4b21b4815c9b2d5c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.23,
+   "hot": 16.69,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -29260,7 +29260,7 @@
    "cluster": "4b55c71e9cce2644",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.27,
+   "hot": 17.7,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -29502,8 +29502,8 @@
     "评测基准",
     "电商客服"
    ],
-   "title_zh": "ECom-Bench：用真实电商对话画像驱动动态用户模拟，GPT-4o 通过率仅 10–20%",
-   "summary_zh": "作者发布首个多模态电商客服智能体评测基准，用户模拟基于真实电商交互中收集的画像信息，任务取自真实对话。GPT-4o 在 pass^3 指标上只拿到 10–20%，代码与数据已开源。",
+   "title_zh": "ECom-Bench：用真实电商客服对话构建的多模态大模型智能体基准，GPT-4o 通过率仅 10-20%",
+   "summary_zh": "作者发布了 ECom-Bench，首个评测多模态大模型智能体在电商客服场景表现的基准框架。它基于真实电商客服交互收集的用户画像做动态用户模拟，任务数据来自真实客服对话。GPT-4o 这类先进模型的 pass^3 指标只有 10-20%，说明复杂电商场景对现有模型仍然很难。代码和数据已开源。",
    "cluster": "4be2ddb84408c0d9",
    "cluster_size": 1,
    "is_lead": true,
@@ -29512,13 +29512,13 @@
    "triaged": "2026-11-20T14:12:45Z",
    "relevant": true,
    "topics": [
-    "eval",
-    "human-behavior"
+    "human-behavior",
+    "eval"
    ],
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B",
-   "applied": false
+   "applied": true
   },
   "4c06807679c6fc67": {
    "id": "4c06807679c6fc67",
@@ -30190,13 +30190,30 @@
    ],
    "domain_guess": "platform",
    "added": "2026-11-27T12:52:34Z",
-   "status": "filtered",
-   "llm": false,
-   "domain": "platform",
-   "score": 51,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "status": "selected",
+   "llm": true,
+   "domain": "academic",
+   "score": 72,
+   "tags": [
+    "多智能体",
+    "经济模拟",
+    "评测基准",
+    "开源框架"
+   ],
+   "title_zh": "CEO Arena：用大模型智能体在竞争市场中评测长程多智能体决策的开源基准",
+   "summary_zh": "FoundationAgents 发布了 CEO Arena 的官方代码和数据。这是一个评测基准，让大模型智能体在竞争性市场里做长程多智能体决策，用来衡量模型在多轮博弈环境下的表现。代码和数据已开源。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-27T22:08:33Z",
+   "relevant": true,
+   "topics": [
+    "economy",
+    "eval"
+   ],
+   "applied": false,
+   "cluster": "4d1a503f066ff4ee",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 0.0
   },
   "4d4018e508b60f14": {
    "id": "4d4018e508b60f14",
@@ -30225,12 +30242,26 @@
    "domain_guess": "business",
    "added": "2026-11-27T20:03:53Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "business",
-   "score": 50,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "llm": true,
+   "domain": "academic",
+   "score": 20,
+   "tags": [
+    "世界模型",
+    "JEPA",
+    "机器人规划"
+   ],
+   "title_zh": "Meta 与 AMI Labs 三项新研究支持 LeCun 的 JEPA 世界模型路线",
+   "summary_zh": "The Decoder 报道，Meta 与 LeCun 创办的 AMI Labs 发表三项研究，分别在机器人规划、训练效率和错误纠正上推进 JEPA 架构。JEPA 的目标是让机器建立能刻画因果的内部世界模型，报道称这些进展尚未整合成完整系统。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-27T22:08:33Z",
+   "relevant": false,
+   "topics": [
+    "world-env"
+   ],
+   "score1": 58,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "4d713a090364fbf7": {
    "id": "4d713a090364fbf7",
@@ -33440,8 +33471,8 @@
     "信用分配",
     "谈判"
    ],
-   "title_zh": "Shapley-Coop：用边际贡献定价让自利LLM智能体学会合作",
-   "summary_zh": "针对开放环境中LLM智能体各自为利、难以协调的问题，作者提出Shapley-Coop工作流，把Shapley思维链给出的边际贡献作为定价依据，配合结构化谈判协议完成价格匹配与任务后收益再分配，使智能体通过理性定价对齐激励并保持自主性。",
+   "title_zh": "Shapley-Coop：用边际贡献定价让自利 LLM 智能体在开放环境中合作",
+   "summary_zh": "作者提出 Shapley-Coop 合作流程，把 Shapley 思维链与结构化谈判协议结合，用边际贡献作为定价依据，让自利的大模型智能体在缺乏协调规则的开放环境中达成合作。在两个多智能体游戏和一个软件工程仿真上，该方法持续提升了协作效果，并实现了较公平的贡献分配。",
    "cluster": "54469d0c8284233c",
    "cluster_size": 1,
    "is_lead": true,
@@ -33451,7 +33482,7 @@
    "relevant": true,
    "topics": [
     "org",
-    "economy"
+    "framework"
    ],
    "score1": 62,
    "score2": 70,
@@ -33506,8 +33537,8 @@
     "搜索行为",
     "认知过程"
    ],
-   "title_zh": "让 LLM 先“像人一样想”再行动，提升搜索行为模拟效果",
-   "summary_zh": "作者先做用户研究，收集带显式思考过程的搜索行为数据集，再提示 LLM 先模拟用户隐藏认知过程再执行查询、浏览、点击，并用监督微调同时学习思考与动作。实验对比有无显式思考、有无微调两种设置。",
+   "title_zh": "用大模型模拟搜索用户：先像人一样思考再行动，微调后效果更接近真人",
+   "summary_zh": "作者让大模型在执行搜索、浏览、点击等动作前先生成用户隐藏的认知过程，并做了一项用户研究，收集带显式思考的新数据集。实验对比了有无思考、有无在思考增强数据上微调两种维度，结果显示加入类人思考可行且有潜力，但部分指标提升有限。",
    "cluster": "5450d06ed836a2b8",
    "cluster_size": 1,
    "is_lead": true,
@@ -33516,12 +33547,13 @@
    "triaged": "2026-11-19T17:31:21Z",
    "relevant": true,
    "topics": [
-    "human-behavior"
+    "human-behavior",
+    "eval"
    ],
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B",
-   "applied": true
+   "applied": false
   },
   "545487d0c7006e32": {
    "id": "545487d0c7006e32",
@@ -34450,7 +34482,7 @@
    "cluster": "56532dce8567fc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.36,
+   "hot": 18.76,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -36371,8 +36403,8 @@
     "场景生成",
     "扩散规划"
    ],
-   "title_zh": "DriveGen 用 LLM 与视觉语言模型生成多样化交通场景，并自动构造 corner case",
-   "summary_zh": "DriveGen 分两阶段：初始化阶段用 LLM 加检索生成地图和车辆资产，rollout 阶段由视觉语言模型给出路点目标、扩散规划器输出轨迹。作者还做了 DriveGen-CS，把驾驶算法的失败案例转成提示，自动生成 corner case。",
+   "title_zh": "DriveGen：用大模型两阶段生成多样化交通流，自动产出角落案例优化驾驶算法",
+   "summary_zh": "DriveGen 用大语言模型加检索生成地图和车辆资产，再用视觉语言模型和扩散规划器输出轨迹，生成比单一真实数据集更多样的交通流，同时保持较高真实感。配套的 DriveGen-CS 管线把驾驶算法的失败案例作为提示喂给大模型，无需重训即可自动生成角落案例。实验显示生成场景优于现有基线，下游驾驶算法性能也得到更好优化。",
    "cluster": "5b5da1ff92691bef",
    "cluster_size": 1,
    "is_lead": true,
@@ -39491,8 +39523,8 @@
     "社交推理",
     "博弈仿真"
    ],
-   "title_zh": "The Traitors：用社交推理游戏研究多智能体 LLM 的欺骗与信任",
-   "summary_zh": "论文提出 The Traitors 多智能体仿真框架，少数叛徒在信息不对称下误导多数忠实者，忠实者需通过对话推理隐藏身份。框架支持异构智能体、持久记忆和自适应行为，并给出欺骗成功率、信任动态等指标，在 DeepSeek-V3、GPT-4o-mini、GPT-4o 上各跑 10 次。",
+   "title_zh": "The Traitors：用社交推理游戏框架测试大模型智能体的欺骗与信任行为",
+   "summary_zh": "作者提出了一个受社交推理游戏启发的多智能体仿真框架 The Traitors，让少数“叛徒”智能体误导多数“忠臣”，考察 LLM 在信息不对称下的欺骗、信任与推理。对 DeepSeek-V3、GPT-4o-mini 和 GPT-4o 各跑 10 局后发现，GPT-4o 欺骗能力最强，但也最容易被他人的谎言欺骗，说明欺骗能力可能比识别能力提升得更快。",
    "cluster": "643f1b371850074b",
    "cluster_size": 1,
    "is_lead": true,
@@ -39502,8 +39534,8 @@
    "relevant": true,
    "topics": [
     "org",
-    "social-sim",
-    "eval"
+    "eval",
+    "framework"
    ],
    "applied": false
   },
@@ -40088,7 +40120,7 @@
    "cluster": "65a6177cefba9d11",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 29.14,
+   "hot": 28.23,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -41673,8 +41705,8 @@
     "情绪模拟",
     "LLM智能体"
    ],
-   "title_zh": "SAGE 让有情绪的智能体当裁判，评测大模型的高阶社会认知",
-   "summary_zh": "SAGE 构建一个模拟人类情绪变化与内心想法的 Sentient Agent，在多轮对话中逐轮推理情绪如何变化、感受如何、该怎么回复，输出情绪轨迹和可解释的内心独白。在 100 个支持性对话场景上，最终情绪分与 BLRI 量表评分、话语级共情指标强相关；覆盖 18 个模型的公开榜单显示前沿系统与早期基线差距可达 4 倍。",
+   "title_zh": "SAGE 用有情绪的“感知智能体”当裁判，量化大模型的高阶社会认知",
+   "summary_zh": "作者提出 SAGE 评测框架，让一个模拟人类情绪变化和内心想法的感知智能体与被测模型多轮对话，输出情绪轨迹和可解释的内心独白。在 100 个支持性对话场景上，最终情绪得分与 BLRI 人际关系量表及话语级共情指标高度相关。公开的 Sentient 排行榜覆盖 18 个模型，前沿系统与早期基线差距最高达 4 倍。",
    "cluster": "697acf0a52c6dd5e",
    "cluster_size": 1,
    "is_lead": true,
@@ -46145,8 +46177,8 @@
     "经济模拟",
     "多智能体"
    ],
-   "title_zh": "TaxAgent：LLM 政府智能体与异质家庭智能体共同迭代设计税率",
-   "summary_zh": "作者把 LLM 与基于智能体的建模结合，在宏观经济仿真中让异质家庭智能体模拟纳税人行为，TaxAgent 作为政府迭代优化税率。与 Saez 最优税制、美国联邦所得税和自由市场对比，报告了更优的公平与效率权衡。",
+   "title_zh": "TaxAgent：用大语言模型在智能体仿真中设计自适应税收政策",
+   "summary_zh": "清华大学团队提出 TaxAgent，把大语言模型和基于智能体的宏观经济仿真结合，让政府智能体迭代优化税率。异质性家庭智能体模拟真实纳税人行为。与 Saez 最优税收、美国联邦所得税和自由市场相比，TaxAgent 在公平与效率的权衡上表现更好。",
    "cluster": "73ca8ad1c0bc4af4",
    "cluster_size": 1,
    "is_lead": true,
@@ -49912,7 +49944,7 @@
    "cluster": "7db283e3aa9596cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.15,
+   "hot": 9.83,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -52569,7 +52601,7 @@
    "cluster": "84b21af4658669d8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 15.0,
+   "hot": 14.54,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -53149,8 +53181,8 @@
     "智能体训练",
     "开源数据"
    ],
-   "title_zh": "APIGen-MT 用模拟人机多轮交互生成训练数据，xLAM-2 系列在 τ-bench 超过 GPT-4o",
-   "summary_zh": "APIGen-MT 分两阶段：先由 LLM 评审团迭代生成带标准答案动作的任务蓝图，再通过模拟的人机交互把蓝图展开成完整对话轨迹。据此训练的 xLAM-2-fc-r 系列（1B 到 70B）在 τ-bench 和 BFCL 上超过 GPT-4o 与 Claude 3.5，小模型在多轮场景反超大模型。开源 5K 条合成轨迹。",
+   "title_zh": "APIGen-MT 用模拟人机交互生成多轮对话数据，训练出的 xLAM-2 在 τ-bench 上超过 GPT-4o",
+   "summary_zh": "Salesforce 提出 APIGen-MT 两阶段框架，先用 LLM 评审委员会和迭代反馈生成带标准答案的任务蓝图，再通过模拟人机交互展开成完整多轮轨迹。基于这些数据训练的 xLAM-2-fc-r 系列（1B 到 70B）在 τ-bench 和 BFCL 上超过 GPT-4o 和 Claude 3.5，小模型在多轮场景中反而更强。团队开源了 5K 条合成轨迹和全部模型。",
    "cluster": "86750a924e107414",
    "cluster_size": 1,
    "is_lead": true,
@@ -53160,8 +53192,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "framework",
-    "eval"
+    "framework"
    ],
    "applied": false
   },
@@ -53323,7 +53354,7 @@
    "cluster": "87097a060214af63",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.95,
+   "hot": 20.29,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -55903,8 +55934,8 @@
     "性能优化",
     "开源框架"
    ],
-   "title_zh": "arXiv 论文提出 AI Metropolis 仿真引擎，用乱序执行把 LLM 多智能体仿真加速最高 4.15 倍",
-   "summary_zh": "多智能体仿真常因虚假依赖导致并行度不足。AI Metropolis 动态追踪智能体之间的真实依赖，用乱序执行调度减少虚假依赖，相比全局同步的常规并行仿真取得 1.3 到 4.15 倍加速，智能体数量增加时接近最优性能。",
+   "title_zh": "AI Metropolis：用乱序执行调度加速大模型多智能体仿真，最高提速 4.15 倍",
+   "summary_zh": "斯坦福等机构的研究者提出了 AI Metropolis 仿真引擎，用乱序执行调度解决 LLM 多智能体仿真中的假依赖问题。引擎动态追踪智能体间的真实依赖，减少不必要的同步等待。在测试中比全局同步的并行仿真快 1.3 到 4.15 倍，且智能体数量越多越接近最优性能。",
    "cluster": "8cc85d80917536c0",
    "cluster_size": 1,
    "is_lead": true,
@@ -58546,8 +58577,8 @@
     "谈判",
     "社会推理"
    ],
-   "title_zh": "SPIN-Bench：统一评测 LLM 战略规划与社会推理的多智能体基准",
-   "summary_zh": "SPIN-Bench 把 PDDL 规划任务、对抗棋类、合作卡牌和多智能体谈判放进同一框架，通过改变动作空间、状态复杂度和参与智能体数量来模拟不同社会情境，并附带一个可运行和评测的竞技场。",
+   "title_zh": "SPIN-Bench：统一评测大模型在棋类、卡牌与多方谈判中的策略规划与社会推理能力",
+   "summary_zh": "作者提出 SPIN-Bench，一个多领域评测框架，把 PDDL 规划任务、竞技棋盘游戏、合作卡牌游戏和多智能体谈判放进同一套基准和竞技场里。实验发现当代大模型在事实检索和短程规划上表现尚可，但在大状态空间的多跳推理和不确定性下的多方协调上明显吃力。",
    "cluster": "929923f842e767f2",
    "cluster_size": 1,
    "is_lead": true,
@@ -58556,9 +58587,9 @@
    "triaged": "2026-11-21T23:32:04Z",
    "relevant": true,
    "topics": [
-    "org",
     "eval",
-    "wargame"
+    "org",
+    "framework"
    ],
    "applied": false
   },
@@ -58981,8 +59012,8 @@
     "多智能体",
     "仿真环境"
    ],
-   "title_zh": "CoopReflect：让自动驾驶智能体用自然语言互相喊话，在 TalkingVehiclesGym 里学会避撞",
-   "summary_zh": "作者搭建 TalkingVehiclesGym 仿真环境，放入基于 LLM 的驾驶智能体，测试自然语言车车通信能否帮助避免碰撞和改善车流。只用思维链推理的智能体协调效果不佳，CoopReflect 通过试错和多智能体复盘同时学习生成消息与高层决策，产出的消息比基线更可懂，协作也更强。",
+   "title_zh": "CoopReflect：用自然语言让自动驾驶智能体互相沟通并学会协作驾驶",
+   "summary_zh": "作者构建了 LLM 驾驶智能体和仿真环境 TalkingVehiclesGym，让车辆用自然语言做 V2V 通信。仅靠思维链推理的智能体协调不好，提出的 CoopReflect 多智能体学习框架通过试错和多智能体复盘，让智能体生成更可理解的消息并实现更强协作，最后把场景知识蒸馏进统一模型，实现跨场景泛化并降低决策延迟。",
    "cluster": "93830379823a1268",
    "cluster_size": 1,
    "is_lead": true,
@@ -58992,8 +59023,7 @@
    "relevant": true,
    "topics": [
     "urban",
-    "world-env",
-    "org"
+    "framework"
    ],
    "applied": false
   },
@@ -59946,17 +59976,29 @@
    ],
    "domain_guess": "application",
    "added": "2026-11-27T20:03:53Z",
-   "status": "selected",
-   "llm": false,
-   "domain": "application",
-   "score": 60,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": "",
+   "status": "filtered",
+   "llm": true,
+   "domain": "business",
+   "score": 38,
+   "tags": [
+    "智能体仿真",
+    "消费行为",
+    "零售场景"
+   ],
+   "title_zh": "Dataconomy 报道黑色星期五模拟中 AI 智能体偷电视",
+   "summary_zh": "Dataconomy 报道了一项黑色星期五购物场景的模拟，其中 AI 智能体在场景里偷走电视。材料只有标题，没有给出智能体数量、模型、环境或结果数据。",
    "cluster": "959a190b3aa9dc9b",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 56.94
+   "hot": 56.94,
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-27T22:08:33Z",
+   "relevant": true,
+   "topics": [
+    "economy",
+    "human-behavior"
+   ],
+   "applied": false
   },
   "95e33ecfe0ac0232": {
    "id": "95e33ecfe0ac0232",
@@ -60726,7 +60768,7 @@
    "cluster": "971375198b0419b1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.36,
+   "hot": 11.97,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -61267,7 +61309,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.71,
+   "hot": 8.44,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -61506,8 +61548,8 @@
     "多模态",
     "仿真数据"
    ],
-   "title_zh": "CrashAgent 用多模态大模型把真实事故报告转成可执行的碰撞仿真场景",
-   "summary_zh": "CrashAgent 是一个多智能体框架，读取真实交通事故的多模态报告，生成道路布局以及自车与周边交通参与者的行为，直接在仿真中执行。作者从布局重建准确度、碰撞率和多样性三方面评估，称将公开大规模碰撞场景数据集。",
+   "title_zh": "CrashAgent：用多模态大模型把真实车祸报告转成可执行的仿真场景",
+   "summary_zh": "自动驾驶训练数据里安全关键场景太少，作者提出 CrashAgent，一个多智能体框架，用多模态大模型解读真实交通事故报告，生成道路布局和自车及周围车辆的行为，输出可直接在仿真中执行的场景。他们从布局重建准确率、碰撞率和多样性等角度做了评测，并将公开这个大规模车祸场景数据集。",
    "cluster": "97ff3632265e48b2",
    "cluster_size": 1,
    "is_lead": true,
@@ -61517,7 +61559,8 @@
    "relevant": true,
    "topics": [
     "urban",
-    "world-env"
+    "world-env",
+    "generative-agents"
    ],
    "applied": true
   },
@@ -65717,8 +65760,8 @@
     "政策推演",
     "空气质量"
    ],
-   "title_zh": "多智能体 LLM 系统分析 2025 年 1 月洛杉矶山火空气质量并给出政策建议",
-   "summary_zh": "作者用 Instructor 智能体加 Worker 智能体的多智能体框架，接入云平台数据，分析 2025 年 1 月洛杉矶山火期间的空气质量，并评估系统给出的健康建议。该场山火造成超过 2500 亿美元损失，持续近一个月才被控制。",
+   "title_zh": "用 Instructor-Worker 多智能体系统分析 2025 年洛杉矶山火空气质量并给出政策建议",
+   "summary_zh": "作者把此前 Digital Twin Building 的多智能体大模型框架和云图数据集成改造后，用于 2025 年 1 月洛杉矶山火期间的空气质量分析。系统由一个 Instructor 智能体和多个 Worker 智能体组成，Instructor 从云端取数据并下发指令，Worker 完成分析后汇总回 Instructor 生成最终结论。作者用这套系统检验了基于数据的健康政策建议能力。",
    "cluster": "a12608633abde048",
    "cluster_size": 1,
    "is_lead": true,
@@ -65728,7 +65771,6 @@
    "relevant": true,
    "topics": [
     "policy",
-    "health",
     "framework"
    ],
    "applied": true
@@ -67197,8 +67239,8 @@
     "政策推演",
     "开源框架"
    ],
-   "title_zh": "MegaAgent 不依赖预设 SOP，在国家政策仿真中扩展到 590 个智能体",
-   "summary_zh": "MegaAgent 按任务复杂度自动生成智能体，支持动态任务分解、并行执行与系统监控，无需人工编写标准作业流程。评测中它在 800 秒内完成五子棋开发，并在一次国家政策仿真里扩展到 590 个智能体生成多领域政策，代码已开源。",
+   "title_zh": "MegaAgent：无需预定义 SOP 的大规模自主 LLM 多智能体系统",
+   "summary_zh": "作者提出 MegaAgent，一个不依赖预定义 SOP 的大规模自主 LLM 多智能体系统，能按任务复杂度生成智能体并动态分解、并行执行任务。它在 800 秒内开发出五子棋游戏，并在国家政策仿真中扩展到 590 个智能体生成多领域政策，任务完成效率和可扩展性均优于 MetaGPT。",
    "cluster": "a41b08fb5ee5b141",
    "cluster_size": 1,
    "is_lead": true,
@@ -67208,8 +67250,7 @@
    "relevant": true,
    "topics": [
     "framework",
-    "policy",
-    "org"
+    "policy"
    ],
    "applied": false
   },
@@ -67575,8 +67616,8 @@
     "LLM智能体",
     "评测"
    ],
-   "title_zh": "RecUserSim：用 LLM 智能体模拟真实多样的用户，为对话推荐系统提供可量化评测",
-   "summary_zh": "RecUserSim 用 LLM 智能体做用户模拟器，包含画像、记忆、受有限理性理论启发的核心动作和回复精修四个模块，能追踪交互历史、发现未知偏好并给出显式评分。实验称其生成的用户既多样又贴近真实，可用于对话推荐系统的量化评测。",
+   "title_zh": "RecUserSim：基于有限理性的 LLM 用户模拟器，用于对话式推荐系统评测",
+   "summary_zh": "作者提出 RecUserSim，一个 LLM 智能体用户模拟器，包含画像、记忆、动作和精炼四个模块，其中动作模块借鉴有限理性理论，能生成细粒度动作和个性化回复。实验显示它输出多样可控，即使用较小的基座模型也能产生真实高质量的对话，其评分在不同基座 LLM 间高度一致。",
    "cluster": "a4ed1dfafff3f816",
    "cluster_size": 1,
    "is_lead": true,
@@ -71411,8 +71452,8 @@
     "问卷模拟",
     "心理测量"
    ],
-   "title_zh": "五个大模型作答 44 题学习策略问卷，Gemini 2 Flash 表现最好",
-   "summary_zh": "作者让 GPT-4o、Claude 3.7 Sonnet、Gemini 2 Flash、LLaMA 3.1-8B 和 Mistral Large 回答 44 题的 MSLQ 学习动机与策略问卷，比较题目分布、自我调节学习维度的心理网络和潜因子结构效度。Gemini 2 Flash 表现最有希望，显示出可观的抽样变异。",
+   "title_zh": "用五个大模型生成学习策略问卷回答，Gemini 2 Flash 最接近真实学生数据结构",
+   "summary_zh": "研究者让 GPT-4o、Claude 3.7 Sonnet、Gemini 2 Flash、LLaMA 3.1-8B 和 Mistral Large 分别填写 44 题的 MSLQ 学习动机与策略问卷，检验大模型能否模拟学生作答。Gemini 2 Flash 表现最好，其潜在因子结构和 SRL 维度间关系与既有理论和实证结果基本吻合，但各模型都存在偏差和局限。",
    "cluster": "afc07989703cc5b2",
    "cluster_size": 1,
    "is_lead": true,
@@ -72378,7 +72419,7 @@
    "cluster": "b1a8d7dbad71f0b4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.58
+   "hot": 5.4
   },
   "b1f9e7823c80878f": {
    "id": "b1f9e7823c80878f",
@@ -73552,7 +73593,7 @@
    "cluster": "b4d1668269dc5edb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.46,
+   "hot": 16.91,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -74245,8 +74286,8 @@
     "问卷预测试",
     "用户画像"
    ],
-   "title_zh": "LLM-Mirror：给模型喂受访者个人信息，复现个体问卷作答",
-   "summary_zh": "作者提出 LLM-Mirror，把受访者特定信息注入 LLM 生成用户画像，再用 PLS-SEM 比较模型作答与真实个体问卷。结果显示 LLM 生成的回答在结构方程分析与人类回答一致，且在提供受访者信息后能复现个体层面的决策模式。研究用于问卷预测试。",
+   "title_zh": "LLM-Mirror：给大模型喂入受访者个人信息，可复现个体层面的问卷回答",
+   "summary_zh": "研究者提出 LLM-Mirror 方法，把特定受访者的个人信息输入大模型，生成对应的用户画像并让其回答问卷。用 PLS-SEM 因果分析对比发现，这些生成回答不仅在统计分布上与真人一致，在个体决策模式上也贴近真实回答。作者认为这可用于问卷预测试和研究设计优化。",
    "cluster": "b60572db55616b6c",
    "cluster_size": 1,
    "is_lead": true,
@@ -74255,8 +74296,7 @@
    "triaged": "2026-11-20T14:14:26Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
-    "eval"
+    "human-behavior"
    ],
    "score1": 64,
    "score2": 68,
@@ -76053,7 +76093,7 @@
    "cluster": "bcbc6e9ed72f9565",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 26.0,
+   "hot": 25.19,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -79593,7 +79633,7 @@
    "cluster": "c5a70dd0609bfa7e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 28.4
+   "hot": 27.51
   },
   "c5ea418997695a4e": {
    "id": "c5ea418997695a4e",
@@ -79695,7 +79735,7 @@
    "cluster": "c5fad41f7b61d2ec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.85
+   "hot": 9.54
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -81487,8 +81527,8 @@
     "偏差评测",
     "开源框架"
    ],
-   "title_zh": "FAIRGAME 框架：用博弈论识别多智能体 LLM 的策略偏差",
-   "summary_zh": "作者发布 FAIRGAME 框架，让 LLM 智能体在经典博弈中互相对局，并把结果与博弈论预测对比。实验发现结果偏差取决于所用 LLM、对话语言，以及智能体的人格特质和策略知识。框架支持批量模拟同一场景并跨轮次比较，用于系统发现偏差和预判策略互动中的涌现行为。",
+   "title_zh": "FAIRGAME：用博弈论框架检测 LLM 智能体在经典博弈中的行为偏差",
+   "summary_zh": "作者发布了 FAIRGAME，一个基于博弈论的可复用仿真框架，用来系统检测 AI 智能体在博弈中的偏差行为。实验发现，智能体的博弈结果会随所用大模型、交互语言、人格特质和策略知识的不同而产生有偏的结局。框架支持跨仿真批次对比，并与博弈论预测对照。",
    "cluster": "ca7b10c91394792a",
    "cluster_size": 1,
    "is_lead": true,
@@ -81497,9 +81537,9 @@
    "triaged": "2026-11-21T09:58:52Z",
    "relevant": true,
    "topics": [
-    "org",
+    "framework",
     "eval",
-    "framework"
+    "org"
    ],
    "applied": false
   },
@@ -82085,7 +82125,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.17
+   "hot": 13.73
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -83842,6 +83882,36 @@
    ],
    "applied": true
   },
+  "d125d569dea2bae9": {
+   "id": "d125d569dea2bae9",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQd3M4R1VmZXRkcTFlbHM1V0lGM05KQWxiS3dOVWJYN0VTbmc1T1QzM2FQQzJuZzNTM1lxb21NTTV1NmpmbDRIeXVIb0E2aF9zaFc2bGdpQmI1Uld0c0lyZ3ZFQUhqM3NDWnJ4N2hYWV9IX0REdUg4bWNvdmJiYkRRYUNFM2N1MDdRNnZPdA?oc=5",
+   "title": "COMSOL参加2026新型储能论坛展示多物理场仿真方案 - Sohu",
+   "text": "COMSOL参加2026新型储能论坛展示多物理场仿真方案 Sohu",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-25T07:19:30Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 35,
+   "kw_terms": [
+    "仿真"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-27T22:15:26Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 35,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "d12a4824156e8dec": {
    "id": "d12a4824156e8dec",
    "url": "https://arxiv.org/abs/2611.28755",
@@ -83899,7 +83969,7 @@
    "cluster": "d12a4824156e8dec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.68,
+   "hot": 8.41,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -90731,7 +90801,7 @@
    "cluster": "e1bea160dec662bd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 39.15
+   "hot": 37.93
   },
   "e1cc72e8f9ed637e": {
    "id": "e1cc72e8f9ed637e",
@@ -91965,8 +92035,8 @@
     "用户模拟",
     "评测基准"
    ],
-   "title_zh": "Co-Gym 开源框架：让智能体与真人双向协作，并提供用户模拟器",
-   "summary_zh": "Collaborative Gym（Co-Gym）是开发和评测人机协作智能体的开放框架，支持非轮流式的双向交互，同时评估协作结果与过程。框架提供带可靠用户模拟器的仿真条件和基于网页应用的真实条件，在旅行规划、相关工作撰写、表格分析三项任务上做了基准实验。",
+   "title_zh": "Co-Gym：评估人机协作智能体的开源框架，协作智能体胜过全自动智能体",
+   "summary_zh": "作者发布了 Collaborative Gym（Co-Gym），一个用于开发和评估人机协作智能体的开源框架，支持双向通信和非轮流交互。在旅行规划、相关工作写作和表格分析三个任务上，真人评估显示最佳协作智能体的胜率分别为 86%、74% 和 66%，均超过全自动智能体。评估也暴露了当前模型的短板：真实条件下 65% 的案例出现沟通失败，40% 出现情境感知失败。",
    "cluster": "e50854750e3c8223",
    "cluster_size": 1,
    "is_lead": true,
@@ -91975,8 +92045,8 @@
    "triaged": "2026-11-19T19:07:48Z",
    "relevant": true,
    "topics": [
-    "org",
     "framework",
+    "eval",
     "human-behavior"
    ],
    "applied": false
@@ -92165,8 +92235,8 @@
     "工作负荷",
     "合成数据"
    ],
-   "title_zh": "微调 LLM 智能体模拟高温气冷堆协作场景，实时估计操作员工作负荷",
-   "summary_zh": "作者用高温气冷堆的真实运行数据微调 LLM，在多智能体协作场景中模拟人的行为与认知负荷，实现人因可靠性分析数据的自动采集。结果显示 WELLA 方法的工作负荷预测精度高于现有商用 LLM 方法。",
+   "title_zh": "用微调大模型智能体实时估计高温气冷堆操作员工作负荷，精度超过商用大模型方法",
+   "summary_zh": "作者提出 WELLA，一种场景驱动的 HRA 合成数据自动采集方法。它用真实高温气冷堆运行数据微调大语言模型，在多智能体协作场景中实时模拟人的行为和认知负荷。结果显示其工作负荷估计精度优于现有商用大模型方法。",
    "cluster": "e56295ff5d682b0d",
    "cluster_size": 1,
    "is_lead": true,
@@ -92176,7 +92246,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "org"
+    "framework"
    ],
    "score1": 58,
    "score2": 75,
@@ -92830,8 +92900,8 @@
     "场景生成",
     "视频生成"
    ],
-   "title_zh": "用 LLM 生成 CARLA 安全关键驾驶场景脚本，再转成真实感视频",
-   "summary_zh": "作者让大模型根据少量示例生成 CARLA 场景脚本，指定交通参与者行为与位置，重点构造碰撞等安全关键事件，再用 Cosmos-Transfer1 加 ControlNet 把渲染画面转成真实感驾驶视频。方法可生成行人被遮挡穿越、车辆突然切入等稀有边缘案例。",
+   "title_zh": "用大模型少样本生成代码，在 CARLA 中自动合成安全关键驾驶场景并转成逼真视频",
+   "summary_zh": "作者提出一个框架，让大语言模型根据少量示例提示和代码样本，自动生成 CARLA 仿真器里的安全关键驾驶场景脚本，重点覆盖碰撞事件。渲染画面再经 Cosmos-Transfer1 加 ControlNet 转成逼真驾驶视频。实验显示该方法能生成多样、逼真的罕见边缘场景，可用于自动驾驶仿真测试。",
    "cluster": "e6dff640154a6b4c",
    "cluster_size": 1,
    "is_lead": true,
@@ -93950,7 +94020,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.89,
+   "hot": 10.55,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -94276,8 +94346,8 @@
     "自动驾驶",
     "场景生成"
    ],
-   "title_zh": "LLM 分层推理加扩散模型，按自然语言描述可控生成交通场景",
-   "summary_zh": "作者提出扩散模型与 LLM 结合的交通仿真框架，高层模块拆解交通要素层级，低层模块通过自反思细化生成，并用 Frenet 坐标系下的代价函数给 LLM 提供几何量。在 Waymo Open Motion Dataset 上能按更复杂的描述生成更多样场景。",
+   "title_zh": "用 LLM 分层推理与自反思引导扩散模型，实现可控交通仿真",
+   "summary_zh": "作者提出一个扩散模型加 LLM 增强的交通仿真框架，包含高层理解模块和低层修正模块，让 LLM 逐步分析场景描述并通过自反思修正生成结果。在 Waymo Open Motion Dataset 上实验显示，该方法能处理更复杂的描述，可控地生成更多样的交通场景。",
    "cluster": "eafa3ae19e2190fd",
    "cluster_size": 1,
    "is_lead": true,
@@ -94395,7 +94465,7 @@
    "cluster": "eb23f0e3187b6aeb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 35.98,
+   "hot": 34.86,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T09:40:49Z",
    "relevant": true,
@@ -97706,7 +97776,7 @@
    "cluster": "f22c13987bf9ec77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.45
+   "hot": 13.03
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -98125,8 +98195,8 @@
     "社会仿真",
     "综述"
    ],
-   "title_zh": "综述：以人为中心的 LLM 能力，从个体认知到群体动态的模拟",
-   "summary_zh": "这篇综述梳理 LLM 在推理、感知、社会认知上与人类的对比，以及它在行为科学、政治学、社会学中替代单个人类或协调多智能体模拟群体动态的应用，并讨论适应性、情感智能与文化敏感度等缺口。",
+   "title_zh": "综述：以人为中心的大语言模型在个体与群体任务中的能力评估",
+   "summary_zh": "这篇综述系统梳理了以人为中心的大语言模型研究，考察 LLM 在推理、感知、社会认知等个体任务上与人类技能的差距，以及多个 LLM 协同模拟群体动态的集体任务表现。作者还评估了 LLM 在行为科学、政治学和社会学领域的实际应用，并指出适应性、情感智能、文化敏感性和偏见等挑战。",
    "cluster": "f2f9c81da3bb838d",
    "cluster_size": 1,
    "is_lead": true,
@@ -98136,7 +98206,6 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "social-sim",
     "eval"
    ],
    "applied": false
@@ -99910,7 +99979,7 @@
    "cluster": "f88b32686a7aa762",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.93,
+   "hot": 20.28,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -100787,8 +100856,8 @@
     "强化学习",
     "LLM"
    ],
-   "title_zh": "AED 用 LLM 设计奖励函数，在仿真交通场景中自动挖掘自动驾驶策略的多样碰撞漏洞",
-   "summary_zh": "AED 让 LLM 自动设计强化学习奖励函数，并按不同事故类型并行训练对抗策略，再用偏好学习筛掉无效事故。在多组仿真交通场景与受测策略上，它找到的漏洞种类更多、攻击成功率高于专家设计的奖励。",
+   "title_zh": "AED：用大模型自动设计奖励函数，发现自动驾驶策略的有效且多样漏洞",
+   "summary_zh": "AED 用大语言模型自动为强化学习设计奖励函数，并按不同事故类型并行训练对抗策略，再用偏好学习过滤无效事故。在多个模拟交通场景和被测策略上，AED 比专家手工设计的奖励发现更多样的漏洞，攻击成功率也更高，减少了人工设计奖励的工作量。",
    "cluster": "fb123e12936139b6",
    "cluster_size": 1,
    "is_lead": true,
@@ -100797,8 +100866,8 @@
    "triaged": "2026-11-21T09:59:31Z",
    "relevant": true,
    "topics": [
-    "world-env",
-    "eval"
+    "urban",
+    "framework"
    ],
    "score1": 62,
    "score2": 70,
@@ -101974,8 +102043,8 @@
     "假设检验",
     "可信度"
    ],
-   "title_zh": "用假设检验量化大模型模拟人类问卷回答的偏差",
-   "summary_zh": "论文提出一套基于假设检验的定量框架，用来判断大模型在多项选择问卷中模拟人类意见和决策的效果。把它用于一个常用于模拟公众意见的模型后发现，在争议性问题上，该模型对种族、年龄、收入等子群体的模拟效果很差。",
+   "title_zh": "用假设检验量化大模型模拟人类问卷行为的失配程度",
+   "summary_zh": "作者提出一个基于假设检验的量化框架，用来检验大模型模拟的多选题问卷行为与真实人类回答是否一致。他们把该框架用在一个流行语言模型上，模拟多份公共调查中不同种族、年龄、收入人群的意见，发现有争议问题上模型与被测人群明显失配，不适合直接替代真人样本。",
    "cluster": "fe57e8b5ade2c0ca",
    "cluster_size": 1,
    "is_lead": true,

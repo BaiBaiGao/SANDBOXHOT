@@ -4,18 +4,18 @@
   "tagline": "收集用 AI 智能体做沙盘推演、仿真与模拟的学术论文、落地应用、商业、游戏和平台动态，学术与应用优先。",
   "timezone_offset_hours": 8
  },
- "generated": "2026-11-27T20:03:54Z",
+ "generated": "2026-11-27T22:15:27Z",
  "counts": {
-  "academic": 874,
+  "academic": 875,
   "application": 162,
   "platform": 4,
   "business": 13,
   "game": 1
  },
  "total": 908,
- "reads": 605,
+ "reads": 636,
  "research": 6,
- "ai_items": 907,
+ "ai_items": 908,
  "sources": [
   {
    "id": "wechat-jiqizhixin",
@@ -444,7 +444,7 @@
    "group": "platform",
    "tier": "T2",
    "enabled": true,
-   "items": 2,
+   "items": 3,
    "home": "",
    "query": "llm agent simulation",
    "ok": false
@@ -528,7 +528,7 @@
    "group": "application",
    "tier": "T2",
    "enabled": true,
-   "items": 9,
+   "items": 8,
    "home": "https://news.google.com/rss/search?q=%28%22AI+agents%22+OR+%22generative+agents%22+OR+LLM%29+%28simulation+OR+%22digital+twin%22%29+%28city+OR+government+OR+policy+OR+emergency+OR+evacuation%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
    "query": "",
    "ok": true
@@ -807,7 +807,7 @@
    "items": 0,
    "home": "http://www.gamelook.com.cn/feed",
    "query": "",
-   "ok": true
+   "ok": false
   },
   {
    "id": "rss-inworld",
@@ -895,15 +895,15 @@
   }
  ],
  "last_run": {
-  "at": "2026-11-27T20:03:54Z",
+  "at": "2026-11-27T22:15:27Z",
   "llm": false,
   "spent_run": 0.0
  },
  "funnel": {
   "sources": 73,
-  "collected_7d": 1453,
+  "collected_7d": 1454,
   "kept_7d": 161,
-  "selected_7d": 38,
+  "selected_7d": 37,
   "digests_7d": 7
  }
 }
