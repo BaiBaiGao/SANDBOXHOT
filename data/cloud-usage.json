@@ -13949,6 +13949,106 @@
    "completion": 4585,
    "reasoning": 1202,
    "credits": 14.6375
+  },
+  {
+   "at": "2026-11-27T12:47:54Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 2771,
+   "cached": 0,
+   "completion": 420,
+   "reasoning": 0,
+   "credits": 0.08902
+  },
+  {
+   "at": "2026-11-27T12:47:57Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 409,
+   "cached": 0,
+   "completion": 18,
+   "reasoning": 0,
+   "credits": 0.02886
+  },
+  {
+   "at": "2026-11-27T12:48:56Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 11300,
+   "cached": 0,
+   "completion": 1593,
+   "reasoning": 1022,
+   "credits": 5.10448
+  },
+  {
+   "at": "2026-11-27T12:49:24Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 2465,
+   "cached": 0,
+   "completion": 968,
+   "reasoning": 396,
+   "credits": 1.95738
+  },
+  {
+   "at": "2026-11-27T12:50:03Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 8435,
+   "cached": 0,
+   "completion": 1354,
+   "reasoning": 583,
+   "credits": 4.03454
+  },
+  {
+   "at": "2026-11-27T12:50:10Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1866,
+   "cached": 0,
+   "completion": 433,
+   "reasoning": 0,
+   "credits": 0.54104
+  },
+  {
+   "at": "2026-11-27T12:50:18Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1884,
+   "cached": 0,
+   "completion": 506,
+   "reasoning": 0,
+   "credits": 0.5848
+  },
+  {
+   "at": "2026-11-27T12:50:24Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1803,
+   "cached": 1024,
+   "completion": 429,
+   "reasoning": 0,
+   "credits": 0.40584
+  },
+  {
+   "at": "2026-11-27T12:50:30Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1758,
+   "cached": 1024,
+   "completion": 400,
+   "reasoning": 0,
+   "credits": 0.3824
+  },
+  {
+   "at": "2026-11-27T12:50:35Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-backfill",
+   "prompt": 1750,
+   "cached": 1024,
+   "completion": 392,
+   "reasoning": 0,
+   "credits": 0.37664
   }
  ]
 }
