@@ -13859,6 +13859,96 @@
    "completion": 264,
    "reasoning": 0,
    "credits": 0.26848
+  },
+  {
+   "at": "2026-11-27T02:58:05Z",
+   "model": "DeepSeek-V4.1-Flash",
+   "purpose": "triage",
+   "prompt": 2538,
+   "cached": 0,
+   "completion": 307,
+   "reasoning": 0,
+   "credits": 0.07532
+  },
+  {
+   "at": "2026-11-27T02:58:08Z",
+   "model": "Qwen3.8-27B",
+   "purpose": "second",
+   "prompt": 482,
+   "cached": 0,
+   "completion": 31,
+   "reasoning": 0,
+   "credits": 0.03636
+  },
+  {
+   "at": "2026-11-27T02:58:16Z",
+   "model": "GLM-5.3",
+   "purpose": "精读-new",
+   "prompt": 1545,
+   "cached": 1024,
+   "completion": 293,
+   "reasoning": 14,
+   "credits": 0.2884
+  },
+  {
+   "at": "2026-11-27T02:58:19Z",
+   "model": "Qwen3-Embedding",
+   "purpose": "embed",
+   "prompt": 88,
+   "cached": 0,
+   "completion": 0,
+   "reasoning": 0,
+   "credits": 4e-05
+  },
+  {
+   "at": "2026-11-27T02:59:40Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 4338,
+   "cached": 0,
+   "completion": 2982,
+   "reasoning": 2320,
+   "credits": 5.1834
+  },
+  {
+   "at": "2026-11-27T03:00:23Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 9110,
+   "cached": 0,
+   "completion": 1362,
+   "reasoning": 648,
+   "credits": 4.22092
+  },
+  {
+   "at": "2026-11-27T03:00:55Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 3328,
+   "cached": 0,
+   "completion": 1148,
+   "reasoning": 528,
+   "credits": 2.42656
+  },
+  {
+   "at": "2026-11-27T03:01:39Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "topic",
+   "prompt": 5714,
+   "cached": 0,
+   "completion": 1383,
+   "reasoning": 491,
+   "credits": 3.36652
+  },
+  {
+   "at": "2026-11-27T03:03:57Z",
+   "model": "Kimi-K3.1-Pro",
+   "purpose": "research",
+   "prompt": 32315,
+   "cached": 0,
+   "completion": 4585,
+   "reasoning": 1202,
+   "credits": 14.6375
   }
  ]
 }
