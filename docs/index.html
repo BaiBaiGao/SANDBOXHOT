@@ -2,38 +2,58 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SANDBOXHOT · AI 智能体沙盘推演与仿真资讯</title>
 <meta name="description" content="收集利用 AI 智能体做沙盘推演、仿真、模拟的学术论文、实际应用、商业、游戏与平台资讯。">
 <link rel="alternate" type="application/rss+xml" title="SANDBOXHOT" href="feed.xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b4532a'/%3E%3Cpath d='M7 22h18M9 22V12l7-4 7 4v10M13 22v-5h6v5' stroke='%23fff' stroke-width='2' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("sbh-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header class="top">
-  <div class="wrap top-row">
+<div class="shell">
+  <aside class="side" aria-label="导航">
     <a class="brand" href="#/"><span class="logo" aria-hidden="true"></span><span>SANDBOX<b>HOT</b></span></a>
-    <nav class="nav" id="nav">
-      <a href="#/" data-r="home">首页</a>
-      <a href="#/d/academic" data-r="academic">学术论文</a>
-      <a href="#/d/application" data-r="application">实际应用</a>
-      <a href="#/d/business" data-r="business">商业</a>
-      <a href="#/d/game" data-r="game">游戏</a>
-      <a href="#/d/platform" data-r="platform">平台工具</a>
-      <a href="#/topics" data-r="topics">主题</a>
-      <a href="#/research" data-r="research">专题研究</a>
-      <a href="#/resources" data-r="resources">资源库</a>
-      <a href="#/digest" data-r="digest">日报</a>
-      <a href="#/about" data-r="about">关于</a>
+    <nav class="side-nav" id="nav">
+      <p class="side-label">内容</p>
+      <a href="#/" data-r="home"><i class="ic ic-spark"></i>精选</a>
+      <a href="#/hot" data-r="hot"><i class="ic ic-flame"></i>热点榜</a>
+      <a href="#/digest" data-r="digest"><i class="ic ic-paper"></i>日报</a>
+      <p class="side-label">栏目</p>
+      <a href="#/d/academic" data-r="academic"><i class="dot d-academic"></i>学术论文</a>
+      <a href="#/d/application" data-r="application"><i class="dot d-application"></i>实际应用</a>
+      <a href="#/d/business" data-r="business"><i class="dot d-business"></i>商业</a>
+      <a href="#/d/game" data-r="game"><i class="dot d-game"></i>游戏</a>
+      <a href="#/d/platform" data-r="platform"><i class="dot d-platform"></i>平台工具</a>
+      <p class="side-label">研究</p>
+      <a href="#/topics" data-r="topics"><i class="ic ic-grid"></i>主题</a>
+      <a href="#/research" data-r="research"><i class="ic ic-layers"></i>专题研究</a>
+      <a href="#/resources" data-r="resources"><i class="ic ic-box"></i>资源库</a>
+      <p class="side-label">我的</p>
+      <a href="#/starred" data-r="starred"><i class="ic ic-star"></i>收藏<span class="count" id="star-count"></span></a>
+      <p class="side-label">更多</p>
+      <a href="#/agent" data-r="agent"><i class="ic ic-plug"></i>Agent 接入</a>
+      <a href="#/sources" data-r="sources"><i class="ic ic-list"></i>信源</a>
+      <a href="#/about" data-r="about"><i class="ic ic-info"></i>关于</a>
     </nav>
-    <button class="theme" id="theme" type="button" aria-label="切换深浅色"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <div class="theme-switch" data-theme-switch></div>
+  </aside>
+  <div class="col">
+    <header class="mtop"><a class="brand" href="#/"><span class="logo" aria-hidden="true"></span><span>SANDBOX<b>HOT</b></span></a></header>
+    <main id="app" aria-live="polite"><p class="muted">加载中…</p></main>
+    <footer class="foot">
+      <span id="foot-meta"></span>
+      <span>作者 <a href="#/about">Bianco</a> · <a href="feed.xml">RSS</a> · <a href="llms.txt">llms.txt</a> · <a href="#/sources">信源</a> · 框架参考 <a href="https://github.com/KKKKhazix/AIHOT" rel="noopener">AIHOT</a></span>
+    </footer>
   </div>
-</header>
-<main class="wrap" id="app" aria-live="polite"><p class="muted">加载中…</p></main>
-<footer class="wrap foot">
-  <span id="foot-meta"></span>
-  <span>作者 <a href="#/about">Bianco</a> · <a href="feed.xml">RSS</a> · <a href="llms.txt">llms.txt</a> · <a href="#/sources">信源</a> · 框架参考 <a href="https://github.com/KKKKhazix/AIHOT" rel="noopener">AIHOT</a></span>
-</footer>
+</div>
+<nav class="tabbar" id="tabbar" aria-label="主要栏目">
+  <a href="#/" data-r="home"><i class="ic ic-spark"></i><span>精选</span></a>
+  <a href="#/hot" data-r="hot"><i class="ic ic-flame"></i><span>热点</span></a>
+  <a href="#/digest" data-r="digest"><i class="ic ic-paper"></i><span>日报</span></a>
+  <a href="#/topics" data-r="topics"><i class="ic ic-grid"></i><span>主题</span></a>
+  <a href="#/me" data-r="me"><i class="ic ic-user"></i><span>我的</span></a>
+</nav>
 <script src="assets/app.js"></script>
 </body>
 </html>

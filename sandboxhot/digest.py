@@ -11,10 +11,39 @@ from .llm import LLM, LLMUnavailable, tidy
 DOMAIN_ZH = {"academic": "学术前沿", "application": "落地应用", "business": "商业", "game": "游戏", "platform": "平台工具"}
 
 
-def _items_between(store, start: datetime, end: datetime) -> list[dict]:
+def _substantive(it: dict) -> bool:
+    """材料够不够写一条：只有标题、没有摘要的（比如部分 Google 新闻）不进日报周报。"""
+    return bool(it.get("summary_zh")) or len((it.get("text") or "").strip()) >= 80
+
+
+def _reported(store, kind: str, key: str) -> dict[str, datetime]:
+    """之前各期（同类、不含本期）已经报过的事件 → 最近一次报道它的时间。"""
+    seen: dict[str, datetime] = {}
+    for d in store.digests.get(kind, []):
+        if d["key"] >= key:
+            continue
+        at = parse_iso(d.get("created")) or now_utc()
+        for iid in d.get("item_ids", []):
+            it = store.items.get(iid)
+            cid = (it or {}).get("cluster", iid)
+            if cid not in seen or at > seen[cid]:
+                seen[cid] = at
+    return seen
+
+
+def _items_between(store, start: datetime, end: datetime, reported: dict | None = None) -> list[dict]:
+    """一件事一条（只取事件的代表条目）；报过的事只有在之后又有新来源时才跟进。"""
+    reported = reported or {}
+    clusters: dict[str, list[dict]] = {}
+    for it in store.items.values():
+        if it.get("status") == "selected":
+            clusters.setdefault(it.get("cluster", it["id"]), []).append(it)
     out = []
     for it in store.items.values():
-        if it.get("status") != "selected" or not it.get("is_lead", True):
+        if it.get("status") != "selected" or not it.get("is_lead", True) or not _substantive(it):
+            continue
+        cid = it.get("cluster", it["id"])
+        if cid in reported and not any((parse_iso(m.get("added")) or start) > reported[cid] for m in clusters.get(cid, [])):
             continue
         t = parse_iso(it.get("added"))
         pub = parse_iso(it.get("published")) or t
@@ -27,21 +56,23 @@ def _items_between(store, start: datetime, end: datetime) -> list[dict]:
 
 
 def _rule_digest(items: list[dict], title: str) -> str:
+    """规则版：按分数排列，没有条目的栏目整栏省略。"""
     lines = [f"## {title}", "", "（模型暂不可用，以下为按分数自动排列的条目，稍后会自动改写为编辑版。）", ""]
-    for dom, name in (("academic", "学术前沿"), ("application", "落地应用")):
+    groups = (("学术前沿", lambda d: d == "academic"), ("落地应用", lambda d: d == "application"),
+              ("商业 · 游戏 · 平台", lambda d: d not in ("academic", "application")))
+    for name, pick in groups:
+        sel = [it for it in items if pick(it.get("domain"))][:8]
+        if not sel:
+            continue
         lines.append(f"### {name}")
-        sel = [it for it in items if it.get("domain") == dom][:8]
-        lines += [f"- {it.get('title_zh') or it['title']} [来源]({it['url']})" for it in sel] or ["- 本期暂无"]
+        lines += [f"- {it.get('title_zh') or it['title']} [来源]({it['url']})" for it in sel]
         lines.append("")
-    lines.append("### 商业 · 游戏 · 平台")
-    sel = [it for it in items if it.get("domain") not in ("academic", "application")][:8]
-    lines += [f"- {it.get('title_zh') or it['title']} [来源]({it['url']})" for it in sel] or ["- 本期暂无"]
-    return "\n".join(lines)
+    return "\n".join(lines).rstrip()
 
 
 def _make(store, cfg, llm: LLM, kind: str, key: str, start, end, label: str, log) -> bool:
     limit = cfg["digest"]["daily_items" if kind == "daily" else "weekly_items"]
-    items = _items_between(store, start, end)[:limit]
+    items = _items_between(store, start, end, _reported(store, kind, key))[:limit]
     if len(items) < (3 if kind == "daily" else 5):
         return False
     lst = store.digests.setdefault(kind, [])

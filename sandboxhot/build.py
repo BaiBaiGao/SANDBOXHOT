@@ -5,7 +5,7 @@ from datetime import timedelta
 from xml.sax.saxutils import escape
 
 from . import cluster
-from .config import SITE_DATA_DIR, SITE_DIR, iso, now_utc, parse_iso, topics, write_json
+from .config import SITE_DATA_DIR, SITE_DIR, iso, now_utc, parse_iso, read_json, topics, write_json
 from .relevance import item_topics
 
 EXTRA_KEYS = ("venue", "pdf", "stars", "points", "comments", "discussion", "language", "cited_by", "categories")
@@ -80,8 +80,7 @@ def build(store, cfg: dict, sources: list[dict], log=print) -> dict:
     defs = topics()
     selected = [it for it in store.items.values() if it.get("status") == "selected"]
     cluster.assign(selected, extra_pairs=getattr(store, "dupes", []))
-    for it in selected:
-        it["hot"] = cluster.hot_score(it)
+    heat = cluster.hot_scores(selected, now)
     cutoff = now - timedelta(days=r["site_items_days"])
     visible = [it for it in selected if (parse_iso(it.get("added")) or now) >= cutoff]
     visible.sort(key=lambda it: it.get("published", ""), reverse=True)
@@ -90,6 +89,7 @@ def build(store, cfg: dict, sources: list[dict], log=print) -> dict:
     visible_ids = {it["id"] for it in visible}
     write_json(SITE_DATA_DIR / "items.json", {"generated": iso(now), "items": items}, compact=True)
     write_extras(store, cfg, visible, items, visible_ids, defs, now)
+    write_hot(heat, {it["id"]: it for it in selected}, visible_ids, now)
 
     digests = {
         "daily": [{k: d[k] for k in ("key", "label", "markdown", "ai", "created")} for d in store.digests.get("daily", [])],
@@ -116,11 +116,60 @@ def build(store, cfg: dict, sources: list[dict], log=print) -> dict:
         "reads": sum(1 for it in items if it.get("read")), "research": len(getattr(store, "research", [])),
         "ai_items": sum(1 for it in items if it["ai"]),
         "sources": src_meta, "last_run": store.runtime.get("last_run", {}),
+        "funnel": funnel(store, sources, now),
     }
     write_json(SITE_DATA_DIR / "meta.json", meta)
     write_feed(items[:60], cfg)
     log(f"  站点数据：{len(items)} 条入选，{len(digests['daily'])} 份日报，{len(digests['weekly'])} 份周报")
     return meta
+
+
+def funnel(store, sources: list[dict], now) -> dict:
+    """关于页的“信源 → 收录 → 精选 → 成刊”四个数字（近 7 天）。"""
+    week = now - timedelta(days=7)
+    recent = lambda ts: (parse_iso(ts) or week) > week
+    added = [it for it in store.items.values() if recent(it.get("added"))]
+    # 被预筛挡掉的只记在 seen 里；进了 items 的不在 seen 里
+    dropped = sum(1 for iid, ts in store.seen.items() if iid not in store.items and recent(ts))
+    digests = sum(1 for k in ("daily", "weekly") for d in store.digests.get(k, []) if recent(d.get("created")))
+    return {"sources": sum(1 for s in sources if s.get("enabled", True)), "collected_7d": len(added) + dropped,
+            "kept_7d": len(added), "selected_7d": sum(1 for it in added if it.get("status") == "selected"),
+            "digests_7d": digests}
+
+
+HOT_MAX = 30
+HOT_HISTORY_H = 48
+TREND_GAP_H = 6
+
+
+def write_hot(heat: dict, by_id: dict, visible_ids: set, now) -> None:
+    """热点榜：按事件热度排名，并和约 6 小时前的排名比较，标出“新”和“上升”。
+    历史排名就存在上一次发布的 hot.json 里（滚动保留 48 小时），不需要额外的数据文件。"""
+    path = SITE_DATA_DIR / "hot.json"
+    prev = read_json(path, {}) if path.exists() else {}
+    history = [h for h in prev.get("history", []) if (parse_iso(h.get("t")) or now) > now - timedelta(hours=HOT_HISTORY_H)]
+    base = next((h for h in reversed(history) if (parse_iso(h["t"]) or now) <= now - timedelta(hours=TREND_GAP_H)), None)
+    ranked = sorted(((cid, v) for cid, v in heat.items() if cid in visible_ids and v["hot"] > 0),
+                    key=lambda x: x[1]["hot"], reverse=True)[:HOT_MAX]
+    rows = []
+    for rank, (cid, v) in enumerate(ranked, 1):
+        members = [iid for iid, it in by_id.items() if it.get("cluster", iid) == cid]
+        trend = ""
+        if (now - v["first"]).total_seconds() <= TREND_GAP_H * 3600:
+            trend = "new"  # 首报 6 小时内
+        elif base is not None:
+            old = [base["ranks"][m] for m in members if m in base["ranks"]]
+            old_src = [base.get("sources", {}).get(m, 0) for m in members]
+            if not old:
+                trend = "new"  # 6 小时前还不在榜上
+            elif min(old) - rank >= 2 or v["sources"] > max(old_src or [0]):
+                trend = "up"  # 名次上升 2 位以上，或者有新来源加入讨论
+        rows.append({"id": cid, "rank": rank, "hot": v["hot"], "sources": v["sources"], "first": iso(v["first"]), "trend": trend})
+    snap = {"t": iso(now), "ranks": {r["id"]: r["rank"] for r in rows}, "sources": {r["id"]: r["sources"] for r in rows}}
+    if not history or (parse_iso(history[-1]["t"]) or now) <= now - timedelta(minutes=30):
+        history.append(snap)
+    write_json(path, {"generated": iso(now), "window_h": cluster.HOT_WINDOW_H, "half_life_h": cluster.HOT_HALF_LIFE_H,
+                      "compare_h": TREND_GAP_H, "list": rows, "history": history}, compact=True)
 
 
 def write_extras(store, cfg: dict, visible: list[dict], items: list[dict], visible_ids: set, defs: list[dict], now) -> None:
@@ -192,6 +241,7 @@ LLMS_TXT = """# {name}
 - api/latest.json：最新 120 条精选（中文标题、摘要、领域、分数、主题、链接）和最新一期日报
 - data/items.json：全部在展条目（列表字段）
 - data/details/<id 首字符>.json：条目详情（中文精读、速读卡、资源、相关推荐）
+- data/hot.json：热点榜（按事件热度排名，标出新上榜和上升）
 - data/digests.json：日报与周报（Markdown）
 - data/topics.json：主题与每周主题研判
 - data/research.json：横纵专题研究报告

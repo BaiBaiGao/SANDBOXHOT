@@ -377,7 +377,7 @@ class TestPipeline(Base):
         for k in range(4):
             st.items[f"i{k}"] = {"id": f"i{k}", "url": f"https://e.com/{k}", "title": f"T{k}", "status": "selected", "score": 70,
                                  "domain": "academic", "source_name": "S", "source_id": "s", "added": iso(tz_yesterday.replace(hour=4)),
-                                 "published": iso(tz_yesterday)}
+                                 "published": iso(tz_yesterday), "text": "An agent-based simulation study of crowd evacuation. " * 3}
         llm = LLM(self.cfg, Budget(self.cfg, path=self.ledger), enabled=False, log=lambda *a: None)
         run_digests(st, self.cfg, llm, log=lambda *a: None)
         self.assertTrue(any(not d["ai"] for d in st.digests["daily"]))
@@ -434,6 +434,30 @@ class TestCluster(unittest.TestCase):
         self.assertNotEqual(by["d"]["cluster"], by["a"]["cluster"])   # 不同事件不合并
         self.assertNotEqual(by["p1"]["cluster"], by["a"]["cluster"])  # 论文不按专有名词规则合并
         self.assertEqual(cluster.split_publisher(by["a"]), ("Plurai Raises $13M Seed to Stress-Test AI Agents in Digital Twin Simulations", "BigGo Finance"))
+
+
+class TestHotAndDigest(unittest.TestCase):
+    def test_hot_counts_each_source_once(self):
+        from sandboxhot import cluster
+        now = now_utc()
+        mk = lambda iid, src, h, **kw: {"id": iid, "cluster": "e", "source_id": src, "score": 50, "is_lead": iid == "a",
+                                        "added": iso(now - timedelta(hours=h)), "published": iso(now - timedelta(hours=h)), **kw}
+        one = cluster.hot_scores([mk("a", "s1", 0)], now)["e"]["hot"]
+        same_src = cluster.hot_scores([mk("a", "s1", 0), mk("b", "s1", 0), mk("c", "s1", 0)], now)["e"]
+        self.assertEqual(same_src["hot"], one)          # 同一来源发三篇只算一次
+        self.assertEqual(same_src["sources"], 1)
+        two = cluster.hot_scores([mk("a", "s1", 0), mk("b", "s2", 0)], now)["e"]["hot"]
+        self.assertAlmostEqual(two, 2 * one)             # 两个独立来源
+        old = cluster.hot_scores([mk("a", "s1", cluster.HOT_HALF_LIFE_H)], now)["e"]["hot"]
+        self.assertAlmostEqual(old, one / 2, places=1)   # 过一个半衰期减半
+        self.assertEqual(cluster.hot_scores([mk("a", "s1", 0, backfill=True)], now), {})  # 回填不进热度
+
+    def test_rule_digest_skips_empty_sections(self):
+        from sandboxhot.digest import _rule_digest
+        md = _rule_digest([{"domain": "academic", "title": "T", "url": "https://e.com"}], "日报")
+        self.assertIn("学术前沿", md)
+        self.assertNotIn("落地应用", md)
+        self.assertNotIn("本期暂无", md)
 
 
 if __name__ == "__main__":

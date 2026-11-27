@@ -113,12 +113,54 @@ def assign(items: list[dict], window_days: int = 10, threshold: float = 0.5, ext
             m["is_lead"] = m is lead
 
 
-def hot_score(it: dict, half_life_hours: float = 72) -> float:
-    now = now_utc()
-    t = parse_iso(it.get("added")) or now
-    pub = parse_iso(it.get("published")) or t
-    ref = pub if pub <= now else t  # 按发布时间衰减：回填的旧论文不会冒充热点
-    age_h = max(0.0, (now - ref).total_seconds() / 3600)
-    boost = 1 + 0.35 * (it.get("cluster_size", 1) - 1)
-    weight = {"academic": 1.1, "application": 1.1}.get(it.get("domain"), 1.0)
-    return round(it.get("score", 0) * boost * weight * math.pow(0.5, age_h / half_life_hours), 2)
+# AIHOT 用 48 小时窗口、24 小时减半。本站每天只新增十条左右，论文的发布时间又常比抓到时早一两天，
+# 照搬的话榜上只剩两三条，所以放宽到 7 天窗口、48 小时减半；“每个独立来源只算一次”的规则不变。
+HOT_WINDOW_H = 168
+HOT_HALF_LIFE_H = 48
+STALE_DAYS = 10       # 发布超过 10 天的旧内容（回填论文等）不进热度
+
+
+def hot_scores(items: list[dict], now=None, window_h: float = HOT_WINDOW_H, half_life_h: float = HOT_HALF_LIFE_H) -> dict[str, dict]:
+    """按事件算热度（参考 AIHOT）：同一事件在窗口内每个独立来源只算一次，按首次报道时间衰减，
+    再乘代表条目的分数。一家媒体发十篇也只算一次，重复抓取不会多算。
+
+    返回 {cluster_id: {"hot", "sources"（窗口内独立来源数）, "first"（最早报道时间）}}，并把 hot 写回每个成员。"""
+    now = now or now_utc()
+    groups: dict[str, list[dict]] = {}
+    for it in items:
+        groups.setdefault(it.get("cluster", it["id"]), []).append(it)
+    out: dict[str, dict] = {}
+    for cid, members in groups.items():
+        first_by_pub: dict[str, object] = {}
+        for m in members:
+            if m.get("backfill"):
+                continue
+            t = parse_iso(m.get("added")) or now
+            pub = parse_iso(m.get("published"))
+            if pub and pub <= now and (now - pub) > timedelta(days=STALE_DAYS):
+                continue
+            if pub and pub < t:
+                t = pub  # 用最早的报道时间：晚抓到的旧消息不冒充新热点
+            k = publisher_of(m)
+            if k not in first_by_pub or t < first_by_pub[k]:
+                first_by_pub[k] = t
+        heat, n, first = 0.0, 0, None
+        for t in first_by_pub.values():
+            age_h = max(0.0, (now - t).total_seconds() / 3600)
+            if age_h > window_h:
+                continue
+            heat += math.pow(0.5, age_h / half_life_h)
+            n += 1
+            first = t if first is None or t < first else first
+        lead = next((m for m in members if m.get("is_lead", True)), members[0])
+        hot = round(lead.get("score", 0) * heat, 2)
+        for m in members:
+            m["hot"] = hot
+        if n:
+            out[cid] = {"hot": hot, "sources": n, "first": first}
+    return out
+
+
+def hot_score(it: dict) -> float:
+    """单条的热度（单独调用时按只有它一个来源算）。"""
+    return hot_scores([dict(it, cluster=it["id"])]).get(it["id"], {}).get("hot", 0.0)
