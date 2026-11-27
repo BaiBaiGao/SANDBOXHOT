@@ -5355,7 +5355,7 @@
    "cluster": "0c62bc20e5192e24",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.42,
+   "hot": 19.2,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -7748,7 +7748,7 @@
    "cluster": "13a0c3ba04fb07c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.87,
+   "hot": 20.64,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -16307,7 +16307,7 @@
    "cluster": "29a1de3b43f527d5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.52,
+   "hot": 8.43,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -23565,7 +23565,7 @@
    "cluster": "3c8e24170a0e4ee2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 22.35,
+   "hot": 22.1,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -26642,7 +26642,7 @@
    "cluster": "436c3f3208323140",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.33
+   "hot": 13.18
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -29192,7 +29192,7 @@
    "cluster": "4b21b4815c9b2d5c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.69,
+   "hot": 16.51,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -29260,7 +29260,7 @@
    "cluster": "4b55c71e9cce2644",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.7,
+   "hot": 17.51,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -34482,7 +34482,7 @@
    "cluster": "56532dce8567fc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.76,
+   "hot": 18.55,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -40120,7 +40120,7 @@
    "cluster": "65a6177cefba9d11",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 28.23,
+   "hot": 27.92,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -49944,7 +49944,7 @@
    "cluster": "7db283e3aa9596cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.83,
+   "hot": 9.72,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -52601,7 +52601,7 @@
    "cluster": "84b21af4658669d8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.54,
+   "hot": 14.37,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -53354,7 +53354,7 @@
    "cluster": "87097a060214af63",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.29,
+   "hot": 20.07,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -60768,7 +60768,7 @@
    "cluster": "971375198b0419b1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.97,
+   "hot": 11.84,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -61309,7 +61309,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.44,
+   "hot": 8.35,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -72419,7 +72419,7 @@
    "cluster": "b1a8d7dbad71f0b4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.4
+   "hot": 5.34
   },
   "b1f9e7823c80878f": {
    "id": "b1f9e7823c80878f",
@@ -73593,7 +73593,7 @@
    "cluster": "b4d1668269dc5edb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.91,
+   "hot": 16.73,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -76093,7 +76093,7 @@
    "cluster": "bcbc6e9ed72f9565",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.19,
+   "hot": 24.91,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -79633,7 +79633,7 @@
    "cluster": "c5a70dd0609bfa7e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.51
+   "hot": 27.21
   },
   "c5ea418997695a4e": {
    "id": "c5ea418997695a4e",
@@ -79735,7 +79735,7 @@
    "cluster": "c5fad41f7b61d2ec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.54
+   "hot": 9.44
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -82125,7 +82125,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.73
+   "hot": 13.58
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -83969,7 +83969,7 @@
    "cluster": "d12a4824156e8dec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.41,
+   "hot": 8.31,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -90801,7 +90801,7 @@
    "cluster": "e1bea160dec662bd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 37.93
+   "hot": 37.51
   },
   "e1cc72e8f9ed637e": {
    "id": "e1cc72e8f9ed637e",
@@ -94020,7 +94020,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.55,
+   "hot": 10.43,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -94465,7 +94465,7 @@
    "cluster": "eb23f0e3187b6aeb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 34.86,
+   "hot": 34.47,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T09:40:49Z",
    "relevant": true,
@@ -97776,7 +97776,7 @@
    "cluster": "f22c13987bf9ec77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.03
+   "hot": 12.89
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -99979,7 +99979,7 @@
    "cluster": "f88b32686a7aa762",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.28,
+   "hot": 20.06,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
