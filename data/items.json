@@ -820,8 +820,8 @@
     "语言智能体",
     "沙盒环境"
    ],
-   "title_zh": "TravelPlanner 基准：语言智能体做真实旅行规划，GPT-4 成功率仅 0.6%",
-   "summary_zh": "作者构建 TravelPlanner 沙盒，提供近 400 万条数据记录的工具和 1225 条人工整理的规划意图与参考方案，评测语言智能体的多约束规划能力。结果显示当前智能体难以胜任，GPT-4 成功率只有 0.6%，常见失败是偏离任务、用错工具、丢失多重约束。",
+   "title_zh": "TravelPlanner：旅行规划基准测试显示 GPT-4 成功率仅 0.6%",
+   "summary_zh": "作者提出 TravelPlanner，一个面向真实旅行规划的基准，提供沙盒环境、可查询近 400 万条数据的工具集和 1225 条人工标注的规划意图与参考方案。评测结果显示现有语言智能体难以胜任这类复杂规划任务，GPT-4 的成功率只有 0.6%。失败主要出在偏离任务、选错工具和忽略多重约束上。",
    "cluster": "01fdaa0fb2ad2630",
    "cluster_size": 1,
    "is_lead": true,
@@ -830,8 +830,8 @@
    "triaged": "2026-11-21T10:00:18Z",
    "relevant": true,
    "topics": [
-    "eval",
-    "world-env"
+    "world-env",
+    "eval"
    ],
    "applied": false
   },
@@ -1007,8 +1007,8 @@
     "应急疏散",
     "公共安全"
    ],
-   "title_zh": "多智能体模拟美国校园枪击案：枪械检测系统把疏散率从 16.6% 提到 66.6%",
-   "summary_zh": "作者用多智能体模型模拟教学楼内枪击事件，在 100 名学生、三种楼层布局下共跑 48 次仿真。加入枪械检测系统后六分钟内疏散率从 16.6% 升至 66.6%，平均伤亡率从 24.0% 降到 12.2%。",
+   "title_zh": "多智能体仿真评估校园枪击检测系统：疏散率从16.6%升至66.6%",
+   "summary_zh": "作者构建了一个校园枪击场景的多智能体仿真模型，用来估计伤亡率和疏散效率，并评估枪声检测系统的作用。在100名学生的模拟环境中，装上该系统后疏散率从16.6%提高到66.6%，六分钟内平均伤亡率从24.0%降到12.2%。",
    "cluster": "02810f49d1f1f23a",
    "cluster_size": 1,
    "is_lead": true,
@@ -1017,13 +1017,13 @@
    "triaged": "2026-11-20T14:13:42Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
-    "policy"
+    "social-sim",
+    "eval"
    ],
    "score1": 58,
    "score2": 72,
    "model2": "Qwen3.8-27B",
-   "applied": false
+   "applied": true
   },
   "030b5e5da1112309": {
    "id": "030b5e5da1112309",
@@ -1906,8 +1906,8 @@
     "能源政策",
     "混合框架"
    ],
-   "title_zh": "LLM 辅助行为与情景扩展，改进爱尔兰奶牛场光伏采用仿真",
-   "summary_zh": "论文不直接用 LLM 替代采用模型，而是在已校准的智能体模型中加入有界的行为规则（保守、平衡、乐观三档）和规则校验的情景设定，保留原有技术经济机制。多政策、蒙特卡洛世界与随机种子下结果稳定且经济上合理。",
+   "title_zh": "用大模型辅助设定行为规则与情景，改进爱尔兰奶牛场光伏采纳的智能体仿真",
+   "summary_zh": "作者提出一个混合框架，不直接用大模型推理替代采纳模型，而是让大模型辅助生成有界的行为准则和结构化情景，嵌入到已校准的爱尔兰奶牛场光伏采纳智能体模型中。在多种政策设置、蒙特卡洛世界和随机种子下，行为采纳量比对应逻辑回归情形最多提高约 13%，且结果保持有界和单调。",
    "cluster": "04fce0395d5d8b0c",
    "cluster_size": 1,
    "is_lead": true,
@@ -1917,8 +1917,7 @@
    "relevant": true,
    "topics": [
     "policy",
-    "economy",
-    "eval"
+    "economy"
    ],
    "score1": 64,
    "score2": 85,
@@ -5355,7 +5354,7 @@
    "cluster": "0c62bc20e5192e24",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.2,
+   "hot": 17.84,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -6123,8 +6122,8 @@
     "合成数据",
     "视频理解"
    ],
-   "title_zh": "HIPPO-Video 用大模型模拟观看历史，构建个性化视频高光数据集",
-   "summary_zh": "作者用基于大模型的用户模拟器生成反映不同偏好的观看历史，建成 HIPPO-Video 数据集，含 2,040 组观看历史与显著性分数对，覆盖 170 个类别的 20,400 个视频，并据此训练 HiPHer 预测分段显著性。",
+   "title_zh": "HIPPO-Video：用大模型模拟观看历史构建个性化视频高亮数据集",
+   "summary_zh": "作者用基于大语言模型的用户模拟器生成逼真的观看历史，构建了包含 2,040 对（观看历史、显著性分数）的个性化视频高亮数据集 HIPPO-Video，覆盖 170 个语义类别的 20,400 个视频。他们还提出 HiPHer 方法，用这些观看历史预测按用户偏好条件的片段级显著性分数，实验中超过了通用和基于查询的方法。",
    "cluster": "0fc6fd9e1ddf0bb2",
    "cluster_size": 1,
    "is_lead": true,
@@ -7748,7 +7747,7 @@
    "cluster": "13a0c3ba04fb07c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.64,
+   "hot": 19.17,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -16307,7 +16306,7 @@
    "cluster": "29a1de3b43f527d5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.43,
+   "hot": 7.83,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -16794,8 +16793,8 @@
     "多智能体",
     "囚徒困境"
    ],
-   "title_zh": "Social Particle Swarm中给LLM智能体加记忆，合作随记忆变长而崩塌",
-   "summary_zh": "研究把Social Particle Swarm模型里的规则智能体换成带Big Five人格分数和不同记忆长度的Gemini 2.0 Flash智能体，让它们在二维空间与邻居玩囚徒困境。记忆长度是关键参数，哪怕最小记忆也显著抑制合作，系统从稳定合作簇走向簇的周期形成与崩塌，最终散为背叛。",
+   "title_zh": "用 LLM 智能体替换规则智能体后，记忆长度成为合作崩溃的关键参数",
+   "summary_zh": "名古屋大学团队把社会粒子群模型里的规则智能体换成带大五人格的 Gemini 2.0 Flash 智能体，发现哪怕最短的记忆也会大幅压制合作，记忆越长合作越趋于消散。人格特质与行为的关联部分符合真人实验结果。情感分析显示模型对记忆的解读随长度增加越来越负面。",
    "cluster": "2ac92516af93b3e1",
    "cluster_size": 1,
    "is_lead": true,
@@ -16805,7 +16804,6 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "human-behavior",
     "generative-agents"
    ],
    "score1": 64,
@@ -23565,7 +23563,7 @@
    "cluster": "3c8e24170a0e4ee2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 22.1,
+   "hot": 20.53,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -25241,8 +25239,8 @@
     "城市仿真",
     "LLM 智能体"
    ],
-   "title_zh": "AgentMob 免训练 LLM 智能体做个体出行预测，模糊样本上 Acc@1 从 30.65% 提到 48.62%",
-   "summary_zh": "作者把下一位置预测表述为证据受控的决策过程：规律性强的样本走快速路径，信号弱或冲突时迭代调用近期轨迹、历史行为、停留-移动概率和地理证据等工具。在三个出行数据集上，GPT-5.4 在 BW 上 Acc@1 达 71.42%，YJMob100K 33.14%，Shanghai ISP 33.50%；BW 非快速路径样本上，LLM 控制器把 Acc@1 从同工具统计基线的 30.65% 提到 48.62%。",
+   "title_zh": "AgentMob：免训练 LLM 智能体用自适应取证做个体移动预测",
+   "summary_zh": "作者提出 AgentMob，一个免训练的 LLM 智能体框架，把下一位置预测当作自适应证据决策问题。常规情况走基于历史规律性的快速路径，模糊情况则迭代调用工具，综合近期轨迹、历史行为、停留-移动概率和地理证据。在三个移动数据集上，它在免训练 LLM 方法中整体表现最好，GPT-5.4 在 BW 上 Acc@1 达 71.42%。",
    "cluster": "4051d969919b8423",
    "cluster_size": 1,
    "is_lead": true,
@@ -25257,7 +25255,7 @@
    "score1": 55,
    "score2": 75,
    "model2": "Qwen3.8-27B",
-   "applied": false
+   "applied": true
   },
   "40578ca089704cb6": {
    "id": "40578ca089704cb6",
@@ -26011,8 +26009,8 @@
     "框架效应",
     "数据集"
    ],
-   "title_zh": "FrameRef 数据集与微调稳定性分析，让 LLM 智能体仿真只偏移目标行为",
-   "summary_zh": "研究指出微调 LLM 做智能体仿真会带来偏差漂移和基线行为改变，损害实验效度。作者构建 FrameRef 数据集，包含五个维度（权威、共识、情绪、煽情、声望）上语义等价但表述不同的声明，并给出识别“稳定区间”的方法，使错误接受率可定向偏移而整体准确率与校准保持不变。",
+   "title_zh": "FrameRef 数据集与稳定性微调方法：让语言模型只在特定框架下改变判断",
+   "summary_zh": "作者研究监督微调如何在不破坏模型整体行为的前提下，诱导局部决策偏移。他们构建了含五种表面框架维度的大规模等义声明数据集 FrameRef，经人工验证框架确实影响声明接受度，并提出识别各模型稳定性区间的方法。序列暴露实验显示小幅框架性偏移在反馈下会累积放大，去掉反馈后基本消失。",
    "cluster": "41d4231210b5bff0",
    "cluster_size": 1,
    "is_lead": true,
@@ -26021,8 +26019,9 @@
    "triaged": "2026-11-19T17:31:14Z",
    "relevant": true,
    "topics": [
-    "eval",
-    "human-behavior"
+    "social-sim",
+    "human-behavior",
+    "eval"
    ],
    "score1": 55,
    "score2": 75,
@@ -26147,8 +26146,8 @@
     "智能家居",
     "合成数据"
    ],
-   "title_zh": "用 LLM 生成居民人格，在模拟智能家居中产出可执行的设备交互日程",
-   "summary_zh": "作者提出用 LLM 生成多样化的居民人格，让其在模拟智能家居环境中活动，输出可在物理测试床上执行的结构化设备交互日程，用于替代成本高、涉及隐私的真实家庭长期观测。论文给出五维家庭配置框架和多阶段生成流程，目前是可行性验证。",
+   "title_zh": "用大模型人格生成可执行的智能家居住户行为日程",
+   "summary_zh": "作者提出用 LLM 生成多样化的住户人格，让它们与模拟智能家居交互，产出可在物理测试平台上执行的设备交互日程。论文给出了跨五个社会技术维度的家庭配置框架和多阶段 LLM 流水线，并用概念验证展示了可行性，目标是替代侵入式的真实家庭数据采集。",
    "cluster": "41ecfbfd86d236d5",
    "cluster_size": 1,
    "is_lead": true,
@@ -26158,7 +26157,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "world-env"
+    "urban"
    ],
    "score1": 55,
    "score2": 72,
@@ -26642,7 +26641,7 @@
    "cluster": "436c3f3208323140",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.18
+   "hot": 12.25
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -29138,8 +29137,8 @@
     "视频生成",
     "动作控制"
    ],
-   "title_zh": "Pandora：可用自然语言动作控制的通用世界模型",
-   "summary_zh": "Pandora 把预训练 7B 大模型与预训练视频模型结合，用自回归加扩散的方式生成视频来模拟世界状态，并支持用自由文本动作实时控制。作者展示了室内外、自然与城市、人与机器人等多领域的生成结果，只需轻量微调。",
+   "title_zh": "Pandora：用自然语言动作实时控制视频世界状态、迈向通用世界模型的混合自回归-扩散模型",
+   "summary_zh": "Pandora 把一个 7B 预训练语言模型和一个预训练视频模型组合成混合自回归-扩散架构，能生成视频形式的世界状态，并用自由文本动作实时控制仿真走向。它靠大规模预训练加指令微调获得跨领域通用性、视频一致性和可控性，无需从零训练。",
    "cluster": "4aeb53e4a0d79498",
    "cluster_size": 1,
    "is_lead": true,
@@ -29192,7 +29191,7 @@
    "cluster": "4b21b4815c9b2d5c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.51,
+   "hot": 15.33,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -29260,7 +29259,7 @@
    "cluster": "4b55c71e9cce2644",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.51,
+   "hot": 16.26,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -30372,8 +30371,8 @@
     "推荐系统",
     "画像优化"
    ],
-   "title_zh": "DGDPO：用诊断引导的动态画像优化提升 LLM 用户模拟器保真度",
-   "summary_zh": "针对现有 LLM 用户模拟器画像构建静态、交互单轮的问题，作者提出 DGDPO 框架，在每轮优化中用诊断模块定位画像缺陷、用治疗模块生成修正建议，并支持多轮推荐-反馈交互。材料未给出具体实验数字。",
+   "title_zh": "DGDPO：用诊断加治疗循环动态优化 LLM 用户画像，让推荐系统仿真更贴近真人",
+   "summary_zh": "作者提出 DGDPO 框架，解决 LLM 用户模拟器的两个问题：画像静态单步构建不准、交互只有单轮不真实。框架在每轮循环里先用诊断模块找出画像缺陷，再用治疗模块生成针对性修改建议。它还首次把用户画像与序列推荐器结合，让两者在多轮交互中互相适应。三个真实数据集上的实验验证了有效性。",
    "cluster": "4d736c9334603d12",
    "cluster_size": 1,
    "is_lead": true,
@@ -31083,8 +31082,8 @@
     "多智能体",
     "对话实验"
    ],
-   "title_zh": "人格锚定社会仿真：双方都高宜人性的对话组达成共同目标概率 62%，都低宜人性仅 6%",
-   "summary_zh": "作者沿用 CHARISMA 框架，用电影角色和公众人物做心理锚定的多 LLM 智能体，跑了 1010 场双人对话，考察宜人性组合对互动结果的影响。同高宜人性配对成功率是同低宜人性配对的 10 倍（62% 对 6%），合作策略选择只能部分解释这一差异。",
+   "title_zh": "用电影角色做人格锚定：宜人性组合决定多智能体社交模拟的成败",
+   "summary_zh": "作者改造 CHARISMA 框架，用知名电影角色和公众人物作为有人格基础的 LLM 智能体，模拟了 1010 段双人对话。结果发现双方宜人性组合与共同目标达成率单调相关：双高宜人组合成功率 62%，双低组合只有 6%，相差十倍。重复模拟的一致性 ICC 达 0.89。",
    "cluster": "4f0a1c29c09b7899",
    "cluster_size": 1,
    "is_lead": true,
@@ -31093,8 +31092,9 @@
    "triaged": "2026-11-19T19:09:04Z",
    "relevant": true,
    "topics": [
+    "social-sim",
     "human-behavior",
-    "social-sim"
+    "generative-agents"
    ],
    "score1": 64,
    "score2": 88,
@@ -31734,8 +31734,8 @@
     "大模型工具调用",
     "开源框架"
    ],
-   "title_zh": "Open-TI 用增强语言模型打通交通分析全流程，从取地图数据到复杂仿真执行",
-   "summary_zh": "Open-TI 让预训练大模型在对话中调用外部交通分析包，号称首个能从零完成完整交通分析的方法，覆盖地图数据获取到复杂仿真执行。目标是弥合交通领域学术与产业之间的工具使用鸿沟。",
+   "title_zh": "Open-TI：用增强语言模型打通从地图获取到交通仿真执行的全流程交通分析",
+   "summary_zh": "Open-TI 是一个基于大语言模型的交通智能系统，能从零开始完成交通分析，覆盖从地图数据获取到在复杂仿真中执行的完整流程。它还能训练和调整交通信号控制策略、探索需求优化，并设计了 Open-TI 与控制智能体 ChatZero 之间的智能体间通信模式，让大模型直接充当控制智能体。",
    "cluster": "5071f896f798eb83",
    "cluster_size": 1,
    "is_lead": true,
@@ -34482,7 +34482,7 @@
    "cluster": "56532dce8567fc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.55,
+   "hot": 17.23,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -36848,8 +36848,8 @@
     "问卷模拟",
     "评测方法"
    ],
-   "title_zh": "语义相似度评分纠正硅采样模式坍缩，提升 LLM 模拟问卷的分布保真度",
-   "summary_zh": "作者认为硅采样的低方差模式坍缩源于 LLM 不擅长直接生成数值，改为先让模型输出文本回答，再用文本嵌入映射到数值量表。在政治态度问卷上，该方法提高了合成回答分布的保真度，且需要校准的参数很少。",
+   "title_zh": "用语义相似度评分修正硅基抽样的模式坍缩",
+   "summary_zh": "作者发现用大模型做问卷（硅基抽样）时回答分布方差过低，原因是模型难以直接生成数值。他们提出语义相似度评分：只让模型输出文本回答，再用文本嵌入映射到数值量表。该方法提高了政治态度问卷分布的保真度，且需要校准的参数很少。",
    "cluster": "5c674a806a042351",
    "cluster_size": 1,
    "is_lead": true,
@@ -40120,7 +40120,7 @@
    "cluster": "65a6177cefba9d11",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.92,
+   "hot": 25.93,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -41154,8 +41154,8 @@
     "评测基准",
     "LLM"
    ],
-   "title_zh": "用人类职业司机访谈数据构建 LLM 驱动的驾驶智能评测框架",
-   "summary_zh": "作者通过自然驾驶实验和驾驶后行为评价访谈，构建人类职业司机与乘客的自然语言评测数据集，据此开发 LLM 驱动的驾驶行为评测框架，在 CARLA 中做模拟实验并用人工评估佐证。",
+   "title_zh": "用大模型评估驾驶智能：基于真人驾驶访谈数据构建的评测框架",
+   "summary_zh": "作者针对自动驾驶缺乏综合智能评测方法的问题，通过自然驾驶实验和驾驶后行为评估访谈，构建了人类职业司机与乘客的自然语言评估数据集，并据此开发了一个由大模型驱动的驾驶评估框架。该框架在 CARLA 城市交通模拟器中通过仿真实验验证，并进一步用人类评估加以印证。",
    "cluster": "6853be73867b994e",
    "cluster_size": 1,
    "is_lead": true,
@@ -41164,8 +41164,9 @@
    "triaged": "2026-11-21T01:39:10Z",
    "relevant": true,
    "topics": [
+    "urban",
     "eval",
-    "urban"
+    "human-behavior"
    ],
    "score1": 55,
    "score2": 75,
@@ -48440,8 +48441,8 @@
     "LLM智能体",
     "任务编排"
    ],
-   "title_zh": "GraphTrafficGPT 用图结构协调多个 LLM 智能体做交通管理，token 消耗降 50.2%",
-   "summary_zh": "GraphTrafficGPT 把任务和依赖关系表示为有向图的节点和边，由 Brain Agent 拆解用户查询、构建依赖图并调度数据检索、分析、可视化和仿真等专用智能体。实验显示 token 消耗降低 50.2%，平均响应延迟也下降。",
+   "title_zh": "GraphTrafficGPT：用图结构协调多个 LLM 智能体做交通管理，token 消耗降五成",
+   "summary_zh": "作者提出 GraphTrafficGPT，把交通管理任务及其依赖关系表示成有向图，由一个 Brain Agent 分解用户查询、构建依赖图并调度多个专门智能体并行执行。与 TrafficGPT 相比，token 消耗降低 50.2%，平均响应延迟降低 19.0%，并发多查询处理效率提升最高 23.0%。",
    "cluster": "7a3eeda26c88c283",
    "cluster_size": 1,
    "is_lead": true,
@@ -49944,7 +49945,7 @@
    "cluster": "7db283e3aa9596cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.72,
+   "hot": 9.03,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -51511,8 +51512,8 @@
     "强化学习",
     "推荐系统"
    ],
-   "title_zh": "WMG-RL：用用户参与世界模型做反事实模拟，给推荐策略发奖励",
-   "summary_zh": "arXiv 论文提出 WMG-RL，用一个冻结的用户参与世界模型 UEWM 在真实用户曝光前提供奖励监督。UEWM 把推荐物品当作动作、用户异构反馈当作观测，从参与历史推断用户特定动态；同一历史下并行预测多个候选物品的反馈并转成稠密奖励，实验称 1.7B 学生策略可追平更大模型。",
+   "title_zh": "用用户参与世界模型做反事实仿真，1.7B 小模型策略在推荐任务上追平更大 LLM",
+   "summary_zh": "作者提出 WMG-RL 框架，用一个冻结的用户参与世界模型（UEWM）在真实曝光前提供奖励监督。下游策略对同一历史提出多个候选推荐项，UEWM 并行预测用户反馈并转成稠密奖励。实验显示该奖励信号跨领域可靠可迁移，1.7B 的学生策略在推荐任务上追平或超过更大的 LLM。",
    "cluster": "820b760474ac0dbd",
    "cluster_size": 1,
    "is_lead": true,
@@ -51522,7 +51523,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "economy"
+    "world-env"
    ],
    "score1": 65,
    "score2": 65,
@@ -52601,7 +52602,7 @@
    "cluster": "84b21af4658669d8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.37,
+   "hot": 13.35,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -53354,7 +53355,7 @@
    "cluster": "87097a060214af63",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.07,
+   "hot": 18.64,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -55293,8 +55294,8 @@
     "时间约束",
     "评测"
    ],
-   "title_zh": "arXiv 发布 TimeArena 文本仿真环境，考察 LLM 智能体的时间感知多任务能力",
-   "summary_zh": "TimeArena 在文本仿真中加入动作依赖、单步耗时以及智能体和物体占用等时间约束，覆盖烹饪、家务和实验室共 30 个真实任务。实验显示包括 GPT-4 在内的模型在多任务效率上仍落后于人类。",
+   "title_zh": "TimeArena：引入时间感知的文本仿真环境，测试 LLM 智能体多任务并行能力",
+   "summary_zh": "作者构建了 TimeArena，一个带时间约束的文本仿真环境，智能体要在烹饪、家务和实验室三类共 30 个真实任务中尽快完成多个任务，可以并行处理以节省时间。实验显示，包括 GPT-4 在内的最强模型在高效多任务处理上仍落后于人类，说明语言智能体需要更强的时间感知能力。",
    "cluster": "8b0536dbeacf530a",
    "cluster_size": 1,
    "is_lead": true,
@@ -56404,8 +56405,8 @@
     "自动驾驶",
     "闭环测试"
    ],
-   "title_zh": "PCASim：LLM按需生成城市交通对抗场景，闭环训练自动驾驶智能体",
-   "summary_zh": "作者用规则过滤开源数据集构建对抗行为知识库，由LLM融合知识、数据与对抗驱动方法，按用户需求生成安全关键的交通场景，再用强化学习训练各类车辆行为，形成闭环测试与训练的共同演化。实验称领域特定语言生成准确率提高12%。",
+   "title_zh": "PCASim：用大模型生成可提示的城市交通对抗场景并闭环训练安全智能体",
+   "summary_zh": "PCASim 把对抗场景生成和安全智能体训练放进同一个闭环，让两者共同进化。它从开源数据集经规则筛选构建对抗行为知识库，用大模型融合知识、数据和对抗三种驱动方式，按用户需求生成安全关键交通场景。实验显示领域语言生成准确率提升 12%，新场景转换成功率提升 8%，避障能力提升 30%。",
    "cluster": "8e0615b62e62fb84",
    "cluster_size": 1,
    "is_lead": true,
@@ -60456,8 +60457,8 @@
     "互动叙事",
     "生成式智能体"
    ],
-   "title_zh": "PANGeA：按设计师设定用 LLM 生成回合制 RPG 剧情与带大五人格的 NPC",
-   "summary_zh": "PANGeA 依据游戏设计师的高层设定，用 LLM 生成关卡设定、关键道具和 NPC，NPC 按大五人格模型表现性格。系统用 LLM 校验玩家自由输入，把回复约束在剧情范围内，并配自定义记忆系统提供上下文。",
+   "title_zh": "PANGeA：用大模型按设计师设定为回合制 RPG 生成叙事与 NPC",
+   "summary_zh": "PANGeA 提出了一套结构化方法，让大模型在游戏设计师的高层设定约束下，为回合制 RPG 生成关卡数据、关键道具和 NPC，并支持玩家与环境的自由文本互动。NPC 的回复带 Big 5 人格偏向。作者用浏览器版 GPT demo 和 Unity demo 两个版本做了实证研究和消融测试，结果显示即使玩家输入多变且不可预测，生成内容仍能保持与程序化叙事一致。",
    "cluster": "968038404dfc4a32",
    "cluster_size": 1,
    "is_lead": true,
@@ -60467,7 +60468,7 @@
    "relevant": true,
    "topics": [
     "game",
-    "generative-agents"
+    "framework"
    ],
    "score1": 58,
    "score2": 75,
@@ -60768,7 +60769,7 @@
    "cluster": "971375198b0419b1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.84,
+   "hot": 11.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -61074,8 +61075,8 @@
     "数字孪生",
     "多智能体协调"
    ],
-   "title_zh": "LDT-Coord：用轻量数字孪生协调异构 LLM 具身智能体，减少对话开销",
-   "summary_zh": "每个智能体先独立选择动作，把动作决策和对共享资源的结构化时间约束上报给数字孪生服务器，由服务器统一协调，从而把协调效果与自然语言推理能力解耦。目标是解决多轮对话开销随团队规模增长、能力异构和协商延迟三个问题。",
+   "title_zh": "LDT-Coord：用轻量数字孪生协调异构 LLM 具身智能体，通信开销降 70 倍以上",
+   "summary_zh": "作者提出 LDT-Coord，一个基于轻量数字孪生的网络化协调框架。各智能体把动作决策和共享资源上的时间约束上报给 DT 服务器，由免训练的规则编排器解决冲突，从而把协调质量与自然语言推理能力解耦。仿真显示任务成功率与常规方法相当，通信开销降低 70 倍以上，且在 LLM 异构条件下保持稳健。",
    "cluster": "97579754d322a919",
    "cluster_size": 1,
    "is_lead": true,
@@ -61085,8 +61086,7 @@
    "relevant": true,
    "topics": [
     "world-env",
-    "framework",
-    "org"
+    "framework"
    ],
    "applied": false,
    "score1": 55,
@@ -61309,7 +61309,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.35,
+   "hot": 7.75,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -61918,8 +61918,8 @@
     "教育干预",
     "参与式设计"
    ],
-   "title_zh": "与 K-12 教师共同设计 LLM 多智能体反霸凌模拟系统",
-   "summary_zh": "研究团队与 K-12 教师合作，共同设计了一个由大模型驱动的多智能体反霸凌模拟系统，让学生在与模拟场景互动中练习应对霸凌。论文给出了这类 LLM 多智能体模拟的关键设计参数，但摘要未报告实际部署或效果数据。",
+   "title_zh": "与 K-12 教师共创：用大模型多智能体仿真校园霸凌场景训练学生应对技能",
+   "summary_zh": "研究者与 K-12 教师共同设计了一套基于大语言模型的多智能体反霸凌系统。系统模拟真实的霸凌情境，让学生在其中练习应对技能。研究梳理了这类 LLM 多智能体仿真系统的关键设计参数，为可扩展的反霸凌工具提供参考。",
    "cluster": "989030095f927f1e",
    "cluster_size": 1,
    "is_lead": true,
@@ -61929,7 +61929,7 @@
    "relevant": true,
    "topics": [
     "social-sim",
-    "generative-agents"
+    "human-behavior"
    ],
    "score1": 58,
    "score2": 70,
@@ -65387,8 +65387,8 @@
     "生成式智能体",
     "利益相关方"
    ],
-   "title_zh": "用生成式智能体模拟城市区划中的多方利益协商，检验人口统计细节的影响",
-   "summary_zh": "作者用多生成式智能体系统模拟城市再分区争议中各利益相关方的讨论，并引入不同水平的真实调查数据和人口统计细节。实验在利他驱动与利益驱动两套决策价值框架下，考察种族、性别、年龄等因素对集体决策的影响。",
+   "title_zh": "用生成式智能体模拟城市规划多方协商，加入人口与价值观数据提升输出稳定性",
+   "summary_zh": "作者用多生成式智能体系统模拟一场真实城市重新分区争议中的多方利益相关者讨论，测试利他驱动和利益驱动两种决策价值框架。结果显示，注入人口统计与生活价值观数据能提升智能体输出的多样性和稳定性，智能体之间的交流也改善了集体推理质量。",
    "cluster": "a03bc65bf1651083",
    "cluster_size": 1,
    "is_lead": true,
@@ -65398,10 +65398,10 @@
    "relevant": true,
    "topics": [
     "urban",
-    "org",
-    "human-behavior"
+    "policy",
+    "generative-agents"
    ],
-   "applied": false
+   "applied": true
   },
   "a053175f62d723a9": {
    "id": "a053175f62d723a9",
@@ -72419,7 +72419,7 @@
    "cluster": "b1a8d7dbad71f0b4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 5.34
+   "hot": 4.96
   },
   "b1f9e7823c80878f": {
    "id": "b1f9e7823c80878f",
@@ -72788,8 +72788,8 @@
     "LLM",
     "交通仿真"
    ],
-   "title_zh": "ARISE 把自然语言提示迭代转成可执行的 Scenic 交通场景脚本",
-   "summary_zh": "ARISE 用 LLM 多轮改写，把自然语言描述转成 Scenic 脚本，每轮在仿真软件里试跑，把结构化诊断信息回喂给模型，直到语法和功能要求都满足。作者称这能减少人工介入，缓解现有文本到仿真流程依赖静态片段检索和单次解码的问题。",
+   "title_zh": "ARISE：用迭代式 LLM 精炼把自然语言转成可执行的交通场景脚本",
+   "summary_zh": "ARISE 是一个多阶段工具，把自然语言描述转换成可执行的 Scenic 交通场景脚本。每轮生成后它在仿真软件里测试脚本可执行性，把结构化的报错信息回传给 LLM 继续精炼，直到语法和功能要求都满足。评测显示它在生成语义准确且可执行的场景上比基线更可靠、更稳健。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:34Z",
    "relevant": true,
@@ -73593,7 +73593,7 @@
    "cluster": "b4d1668269dc5edb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.73,
+   "hot": 15.54,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -76093,7 +76093,7 @@
    "cluster": "bcbc6e9ed72f9565",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 24.91,
+   "hot": 23.14,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -78784,6 +78784,37 @@
    "score2": 15,
    "model2": "Qwen3.8-27B"
   },
+  "c361c75aee41f073": {
+   "id": "c361c75aee41f073",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1TMHFmNVd4Qmd4Rm94ckRVZzM2a0hJb09La0dUQkRMbVlCUFBXVFktZmxEcnNSSTFpaURSVjFLM1pKMVpwemFmRVNQbDJCdFV1THdpa3psbFpnWlc2REloalNwMzI3clpUN1pJTUh2MTI2NXVUVW1MNXBB?oc=5",
+   "title": "Second Front Reforged Update Enhances AI, Combat, & Battlefield Immersion - Simulation Daily",
+   "text": "Second Front Reforged Update Enhances AI, Combat, & Battlefield Immersion Simulation Daily",
+   "source_id": "gnews-app-wargaming",
+   "source_name": "Google 新闻 · 兵棋推演与军事 AI 仿真",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-28T01:09:46Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 33,
+   "kw_terms": [
+    "simulation",
+    "ai"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-28T04:08:24Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 33,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "c3808aacf816453d": {
    "id": "c3808aacf816453d",
    "url": "https://arxiv.org/abs/2603.11245",
@@ -79278,8 +79309,8 @@
     "场景生成",
     "检索增强"
    ],
-   "title_zh": "RealGen 用检索增强的上下文学习生成可控交通场景，支持编辑与组合行为",
-   "summary_zh": "RealGen 从模板或带标签场景中检索多个示例，以无梯度的上下文学习方式组合出新交通场景，可编辑场景、拼接行为并生成关键场景。作者称其比依赖记忆训练分布的传统方法更能生成未见过的场景。",
+   "title_zh": "RealGen：用检索增强生成方法可控地合成交通场景",
+   "summary_zh": "作者提出 RealGen，一个借鉴大语言模型检索增强生成思路的交通场景生成框架。它从模板或带标签的场景库中检索多个示例，以无梯度方式组合这些行为，合成新场景。评测显示该框架能编辑场景、组合多种行为并生成关键场景，灵活性和可控性都表现不错。",
    "cluster": "c419a6790d29db36",
    "cluster_size": 1,
    "is_lead": true,
@@ -79288,6 +79319,7 @@
    "triaged": "2026-11-21T01:38:49Z",
    "relevant": true,
    "topics": [
+    "urban",
     "world-env"
    ],
    "applied": false,
@@ -79633,7 +79665,7 @@
    "cluster": "c5a70dd0609bfa7e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 27.21
+   "hot": 25.27
   },
   "c5ea418997695a4e": {
    "id": "c5ea418997695a4e",
@@ -79735,7 +79767,7 @@
    "cluster": "c5fad41f7b61d2ec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.44
+   "hot": 8.77
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -80961,8 +80993,8 @@
     "RAG",
     "评测"
    ],
-   "title_zh": "TS-RAG 用分类策略检索缓解多轮说服智能体的复合错误，轻量模型胜率升至78.5",
-   "summary_zh": "作者把标准 RAG 的语义泄漏认定为多轮说服任务中复合错误的触发因素，提出 Taxonomic Strategy RAG，用离散类别瓶颈把论证结构与话题内容解耦。零样本跨域评测中，轻量说服智能体对参数更强的对手胜率从 70.5 提升到 78.5。",
+   "title_zh": "TS-RAG 用分类瓶颈阻断语义泄漏，让轻量说服智能体反超更强对手",
+   "summary_zh": "作者发现标准 RAG 的语义泄漏会触发多智能体辩论中的问题漂移和谄媚从众，提出 TS-RAG，用离散分类瓶颈把论证结构与话题内容解耦。零样本跨域评测中抽象逻辑迁移显著改善，轻量说服方胜率从 70.5 提升到 78.5，击败参数量更大的对手。",
    "cluster": "c97630a3b46c30b7",
    "cluster_size": 1,
    "is_lead": true,
@@ -80971,7 +81003,7 @@
    "triaged": "2026-11-21T23:30:38Z",
    "relevant": true,
    "topics": [
-    "org",
+    "framework",
     "eval"
    ],
    "score1": 58,
@@ -82125,7 +82157,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.58
+   "hot": 12.61
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -82499,8 +82531,8 @@
     "分层强化学习",
     "军事仿真"
    ],
-   "title_zh": "用分层强化学习训练兵棋战斗仿真中的智能体，目标做指挥官 AI 顾问",
-   "summary_zh": "论文指出深度强化学习在战斗建模这类长时程复杂任务上仍未达到人类水平，转而研究分层强化学习，在大型战斗仿真环境中训练智能体，最终目标是达到超人表现、充当军事规划者的 AI 顾问。文中覆盖了前三个阶段性工作。",
+   "title_zh": "用分层强化学习在兵棋战斗仿真中扩展智能体规模",
+   "summary_zh": "作者提出用分层强化学习（HRL）训练能在大型复杂战斗仿真环境中有效行动的智能体，目标是做出超人类水平的 AI，给军事规划者和决策者当顾问。论文介绍了五个研究方向中的前三个：HRL 训练框架、多模型决策框架和维度不变的状态抽象，用来应对计算量随规模指数增长的问题。",
    "cluster": "cd3069afe2dbf23e",
    "cluster_size": 1,
    "is_lead": true,
@@ -82509,8 +82541,7 @@
    "triaged": "2026-11-20T02:27:57Z",
    "relevant": true,
    "topics": [
-    "wargame",
-    "world-env"
+    "wargame"
    ],
    "applied": false
   },
@@ -83905,12 +83936,17 @@
    "domain_guess": "application",
    "added": "2026-11-27T22:15:26Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "application",
-   "score": 35,
+   "llm": true,
+   "domain": "business",
+   "score": 12,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-28T04:00:46Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "d12a4824156e8dec": {
    "id": "d12a4824156e8dec",
@@ -83969,7 +84005,7 @@
    "cluster": "d12a4824156e8dec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.31,
+   "hot": 7.72,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -85115,8 +85151,8 @@
     "心理健康",
     "量表模拟"
    ],
-   "title_zh": "SeSaMe：用 GPT-4 模拟心理量表自评答案，减轻移动心理健康研究的填报负担",
-   "summary_zh": "数字心理健康研究依赖参与者长期自报抑郁、压力、焦虑等量表，容易流失和漏标。SeSaMe 把参与者的行为倾向信息喂给预训练 LLM，让它建立个体心智模型并模拟量表作答；论文用 GPT-4 以一个量表的真实作答为行为信息去模拟另一个量表，并评估与真人答案的一致性。",
+   "title_zh": "SeSaMe：用 GPT-4 构建参与者心理模型，模拟心理健康量表自报数据",
+   "summary_zh": "数字心理健康研究依赖参与者持续自报抑郁、焦虑等标签，负担重且易流失。SeSaMe 框架让 LLM 根据参与者的行为倾向信息构建心理模型，模拟其在心理量表上的作答。用 GPT-4 复现抑郁和焦虑筛查任务时，模拟数据训练的模型在多数场景下与真实数据效果相当。",
    "cluster": "d343827164d1bc77",
    "cluster_size": 1,
    "is_lead": true,
@@ -85126,7 +85162,6 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "health",
     "eval"
    ],
    "score1": 58,
@@ -90801,7 +90836,7 @@
    "cluster": "e1bea160dec662bd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 37.51
+   "hot": 34.84
   },
   "e1cc72e8f9ed637e": {
    "id": "e1cc72e8f9ed637e",
@@ -94020,7 +94055,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.43,
+   "hot": 9.69,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -94465,7 +94500,7 @@
    "cluster": "eb23f0e3187b6aeb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 34.47,
+   "hot": 32.02,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T09:40:49Z",
    "relevant": true,
@@ -94583,8 +94618,8 @@
     "具身环境",
     "基准评测"
    ],
-   "title_zh": "POMDP 路由加自纠正奖励模型，LLM 智能体在 ALFWorld 与 WebShop 上提升 24.5%",
-   "summary_zh": "论文给 LLM 智能体加上 POMDP 路由机制和内部自纠正奖励模型，在执行前评估决策轨迹，并结合多模态输入与 PPO 类强化学习维持长期结构记忆。在 ALFWorld 具身仿真环境和 WebShop 在线导航基准上，任务成功率绝对提升 24.5%。",
+   "title_zh": "奖励驱动的 LLM 智能体工作流：POMDP 路由加自我纠错，任务成功率提升 24.5 个百分点",
+   "summary_zh": "作者提出一种奖励驱动的 LLM 智能体工作流，用 POMDP 路由机制配合内部自我纠错的奖励模型，在执行前评估决策轨迹。在 ALFWorld 具身仿真环境和 WebShop 在线导航基准上，任务成功率和轨迹效率比 ReAct 等主流基线绝对提升 24.5%。消融实验确认奖励驱动的批评模块显著压低了幻觉率。",
    "cluster": "eb2b70293a48b1d2",
    "cluster_size": 1,
    "is_lead": true,
@@ -94893,8 +94928,8 @@
     "城市仿真",
     "大模型决策"
    ],
-   "title_zh": "LLM-Assisted Light：把大模型放进城市信号灯控制决策回路",
-   "summary_zh": "作者构建混合框架，让大模型调用感知与决策工具查询静态和动态交通信息，再结合既有信号控制方法做决策，并搭建仿真平台验证。目标是应对规则算法和强化学习在陌生交通场景下适应性不足的问题。",
+   "title_zh": "用大语言模型做交通信号控制，传感器故障时平均等待时间比强化学习少 20.4%",
+   "summary_zh": "作者把大语言模型放进交通信号控制系统的决策中心，配上一套感知和决策工具，让它读取静态与动态路况信息并结合已有控制方法。仿真显示该框架无需额外训练就能适应多种交通环境，在传感器故障场景下平均等待时间比强化学习方法降低 20.4%。",
    "cluster": "ec67226e90f076de",
    "cluster_size": 1,
    "is_lead": true,
@@ -94903,7 +94938,8 @@
    "triaged": "2026-11-21T17:40:39Z",
    "relevant": true,
    "topics": [
-    "urban"
+    "urban",
+    "framework"
    ],
    "score1": 60,
    "score2": 70,
@@ -97776,7 +97812,7 @@
    "cluster": "f22c13987bf9ec77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.89
+   "hot": 11.97
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -99648,8 +99684,8 @@
     "事件响应",
     "规划"
    ],
-   "title_zh": "数字孪生加持的多尺度规划，让 LLM 智能体做安全事件响应推演",
-   "summary_zh": "针对现有 LLM 事件响应系统靠反复调用模型生成方案、易幻觉且规划视野受限的问题，作者把决策论规划与 LLM 生成的响应命令结合，用 rollout 规划器在数字孪生上计算高层资源分配策略。",
+   "title_zh": "用数字孪生增强的多尺度规划做智能体事件响应，恢复率提升 33.6%",
+   "summary_zh": "作者把决策论规划与大模型生成的响应命令结合，做自动化安全事件响应。系统用 rollout 规划器在战术层分配安全资源，再由轻量 LLM 智能体翻译成可执行命令，数字孪生同时支持仿真规划与模拟执行。在三个攻击场景下，平均恢复执行时间缩短 15.1%，恢复率比前沿 LLM 基线高 33.6%。",
    "cluster": "f7e37f23054d2f1c",
    "cluster_size": 1,
    "is_lead": true,
@@ -99979,7 +100015,7 @@
    "cluster": "f88b32686a7aa762",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.06,
+   "hot": 18.63,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
