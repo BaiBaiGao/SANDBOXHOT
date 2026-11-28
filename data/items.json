@@ -5354,7 +5354,7 @@
    "cluster": "0c62bc20e5192e24",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.84,
+   "hot": 16.16,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -7747,7 +7747,7 @@
    "cluster": "13a0c3ba04fb07c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 19.17,
+   "hot": 17.37,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -16306,7 +16306,7 @@
    "cluster": "29a1de3b43f527d5",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.83,
+   "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -23563,7 +23563,7 @@
    "cluster": "3c8e24170a0e4ee2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.53,
+   "hot": 18.61,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -23820,6 +23820,36 @@
    "score2": 80,
    "model2": "Qwen3.8-27B",
    "applied": false
+  },
+  "3d4b9e6241c92c02": {
+   "id": "3d4b9e6241c92c02",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNOURtZF9wblJPQ3E2d0xOb1RnRnU3R2psWm9WWDJZTWh4dlg1WGNiQ1RoalhhY1JfZV9ySWVDaC01T3lhVnJkV0JNaEJsWlM1ZHg0bDI4N1hGWEpsQUFlN0Z0QkY3RFBtdUlJcmtNRi1acWpKSTFsOG1aWGJDZVdCR3ZHaVo0OS02bzJvdA?oc=5",
+   "title": "山医药附院护理团队在2026全国仿真创新应用大赛获多项荣誉！ - Sohu",
+   "text": "山医药附院护理团队在2026全国仿真创新应用大赛获多项荣誉！ Sohu",
+   "source_id": "gnews-zh-agent-sim",
+   "source_name": "Google 新闻 · 中文：智能体仿真与沙盘推演",
+   "source_group": "application",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-26T14:43:54Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 35,
+   "kw_terms": [
+    "仿真"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-28T10:57:33Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "application",
+   "score": 35,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "3db5c502ed5a13a7": {
    "id": "3db5c502ed5a13a7",
@@ -26641,7 +26671,7 @@
    "cluster": "436c3f3208323140",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.25
+   "hot": 11.1
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -29191,7 +29221,7 @@
    "cluster": "4b21b4815c9b2d5c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 15.33,
+   "hot": 13.9,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -29259,7 +29289,7 @@
    "cluster": "4b55c71e9cce2644",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.26,
+   "hot": 14.74,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -34482,7 +34512,7 @@
    "cluster": "56532dce8567fc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.23,
+   "hot": 15.62,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -40120,7 +40150,7 @@
    "cluster": "65a6177cefba9d11",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.93,
+   "hot": 23.5,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -49945,7 +49975,7 @@
    "cluster": "7db283e3aa9596cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.03,
+   "hot": 8.19,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -52602,7 +52632,7 @@
    "cluster": "84b21af4658669d8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.35,
+   "hot": 12.1,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -53355,7 +53385,7 @@
    "cluster": "87097a060214af63",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.64,
+   "hot": 16.89,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -60270,6 +60300,40 @@
    "topics": [],
    "applied": false
   },
+  "964c87b5f05255b6": {
+   "id": "964c87b5f05255b6",
+   "url": "https://the-decoder.com/robotics-startup-embo-raises-110-million-in-seed-funding-to-build-world-model-ai-for-robots",
+   "title": "Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots",
+   "text": "Embo raised $110 million in seed funding to build a universal robot brain with world models. Its AI learns how the physical world works from internet video and practices motor skills in simulation. Google Deepmind, Meta, and MIT researchers are behind the startup as the race for general-purpose robotics AI accelerates. The article Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots appeared first on The Decoder .",
+   "source_id": "rss-the-decoder",
+   "source_name": "The Decoder",
+   "source_group": "aihot",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": false,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-28T10:48:18Z",
+   "authors": [
+    "Matthias Bastian"
+   ],
+   "extra": {},
+   "kw_score": 38,
+   "kw_terms": [
+    "world model",
+    "simulation",
+    "ai"
+   ],
+   "domain_guess": "business",
+   "added": "2026-11-28T10:57:33Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "business",
+   "score": 38,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
+  },
   "965fbf68a01424fe": {
    "id": "965fbf68a01424fe",
    "url": "https://arxiv.org/abs/2508.02679",
@@ -60769,7 +60833,7 @@
    "cluster": "971375198b0419b1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.0,
+   "hot": 9.97,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -61309,7 +61373,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.75,
+   "hot": 7.03,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -72419,7 +72483,7 @@
    "cluster": "b1a8d7dbad71f0b4",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 4.96
+   "hot": 0.0
   },
   "b1f9e7823c80878f": {
    "id": "b1f9e7823c80878f",
@@ -73593,7 +73657,7 @@
    "cluster": "b4d1668269dc5edb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 15.54,
+   "hot": 14.08,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -76093,7 +76157,7 @@
    "cluster": "bcbc6e9ed72f9565",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.14,
+   "hot": 20.97,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -79665,7 +79729,7 @@
    "cluster": "c5a70dd0609bfa7e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 25.27
+   "hot": 22.9
   },
   "c5ea418997695a4e": {
    "id": "c5ea418997695a4e",
@@ -79767,7 +79831,7 @@
    "cluster": "c5fad41f7b61d2ec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.77
+   "hot": 7.94
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -82157,7 +82221,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.61
+   "hot": 11.43
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -84005,7 +84069,7 @@
    "cluster": "d12a4824156e8dec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.72,
+   "hot": 7.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -90836,7 +90900,7 @@
    "cluster": "e1bea160dec662bd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 34.84
+   "hot": 31.57
   },
   "e1cc72e8f9ed637e": {
    "id": "e1cc72e8f9ed637e",
@@ -94055,7 +94119,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.69,
+   "hot": 8.78,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -94500,7 +94564,7 @@
    "cluster": "eb23f0e3187b6aeb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 32.02,
+   "hot": 29.02,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T09:40:49Z",
    "relevant": true,
@@ -97812,7 +97876,7 @@
    "cluster": "f22c13987bf9ec77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.97
+   "hot": 10.85
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -100015,7 +100079,7 @@
    "cluster": "f88b32686a7aa762",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.63,
+   "hot": 16.88,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
