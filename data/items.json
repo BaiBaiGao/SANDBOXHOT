@@ -1076,8 +1076,8 @@
     "理性度",
     "人类模拟"
    ],
-   "title_zh": "首个 LLM 全面理性度基准：哪些地方像人、哪些地方偏离理想人类理性",
-   "summary_zh": "作者提出一个覆盖多领域、多模型的 LLM 理性度基准，同时考察思维层面的理论理性和行动层面的实践理性，并附带易用工具包和大量实验结果。分析指出 LLM 在哪些方面与理想化人类理性一致、哪些方面偏离，作者把它定位为用 LLM 模拟人类时的可信度检查工具。",
+   "title_zh": "首个评估大语言模型整体理性水平的基准：覆盖思维与行动两个维度",
+   "summary_zh": "作者提出了第一个评估大语言模型整体理性（omnibus rationality）的基准，从理论理性（思维）和实践理性（行动）两方面考察 LLM 在多大程度上像理想化的理性人类。基准附带易用工具包和大量实验结果，指出了 LLM 与理想理性收敛和偏离的位置。",
    "cluster": "030b5e5da1112309",
    "cluster_size": 1,
    "is_lead": true,
@@ -3261,8 +3261,8 @@
     "安全攻击",
     "社会仿真"
    ],
-   "title_zh": "LLM 多智能体社区中被篡改知识会像洪水一样扩散，两阶段攻击可让智能体传播虚假与有害信息",
-   "summary_zh": "作者搭建了模拟真实多智能体部署的仿真环境和威胁模型，提出说服力注入加篡改知识注入的两阶段攻击，不显式改写提示即可让 LLM 智能体传播反事实和有害知识。实验显示攻击能成功诱导智能体扩散伪造信息。",
+   "title_zh": "研究者在 LLM 多智能体社区注入虚假与有害知识，可随对话扩散并经检索长期残留",
+   "summary_zh": "作者针对可信平台上的 LLM 多智能体系统构建了威胁模型和仿真环境，提出两阶段攻击方法，通过说服性注入和操纵知识注入让智能体传播反事实和有害知识。实验显示攻击不损害智能体的基础能力，被操纵的聊天记录还会被良性智能体存入检索库，在交互结束后继续产生影响。",
    "cluster": "076463a98f9257f7",
    "cluster_size": 1,
    "is_lead": true,
@@ -3271,7 +3271,7 @@
    "triaged": "2026-11-21T01:38:07Z",
    "relevant": true,
    "topics": [
-    "social-sim",
+    "org",
     "eval"
    ],
    "score1": 62,
@@ -5354,7 +5354,7 @@
    "cluster": "0c62bc20e5192e24",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.16,
+   "hot": 15.6,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -5535,8 +5535,8 @@
     "复现实验",
     "可视化"
    ],
-   "title_zh": "LLM 智能体能否替代真人给可视化打分？三项复现实验给出有限证据",
-   "summary_zh": "研究用 LLM 智能体复现已发表的人类被试实验，替代真人完成六项主观评分研究。五位人类专家评估显示，智能体评分与人类评分的一致程度，与专家实验前的信心水平正相关；预处理输入与知识注入等增强手段也在第三项研究中测试。",
+   "title_zh": "语言模型智能体能否替代真人给可视化打分：三项实证研究的对齐检验",
+   "summary_zh": "作者做了三项研究，检验大模型智能体能否模拟人类对可视化设计的主观评分。结果显示智能体评分与人类评分的对齐程度，与五位人类专家在实验前的置信度正相关；常见的输入预处理和知识注入技术存在鲁棒性问题，还可能引入偏差。作者认为智能体模拟只能作为用户研究的补充，不能替代。",
    "cluster": "0e25e6dbc26c25d5",
    "cluster_size": 1,
    "is_lead": true,
@@ -6405,8 +6405,8 @@
     "综述",
     "用户模拟"
    ],
-   "title_zh": "综述 1676 篇论文，给出大模型角色扮演智能体的评测设计指南",
-   "summary_zh": "作者系统回顾 2021 年 1 月至 2024 年 12 月的 1676 篇论文，归纳出角色扮演智能体的 6 项智能体属性、7 项任务属性和 7 项评测指标，据此提出一套评测设计指南，用于统一这类模拟人类行为智能体的评估方法。",
+   "title_zh": "角色扮演智能体评测怎么做：一篇综述给出基于 1676 篇论文的设计指南",
+   "summary_zh": "作者系统梳理了 2021 年 1 月到 2024 年 12 月间的 1676 篇论文，为基于大语言模型的角色扮演智能体（RPA）提出了一套评测设计指南。分析归纳出六项智能体属性、七项任务属性和七项评测指标，帮助研究者建立更系统、更一致的评测方法。",
    "cluster": "1086e772026ac543",
    "cluster_size": 1,
    "is_lead": true,
@@ -6415,8 +6415,8 @@
    "triaged": "2026-11-21T01:38:43Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
-    "eval"
+    "eval",
+    "human-behavior"
    ],
    "score1": 58,
    "score2": 70,
@@ -7747,7 +7747,7 @@
    "cluster": "13a0c3ba04fb07c9",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 17.37,
+   "hot": 16.76,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -10033,8 +10033,8 @@
     "多智能体",
     "开源框架"
    ],
-   "title_zh": "StockSim：开源订单级金融市场仿真器，评测多智能体 LLM 交易",
-   "summary_zh": "平台建模延迟、滑点和订单簿微观结构，支持不同粒度的仿真模式与基于角色的异构交易策略，用于评估 LLM 智能体在不确定性与序贯决策下的表现。代码已开源。",
+   "title_zh": "StockSim：双模式订单级金融模拟器，用于评测多智能体 LLM 交易决策",
+   "summary_zh": "作者发布了开源平台 StockSim，一个订单级金融模拟器，用来系统评测 LLM 交易智能体。它建模了延迟、滑点和订单簿微观结构等此前被忽略的真实市场因素，支持不同粒度的仿真模式和基于角色的多智能体协作。代码已开源。",
    "cluster": "19dbb3367bb1c9d9",
    "cluster_size": 1,
    "is_lead": true,
@@ -11058,8 +11058,8 @@
     "外交博弈",
     "强化学习"
    ],
-   "title_zh": "用稀疏自编码器拆解 Full-Press Diplomacy 中的 LLM 多智能体强化学习训练过程",
-   "summary_zh": "作者把预训练 SAE 与 LLM 摘要方法用于 Full-Press Diplomacy 的大规模多智能体 RL 训练记录，提出 Meta-Autointerp 把 SAE 特征归组为关于训练动态的假设，发现角色扮演、语言切换、退化输出和奖励黑客行为。自动评估称 90% 的 Meta-Feature 显著，但两项用户研究表明多数特征对人类实际无用。",
+   "title_zh": "用稀疏自编码器解读全压力外交 LLM 智能体的强化学习训练动态",
+   "summary_zh": "作者用预训练稀疏自编码器（SAE）加 LLM 摘要器，分析 Full-Press Diplomacy 环境里大规模强化学习训练出的 LLM 智能体，并提出 Meta-Autointerp 方法把 SAE 特征聚成关于训练动态的可解释假设。自动评测显示 90% 的 SAE Meta-Features 显著，还发现了一种奖励作弊行为；把部分假设写进未训练智能体的系统提示后，得分提高 14.2%。",
    "cluster": "1c0ea01c216bb948",
    "cluster_size": 1,
    "is_lead": true,
@@ -14614,8 +14614,8 @@
     "学生模拟",
     "教育仿真"
    ],
-   "title_zh": "分层记忆加元认知，模拟学生知识逐步建构而非一次答对",
-   "summary_zh": "针对现有学生模拟只覆盖单次学习、大模型又倾向给出准确答案的问题，作者提出带分层记忆和结构化知识表示的学生模拟框架，把认知发展和人格特质纳入学习者画像，并基于 Next Generation Science Standards 实现课程对齐的模拟器。实验称能反映知识发展的渐进性。",
+   "title_zh": "不完美学习者：用分层记忆与发展轨迹模拟学生认知成长",
+   "summary_zh": "作者提出了一个基于记忆的学生模拟框架，通过分层记忆和结构化知识表示刻画学生逐步建构知识的过程，并加入元认知和人格特质来刻画个体学习者。模拟器对齐 Next Generation Science Standards 课程标准，实验显示它能反映知识发展的渐进性和学生特有的学习困难。",
    "cluster": "25d2c71b2f2eb956",
    "cluster_size": 1,
    "is_lead": true,
@@ -19352,20 +19352,19 @@
     "供应链仿真",
     "约束优化"
    ],
-   "title_zh": "EcoFair-CH-MARL：在16港50船海事数字孪生上做带排放预算与公平约束的分层多智能体强化学习",
-   "summary_zh": "作者提出分层约束多智能体强化学习框架 EcoFair-CH-MARL，用原始-对偶预算层限制累计排放，用公平奖励变换器约束船队间的最大最小成本差，并给出约束违反与公平损失的 O(√T) 遗憾界。在由 AIS 轨迹驱动的 16 港 50 船海事数字孪生上，排放降低 15%、吞吐提高 12%、公平成本改善 45%。",
+   "title_zh": "EcoFair-CH-MARL：分层多智能体强化学习让海运物流减排 15% 并保证公平",
+   "summary_zh": "作者提出一个带约束的分层多智能体强化学习框架 EcoFair-CH-MARL，用于海运物流调度。它在 16 港口、50 船舶的海事数字孪生上比现有基线最多降低 15% 排放、提高 12% 吞吐量，公平成本指标改善 45%。理论证明了约束违反与公平损失的 O(√T) 遗憾界。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:44Z",
    "relevant": true,
    "topics": [
-    "economy",
     "framework",
-    "eval"
+    "economy"
    ],
    "score1": 62,
    "score2": 65,
    "model2": "Qwen3.8-27B",
-   "applied": true,
+   "applied": false,
    "cluster": "32569b455a5ee3b4",
    "cluster_size": 1,
    "is_lead": true,
@@ -23563,7 +23562,7 @@
    "cluster": "3c8e24170a0e4ee2",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 18.61,
+   "hot": 17.95,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -23844,12 +23843,17 @@
    "domain_guess": "application",
    "added": "2026-11-28T10:57:33Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "application",
-   "score": 35,
+   "score": 12,
    "tags": [],
    "title_zh": "",
-   "summary_zh": ""
+   "summary_zh": "",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-28T13:17:50Z",
+   "relevant": false,
+   "topics": [],
+   "applied": false
   },
   "3db5c502ed5a13a7": {
    "id": "3db5c502ed5a13a7",
@@ -24277,8 +24281,8 @@
     "行为经济学",
     "LLM 智能体"
    ],
-   "title_zh": "用行为经济学个体数据调偏置，让 LLM 智能体在最后通牒博弈里更像人",
-   "summary_zh": "作者用行为经济学的个体层面数据给 LLM 智能体做人格化偏置调整，在最后通牒博弈上测试，模拟行为与真实数据的吻合度提升，回应方一侧尤其明显。作者认为人格条件化的 LLM 有希望大规模模拟人类决策模式。",
+   "title_zh": "用行为经济学个体数据校准 LLM 智能体偏差，提升最后通牒博弈中拟人决策",
+   "summary_zh": "作者提出基于人格画像的方法，用行为经济学的个体级数据调整大模型的内在偏差，并在最后通牒博弈上测试。模拟行为与实证数据的一致性得到改善，回应方一侧尤其明显。人格特质表示仍需进一步细化。",
    "cluster": "3ea96babd2b5f1c8",
    "cluster_size": 1,
    "is_lead": true,
@@ -24288,7 +24292,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "economy"
+    "eval"
    ],
    "score1": 58,
    "score2": 70,
@@ -26671,7 +26675,7 @@
    "cluster": "436c3f3208323140",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.1
+   "hot": 10.71
   },
   "438f92da92ae0190": {
    "id": "438f92da92ae0190",
@@ -27661,8 +27665,8 @@
     "LLM推理",
     "概念框架"
    ],
-   "title_zh": "SiR 框架：把交通仿真器嵌进 LLM 推理循环做可证伪推演",
-   "summary_zh": "论文提出 Simulation-in-the-Reasoning，让 LLM 把中间推理步骤当作可执行的仿真实验，通过 MCP 调用交通仿真器验证智能交通策略假设。目前只给出概念框架与 API 粒度等设计讨论，实现仍在进行中。",
+   "title_zh": "SiR 框架：把交通仿真器嵌入大模型推理循环，让推理可证伪",
+   "summary_zh": "作者提出 Simulation-in-the-Reasoning（SiR）概念框架，把领域仿真器直接嵌入大模型的推理循环，让中间推理步骤变成可执行的仿真实验。大模型可以提出智能交通系统策略假设，通过 MCP 调用交通仿真器，在不同需求模式下评估结果并迭代改进。目前论文只给出概念基础和设计考量，实现仍在进行中。",
    "cluster": "468b78c9953abd5f",
    "cluster_size": 1,
    "is_lead": true,
@@ -29221,7 +29225,7 @@
    "cluster": "4b21b4815c9b2d5c",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 13.9,
+   "hot": 13.41,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T04:57:25Z",
    "relevant": true,
@@ -29289,7 +29293,7 @@
    "cluster": "4b55c71e9cce2644",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.74,
+   "hot": 14.22,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -30643,8 +30647,8 @@
     "多智能体",
     "社会涌现"
    ],
-   "title_zh": "EDU-MATRIX：2400 个智能体的中学社会中心式生成认知数字孪生",
-   "summary_zh": "作者提出 EDU-MATRIX，把仿真对象从“人”转向带规则引力的社会空间：环境上下文注入引擎按时空坐标向智能体注入校规，模块化逻辑演化协议让知识以胶囊形式被合成，对话一致性达 94.1%，安全约束由智能体在社会图中的位置内生决定。系统作为一所中学的数字孪生部署，含 2400 个智能体。",
+   "title_zh": "EDU-MATRIX：以社会为中心的中学教育生成式认知数字孪生架构",
+   "summary_zh": "作者提出 EDU-MATRIX 架构，把多智能体仿真从模拟个体转向模拟带制度引力的社会空间。系统部署为含 2400 个智能体的中学数字孪生，通过环境上下文注入引擎、模块化逻辑演化协议和角色拓扑内生对齐三个组件，实现对话一致性 94.1%、社会聚类系数 0.72 的涌现行为。",
    "cluster": "4e3343caef269cad",
    "cluster_size": 1,
    "is_lead": true,
@@ -30653,14 +30657,14 @@
    "triaged": "2026-11-20T14:12:25Z",
    "relevant": true,
    "topics": [
-    "social-sim",
-    "org",
-    "world-env"
+    "generative-agents",
+    "world-env",
+    "eval"
    ],
    "score1": 64,
    "score2": 88,
    "model2": "Qwen3.8-27B",
-   "applied": true
+   "applied": false
   },
   "4e37fb881d7ea17d": {
    "id": "4e37fb881d7ea17d",
@@ -34512,7 +34516,7 @@
    "cluster": "56532dce8567fc86",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 15.62,
+   "hot": 15.07,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -40150,7 +40154,7 @@
    "cluster": "65a6177cefba9d11",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 23.5,
+   "hot": 22.68,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T19:43:16Z",
    "relevant": true,
@@ -41658,8 +41662,8 @@
     "强化学习",
     "社会推理"
    ],
-   "title_zh": "MARO：让 LLM 在多智能体社交博弈中训练推理，能力可迁移到其他任务",
-   "summary_zh": "MARO 把多智能体交互中的最终成败拆解到具体行为上，缓解奖励稀疏，并平衡不同角色的样本权重、直接评估每个行为的效用。实验显示模型的社会推理能力明显提升，且从社交仿真中学到的能力能迁移到其他任务。",
+   "title_zh": "MARO：让大模型在多智能体社会环境中训练出更强的推理能力",
+   "summary_zh": "论文提出多智能体奖励优化方法 MARO，让大语言模型通过在多智能体社会环境中的互动、谈判和竞争来学习推理。它把最终成败分解到交互中的每个具体行为、平衡不同角色的训练样本权重、直接评估每个行为的效用来应对稀疏信号和角色分布不均等问题。实验显示社会推理能力提升之外，学到的能力还能迁移到数学推理和指令遵循等任务。",
    "cluster": "69441c0611062633",
    "cluster_size": 1,
    "is_lead": true,
@@ -41669,7 +41673,7 @@
    "relevant": true,
    "topics": [
     "org",
-    "eval"
+    "framework"
    ],
    "score1": 63,
    "score2": 65,
@@ -42072,8 +42076,8 @@
     "场景生成",
     "交通仿真"
    ],
-   "title_zh": "ROMAN 用多头注意力加 LLM 风险加权，为自动驾驶系统生成高风险违章测试场景",
-   "summary_zh": "ROMAN 把多头注意力网络和交通法规加权机制结合，用 LLM 模块从严重程度和发生频率两个维度评估违章风险，生成闯红灯、超速等高风险场景来测试自动驾驶系统。作者称现有方法难以生成多车交互的复杂违章场景。",
+   "title_zh": "ROMAN：用多头注意力加交通法规加权生成自动驾驶高风险违规测试场景",
+   "summary_zh": "ROMAN 是一个面向自动驾驶系统测试的场景生成方法，用多头注意力网络建模车辆、信号灯等要素间的交互，再用基于大模型的风险加权模块按严重程度和发生频率评估违规。在 CARLA 上测试百度 Apollo，平均违规数比 ABLE 高 7.91%，比 LawBreaker 高 55.96%，且是唯一能对输入交通法规每一条款都生成违规场景的方法。",
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-22T07:09:34Z",
    "relevant": true,
@@ -42081,7 +42085,7 @@
     "urban",
     "eval"
    ],
-   "applied": false,
+   "applied": true,
    "cluster": "6a06081f30f3db2f",
    "cluster_size": 1,
    "is_lead": true,
@@ -42931,8 +42935,8 @@
     "提示优化",
     "社会仿真"
    ],
-   "title_zh": "IROTE：用上下文自我反思优化让大模型稳定表现人格特质",
-   "summary_zh": "针对大模型只能模仿浅层、不稳定风格的问题，IROTE 在提示中自动生成并迭代优化一段文本自我反思，用信息论目标强化行为与目标特质的关联，无需微调。作者称这能让特质表现更稳定、可迁移，可用于个性化与社交仿真。",
+   "title_zh": "IROTE：用自反思优化让大模型稳定扮演特定人格特质",
+   "summary_zh": "现有提示方法只能让大模型模仿浅层、不稳定的风格，难以像真人一样在多样任务中稳定体现目标特质。作者提出 IROTE，在上下文中自动生成并优化一段包含自我感知经历的自反思文本，迭代最大化信息论目标，无需微调。在三个人类特质体系上的实验表明，单条自反思即可让模型在问卷之外的多种下游任务中稳定扮演目标特质，优于现有强基线。",
    "cluster": "6c320502320247d0",
    "cluster_size": 1,
    "is_lead": true,
@@ -42942,7 +42946,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "generative-agents"
+    "eval"
    ],
    "score1": 58,
    "score2": 70,
@@ -47219,8 +47223,8 @@
     "社会仿真",
     "LLM 社会性"
    ],
-   "title_zh": "社交互动的语言模型之间出现“神经同步”，且与社交表现相关",
-   "summary_zh": "作者把神经同步引入 LLM 社交仿真，作为分析其社会性的表征层指标。实验显示该指标能反映互动中的社交投入与时间对齐，并与 LLM 的社交表现强相关。",
+   "title_zh": "研究发现社交互动中的大模型出现神经同步，且与社交表现强相关",
+   "summary_zh": "作者把神经科学中“人脑在社交中同步活动”的机制搬到大模型上，测量多智能体社会仿真中 LLM 内部表征的神经同步。实验显示这种同步可靠反映智能体的社交投入和时序对齐，并与社交表现强相关，为 LLM 是否有“社会心智”的争论提供了表征层面的经验证据。",
    "cluster": "76aa00899a7d8b47",
    "cluster_size": 1,
    "is_lead": true,
@@ -47229,9 +47233,9 @@
    "triaged": "2026-11-19T17:31:51Z",
    "relevant": true,
    "topics": [
-    "human-behavior",
-    "eval",
-    "social-sim"
+    "social-sim",
+    "generative-agents",
+    "eval"
    ],
    "score1": 63,
    "score2": 65,
@@ -48084,8 +48088,8 @@
     "函数调用",
     "评测基准"
    ],
-   "title_zh": "用自动构建的异构仿真环境扩展智能体训练，提升函数调用泛化能力",
-   "summary_zh": "作者设计了一个可扩展框架，自动构建完全仿真的异构环境，系统性地扩大函数调用场景的覆盖范围，再用两阶段微调先教基础智能体能力、再针对特定领域做专门化。在 tau-bench、tau2-Bench 和 ACEBench 上做了实验。",
+   "title_zh": "AgentScaler：用自动扩展的模拟环境训练通用函数调用智能体",
+   "summary_zh": "作者提出一个可扩展框架，自动构建大量异构的完全模拟环境，覆盖更广的函数调用场景，并用两阶段微调策略训练出 AgentScaler 模型。在 tau-bench、tau2-Bench 和 ACEBench 三个智能体基准上，该模型的函数调用能力显著提升。",
    "cluster": "79af6b7158a69ba3",
    "cluster_size": 1,
    "is_lead": true,
@@ -48094,9 +48098,8 @@
    "triaged": "2026-11-21T09:59:24Z",
    "relevant": true,
    "topics": [
-    "world-env",
     "framework",
-    "eval"
+    "world-env"
    ],
    "score1": 58,
    "score2": 70,
@@ -49975,7 +49978,7 @@
    "cluster": "7db283e3aa9596cf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.19,
+   "hot": 7.9,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:25:03Z",
    "relevant": true,
@@ -51408,8 +51411,8 @@
     "偏好学习",
     "端侧"
    ],
-   "title_zh": "与1000个人设交互，学出偏好对齐的主动式助手",
-   "summary_zh": "作者用1000个多样化人设做大规模交互模拟，学习用户在时机、自主性和沟通风格等维度上的偏好共性，为端侧主动式助手提供冷启动，再在设备上轻量适配个人。方法面向隐私与端侧约束，不依赖真实用户日志。",
+   "title_zh": "用 1000 个虚拟人格模拟交互，学习用户偏好以训练主动式助手",
+   "summary_zh": "作者提出一个从群体到个体的学习框架，用 1000 个多样化人格的大模型智能体模拟交互，学习用户在时机、自主性、沟通风格等维度上表达偏好的共性结构，为主动式助手提供冷启动。随后在设备端通过轻量的激活引导适配个体用户，无需重训练。34 人真人实验显示时机决策和交互质量优于基线，满意度、信任和舒适度随会话增加而提升。",
    "cluster": "81d644a15235c2ff",
    "cluster_size": 1,
    "is_lead": true,
@@ -51419,7 +51422,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "eval"
+    "generative-agents"
    ],
    "score1": 58,
    "score2": 70,
@@ -51608,8 +51611,8 @@
     "仿真验证",
     "LLM"
    ],
-   "title_zh": "TARGET：用 LLM 从交通规则自动生成自动驾驶测试场景，284 个场景查出 610 处违规",
-   "summary_zh": "TARGET 用 LLM 从交通规则中抽取知识，经自定义 DSL 做语法与语义校验后合成可执行的仿真测试场景。在 54 条规则衍生的 284 个场景上评测 7 个自动驾驶系统，发现 610 处规则违反与碰撞，其中两个问题被开发商确认。",
+   "title_zh": "TARGET 用大模型从交通规则自动生成测试场景，在七个自动驾驶系统中找出 610 个违规问题",
+   "summary_zh": "作者提出 TARGET 框架，用大模型从交通规则中抽取知识，再通过一个语法简单的领域专用语言生成可执行的仿真测试场景。基于 54 条交通规则生成 284 个场景，测试了 7 个自动驾驶系统，发现 610 个违规、碰撞等问题，其中两个问题被开发者确认。",
    "cluster": "82417a27a131d5d9",
    "cluster_size": 1,
    "is_lead": true,
@@ -52632,7 +52635,7 @@
    "cluster": "84b21af4658669d8",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 12.1,
+   "hot": 11.67,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -53385,7 +53388,7 @@
    "cluster": "87097a060214af63",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.89,
+   "hot": 16.3,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -60327,12 +60330,26 @@
    "domain_guess": "business",
    "added": "2026-11-28T10:57:33Z",
    "status": "filtered",
-   "llm": false,
+   "llm": true,
    "domain": "business",
-   "score": 38,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "score": 20,
+   "tags": [
+    "世界模型",
+    "机器人仿真",
+    "融资"
+   ],
+   "title_zh": "Embo 获 1.1 亿美元种子轮，用世界模型打造通用机器人大脑",
+   "summary_zh": "机器人初创公司 Embo 完成 1.1 亿美元种子轮融资，要构建基于世界模型的通用机器人大脑。其 AI 从互联网视频学习物理世界规律，并在仿真中练习运动技能。创始团队来自 Google DeepMind、Meta 和 MIT。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-28T13:17:50Z",
+   "relevant": false,
+   "topics": [
+    "world-env"
+   ],
+   "score1": 52,
+   "score2": 20,
+   "model2": "Qwen3.8-27B",
+   "applied": false
   },
   "965fbf68a01424fe": {
    "id": "965fbf68a01424fe",
@@ -60833,7 +60850,7 @@
    "cluster": "971375198b0419b1",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 9.97,
+   "hot": 9.62,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -61373,7 +61390,7 @@
    "cluster": "97d20f0e1995d57f",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.03,
+   "hot": 6.78,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-21T23:29:09Z",
    "relevant": true,
@@ -62721,8 +62738,8 @@
     "评测基准",
     "人格建模"
    ],
-   "title_zh": "PICQ-drama 基准：检验用户模拟中缺失的人格维度",
-   "summary_zh": "作者提出识别“相关但缺失”的人格维度这一任务，并构建 PICQ-drama 基准，用带缺失人格标注的情境选择题考察模型能否发现人格信息不足。测试多个主流大模型后发现任务可行，同时暴露出模型与人类在认知上的差异。",
+   "title_zh": "识别缺失人格维度：用 LLM 检验用户仿真中人设是否够用",
+   "summary_zh": "这篇论文研究用户仿真里一个被忽视的问题：给定对话上下文，提供的人设可能缺少决定用户回复的关键维度（比如是否价格敏感）。作者构建了基准 PICQ-drama，标注了缺失人设维度导致用户选择模糊的情境选择题，并评测多个主流 LLM。结果显示该任务可行，同时暴露了 LLM 与人类在认知上的差异。",
    "cluster": "9a6629f35e7edeba",
    "cluster_size": 1,
    "is_lead": true,
@@ -68916,8 +68933,8 @@
     "评测协议",
     "arXiv"
    ],
-   "title_zh": "CSALES 对话销售任务与 CSUSER：用大模型模拟带细粒度画像的购物用户",
-   "summary_zh": "作者提出 Conversational Sales 任务，把偏好挖掘、推荐和说服放进同一对话框架，并给出 CSUSER 评测协议，用基于真实行为数据、带细粒度用户画像的大模型用户模拟器做个性化交互评测。配套的 CSI 智能体在推荐成功率和说服效果上均有提升。",
+   "title_zh": "CSI 对话销售智能体：基于真实行为数据建模用户画像，推荐与说服效果显著提升",
+   "summary_zh": "作者提出对话式销售任务 CSALES，把偏好获取、推荐和说服放进同一个对话框架。配套评测协议 CSUSER 用大模型模拟用户，其画像来自真实电商行为数据。提出的智能体 CSI 在对话中主动推断用户画像并策略性选择动作，实验显示它在推荐成功率和说服效果上都明显更好。",
    "cluster": "a82d9fee99c6a0c2",
    "cluster_size": 1,
    "is_lead": true,
@@ -68927,7 +68944,7 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "economy"
+    "eval"
    ],
    "score1": 58,
    "score2": 70,
@@ -69636,6 +69653,41 @@
    "relevant": false,
    "topics": [],
    "applied": false
+  },
+  "aa767d1260bdd08a": {
+   "id": "aa767d1260bdd08a",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdFlId0ExTWN0T05nMnBxVjlzMGtBaXNtSXlPYV9ILVprYVFraDlLLUR3RTg1cFVNNUNtaVE2OExXblh6bXpDTnlPeDBySWRUbV9sRllvR21GN2xaSmhzb09raXN2UUI3Q0dReWFXVXRrU1pqNTVjU0xCWi12X0xob0xYNXhHaGh3ZDhIc1M4SGd2RFdMZ2hPMWtBdEkwbFE?oc=5",
+   "title": "Digital twins should be built for value - AVEVA",
+   "text": "Digital twins should be built for value AVEVA",
+   "source_id": "gnews-biz-digital-twin-agents",
+   "source_name": "Google 新闻 · AI 智能体数字孪生产品",
+   "source_group": "business",
+   "kind": "rss",
+   "tier": "T2",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-16T08:00:00Z",
+   "authors": [],
+   "extra": {},
+   "kw_score": 60,
+   "kw_terms": [
+    "digital twin",
+    "digital twins"
+   ],
+   "domain_guess": "application",
+   "added": "2026-11-28T13:26:04Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "application",
+   "score": 60,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "aa767d1260bdd08a",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 0.0
   },
   "aa8e964eeccef16d": {
    "id": "aa8e964eeccef16d",
@@ -72979,8 +73031,8 @@
     "记忆机制",
     "社交媒体"
    ],
-   "title_zh": "模块化多智能体社会仿真框架：分层基类加记忆摘要，复现社交媒体互动",
-   "summary_zh": "作者设计了一个面向对象、分层组织的模块化多智能体仿真框架，通过继承派生类适配不同场景，并提出记忆摘要机制筛选关键事件。用该环境模拟社交媒体上的人际互动，代码计划开源。",
+   "title_zh": "模块化多智能体社会仿真框架：用记忆摘要机制复现社交媒体互动",
+   "summary_zh": "作者提出了一个模块化、面向对象的多智能体社会仿真框架，通过层级结构整合各类基类，解决现有系统难以扩展到多样场景、复用性差的问题。框架配套记忆摘要机制，从原始记忆数据中筛选和提炼相关信息。基于派生类组合定制的仿真环境，他们成功复现了真实世界的社交媒体行为。",
    "cluster": "b27f075fff46c7e5",
    "cluster_size": 1,
    "is_lead": true,
@@ -73657,7 +73709,7 @@
    "cluster": "b4d1668269dc5edb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 14.08,
+   "hot": 13.58,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -73718,8 +73770,8 @@
     "情绪建模",
     "生成式智能体"
    ],
-   "title_zh": "Sentipolis 给社会仿真智能体加上持续情绪状态，高容量模型可信度提升、小模型反而下降",
-   "summary_zh": "Sentipolis 用连续的 PAD 情绪表示、双速情绪动态和情绪-记忆耦合，让智能体保持情绪状态。跨多个基座模型和评估者的数千次交互显示，情绪连续性提升沟通与可信度，但收益依赖模型容量，小模型可信度可能下降，情绪感知还会轻微降低对社会规范的遵守。",
+   "title_zh": "Sentipolis：给 LLM 智能体加上持续情绪状态，改善社会仿真中的情绪连贯性",
+   "summary_zh": "作者提出 Sentipolis 框架，用连续的 PAD 情绪表示、双速情绪动态和情绪记忆耦合，解决 LLM 智能体的“情绪遗忘”问题。在数千次交互的实验中，情绪连贯性和沟通质量提升，但收益依赖模型能力，且情绪感知会轻微削弱对社会规范的遵守。",
    "cluster": "b4efa2faee656a47",
    "cluster_size": 1,
    "is_lead": true,
@@ -73728,9 +73780,8 @@
    "triaged": "2026-11-20T14:12:33Z",
    "relevant": true,
    "topics": [
-    "generative-agents",
     "social-sim",
-    "eval"
+    "generative-agents"
    ],
    "score1": 63,
    "score2": 88,
@@ -74484,8 +74535,8 @@
     "模型偏置",
     "金融"
    ],
-   "title_zh": "GPT 模型在二元决策上的偏置会污染金融智能体仿真",
-   "summary_zh": "作者用 one-shot 和 few-shot 两种采样方式测试三个 GPT 模型的二元决策偏置，发现模型与子版本间输出分布差异明显：GPT-4o-Mini-2024-07-18 的 yes 比例在 32% 到 43%，GPT-4-0125-preview 高达 98% 到 99%。重复独立调用与单次批量采样的分布也不同，目前没有模型能同时满足均匀分布与马尔可夫性。",
+   "title_zh": "测试三个 GPT 模型的二元决策偏差：GPT-4 旧版几乎全答“是”，金融智能体仿真需谨慎选型",
+   "summary_zh": "作者用一次性与少样本两种 API 采样方式测试三个 GPT 模型的二元决策偏差。GPT-4o-Mini-2024-07-18 表现较好，肯定回答占 32% 到 43%，而 GPT-4-0125-preview 高达 98% 到 99%。采样方式和模型子版本都会显著改变输出分布，把 LLM 接入金融市场智能体模型前必须先做这类偏差评估。",
    "cluster": "b64c46d2b8b7287e",
    "cluster_size": 1,
    "is_lead": true,
@@ -76157,7 +76208,7 @@
    "cluster": "bcbc6e9ed72f9565",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 20.97,
+   "hot": 20.24,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:35Z",
    "relevant": true,
@@ -78872,12 +78923,22 @@
    "domain_guess": "application",
    "added": "2026-11-28T04:08:24Z",
    "status": "filtered",
-   "llm": false,
-   "domain": "application",
-   "score": 33,
-   "tags": [],
-   "title_zh": "",
-   "summary_zh": ""
+   "llm": true,
+   "domain": "game",
+   "score": 38,
+   "tags": [
+    "AI NPC",
+    "策略游戏"
+   ],
+   "title_zh": "《Second Front Reforged》更新强化 AI 与战场沉浸感",
+   "summary_zh": "二战题材策略游戏《Second Front Reforged》发布更新，官方称改进了 AI、战斗表现与战场沉浸感。材料只有标题，未说明 AI 是否由大模型驱动或具体改动内容。",
+   "model": "DeepSeek-V4.1-Flash",
+   "triaged": "2026-11-28T13:17:50Z",
+   "relevant": true,
+   "topics": [
+    "game"
+   ],
+   "applied": false
   },
   "c3808aacf816453d": {
    "id": "c3808aacf816453d",
@@ -79438,8 +79499,8 @@
     "虚假信息",
     "开源框架"
    ],
-   "title_zh": "BotVerse 用 Bluesky 实时内容流驱动社交智能体，演示协同虚假信息场景",
-   "summary_zh": "BotVerse 是事件驱动的 LLM 社交仿真框架，把智能体隔离在受控环境中，同时接入 Bluesky 生态的实时内容流，提供异步编排 API 和模拟人类时间模式与认知记忆的引擎。作者用一次协同虚假信息场景做演示，定位为红队测试与计算社会科学的安全实验平台。",
+   "title_zh": "BotVerse：基于 Bluesky 实时数据流的事件驱动 LLM 社会仿真框架",
+   "summary_zh": "作者提出了 BotVerse，一个可扩展的事件驱动框架，用 LLM 智能体做高保真社会仿真。它把智能体交互隔离在受控环境里，同时接入 Bluesky 生态的实时内容流作为背景。作者用一个协同造谣场景做了演示，为红队测试和计算社会科学提供安全的实验环境。",
    "cluster": "c42f31a2d9300300",
    "cluster_size": 1,
    "is_lead": true,
@@ -79729,7 +79790,7 @@
    "cluster": "c5a70dd0609bfa7e",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 22.9
+   "hot": 22.1
   },
   "c5ea418997695a4e": {
    "id": "c5ea418997695a4e",
@@ -79831,7 +79892,7 @@
    "cluster": "c5fad41f7b61d2ec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.94
+   "hot": 7.66
   },
   "c60558e98558e0e7": {
    "id": "c60558e98558e0e7",
@@ -82221,7 +82282,7 @@
    "cluster": "ccf0e1c839b42618",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 11.43
+   "hot": 11.03
   },
   "ccf98a938b2cc8ad": {
    "id": "ccf98a938b2cc8ad",
@@ -84069,7 +84130,7 @@
    "cluster": "d12a4824156e8dec",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 7.0,
+   "hot": 0.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-24T21:24:57Z",
    "relevant": true,
@@ -88342,8 +88403,8 @@
     "MCP",
     "思维链"
    ],
-   "title_zh": "CoT 加 MCP 工具，让 LLM 生成上海陆家嘴 1000 条个体时空活动轨迹",
-   "summary_zh": "论文把思维链推理与 Model Context Protocol 结合，用五阶段认知框架和六类 MCP 工具（时间管理、空间导航、环境感知、个人记忆、社会协作、经验评估）模拟个体时空行为。在陆家嘴生成 1000 个样本，与真实手机信令数据比对显示较高相似度。",
+   "title_zh": "用 CoT 推理加 MCP 工具让大模型生成个体时空活动，上海陆家嘴千人样本与真实信令数据高度相似",
+   "summary_zh": "作者把思维链推理和 Model Context Protocol 工具结合，让大语言模型生成个体时空活动轨迹。在上海陆家嘴生成 1000 个样本，与真实手机信令数据相似度高，不同基座模型的生成质量分在 7.86 到 8.36 之间。并行处理把单样本生成时间从 1.30 分钟压到 0.17 分钟。",
    "cluster": "dae935835b9c9345",
    "cluster_size": 1,
    "is_lead": true,
@@ -88353,12 +88414,61 @@
    "relevant": true,
    "topics": [
     "urban",
-    "human-behavior"
+    "human-behavior",
+    "framework"
    ],
    "score1": 64,
    "score2": 85,
    "model2": "Qwen3.8-27B",
-   "applied": false
+   "applied": true
+  },
+  "db255b3b91a7c953": {
+   "id": "db255b3b91a7c953",
+   "url": "https://ray.yorksj.ac.uk/id/eprint/16661/1/MSG-237%20Extending%20the%20Cognitive%20Layer%20Paper%20Final%20260922.pdf",
+   "title": "Extending the Cognitive Layer of the NATO Mission Space Digital Twin: Foundation Mapped Agent Simulation for Wargaming and Decision Support",
+   "text": "A mission-level Digital Twin of the NATO Mission Space requires an integrated cognitive environment representing how populations interpret changing circumstances and how actors judge and decide under uncertainty. Building on NATO-relevant wargaming and leader training, which traditionally emphasise physical and operational fidelity, we address the underdeveloped cognitive layer through which common events may acquire different significance for differently situated actors. We present a two-layer cognitive architecture. Layer One defines an “Ambient Prior”: a structured narrative and epistemic environment encoding what is contested, ambiguous, institutionally framed and materially constrained. Layer Two introduces a population-grounded swarm of synthetic agents generating heterogeneous judgements within that environment. Using a three-turn Greece/Strait of Hormuz scenario, we compare minimal context, richer event representation and a structured Ambient Prior, before introducing a recursive branch through which aggregate population judgement becomes consequential to the subsequently encountered environment. The combined simulation-and-calibration procedure produces greater cross-turn movement and wider coastal/inland differentiation under the structured Ambient Prior condition, although the independent contribution of contextual structure cannot be isolated. Recursion demonstrates how cognitive history can reside in the evolving environment without persona memory. The architecture supports commanders and planners in exploring plausible decision spaces, stress-testing assumptions against heterogeneous interpretation, and building cognitive agility through wargaming, decision support and leader development, moving the mission-space Digital Twin from static representation towards operational understanding.",
+   "source_id": "openalex-wargame-llm",
+   "source_name": "OpenAlex · 期刊/会议（兵棋推演与 AI）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-10-29T00:00:00Z",
+   "authors": [
+    "David Atkinson",
+    "Gaurav Mudbhatkal",
+    "Zach Schwitzky"
+   ],
+   "extra": {
+    "venue": "Research at York St John (York St John University)",
+    "pdf": "https://ray.yorksj.ac.uk/id/eprint/16661/1/MSG-237%20Extending%20the%20Cognitive%20Layer%20Paper%20Final%20260922.pdf",
+    "doi": "",
+    "cited_by": 0,
+    "type": "conference-paper"
+   },
+   "kw_score": 94,
+   "kw_terms": [
+    "wargaming",
+    "digital twin",
+    "simulation",
+    "agents",
+    "agent"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-28T13:26:04Z",
+   "status": "selected",
+   "llm": false,
+   "domain": "academic",
+   "score": 80,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": "",
+   "cluster": "db255b3b91a7c953",
+   "cluster_size": 1,
+   "is_lead": true,
+   "hot": 0.0
   },
   "db5807f04cd66534": {
    "id": "db5807f04cd66534",
@@ -90900,7 +91010,7 @@
    "cluster": "e1bea160dec662bd",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 31.57
+   "hot": 30.46
   },
   "e1cc72e8f9ed637e": {
    "id": "e1cc72e8f9ed637e",
@@ -93453,8 +93563,8 @@
     "情绪模拟",
     "对齐评测"
    ],
-   "title_zh": "六个前沿 LLM 模拟跨文化社交情绪表达，与真人规范系统性错位",
-   "summary_zh": "作者用欧美与拉美参与者的真人研究作对照，评测六个前沿模型表达 engaging 与 disengaging 情绪的文化差异。所有模型都更多表达 engaging 情绪，与人类跨文化模式存在系统性错位，用于模拟文化敏感互动时可能给出不适配的建议。",
+   "title_zh": "六款前沿大模型表达社会情绪时与人类文化规范系统性错位",
+   "summary_zh": "作者用一项比较欧洲裔美国人和拉美裔美国人社会情绪表达的人类研究做基准，评测了六款前沿大模型。结果发现所有模型都更多表达联结型情绪、更少表达独立型情绪，即便在数据较充分的欧洲裔美国人角色上也错位明显，且回复高度集中、缺乏人类多样性。",
    "cluster": "e90a112adb83b530",
    "cluster_size": 1,
    "is_lead": true,
@@ -93641,8 +93751,8 @@
     "对话系统",
     "偏差分析"
    ],
-   "title_zh": "用 GPT-4o 与 GPT-o1 生成多样化合成用户，模拟任务型对话中的用户差异",
-   "summary_zh": "研究用 GPT-4o 和 GPT-o1 生成人口学、目标、对话风格、知识水平各异的合成用户画像，与任务型对话系统进行多轮交互并评估对话成败。分析发现 GPT-o1 生成的用户属性分布更多样，GPT-4o 则更偏斜，论文同时考察了合成用户的多样性、一致性与潜在偏差。",
+   "title_zh": "用 GPT-4o 与 GPT-o1 生成多样化合成用户，模拟任务型对话系统交互",
+   "summary_zh": "作者提出一套用大模型生成合成用户并模拟其与任务型对话系统多轮对话的方法，涵盖用户画像生成、目标设定、对话执行和成功评估。对比发现 GPT-o1 生成的用户属性分布更异质，GPT-4o 生成的属性更偏斜。论文还分析了生成画像的多样性、一致性与潜在偏见。",
    "cluster": "e981a8277e1cf193",
    "cluster_size": 1,
    "is_lead": true,
@@ -94119,7 +94229,7 @@
    "cluster": "ea4ec8bb42c1fcbf",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 8.78,
+   "hot": 8.47,
    "score1": 58,
    "score2": 75,
    "model2": "Qwen3.8-27B"
@@ -94564,7 +94674,7 @@
    "cluster": "eb23f0e3187b6aeb",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 29.02,
+   "hot": 28.0,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-26T09:40:49Z",
    "relevant": true,
@@ -95061,6 +95171,46 @@
     "world-env"
    ],
    "applied": false
+  },
+  "ecae30672f48f7ca": {
+   "id": "ecae30672f48f7ca",
+   "url": "https://doi.org/10.33369/pendipa.10.4.1529-1535",
+   "title": "Themes And Citation Networks In Global Military Education And Training Research, 2000–2025",
+   "text": "Research on military education spans subjects as different as officer judgment and recruit injuries. We examined how those subjects are connected and what the indexed literature can establish about Indonesia and Laos. We analyzed 5,876 English-language Scopus records published from 2000 to 2025, mapped author keywords after merging variants, compared three publication periods, and examined citations and shared references. Annual output rose from 90 to 438 records. The strongest co-citation link joined two studies of training injuries. A separate pair of studies on moral decision making shared 37 references. Among records with author keywords, the share using terms from the simulation and digital learning cluster rose from 5.2% in 2000–2009 to 8.1% in 2020–2025. Of 35 Indonesian-affiliated records, three focused on instructional design and six on the management of or access to military education. One historical study discussed training in Laos, although no record carried a recognized Lao affiliation. These findings identify where researchers can look for evidence on officer learning, particularly how courses assess judgment and how institutions document access to education.",
+   "source_id": "openalex-wargame-llm",
+   "source_name": "OpenAlex · 期刊/会议（兵棋推演与 AI）",
+   "source_group": "academic",
+   "kind": "paper",
+   "tier": "T1",
+   "focused": true,
+   "skip_prefilter": false,
+   "domain_hint": "",
+   "published": "2026-11-26T00:00:00Z",
+   "authors": [
+    "Bounlam Taiyalath",
+    "Surachman Surjaatmadja",
+    "Ari Pitoyo Sumarno"
+   ],
+   "extra": {
+    "venue": "PENDIPA Journal of Science Education",
+    "pdf": "https://ejournal.unib.ac.id/pendipa/article/download/54032/20204",
+    "doi": "https://doi.org/10.33369/pendipa.10.4.1529-1535",
+    "cited_by": 0,
+    "type": "article"
+   },
+   "kw_score": 25,
+   "kw_terms": [
+    "simulation"
+   ],
+   "domain_guess": "academic",
+   "added": "2026-11-28T13:26:04Z",
+   "status": "filtered",
+   "llm": false,
+   "domain": "academic",
+   "score": 25,
+   "tags": [],
+   "title_zh": "",
+   "summary_zh": ""
   },
   "ecb95581790f3cc6": {
    "id": "ecb95581790f3cc6",
@@ -96284,8 +96434,8 @@
     "CARLA",
     "合成数据"
    ],
-   "title_zh": "用大模型按文字描述生成 CARLA 交通场景脚本，补充运动规划的稀缺危险工况",
-   "summary_zh": "作者把交通场景表示成脚本，用大模型通过上下文学习把用户文字描述翻译成脚本，交给 CARLA 生成场景，再把生成的安全关键场景当作合成训练数据训练运动规划器，以降低人工搭建场景的成本。",
+   "title_zh": "用大模型把文字描述转成交通场景脚本，生成危险场景训练更稳的运动规划器",
+   "summary_zh": "作者提出一种低成本生成关键交通场景的方法：把场景表示为脚本，由大语言模型通过上下文学习把用户文字描述翻译成脚本，再交给模拟器生成场景。用这些合成数据训练的运动规划器，明显优于只用真实数据训练的版本。",
    "cluster": "ef0a6b5980c5e160",
    "cluster_size": 1,
    "is_lead": true,
@@ -97876,7 +98026,7 @@
    "cluster": "f22c13987bf9ec77",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 10.85
+   "hot": 10.47
   },
   "f23f3f241ac47b98": {
    "id": "f23f3f241ac47b98",
@@ -100079,7 +100229,7 @@
    "cluster": "f88b32686a7aa762",
    "cluster_size": 1,
    "is_lead": true,
-   "hot": 16.88,
+   "hot": 16.29,
    "model": "DeepSeek-V4.1-Flash",
    "triaged": "2026-11-25T15:48:42Z",
    "relevant": true,
@@ -100832,8 +100982,8 @@
     "教育训练",
     "人格建模"
    ],
-   "title_zh": "TACLA：用父母、成人、儿童三种自我状态建模的多智能体沟通分析训练工具",
-   "summary_zh": "TACLA 把沟通分析（TA）的 Parent、Adult、Child 三种自我状态做成各自带模式记忆的智能体，由 Orchestrator 智能体按情境触发决定激活哪个状态。在教学场景中，学生智能体能随教师干预策略表现出冲突升级与降级，评估显示对话可信度较高。",
+   "title_zh": "TACLA：用交互分析理论构建多智能体，模拟师生冲突中的自我状态切换",
+   "summary_zh": "作者提出 TACLA 多智能体架构，把交互分析理论中的父母、成人、儿童三种自我状态分别建模为带独立模式记忆的智能体，由编排智能体根据情境触发和人生脚本决定激活哪种状态。在教育场景验证中，学生智能体的自我状态切换真实可信，能随教师干预策略不同表现出冲突降级或升级。",
    "cluster": "faee0d08ee4ca530",
    "cluster_size": 1,
    "is_lead": true,
@@ -100843,7 +100993,6 @@
    "relevant": true,
    "topics": [
     "human-behavior",
-    "org",
     "generative-agents"
    ],
    "score1": 58,
@@ -102208,8 +102357,8 @@
     "博弈论",
     "需求响应"
    ],
-   "title_zh": "LLM 影响编译器在智能微电网需求响应中协调产消者合作",
-   "summary_zh": "作者把微电网需求响应建模为社交网络上的重复囚徒困境，用 LLM 影响编译器向异构产消者智能体下发结构化指令。混合决策架构把博弈论基础概率与 LLM 叙事评估分开，避免 RLHF 带来的合作偏置，六类人格下基线合作率约 50%，结构化指令实现 33.3% 的削峰。",
+   "title_zh": "用 LLM 影响编译器协调智能微电网需求响应，结构化指令使合作率提升至 33.3%",
+   "summary_zh": "作者把微电网需求响应建模为社会网络上的重复囚徒困境，让 LLM 影响编译器向异质产消者智能体下发结构化指令。结构化指令带来 33.3% 的削峰合作率，高于非结构化消息的 27.0% 和无干预基线的 28.0%。面向高中心度节点的定向传播效果最好，说明网络拓扑本身能放大协调信号。",
    "cluster": "fe5cb6db33c3c81b",
    "cluster_size": 1,
    "is_lead": true,
@@ -102219,8 +102368,8 @@
    "relevant": true,
    "topics": [
     "economy",
-    "social-sim",
-    "org"
+    "framework",
+    "eval"
    ],
    "score1": 63,
    "score2": 85,
